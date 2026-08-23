@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "id": "vendee-revolution-ep02",
+  "mode": "story",
+  "density": "light",
+  "goal": "Faire sentir qu'un conflit institutionnel devient une décision publique dans la paroisse, sans musique de tension ni dramatisation religieuse.",
+  "historical_mode": "documented",
+  "constraints": ["no_narration_duplicates_obvious_sound","one_primary_attention_owner_per_beat","continuous_layers_need_narrative_reason","silence_is_allowed","measured_voice_timing_is_authoritative","no_triumphal_or_ominous_music"],
+  "beats": [
+    {"id":"liberty-first","attention_owner":"voice","purpose":"commencer par la libération politique des protestants avant d'introduire la fracture catholique"},
+    {"id":"public-oath","after_segment":4,"attention_owner":"sound","purpose":"faire passer l'auditeur du texte institutionnel au caractère public et paroissial du serment","sound":"church-bell-distant","handoff":"narration-to-brief-bell-to-oath-formula","exit":"fade-before-spoken-oath","rationale":"une cloche situe socialement la scène sans prétendre reproduire une cérémonie précise"},
+    {"id":"oath-lands","after_segment":5,"attention_owner":"silence","purpose":"laisser la formule du serment retomber avant d'expliquer la condamnation romaine","exit":"held-pause"},
+    {"id":"fracture-spreads","attention_owner":"voice","purpose":"revenir à la complexité des comportements locaux sans bed de tension"},
+    {"id":"conscription-threshold","attention_owner":"silence","purpose":"faire sentir que la levée des trois cent mille hommes tombe sur un terrain déjà fracturé","exit":"short-held-pause"}
+  ]
+}

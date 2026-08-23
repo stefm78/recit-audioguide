@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "id": "orleans-walk-ep01",
+  "mode": "visit",
+  "density": "light",
+  "goal": "Aider le visiteur à passer du paysage urbain actuel au verrou militaire de 1429, puis laisser le lieu réel reprendre immédiatement la scène.",
+  "historical_mode": "documented",
+  "constraints": ["no_narration_duplicates_obvious_sound","one_primary_attention_owner_per_beat","continuous_layers_need_narrative_reason","silence_is_allowed","measured_voice_timing_is_authoritative"],
+  "beats": [
+    {"id":"present-place","attention_owner":"space","purpose":"partir du lieu réel et reconnaître explicitement qu'il est difficile d'imaginer les Tourelles disparues"},
+    {"id":"old-bridge-lock","attention_owner":"voice","purpose":"faire comprendre le pont comme système avant toute évocation sonore"},
+    {"id":"jeanne-enters-the-problem","after_segment":3,"attention_owner":"sound","purpose":"faire apparaître brièvement le mouvement humain qui précède l'arrivée de Jeanne dans le récit","sound":"historic-horse-hooves","handoff":"voice-to-short-foreground-to-voice","exit":"fade-before-the-battle-explanation","rationale":"un seul événement évocateur suffit ; aucun bruit de bataille"},
+    {"id":"tourelles-fight","attention_owner":"voice","purpose":"raconter la violence et le rôle collectif sans cinéma sonore"},
+    {"id":"back-to-geography","attention_owner":"space","purpose":"rendre au fleuve et au pont actuels le premier plan pour préparer la marche suivante"}
+  ]
+}

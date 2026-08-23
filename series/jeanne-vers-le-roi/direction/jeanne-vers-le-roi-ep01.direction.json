@@ -13,12 +13,8 @@
     "measured_voice_timing_is_authoritative"
   ],
   "characters": {
-    "jeanne": {
-      "arc": ["plain-determined", "tested", "increasingly-assured", "contained-before-charles"]
-    },
-    "narrateur": {
-      "arc": ["contextual", "withdraws-during-dialogue", "returns-for-fact-checking"]
-    }
+    "jeanne": {"arc": ["plain-determined", "tested", "increasingly-assured", "contained-before-charles"]},
+    "narrateur": {"arc": ["contextual", "withdraws-during-dialogue", "returns-for-fact-checking"]}
   },
   "beats": [
     {
@@ -29,16 +25,19 @@
     },
     {
       "id": "baudricourt-refusal",
+      "after_segment": 20,
       "attention_owner": "silence",
-      "purpose": "laisser le refus abrupt peser avant que le narrateur ne rétablisse les faits",
-      "exit": "short-held-pause"
+      "purpose": "laisser le refus abrupt 'Retourne chez ton père' peser avant que le narrateur ne rétablisse les faits",
+      "exit": "held-pause"
     },
     {
       "id": "journey-begins",
+      "after_segment": 56,
       "attention_owner": "sound",
       "purpose": "matérialiser enfin le départ après plusieurs scènes où Jeanne ne pouvait pas avancer",
       "sound": "historic-horse-hooves",
       "handoff": "dialogue-to-foreground-travel-to-narration",
+      "exit": "carry-under-first-road-narration-then-fade",
       "rationale": "les sabots signifient ici un changement d'état narratif, pas une décoration d'époque"
     },
     {
@@ -48,8 +47,10 @@
     },
     {
       "id": "approach-chinon",
+      "after_segment": 78,
       "attention_owner": "silence",
-      "purpose": "resserrer l'attention avant la rencontre attendue depuis le début de l'épisode"
+      "purpose": "resserrer l'attention après la lettre annonçant sa venue et avant l'arrivée effective à Chinon",
+      "exit": "held-pause"
     },
     {
       "id": "first-audience",
