@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "slug": "vendee-revolution",
+  "type": "story",
+  "title": "Vendée, Révolution et mémoires",
+  "subtitle": "Une histoire accessible des fractures religieuses à Charette, sans confondre histoire et légende.",
+  "note": "Écoute libre. Les épisodes se suivent, mais chacun redonne les repères nécessaires.",
+  "episodes": [
+    {
+      "id": "vendee-revolution-ep01",
+      "title": "Avant la Vendée : un pays chargé de mémoires",
+      "stop": "Avant la guerre",
+      "summary": "En 1781, Pierre Dangirard quitte La Rochelle pour raisons de santé. Son voyage ouvre une porte vers deux siècles de mémoire religieuse : Réforme, siège de La Rochelle, dragonnades, survivances protestantes du Bas-Poitou et catholicisme paroissial — avant que la Révolution ne change les règles.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/vendee-revolution-ep01/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/audio/guides/vendee-revolution-ep01/resolved-cast.json"
+    },
+    {
+      "id": "vendee-revolution-ep02",
+      "title": "1789-1793 : le serment qui déchire les paroisses",
+      "stop": "Le serment",
+      "summary": "Un dimanche, un curé doit dire oui ou non à la Constitution. À partir de ce choix visible de tous, l’émancipation protestante, la Constitution civile du clergé, les prêtres réfractaires et la levée des 300 000 hommes deviennent une histoire vécue dans les villages.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/vendee-revolution-ep02/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/audio/guides/vendee-revolution-ep02/resolved-cast.json"
+    },
+    {
+      "id": "vendee-revolution-ep03",
+      "title": "Mars 1793 : quand la révolte devient une guerre",
+      "stop": "Mars 1793",
+      "summary": "Au départ, il n’y a ni grande armée ni chef suprême : seulement des communes qui refusent, des armes prises et des autorités débordées. Puis apparaissent Cathelineau, Stofflet, Bonchamps, La Rochejaquelein et Charette. Pourquoi cette révolte-là ne retombe-t-elle pas ?",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/vendee-revolution-ep03/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/audio/guides/vendee-revolution-ep03/resolved-cast.json"
+    },
+    {
+      "id": "vendee-revolution-ep04",
+      "title": "Nantes, Bordeaux, Paris : quand les révolutions s’affrontent",
+      "stop": "Nantes, Bordeaux, Paris",
+      "summary": "Le 29 juin 1793, Nantes attend l’assaut vendéen. Son maire girondin défend pourtant la République au moment même où les Girondins sont éliminés à Paris. Rabaut Saint-Étienne et le monument des Quinconces relient alors Nantes, Paris et Bordeaux sans confondre leurs combats.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/vendee-revolution-ep04/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/audio/guides/vendee-revolution-ep04/resolved-cast.json"
+    },
+    {
+      "id": "vendee-revolution-ep05",
+      "title": "La Virée de Galerne : une armée, des familles, une fuite",
+      "stop": "La Virée de Galerne",
+      "summary": "Après Cholet, les soldats franchissent la Loire avec des femmes, des enfants, des vieillards et des blessés. Bonchamps, La Rochejaquelein, l’espoir d’un secours anglais, Granville, Le Mans et Savenay : la campagne militaire devient un exode.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/vendee-revolution-ep05/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/audio/guides/vendee-revolution-ep05/resolved-cast.json"
+    },
+    {
+      "id": "vendee-revolution-ep06",
+      "title": "1794 : quand la guerre entre dans les maisons",
+      "stop": "1794",
+      "summary": "On repart du lieu que vous connaissez peut-être : Les Epesses et le château du Puy du Fou, incendié pendant les opérations de 1794. De là, le récit suit les colonnes, les civils, les Lucs, les noyades de Nantes et explique sans détour la controverse sur le mot « génocide ».",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/vendee-revolution-ep06/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/audio/guides/vendee-revolution-ep06/resolved-cast.json"
+    },
+    {
+      "id": "vendee-revolution-ep07",
+      "title": "Charette : survivre, négocier, mourir, devenir une légende",
+      "stop": "Charette",
+      "summary": "La surprise est de commencer par la paix : en 1795, Charette négocie avec la République. Puis viennent la rupture, l’isolement, la Chabotterie et l’exécution à Nantes — avant de suivre la transformation de l’homme historique en héros de mémoire puis du Puy du Fou.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/vendee-revolution-ep07/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/audio/guides/vendee-revolution-ep07/resolved-cast.json"
+    }
+  ]
+}

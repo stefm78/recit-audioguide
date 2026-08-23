@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#183d49">
+  <title>Récit audioguide</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+  <main id="app" class="series-shell" aria-live="polite"><p class="loading">Chargement…</p></main>
+  <div id="player" class="player" hidden>
+    <div class="player-text"><strong id="player-title"></strong><span id="player-subtitle"></span></div>
+    <button id="player-toggle" class="round-button" type="button" aria-label="Lecture ou pause">▶</button>
+    <audio id="player-audio" preload="metadata"></audio>
+  </div>
+  <script>window.RECIT_SERIES_SLUG="__SERIES_SLUG__";</script>
+  <script src="../../assets/app.js" defer></script>
+</body>
+</html>
