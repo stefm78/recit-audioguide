@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+<title id="title">Schéma de repérage de la cathédrale Sainte-Croix d'Orléans</title>
+<desc id="desc">Plan simplifié, entrée à l'ouest à gauche, chœur à l'est à droite, huit étapes numérotées.</desc>
+<defs><style>.wall{fill:#f9f5ea;stroke:#26393f;stroke-width:16;stroke-linejoin:round}.inner{fill:none;stroke:#aab5b2;stroke-width:3}.label{font:700 24px system-ui,sans-serif;fill:#31454b}.small{font:600 17px system-ui,sans-serif;fill:#617179}.num{font:900 26px system-ui,sans-serif;fill:white}.dot{fill:#0d4360;stroke:#d5a530;stroke-width:6}.route{fill:none;stroke:#d5a530;stroke-width:7;stroke-dasharray:12 10;stroke-linecap:round;stroke-linejoin:round}</style></defs>
+<path class="wall" d="M115 185 H540 V95 H660 V185 H770 Q895 185 915 310 Q895 435 770 435 H660 V525 H540 V435 H115 Z"/>
+<path class="inner" d="M175 185V435 M235 185V435 M295 185V435 M355 185V435 M415 185V435 M475 185V435 M540 185V435 M660 185V435 M720 190V430"/>
+<path class="inner" d="M115 270H770 M115 350H770"/>
+<path class="inner" d="M770 185 Q850 230 865 310 Q850 390 770 435"/>
+<path class="route" d="M72 310 H220 H335 H585 H700 Q835 220 860 310 Q830 405 730 405 Q650 405 600 365 H330 H120"/>
+<text x="30" y="285" class="label">Parvis</text><text x="35" y="310" class="small">OUEST · entrée</text>
+<text x="295" y="155" class="label">Nef</text><text x="555" y="70" class="label">Transept nord</text><text x="540" y="575" class="label">Transept sud</text><text x="690" y="155" class="label">Chœur</text><text x="825" y="160" class="small">Déambulatoire</text><text x="895" y="310" class="small" text-anchor="middle">Chevet</text>
+<g id="p1"><circle class="dot" cx="78" cy="340" r="27"/><text class="num" x="78" y="349" text-anchor="middle">1</text></g>
+<g id="p2"><circle class="dot" cx="220" cy="310" r="27"/><text class="num" x="220" y="319" text-anchor="middle">2</text></g>
+<g id="p3"><circle class="dot" cx="335" cy="360" r="27"/><text class="num" x="335" y="369" text-anchor="middle">3</text></g>
+<g id="p4"><circle class="dot" cx="600" cy="310" r="27"/><text class="num" x="600" y="319" text-anchor="middle">4</text></g>
+<g id="p5"><circle class="dot" cx="720" cy="310" r="27"/><text class="num" x="720" y="319" text-anchor="middle">5</text></g>
+<g id="p6"><circle class="dot" cx="825" cy="235" r="27"/><text class="num" x="825" y="244" text-anchor="middle">6</text></g>
+<g id="p7"><circle class="dot" cx="815" cy="400" r="27"/><text class="num" x="815" y="409" text-anchor="middle">7</text></g>
+<g id="p8"><circle class="dot" cx="360" cy="310" r="27"/><text class="num" x="360" y="319" text-anchor="middle">8</text></g>
+<path d="M980 85v70" stroke="#0d4360" stroke-width="6"/><path d="M980 85l-14 25h28z" fill="#0d4360"/><text x="980" y="72" text-anchor="middle" class="label">N</text>
+<text x="500" y="607" text-anchor="middle" class="small">Schéma de repérage — volontairement simplifié, non à l’échelle</text>
+</svg>
