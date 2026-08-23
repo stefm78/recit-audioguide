@@ -29,6 +29,73 @@ jobs:
       publish_release: true
       fail_on_unresolved: false
 
+  preview:
+    if: github.event_name == 'pull_request'
+    needs: sounds
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout caller with history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Checkout audio-engine
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: bdf5c521be894e1aa5cdde6489a0992439290a9a
+          path: .audio-engine
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Restore existing voice and stage caches read-only
+        uses: actions/cache/restore@v4
+        with:
+          path: generated/audio
+          key: audio-engine-v3-${{ runner.os }}-${{ github.repository }}-${{ github.sha }}
+          restore-keys: |
+            audio-engine-v3-${{ runner.os }}-${{ github.repository }}-
+            audio-engine-v2-${{ runner.os }}-${{ github.repository }}-
+            audio-engine-v1-${{ runner.os }}-${{ github.repository }}-
+      - name: Download hydrated sound library
+        uses: actions/download-artifact@v4
+        with:
+          name: recit-sound-library
+          path: sound-library
+      - name: Install audio-engine
+        run: python -m pip install --disable-pip-version-check ./.audio-engine
+      - name: Preview changed audio programs only
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          mapfile -t changed < <(git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- 'series/**/audio/*.json')
+          if [[ ${#changed[@]} -eq 0 ]]; then
+            echo "No changed audio programs."
+            mkdir -p generated/audio-previews
+            echo '{"changed_programs":0}' > generated/audio-previews/report.json
+            exit 0
+          fi
+          mkdir -p generated/audio-previews
+          printf '%s\n' "${changed[@]}" > generated/audio-previews/programs.txt
+          for program in "${changed[@]}"; do
+            audio-engine timing "$program" --out generated/audio > "generated/audio-previews/$(basename "$program" .json)-timing.json"
+            audio-engine preview "$program" \
+              --out generated/audio \
+              --sounds sound-library/sounds.json \
+              --before-ms 4000 \
+              --after-ms 4000 \
+              > "generated/audio-previews/$(basename "$program" .json)-preview.json"
+          done
+          find generated/audio -path '*/previews/*.mp3' -exec cp {} generated/audio-previews/ \;
+      - name: Upload fast sound-design previews
+        uses: actions/upload-artifact@v4
+        with:
+          name: recit-audio-previews
+          path: generated/audio-previews
+          if-no-files-found: error
+
   audio:
     needs: sounds
     uses: stefm78/audio-engine/.github/workflows/render.yml@bdf5c521be894e1aa5cdde6489a0992439290a9a
