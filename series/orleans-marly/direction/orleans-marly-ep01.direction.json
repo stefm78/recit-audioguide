@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "orleans-marly-ep01",
+  "mode": "route",
+  "density": "none",
+  "goal": "Préserver l'intelligibilité en voiture : le paysage réel et le bruit de route fournissent déjà l'environnement sonore, la narration doit rester seule au premier plan.",
+  "historical_mode": "documented",
+  "constraints": [
+    "no_narration_duplicates_obvious_sound",
+    "one_primary_attention_owner_per_beat",
+    "continuous_layers_need_narrative_reason",
+    "silence_is_allowed",
+    "measured_voice_timing_is_authoritative"
+  ],
+  "characters": {
+    "narrateur": {
+      "arc": ["clear-guide", "reflective", "anticipatory"]
+    }
+  },
+  "beats": [
+    {
+      "id": "leave-orleans",
+      "attention_owner": "voice",
+      "purpose": "installer le changement de fil conducteur de la Loire vers la fabrication du pouvoir",
+      "voice_state": "clear-forward"
+    },
+    {
+      "id": "beauce-opens",
+      "attention_owner": "space",
+      "purpose": "laisser le paysage réel visible depuis la voiture jouer le rôle d'ambiance",
+      "rationale": "aucun son ajouté : les signaux faibles seraient masqués par le bruit routier"
+    },
+    {
+      "id": "political-thread",
+      "attention_owner": "voice",
+      "purpose": "maintenir un récit conceptuel intelligible sans surcharge sonore"
+    },
+    {
+      "id": "approach-chateaudun",
+      "attention_owner": "voice",
+      "purpose": "préparer l'observation du relief et du château",
+      "exit": "leave-room-for-real-road-and-landscape"
+    }
+  ]
+}
