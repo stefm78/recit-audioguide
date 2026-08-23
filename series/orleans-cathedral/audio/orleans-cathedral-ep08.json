@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "orleans-cathedral-ep08",
   "language": "fr-FR",
   "profile": "speech",
-  "production_version": 1,
+  "production_version": 2,
   "title": "Avant de sortir : entendre la Loire jusque dans le grand orgue",
   "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
   "episode": 8,
@@ -14,6 +14,18 @@
   "look": "Prenez d’abord la perspective entière de la nef, puis regardez la tribune et le buffet du grand orgue.",
   "summary": "Le dernier épisode rassemble le monument en une seule lecture et révèle une étonnante connexion régionale : le grand orgue vient en partie de l’ancienne abbaye de Fleury à Saint-Benoît-sur-Loire.",
   "historical_note": "Le dépliant officiel indique que l’orgue fut installé initialement à l’abbaye de Fleury, vendu à la Révolution, remonté à Sainte-Croix à partir de 1822 puis remanié, notamment par Cavaillé-Coll.",
+  "soundscape": {
+    "layers": [],
+    "events": [
+      {
+        "sound": "historic-pipe-organ",
+        "at_ms": 64500,
+        "gain_db": -35,
+        "placement": "center"
+      }
+    ],
+    "ducking": "speech"
+  },
   "lead_in_ms": 450,
   "sources": [
     "https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf",
