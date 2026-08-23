@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "strategy": "scene-sequences",
+  "program": "audio/jeanne-vers-le-roi-ep01.json",
+  "direction": "direction/jeanne-vers-le-roi-ep01.direction.json",
+  "held_pause_ms": 1600
+}
