@@ -18,12 +18,12 @@ concurrency:
 
 jobs:
   audio:
-    uses: stefm78/audio-engine/.github/workflows/render.yml@6dbc9b445eda78f96b41555972813d050cad3d73
+    uses: stefm78/audio-engine/.github/workflows/render.yml@363ed35709b763b8bd917ed829f065c3868ec077
     with:
       source_glob: "series/**/audio/*.json"
       output_dir: "generated/audio"
       artifact_name: "recit-audio-assets"
-      engine_ref: "6dbc9b445eda78f96b41555972813d050cad3d73"
+      engine_ref: "363ed35709b763b8bd917ed829f065c3868ec077"
 
   build:
     needs: audio
@@ -37,7 +37,7 @@ jobs:
           name: recit-audio-assets
           path: generated/audio
       - name: Build static site
-        run: python engine/build.py
+        run: python site/build.py
       - name: Configure Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
