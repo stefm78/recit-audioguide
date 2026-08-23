@@ -34,9 +34,9 @@
     {
       "id": "gregorian-chant-bed",
       "type": "ambience",
-      "query": "Veni.creator.spiritus",
+      "query": "Veni.creator.spiritus.ogg Membeth",
       "required_tags": [],
-      "preferred_tags": ["gregorian", "chant", "hymn"],
+      "preferred_tags": ["gregorian", "chant", "hymn", "voice"],
       "providers": ["wikimedia-commons"],
       "limit": 8,
       "min_score": 70
