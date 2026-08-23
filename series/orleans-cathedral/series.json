@@ -21,6 +21,7 @@
       "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep01.json",
       "extras": [
         {
+          "id": "orleans-cathedral-g01",
           "title": "Pourquoi reconstruire gothique en 1601 ?",
           "summary": "Henri IV relance un chantier médiéval deux siècles plus tard : pourquoi ne pas construire une cathédrale Renaissance ou classique ?",
           "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g01/guide.mp3"
@@ -48,6 +49,7 @@
       "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep03.json",
       "extras": [
         {
+          "id": "orleans-cathedral-g06",
           "title": "Dix vitraux, mais quel visage pour Jeanne ?",
           "summary": "Les artistes racontent Jeanne sans disposer d’un portrait authentique réalisé d’après nature. Que fait-on quand l’histoire doit donner un visage à quelqu’un ?",
           "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g06/guide.mp3"
@@ -65,11 +67,13 @@
       "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep04.json",
       "extras": [
         {
+          "id": "orleans-cathedral-g02",
           "title": "Condé a-t-il vraiment détruit Sainte-Croix ?",
           "summary": "Une formule simple accuse « les protestants ». La réalité est plus intéressante : Condé tente de protéger la cathédrale, mais des hommes de son camp la détruisent.",
           "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g02/guide.mp3"
         },
         {
+          "id": "orleans-cathedral-g05",
           "title": "Le Roi-Soleil est caché dans le transept",
           "summary": "La reconstruction n’efface pas le XVIIe siècle : Louis XIV laisse sa marque dans les bras du transept et leurs roses.",
           "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g05/guide.mp3"
@@ -87,6 +91,7 @@
       "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep05.json",
       "extras": [
         {
+          "id": "orleans-cathedral-g03",
           "title": "La main de Dieu dans l’abside : histoire ou légende ?",
           "summary": "Une main bénissante peinte dans le chœur renvoie à une ancienne tradition sur saint Euverte. Comment raconter ce genre d’histoire sans confondre foi et preuve historique ?",
           "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g03/guide.mp3"
@@ -104,6 +109,7 @@
       "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep06.json",
       "extras": [
         {
+          "id": "orleans-cathedral-g04",
           "title": "Pourquoi s’appelle-t-elle Sainte-Croix ?",
           "summary": "Le nom ne décrit pas la forme du bâtiment : il vient de reliques de la Croix du Christ attestées à Orléans depuis le VIIe siècle.",
           "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g04/guide.mp3"
@@ -121,6 +127,7 @@
       "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep07.json",
       "extras": [
         {
+          "id": "orleans-cathedral-g08",
           "title": "Qu’est-ce que Jeanne a réellement vu ici le 8 mai 1429 ?",
           "summary": "Même emplacement, autre cathédrale : reconstituer mentalement ce que Jeanne pouvait voir permet de mesurer l’ampleur des transformations.",
           "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g08/guide.mp3"
@@ -138,6 +145,7 @@
       "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep08.json",
       "extras": [
         {
+          "id": "orleans-cathedral-g07",
           "title": "Un orgue voyageur venu de Saint-Benoît-sur-Loire",
           "summary": "Le grand orgue résume à lui seul une partie de l’histoire régionale : abbaye de Fleury, Révolution, transfert à Orléans, puis Cavaillé-Coll.",
           "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g07/guide.mp3"
