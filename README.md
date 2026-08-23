@@ -16,12 +16,24 @@ Compagnon de voyage audio statique, simple et résilient.
 - On bloque uniquement ce qui rend l'expérience fausse, inutilisable ou dangereuse.
 - Aucun backend permanent, aucune base de données, aucun compte utilisateur.
 
+## Sound Director
+
+Sound Director v1 est la couche éditoriale commune située au-dessus d'`audio-engine`. Il décide qui porte l'attention, où laisser du silence, comment faire évoluer la diction et quand un son mérite réellement le premier plan. Il est disponible pour toute série, mais reste optionnel épisode par épisode : `density: none` est une décision valide.
+
+- Principes : `docs/SOUND_DIRECTION_V1.md`
+- General Availability et profils d'usage : `docs/SOUND_DIRECTOR_GA_V1.md`
+- Contrat : `docs/sound-direction.schema.json`
+- Profils : `docs/sound-direction-profiles-v1.json`
+- Scaffold / validation : `python tools/sound_direction.py`
+
+Le Sound Director reste dans ce dépôt tant qu'il n'existe qu'un seul consommateur réel. Il ne devient pas un nouveau service ou repo par anticipation.
+
 ## Architecture
 
-- `series/` : manifestes, scripts audio et assets propres aux séries.
+- `series/` : manifestes, scripts audio, directions sonores et assets propres aux séries.
 - `site/` : validation légère et construction du site statique.
 - `web/` : shell Web commun.
-- `.github/workflows/` : appel du moteur audio partagé puis publication GitHub Pages.
+- `.github/workflows/` : validation de la direction sonore, appel du moteur audio partagé puis publication GitHub Pages.
 
 La synthèse, le casting de voix, la normalisation et l'assemblage audio appartiennent au dépôt indépendant `stefm78/audio-engine`. Récit audioguide est un **client** de ce moteur et ne contient aucun code TTS.
 
