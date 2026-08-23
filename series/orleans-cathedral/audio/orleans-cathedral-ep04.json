@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "orleans-cathedral-ep04",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 1,
+  "title": "1568 : comment fait-on tomber une cathédrale ?",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": 4,
+  "after_episode": null,
+  "stop": "Croisée du transept",
+  "location": "Cathédrale Sainte-Croix d'Orléans, croisée du transept",
+  "launch": "au centre de la croisée, là où la nef rencontre les deux bras du transept.",
+  "look": "Observez les quatre grands supports de la croisée, puis les bras nord et sud et leurs retables.",
+  "summary": "La croisée raconte le moment où les guerres de Religion entrent physiquement dans l’architecture : destruction en 1568, puis reconstruction voulue par Henri IV et poursuivie sous les Bourbons.",
+  "historical_note": "Le dépliant officiel précise que des fanatiques issus des troupes protestantes détruisent les quatre piliers de la croisée malgré l’opposition du duc de Condé. L’épisode évite donc d’attribuer mécaniquement l’ordre de destruction à Condé.",
+  "lead_in_ms": 450,
+  "sources": [
+    "https://www.cathedrale-orleans.fr/visiter",
+    "https://www.cathedrale-orleans.fr/depliants",
+    "https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf",
+    "https://www.culture.gouv.fr/regions/drac-centre-val-de-loire/actualites-regionales-centre-val-de-loire/actualites-a-la-une/Presentation-de-l-ouvrage-Cathedrale-d-Orleans",
+    "https://www.cathedrale-orleans.fr/_files/ugd/db191a_1357f6d333324124a1f36e78b66a11e2.pdf"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Placez-vous à peu près au centre de la croisée. Regardez les quatre grands supports autour de vous. Maintenant imaginez que ces piliers disparaissent. C’est ce qui rend l’année 1568 si facile à comprendre ici : une cathédrale gothique tient parce que ses forces sont réparties dans un système complexe. Si l’on détruit les points essentiels de ce système, le bâtiment cesse d’être un espace majestueux et devient une masse de pierre qui s’effondre."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Nous sommes en pleine guerre de Religion. Orléans est alors contrôlée par le parti protestant. Le chef protestant Louis de Bourbon, prince de Condé, ne souhaite pas la destruction de Sainte-Croix et aurait fait protéger ses accès. Mais des hommes de son camp passent malgré tout à l’action. D’après le récit patrimonial de la cathédrale, ils entrent par les fenêtres et font sauter les quatre piliers de la croisée. Une grande partie de l’édifice s’écroule."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Cette nuance compte. Dire simplement « les protestants ont détruit la cathédrale » est historiquement trop grossier. Nous sommes dans une guerre civile et religieuse, avec des autorités, des factions, des soldats et des fanatiques dont les décisions ne se confondent pas toujours. Le bâtiment devient une victime très concrète d’un conflit où l’on s’attaque aussi aux images, aux reliques et aux lieux considérés comme symboles de l’adversaire."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Après cette destruction, il reste notamment les chapelles de l’abside et quelques parties de la nef. Lorsque Henri IV vient poser la première pierre de la reconstruction le 18 avril 1601, le geste est politique autant qu’architectural. Henri IV est l’ancien protestant devenu roi catholique après des décennies de guerre civile. Rebâtir Sainte-Croix peut se lire comme une affirmation de pacification et de continuité royale."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Regardez maintenant les bras du transept. Leur reconstruction se poursuit au XVIIe siècle et le décor assume même la présence du pouvoir monarchique. Sous Louis XIV, le transept est achevé dans un programme qui rend hommage au Roi-Soleil. À l’extérieur, les roses du transept portent des références à sa personne. La cathédrale ne raconte donc pas seulement Dieu ou Jeanne : elle raconte aussi la monarchie qui finance et utilise le monument."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"C’est ici qu’apparaît le paradoxe le plus délicieux de Sainte-Croix : une cathédrale détruite à la Renaissance est reconstruite pendant l’âge classique en langage gothique. Cela explique pourquoi, même avec un œil averti, il est difficile de savoir quelles pierres sont réellement médiévales et quelles pierres imitent volontairement le Moyen Âge plusieurs siècles plus tard."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Alors, où en sommes-nous ? La croisée est notre grande cicatrice historique. À partir d’ici, nous avançons vers le chœur, mais nous changeons aussi de question. Nous avons parlé du bâtiment comme objet de guerre et de pouvoir ; maintenant nous allons le regarder comme un lieu qui fonctionnait chaque jour. Qui s’asseyait ici ? Qui chantait ? Qui entretenait cette immense machine religieuse ? Avancez vers les stalles du chœur."}
+  ]
+}

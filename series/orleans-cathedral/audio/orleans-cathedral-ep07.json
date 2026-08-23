@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "orleans-cathedral-ep07",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 1,
+  "title": "Chapelle Sainte-Jeanne-d’Arc : de la jeune fille à la sainte",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": 7,
+  "after_episode": null,
+  "stop": "Chapelle Sainte-Jeanne-d’Arc",
+  "location": "Cathédrale Sainte-Croix d'Orléans, chapelle Sainte-Jeanne-d'Arc",
+  "launch": "devant la chapelle consacrée à Jeanne d’Arc.",
+  "look": "Regardez la statue, le décor et la manière dont Jeanne est présentée ici, puis comparez mentalement avec la statue équestre du Martroi.",
+  "summary": "Après la combattante des Tourelles et l’héroïne du Martroi, la cathédrale présente Jeanne comme sainte. L’épisode distingue histoire, canonisation et mémoire religieuse.",
+  "historical_note": "Jeanne est canonisée en 1920. La chapelle contient aujourd’hui la statue déplacée depuis le chœur au XXe siècle. Le récit distingue explicitement la Jeanne historique de la lecture religieuse de sa vie.",
+  "lead_in_ms": 450,
+  "sources": [
+    "https://www.cathedrale-orleans.fr/",
+    "https://www.cathedrale-orleans.fr/jubile",
+    "https://www.cathedrale-orleans.fr/lucis2",
+    "https://www.orleans.fr/fetes-de-jeanne-d-arc/presentation"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Nous voici devant une nouvelle Jeanne. Aux Tourelles, nous avions une adolescente engagée dans une opération militaire. Au Martroi, une héroïne équestre du XIXe siècle. Dans les vitraux, un récit national et religieux en dix images. Ici, le vocabulaire change encore : nous sommes devant sainte Jeanne d’Arc."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Jeanne n’est canonisée qu’en 1920, près de cinq siècles après sa mort. La canonisation appartient au fonctionnement de l’Église catholique : elle reconnaît officiellement une personne comme sainte et la propose à la vénération des fidèles. Pour l’historien, cela n’ajoute pas de nouveaux faits à 1429 ; cela raconte ce qu’une institution religieuse décide, au XXe siècle, de reconnaître dans la vie et la foi de Jeanne."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Regardez la statue et le décor. Ce n’est pas une tombe. Jeanne meurt à Rouen en 1431. Orléans ne conserve donc pas ici le corps de son héroïne : elle conserve et met en scène sa mémoire. C’est presque plus intéressant, parce que cela montre la force d’un lieu de mémoire capable de fonctionner sans relique corporelle de la personne célébrée."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"La cathédrale possède un lien historique très réel avec Jeanne : elle vient y prier le 8 mai 1429. Mais la chapelle telle que nous la voyons est beaucoup plus tardive dans son aménagement et dans son sens actuel. La statue a elle-même été déplacée au cours du XXe siècle. Encore une fois, Sainte-Croix n’est jamais un décor immobile : même la façon d’y honorer Jeanne évolue."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Comparez maintenant cette Jeanne avec celle du Martroi. Sur la place, elle domine la ville à cheval, en armure, dans un langage héroïque. Ici, elle est inscrite dans un langage religieux : confiance, vocation, foi, sainteté. Une même personne historique peut donc devenir plusieurs symboles selon l’espace qui la raconte. Le monument ne ment pas nécessairement ; il sélectionne."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Et cette pluralité explique pourquoi Jeanne reste si présente à Orléans. Elle peut être étudiée comme personnage de la guerre de Cent Ans, célébrée comme héroïne municipale, considérée comme symbole national, honorée comme sainte catholique ou simplement interrogée comme une jeune femme dont l’itinéraire défie encore nos catégories. Ces lectures se superposent sans être identiques."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Alors, où en sommes-nous ? Nous avons suivi Jeanne du champ de bataille jusqu’au sanctuaire. Il nous reste un dernier geste : revenir vers la nef et nous retourner. Le dernier épisode sera volontairement plus contemplatif. Nous allons utiliser le grand orgue, la lumière et la perspective pour remettre toute la cathédrale en une seule image mentale avant de retrouver la ville."}
+  ]
+}
