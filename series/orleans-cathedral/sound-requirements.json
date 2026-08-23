@@ -4,20 +4,20 @@
     {
       "id": "orleans-cathedral-parvis",
       "type": "ambience",
-      "query": "European city square ambience people footsteps",
+      "query": "BÜYÜK HENDEK STREET evening audio",
       "required_tags": [],
-      "preferred_tags": ["city", "square", "people", "footsteps"],
-      "providers": [],
+      "preferred_tags": ["street", "city"],
+      "providers": ["wikimedia-commons"],
       "limit": 8,
       "min_score": 70
     },
     {
       "id": "church-bell-distant",
       "type": "event",
-      "query": "distant church bell",
+      "query": "Zajeci zvony kostel 2025",
       "required_tags": [],
-      "preferred_tags": ["church", "bell", "distant"],
-      "providers": [],
+      "preferred_tags": ["church", "bell"],
+      "providers": ["wikimedia-commons"],
       "limit": 8,
       "min_score": 70
     }
