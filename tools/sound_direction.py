@@ -262,6 +262,20 @@ def cmd_validate(args):
             directed_ids.add(data["id"])
             print(f"OK   {path.relative_to(root)}")
 
+    enhance_ids = {
+        program_id
+        for program_id, entry in reviewed.items()
+        if entry.get("decision") == "enhance"
+    }
+    missing_enhance = enhance_ids - directed_ids
+    if missing_enhance:
+        failures += 1
+        print("FAIL detailed Sound Direction for enhance decisions")
+        for program_id in sorted(missing_enhance):
+            print(f"  - missing sidecar for {program_id!r}")
+    elif reviewed:
+        print(f"OK   detailed Sound Direction for all {len(enhance_ids)} enhance decision(s)")
+
     total = len(programs)
     directed = len(directed_ids & set(programs))
     coverage = (100.0 * directed / total) if total else 100.0
