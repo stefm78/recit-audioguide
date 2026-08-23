@@ -1,9 +1,9 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "id": "orleans-cathedral-ep03",
   "language": "fr-FR",
   "profile": "speech",
-  "production_version": 2,
+  "production_version": 3,
   "title": "Les vitraux de Jeanne : dix images pour fabriquer une mémoire",
   "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
   "episode": 3,
@@ -19,8 +19,10 @@
     "events": [
       {
         "sound": "historic-horse-hooves",
-        "at_ms": 46000,
-        "gain_db": -35,
+        "role": "scene",
+        "after_segment": 3,
+        "space_ms": 3200,
+        "gain_db": -25,
         "placement": "left"
       }
     ],
