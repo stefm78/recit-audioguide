@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "sounds": [
+    {
+      "id": "orleans-cathedral-parvis",
+      "type": "ambience",
+      "query": "BÜYÜK HENDEK STREET evening audio",
+      "required_tags": [],
+      "preferred_tags": ["street", "city"],
+      "providers": ["wikimedia-commons"],
+      "limit": 8,
+      "min_score": 70
+    },
+    {
+      "id": "church-bell-distant",
+      "type": "event",
+      "query": "Zajeci zvony kostel 2025",
+      "required_tags": [],
+      "preferred_tags": ["church", "bell"],
+      "providers": ["wikimedia-commons"],
+      "limit": 8,
+      "min_score": 70
+    }
+  ]
+}

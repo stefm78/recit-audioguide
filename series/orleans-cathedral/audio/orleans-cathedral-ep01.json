@@ -1,10 +1,10 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "orleans-cathedral-ep01",
   "title": "Avant d’entrer : une cathédrale qui trompe l’œil",
   "language": "fr-FR",
   "profile": "speech",
-  "production_version": 1,
+  "production_version": 2,
   "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
   "episode": 1,
   "stop": "Parvis et façade occidentale",
@@ -13,6 +13,18 @@
   "look": "Reculez assez pour voir les deux tours, la flèche et l’axe de la rue Jeanne-d’Arc.",
   "summary": "La façade paraît médiévale, mais elle est l’aboutissement d’un chantier commencé au XIIIe siècle et officiellement achevé au XIXe. C’est le meilleur endroit pour raccorder la cathédrale à toute la visite d’Orléans.",
   "historical_note": "Le bâtiment actuel superpose des phases de construction et de reconstruction très éloignées dans le temps. L’épisode insiste sur cette stratification plutôt que de présenter la cathédrale comme un monument médiéval resté intact.",
+  "soundscape": {
+    "bed": {
+      "sound": "orleans-cathedral-parvis",
+      "gain_db": -29,
+      "loop": true,
+      "fade_in_ms": 1800,
+      "fade_out_ms": 2200
+    },
+    "layers": [],
+    "events": [],
+    "ducking": "speech"
+  },
   "lead_in_ms": 450,
   "sources": [
     "https://www.cathedrale-orleans.fr/visiter",
