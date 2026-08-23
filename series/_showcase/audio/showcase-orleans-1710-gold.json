@@ -1,0 +1,221 @@
+{
+  "schema_version": 6,
+  "id": "showcase-orleans-1710-gold",
+  "language": "fr-FR",
+  "profile": "speech",
+  "title": "La place change de voix — Orléans, vers 1710",
+  "series": "Gold Master Sound Direction v1",
+  "production_version": 1,
+  "historical_note": "Évocation composite et fictive d’un matin orléanais du début du XVIIIe siècle. Elle ne reconstitue aucun événement précis. Les sons sont employés pour leur plausibilité évocatrice et leur provenance reste tracée dans le catalogue sonore.",
+  "soundscape": {
+    "bed": {
+      "sound": "gregorian-chant-bed",
+      "gain_db": -47,
+      "loop": true,
+      "fade_in_ms": 3000,
+      "fade_out_ms": 3500
+    },
+    "events": [
+      {
+        "sound": "historic-horse-hooves",
+        "role": "scene",
+        "after_segment": 3,
+        "space_ms": 3400,
+        "gain_db": -14,
+        "placement": "left",
+        "fade_in_ms": 180,
+        "fade_out_ms": 1000
+      },
+      {
+        "sound": "church-bell-distant",
+        "role": "scene",
+        "after_segment": 9,
+        "space_ms": 2400,
+        "gain_db": -17,
+        "placement": "right",
+        "fade_in_ms": 0,
+        "fade_out_ms": 1100
+      },
+      {
+        "sound": "historic-pipe-organ",
+        "role": "bridge",
+        "after_segment": 13,
+        "foreground_ms": 4200,
+        "carry_through_segments": 2,
+        "tail_ms": 1200,
+        "gain_db": -20,
+        "placement": "center",
+        "fade_in_ms": 500,
+        "fade_out_ms": 1600
+      }
+    ],
+    "ducking": "speech"
+  },
+  "lead_in_ms": 500,
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "placement": "center",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 250,
+      "text": "Orléans, vers 1710. L’aube blanchit la pierre de Sainte-Croix. Sur la place, une marchande finit d’installer son panier pendant qu’un garde surveille une rue encore froide."
+    },
+    {
+      "character_id": "marchande",
+      "speaker": "La marchande",
+      "preset": "marchande-truculente",
+      "placement": "left",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 160,
+      "text": "Vous pourriez sourire, monsieur le garde. À force de regarder les gens comme ça, vous allez finir par leur faire payer le passage."
+    },
+    {
+      "character_id": "sentinelle",
+      "speaker": "La sentinelle",
+      "preset": "sentinelle-nerveuse",
+      "rate": "+24%",
+      "volume": "+10%",
+      "placement": "right",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 120,
+      "text": "Reculez votre panier. Et gardez la rue libre."
+    },
+    {
+      "character_id": "marchande",
+      "speaker": "La marchande",
+      "preset": "marchande-truculente",
+      "rate": "+16%",
+      "volume": "+8%",
+      "placement": "left",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 160,
+      "text": "À cette vitesse-là, celui qui arrive n’apporte sûrement pas des fleurs."
+    },
+    {
+      "character_id": "sentinelle",
+      "speaker": "La sentinelle",
+      "preset": "sentinelle-nerveuse",
+      "rate": "+15%",
+      "volume": "+6%",
+      "placement": "right",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 130,
+      "text": "Occupez-vous de vos pommes. Le courrier ne vous regarde pas."
+    },
+    {
+      "character_id": "marchande",
+      "speaker": "La marchande",
+      "preset": "marchande-truculente",
+      "rate": "+14%",
+      "volume": "+6%",
+      "placement": "left",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 250,
+      "text": "Mes pommes, elles, ont au moins la politesse de répondre quand on leur parle."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "rate": "+6%",
+      "placement": "center",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 260,
+      "text": "Le cavalier a déjà tourné au coin de la rue. La marchande remet tranquillement deux fruits en place, comme si elle n’avait rien remarqué."
+    },
+    {
+      "character_id": "marchande",
+      "speaker": "La marchande",
+      "preset": "marchande-truculente",
+      "rate": "+12%",
+      "volume": "+5%",
+      "placement": "left",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 160,
+      "text": "Vous voyez ? Pas une seule pomme n’a déserté."
+    },
+    {
+      "character_id": "sentinelle",
+      "speaker": "La sentinelle",
+      "preset": "sentinelle-nerveuse",
+      "rate": "+8%",
+      "volume": "+2%",
+      "placement": "right",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 120,
+      "text": "Pour l’instant. Et vous parlez toujours trop."
+    },
+    {
+      "character_id": "sentinelle",
+      "speaker": "La sentinelle",
+      "preset": "sentinelle-nerveuse",
+      "rate": "-8%",
+      "pitch": "-2Hz",
+      "volume": "-8%",
+      "placement": "right",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 500,
+      "text": "Chut."
+    },
+    {
+      "character_id": "marchande",
+      "speaker": "La marchande",
+      "preset": "marchande-truculente",
+      "rate": "-4%",
+      "pitch": "+2Hz",
+      "volume": "-6%",
+      "placement": "left",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 350,
+      "text": "Oui, oui... j’ai compris."
+    },
+    {
+      "character_id": "sentinelle",
+      "speaker": "La sentinelle",
+      "preset": "sentinelle-nerveuse",
+      "rate": "-10%",
+      "pitch": "-4Hz",
+      "volume": "-6%",
+      "placement": "right",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 650,
+      "text": "L’office."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "rate": "-3%",
+      "volume": "+0%",
+      "placement": "center",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 250,
+      "text": "Pendant un instant, même la place semble attendre."
+    },
+    {
+      "character_id": "marchande",
+      "speaker": "La marchande",
+      "preset": "marchande-truculente",
+      "rate": "-6%",
+      "pitch": "+0Hz",
+      "volume": "-8%",
+      "placement": "left",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 350,
+      "text": "Eh bien... je vais parler moins fort."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "rate": "-2%",
+      "volume": "+0%",
+      "placement": "center",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 900,
+      "text": "La ville ne s’est pas tue. Elle a simplement changé de voix, et chacun, sans qu’on le lui demande, s’est mis à écouter autrement."
+    }
+  ]
+}
