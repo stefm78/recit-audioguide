@@ -1,9 +1,9 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "orleans-cathedral-ep08",
   "language": "fr-FR",
   "profile": "speech",
-  "production_version": 3,
+  "production_version": 4,
   "title": "Avant de sortir : entendre la Loire jusque dans le grand orgue",
   "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
   "episode": 8,
@@ -19,10 +19,11 @@
     "events": [
       {
         "sound": "historic-pipe-organ",
-        "role": "scene",
-        "after_segment": 4,
-        "space_ms": 4800,
-        "gain_db": -25,
+        "role": "bridge",
+        "after_segment": 5,
+        "foreground_ms": 5200,
+        "carry_under_speech_ms": 2200,
+        "gain_db": -24,
         "placement": "center"
       }
     ],
@@ -38,7 +39,9 @@
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Revenez vers la nef et arrêtez-vous avant la sortie. Regardez d’abord vers le chœur. Vous pouvez maintenant nommer ce que vous voyez : la nef, la croisée du transept, le chœur, puis l’abside. Mais surtout, vous pouvez associer chaque zone à une histoire : le chantier gothique, la destruction de 1568, la reconstruction royale, les stalles, les chapelles, Jeanne."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Maintenant, retournez-vous vers les portes et le grand orgue. Son histoire nous offre une dernière connexion inattendue avec la vallée de la Loire. L’instrument installé ici au XIXe siècle provient en partie de l’abbaye de Fleury, à Saint-Benoît-sur-Loire. Vendu après la Révolution, il est remonté dans la cathédrale à partir de 1822 puis profondément transformé au fil du temps, notamment par le célèbre facteur d’orgues Aristide Cavaillé-Coll."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Le dépliant de la cathédrale mentionne aujourd’hui plusieurs milliers de tuyaux et cinquante-quatre jeux. Mais le chiffre compte moins que le principe : un orgue est une architecture dans l’architecture. Des tuyaux de tailles, formes et matières différentes produisent des timbres très variés. Et tout cela travaille avec les trente-deux mètres de hauteur et la longue réverbération de la nef."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","acoustic_space":"large-stone-interior","pause_after_ms":620,"text":"Si vous avez la chance d’entendre quelques notes, observez ce qui se passe : il devient difficile de localiser précisément le son. Il rebondit, se mélange, descend de la tribune et semble parfois appartenir à tout le volume. C’est exactement l’inverse d’un casque audio. Ici, l’espace entier est l’instrument. Même le silence qui suit une note fait partie de l’expérience."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":280,"text":"Si vous avez la chance d’entendre quelques notes, observez ce qui se passe : il devient difficile de localiser précisément le son. Il rebondit, se mélange, descend de la tribune et semble parfois appartenir à tout le volume. C’est exactement l’inverse d’un casque audio."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","acoustic_space":"large-stone-interior","pause_after_ms":280,"text":"Ici, l’espace entier est l’instrument."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Même le silence qui suit une note fait partie de l’expérience."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Cette histoire de l’orgue résume presque notre voyage. Des objets se déplacent le long de la Loire, des monuments sont détruits puis reconstruits, la Révolution change la propriété des biens religieux, le XIXe siècle réorganise le patrimoine, et aujourd’hui nous parcourons tout cela comme une histoire continue. La continuité existe, mais elle est faite de ruptures."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Avant de sortir, prenez encore trente secondes sans audio. Regardez une dernière fois la nef. Essayez de ne plus voir « une vieille cathédrale ». Voyez plutôt six siècles de chantier, un site religieux beaucoup plus ancien encore, des guerres civiles, des rois, des chanoines, des restaurateurs, des artistes, des pèlerins et des visiteurs. Le monument devient beaucoup plus vivant dès que l’on cesse de lui attribuer une seule date."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Alors, où en sommes-nous ? Nous sommes entrés avec Jeanne et nous ressortons avec Orléans tout entière. Dehors, la rue Jeanne-d’Arc nous ramènera vers le Martroi ; un peu plus loin, la Loire explique toujours pourquoi la ville existe. Sainte-Croix n’est donc pas une parenthèse dans la visite : c’est un concentré du même récit. Quand vous serez prêts, franchissez les portes. La ville reprend exactement là où la cathédrale s’arrête."}
