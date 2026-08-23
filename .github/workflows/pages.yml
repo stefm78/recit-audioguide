@@ -94,20 +94,35 @@ jobs:
           for program in "${changed[@]}"; do
             base_name="$(basename "$program" .json)"
             program_id="$(python -c 'import json,sys; print(json.load(open(sys.argv[1], encoding="utf-8"))["id"])' "$program")"
-            audio-engine preview "$program" \
-              --out generated/audio \
-              --sounds sound-library/sounds.json \
-              --before-ms 4000 \
-              --after-ms 4000 \
-              > "generated/audio-previews/${base_name}-preview.json"
+            has_events="$(python -c 'import json,sys; d=json.load(open(sys.argv[1], encoding="utf-8")); print(1 if ((d.get("soundscape") or {}).get("events") or []) else 0)' "$program")"
+            if [[ "$has_events" == "1" ]]; then
+              audio-engine preview "$program" \
+                --out generated/audio \
+                --sounds sound-library/sounds.json \
+                --before-ms 4000 \
+                --after-ms 4000 \
+                > "generated/audio-previews/${base_name}-preview.json"
+            else
+              audio-engine render "$program" \
+                --out generated/audio \
+                --sounds sound-library/sounds.json \
+                > "generated/audio-previews/${base_name}-render.json"
+              echo '{"status":"rendered-full-only","reason":"no-sound-events"}' \
+                > "generated/audio-previews/${base_name}-preview.json"
+            fi
             audio-engine timing "$program" --out generated/audio \
               > "generated/audio-previews/${base_name}-timing.json"
             cp "generated/audio/${program_id}/manifest.json" \
               "generated/audio-previews/${base_name}-manifest.json"
             cp "generated/audio/${program_id}/audio.mp3" \
               "generated/audio-previews/${base_name}-full.mp3"
+            if [[ -d "generated/audio/${program_id}/previews" ]]; then
+              for clip in generated/audio/${program_id}/previews/*.mp3; do
+                [[ -e "$clip" ]] || continue
+                cp "$clip" "generated/audio-previews/${base_name}-$(basename "$clip")"
+              done
+            fi
           done
-          find generated/audio -path '*/previews/*.mp3' -exec cp {} generated/audio-previews/ \;
       - name: Upload fast sound-design previews
         uses: actions/upload-artifact@v4
         with:
