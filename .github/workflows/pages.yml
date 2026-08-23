@@ -18,12 +18,12 @@ concurrency:
 
 jobs:
   audio:
-    uses: stefm78/audio-engine/.github/workflows/render.yml@363ed35709b763b8bd917ed829f065c3868ec077
+    uses: stefm78/audio-engine/.github/workflows/render.yml@03a45e269b4b456fce5c5882f6e197103b8929af
     with:
       source_glob: "series/**/audio/*.json"
       output_dir: "generated/audio"
       artifact_name: "recit-audio-assets"
-      engine_ref: "363ed35709b763b8bd917ed829f065c3868ec077"
+      engine_ref: "03a45e269b4b456fce5c5882f6e197103b8929af"
 
   build:
     needs: audio
