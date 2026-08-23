@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "orleans-cathedral-ep05",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 1,
+  "title": "Le chœur : une cathédrale est aussi une machine à prier",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": 5,
+  "after_episode": null,
+  "stop": "Chœur, stalles et boiseries",
+  "location": "Cathédrale Sainte-Croix d'Orléans, chœur",
+  "launch": "devant le chœur, sans franchir les espaces éventuellement réservés au culte.",
+  "look": "Regardez les stalles, les boiseries, les médaillons sculptés et la profondeur jusqu’à l’abside.",
+  "summary": "Le chœur permet de comprendre la vie quotidienne de la cathédrale : chanoines, offices, stalles, sculpture et organisation d’un espace religieux qui n’était pas conçu uniquement pour les visiteurs.",
+  "historical_note": "Les boiseries sont du début du XVIIIe siècle. Le dépliant officiel mentionne 21 médaillons sculptés représentant des scènes de la vie du Christ.",
+  "lead_in_ms": 450,
+  "sources": [
+    "https://www.cathedrale-orleans.fr/visiter",
+    "https://www.cathedrale-orleans.fr/depliants",
+    "https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf",
+    "https://www.culture.gouv.fr/regions/drac-centre-val-de-loire/actualites-regionales-centre-val-de-loire/actualites-a-la-une/Presentation-de-l-ouvrage-Cathedrale-d-Orleans",
+    "https://www.cathedrale-orleans.fr/"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Devant le chœur, nous changeons complètement d’échelle. Jusqu’ici, nous avons surtout regardé l’architecture. Maintenant, imaginez un emploi du temps. Une cathédrale médiévale puis moderne est un lieu qui vit selon des heures de prière, des offices, des processions, des chants et des cérémonies. Le chœur est l’un des espaces où cette vie quotidienne devient visible."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Regardez les stalles : ces sièges de bois étaient destinés notamment aux chanoines, membres du chapitre de la cathédrale. Leur rôle n’était pas seulement spirituel. Le chapitre gérait aussi des biens, des revenus, des responsabilités et une partie de l’organisation matérielle du lieu. Une cathédrale est donc à la fois un sanctuaire, une institution, un employeur et un acteur de la ville."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Les boiseries que vous voyez appartiennent au début du XVIIIe siècle. Le décor comprend vingt-et-un médaillons sculptés représentant des scènes de la vie du Christ. Là encore, l’image sert à organiser une mémoire. Mais comparez avec les vitraux de Jeanne : ici, le récit appartient au cœur même de la liturgie chrétienne. Dans les bas-côtés, la ville d’Orléans racontait aussi sa grande héroïne."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Regardez la profondeur du chœur jusqu’à l’abside. Une cathédrale n’est pas une grande salle neutre. Les espaces sont hiérarchisés : certains accueillent largement les fidèles, d’autres sont associés au clergé, à l’autel, aux reliques ou à des fonctions précises. Cette organisation a beaucoup évolué au fil des siècles, mais elle explique pourquoi les grilles, les stalles, les autels et les chapelles structurent encore votre déplacement."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Vous apercevez peut-être aussi une petite lumière rouge près du tabernacle. Pour un catholique, elle indique la présence de l’Eucharistie consacrée conservée dans le tabernacle. Même si l’on visite Sainte-Croix comme monument historique, c’est un détail essentiel : le bâtiment n’est pas un musée désaffecté. Il reste un lieu de culte actif. À partir de la fin d’après-midi, aujourd’hui, les temps de prière et la messe reprennent d’ailleurs naturellement le dessus sur la visite touristique."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Au-dessus et autour de nous, la pierre raconte des siècles ; ici, le mobilier raconte des gestes. S’asseoir, se lever, chanter, écouter, se tourner vers l’autel. C’est une autre manière de rendre le passé imaginable. Nous n’avons pas besoin de connaître toutes les prières ou tous les offices pour comprendre que cette architecture était faite pour des usages très répétés, parfois plusieurs fois par jour."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Alors, où en sommes-nous ? La cathédrale n’est plus seulement un décor monumental : elle devient une institution vivante. Nous allons maintenant contourner le chœur par le déambulatoire. Faites-le lentement. C’est l’une des parties les plus intéressantes de la visite, parce qu’elle permet de découvrir des espaces plus petits, plus anciens et beaucoup plus intimes : les chapelles qui entourent le chevet."}
+  ]
+}
