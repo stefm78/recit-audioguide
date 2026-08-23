@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "orleans-cathedral-ep03",
   "language": "fr-FR",
   "profile": "speech",
-  "production_version": 1,
+  "production_version": 2,
   "title": "Les vitraux de Jeanne : dix images pour fabriquer une mémoire",
   "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
   "episode": 3,
@@ -14,6 +14,18 @@
   "look": "Repérez Jeanne, les costumes, les armes et l’enchaînement des scènes ; cherchez notamment son entrée à Orléans et sa prière à Sainte-Croix.",
   "summary": "Les dix vitraux racontent la vie de Jeanne comme un récit continu. Ils sont aussi un témoignage du XIXe siècle et de la manière dont Orléans construit sa mémoire johannique.",
   "historical_note": "Le site officiel indique dix vitraux des basses nefs racontant la vie de Jeanne et leur inauguration en 1897. Ils ne sont donc pas des images contemporaines de Jeanne.",
+  "soundscape": {
+    "layers": [],
+    "events": [
+      {
+        "sound": "historic-horse-hooves",
+        "at_ms": 46000,
+        "gain_db": -35,
+        "placement": "left"
+      }
+    ],
+    "ducking": "speech"
+  },
   "lead_in_ms": 450,
   "sources": [
     "https://www.cathedrale-orleans.fr/depliants",
