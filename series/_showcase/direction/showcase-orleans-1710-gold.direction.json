@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "id": "showcase-orleans-1710-gold",
+  "goal": "Faire oublier le moteur : le son raconte l'action et modifie les personnages sans être expliqué par le narrateur.",
+  "historical_mode": "evocation-composite",
+  "constraints": [
+    "no_narration_duplicates_obvious_sound",
+    "one_primary_attention_owner_per_beat",
+    "continuous_layers_need_narrative_reason",
+    "silence_is_allowed",
+    "measured_voice_timing_is_authoritative"
+  ],
+  "characters": {
+    "narrateur": {
+      "arc": ["present", "observant", "calm-close"]
+    },
+    "marchande": {
+      "arc": ["bright-teasing", "amused", "softened"]
+    },
+    "sentinelle": {
+      "arc": ["projected-alert", "irritated", "quiet-respectful"]
+    }
+  },
+  "beats": [
+    {
+      "id": "establish",
+      "attention_owner": "voice",
+      "purpose": "installer la place et les deux personnages",
+      "background": ["gregorian-chant-bed:barely-perceptible"]
+    },
+    {
+      "id": "cavalier-crosses",
+      "after_segment": 3,
+      "attention_owner": "sound",
+      "purpose": "faire traverser le cavalier sans commentaire simultane",
+      "sound": "historic-horse-hooves",
+      "handoff": "voice-to-sound-to-dialogue"
+    },
+    {
+      "id": "banter-resumes",
+      "attention_owner": "voice",
+      "purpose": "faire retomber la tension et construire la relation marchande-sentinelle"
+    },
+    {
+      "id": "bell-interrupts",
+      "after_segment": 9,
+      "attention_owner": "sound",
+      "purpose": "interrompre le duel verbal et provoquer un changement d'attitude",
+      "sound": "church-bell-distant",
+      "handoff": "dialogue-to-sound-to-quieter-dialogue"
+    },
+    {
+      "id": "held-breath",
+      "attention_owner": "silence",
+      "purpose": "laisser la rue changer de comportement avant le climax"
+    },
+    {
+      "id": "organ-climax",
+      "after_segment": 13,
+      "attention_owner": "sound",
+      "purpose": "faire sentir l'espace monumental sans le commenter",
+      "sound": "historic-pipe-organ",
+      "handoff": "foreground-then-carry-under-two-lines"
+    },
+    {
+      "id": "release",
+      "attention_owner": "voice",
+      "purpose": "conclure sur la transformation de la ville pendant que l'orgue s'efface"
+    }
+  ]
+}
