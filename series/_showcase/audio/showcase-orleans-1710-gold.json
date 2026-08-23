@@ -214,7 +214,7 @@
       "volume": "+0%",
       "placement": "center",
       "acoustic_space": "outdoor-open",
-      "pause_after_ms": 900,
+      "pause_after_ms": 1500,
       "text": "La ville ne s’est pas tue. Elle a simplement changé de voix, et chacun, sans qu’on le lui demande, s’est mis à écouter autrement."
     }
   ]
