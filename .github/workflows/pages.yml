@@ -27,6 +27,8 @@ jobs:
           python-version: '3.12'
       - name: Validate Sound Direction v1 sidecars
         run: python tools/sound_direction.py validate
+      - name: Validate Production v1 specifications
+        run: python tools/production.py validate
 
   sounds:
     needs: sound-direction
@@ -64,8 +66,9 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: generated/audio
-          key: audio-engine-v3-${{ runner.os }}-${{ github.repository }}-${{ github.sha }}
+          key: audio-engine-v4-${{ runner.os }}-${{ github.repository }}-${{ github.sha }}
           restore-keys: |
+            audio-engine-v4-${{ runner.os }}-${{ github.repository }}-
             audio-engine-v3-${{ runner.os }}-${{ github.repository }}-
             audio-engine-v2-${{ runner.os }}-${{ github.repository }}-
             audio-engine-v1-${{ runner.os }}-${{ github.repository }}-
@@ -133,14 +136,81 @@ jobs:
 
   audio:
     needs: sounds
-    uses: stefm78/audio-engine/.github/workflows/render.yml@3392d4f22f0a9b054a05b5c05a7856985c0ab030
-    with:
-      source_glob: "series/**/audio/*.json"
-      output_dir: "generated/audio"
-      artifact_name: "recit-audio-assets"
-      engine_ref: "3392d4f22f0a9b054a05b5c05a7856985c0ab030"
-      sounds_artifact_name: "recit-sound-library"
-      sounds_artifact_path: "sound-library"
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout caller
+        uses: actions/checkout@v6
+      - name: Checkout audio-engine
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: 3392d4f22f0a9b054a05b5c05a7856985c0ab030
+          path: .audio-engine
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Restore and save production cache
+        uses: actions/cache@v4
+        with:
+          path: generated/audio
+          key: audio-engine-v4-${{ runner.os }}-${{ github.repository }}-${{ github.sha }}
+          restore-keys: |
+            audio-engine-v4-${{ runner.os }}-${{ github.repository }}-
+            audio-engine-v3-${{ runner.os }}-${{ github.repository }}-
+            audio-engine-v2-${{ runner.os }}-${{ github.repository }}-
+            audio-engine-v1-${{ runner.os }}-${{ github.repository }}-
+      - name: Download hydrated sound library
+        uses: actions/download-artifact@v4
+        with:
+          name: recit-sound-library
+          path: sound-library
+      - name: Install audio-engine
+        run: python -m pip install --disable-pip-version-check ./.audio-engine
+      - name: Produce catalog
+        run: >-
+          python tools/production.py run
+          --source-glob 'series/**/audio/*.json'
+          --out generated/audio
+          --sounds sound-library/sounds.json
+      - name: Collect managed production previews
+        if: github.event_name == 'pull_request'
+        run: |
+          python - <<'PY'
+          import glob, json, shutil
+          from pathlib import Path
+          out = Path('generated/production-previews')
+          out.mkdir(parents=True, exist_ok=True)
+          for spec_path in glob.glob('series/*/production.json'):
+              spec = json.load(open(spec_path, encoding='utf-8'))
+              base = Path(spec_path).parent
+              program = json.load(open(base / spec['program'], encoding='utf-8'))
+              program_id = program['id']
+              src = Path('generated/audio') / program_id
+              dst = out / program_id
+              dst.mkdir(parents=True, exist_ok=True)
+              for name in ('audio.mp3', 'manifest.json', 'transcript.json'):
+                  if (src / name).exists():
+                      shutil.copy2(src / name, dst / name)
+              plan = Path('generated/audio/.production') / program_id / 'sequence-plan.json'
+              if plan.exists():
+                  shutil.copy2(plan, dst / 'sequence-plan.json')
+          PY
+      - name: Upload managed production previews
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: recit-production-previews
+          path: generated/production-previews
+          if-no-files-found: error
+          retention-days: 3
+      - name: Upload audio assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: recit-audio-assets
+          path: generated/audio
+          if-no-files-found: error
+          retention-days: 1
 
   build:
     needs: audio
