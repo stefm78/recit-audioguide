@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "orleans-cathedral-ep02",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 1,
+  "title": "La nef : pourquoi le regard monte-t-il tout seul ?",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": 2,
+  "after_episode": null,
+  "stop": "Narthex et grande nef",
+  "location": "Cathédrale Sainte-Croix d'Orléans, nef occidentale",
+  "launch": "juste après l’entrée, avant d’avancer au milieu de la nef.",
+  "look": "Regardez les piliers, les voûtes à 32 mètres, puis retournez-vous vers la tribune du grand orgue.",
+  "summary": "L’épisode donne les repères simples pour lire une cathédrale gothique : nef, bas-côtés, piliers, voûtes et lumière, sans transformer la visite en cours d’architecture.",
+  "historical_note": "Les dimensions et l’organisation spatiale suivent le dépliant officiel de la cathédrale. Le vocabulaire architectural est volontairement limité à ce qui aide à regarder.",
+  "lead_in_ms": 450,
+  "sources": [
+    "https://www.cathedrale-orleans.fr/visiter",
+    "https://www.cathedrale-orleans.fr/depliants",
+    "https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf",
+    "https://www.culture.gouv.fr/regions/drac-centre-val-de-loire/actualites-regionales-centre-val-de-loire/actualites-a-la-une/Presentation-de-l-ouvrage-Cathedrale-d-Orleans"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Arrêtez-vous quelques secondes et regardez droit devant vous. La première impression est presque physique : la cathédrale aspire le regard vers le haut et vers l’avant. Le grand vaisseau central devant vous s’appelle la nef. De chaque côté, des espaces plus bas l’accompagnent : les bas-côtés. Et tout au fond, au-delà de la croisée, se trouvent le chœur puis l’abside."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Pourquoi cette sensation de hauteur ? Regardez les piliers. Ils ne ressemblent pas à de gros murs continus. Ils organisent des lignes verticales qui semblent se prolonger jusque dans les nervures des voûtes. À Sainte-Croix, les voûtes atteignent environ trente-deux mètres. L’architecture gothique cherche précisément cela : répartir les charges de façon à ouvrir davantage les murs, gagner en hauteur et laisser entrer la lumière par de grandes fenêtres."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Mais ne réduisons pas le gothique à une prouesse d’ingénieur. Pour les croyants qui construisent et fréquentent ces édifices, la lumière, l’élévation et la progression vers le chœur ont aussi un sens religieux. La cathédrale est une église avant d’être un monument. On y célèbre, on y prie, on y chante, on y enterre, on y rassemble une communauté. Même si l’on ne partage pas cette foi, comprendre cette fonction change complètement la manière de regarder le bâtiment."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Faites maintenant une expérience : avancez lentement de quelques travées. Une travée est simplement la portion d’espace comprise entre deux grands supports successifs. Vous sentez un rythme. Pilier, ouverture, pilier, ouverture. L’architecture vous fait marcher par séquences. C’est une sorte de musique silencieuse, et c’est aussi la raison pour laquelle une cathédrale paraît souvent plus longue qu’un bâtiment ordinaire de même longueur."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Retournez-vous maintenant vers l’entrée. Au-dessus de vous se trouve le grand orgue. Nous lui consacrerons le dernier épisode, mais retenez déjà qu’il ne s’agit pas simplement d’un décor monumental. Dans une cathédrale, le son remplit tout le volume que vous êtes en train d’observer. Un orgue n’est pas posé ici au hasard : il travaille avec cette immense caisse de résonance qu’est l’édifice."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"À Orléans, cette nef nous offre également un pont avec ce que nous avons vu dehors. Sous les fenêtres des bas-côtés court le récit de Jeanne d’Arc. C’est notre prochaine étape. Et vous allez constater une chose étonnante : l’histoire de 1429 que nous avons suivie dans les rues est ici racontée comme une bande dessinée monumentale en verre, mais cette bande dessinée a été créée des siècles après les événements."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Alors, où en sommes-nous ? Nef, bas-côtés, voûtes : trois mots suffisent pour vous repérer. Gardez-les, et oubliez le reste pour l’instant. Avancez vers les vitraux de Jeanne d’Arc dans les bas-côtés. Cherchez les scènes figuratives où vous reconnaissez Jeanne, ses armes, ses compagnons ou les villes. Nous allons apprendre à lire non seulement ce qu’elles racontent, mais aussi l’époque qui a choisi de raconter Jeanne de cette façon."}
+  ]
+}
