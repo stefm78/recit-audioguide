@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "orleans-cathedral-g02",
+  "production_version": 1,
+  "title": "Condé a-t-il vraiment détruit Sainte-Croix ?",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": null,
+  "after_episode": 4,
+  "stop": null,
+  "location": "Cathédrale Sainte-Croix, Orléans, France",
+  "launch": null,
+  "look": null,
+  "summary": "Une formule simple accuse « les protestants ». La réalité est plus intéressante : Condé tente de protéger la cathédrale, mais des hommes de son camp la détruisent.",
+  "historical_note": "La capsule suit le récit patrimonial officiel : le duc de Condé s’oppose à la destruction ; des fanatiques de ses troupes passent outre.",
+  "lead_in_ms": 450,
+  "sources": ["https://www.cathedrale-orleans.fr/visiter","https://www.cathedrale-orleans.fr/depliants","https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf","https://www.culture.gouv.fr/regions/drac-centre-val-de-loire/actualites-regionales-centre-val-de-loire/actualites-a-la-une/Presentation-de-l-ouvrage-Cathedrale-d-Orleans"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"On lit parfois que le prince de Condé, chef protestant, aurait fait détruire Sainte-Croix. Le récit officiel de la cathédrale est plus nuancé. Condé, qui contrôle alors Orléans, ne souhaite pas la destruction du monument et fait protéger ses accès. Mais des hommes de son propre camp parviennent tout de même à entrer et s’attaquent aux piliers de la croisée."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Cette nuance est typique des guerres civiles. Un camp n’est jamais un cerveau unique. Des chefs militaires peuvent chercher à préserver un bâtiment pour des raisons politiques ou stratégiques tandis que des groupes plus radicaux veulent détruire ce qu’ils considèrent comme des idoles ou des symboles de l’adversaire religieux."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"La leçon est utile bien au-delà de Sainte-Croix : dès qu’une formule historique dit « les catholiques ont fait… » ou « les protestants ont voulu… », il faut souvent demander : qui exactement ? quelle autorité ? quels soldats ? quelle faction ? L’histoire devient généralement plus juste au moment où elle devient un peu moins simple."}
+  ]
+}
