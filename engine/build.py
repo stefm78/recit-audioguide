@@ -34,6 +34,12 @@ def load_manifest(path: Path):
     return data
 
 
+def generated_asset(directory: Path, *names):
+    for name in names:
+        if (directory/name).exists(): return name
+    return None
+
+
 def main():
     manifests=[]
     for p in sorted(SERIES.glob('*/series.json')):
@@ -60,13 +66,17 @@ def main():
         published=json.loads(json.dumps(m))
         for episode in published.get('episodes',[]):
             generated=ROOT/'generated'/'audio'/episode['id']
-            if (generated/'guide.mp3').exists():
+            audio_name=generated_asset(generated,'audio.mp3','guide.mp3')
+            if audio_name:
                 target=DIST/'audio'/episode['id']
                 target.parent.mkdir(parents=True,exist_ok=True)
                 shutil.copytree(generated,target,dirs_exist_ok=True)
-                episode['audio_url']=f"../../audio/{episode['id']}/guide.mp3"
-                if (generated/'resolved-cast.json').exists():
-                    episode['transcript_url']=f"../../audio/{episode['id']}/resolved-cast.json"
+                episode['audio_url']=f"../../audio/{episode['id']}/{audio_name}"
+                transcript_name=generated_asset(generated,'transcript.json','resolved-cast.json')
+                if transcript_name:
+                    episode['transcript_url']=f"../../audio/{episode['id']}/{transcript_name}"
+                if (generated/'manifest.json').exists():
+                    episode['audio_manifest_url']=f"../../audio/{episode['id']}/manifest.json"
         (data_dir/'series.json').write_text(json.dumps(published,ensure_ascii=False,indent=2),encoding='utf-8')
         assets=SERIES/slug/'assets'
         if assets.exists(): shutil.copytree(assets,data_dir/'assets',dirs_exist_ok=True)
