@@ -80,13 +80,18 @@ jobs:
           mkdir -p generated/audio-previews
           printf '%s\n' "${changed[@]}" > generated/audio-previews/programs.txt
           for program in "${changed[@]}"; do
-            audio-engine timing "$program" --out generated/audio > "generated/audio-previews/$(basename "$program" .json)-timing.json"
+            base_name="$(basename "$program" .json)"
+            program_id="$(python -c 'import json,sys; print(json.load(open(sys.argv[1], encoding="utf-8"))["id"])' "$program")"
             audio-engine preview "$program" \
               --out generated/audio \
               --sounds sound-library/sounds.json \
               --before-ms 4000 \
               --after-ms 4000 \
-              > "generated/audio-previews/$(basename "$program" .json)-preview.json"
+              > "generated/audio-previews/${base_name}-preview.json"
+            audio-engine timing "$program" --out generated/audio \
+              > "generated/audio-previews/${base_name}-timing.json"
+            cp "generated/audio/${program_id}/manifest.json" \
+              "generated/audio-previews/${base_name}-manifest.json"
           done
           find generated/audio -path '*/previews/*.mp3' -exec cp {} generated/audio-previews/ \;
       - name: Upload fast sound-design previews
