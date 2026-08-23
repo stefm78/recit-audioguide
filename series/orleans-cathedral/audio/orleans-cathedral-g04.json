@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "orleans-cathedral-g04",
+  "production_version": 1,
+  "title": "Pourquoi s’appelle-t-elle Sainte-Croix ?",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": null,
+  "after_episode": 6,
+  "stop": null,
+  "location": "Cathédrale Sainte-Croix, Orléans, France",
+  "launch": null,
+  "look": null,
+  "summary": "Le nom ne décrit pas la forme du bâtiment : il vient de reliques de la Croix du Christ attestées à Orléans depuis le VIIe siècle.",
+  "historical_note": "La présence de reliques de la Sainte Croix est attestée selon la cathédrale depuis le VIIe siècle ; une présence dès le IVe siècle reste présentée comme possible, non certaine.",
+  "lead_in_ms": 450,
+  "sources": ["https://www.cathedrale-orleans.fr/","https://www.cathedrale-orleans.fr/depliants"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Pourquoi « Sainte-Croix » ? Pas parce que le plan de la cathédrale forme une croix, même si c’est vrai. Le nom vient de reliques considérées comme des fragments de la Croix du Christ. La cathédrale indique que leur présence à Orléans est attestée depuis au moins le VIIe siècle, et peut-être plus tôt."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Au Moyen Âge, une relique n’est pas un petit souvenir folklorique. Elle peut attirer des pèlerins, justifier un prestige, structurer des fêtes et donner son identité à une église. Le nom Sainte-Croix affirme donc quelque chose de très fort : ce lieu se définit par son lien avec la Croix du Christ."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"On peut évidemment poser la question moderne de l’authenticité matérielle des fragments. Mais pour comprendre l’histoire du monument, une autre question est tout aussi importante : qu’ont cru et fait les communautés qui les ont conservés ? La puissance historique d’une relique réside aussi dans les pratiques, les déplacements et les récits qu’elle provoque."}
+  ]
+}
