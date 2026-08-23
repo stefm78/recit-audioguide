@@ -1,6 +1,8 @@
 {
   "version": 1,
   "id": "showcase-orleans-1710-gold",
+  "mode": "story",
+  "density": "scene-rich",
   "goal": "Faire oublier le moteur : le son raconte l'action et modifie les personnages sans être expliqué par le narrateur.",
   "historical_mode": "evocation-composite",
   "constraints": [

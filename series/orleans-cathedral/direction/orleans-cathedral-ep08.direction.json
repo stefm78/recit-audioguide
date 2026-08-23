@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "orleans-cathedral-ep08",
+  "mode": "visit",
+  "density": "light",
+  "goal": "Faire sentir le volume de la nef et la présence du grand orgue sans concurrencer le lieu réel ni expliquer le son deux fois.",
+  "historical_mode": "documented",
+  "constraints": [
+    "no_narration_duplicates_obvious_sound",
+    "one_primary_attention_owner_per_beat",
+    "continuous_layers_need_narrative_reason",
+    "silence_is_allowed",
+    "measured_voice_timing_is_authoritative"
+  ],
+  "characters": {
+    "narrateur": {
+      "arc": ["guiding", "observant", "quiet-release"]
+    }
+  },
+  "beats": [
+    {
+      "id": "orient",
+      "attention_owner": "voice",
+      "purpose": "recomposer mentalement la cathédrale avant la sortie"
+    },
+    {
+      "id": "acoustic-accent",
+      "attention_owner": "space",
+      "purpose": "faire brièvement sentir que la nef participe au son",
+      "after_segment": 5,
+      "exit": "return-to-dry-narration"
+    },
+    {
+      "id": "organ-handoff",
+      "attention_owner": "sound",
+      "purpose": "laisser l'orgue démontrer le volume de la nef avant que la voix ne reprenne",
+      "after_segment": 5,
+      "sound": "historic-pipe-organ",
+      "handoff": "foreground-then-carry-through-next-segment"
+    },
+    {
+      "id": "silence-means-something",
+      "attention_owner": "voice",
+      "purpose": "nommer le rôle du silence après que l'auditeur vient de l'éprouver",
+      "voice_state": "calm-close"
+    },
+    {
+      "id": "leave-with-real-place",
+      "attention_owner": "silence",
+      "purpose": "rendre le lieu réel à l'auditeur avant de franchir les portes",
+      "exit": "no-added-sound"
+    }
+  ]
+}

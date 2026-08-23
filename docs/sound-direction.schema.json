@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stefm78.github.io/recit-audioguide/schemas/sound-direction-v1.json",
+  "title": "Récit Audioguide Sound Direction v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["version", "id", "mode", "density", "goal", "beats"],
+  "properties": {
+    "version": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "mode": {
+      "type": "string",
+      "enum": ["story", "visit", "route", "audiobook", "learning"]
+    },
+    "density": {
+      "type": "string",
+      "enum": ["none", "light", "scene-rich"]
+    },
+    "goal": {"type": "string", "minLength": 1},
+    "historical_mode": {
+      "type": "string",
+      "enum": ["documented", "reconstruction", "evocation-composite", "not-applicable"]
+    },
+    "constraints": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "characters": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "arc": {
+            "type": "array",
+            "items": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "beats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["id", "attention_owner", "purpose"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "attention_owner": {
+            "type": "string",
+            "enum": ["voice", "sound", "silence", "space"]
+          },
+          "purpose": {"type": "string", "minLength": 1},
+          "after_segment": {"type": "integer", "minimum": 1},
+          "voice_state": {"type": "string", "minLength": 1},
+          "background": {
+            "type": "array",
+            "items": {"type": "string", "minLength": 1}
+          },
+          "sound": {"type": "string", "minLength": 1},
+          "handoff": {"type": "string", "minLength": 1},
+          "exit": {"type": "string", "minLength": 1},
+          "rationale": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

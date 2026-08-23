@@ -17,7 +17,19 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  sound-direction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate Sound Direction v1 sidecars
+        run: python tools/sound_direction.py validate
+
   sounds:
+    needs: sound-direction
     permissions:
       contents: write
     uses: stefm78/audio-engine/.github/workflows/hydrate-sounds.yml@02040440be907ee52ed54f4931a0b2611a765f94
