@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "profiles": {
+    "story": {
+      "default_density": "scene-rich",
+      "priority": "dramaturgy",
+      "rules": [
+        "sound may take foreground when it can tell action better than narration",
+        "dialogue may change delivery per replica without changing character voice",
+        "silence and bridge handoffs are preferred to continuous decoration"
+      ]
+    },
+    "visit": {
+      "default_density": "light",
+      "priority": "place-and-intelligibility",
+      "rules": [
+        "use acoustic space and sparse plausible events before decorative beds",
+        "do not compete with the real place around the listener",
+        "silence is often the correct choice"
+      ]
+    },
+    "route": {
+      "default_density": "light",
+      "priority": "voice-intelligibility",
+      "rules": [
+        "assume car and road noise",
+        "keep narration dominant and avoid subtle low-level cues that disappear in motion",
+        "reserve foreground sound for short unmistakable transitions"
+      ]
+    },
+    "audiobook": {
+      "default_density": "light",
+      "priority": "long-form-continuity",
+      "rules": [
+        "do not turn prose into continuous radio drama by default",
+        "use music or sound mainly for chapter openings, transitions, memories, dreams or exceptional scenes",
+        "preserve fatigue-free long-form listening"
+      ]
+    },
+    "learning": {
+      "default_density": "light",
+      "priority": "pedagogy",
+      "rules": [
+        "sound must reinforce comprehension or memory rather than novelty",
+        "avoid effects during cognitively dense explanations",
+        "use short cues and silence to structure attention"
+      ]
+    }
+  },
+  "universal_rules": [
+    "the listener follows the story, not the engine",
+    "one primary attention owner per beat",
+    "no narration duplicates an obvious sound",
+    "every continuous layer needs a narrative reason",
+    "silence is a positive decision",
+    "measured rendered speech timing is authoritative after TTS",
+    "density none is always a valid outcome"
+  ]
+}
