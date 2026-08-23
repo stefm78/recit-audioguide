@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "orleans-cathedral-ep07",
   "language": "fr-FR",
   "profile": "speech",
-  "production_version": 1,
+  "production_version": 2,
   "title": "Chapelle Sainte-Jeanne-d’Arc : de la jeune fille à la sainte",
   "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
   "episode": 7,
@@ -14,6 +14,18 @@
   "look": "Regardez la statue, le décor et la manière dont Jeanne est présentée ici, puis comparez mentalement avec la statue équestre du Martroi.",
   "summary": "Après la combattante des Tourelles et l’héroïne du Martroi, la cathédrale présente Jeanne comme sainte. L’épisode distingue histoire, canonisation et mémoire religieuse.",
   "historical_note": "Jeanne est canonisée en 1920. La chapelle contient aujourd’hui la statue déplacée depuis le chœur au XXe siècle. Le récit distingue explicitement la Jeanne historique de la lecture religieuse de sa vie.",
+  "soundscape": {
+    "layers": [],
+    "events": [
+      {
+        "sound": "church-bell-distant",
+        "at_ms": 17500,
+        "gain_db": -33,
+        "placement": "right"
+      }
+    ],
+    "ducking": "speech"
+  },
   "lead_in_ms": 450,
   "sources": [
     "https://www.cathedrale-orleans.fr/",
