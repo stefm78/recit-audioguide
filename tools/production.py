@@ -2,9 +2,7 @@
 import argparse
 import copy
 import glob
-import hashlib
 import json
-import os
 import subprocess
 import sys
 from pathlib import Path
@@ -20,14 +18,6 @@ def load_json(path: Path):
 def write_json(path: Path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
-def sha256_file(path: Path):
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
 
 
 def run_json(command):
@@ -86,6 +76,7 @@ def sound_beats(direction):
 
 
 def merge_bridge_boundaries(spans, direction):
+    """Keep each sound-to-voice handoff inside one internal QA sequence."""
     spans = copy.deepcopy(spans)
     for beat in sound_beats(direction):
         anchor = int(beat["after_segment"])
@@ -114,20 +105,17 @@ def validate_inputs(spec):
         anchor = beat.get("after_segment")
         if anchor is not None and (not isinstance(anchor, int) or not 1 <= anchor <= len(segments)):
             raise ValueError(f"{spec['path']}: invalid direction anchor {anchor}")
-    spans = merge_bridge_boundaries(scene_spans(segments), direction)
     for beat in sound_beats(direction):
-        anchor = int(beat["after_segment"])
-        span = next(item for item in spans if item["start"] <= anchor <= item["end"])
-        if anchor >= span["end"]:
-            raise ValueError(f"{spec['path']}: bridge after segment {anchor} has no following segment inside its sequence")
-    return program, direction, spans
+        if int(beat["after_segment"]) >= len(segments):
+            raise ValueError(f"{spec['path']}: sound bridge needs a following segment")
+    return program, direction, merge_bridge_boundaries(scene_spans(segments), direction)
 
 
-def sequence_event(beat, local_anchor):
+def bridge_event(beat):
     return {
         "sound": beat["sound"],
         "role": "bridge",
-        "after_segment": local_anchor,
+        "after_segment": int(beat["after_segment"]),
         "foreground_ms": 2600,
         "carry_through_segments": 1,
         "tail_ms": 900,
@@ -138,151 +126,85 @@ def sequence_event(beat, local_anchor):
     }
 
 
-def derive_sequences(spec, work_root: Path):
-    program, direction, spans = validate_inputs(spec)
-    source_id = program["id"]
-    program_dir = work_root / source_id / "programs"
-    program_dir.mkdir(parents=True, exist_ok=True)
-    derived = []
-
-    for sequence_number, span in enumerate(spans, start=1):
-        sequence = copy.deepcopy(program)
-        sequence_id = f".seq--{source_id}--{sequence_number:02d}"
-        sequence["id"] = sequence_id
-        sequence["title"] = f"{program['title']} — séquence interne {sequence_number}"
-        sequence["segments"] = copy.deepcopy(program["segments"][span["start"] - 1:span["end"]])
-        events = []
-        applied_beats = []
+def build_sequence_plan(program, direction, spans, spec):
+    sequences = []
+    for number, span in enumerate(spans, start=1):
+        beats = []
         for beat in direction.get("beats", []):
             anchor = beat.get("after_segment")
-            if not isinstance(anchor, int) or not span["start"] <= anchor <= span["end"]:
-                continue
-            local_anchor = anchor - span["start"] + 1
-            if beat.get("id"):
-                applied_beats.append(beat["id"])
-            if beat.get("attention_owner") == "silence" and beat.get("exit") == "held-pause":
-                segment = sequence["segments"][local_anchor - 1]
-                segment["pause_after_ms"] = max(int(segment.get("pause_after_ms", 0)), spec["held_pause_ms"])
-            if beat.get("attention_owner") == "sound" and beat.get("sound"):
-                if local_anchor >= len(sequence["segments"]):
-                    raise ValueError(f"{spec['path']}: bridge {beat.get('id')} crosses a sequence boundary")
-                events.append(sequence_event(beat, local_anchor))
-        if events:
-            sequence["schema_version"] = 6
-            sequence["soundscape"] = {"events": events, "ducking": "speech"}
-        sequence_path = program_dir / f"seq-{sequence_number:02d}.json"
-        write_json(sequence_path, sequence)
-        derived.append({
-            "number": sequence_number,
-            "id": sequence_id,
-            "path": sequence_path,
+            if isinstance(anchor, int) and span["start"] <= anchor <= span["end"] and beat.get("id"):
+                beats.append(beat["id"])
+        sequences.append({
+            "number": number,
             "start_segment": span["start"],
             "end_segment": span["end"],
             "scenes": span["scenes"],
-            "applied_beats": applied_beats,
+            "applied_beats": beats,
         })
-
-    plan = {
-        "program_id": source_id,
+    return {
+        "program_id": program["id"],
         "title": program["title"],
         "program_path": str(spec["program_path"].relative_to(ROOT)),
         "direction_path": str(spec["direction_path"].relative_to(ROOT)),
-        "sequence_count": len(derived),
-        "sequences": [{k: v for k, v in item.items() if k != "path"} for item in derived],
+        "sequence_count": len(sequences),
+        "render_mode": "single-master",
+        "sequences": sequences,
     }
-    write_json(work_root / source_id / "sequence-plan.json", plan)
-    return program, derived, plan
 
 
-def combine_transcripts(source_program, sequence_results, final_dir: Path):
-    segments = []
-    program_schema_version = source_program.get("schema_version", 1)
-    for item in sequence_results:
-        transcript = load_json(item["audio_dir"] / "transcript.json")
-        program_schema_version = max(program_schema_version, transcript.get("program_schema_version", 1))
-        segments.extend(transcript.get("segments") or [])
-    write_json(final_dir / "transcript.json", {
-        "schema_version": 1,
-        "program_schema_version": program_schema_version,
-        "id": source_program["id"],
-        "title": source_program["title"],
-        "language": source_program.get("language"),
-        "sources": source_program.get("sources", []),
-        "segments": segments,
-    })
+def compile_program(spec, work_root: Path):
+    source_program, direction, spans = validate_inputs(spec)
+    compiled = copy.deepcopy(source_program)
+    events = []
+    for beat in direction.get("beats", []):
+        anchor = beat.get("after_segment")
+        if not isinstance(anchor, int):
+            continue
+        if beat.get("attention_owner") == "silence" and beat.get("exit") == "held-pause":
+            segment = compiled["segments"][anchor - 1]
+            segment["pause_after_ms"] = max(int(segment.get("pause_after_ms", 0)), spec["held_pause_ms"])
+        if beat.get("attention_owner") == "sound" and beat.get("sound"):
+            events.append(bridge_event(beat))
+    if events:
+        compiled["schema_version"] = 6
+        compiled["soundscape"] = {"events": events, "ducking": "speech"}
 
-
-def production_fingerprint(spec, sequence_results):
-    payload = {
-        "spec_sha256": sha256_file(spec["path"]),
-        "program_sha256": sha256_file(spec["program_path"]),
-        "direction_sha256": sha256_file(spec["direction_path"]),
-        "sequence_audio": [sha256_file(item["audio_dir"] / "audio.mp3") for item in sequence_results],
-    }
-    return hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    production_dir = work_root / source_program["id"]
+    compiled_path = production_dir / "compiled-program.json"
+    write_json(compiled_path, compiled)
+    plan = build_sequence_plan(source_program, direction, spans, spec)
+    write_json(production_dir / "sequence-plan.json", plan)
+    return source_program, compiled_path, plan
 
 
 def produce_managed(spec, output_root: Path, sounds_path=None):
-    work_root = output_root / ".production"
-    source_program, derived, plan = derive_sequences(spec, work_root)
-    sequence_results = []
-    for item in derived:
-        command = ["audio-engine", "render", str(item["path"]), "--out", str(output_root)]
-        if sounds_path:
-            command.extend(["--sounds", str(sounds_path)])
-        manifest = run_json(command)
-        sequence_results.append({
-            **item,
-            "cache_hit": bool(manifest.get("cache_hit")),
-            "audio_dir": output_root / item["id"],
-            "duration_seconds": (manifest.get("audio") or {}).get("duration_seconds"),
-        })
+    source_program, compiled_path, plan = compile_program(spec, output_root / ".production")
+    command = ["audio-engine", "render", str(compiled_path), "--out", str(output_root)]
+    if sounds_path:
+        command.extend(["--sounds", str(sounds_path)])
+    manifest = run_json(command)
 
     final_dir = output_root / source_program["id"]
-    final_dir.mkdir(parents=True, exist_ok=True)
-    fingerprint = production_fingerprint(spec, sequence_results)
-    fingerprint_path = final_dir / ".production-fingerprint.json"
-    cached = False
-    if fingerprint_path.exists() and (final_dir / "audio.mp3").exists() and (final_dir / "manifest.json").exists():
-        try:
-            cached = load_json(fingerprint_path).get("fingerprint") == fingerprint
-        except Exception:
-            cached = False
+    persisted = load_json(final_dir / "manifest.json")
+    persisted["production"] = {
+        "strategy": "scene-sequences",
+        "render_mode": "single-master",
+        "source_program": str(spec["program_path"].relative_to(ROOT)),
+        "direction": str(spec["direction_path"].relative_to(ROOT)),
+        "sequence_count": plan["sequence_count"],
+    }
+    write_json(final_dir / "manifest.json", persisted)
 
-    if not cached:
-        assembly_dir = work_root / source_program["id"]
-        assembly_path = assembly_dir / "assembly.json"
-        inputs = [
-            {"file": os.path.relpath(item["audio_dir"] / "audio.mp3", assembly_dir), "pause_after_ms": 0}
-            for item in sequence_results
-        ]
-        write_json(assembly_path, {
-            "schema_version": 1,
-            "id": source_program["id"],
-            "profile": source_program.get("profile", "speech"),
-            "inputs": inputs,
-        })
-        run_json(["audio-engine", "assemble", str(assembly_path), "--out", str(output_root)])
-        combine_transcripts(source_program, sequence_results, final_dir)
-        manifest = load_json(final_dir / "manifest.json")
-        manifest["transcript"] = "transcript.json"
-        manifest["production"] = {
-            "strategy": "scene-sequences",
-            "source_program": str(spec["program_path"].relative_to(ROOT)),
-            "direction": str(spec["direction_path"].relative_to(ROOT)),
-            "sequence_count": len(sequence_results),
-            "sequence_ids": [item["id"] for item in sequence_results],
-        }
-        write_json(final_dir / "manifest.json", manifest)
-        write_json(fingerprint_path, {"fingerprint": fingerprint})
-
+    mix = manifest.get("mix") or {}
     return {
         "source": str(spec["program_path"].relative_to(ROOT)),
         "id": source_program["id"],
-        "cache_hit": cached,
+        "cache_hit": bool(manifest.get("cache_hit")),
         "production": "scene-sequences",
-        "sequence_count": len(sequence_results),
-        "sequence_cache_hits": sum(1 for item in sequence_results if item["cache_hit"]),
+        "render_mode": "single-master",
+        "sequence_count": plan["sequence_count"],
+        "voice_cache_hits": mix.get("voice_cache_hits"),
+        "voice_clip_count": mix.get("voice_clip_count"),
         "sequence_plan": plan,
     }
 
@@ -309,6 +231,7 @@ def validate_all():
             "program": relative,
             "id": program["id"],
             "strategy": raw["strategy"],
+            "render_mode": "single-master",
             "segments": len(program["segments"]),
             "derived_sequences": len(spans),
             "direction_beats": len(direction.get("beats", [])),
