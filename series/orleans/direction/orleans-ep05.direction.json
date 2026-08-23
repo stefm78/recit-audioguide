@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "id": "orleans-ep05",
+  "mode": "story",
+  "density": "scene-rich",
+  "goal": "Faire ressentir l'accélération des neuf jours par le rythme, les silences et les changements de tension, sans bruitage de bataille.",
+  "historical_mode": "documented",
+  "constraints": ["no_narration_duplicates_obvious_sound","one_primary_attention_owner_per_beat","continuous_layers_need_narrative_reason","silence_is_allowed","measured_voice_timing_is_authoritative","no_graphic_battle_effects"],
+  "beats": [
+    {"id":"clock-starts","attention_owner":"voice","purpose":"resserrer immédiatement le temps entre le 29 avril et le 8 mai","voice_state":"slightly-more-urgent"},
+    {"id":"saint-loup","after_segment":3,"attention_owner":"silence","purpose":"marquer la première preuve qu'une bastille peut tomber","exit":"short-held-pause","rationale":"la respiration vaut mieux qu'un bruit de combat"},
+    {"id":"tourelles","after_segment":7,"attention_owner":"silence","purpose":"laisser peser l'effondrement du verrou avant le 8 mai","exit":"longer-held-pause"},
+    {"id":"withdrawal-not-climax","attention_owner":"voice","purpose":"faire du retrait anglais une surprise narrative plutôt qu'un climax sonore"},
+    {"id":"turning-point-not-ending","attention_owner":"voice","purpose":"finir sur le changement de dynamique et non sur une victoire finale héroïsée","voice_state":"calm-precise"}
+  ]
+}
