@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "roadtrip-angers-orleans-ep08",
+  "mode": "route",
+  "density": "light",
+  "goal": "Faire sentir la bascule des palais de la Renaissance vers Orléans assiégée, sans concurrencer la conduite ni fabriquer une bataille.",
+  "historical_mode": "documented",
+  "constraints": ["no_narration_duplicates_obvious_sound","one_primary_attention_owner_per_beat","continuous_layers_need_narrative_reason","silence_is_allowed","measured_voice_timing_is_authoritative"],
+  "beats": [
+    {"id":"reset-1429","attention_owner":"voice","purpose":"effacer mentalement la Renaissance et replacer l'auditeur dans la guerre de Cent Ans","voice_state":"clear-forward"},
+    {"id":"jeanne-arrives","after_segment":3,"attention_owner":"sound","purpose":"faire exister physiquement l'arrivée de Jeanne juste avant que le récit annonce son entrée dans Orléans","sound":"historic-horse-hooves","handoff":"voice-to-short-foreground-to-next-segment","exit":"carry-briefly-under-next-segment","rationale":"les sabots signalent un changement d'état narratif, pas une ambiance médiévale"},
+    {"id":"battle-without-cinema","attention_owner":"voice","purpose":"garder les Tourelles intelligibles sans effets de combat","rationale":"la violence n'a pas besoin d'être spectacularisée"},
+    {"id":"route-release","attention_owner":"voice","purpose":"revenir au fil rouge de toute la route et terminer avec une intelligibilité maximale"}
+  ]
+}
