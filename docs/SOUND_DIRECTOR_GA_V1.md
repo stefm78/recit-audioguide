@@ -30,25 +30,36 @@ Les trois premiers sont les usages actuels de Récit Audioguide. `audiobook` et 
 
 ## Densité
 
-Chaque sidecar choisit explicitement :
+Chaque décision choisit explicitement :
 
 - `none` — aucune intervention sonore ajoutée ;
 - `light` — quelques accents, silences, espaces ou transitions ;
 - `scene-rich` — mise en scène plus construite lorsque le récit le justifie.
 
-`none` est une sortie parfaitement valide. La couverture des sidecars peut augmenter progressivement et ne bloque jamais un programme qui n’a pas encore été dirigé.
+`none` est une sortie parfaitement valide. La densité est un plafond artistique, jamais un quota d’effets.
+
+## Deux niveaux, pas 73 dossiers artificiels
+
+Le rollout complet utilise deux niveaux complémentaires :
+
+1. `series/sound-direction-review-v1.json` contient **une décision pour chaque programme réel** : `keep`, `direct` ou `enhance`, avec la densité retenue. Cette revue doit couvrir 100 % du catalogue réel.
+2. `series/<serie>/direction/*.direction.json` n’existe que lorsqu’une direction scène par scène apporte quelque chose. Un programme marqué `enhance` doit obligatoirement disposer de ce sidecar détaillé.
+
+Cette séparation évite de créer des dizaines de sidecars vides simplement pour afficher 100 % de couverture. `keep` signifie que le Sound Director a réellement revu l’épisode et arbitré en faveur de la sobriété ; ce n’est pas un épisode oublié.
 
 ## Artefacts
 
 - Contrat : `docs/sound-direction.schema.json`
 - Profils : `docs/sound-direction-profiles-v1.json`
+- Politique par série : `series/sound-direction-catalog.json`
+- Revue complète : `series/sound-direction-review-v1.json`
 - Principes éditoriaux : `docs/SOUND_DIRECTION_V1.md`
 - Outil : `python tools/sound_direction.py`
 - Référence artistique : `series/_showcase/direction/showcase-orleans-1710-gold.direction.json`
 
 ## Usage
 
-Créer un sidecar vide :
+Créer un sidecar détaillé :
 
 ```bash
 python tools/sound_direction.py scaffold \
@@ -59,13 +70,13 @@ python tools/sound_direction.py scaffold \
 
 Le sidecar doit ensuite être **dirigé** par un auteur ou une IA : beats, propriétaire de l’attention, raison de chaque couche, trajectoire de diction, silence et handoffs. Le scaffold ne remplace pas cette décision artistique.
 
-Valider tous les sidecars présents :
+Valider catalogue, revue complète et sidecars détaillés :
 
 ```bash
 python tools/sound_direction.py validate
 ```
 
-Le validateur affiche aussi la couverture du catalogue. L’absence d’un sidecar est non bloquante ; un sidecar présent mais invalide est une erreur.
+Le validateur exige : les 8 séries réelles calibrées, une décision de revue pour chaque programme réel, aucun doublon/oubli, cohérence de densité, et un sidecar détaillé pour chaque décision `enhance`.
 
 ## Règle de promotion
 
