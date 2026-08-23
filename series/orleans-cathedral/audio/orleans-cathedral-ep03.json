@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "orleans-cathedral-ep03",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 1,
+  "title": "Les vitraux de Jeanne : dix images pour fabriquer une mémoire",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": 3,
+  "after_episode": null,
+  "stop": "Bas-côtés de la nef — cycle de Jeanne d’Arc",
+  "location": "Cathédrale Sainte-Croix d'Orléans, bas-côtés de la nef",
+  "launch": "devant les vitraux narratifs de Jeanne d’Arc dans les bas-côtés.",
+  "look": "Repérez Jeanne, les costumes, les armes et l’enchaînement des scènes ; cherchez notamment son entrée à Orléans et sa prière à Sainte-Croix.",
+  "summary": "Les dix vitraux racontent la vie de Jeanne comme un récit continu. Ils sont aussi un témoignage du XIXe siècle et de la manière dont Orléans construit sa mémoire johannique.",
+  "historical_note": "Le site officiel indique dix vitraux des basses nefs racontant la vie de Jeanne et leur inauguration en 1897. Ils ne sont donc pas des images contemporaines de Jeanne.",
+  "lead_in_ms": 450,
+  "sources": [
+    "https://www.cathedrale-orleans.fr/depliants",
+    "https://www.cathedrale-orleans.fr/parcours-spi-ja",
+    "https://www.cathedrale-orleans.fr/_files/ugd/db191a_5c64bc7cae2345f49e2694a7e158f1f0.pdf",
+    "https://www.archives-nationales.culture.gouv.fr/evenements/1429-jeanne-darc-le-premier-portrait"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Nous retrouvons Jeanne d’Arc, mais dans un nouveau langage : le verre et la lumière. La cathédrale propose un cycle de dix vitraux qui raconte sa vie. Pour les lire, ne cherchez pas d’abord les dates. Regardez plutôt comment un récit est construit. On choisit quelques scènes, on élimine tout le reste, on place Jeanne au centre, puis on fait avancer l’histoire d’image en image."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Ces vitraux ne datent pas de 1429. Ils sont inaugurés à la fin du XIXe siècle, en 1897. C’est essentiel. Ils nous disent quelque chose de Jeanne, mais ils nous disent aussi énormément sur les Français et les Orléanais du XIXe siècle. À cette époque, Jeanne est devenue une grande figure nationale. On la peint, on la sculpte, on la célèbre, on écrit sur elle. La cathédrale participe à cette immense fabrication de mémoire."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Cherchez la scène de l’entrée de Jeanne à Orléans, le 29 avril 1429. Nous connaissons maintenant le contexte : la ville assiégée, les positions anglaises, la Loire, les Tourelles. Regardez comme le vitrail transforme cela en image lisible. Dans la rue, nous avions un problème militaire compliqué. Ici, le récit devient plus net : une héroïne entre dans une ville qui attend sa délivrance."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Une autre scène montre Jeanne venant rendre grâce à Sainte-Croix. Le site de la cathédrale rappelle qu’elle vient y prier le 8 mai 1429. Ce détail crée un effet assez vertigineux : nous sommes aujourd’hui dans le même lieu institutionnel et religieux, mais nous regardons une image du XIXe siècle qui représente une jeune femme du XVe siècle entrant dans une cathédrale dont l’aspect était alors très différent."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Il faut aussi se méfier d’un réflexe : prendre ces images pour des portraits. Nous ne possédons aucun portrait de Jeanne réalisé d’après nature et reconnu comme tel. Les artistes ont donc dû inventer un visage, des attitudes, des couleurs. Une image historique peut être très précieuse sans être une photographie du passé. Ici, sa vérité est celle d’un récit et d’une mémoire, pas celle d’un reportage visuel."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Et pourtant, ces vitraux sont utiles. Parce qu’ils nous obligent à poser une question : quelles scènes une société choisit-elle de retenir ? Domrémy, la mission, Orléans, le sacre, la captivité, le procès, la mort. Une vie incroyablement courte devient une suite d’images exemplaires. C’est exactement le mécanisme par lequel un personnage historique devient une figure collective."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Alors, où en sommes-nous ? Dans les rues, nous avons rencontré Jeanne comme actrice de 1429. Au Martroi, nous l’avons rencontrée comme héroïne de bronze. Ici, elle devient une histoire de lumière. Avancez maintenant jusqu’à la croisée du transept, là où la nef principale est coupée par le bras transversal. Le prochain épisode nous attend à l’endroit même où, en 1568, la cathédrale a été presque anéantie."}
+  ]
+}
