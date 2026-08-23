@@ -8,6 +8,8 @@ Compagnon de voyage audio statique, simple et résilient.
 - Trois modes seulement : `story`, `visit`, `route`.
 - Une nouvelle série est du contenu, pas du code.
 - L'enrichissement sonore suit d'abord l'époque racontée : sons physiquement plausibles pour le sujet, sans bruit moderne par défaut et sans prétendre à une reconstitution authentique.
+- Quand un son porte suffisamment d'information ou d'émotion, le récit peut lui céder brièvement la scène ; transitions et fades restent doux par défaut.
+- Les espaces acoustiques servent l'immersion sans sacrifier l'intelligibilité et restent des évocations, jamais une fausse reproduction acoustique d'un lieu nommé.
 - Le site reste utilisable si les enrichissements secondaires échouent.
 - On bloque uniquement ce qui rend l'expérience fausse, inutilisable ou dangereuse.
 - Aucun backend permanent, aucune base de données, aucun compte utilisateur.
