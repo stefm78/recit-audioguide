@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "orleans-cathedral-g08",
+  "production_version": 1,
+  "title": "Qu’est-ce que Jeanne a réellement vu ici le 8 mai 1429 ?",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": null,
+  "after_episode": 7,
+  "stop": null,
+  "location": "Cathédrale Sainte-Croix, Orléans, France",
+  "launch": null,
+  "look": null,
+  "summary": "Même emplacement, autre cathédrale : reconstituer mentalement ce que Jeanne pouvait voir permet de mesurer l’ampleur des transformations.",
+  "historical_note": "La cathédrale gothique était déjà en chantier en 1429 ; la guerre de Cent Ans avait ralenti ou arrêté les travaux. La destruction de 1568 emporta ensuite une grande partie de ce que Jeanne avait connu.",
+  "lead_in_ms": 450,
+  "sources": ["https://www.cathedrale-orleans.fr/visiter","https://www.cathedrale-orleans.fr/depliants","https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf","https://www.culture.gouv.fr/regions/drac-centre-val-de-loire/actualites-regionales-centre-val-de-loire/actualites-a-la-une/Presentation-de-l-ouvrage-Cathedrale-d-Orleans"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Le 8 mai 1429, Jeanne entre bien dans Sainte-Croix, mais effacez presque tout ce qui vous paraît le plus spectaculaire aujourd’hui. Pas de façade actuelle. Pas de grandes tours telles que nous les voyons. Pas de cycle de vitraux sur Jeanne, évidemment. Pas de transept reconstruit sous Louis XIV."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"La cathédrale gothique a commencé en 1287, mais son chantier a été ralenti puis interrompu par la guerre de Cent Ans. Jeanne connaît donc un édifice en cours d’histoire, pas un monument achevé. Et une grande partie de ce qu’elle voit sera ensuite détruite en 1568."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"C’est ce qui rend sa prière du 8 mai si intéressante pour nous : le lien le plus solide n’est pas la pierre visible. C’est le lieu. Depuis des siècles, des bâtiments successifs ont occupé, transformé et sacralisé ce même espace. Nous sommes au même endroit que Jeanne, mais pas dans exactement le même décor."}
+  ]
+}

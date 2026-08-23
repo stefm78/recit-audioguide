@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "orleans-cathedral-g03",
+  "production_version": 1,
+  "title": "La main de Dieu dans l’abside : histoire ou légende ?",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": null,
+  "after_episode": 5,
+  "stop": null,
+  "location": "Cathédrale Sainte-Croix, Orléans, France",
+  "launch": null,
+  "look": null,
+  "summary": "Une main bénissante peinte dans le chœur renvoie à une ancienne tradition sur saint Euverte. Comment raconter ce genre d’histoire sans confondre foi et preuve historique ?",
+  "historical_note": "Le récit de la main de Dieu est une tradition hagiographique liée à saint Euverte. La capsule la présente comme telle et non comme un événement historiquement vérifiable.",
+  "lead_in_ms": 450,
+  "sources": ["https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf","https://www.cathedrale-orleans.fr/jubile"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Levez les yeux vers l’abside : une main bénissante est devenue l’un des symboles de Sainte-Croix. Elle renvoie à une tradition très ancienne concernant saint Euverte, évêque d’Orléans. Selon le récit religieux, au moment de consacrer une église antérieure, Euverte aurait vu la main de Dieu bénir elle-même l’édifice."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Pour l’historien, ce type de récit ne se traite pas comme un procès-verbal du IVe siècle. Il appartient à l’hagiographie, c’est-à-dire aux récits construits autour des saints, transmis parce qu’ils expriment une signification religieuse et une identité collective. Dire « c’est une tradition » n’est donc pas mépriser le récit ; c’est lui donner le bon statut."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Et son effet historique est, lui, parfaitement réel : la tradition a influencé la manière dont la cathédrale se comprend elle-même. La main est représentée, racontée, transmise aux visiteurs. Une légende peut ne pas être vérifiable dans son événement d’origine tout en devenant un fait culturel durable. C’est l’un des mécanismes les plus fascinants de la mémoire."}
+  ]
+}

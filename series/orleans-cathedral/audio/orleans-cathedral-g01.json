@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "orleans-cathedral-g01",
+  "production_version": 1,
+  "title": "Pourquoi reconstruire gothique en 1601 ?",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": null,
+  "after_episode": 1,
+  "stop": null,
+  "location": "Cathédrale Sainte-Croix, Orléans, France",
+  "launch": null,
+  "look": null,
+  "summary": "Henri IV relance un chantier médiéval deux siècles plus tard : pourquoi ne pas construire une cathédrale Renaissance ou classique ?",
+  "historical_note": "La reconstruction de 1601 poursuit volontairement le langage gothique. Les motivations exactes sont multiples ; la capsule évite d’en faire un programme esthétique formulé en une seule décision.",
+  "lead_in_ms": 450,
+  "sources": ["https://www.cathedrale-orleans.fr/visiter","https://www.cathedrale-orleans.fr/depliants","https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf","https://www.culture.gouv.fr/regions/drac-centre-val-de-loire/actualites-regionales-centre-val-de-loire/actualites-a-la-une/Presentation-de-l-ouvrage-Cathedrale-d-Orleans"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Question de gourmand : en 1601, le gothique n’est plus le style à la mode. Alors pourquoi Henri IV ne fait-il pas reconstruire Sainte-Croix comme un grand monument Renaissance ? D’abord parce qu’on ne repart pas de zéro : des parties importantes existent encore, notamment vers le chœur et les chapelles. Continuer dans un langage compatible avec le bâti conservé a une logique très concrète."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Ensuite, reconstruire une cathédrale n’est pas la même chose que bâtir un palais neuf. Le monument porte une continuité religieuse, urbaine et dynastique. Reprendre le langage gothique permet de signifier que l’on rétablit Sainte-Croix plutôt qu’on ne la remplace. Sous Henri IV puis ses successeurs, cette continuité prend aussi une dimension politique : après les guerres de Religion, on rebâtit un symbole d’Orléans et de la monarchie catholique."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Le résultat est ce qui rend Sainte-Croix si déroutante : une grande partie de ce qui paraît médiéval est moderne. L’architecture est donc déjà une interprétation du passé. Bien avant les restaurations du XIXe siècle, les bâtisseurs du XVIIe avaient eux-mêmes choisi de prolonger un Moyen Âge qui n’était plus le leur."}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "orleans-cathedral-g06",
+  "production_version": 1,
+  "title": "Dix vitraux, mais quel visage pour Jeanne ?",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": null,
+  "after_episode": 3,
+  "stop": null,
+  "location": "Cathédrale Sainte-Croix, Orléans, France",
+  "launch": null,
+  "look": null,
+  "summary": "Les artistes racontent Jeanne sans disposer d’un portrait authentique réalisé d’après nature. Que fait-on quand l’histoire doit donner un visage à quelqu’un ?",
+  "historical_note": "Aucun portrait d’après nature de Jeanne n’est reconnu comme tel. Le dessin de Clément de Fauquembergue est contemporain mais son auteur ne l’a probablement pas vue.",
+  "lead_in_ms": 450,
+  "sources": ["https://www.archives-nationales.culture.gouv.fr/evenements/1429-jeanne-darc-le-premier-portrait","https://www.cathedrale-orleans.fr/depliants"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Les dix vitraux ont un problème simple : pour raconter Jeanne, il faut la dessiner. Or nous ne savons pas précisément à quoi elle ressemblait. Aucun portrait réalisé d’après nature et authentifié ne nous est parvenu. Il existe bien un célèbre petit dessin contemporain de Clément de Fauquembergue, mais il semble avoir été réalisé par quelqu’un qui ne l’avait pas vue."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Chaque artiste doit donc fabriquer un visage vraisemblable. Et plus ces images circulent, plus notre cerveau finit par croire qu’il « connaît » Jeanne : cheveux, profil, armure, attitude. C’est une illusion très humaine. Nous confondons facilement une iconographie devenue familière avec une apparence documentée."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Les vitraux de Sainte-Croix sont donc un excellent exercice critique : regardez-les comme des œuvres d’art et comme des récits, mais ne demandez pas au visage de Jeanne d’être une photographie. Ce qu’ils montrent avec certitude, c’est la manière dont la fin du XIXe siècle voulait voir son héroïne."}
+  ]
+}

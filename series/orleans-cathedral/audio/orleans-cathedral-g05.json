@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "orleans-cathedral-g05",
+  "production_version": 1,
+  "title": "Le Roi-Soleil est caché dans le transept",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": null,
+  "after_episode": 4,
+  "stop": null,
+  "location": "Cathédrale Sainte-Croix, Orléans, France",
+  "launch": null,
+  "look": null,
+  "summary": "La reconstruction n’efface pas le XVIIe siècle : Louis XIV laisse sa marque dans les bras du transept et leurs roses.",
+  "historical_note": "Le programme du transept est associé à Louis XIV ; les références au Roi-Soleil sont particulièrement lisibles sur les façades extérieures des transepts.",
+  "lead_in_ms": 450,
+  "sources": ["https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf","https://www.cathedrale-orleans.fr/_files/ugd/db191a_1357f6d333324124a1f36e78b66a11e2.pdf"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Petit jeu : cherchez Louis XIV dans une cathédrale gothique. Il n’est pas représenté comme un roi agenouillé au milieu de la nef. Sa présence est plus architecturale. Le transept reconstruit sous son règne est associé au Roi-Soleil et les roses des façades nord et sud portent des signes qui renvoient à lui."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"À l’extérieur, on peut notamment observer une référence au masque solaire et à sa devise latine, « Nec pluribus impar ». C’est un rappel assez spectaculaire du système de l’Ancien Régime : le roi finance, protège et marque les grands monuments religieux du royaume."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Cela donne à Sainte-Croix une chronologie visuelle étrange : le langage architectural imite le gothique, mais certains détails disent explicitement « XVIIe siècle ». La cathédrale est donc une sorte de costume médiéval dans lequel le Roi-Soleil a laissé sa signature."}
+  ]
+}
