@@ -116,8 +116,13 @@ jobs:
               "generated/audio-previews/${base_name}-manifest.json"
             cp "generated/audio/${program_id}/audio.mp3" \
               "generated/audio-previews/${base_name}-full.mp3"
+            if [[ -d "generated/audio/${program_id}/previews" ]]; then
+              for clip in generated/audio/${program_id}/previews/*.mp3; do
+                [[ -e "$clip" ]] || continue
+                cp "$clip" "generated/audio-previews/${base_name}-$(basename "$clip")"
+              done
+            fi
           done
-          find generated/audio -path '*/previews/*.mp3' -exec cp {} generated/audio-previews/ \;
       - name: Upload fast sound-design previews
         uses: actions/upload-artifact@v4
         with:
