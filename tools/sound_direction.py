@@ -41,6 +41,49 @@ def audio_programs(root: Path):
     return result
 
 
+def real_series(root: Path):
+    series_root = root / "series"
+    return {
+        path.name
+        for path in series_root.iterdir()
+        if path.is_dir() and not path.name.startswith("_") and (path / "audio").is_dir()
+    }
+
+
+def validate_catalog(root: Path):
+    path = root / "series" / "sound-direction-catalog.json"
+    if not path.exists():
+        return ["series/sound-direction-catalog.json is missing"]
+    try:
+        data = load_json(path)
+    except Exception as exc:
+        return [f"invalid sound-direction catalog JSON: {exc}"]
+    errors = []
+    if data.get("version") != 1:
+        errors.append("sound-direction catalog version must be 1")
+    entries = data.get("series")
+    if not isinstance(entries, dict):
+        return errors + ["sound-direction catalog series must be an object"]
+
+    actual = real_series(root)
+    configured = set(entries)
+    for missing in sorted(actual - configured):
+        errors.append(f"catalog missing real series {missing!r}")
+    for unknown in sorted(configured - actual):
+        errors.append(f"catalog contains unknown/non-audio series {unknown!r}")
+    for slug, policy in sorted(entries.items()):
+        if not isinstance(policy, dict):
+            errors.append(f"catalog {slug}: policy must be an object")
+            continue
+        if policy.get("mode") not in MODES:
+            errors.append(f"catalog {slug}: invalid mode")
+        if policy.get("default_density") not in DENSITIES:
+            errors.append(f"catalog {slug}: invalid default_density")
+        if not isinstance(policy.get("goal"), str) or not policy.get("goal", "").strip():
+            errors.append(f"catalog {slug}: goal is required")
+    return errors
+
+
 def validate_direction(path: Path, programs):
     errors = []
     try:
@@ -113,6 +156,16 @@ def cmd_validate(args):
     programs = audio_programs(root)
     direction_files = sorted(root.glob("series/**/direction/*.direction.json"))
     failures = 0
+
+    catalog_errors = validate_catalog(root)
+    if catalog_errors:
+        failures += 1
+        print("FAIL series/sound-direction-catalog.json")
+        for error in catalog_errors:
+            print(f"  - {error}")
+    else:
+        print(f"OK   series/sound-direction-catalog.json ({len(real_series(root))} real series calibrated)")
+
     directed_ids = set()
     for path in direction_files:
         errors = validate_direction(path, programs)
@@ -174,7 +227,7 @@ def build_parser():
     parser = argparse.ArgumentParser(description="Sound Direction v1 utilities")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    validate = sub.add_parser("validate", help="validate existing direction sidecars")
+    validate = sub.add_parser("validate", help="validate series catalog and existing direction sidecars")
     validate.add_argument("--root", default=".")
     validate.set_defaults(func=cmd_validate)
 
