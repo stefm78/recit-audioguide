@@ -1,0 +1,4 @@
+dist/
+generated/
+build-report.json
+__pycache__/
