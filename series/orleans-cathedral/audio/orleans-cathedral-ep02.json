@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "orleans-cathedral-ep02",
   "language": "fr-FR",
   "profile": "speech",
-  "production_version": 1,
+  "production_version": 2,
   "title": "La nef : pourquoi le regard monte-t-il tout seul ?",
   "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
   "episode": 2,
@@ -14,6 +14,18 @@
   "look": "Regardez les piliers, les voûtes à 32 mètres, puis retournez-vous vers la tribune du grand orgue.",
   "summary": "L’épisode donne les repères simples pour lire une cathédrale gothique : nef, bas-côtés, piliers, voûtes et lumière, sans transformer la visite en cours d’architecture.",
   "historical_note": "Les dimensions et l’organisation spatiale suivent le dépliant officiel de la cathédrale. Le vocabulaire architectural est volontairement limité à ce qui aide à regarder.",
+  "soundscape": {
+    "layers": [],
+    "events": [
+      {
+        "sound": "gregorian-chant",
+        "at_ms": 43000,
+        "gain_db": -36,
+        "placement": "center"
+      }
+    ],
+    "ducking": "speech"
+  },
   "lead_in_ms": 450,
   "sources": [
     "https://www.cathedrale-orleans.fr/visiter",
