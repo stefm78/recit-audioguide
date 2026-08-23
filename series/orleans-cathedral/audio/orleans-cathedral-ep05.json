@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "orleans-cathedral-ep05",
   "language": "fr-FR",
   "profile": "speech",
-  "production_version": 1,
+  "production_version": 2,
   "title": "Le chœur : une cathédrale est aussi une machine à prier",
   "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
   "episode": 5,
@@ -14,6 +14,18 @@
   "look": "Regardez les stalles, les boiseries, les médaillons sculptés et la profondeur jusqu’à l’abside.",
   "summary": "Le chœur permet de comprendre la vie quotidienne de la cathédrale : chanoines, offices, stalles, sculpture et organisation d’un espace religieux qui n’était pas conçu uniquement pour les visiteurs.",
   "historical_note": "Les boiseries sont du début du XVIIIe siècle. Le dépliant officiel mentionne 21 médaillons sculptés représentant des scènes de la vie du Christ.",
+  "soundscape": {
+    "layers": [],
+    "events": [
+      {
+        "sound": "gregorian-chant",
+        "at_ms": 1500,
+        "gain_db": -36,
+        "placement": "center"
+      }
+    ],
+    "ducking": "speech"
+  },
   "lead_in_ms": 450,
   "sources": [
     "https://www.cathedrale-orleans.fr/visiter",
