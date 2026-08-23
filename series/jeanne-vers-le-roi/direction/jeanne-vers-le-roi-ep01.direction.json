@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "id": "jeanne-vers-le-roi-ep01",
+  "mode": "story",
+  "density": "scene-rich",
+  "goal": "Faire vivre la progression de Jeanne à travers une succession d'obstacles humains, en réservant le son de premier plan aux franchissements décisifs plutôt qu'à une ambiance médiévale continue.",
+  "historical_mode": "evocation-composite",
+  "constraints": [
+    "no_narration_duplicates_obvious_sound",
+    "one_primary_attention_owner_per_beat",
+    "continuous_layers_need_narrative_reason",
+    "silence_is_allowed",
+    "measured_voice_timing_is_authoritative"
+  ],
+  "characters": {
+    "jeanne": {
+      "arc": ["plain-determined", "tested", "increasingly-assured", "contained-before-charles"]
+    },
+    "narrateur": {
+      "arc": ["contextual", "withdraws-during-dialogue", "returns-for-fact-checking"]
+    }
+  },
+  "beats": [
+    {
+      "id": "vaucouleurs-human-obstacle",
+      "attention_owner": "voice",
+      "purpose": "faire entendre que le premier obstacle de Jeanne est humain et administratif, pas spectaculaire",
+      "voice_state": "dialogue-close"
+    },
+    {
+      "id": "baudricourt-refusal",
+      "attention_owner": "silence",
+      "purpose": "laisser le refus abrupt peser avant que le narrateur ne rétablisse les faits",
+      "exit": "short-held-pause"
+    },
+    {
+      "id": "journey-begins",
+      "attention_owner": "sound",
+      "purpose": "matérialiser enfin le départ après plusieurs scènes où Jeanne ne pouvait pas avancer",
+      "sound": "historic-horse-hooves",
+      "handoff": "dialogue-to-foreground-travel-to-narration",
+      "rationale": "les sabots signifient ici un changement d'état narratif, pas une décoration d'époque"
+    },
+    {
+      "id": "road-danger",
+      "attention_owner": "voice",
+      "purpose": "garder les contrôles et risques intelligibles ; ne pas noyer les dialogues dans une pseudo-ambiance médiévale"
+    },
+    {
+      "id": "approach-chinon",
+      "attention_owner": "silence",
+      "purpose": "resserrer l'attention avant la rencontre attendue depuis le début de l'épisode"
+    },
+    {
+      "id": "first-audience",
+      "attention_owner": "voice",
+      "purpose": "laisser la rencontre Jeanne-Charles reposer sur les voix et les mots plutôt que sur un climax musical",
+      "voice_state": "contained-intimate",
+      "exit": "no-triumphal-music"
+    }
+  ]
+}
