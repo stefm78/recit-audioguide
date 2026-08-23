@@ -1,9 +1,9 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "orleans-cathedral-ep08",
   "language": "fr-FR",
   "profile": "speech",
-  "production_version": 4,
+  "production_version": 5,
   "title": "Avant de sortir : entendre la Loire jusque dans le grand orgue",
   "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
   "episode": 8,
@@ -22,7 +22,8 @@
         "role": "bridge",
         "after_segment": 5,
         "foreground_ms": 5200,
-        "carry_under_speech_ms": 2200,
+        "carry_through_segments": 1,
+        "tail_ms": 1200,
         "gain_db": -24,
         "placement": "center"
       }
