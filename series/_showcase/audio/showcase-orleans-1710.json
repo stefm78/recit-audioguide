@@ -5,11 +5,11 @@
   "profile": "speech",
   "title": "Une porte s’ouvre — Orléans, vers 1710",
   "series": "Démonstration de mise en scène sonore",
-  "production_version": 1,
+  "production_version": 2,
   "historical_note": "Évocation composite et fictive d’un matin orléanais du début du XVIIIe siècle. Elle ne prétend pas reconstituer un événement précis ni reproduire les sons authentiques de Sainte-Croix. Les enregistrements sont employés pour leur plausibilité évocatrice et leur provenance reste tracée dans le catalogue sonore.",
   "soundscape": {
     "bed": {
-      "sound": "gregorian-chant",
+      "sound": "gregorian-chant-bed",
       "gain_db": -44,
       "loop": true,
       "fade_in_ms": 2500,
@@ -17,11 +17,11 @@
     },
     "layers": [
       {
-        "sound": "historic-horse-hooves",
-        "gain_db": -48,
+        "sound": "historic-pipe-organ-bed",
+        "gain_db": -52,
         "loop": true,
-        "fade_in_ms": 1200,
-        "fade_out_ms": 2500
+        "fade_in_ms": 4500,
+        "fade_out_ms": 3000
       }
     ],
     "events": [
