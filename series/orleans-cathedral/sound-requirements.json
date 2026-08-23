@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "sounds": [
+    {
+      "id": "orleans-cathedral-parvis",
+      "type": "ambience",
+      "query": "European city square ambience people footsteps",
+      "required_tags": [],
+      "preferred_tags": ["city", "square", "people", "footsteps"],
+      "providers": [],
+      "limit": 8,
+      "min_score": 70
+    },
+    {
+      "id": "church-bell-distant",
+      "type": "event",
+      "query": "distant church bell",
+      "required_tags": [],
+      "preferred_tags": ["church", "bell", "distant"],
+      "providers": [],
+      "limit": 8,
+      "min_score": 70
+    }
+  ]
+}
