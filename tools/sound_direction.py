@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Lightweight tooling for the editorial Sound Direction v1 contract.
 
-This tool does not make creative decisions. It scaffolds and validates the
-sidecars authored by a human or an AI sound director.
+The tool validates policy/review coverage and detailed sidecars. It never makes
+creative decisions: those belong to the human/AI Sound Director.
 """
 
 from __future__ import annotations
@@ -14,6 +14,7 @@ from pathlib import Path
 
 MODES = {"story", "visit", "route", "audiobook", "learning"}
 DENSITIES = {"none", "light", "scene-rich"}
+DECISIONS = {"keep", "direct", "enhance"}
 ATTENTION = {"voice", "sound", "silence", "space"}
 DEFAULT_CONSTRAINTS = [
     "no_narration_duplicates_obvious_sound",
@@ -39,6 +40,15 @@ def audio_programs(root: Path):
         if isinstance(program_id, str) and program_id:
             result[program_id] = (path, data)
     return result
+
+
+def real_programs(root: Path, programs=None):
+    programs = programs or audio_programs(root)
+    return {
+        program_id: value
+        for program_id, value in programs.items()
+        if "_showcase" not in value[0].parts
+    }
 
 
 def real_series(root: Path):
@@ -84,7 +94,55 @@ def validate_catalog(root: Path):
     return errors
 
 
-def validate_direction(path: Path, programs):
+def validate_review(root: Path, programs):
+    path = root / "series" / "sound-direction-review-v1.json"
+    if not path.exists():
+        return ["series/sound-direction-review-v1.json is missing"], {}
+
+    try:
+        data = load_json(path)
+    except Exception as exc:
+        return [f"invalid sound-direction review JSON: {exc}"], {}
+
+    errors = []
+    if data.get("version") != 1:
+        errors.append("sound-direction review version must be 1")
+    entries = data.get("entries")
+    if not isinstance(entries, list):
+        return errors + ["sound-direction review entries must be an array"], {}
+
+    reviewed = {}
+    for index, entry in enumerate(entries, start=1):
+        prefix = f"review entry {index}"
+        if not isinstance(entry, dict):
+            errors.append(f"{prefix}: must be an object")
+            continue
+        program_id = entry.get("id")
+        if not isinstance(program_id, str) or not program_id:
+            errors.append(f"{prefix}: id is required")
+            continue
+        if program_id in reviewed:
+            errors.append(f"{prefix}: duplicate id {program_id!r}")
+            continue
+        reviewed[program_id] = entry
+        if entry.get("density") not in DENSITIES:
+            errors.append(f"{prefix}: invalid density")
+        if entry.get("decision") not in DECISIONS:
+            errors.append(f"{prefix}: decision must be one of {sorted(DECISIONS)}")
+        if entry.get("decision") == "enhance":
+            if not isinstance(entry.get("focus"), str) or not entry.get("focus", "").strip():
+                errors.append(f"{prefix}: enhance requires a non-empty focus")
+
+    real = set(real_programs(root, programs))
+    configured = set(reviewed)
+    for missing in sorted(real - configured):
+        errors.append(f"review missing real audio program {missing!r}")
+    for unknown in sorted(configured - real):
+        errors.append(f"review contains unknown/showcase program {unknown!r}")
+    return errors, reviewed
+
+
+def validate_direction(path: Path, programs, reviewed):
     errors = []
     try:
         data = load_json(path)
@@ -148,6 +206,12 @@ def validate_direction(path: Path, programs):
                     errors.append(
                         f"beat {index}: after_segment {beat['after_segment']} exceeds {segment_count} segments"
                     )
+
+    review = reviewed.get(program_id)
+    if review and review.get("density") != data.get("density"):
+        errors.append(
+            f"density {data.get('density')!r} disagrees with review {review.get('density')!r}"
+        )
     return errors
 
 
@@ -164,11 +228,30 @@ def cmd_validate(args):
         for error in catalog_errors:
             print(f"  - {error}")
     else:
-        print(f"OK   series/sound-direction-catalog.json ({len(real_series(root))} real series calibrated)")
+        print(
+            f"OK   series/sound-direction-catalog.json "
+            f"({len(real_series(root))} real series calibrated)"
+        )
+
+    review_errors, reviewed = validate_review(root, programs)
+    if review_errors:
+        failures += 1
+        print("FAIL series/sound-direction-review-v1.json")
+        for error in review_errors:
+            print(f"  - {error}")
+    else:
+        counts = {decision: 0 for decision in DECISIONS}
+        for entry in reviewed.values():
+            counts[entry["decision"]] += 1
+        print(
+            "OK   series/sound-direction-review-v1.json "
+            f"({len(reviewed)}/{len(real_programs(root, programs))} real programs reviewed; "
+            f"keep={counts['keep']}, direct={counts['direct']}, enhance={counts['enhance']})"
+        )
 
     directed_ids = set()
     for path in direction_files:
-        errors = validate_direction(path, programs)
+        errors = validate_direction(path, programs, reviewed)
         if errors:
             failures += 1
             print(f"FAIL {path.relative_to(root)}")
@@ -183,11 +266,9 @@ def cmd_validate(args):
     directed = len(directed_ids & set(programs))
     coverage = (100.0 * directed / total) if total else 100.0
     print(
-        f"Sound Direction v1: {len(direction_files)} sidecar(s), "
-        f"{directed}/{total} audio program(s) directed ({coverage:.1f}% coverage)."
+        f"Detailed Sound Direction: {len(direction_files)} sidecar(s), "
+        f"{directed}/{total} audio program(s) directed ({coverage:.1f}% sidecar coverage)."
     )
-    if not direction_files:
-        print("No sidecars yet; absence is non-blocking by design.")
     return 1 if failures else 0
 
 
@@ -227,15 +308,23 @@ def build_parser():
     parser = argparse.ArgumentParser(description="Sound Direction v1 utilities")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    validate = sub.add_parser("validate", help="validate series catalog and existing direction sidecars")
+    validate = sub.add_parser(
+        "validate", help="validate series catalog, full review coverage and detailed sidecars"
+    )
     validate.add_argument("--root", default=".")
     validate.set_defaults(func=cmd_validate)
 
-    scaffold = sub.add_parser("scaffold", help="create an empty direction sidecar for an audio program")
+    scaffold = sub.add_parser(
+        "scaffold", help="create an empty direction sidecar for an audio program"
+    )
     scaffold.add_argument("program")
     scaffold.add_argument("--mode", choices=sorted(MODES), required=True)
     scaffold.add_argument("--density", choices=sorted(DENSITIES), default="light")
-    scaffold.add_argument("--historical-mode", choices=["documented", "reconstruction", "evocation-composite", "not-applicable"], default="documented")
+    scaffold.add_argument(
+        "--historical-mode",
+        choices=["documented", "reconstruction", "evocation-composite", "not-applicable"],
+        default="documented",
+    )
     scaffold.add_argument("--goal")
     scaffold.add_argument("--out")
     scaffold.add_argument("--force", action="store_true")
