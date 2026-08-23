@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+"""Lightweight tooling for the editorial Sound Direction v1 contract.
+
+This tool does not make creative decisions. It scaffolds and validates the
+sidecars authored by a human or an AI sound director.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+MODES = {"story", "visit", "route", "audiobook", "learning"}
+DENSITIES = {"none", "light", "scene-rich"}
+ATTENTION = {"voice", "sound", "silence", "space"}
+DEFAULT_CONSTRAINTS = [
+    "no_narration_duplicates_obvious_sound",
+    "one_primary_attention_owner_per_beat",
+    "continuous_layers_need_narrative_reason",
+    "silence_is_allowed",
+    "measured_voice_timing_is_authoritative",
+]
+
+
+def load_json(path: Path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def audio_programs(root: Path):
+    result = {}
+    for path in sorted(root.glob("series/**/audio/*.json")):
+        try:
+            data = load_json(path)
+        except Exception:
+            continue
+        program_id = data.get("id")
+        if isinstance(program_id, str) and program_id:
+            result[program_id] = (path, data)
+    return result
+
+
+def validate_direction(path: Path, programs):
+    errors = []
+    try:
+        data = load_json(path)
+    except Exception as exc:
+        return [f"invalid JSON: {exc}"]
+
+    if data.get("version") != 1:
+        errors.append("version must be 1")
+    program_id = data.get("id")
+    if not isinstance(program_id, str) or not program_id:
+        errors.append("id is required")
+    if data.get("mode") not in MODES:
+        errors.append(f"mode must be one of {sorted(MODES)}")
+    if data.get("density") not in DENSITIES:
+        errors.append(f"density must be one of {sorted(DENSITIES)}")
+    if not isinstance(data.get("goal"), str) or not data.get("goal", "").strip():
+        errors.append("goal is required")
+
+    beats = data.get("beats")
+    if not isinstance(beats, list):
+        errors.append("beats must be an array")
+        beats = []
+
+    seen = set()
+    for index, beat in enumerate(beats, start=1):
+        prefix = f"beat {index}"
+        if not isinstance(beat, dict):
+            errors.append(f"{prefix}: must be an object")
+            continue
+        beat_id = beat.get("id")
+        if not isinstance(beat_id, str) or not beat_id:
+            errors.append(f"{prefix}: id is required")
+        elif beat_id in seen:
+            errors.append(f"{prefix}: duplicate id {beat_id!r}")
+        else:
+            seen.add(beat_id)
+        if beat.get("attention_owner") not in ATTENTION:
+            errors.append(f"{prefix}: invalid attention_owner")
+        if not isinstance(beat.get("purpose"), str) or not beat.get("purpose", "").strip():
+            errors.append(f"{prefix}: purpose is required")
+        after = beat.get("after_segment")
+        if after is not None and (not isinstance(after, int) or after < 1):
+            errors.append(f"{prefix}: after_segment must be >= 1")
+        if beat.get("attention_owner") == "sound" and not beat.get("sound"):
+            errors.append(f"{prefix}: sound owner requires a sound id")
+
+    if data.get("density") == "none" and any(
+        isinstance(beat, dict) and beat.get("attention_owner") == "sound" for beat in beats
+    ):
+        errors.append("density 'none' cannot contain a sound-owned beat")
+
+    match = programs.get(program_id)
+    if program_id and match is None:
+        errors.append(f"no audio program found with id {program_id!r}")
+    elif match:
+        _, program = match
+        segment_count = len(program.get("segments") or [])
+        for index, beat in enumerate(beats, start=1):
+            if isinstance(beat, dict) and isinstance(beat.get("after_segment"), int):
+                if beat["after_segment"] > segment_count:
+                    errors.append(
+                        f"beat {index}: after_segment {beat['after_segment']} exceeds {segment_count} segments"
+                    )
+    return errors
+
+
+def cmd_validate(args):
+    root = Path(args.root).resolve()
+    programs = audio_programs(root)
+    direction_files = sorted(root.glob("series/**/direction/*.direction.json"))
+    failures = 0
+    directed_ids = set()
+    for path in direction_files:
+        errors = validate_direction(path, programs)
+        if errors:
+            failures += 1
+            print(f"FAIL {path.relative_to(root)}")
+            for error in errors:
+                print(f"  - {error}")
+        else:
+            data = load_json(path)
+            directed_ids.add(data["id"])
+            print(f"OK   {path.relative_to(root)}")
+
+    total = len(programs)
+    directed = len(directed_ids & set(programs))
+    coverage = (100.0 * directed / total) if total else 100.0
+    print(
+        f"Sound Direction v1: {len(direction_files)} sidecar(s), "
+        f"{directed}/{total} audio program(s) directed ({coverage:.1f}% coverage)."
+    )
+    if not direction_files:
+        print("No sidecars yet; absence is non-blocking by design.")
+    return 1 if failures else 0
+
+
+def default_out(program_path: Path):
+    if program_path.parent.name == "audio":
+        return program_path.parent.parent / "direction" / f"{program_path.stem}.direction.json"
+    return program_path.with_suffix(".direction.json")
+
+
+def cmd_scaffold(args):
+    program_path = Path(args.program)
+    program = load_json(program_path)
+    program_id = program.get("id")
+    if not program_id:
+        raise SystemExit("program has no id")
+    out = Path(args.out) if args.out else default_out(program_path)
+    if out.exists() and not args.force:
+        raise SystemExit(f"refusing to overwrite {out}; use --force")
+    sidecar = {
+        "version": 1,
+        "id": program_id,
+        "mode": args.mode,
+        "density": args.density,
+        "goal": args.goal or "Direct the listener's attention while keeping the story primary.",
+        "historical_mode": args.historical_mode,
+        "constraints": DEFAULT_CONSTRAINTS,
+        "characters": {},
+        "beats": [],
+    }
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(sidecar, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(out)
+    return 0
+
+
+def build_parser():
+    parser = argparse.ArgumentParser(description="Sound Direction v1 utilities")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    validate = sub.add_parser("validate", help="validate existing direction sidecars")
+    validate.add_argument("--root", default=".")
+    validate.set_defaults(func=cmd_validate)
+
+    scaffold = sub.add_parser("scaffold", help="create an empty direction sidecar for an audio program")
+    scaffold.add_argument("program")
+    scaffold.add_argument("--mode", choices=sorted(MODES), required=True)
+    scaffold.add_argument("--density", choices=sorted(DENSITIES), default="light")
+    scaffold.add_argument("--historical-mode", choices=["documented", "reconstruction", "evocation-composite", "not-applicable"], default="documented")
+    scaffold.add_argument("--goal")
+    scaffold.add_argument("--out")
+    scaffold.add_argument("--force", action="store_true")
+    scaffold.set_defaults(func=cmd_scaffold)
+    return parser
+
+
+def main():
+    args = build_parser().parse_args()
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    sys.exit(main())
