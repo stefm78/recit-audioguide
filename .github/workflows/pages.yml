@@ -17,13 +17,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  sounds:
+    permissions:
+      contents: write
+    uses: stefm78/audio-engine/.github/workflows/hydrate-sounds.yml@8a59a69dacd2abbbe09caf5d0ec0760b571b7130
+    with:
+      requirements_path: "sound-requirements.json"
+      artifact_name: "recit-sound-library"
+      engine_ref: "8a59a69dacd2abbbe09caf5d0ec0760b571b7130"
+      release_tag: "sound-library"
+      publish_release: true
+      fail_on_unresolved: true
+
   audio:
-    uses: stefm78/audio-engine/.github/workflows/render.yml@60583e2270d43ec582468695991d421b804ee694
+    needs: sounds
+    uses: stefm78/audio-engine/.github/workflows/render.yml@8a59a69dacd2abbbe09caf5d0ec0760b571b7130
     with:
       source_glob: "series/**/audio/*.json"
       output_dir: "generated/audio"
       artifact_name: "recit-audio-assets"
-      engine_ref: "60583e2270d43ec582468695991d421b804ee694"
+      engine_ref: "8a59a69dacd2abbbe09caf5d0ec0760b571b7130"
+      sounds_artifact_name: "recit-sound-library"
+      sounds_artifact_path: "sound-library"
 
   build:
     needs: audio
