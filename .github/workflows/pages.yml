@@ -92,6 +92,8 @@ jobs:
               > "generated/audio-previews/${base_name}-timing.json"
             cp "generated/audio/${program_id}/manifest.json" \
               "generated/audio-previews/${base_name}-manifest.json"
+            cp "generated/audio/${program_id}/audio.mp3" \
+              "generated/audio-previews/${base_name}-full.mp3"
           done
           find generated/audio -path '*/previews/*.mp3' -exec cp {} generated/audio-previews/ \;
       - name: Upload fast sound-design previews

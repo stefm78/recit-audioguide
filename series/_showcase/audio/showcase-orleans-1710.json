@@ -1,0 +1,174 @@
+{
+  "schema_version": 6,
+  "id": "showcase-orleans-1710",
+  "language": "fr-FR",
+  "profile": "speech",
+  "title": "Une porte s’ouvre — Orléans, vers 1710",
+  "series": "Démonstration de mise en scène sonore",
+  "production_version": 2,
+  "historical_note": "Évocation composite et fictive d’un matin orléanais du début du XVIIIe siècle. Elle ne prétend pas reconstituer un événement précis ni reproduire les sons authentiques de Sainte-Croix. Les enregistrements sont employés pour leur plausibilité évocatrice et leur provenance reste tracée dans le catalogue sonore.",
+  "soundscape": {
+    "bed": {
+      "sound": "gregorian-chant-bed",
+      "gain_db": -44,
+      "loop": true,
+      "fade_in_ms": 2500,
+      "fade_out_ms": 3500
+    },
+    "layers": [
+      {
+        "sound": "historic-pipe-organ-bed",
+        "gain_db": -52,
+        "loop": true,
+        "fade_in_ms": 4500,
+        "fade_out_ms": 3000
+      }
+    ],
+    "events": [
+      {
+        "sound": "historic-horse-hooves",
+        "role": "scene",
+        "after_segment": 3,
+        "space_ms": 3200,
+        "gain_db": -14,
+        "placement": "left",
+        "fade_in_ms": 120,
+        "fade_out_ms": 900
+      },
+      {
+        "sound": "church-bell-distant",
+        "role": "scene",
+        "after_segment": 6,
+        "space_ms": 2400,
+        "gain_db": -16,
+        "placement": "right",
+        "fade_in_ms": 0,
+        "fade_out_ms": 900
+      },
+      {
+        "sound": "historic-pipe-organ",
+        "role": "bridge",
+        "after_segment": 9,
+        "foreground_ms": 3600,
+        "carry_through_segments": 1,
+        "tail_ms": 1100,
+        "gain_db": -20,
+        "placement": "center",
+        "fade_in_ms": 550,
+        "fade_out_ms": 1400
+      }
+    ],
+    "ducking": "speech"
+  },
+  "lead_in_ms": 500,
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "placement": "center",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 420,
+      "text": "Orléans, un matin froid du début du dix-huitième siècle. Devant Sainte-Croix, la ville n’est pas silencieuse : elle s’empile, son après son."
+    },
+    {
+      "character_id": "marchande",
+      "speaker": "La marchande",
+      "preset": "marchande-truculente",
+      "placement": "left",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 220,
+      "text": "Hé, monsieur le garde ! Regardez-moi ça… Un cavalier qui file comme si le roi lui courait derrière !"
+    },
+    {
+      "character_id": "sentinelle",
+      "speaker": "La sentinelle",
+      "preset": "sentinelle-nerveuse",
+      "placement": "right",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 180,
+      "text": "Écartez-vous. Laissez le passage."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "placement": "center",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 360,
+      "text": "Les sabots frappent la pierre, traversent la place, puis se perdent entre les maisons."
+    },
+    {
+      "character_id": "marchande",
+      "speaker": "La marchande",
+      "preset": "marchande-truculente",
+      "placement": "left",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 180,
+      "text": "Un courrier à cette heure ? Je vous parie mon panier que ça sent les ennuis."
+    },
+    {
+      "character_id": "sentinelle",
+      "speaker": "La sentinelle",
+      "preset": "sentinelle-nerveuse",
+      "placement": "right",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 180,
+      "text": "Vous pariez surtout tout ce qui ne vous appartient pas."
+    },
+    {
+      "character_id": "marchande",
+      "speaker": "La marchande",
+      "preset": "marchande-truculente",
+      "placement": "left",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 420,
+      "text": "Bon… celle-là, au moins, nous dit l’heure sans mentir."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "placement": "center",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 420,
+      "text": "Et soudain, derrière les voix, on entend ce qui était là depuis le début : le chant, très loin, derrière les portes."
+    },
+    {
+      "character_id": "sentinelle",
+      "speaker": "La sentinelle",
+      "preset": "sentinelle-nerveuse",
+      "placement": "right",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 240,
+      "text": "Vous entendez ? L’office commence. Même la rue baisse d’un ton."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "placement": "center",
+      "acoustic_space": "large-stone-interior",
+      "pause_after_ms": 420,
+      "text": "Puis l’orgue prend l’air. Pendant quelques secondes, plus besoin d’expliquer la pierre : elle répond."
+    },
+    {
+      "character_id": "marchande",
+      "speaker": "La marchande",
+      "preset": "marchande-truculente",
+      "placement": "left",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 520,
+      "text": "Eh bien… pour une fois, je vais me taire."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "placement": "center",
+      "acoustic_space": "outdoor-open",
+      "pause_after_ms": 700,
+      "text": "C’est cela, une ville avant les moteurs : non pas le silence, mais des distances, des matières, et des sons qui racontent où vous êtes."
+    }
+  ]
+}
