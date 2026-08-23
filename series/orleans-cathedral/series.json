@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "slug": "orleans-cathedral",
+  "type": "visit",
+  "title": "Cathédrale Sainte-Croix",
+  "subtitle": "Huit étapes pour regarder la cathédrale autrement, du parvis au grand orgue.",
+  "note": "Commencez sur le parvis. L’écran sert seulement à vous repérer ; la cathédrale reste le spectacle.",
+  "visit": {
+    "start_label": "Parvis → nef → transept → chœur → déambulatoire → sortie",
+    "plan_url": "../../data/orleans-cathedral/assets/plan-cathedral.svg"
+  },
+  "episodes": [
+    {
+      "id": "orleans-cathedral-ep01",
+      "title": "Avant d’entrer : une cathédrale qui trompe l’œil",
+      "stop": "Parvis et façade occidentale",
+      "launch": "sur le parvis, face à la façade, avant de franchir les portes.",
+      "look": "Reculez assez pour voir les deux tours, la flèche et l’axe de la rue Jeanne-d’Arc.",
+      "summary": "La façade paraît médiévale, mais elle est l’aboutissement d’un chantier commencé au XIIIe siècle et officiellement achevé au XIXe. C’est le meilleur endroit pour raccorder la cathédrale à toute la visite d’Orléans.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-ep01/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep01.json",
+      "extras": [
+        {
+          "title": "Pourquoi reconstruire gothique en 1601 ?",
+          "summary": "Henri IV relance un chantier médiéval deux siècles plus tard : pourquoi ne pas construire une cathédrale Renaissance ou classique ?",
+          "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g01/guide.mp3"
+        }
+      ]
+    },
+    {
+      "id": "orleans-cathedral-ep02",
+      "title": "La nef : pourquoi le regard monte-t-il tout seul ?",
+      "stop": "Narthex et grande nef",
+      "launch": "juste après l’entrée, avant d’avancer au milieu de la nef.",
+      "look": "Regardez les piliers, les voûtes à 32 mètres, puis retournez-vous vers la tribune du grand orgue.",
+      "summary": "L’épisode donne les repères simples pour lire une cathédrale gothique : nef, bas-côtés, piliers, voûtes et lumière, sans transformer la visite en cours d’architecture.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-ep02/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep02.json"
+    },
+    {
+      "id": "orleans-cathedral-ep03",
+      "title": "Les vitraux de Jeanne : dix images pour fabriquer une mémoire",
+      "stop": "Bas-côtés de la nef — cycle de Jeanne d’Arc",
+      "launch": "devant les vitraux narratifs de Jeanne d’Arc dans les bas-côtés.",
+      "look": "Repérez Jeanne, les costumes, les armes et l’enchaînement des scènes ; cherchez notamment son entrée à Orléans et sa prière à Sainte-Croix.",
+      "summary": "Les dix vitraux racontent la vie de Jeanne comme un récit continu. Ils sont aussi un témoignage du XIXe siècle et de la manière dont Orléans construit sa mémoire johannique.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-ep03/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep03.json",
+      "extras": [
+        {
+          "title": "Dix vitraux, mais quel visage pour Jeanne ?",
+          "summary": "Les artistes racontent Jeanne sans disposer d’un portrait authentique réalisé d’après nature. Que fait-on quand l’histoire doit donner un visage à quelqu’un ?",
+          "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g06/guide.mp3"
+        }
+      ]
+    },
+    {
+      "id": "orleans-cathedral-ep04",
+      "title": "1568 : comment fait-on tomber une cathédrale ?",
+      "stop": "Croisée du transept",
+      "launch": "au centre de la croisée, là où la nef rencontre les deux bras du transept.",
+      "look": "Observez les quatre grands supports de la croisée, puis les bras nord et sud et leurs retables.",
+      "summary": "La croisée raconte le moment où les guerres de Religion entrent physiquement dans l’architecture : destruction en 1568, puis reconstruction voulue par Henri IV et poursuivie sous les Bourbons.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-ep04/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep04.json",
+      "extras": [
+        {
+          "title": "Condé a-t-il vraiment détruit Sainte-Croix ?",
+          "summary": "Une formule simple accuse « les protestants ». La réalité est plus intéressante : Condé tente de protéger la cathédrale, mais des hommes de son camp la détruisent.",
+          "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g02/guide.mp3"
+        },
+        {
+          "title": "Le Roi-Soleil est caché dans le transept",
+          "summary": "La reconstruction n’efface pas le XVIIe siècle : Louis XIV laisse sa marque dans les bras du transept et leurs roses.",
+          "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g05/guide.mp3"
+        }
+      ]
+    },
+    {
+      "id": "orleans-cathedral-ep05",
+      "title": "Le chœur : une cathédrale est aussi une machine à prier",
+      "stop": "Chœur, stalles et boiseries",
+      "launch": "devant le chœur, sans franchir les espaces éventuellement réservés au culte.",
+      "look": "Regardez les stalles, les boiseries, les médaillons sculptés et la profondeur jusqu’à l’abside.",
+      "summary": "Le chœur permet de comprendre la vie quotidienne de la cathédrale : chanoines, offices, stalles, sculpture et organisation d’un espace religieux qui n’était pas conçu uniquement pour les visiteurs.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-ep05/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep05.json",
+      "extras": [
+        {
+          "title": "La main de Dieu dans l’abside : histoire ou légende ?",
+          "summary": "Une main bénissante peinte dans le chœur renvoie à une ancienne tradition sur saint Euverte. Comment raconter ce genre d’histoire sans confondre foi et preuve historique ?",
+          "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g03/guide.mp3"
+        }
+      ]
+    },
+    {
+      "id": "orleans-cathedral-ep06",
+      "title": "Le déambulatoire : quinze petites histoires autour du grand chœur",
+      "stop": "Déambulatoire et chapelles rayonnantes",
+      "launch": "en commençant à contourner le chœur par le déambulatoire.",
+      "look": "Observez les changements de décor d’une chapelle à l’autre, les peintures murales et les vitraux de périodes différentes.",
+      "summary": "Les quinze chapelles des XIIIe et XIVe siècles sont une leçon de stratigraphie : des espaces médiévaux ont survécu aux destructions et accueillent aujourd’hui des œuvres de périodes très différentes.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-ep06/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep06.json",
+      "extras": [
+        {
+          "title": "Pourquoi s’appelle-t-elle Sainte-Croix ?",
+          "summary": "Le nom ne décrit pas la forme du bâtiment : il vient de reliques de la Croix du Christ attestées à Orléans depuis le VIIe siècle.",
+          "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g04/guide.mp3"
+        }
+      ]
+    },
+    {
+      "id": "orleans-cathedral-ep07",
+      "title": "Chapelle Sainte-Jeanne-d’Arc : de la jeune fille à la sainte",
+      "stop": "Chapelle Sainte-Jeanne-d’Arc",
+      "launch": "devant la chapelle consacrée à Jeanne d’Arc.",
+      "look": "Regardez la statue, le décor et la manière dont Jeanne est présentée ici, puis comparez mentalement avec la statue équestre du Martroi.",
+      "summary": "Après la combattante des Tourelles et l’héroïne du Martroi, la cathédrale présente Jeanne comme sainte. L’épisode distingue histoire, canonisation et mémoire religieuse.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-ep07/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep07.json",
+      "extras": [
+        {
+          "title": "Qu’est-ce que Jeanne a réellement vu ici le 8 mai 1429 ?",
+          "summary": "Même emplacement, autre cathédrale : reconstituer mentalement ce que Jeanne pouvait voir permet de mesurer l’ampleur des transformations.",
+          "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g08/guide.mp3"
+        }
+      ]
+    },
+    {
+      "id": "orleans-cathedral-ep08",
+      "title": "Avant de sortir : entendre la Loire jusque dans le grand orgue",
+      "stop": "Retour vers la nef et grand orgue",
+      "launch": "en revenant vers l’entrée ; retournez-vous vers le chœur, puis regardez l’orgue au-dessus des portes.",
+      "look": "Prenez d’abord la perspective entière de la nef, puis regardez la tribune et le buffet du grand orgue.",
+      "summary": "Le dernier épisode rassemble le monument en une seule lecture et révèle une étonnante connexion régionale : le grand orgue vient en partie de l’ancienne abbaye de Fleury à Saint-Benoît-sur-Loire.",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-ep08/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-cathedral/episodes/orleans-cathedral-ep08.json",
+      "extras": [
+        {
+          "title": "Un orgue voyageur venu de Saint-Benoît-sur-Loire",
+          "summary": "Le grand orgue résume à lui seul une partie de l’histoire régionale : abbaye de Fleury, Révolution, transfert à Orléans, puis Cavaillé-Coll.",
+          "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-cathedral-g07/guide.mp3"
+        }
+      ]
+    }
+  ]
+}

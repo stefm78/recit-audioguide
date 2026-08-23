@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "slug": "orleans-marly",
+  "type": "route",
+  "title": "D’Orléans à Marly",
+  "subtitle": "De Jeanne d’Arc au Roi-Soleil : un récit de route sur la fabrication du pouvoir.",
+  "note": "Les épisodes principaux fonctionnent en roulant ; les détails visuels restent réservés aux passagers ou aux arrêts.",
+  "route": {
+    "safety": "Le GPS, la signalisation et les conditions réelles priment toujours. Le conducteur n’a rien à regarder sur cette page pendant le trajet.",
+    "maps_url": "https://www.google.com/maps/dir/?api=1&destination=Marly-le-Roi%2C+France&travelmode=driving&dir_action=navigate&waypoints=Ch%C3%A2teau+de+Ch%C3%A2teaudun%2C+Ch%C3%A2teaudun%2C+France%7CCath%C3%A9drale+Notre-Dame+de+Chartres%2C+Chartres%2C+France%7CCh%C3%A2teau+de+Maintenon%2C+Maintenon%2C+France%7CRambouillet%2C+France%7CVaux+de+Cernay%2C+Cernay-la-Ville%2C+France%7CCh%C3%A2teau+de+Dampierre%2C+Dampierre-en-Yvelines%2C+France%7CSaint-Forget%2C+France"
+  },
+  "episodes": [
+    {
+      "id": "orleans-marly-ep01",
+      "title": "Quitter Orléans : après avoir sauvé le royaume, comment fabrique-t-on le pouvoir ?",
+      "stop": "Orléans → Beauce → Châteaudun",
+      "launch": "à lancer une fois sorti d’Orléans, lorsque la ville et la Loire commencent à disparaître derrière vous.",
+      "summary": "La Loire disparaît, la Beauce ouvre l’horizon et Dunois devient notre fil : après la survie de 1429, il faut désormais stabiliser, administrer et bâtir.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=D955%2C%20Orl%C3%A9ans%20vers%20Ch%C3%A2teaudun%2C%20France",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-marly-ep01/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-marly-roadtrip/longform/ep01.json"
+    },
+    {
+      "id": "orleans-marly-ep02",
+      "title": "Châteaudun : que devient le monde de Jeanne après la victoire ?",
+      "stop": "Château de Châteaudun",
+      "launch": "à lancer à l’approche de Châteaudun ; si vous vous arrêtez, poursuivez devant le panorama du château et de la vallée du Loir.",
+      "summary": "Dunois n’est pas seulement le compagnon de Jeanne : sa longue carrière permet de voir un capitaine devenir comte et bâtisseur, tandis que la forteresse devient aussi résidence et machine sociale.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Place%20Jehan%20de%20Dunois%2C%2028200%20Ch%C3%A2teaudun%2C%20France",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-marly-ep02/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-marly-roadtrip/longform/ep02.json"
+    },
+    {
+      "id": "orleans-marly-ep03",
+      "title": "Chartres : qui pouvait bâtir une montagne avant l’État moderne ?",
+      "stop": "Cathédrale Notre-Dame de Chartres",
+      "launch": "à lancer dès que les flèches commencent à apparaître dans la Beauce, puis à poursuivre à l’arrêt devant la cathédrale.",
+      "summary": "Le saut vers 1194 est volontaire : Chartres montre comment une société médiévale coordonne matériaux, métiers, revenus, géométrie et croyance pour produire un chantier gigantesque sans État moderne.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=16%20Clo%C3%AEtre%20Notre-Dame%2C%2028000%20Chartres%2C%20France",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-marly-ep03/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-marly-roadtrip/longform/ep03.json"
+    },
+    {
+      "id": "orleans-marly-ep04",
+      "title": "Maintenon : quand un roi veut déplacer une rivière",
+      "stop": "Château et aqueduc de Maintenon",
+      "launch": "à lancer en entrant dans Maintenon ou juste avant le passage offrant une vue sur l’aqueduc.",
+      "summary": "Versailles manque d’eau. Le projet de détourner l’Eure transforme la vallée en problème de niveau, de pression, de logistique et de guerre — et montre les limites concrètes d’un pouvoir pourtant immense.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Place%20Aristide%20Briand%2C%2028130%20Maintenon%2C%20France",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-marly-ep04/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-marly-roadtrip/longform/ep04.json"
+    },
+    {
+      "id": "orleans-marly-ep05",
+      "title": "Rambouillet et les Vaux : le paysage peut-il devenir politique ?",
+      "stop": "Rambouillet → Vaux-de-Cernay",
+      "launch": "à lancer en traversant Rambouillet ou dès que la forêt devient le paysage principal ; poursuivre dans la descente vers les Vaux.",
+      "summary": "La forêt n’est pas un simple décor : elle organise la chasse, l’invitation et le rang. Plus loin, les Vaux montrent comment un même paysage devient successivement ressource monastique puis motif artistique.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Vaux%20de%20Cernay%2C%20Cernay-la-Ville%2C%20France",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-marly-ep05/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-marly-roadtrip/longform/ep05.json"
+    },
+    {
+      "id": "orleans-marly-ep06",
+      "title": "Dampierre : vivre dans l’orbite de Versailles",
+      "stop": "Dampierre-en-Yvelines → 17 Tournants",
+      "launch": "à lancer à l’approche de Dampierre ; il peut continuer sans arrêt pendant la traversée du village et les routes de vallée.",
+      "summary": "Dampierre n’est plus une forteresse : c’est une architecture de rang, d’accueil et de filtrage dans la société de cour. La route elle-même rappelle ensuite que le relief impose ses courbes.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=2%20Grande%20Rue%2C%2078720%20Dampierre-en-Yvelines%2C%20France",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-marly-ep06/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-marly-roadtrip/longform/ep06.json"
+    },
+    {
+      "id": "orleans-marly-ep07",
+      "title": "Marly : le roi s’éloigne de Versailles sans quitter le pouvoir",
+      "stop": "Marly-le-Roi",
+      "launch": "à lancer en approchant de Marly-le-Roi, puis à poursuivre à l’arrivée : le domaine a presque disparu, mais c’est précisément ce qui rend son histoire intéressante.",
+      "summary": "Marly conclut le voyage en réunissant deux problèmes d’accès : comment faire monter l’eau jusqu’aux jardins, et comment obtenir le privilège d’approcher le roi hors de la foule de Versailles ?",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Domaine%20royal%20de%20Marly%2C%2078160%20Marly-le-Roi%2C%20France",
+      "audio_url": "https://stefm78.github.io/audioguide/audio/guides/orleans-marly-ep07/guide.mp3",
+      "transcript_url": "https://raw.githubusercontent.com/stefm78/audioguide/main/series/orleans-marly-roadtrip/longform/ep07.json"
+    }
+  ]
+}
