@@ -2,11 +2,11 @@
   "version": 1,
   "sounds": [
     {
-      "id": "orleans-cathedral-parvis",
-      "type": "ambience",
-      "query": "BÜYÜK HENDEK STREET evening audio",
+      "id": "historic-horse-hooves",
+      "type": "event",
+      "query": "WWS Clatterofhorseshoesonthepavement",
       "required_tags": [],
-      "preferred_tags": ["street", "city"],
+      "preferred_tags": ["horse", "horseshoes", "pavement"],
       "providers": ["wikimedia-commons"],
       "limit": 8,
       "min_score": 70

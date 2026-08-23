@@ -7,6 +7,7 @@ Compagnon de voyage audio statique, simple et résilient.
 - L'histoire d'abord.
 - Trois modes seulement : `story`, `visit`, `route`.
 - Une nouvelle série est du contenu, pas du code.
+- L'enrichissement sonore suit d'abord l'époque racontée : sons physiquement plausibles pour le sujet, sans bruit moderne par défaut et sans prétendre à une reconstitution authentique.
 - Le site reste utilisable si les enrichissements secondaires échouent.
 - On bloque uniquement ce qui rend l'expérience fausse, inutilisable ou dangereuse.
 - Aucun backend permanent, aucune base de données, aucun compte utilisateur.
