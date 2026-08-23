@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "orleans-cathedral-ep06",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 1,
+  "title": "Le déambulatoire : quinze petites histoires autour du grand chœur",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": 6,
+  "after_episode": null,
+  "stop": "Déambulatoire et chapelles rayonnantes",
+  "location": "Cathédrale Sainte-Croix d'Orléans, déambulatoire",
+  "launch": "en commençant à contourner le chœur par le déambulatoire.",
+  "look": "Observez les changements de décor d’une chapelle à l’autre, les peintures murales et les vitraux de périodes différentes.",
+  "summary": "Les quinze chapelles des XIIIe et XIVe siècles sont une leçon de stratigraphie : des espaces médiévaux ont survécu aux destructions et accueillent aujourd’hui des œuvres de périodes très différentes.",
+  "historical_note": "Le site officiel indique quinze chapelles des XIIIe et XIVe siècles autour du chœur, avec peintures murales restaurées et vitraux mêlant XIXe siècle et création contemporaine.",
+  "lead_in_ms": 450,
+  "sources": [
+    "https://www.cathedrale-orleans.fr/depliants",
+    "https://www.cathedrale-orleans.fr/_files/ugd/db191a_dcc42071ad114e96b4fce4d03d9ca9ce.pdf",
+    "https://www.cathedrale-orleans.fr/visiter"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Nous entrons dans le déambulatoire. Le mot est beaucoup plus simple qu’il n’en a l’air : c’est l’espace qui permet de marcher autour du chœur. Dans les grandes églises de pèlerinage et les cathédrales, cette circulation permettait de se déplacer, d’accéder à des chapelles et à des reliques sans traverser constamment l’espace central du chœur."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Autour de Sainte-Croix se trouvent quinze chapelles qui remontent aux XIIIe et XIVe siècles. Et voilà pourquoi cette partie est capitale : lorsque la cathédrale s’effondre en grande partie en 1568, les chapelles de l’abside comptent parmi les éléments qui subsistent. Nous sommes donc ici, davantage que dans la façade ou le grand transept, au contact de couches réellement médiévales du monument."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Ne cherchez pas une uniformité parfaite. Au contraire, amusez-vous à comparer. Une chapelle peut conserver un volume médiéval mais recevoir un décor peint au XIXe siècle. Un vitrail peut être contemporain. Une statue peut avoir été déplacée. Une restauration peut avoir ravivé des couleurs. Une cathédrale ancienne n’est presque jamais figée à une date unique : c’est une collection de décisions prises par des générations successives."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Cette diversité est particulièrement visible dans les vitraux. Le site de la cathédrale insiste sur le mélange entre œuvres du XIXe siècle et créations contemporaines. C’est une bonne occasion de se débarrasser d’une idée fausse : une cathédrale classée n’est pas condamnée à n’accepter que de l’art ancien. Depuis le Moyen Âge, les églises ont toujours intégré les œuvres de leur temps."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Les chapelles portent aussi des dédicaces à différents saints. Cela nous rappelle que le christianisme vécu n’est pas seulement organisé autour de l’espace monumental principal. Les fidèles viennent aussi pour des dévotions particulières, pour un saint patron, pour la mémoire d’un défunt, pour une confrérie ou pour une intention personnelle. Ces petits espaces permettent une relation beaucoup plus intime que la grande nef."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"À mesure que vous tournez autour du chœur, regardez aussi vers le centre. Vous voyez la cathédrale sous des angles impossibles depuis la nef. Piliers, arcs, vitraux et mobilier se superposent. C’est probablement ici que l’on comprend le mieux que Sainte-Croix est un organisme plutôt qu’une façade : un ensemble de circulations, de sous-espaces et d’époques emboîtées."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Alors, où en sommes-nous ? Nous avons quitté la grande histoire des rois et des guerres pour entrer dans une couronne de petites histoires. Continuez jusqu’à la chapelle Sainte-Jeanne-d’Arc. Elle va nous permettre de réunir deux personnages qui ne sont pas tout à fait les mêmes : Jeanne, la jeune femme que nous avons suivie dans Orléans en 1429, et sainte Jeanne d’Arc, figure de dévotion et de mémoire du XXe siècle."}
+  ]
+}
