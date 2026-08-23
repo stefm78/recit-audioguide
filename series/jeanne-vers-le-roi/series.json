@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "slug": "jeanne-vers-le-roi",
+  "type": "story",
+  "title": "Jeanne d’Arc — De Vaucouleurs à Chinon",
+  "subtitle": "Avant Orléans, une jeune fille doit franchir une série de portes humaines : famille, capitaine, soldats, religieux, routes, conseillers puis enfin Charles.",
+  "note": "Fiction historique assumée : étapes et principaux obstacles documentés, dialogues reconstruits et signalés. Cette migration conserve le rendu mono actuel ; la spatialisation sera évaluée séparément.",
+  "episodes": [
+    {"id":"jeanne-vers-le-roi-ep01","title":"Laissez-moi parler au roi","stop":"De Vaucouleurs à Chinon","summary":"Une fiction historique en neuf scènes : Jeanne doit convaincre un parent, Robert de Baudricourt, des hommes d’armes, un religieux, une escorte, des gardes et des conseillers avant d’être enfin admise devant Charles.","audio_url":"https://stefm78.github.io/audioguide/audio/guides/jeanne-vers-le-roi-ep01/guide.mp3","transcript_url":"https://raw.githubusercontent.com/stefm78/audioguide/main/series/jeanne-vers-le-roi/episodes/jeanne-vers-le-roi-ep01.json"}
+  ]
+}
