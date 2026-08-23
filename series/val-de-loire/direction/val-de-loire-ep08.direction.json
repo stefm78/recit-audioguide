@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "id": "val-de-loire-ep08",
+  "mode": "story",
+  "density": "light",
+  "goal": "Faire sentir que la Loire de voyage devient soudain une frontière militaire, avec un seul passage sonore pour l'arrivée de Jeanne.",
+  "historical_mode": "documented",
+  "constraints": ["no_narration_duplicates_obvious_sound","one_primary_attention_owner_per_beat","continuous_layers_need_narrative_reason","silence_is_allowed","measured_voice_timing_is_authoritative"],
+  "beats": [
+    {"id":"river-changes-role","attention_owner":"voice","purpose":"raccorder cet épisode à toute la série en changeant la fonction du fleuve sans ajouter un bruit de rivière"},
+    {"id":"strategic-gate","attention_owner":"voice","purpose":"faire comprendre bastilles, pont et ligne de front avant toute évocation"},
+    {"id":"jeanne-arrival","after_segment":3,"attention_owner":"sound","purpose":"donner une présence physique très brève au basculement humain de 1429","sound":"historic-horse-hooves","handoff":"voice-to-short-foreground-to-jeanne-arrival","exit":"carry-under-next-segment-then-fade","rationale":"un seul déplacement sonore suffit à distinguer cet épisode de la synthèse géographique précédente"},
+    {"id":"tourelles-without-spectacle","attention_owner":"voice","purpose":"garder les combats compréhensibles sans bande-son de bataille"},
+    {"id":"whole-loire-release","attention_owner":"voice","purpose":"rendre au fleuve le rôle de fil rouge de la série pour la conclusion"}
+  ]
+}
