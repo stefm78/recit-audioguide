@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "orleans-cathedral-ep02",
   "language": "fr-FR",
   "profile": "speech",
@@ -15,6 +15,20 @@
   "summary": "L’épisode donne les repères simples pour lire une cathédrale gothique : nef, bas-côtés, piliers, voûtes et lumière, sans transformer la visite en cours d’architecture.",
   "historical_note": "Les dimensions et l’organisation spatiale suivent le dépliant officiel de la cathédrale. Le vocabulaire architectural est volontairement limité à ce qui aide à regarder.",
   "lead_in_ms": 450,
+  "actors": {
+    "narrateur": {"placement": "center"}
+  },
+  "soundscape": {
+    "events": [
+      {
+        "sound": "cathedral-bell-distant",
+        "at_ms": 155000,
+        "gain_db": -32,
+        "placement": "center"
+      }
+    ],
+    "ducking": "speech"
+  },
   "sources": [
     "https://www.cathedrale-orleans.fr/visiter",
     "https://www.cathedrale-orleans.fr/depliants",
