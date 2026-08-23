@@ -9,6 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_HELD_PAUSE_MS = 1600
+LONGFORM_BRIDGE_FOREGROUND_MS = 3200
+LONGFORM_BRIDGE_CARRY_MS = 7000
 
 
 def load_json(path: Path):
@@ -116,13 +118,12 @@ def bridge_event(beat):
         "sound": beat["sound"],
         "role": "bridge",
         "after_segment": int(beat["after_segment"]),
-        "foreground_ms": 2600,
-        "carry_through_segments": 1,
-        "tail_ms": 900,
+        "foreground_ms": LONGFORM_BRIDGE_FOREGROUND_MS,
+        "carry_under_speech_ms": LONGFORM_BRIDGE_CARRY_MS,
         "gain_db": -16,
         "placement": "center",
         "fade_in_ms": 120,
-        "fade_out_ms": 1000,
+        "fade_out_ms": 1400,
     }
 
 
