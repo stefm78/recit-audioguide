@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "orleans-cathedral-g07",
+  "production_version": 1,
+  "title": "Un orgue voyageur venu de Saint-Benoît-sur-Loire",
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": null,
+  "after_episode": 8,
+  "stop": null,
+  "location": "Cathédrale Sainte-Croix, Orléans, France",
+  "launch": null,
+  "look": null,
+  "summary": "Le grand orgue résume à lui seul une partie de l’histoire régionale : abbaye de Fleury, Révolution, transfert à Orléans, puis Cavaillé-Coll.",
+  "historical_note": "Le dépliant officiel rattache l’instrument initial à l’abbaye de Fleury, vendu à la Révolution et remonté à Sainte-Croix à partir de 1822.",
+  "lead_in_ms": 450,
+  "sources": ["https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf","https://www.cathedrale-orleans.fr/ausondesorgues"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Le grand orgue n’est pas né ici. Son histoire commence à l’abbaye de Fleury, aujourd’hui Saint-Benoît-sur-Loire, l’un des grands monastères du Val de Loire. Après la Révolution française, l’instrument est vendu, puis remonté à Sainte-Croix à partir de 1822."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Il est ensuite transformé à plusieurs reprises, notamment par Aristide Cavaillé-Coll, l’un des plus célèbres facteurs d’orgues du XIXe siècle. Quand on dit « l’orgue de Sainte-Croix », on parle donc en réalité d’un objet composite, déplacé, réemployé, augmenté et adapté à un nouvel espace."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"C’est exactement le même principe que pour la cathédrale elle-même. L’ancien et le nouveau ne sont pas deux blocs séparés : ils se mêlent. Ici, même la musique possède une stratigraphie."}
+  ]
+}
