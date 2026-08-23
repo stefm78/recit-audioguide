@@ -32,8 +32,28 @@
       "min_score": 70
     },
     {
+      "id": "gregorian-chant-bed",
+      "type": "ambience",
+      "query": "Veni.creator.spiritus",
+      "required_tags": [],
+      "preferred_tags": ["gregorian", "chant", "hymn"],
+      "providers": ["wikimedia-commons"],
+      "limit": 8,
+      "min_score": 70
+    },
+    {
       "id": "historic-pipe-organ",
       "type": "event",
+      "query": "BDT LNClerambault",
+      "required_tags": [],
+      "preferred_tags": ["organ", "pipe organ"],
+      "providers": ["wikimedia-commons"],
+      "limit": 8,
+      "min_score": 70
+    },
+    {
+      "id": "historic-pipe-organ-bed",
+      "type": "ambience",
       "query": "BDT LNClerambault",
       "required_tags": [],
       "preferred_tags": ["organ", "pipe organ"],
