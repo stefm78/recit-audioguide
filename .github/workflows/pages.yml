@@ -20,11 +20,11 @@ jobs:
   sounds:
     permissions:
       contents: write
-    uses: stefm78/audio-engine/.github/workflows/hydrate-sounds.yml@38da5d5858f5358ca5ac7baef0a8c32728977f78
+    uses: stefm78/audio-engine/.github/workflows/hydrate-sounds.yml@02040440be907ee52ed54f4931a0b2611a765f94
     with:
       requirements_path: "series/orleans-cathedral/sound-requirements.json"
       artifact_name: "recit-sound-library"
-      engine_ref: "38da5d5858f5358ca5ac7baef0a8c32728977f78"
+      engine_ref: "02040440be907ee52ed54f4931a0b2611a765f94"
       release_tag: "sound-library"
       publish_release: true
       fail_on_unresolved: false
@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: stefm78/audio-engine
-          ref: 38da5d5858f5358ca5ac7baef0a8c32728977f78
+          ref: 02040440be907ee52ed54f4931a0b2611a765f94
           path: .audio-engine
       - uses: actions/setup-python@v6
         with:
@@ -105,12 +105,12 @@ jobs:
 
   audio:
     needs: sounds
-    uses: stefm78/audio-engine/.github/workflows/render.yml@38da5d5858f5358ca5ac7baef0a8c32728977f78
+    uses: stefm78/audio-engine/.github/workflows/render.yml@02040440be907ee52ed54f4931a0b2611a765f94
     with:
       source_glob: "series/**/audio/*.json"
       output_dir: "generated/audio"
       artifact_name: "recit-audio-assets"
-      engine_ref: "38da5d5858f5358ca5ac7baef0a8c32728977f78"
+      engine_ref: "02040440be907ee52ed54f4931a0b2611a765f94"
       sounds_artifact_name: "recit-sound-library"
       sounds_artifact_path: "sound-library"
 
