@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "orleans-cathedral-ep01",
+  "title": "Avant d’entrer : une cathédrale qui trompe l’œil",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 1,
+  "series": "Cathédrale Sainte-Croix d’Orléans — Parcours au cœur de la pierre, de la foi et de la mémoire",
+  "episode": 1,
+  "stop": "Parvis et façade occidentale",
+  "location": "Place Sainte-Croix, 45000 Orléans, France",
+  "launch": "sur le parvis, face à la façade, avant de franchir les portes.",
+  "look": "Reculez assez pour voir les deux tours, la flèche et l’axe de la rue Jeanne-d’Arc.",
+  "summary": "La façade paraît médiévale, mais elle est l’aboutissement d’un chantier commencé au XIIIe siècle et officiellement achevé au XIXe. C’est le meilleur endroit pour raccorder la cathédrale à toute la visite d’Orléans.",
+  "historical_note": "Le bâtiment actuel superpose des phases de construction et de reconstruction très éloignées dans le temps. L’épisode insiste sur cette stratification plutôt que de présenter la cathédrale comme un monument médiéval resté intact.",
+  "lead_in_ms": 450,
+  "sources": [
+    "https://www.cathedrale-orleans.fr/visiter",
+    "https://www.cathedrale-orleans.fr/depliants",
+    "https://www.cathedrale-orleans.fr/_files/ugd/db191a_cd0d286df7eb4b57ac62559d9bb6310c.pdf",
+    "https://www.culture.gouv.fr/regions/drac-centre-val-de-loire/actualites-regionales-centre-val-de-loire/actualites-a-la-une/Presentation-de-l-ouvrage-Cathedrale-d-Orleans"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Nous voici devant Sainte-Croix. Et avant même de parler d’architecture, regardez simplement la perspective. Derrière nous, la rue Jeanne-d’Arc trace une longue ligne presque théâtrale jusqu’à la façade. Après les Tourelles, le Martroi, la Maison de Jeanne et les rues d’Orléans, cette cathédrale ressemble à la conclusion évidente du récit. Pourtant, elle commence par un piège : ce que nous voyons n’est pas exactement la cathédrale que Jeanne d’Arc a connue en 1429."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"La première pierre de la grande cathédrale gothique est posée en 1287. Mais le chantier avance lentement, s’interrompt, reprend, puis subit une catastrophe majeure. En 1568, pendant les guerres de Religion, la croisée du transept est détruite et une grande partie de l’édifice s’effondre. Au début du XVIIe siècle, Henri IV relance la reconstruction. Des rois suivants poursuivent l’effort. La façade occidentale que vous regardez appartient largement aux XVIIe et XVIIIe siècles, et l’inauguration officielle n’a lieu qu’en 1829."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Autrement dit, cette façade gothique n’est pas simplement un morceau de Moyen Âge conservé jusqu’à nous. Elle est aussi une décision des siècles modernes : reconstruire dans un langage gothique un monument que l’on veut rattacher à son passé. C’est assez rare pour être passionnant. D’ordinaire, lorsqu’un bâtiment est reconstruit deux ou trois siècles plus tard, on le fait dans le goût du moment. Ici, les bâtisseurs choisissent de poursuivre un style venu du Moyen Âge."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Levez maintenant les yeux. Les tours atteignent environ quatre-vingt-six mètres. La flèche monte à environ cent-quatorze mètres. À l’intérieur, les voûtes culminent à trente-deux mètres. Ces chiffres ne servent pas à faire réciter une fiche technique ; ils servent à préparer votre corps. Dans quelques instants, vous allez passer d’une place ouverte à un immense espace vertical. Le choc d’échelle fait partie de l’architecture."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Et Jeanne dans tout cela ? Elle vient bien prier dans la cathédrale le 8 mai 1429, jour où les Anglais lèvent le siège. Mais les vitraux qui raconteront sa vie n’existent pas encore, la façade que nous avons devant nous non plus, et une partie importante du monument sera détruite plus d’un siècle après sa mort. Quand nous dirons « la cathédrale de Jeanne », il faudra donc toujours distinguer le lieu, qui est bien celui-ci, et le bâtiment visible aujourd’hui, largement postérieur."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":620,"text":"Dernier regard avant d’entrer : observez la rue Jeanne-d’Arc derrière vous. Nous avons déjà appris qu’elle est une grande percée urbaine bien plus récente que Jeanne elle-même. Nous avons donc devant nous une cathédrale en partie reconstruite et derrière nous une perspective du XIXe siècle qui semble pourtant raconter 1429. Orléans est très forte pour cela : la ville actuelle met en scène son histoire, et notre travail consiste à apprécier cette mise en scène sans la confondre avec le décor original."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Alors, où en sommes-nous ? Une idée suffit : Sainte-Croix est une cathédrale de plusieurs siècles superposés. Entrez maintenant, avancez juste au-delà des portes et arrêtez-vous dans le narthex. Ne cherchez encore aucun détail. Le prochain épisode va commencer par quelque chose de beaucoup plus simple : ce que votre œil et votre corps ressentent quand l’espace s’ouvre soudain devant vous."}
+  ]
+}
