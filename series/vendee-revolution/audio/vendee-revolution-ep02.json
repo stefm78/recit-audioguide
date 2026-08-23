@@ -1,15 +1,31 @@
 {
-  "schema_version": 1,
+  "schema_version": 6,
   "language": "fr-FR",
   "profile": "speech",
   "id": "vendee-revolution-ep02",
-  "production_version": 2,
+  "production_version": 3,
   "title": "1789-1793 : la liberté et le serment",
   "series": "Vendée, Révolution et mémoires",
   "episode": 2,
   "location": "France, La Rochelle, Bas-Poitou et Anjou",
-  "historical_note": "Médiation historique narrative fondée sur les textes révolutionnaires et les archives locales. Aucune pensée fictive n'est attribuée aux acteurs.",
+  "historical_note": "Médiation historique narrative fondée sur les textes révolutionnaires et les archives locales. Aucune pensée fictive n'est attribuée aux acteurs. La cloche est une évocation sociale de la paroisse et ne prétend pas reproduire une cérémonie précise.",
   "lead_in_ms": 450,
+  "soundscape": {
+    "layers": [],
+    "events": [
+      {
+        "sound": "church-bell-distant",
+        "role": "scene",
+        "after_segment": 4,
+        "space_ms": 2800,
+        "gain_db": -22,
+        "placement": "center",
+        "fade_in_ms": 0,
+        "fade_out_ms": 1100
+      }
+    ],
+    "ducking": "speech"
+  },
   "sources": [
     "https://www2.assemblee-nationale.fr/sycomore/fiche/12267",
     "https://www.persee.fr/doc/arcpa_0000-0000_1878_num_10_1_4123_t1_0782_0000_4",
@@ -23,7 +39,7 @@
     {"character_id":"rabaut","speaker":"Jean-Paul Rabaut Saint-Étienne — discours sur la liberté religieuse, 1789","preset":"notable-hautain","pause_after_ms":900,"text":"Ce n'est pas même la tolérance que je réclame ; c'est la liberté."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Le 26 août, l'article 10 de la Déclaration affirme que nul ne doit être inquiété pour ses opinions, même religieuses, tant que leur manifestation ne trouble pas l'ordre public établi par la loi. Le 24 décembre, un décret permet aux non-catholiques, les juifs étant alors traités séparément, d'accéder aux administrations et à tous les emplois civils et militaires. En septembre 1791, la Constitution garantira à chacun la liberté d'exercer le culte auquel il est attaché. Pour un protestant français, la rupture avec l'ordre ancien est immense. Mais au même moment, la Révolution ne se contente pas d'accorder des libertés. Elle réorganise aussi les institutions du pays, y compris l'Église catholique."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Le 2 novembre 1789, les biens du clergé sont mis à la disposition de la nation. L'État prend en contrepartie la charge du culte. Puis, le 12 juillet 1790, l'Assemblée adopte la Constitution civile du clergé. Les diocèses doivent désormais correspondre aux départements. Évêques et curés sont élus selon de nouvelles règles. L'intention des législateurs est politique et administrative : intégrer l'Église à la nouvelle organisation nationale. Mais pour une partie du clergé et des fidèles, la question touche aussi à l'autorité spirituelle et au lien avec Rome. En novembre, cette tension devient personnelle. Les ecclésiastiques doivent prêter serment à la nouvelle Constitution. Et ce serment n'est pas une formalité discrète dans un bureau. Il doit être public, un dimanche, après la messe, devant la municipalité et les fidèles."},
-    {"character_id":"serment1790","speaker":"Décret du 27 novembre 1790 — formule du serment","preset":"aristocrate-distante","pause_after_ms":950,"text":"Je jure d'être fidèle à la nation, à la loi et au roi, et de maintenir de tout mon pouvoir la Constitution."},
+    {"character_id":"serment1790","speaker":"Décret du 27 novembre 1790 — formule du serment","preset":"aristocrate-distante","pause_after_ms":1300,"text":"Je jure d'être fidèle à la nation, à la loi et au roi, et de maintenir de tout mon pouvoir la Constitution."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Le conflit n'est pas encore complètement fixé au moment où les premiers prêtres doivent choisir. Rome a temporisé. Puis le bref Quod aliquantum de Pie VI, daté du 10 mars 1791, condamne la Constitution civile du clergé ; le bref Charitas du 13 avril approfondit la rupture. Pour un curé qui a prêté serment, la décision peut désormais signifier se trouver désavoué par le pape. Pour un réfractaire, refuser le serment entraîne la perte de la fonction reconnue par l'État. Pour les fidèles, ce débat abstrait prend un visage concret : qui célébrera la messe, baptisera les enfants, mariera les couples et accompagnera les morts ? La nouvelle frontière politique traverse l'intérieur même de la paroisse."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"La rupture ne se produit pas partout de la même manière, ni le même jour. Mais dans l'Ouest, elle descend très vite jusqu'aux petites paroisses. Les Archives de Maine-et-Loire signalent dès février 1791 un rassemblement organisé à Maulévrier, puis un autre en août à Saint-Laurent-de-la-Plaine. Les autorités départementales ordonnent l'arrestation et l'internement à Angers des prêtres insermentés. Désormais, deux prêtres peuvent prétendre desservir le même territoire : celui reconnu par l'administration nouvelle et celui que des fidèles continuent à considérer comme leur véritable curé. Une réforme nationale devient une querelle de voisinage, de famille et de conscience."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Il serait pourtant faux de s'arrêter là et d'annoncer déjà 1793. La Révolution touche en même temps la propriété, les impôts, les municipalités, la justice, les anciennes solidarités et les hiérarchies locales. La vente des biens d'Église ne profite pas de manière égale à tous ; dans certaines campagnes, les plus modestes regardent les acquisitions des plus aisés avec amertume. Les nouvelles administrations doivent faire appliquer des décisions venues des assemblées nationales. Des prêtres réfractaires continuent parfois leur ministère clandestinement. D'autres prêtres prêtent serment et conservent des fidèles. La carte des comportements ne se confond jamais parfaitement avec la carte religieuse que nous avons décrite dans l'épisode précédent."},
