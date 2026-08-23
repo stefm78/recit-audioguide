@@ -20,23 +20,95 @@ jobs:
   sounds:
     permissions:
       contents: write
-    uses: stefm78/audio-engine/.github/workflows/hydrate-sounds.yml@55cb2e3ad4f0fd9cd3814725e6ce754c30d9f27d
+    uses: stefm78/audio-engine/.github/workflows/hydrate-sounds.yml@38da5d5858f5358ca5ac7baef0a8c32728977f78
     with:
       requirements_path: "series/orleans-cathedral/sound-requirements.json"
       artifact_name: "recit-sound-library"
-      engine_ref: "55cb2e3ad4f0fd9cd3814725e6ce754c30d9f27d"
+      engine_ref: "38da5d5858f5358ca5ac7baef0a8c32728977f78"
       release_tag: "sound-library"
       publish_release: true
       fail_on_unresolved: false
 
+  preview:
+    if: github.event_name == 'pull_request'
+    needs: sounds
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout caller with history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Checkout audio-engine
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: 38da5d5858f5358ca5ac7baef0a8c32728977f78
+          path: .audio-engine
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Restore existing voice and stage caches read-only
+        uses: actions/cache/restore@v4
+        with:
+          path: generated/audio
+          key: audio-engine-v3-${{ runner.os }}-${{ github.repository }}-${{ github.sha }}
+          restore-keys: |
+            audio-engine-v3-${{ runner.os }}-${{ github.repository }}-
+            audio-engine-v2-${{ runner.os }}-${{ github.repository }}-
+            audio-engine-v1-${{ runner.os }}-${{ github.repository }}-
+      - name: Download hydrated sound library
+        uses: actions/download-artifact@v4
+        with:
+          name: recit-sound-library
+          path: sound-library
+      - name: Install audio-engine
+        run: python -m pip install --disable-pip-version-check ./.audio-engine
+      - name: Preview changed audio programs only
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          mapfile -t changed < <(git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- 'series/**/audio/*.json')
+          if [[ ${#changed[@]} -eq 0 ]]; then
+            echo "No changed audio programs."
+            mkdir -p generated/audio-previews
+            echo '{"changed_programs":0}' > generated/audio-previews/report.json
+            exit 0
+          fi
+          mkdir -p generated/audio-previews
+          printf '%s\n' "${changed[@]}" > generated/audio-previews/programs.txt
+          for program in "${changed[@]}"; do
+            base_name="$(basename "$program" .json)"
+            program_id="$(python -c 'import json,sys; print(json.load(open(sys.argv[1], encoding="utf-8"))["id"])' "$program")"
+            audio-engine preview "$program" \
+              --out generated/audio \
+              --sounds sound-library/sounds.json \
+              --before-ms 4000 \
+              --after-ms 4000 \
+              > "generated/audio-previews/${base_name}-preview.json"
+            audio-engine timing "$program" --out generated/audio \
+              > "generated/audio-previews/${base_name}-timing.json"
+            cp "generated/audio/${program_id}/manifest.json" \
+              "generated/audio-previews/${base_name}-manifest.json"
+          done
+          find generated/audio -path '*/previews/*.mp3' -exec cp {} generated/audio-previews/ \;
+      - name: Upload fast sound-design previews
+        uses: actions/upload-artifact@v4
+        with:
+          name: recit-audio-previews
+          path: generated/audio-previews
+          if-no-files-found: error
+
   audio:
     needs: sounds
-    uses: stefm78/audio-engine/.github/workflows/render.yml@55cb2e3ad4f0fd9cd3814725e6ce754c30d9f27d
+    uses: stefm78/audio-engine/.github/workflows/render.yml@38da5d5858f5358ca5ac7baef0a8c32728977f78
     with:
       source_glob: "series/**/audio/*.json"
       output_dir: "generated/audio"
       artifact_name: "recit-audio-assets"
-      engine_ref: "55cb2e3ad4f0fd9cd3814725e6ce754c30d9f27d"
+      engine_ref: "38da5d5858f5358ca5ac7baef0a8c32728977f78"
       sounds_artifact_name: "recit-sound-library"
       sounds_artifact_path: "sound-library"
 
