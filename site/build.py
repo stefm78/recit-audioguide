@@ -31,6 +31,13 @@ def load_manifest(path: Path):
         if not e.get('audio_url'): WARN.append(f'{slug}/{e["id"]}: audio absent')
         if not e.get('summary'): WARN.append(f'{slug}/{e["id"]}: résumé absent')
         if data.get('type')=='route' and not e.get('launch'): WARN.append(f'{slug}/{e["id"]}: repère de lancement absent')
+        for j,extra in enumerate(e.get('extras') or [],1):
+            extra_id=extra.get('id')
+            if extra_id:
+                if extra_id in ids: BLOCK.append(f'{path}: id audio dupliqué {extra_id}')
+                ids.add(extra_id)
+            elif not extra.get('audio_url'):
+                WARN.append(f'{slug}/{e["id"]}/extra-{j}: audio absent')
     return data
 
 
@@ -38,6 +45,25 @@ def generated_asset(directory: Path, *names):
     for name in names:
         if (directory/name).exists(): return name
     return None
+
+
+def publish_generated_audio(item):
+    item_id=item.get('id')
+    if not item_id:
+        return
+    generated=ROOT/'generated'/'audio'/item_id
+    audio_name=generated_asset(generated,'audio.mp3','guide.mp3')
+    if not audio_name:
+        return
+    target=DIST/'audio'/item_id
+    target.parent.mkdir(parents=True,exist_ok=True)
+    shutil.copytree(generated,target,dirs_exist_ok=True)
+    item['audio_url']=f"../../audio/{item_id}/{audio_name}"
+    transcript_name=generated_asset(generated,'transcript.json','resolved-cast.json')
+    if transcript_name:
+        item['transcript_url']=f"../../audio/{item_id}/{transcript_name}"
+    if (generated/'manifest.json').exists():
+        item['audio_manifest_url']=f"../../audio/{item_id}/manifest.json"
 
 
 def main():
@@ -65,18 +91,9 @@ def main():
         data_dir=DIST/'data'/slug; data_dir.mkdir(parents=True)
         published=json.loads(json.dumps(m))
         for episode in published.get('episodes',[]):
-            generated=ROOT/'generated'/'audio'/episode['id']
-            audio_name=generated_asset(generated,'audio.mp3','guide.mp3')
-            if audio_name:
-                target=DIST/'audio'/episode['id']
-                target.parent.mkdir(parents=True,exist_ok=True)
-                shutil.copytree(generated,target,dirs_exist_ok=True)
-                episode['audio_url']=f"../../audio/{episode['id']}/{audio_name}"
-                transcript_name=generated_asset(generated,'transcript.json','resolved-cast.json')
-                if transcript_name:
-                    episode['transcript_url']=f"../../audio/{episode['id']}/{transcript_name}"
-                if (generated/'manifest.json').exists():
-                    episode['audio_manifest_url']=f"../../audio/{episode['id']}/manifest.json"
+            publish_generated_audio(episode)
+            for extra in episode.get('extras') or []:
+                publish_generated_audio(extra)
         (data_dir/'series.json').write_text(json.dumps(published,ensure_ascii=False,indent=2),encoding='utf-8')
         assets=SERIES/slug/'assets'
         if assets.exists(): shutil.copytree(assets,data_dir/'assets',dirs_exist_ok=True)
