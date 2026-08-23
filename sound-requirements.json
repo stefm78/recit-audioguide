@@ -4,9 +4,9 @@
     {
       "id": "cathedral-bell-distant",
       "type": "event",
-      "query": "distant cathedral church bell",
-      "required_tags": ["bell"],
-      "preferred_tags": ["cathedral", "church", "distant"],
+      "query": "cathedral bell",
+      "required_tags": ["bell", "cathedral"],
+      "preferred_tags": ["church", "distant"],
       "providers": ["wikimedia-commons", "openverse"],
       "limit": 8,
       "min_score": 70
