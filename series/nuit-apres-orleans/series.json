@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "nuit-apres-orleans",
+  "type": "story",
+  "title": "La nuit après Orléans",
+  "subtitle": "8 mai 1429. Deux adolescents quittent une ville qui vient de survivre, avec un document scellé et bientôt une rumeur qui les précède.",
+  "note": "Fiction historique immersive. Les personnages et leur intrigue sont inventés ; le cadre et les mécanismes historiques sont documentés.",
+  "episodes": [
+    {
+      "id": "nuit-apres-orleans-ep01",
+      "title": "La nuit après Orléans",
+      "stop": "Orléans → Loire vers Blois",
+      "summary": "Prototype artistique de la première partie du récit long : de la levée du siège d’Orléans à la première rumeur qui commence à courir le long de la Loire."
+    }
+  ]
+}
