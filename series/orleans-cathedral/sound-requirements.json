@@ -24,9 +24,9 @@
     {
       "id": "river-water-flow",
       "type": "event",
-      "query": "Waves.ogg",
+      "query": "Flowing-water-100019.ogg",
       "required_tags": [],
-      "preferred_tags": ["water", "waves", "natural"],
+      "preferred_tags": ["flowing", "water", "natural"],
       "providers": ["wikimedia-commons"],
       "limit": 8,
       "min_score": 70
