@@ -23,6 +23,8 @@
     }
   }
 
+  function isPlayable(e){ return Boolean(e && e.audio_url && e.state!=='failed'); }
+
   function render(s){
     root.className = `series-shell mode-${s.type}`;
     root.innerHTML = `${hero(s)}${s.type==='visit' ? visitNav(s) : ''}${s.type==='route' ? routeIntro(s) : ''}<section class="episodes">${s.episodes.map(episodeCard).join('')}</section><footer><a href="../../">← Tous les voyages</a></footer>`;
@@ -30,7 +32,8 @@
   }
 
   function hero(s){
-    const action = s.episodes[0] ? `<button class="primary start" data-play="${escAttr(s.episodes[0].id)}">▶ Commencer</button>` : '';
+    const first = s.episodes.find(isPlayable);
+    const action = first ? `<button class="primary start" data-play="${escAttr(first.id)}">▶ Commencer</button>` : '<p class="quiet">Les audios de cette série sont momentanément indisponibles.</p>';
     return `<header class="series-hero"><p class="eyebrow">${modeLabel(s.type)}</p><h1>${esc(s.title)}</h1><p>${esc(s.subtitle||'')}</p>${action}${s.note ? `<p class="quiet">${esc(s.note)}</p>`:''}</header>`;
   }
 
@@ -50,19 +53,20 @@
     const maps = e.maps_url ? `<a class="secondary" href="${escAttr(e.maps_url)}" target="_blank" rel="noopener">Y aller</a>`:'';
     const transcript = e.transcript_url ? `<button class="secondary" data-transcript="${escAttr(e.id)}">Transcription et sources</button>`:'';
     const extras = (e.extras||[]).map(x=>`<details class="extra"><summary>${esc(x.title)}</summary><p>${esc(x.summary||'')}</p>${x.audio_url?`<button class="secondary" data-external-play="${escAttr(x.audio_url)}" data-title="${escAttr(x.title)}">▶ Écouter</button>`:''}</details>`).join('');
-    return `<article id="${escAttr(e.id)}" class="episode card" data-episode="${escAttr(e.id)}"><div class="episode-top"><span class="number">${index+1}</span><div><small>${esc(e.stop||'')}</small><h2>${esc(e.title)}</h2></div></div>${e.launch?`<p class="launch">${esc(e.launch)}</p>`:''}<p>${esc(e.summary||'')}</p>${look}<button class="primary" data-play="${escAttr(e.id)}">▶ Écouter</button><div class="actions">${maps}${transcript}</div><div class="transcript" data-transcript-box="${escAttr(e.id)}" hidden></div>${extras}</article>`;
+    const play = isPlayable(e) ? `<button class="primary" data-play="${escAttr(e.id)}">▶ Écouter</button>` : '<p class="quiet">Audio momentanément indisponible.</p>';
+    return `<article id="${escAttr(e.id)}" class="episode card" data-episode="${escAttr(e.id)}"><div class="episode-top"><span class="number">${index+1}</span><div><small>${esc(e.stop||'')}</small><h2>${esc(e.title)}</h2></div></div>${e.launch?`<p class="launch">${esc(e.launch)}</p>`:''}<p>${esc(e.summary||'')}</p>${look}${play}<div class="actions">${maps}${transcript}</div><div class="transcript" data-transcript-box="${escAttr(e.id)}" hidden></div>${extras}</article>`;
   }
 
   function onClick(ev){
     const play = ev.target.closest('[data-play]');
-    if(play){ const e = series.episodes.find(x=>x.id===play.dataset.play); if(e) playEpisode(e); return; }
+    if(play){ const e = series.episodes.find(x=>x.id===play.dataset.play); if(isPlayable(e)) playEpisode(e); return; }
     const external = ev.target.closest('[data-external-play]');
     if(external){ playUrl({id:'extra',title:external.dataset.title,stop:'Bonus',audio_url:external.dataset.externalPlay}); return; }
     const transcript = ev.target.closest('[data-transcript]');
     if(transcript){ const e=series.episodes.find(x=>x.id===transcript.dataset.transcript); if(e) toggleTranscript(e, transcript); }
   }
 
-  function playEpisode(e){ playUrl(e); currentEpisode=e; saveProgress(); }
+  function playEpisode(e){ if(!isPlayable(e)) return; playUrl(e); currentEpisode=e; saveProgress(); }
   function playUrl(e){
     if(!e.audio_url) return;
     audio.src=e.audio_url;
@@ -84,7 +88,13 @@
   audio.addEventListener('play',()=>toggle.textContent='❚❚');
   audio.addEventListener('pause',()=>toggle.textContent='▶');
   audio.addEventListener('timeupdate',()=>{ if(currentEpisode && Math.floor(audio.currentTime)%5===0) saveProgress(); });
-  audio.addEventListener('ended',()=>{ if(currentEpisode){markDone(currentEpisode.id); const i=series.episodes.findIndex(x=>x.id===currentEpisode.id); const next=i>=0?series.episodes[i+1]:null; if(next) playerSubtitle.textContent=`Terminé · suite : ${next.title}`; }});
+  audio.addEventListener('ended',()=>{
+    if(!currentEpisode)return;
+    markDone(currentEpisode.id);
+    const i=series.episodes.findIndex(x=>x.id===currentEpisode.id);
+    const next=series.episodes.slice(i+1).find(isPlayable);
+    if(next) playerSubtitle.textContent=`Terminé · suite : ${next.title}`;
+  });
 
   async function toggleTranscript(e, button){
     const box=root.querySelector(`[data-transcript-box="${cssEscape(e.id)}"]`);
@@ -105,7 +115,7 @@
   }
   function markDone(id){localStorage.setItem(`recit:done:${series.slug}:${id}`,'1');}
   function restore(s){
-    try{const p=JSON.parse(localStorage.getItem(`recit:${s.slug}`)||'null');if(!p)return;const e=s.episodes.find(x=>x.id===p.episode);if(!e)return;const b=document.createElement('button');b.className='resume';b.textContent=`Continuer · ${e.title}`;b.addEventListener('click',()=>{playEpisode(e);audio.addEventListener('loadedmetadata',()=>{audio.currentTime=Math.min(p.time||0,audio.duration||p.time||0)},{once:true});});root.querySelector('.series-hero').appendChild(b);}catch(_){}
+    try{const p=JSON.parse(localStorage.getItem(`recit:${s.slug}`)||'null');if(!p)return;const e=s.episodes.find(x=>x.id===p.episode);if(!isPlayable(e))return;const b=document.createElement('button');b.className='resume';b.textContent=`Continuer · ${e.title}`;b.addEventListener('click',()=>{playEpisode(e);audio.addEventListener('loadedmetadata',()=>{audio.currentTime=Math.min(p.time||0,audio.duration||p.time||0)},{once:true});});root.querySelector('.series-hero').appendChild(b);}catch(_){}
   }
 
   function modeLabel(t){return ({story:'Histoire',visit:'Visite',route:'Route'})[t]||'Récit';}
