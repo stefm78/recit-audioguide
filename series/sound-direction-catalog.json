@@ -14,6 +14,12 @@
       "goal": "Faire sentir les obstacles, déplacements et changements de pouvoir par les voix, les silences et quelques événements de premier plan.",
       "avoid": ["triumphal music by default", "continuous pseudo-medieval ambience", "sound that turns reconstruction into asserted fact"]
     },
+    "nuit-apres-orleans": {
+      "mode": "story",
+      "default_density": "scene-rich",
+      "goal": "Créer une immersion de fiction continue où le son mesure l'espace, le corps et le passage du temps ; laisser cloches, eau et silence prendre ponctuellement la scène sans fabriquer une fausse authenticité documentaire.",
+      "avoid": ["continuous pseudo-medieval ambience", "music explaining emotion", "sound on every action", "fake authentic Loire or Orléans sound claims"]
+    },
     "orleans-cathedral": {
       "mode": "visit",
       "default_density": "light",
