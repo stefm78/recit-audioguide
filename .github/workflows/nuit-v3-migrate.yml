@@ -1,0 +1,37 @@
+name: Apply La nuit apres Orleans V3
+
+on:
+  push:
+    branches:
+      - feature/nuit-apres-orleans-prototype
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout prototype branch
+        uses: actions/checkout@v6
+        with:
+          ref: feature/nuit-apres-orleans-prototype
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Apply guarded V3 rewrite
+        run: python tools/apply_nuit_v3.py
+      - name: Commit canonical program if changed
+        shell: bash
+        run: |
+          if git diff --quiet -- series/nuit-apres-orleans/audio/nuit-apres-orleans-ep01.json; then
+            echo "No migration change required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add series/nuit-apres-orleans/audio/nuit-apres-orleans-ep01.json
+          git commit -m "Direct voices and dialogue cadence for immersive V3"
+          git push origin HEAD:feature/nuit-apres-orleans-prototype
