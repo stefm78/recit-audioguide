@@ -8,7 +8,8 @@
       const a = document.createElement('a');
       a.className = 'catalog-card';
       a.href = `./s/${encodeURIComponent(item.slug)}/`;
-      a.innerHTML = `<span class="mode">${label(item.type)}</span><strong>${esc(item.title)}</strong><span>${esc(item.subtitle || '')}</span><small>${item.episode_count} épisode${item.episode_count > 1 ? 's' : ''}</small>`;
+      const availability = item.state==='blocked' ? ' · indisponible' : item.state==='degraded' ? ' · partiel' : '';
+      a.innerHTML = `<span class="mode">${label(item.type)}</span><strong>${esc(item.title)}</strong><span>${esc(item.subtitle || '')}</span><small>${item.episode_count} épisode${item.episode_count > 1 ? 's' : ''}${availability}</small>`;
       return a;
     }));
   } catch (e) {
