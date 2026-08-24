@@ -11,7 +11,16 @@
   <main id="app" class="series-shell" aria-live="polite"><p class="loading">Chargement…</p></main>
   <div id="player" class="player" hidden>
     <div class="player-text"><strong id="player-title"></strong><span id="player-subtitle"></span></div>
-    <button id="player-toggle" class="round-button" type="button" aria-label="Lecture ou pause">▶</button>
+    <div class="player-controls" role="group" aria-label="Contrôles audio">
+      <button id="player-back" class="seek-button" type="button" aria-label="Reculer de 15 secondes">−15 s</button>
+      <button id="player-toggle" class="round-button" type="button" aria-label="Lecture ou pause">▶</button>
+      <button id="player-forward" class="seek-button" type="button" aria-label="Avancer de 15 secondes">+15 s</button>
+    </div>
+    <div class="player-progress">
+      <span id="player-current">0:00</span>
+      <input id="player-seek" class="seek-range" type="range" min="0" max="0" value="0" step="1" aria-label="Position de lecture">
+      <span id="player-duration">0:00</span>
+    </div>
     <audio id="player-audio" preload="metadata"></audio>
   </div>
   <script>window.RECIT_SERIES_SLUG="__SERIES_SLUG__";</script>
