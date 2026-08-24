@@ -4,9 +4,15 @@
   const player = document.getElementById('player');
   const audio = document.getElementById('player-audio');
   const toggle = document.getElementById('player-toggle');
+  const back = document.getElementById('player-back');
+  const forward = document.getElementById('player-forward');
+  const seek = document.getElementById('player-seek');
+  const currentTimeLabel = document.getElementById('player-current');
+  const durationLabel = document.getElementById('player-duration');
   const playerTitle = document.getElementById('player-title');
   const playerSubtitle = document.getElementById('player-subtitle');
   let series, currentEpisode;
+  let lastSavedSecond = -5;
 
   boot();
 
@@ -66,32 +72,94 @@
     if(transcript){ const e=series.episodes.find(x=>x.id===transcript.dataset.transcript); if(e) toggleTranscript(e, transcript); }
   }
 
-  function playEpisode(e){ if(!isPlayable(e)) return; playUrl(e); currentEpisode=e; saveProgress(); }
+  function playEpisode(e){ if(!isPlayable(e)) return; playUrl(e); saveProgress(); }
+
   function playUrl(e){
     if(!e.audio_url) return;
     audio.src=e.audio_url;
     player.hidden=false;
     playerTitle.textContent=e.title;
     playerSubtitle.textContent=e.stop||series.title;
-    audio.play().catch(()=>{});
-    toggle.textContent='❚❚';
     currentEpisode=e;
+    lastSavedSecond=-5;
+    resetPlayerTime();
+    audio.play().catch(()=>{});
     if('mediaSession' in navigator){
       navigator.mediaSession.metadata = new MediaMetadata({title:e.title,artist:'Récit audioguide',album:series.title});
       navigator.mediaSession.setActionHandler('play',()=>audio.play());
       navigator.mediaSession.setActionHandler('pause',()=>audio.pause());
-      try{navigator.mediaSession.setActionHandler('seekbackward',()=>{audio.currentTime=Math.max(0,audio.currentTime-15)});navigator.mediaSession.setActionHandler('seekforward',()=>{audio.currentTime=Math.min(audio.duration||Infinity,audio.currentTime+15)});}catch(_){}
+      try{
+        navigator.mediaSession.setActionHandler('seekbackward',details=>seekBy(-(Number(details?.seekOffset)||15)));
+        navigator.mediaSession.setActionHandler('seekforward',details=>seekBy(Number(details?.seekOffset)||15));
+        navigator.mediaSession.setActionHandler('seekto',details=>{
+          if(!Number.isFinite(details?.seekTime)) return;
+          const target=clampTime(details.seekTime);
+          if(details.fastSeek && 'fastSeek' in audio) audio.fastSeek(target); else audio.currentTime=target;
+          syncPlayerTime();
+        });
+      }catch(_){}
     }
   }
 
+  function clampTime(value){
+    const duration=Number.isFinite(audio.duration) ? audio.duration : Math.max(0,Number(value)||0);
+    return Math.max(0,Math.min(duration,Number(value)||0));
+  }
+
+  function seekBy(seconds){
+    if(!Number.isFinite(audio.currentTime)) return;
+    audio.currentTime=clampTime(audio.currentTime+seconds);
+    syncPlayerTime();
+    saveProgress();
+  }
+
+  function formatTime(seconds){
+    const total=Math.max(0,Math.floor(Number(seconds)||0));
+    const hours=Math.floor(total/3600);
+    const minutes=Math.floor((total%3600)/60);
+    const secs=total%60;
+    return hours ? `${hours}:${String(minutes).padStart(2,'0')}:${String(secs).padStart(2,'0')}` : `${minutes}:${String(secs).padStart(2,'0')}`;
+  }
+
+  function resetPlayerTime(){
+    seek.disabled=true;
+    seek.min='0'; seek.max='0'; seek.value='0';
+    currentTimeLabel.textContent='0:00';
+    durationLabel.textContent='0:00';
+  }
+
+  function syncPlayerTime(){
+    const current=Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
+    const duration=Number.isFinite(audio.duration) && audio.duration>0 ? audio.duration : 0;
+    currentTimeLabel.textContent=formatTime(current);
+    durationLabel.textContent=formatTime(duration);
+    seek.disabled=!duration;
+    seek.max=String(duration||0);
+    seek.value=String(duration ? Math.min(current,duration) : 0);
+    seek.setAttribute('aria-valuetext',`${formatTime(current)} sur ${formatTime(duration)}`);
+    if('mediaSession' in navigator && duration){
+      try{navigator.mediaSession.setPositionState({duration,playbackRate:audio.playbackRate||1,position:Math.min(current,duration)});}catch(_){}
+    }
+  }
+
+  back.addEventListener('click',()=>seekBy(-15));
+  forward.addEventListener('click',()=>seekBy(15));
   toggle.addEventListener('click',()=>{ if(audio.paused) audio.play(); else audio.pause(); });
+  seek.addEventListener('input',()=>{ if(!seek.disabled){ audio.currentTime=clampTime(Number(seek.value)); syncPlayerTime(); }});
+  seek.addEventListener('change',saveProgress);
+  audio.addEventListener('loadedmetadata',syncPlayerTime);
+  audio.addEventListener('durationchange',syncPlayerTime);
   audio.addEventListener('play',()=>toggle.textContent='❚❚');
-  audio.addEventListener('pause',()=>toggle.textContent='▶');
-  audio.addEventListener('timeupdate',()=>{ if(currentEpisode && Math.floor(audio.currentTime)%5===0) saveProgress(); });
+  audio.addEventListener('pause',()=>{toggle.textContent='▶';saveProgress();});
+  audio.addEventListener('timeupdate',()=>{
+    syncPlayerTime();
+    if(currentEpisode && audio.currentTime-lastSavedSecond>=5){lastSavedSecond=audio.currentTime;saveProgress();}
+  });
   audio.addEventListener('ended',()=>{
     if(!currentEpisode)return;
-    markDone(currentEpisode.id);
     const i=series.episodes.findIndex(x=>x.id===currentEpisode.id);
+    if(i<0)return;
+    markDone(currentEpisode.id);
     const next=series.episodes.slice(i+1).find(isPlayable);
     if(next) playerSubtitle.textContent=`Terminé · suite : ${next.title}`;
   });
@@ -110,12 +178,12 @@
   }
 
   function saveProgress(){
-    if(!series||!currentEpisode)return;
+    if(!series||!currentEpisode||!series.episodes.some(e=>e.id===currentEpisode.id))return;
     localStorage.setItem(`recit:${series.slug}`,JSON.stringify({episode:currentEpisode.id,time:audio.currentTime||0,updated:Date.now()}));
   }
   function markDone(id){localStorage.setItem(`recit:done:${series.slug}:${id}`,'1');}
   function restore(s){
-    try{const p=JSON.parse(localStorage.getItem(`recit:${s.slug}`)||'null');if(!p)return;const e=s.episodes.find(x=>x.id===p.episode);if(!isPlayable(e))return;const b=document.createElement('button');b.className='resume';b.textContent=`Continuer · ${e.title}`;b.addEventListener('click',()=>{playEpisode(e);audio.addEventListener('loadedmetadata',()=>{audio.currentTime=Math.min(p.time||0,audio.duration||p.time||0)},{once:true});});root.querySelector('.series-hero').appendChild(b);}catch(_){}
+    try{const p=JSON.parse(localStorage.getItem(`recit:${s.slug}`)||'null');if(!p)return;const e=s.episodes.find(x=>x.id===p.episode);if(!isPlayable(e))return;const b=document.createElement('button');b.className='resume';b.textContent=`Continuer · ${e.title}`;b.addEventListener('click',()=>{playEpisode(e);audio.addEventListener('loadedmetadata',()=>{audio.currentTime=Math.min(p.time||0,audio.duration||p.time||0);syncPlayerTime();},{once:true});});root.querySelector('.series-hero').appendChild(b);}catch(_){}
   }
 
   function modeLabel(t){return ({story:'Histoire',visit:'Visite',route:'Route'})[t]||'Récit';}
