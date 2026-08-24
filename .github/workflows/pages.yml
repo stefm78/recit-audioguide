@@ -36,11 +36,11 @@ jobs:
     needs: sound-direction
     permissions:
       contents: write
-    uses: stefm78/audio-engine/.github/workflows/hydrate-sounds.yml@3392d4f22f0a9b054a05b5c05a7856985c0ab030
+    uses: stefm78/audio-engine/.github/workflows/hydrate-sounds.yml@e3657805b0ab1c7a21e060379c42bb5b7f7a5497
     with:
       requirements_path: "series/orleans-cathedral/sound-requirements.json"
       artifact_name: "recit-sound-library"
-      engine_ref: "3392d4f22f0a9b054a05b5c05a7856985c0ab030"
+      engine_ref: "e3657805b0ab1c7a21e060379c42bb5b7f7a5497"
       release_tag: "sound-library"
       publish_release: true
       fail_on_unresolved: false
@@ -59,7 +59,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: stefm78/audio-engine
-          ref: 3392d4f22f0a9b054a05b5c05a7856985c0ab030
+          ref: e3657805b0ab1c7a21e060379c42bb5b7f7a5497
           path: .audio-engine
       - uses: actions/setup-python@v6
         with:
@@ -147,7 +147,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: stefm78/audio-engine
-          ref: 3392d4f22f0a9b054a05b5c05a7856985c0ab030
+          ref: e3657805b0ab1c7a21e060379c42bb5b7f7a5497
           path: .audio-engine
       - uses: actions/setup-python@v6
         with:
