@@ -66,7 +66,7 @@
         "sound": "historic-horse-hooves",
         "role": "bridge",
         "after_segment": 65,
-        "foreground_ms": 900,
+        "foreground_ms": 1000,
         "carry_through_segments": 1,
         "tail_ms": 0,
         "gain_db": -31,
