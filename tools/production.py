@@ -3,6 +3,7 @@ import argparse
 import copy
 import glob
 import json
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -25,6 +26,15 @@ def write_json(path: Path, data):
 def run_json(command):
     completed = subprocess.run(command, check=True, text=True, stdout=subprocess.PIPE)
     return json.loads(completed.stdout)
+
+
+def source_program_id(source: Path):
+    try:
+        data = load_json(source)
+    except (OSError, json.JSONDecodeError):
+        return None
+    value = data.get("id")
+    return value if isinstance(value, str) and value else None
 
 
 def production_specs():
@@ -200,6 +210,7 @@ def produce_managed(spec, output_root: Path, sounds_path=None):
     return {
         "source": str(spec["program_path"].relative_to(ROOT)),
         "id": source_program["id"],
+        "state": "ready",
         "cache_hit": bool(manifest.get("cache_hit")),
         "production": "scene-sequences",
         "render_mode": "single-master",
@@ -215,7 +226,12 @@ def render_unmanaged(source: Path, output_root: Path, sounds_path=None):
     if sounds_path:
         command.extend(["--sounds", str(sounds_path)])
     manifest = run_json(command)
-    return {"source": str(source.relative_to(ROOT)), "id": manifest["id"], "cache_hit": bool(manifest.get("cache_hit"))}
+    return {
+        "source": str(source.relative_to(ROOT)),
+        "id": manifest["id"],
+        "state": "ready",
+        "cache_hit": bool(manifest.get("cache_hit")),
+    }
 
 
 def validate_all():
@@ -256,13 +272,16 @@ def run_all(source_glob, output_root, sounds_path=None):
     completed, failures = [], []
     for source in sources:
         relative = str(source.relative_to(ROOT))
+        program_id = source_program_id(source)
         try:
             if relative in managed:
                 completed.append(produce_managed(managed[relative], output_root, sounds_path=sounds_path))
             else:
                 completed.append(render_unmanaged(source, output_root, sounds_path=sounds_path))
         except Exception as exc:
-            failures.append({"source": relative, "error": str(exc)})
+            if program_id:
+                shutil.rmtree(output_root / program_id, ignore_errors=True)
+            failures.append({"source": relative, "id": program_id, "state": "failed", "error": str(exc)})
 
     status = "success"
     if not sources:
@@ -285,7 +304,9 @@ def run_all(source_glob, output_root, sounds_path=None):
     }
     write_json(output_root / "render-report.json", report)
     print(json.dumps(report, ensure_ascii=False, indent=2))
-    return 0 if not failures else 2
+    # Partial production is intentionally degradable: publish what succeeded.
+    # Empty or wholly failed production remains fatal because there is no usable catalogue.
+    return 0 if completed else 2
 
 
 def main(argv=None):
