@@ -1,11 +1,22 @@
+import importlib.util
 import json
 import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
 
-from site import build as site_build
 from tools import production
+
+
+def load_site_builder():
+    path = production.ROOT / "site" / "build.py"
+    spec = importlib.util.spec_from_file_location("recit_site_build", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+site_build = load_site_builder()
 
 
 class ProductionStateTests(unittest.TestCase):
