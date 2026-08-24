@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -114,6 +115,24 @@ class PublicationStateTests(unittest.TestCase):
         with mock.patch.object(site_build, "publish_generated_audio", return_value=False):
             state = site_build.classify_episode(episode, "story", "test", set())
         self.assertEqual(state, "ready")
+
+
+class PlayerUITests(unittest.TestCase):
+    def test_player_markup_has_simple_controls(self):
+        html = (production.ROOT / "web" / "series.html").read_text(encoding="utf-8")
+        for element_id in ("player-back", "player-toggle", "player-forward", "player-seek", "player-current", "player-duration"):
+            self.assertIn(f'id="{element_id}"', html)
+        self.assertIn("Reculer de 15 secondes", html)
+        self.assertIn("Avancer de 15 secondes", html)
+
+    def test_player_javascript_is_valid_and_keeps_media_session_seek(self):
+        app = production.ROOT / "web" / "app.js"
+        subprocess.run(["node", "--check", str(app)], check=True, capture_output=True, text=True)
+        source = app.read_text(encoding="utf-8")
+        self.assertIn("seekBy(-15)", source)
+        self.assertIn("seekBy(15)", source)
+        self.assertIn("seekbackward", source)
+        self.assertIn("seekforward", source)
 
 
 if __name__ == "__main__":
