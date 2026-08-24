@@ -22,6 +22,16 @@
       "min_score": 70
     },
     {
+      "id": "river-water-flow",
+      "type": "event",
+      "query": "Waves.ogg",
+      "required_tags": [],
+      "preferred_tags": ["water", "waves", "natural"],
+      "providers": ["wikimedia-commons"],
+      "limit": 8,
+      "min_score": 70
+    },
+    {
       "id": "gregorian-chant",
       "type": "event",
       "query": "Veni.creator.spiritus",
