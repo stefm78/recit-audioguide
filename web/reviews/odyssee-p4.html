@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Écoute humaine — L’Odyssée P4</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1117;--panel:#151c24;--line:#2b3541;--text:#f3f6f8;--muted:#aab4bf;--accent:#7dd3fc;--good:#86efac}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{width:min(900px,calc(100% - 28px));margin:auto;padding:28px 0 64px}h1{font-size:clamp(1.8rem,5vw,3.2rem);line-height:1.05;margin:.2em 0}
+.kicker{color:var(--accent);font-weight:750;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem}.lead,.hint{color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0}.evidence{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:.88rem}audio{width:100%;margin-top:10px}
+fieldset{border:0;padding:0;margin:22px 0}.question{border-top:1px solid var(--line);padding-top:18px}.question legend{font-weight:750;margin-bottom:8px}
+.scale{display:grid;grid-template-columns:repeat(5,minmax(48px,1fr));gap:8px;margin-top:10px}.choice,.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}
+.scale label,.choice label,.checks label{display:flex;gap:7px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:9px;background:#111821}
+textarea{width:100%;min-height:100px;background:#0f151c;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}
+#summary{min-height:330px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem}.summary-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.copy{border:1px solid var(--line);background:#1d2732;color:var(--text);border-radius:10px;padding:9px 12px;cursor:pointer}.status{color:var(--good);font-weight:700}
+ol{padding-left:1.3rem}code{overflow-wrap:anywhere}@media(max-width:620px){.scale{grid-template-columns:repeat(5,1fr)}.scale label{display:block;text-align:center;padding:9px 3px}.summary-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head><body><main>
+<div class="kicker">Gate humain · Odyssée P4</div>
+<h1>La Sirène attire-t-elle sans cliché&nbsp;?</h1>
+<p class="lead">Écoutez comme Ulysse : la voix ne chante pas, n’est pas réverbérée, n’est pas « magique ». Elle doit retenir l’attention parce qu’elle semble connaître exactement qui il est et ce qu’il désire.</p>
+<section class="card"><h2>Écoute</h2>
+<audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p4-review-v1/p4.mp3"></audio>
+<div class="evidence"><span class="pill">Machine PASS</span><span class="pill">Dry</span><span class="pill">0 chant</span><span class="pill">0 chœur</span><span class="pill">0 reverb</span><span class="pill">0 musique</span></div>
+<p class="hint">Candidate <code>a45e8375dcc54109992dc99b767c9d5988c19b53</code> · release <code>odyssee-p4-review-v1</code> · audio SHA-256 <code>6ed18864c501d2450c20176f6309e7fc9c5b65485ebb33d17c69a65a7c2b445f</code>.</p>
+</section>
+<section class="card"><h2>Ce qu’il faut écouter</h2><ol>
+<li>La voix donne-t-elle envie de continuer à écouter, même sans effet sonore ?</li>
+<li>Comprend-on immédiatement chaque mot ?</li>
+<li>« Tu n’as pas besoin de rentrer pour être connu » touche-t-il précisément la faiblesse d’Ulysse ?</li>
+<li>Évite-t-on le cliché de la séductrice, du fantôme ou de la voix mystique ?</li>
+<li>Ulysse reste-t-il le même personnage et Euryloque ramène-t-il bien au bateau réel ?</li>
+<li>Le cœur de la scène fonctionne-t-il déjà sec ?</li>
+</ol></section>
+<form id="review" class="card"><h2>Évaluation</h2>
+<fieldset class="question"><legend>1. Pouvoir d’attraction / envie de continuer à écouter</legend><p class="hint">1 = indifférent · 3 = plausible · 5 = difficile d’ignorer.</p><div class="scale">
+<label><input type="radio" name="attraction" value="1">1</label><label><input type="radio" name="attraction" value="2">2</label><label><input type="radio" name="attraction" value="3">3</label><label><input type="radio" name="attraction" value="4">4</label><label><input type="radio" name="attraction" value="5">5</label></div></fieldset>
+<fieldset class="question"><legend>2. Français / intelligibilité Sirène</legend><div class="choice">
+<label><input type="radio" name="french" value="PASS">PASS</label><label><input type="radio" name="french" value="BORDERLINE">BORDERLINE</label><label><input type="radio" name="french" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="question"><legend>3. Cliché séduction / mystique</legend><div class="choice">
+<label><input type="radio" name="cliche" value="AUCUN">Aucun</label><label><input type="radio" name="cliche" value="LÉGER">Léger</label><label><input type="radio" name="cliche" value="FORT">Fort</label></div></fieldset>
+<fieldset class="question"><legend>4. La proposition vise juste pour Ulysse</legend><div class="choice">
+<label><input type="radio" name="personal" value="PASS">PASS</label><label><input type="radio" name="personal" value="BORDERLINE">BORDERLINE</label><label><input type="radio" name="personal" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="question"><legend>5. Identité Ulysse / ancrage Euryloque</legend><div class="choice">
+<label><input type="radio" name="anchors" value="PASS">PASS</label><label><input type="radio" name="anchors" value="BORDERLINE">BORDERLINE</label><label><input type="radio" name="anchors" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="question"><legend>6. La scène fonctionne sèche</legend><div class="choice">
+<label><input type="radio" name="dry" value="PASS">PASS</label><label><input type="radio" name="dry" value="FAIL">FAIL — besoin d’un artifice pour créer l’attraction</label></div></fieldset>
+<fieldset class="question"><legend>Défauts entendus</legend><div class="checks">
+<label><input type="checkbox" name="defect" value="Sirène pas assez attirante">Sirène pas assez attirante</label>
+<label><input type="checkbox" name="defect" value="Sirène trop séductrice cliché">Sirène trop séductrice cliché</label>
+<label><input type="checkbox" name="defect" value="Sirène trop mystique / fantôme">Sirène trop mystique / fantôme</label>
+<label><input type="checkbox" name="defect" value="Sirène trop narratrice">Sirène trop narratrice</label>
+<label><input type="checkbox" name="defect" value="français Sirène dégradé">Français Sirène dégradé</label>
+<label><input type="checkbox" name="defect" value="proposition pas assez personnelle">Proposition pas assez personnelle</label>
+<label><input type="checkbox" name="defect" value="Ulysse pas assez conteur">Ulysse pas assez conteur</label>
+<label><input type="checkbox" name="defect" value="autre">Autre</label></div></fieldset>
+<fieldset class="question"><legend>Décision</legend><div class="choice">
+<label><input type="radio" name="decision" value="PASS">PASS — autoriser P5</label>
+<label><input type="radio" name="decision" value="FAIL">FAIL — corriger P4</label></div></fieldset>
+<label for="notes"><strong>Notes libres</strong></label><textarea id="notes" name="notes"></textarea>
+</form>
+<section class="card"><div class="summary-head"><div><h2 style="margin:0">Bilan à copier</h2><small>Mis à jour automatiquement. Aucun fichier à exporter.</small></div><button id="copy" class="copy" type="button">Copier le bilan</button></div>
+<textarea id="summary" readonly></textarea><p id="copyStatus" class="status" role="status" aria-live="polite"></p></section>
+</main>
+<script>
+(function(){
+var form=document.getElementById('review'),summary=document.getElementById('summary'),key='odyssee-p4-review-v1';
+function sel(n){var e=form.querySelector('input[name="'+n+'"]:checked');return e?e.value:'NON NOTÉ'}
+function state(){return{attraction:sel('attraction'),french:sel('french'),cliche:sel('cliche'),personal:sel('personal'),anchors:sel('anchors'),dry:sel('dry'),defects:Array.from(form.querySelectorAll('input[name="defect"]:checked')).map(x=>x.value),decision:sel('decision'),notes:form.notes.value.trim()}}
+function render(){var s=state();summary.value='HUMAN REVIEW — ODYSSÉE P4 SIRÈNES\nCandidate: a45e8375dcc54109992dc99b767c9d5988c19b53\nReview release: odyssee-p4-review-v1\nAudio SHA-256: 6ed18864c501d2450c20176f6309e7fc9c5b65485ebb33d17c69a65a7c2b445f\n\nSCORES\n- Attraction / envie d’écouter: '+s.attraction+'/5\n- Français Sirène: '+s.french+'\n- Cliché séduction / mystique: '+s.cliche+'\n- Proposition personnelle pour Ulysse: '+s.personal+'\n- Identité Ulysse / ancrage Euryloque: '+s.anchors+'\n- Fonctionne sec: '+s.dry+'\n\nDÉFAUTS ENTENDUS\n'+(s.defects.length?s.defects.map(x=>'- '+x).join('\n'):'- aucun signalé')+'\n\nDÉCISION\n'+s.decision+'\n\nNOTES\n'+(s.notes||'(aucune)');localStorage.setItem(key,JSON.stringify(s))}
+function restore(){try{var s=JSON.parse(localStorage.getItem(key)||'null');if(!s)return;['attraction','french','cliche','personal','anchors','dry','decision'].forEach(n=>{var e=Array.from(form.querySelectorAll('input[name="'+n+'"]')).find(x=>x.value===s[n]);if(e)e.checked=true});(s.defects||[]).forEach(v=>{var e=Array.from(form.querySelectorAll('input[name="defect"]')).find(x=>x.value===v);if(e)e.checked=true});form.notes.value=s.notes||''}catch(_){}}
+form.addEventListener('input',render);form.addEventListener('change',render);document.getElementById('copy').addEventListener('click',async function(){try{await navigator.clipboard.writeText(summary.value)}catch(_){summary.select();document.execCommand('copy')}document.getElementById('copyStatus').textContent='Bilan copié.'});restore();render();
+})();
+</script></body></html>
