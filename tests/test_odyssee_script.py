@@ -14,7 +14,7 @@ class OdysseeScriptTest(unittest.TestCase):
     def test_full_script_contract(self):
         report = MODULE.validate()
         self.assertEqual(report["status"], "PASS", report)
-        self.assertEqual(report["total_spoken_words"], 11761)
+        self.assertEqual(report["total_spoken_words"], 11788)
         sequences = []
         for block in report["blocks"].values():
             sequences.extend(block["sequences"])
