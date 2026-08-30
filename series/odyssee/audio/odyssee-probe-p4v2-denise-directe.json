@@ -1,0 +1,73 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-probe-p4v2-denise-directe",
+  "title": "L’Odyssée — P4 v2 Sirène denise-directe",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "actors": {
+    "ulysse": {
+      "placement": "center"
+    },
+    "sirene": {
+      "placement": "center"
+    }
+  },
+  "segments": [
+    {
+      "scene": "P4 v2 — contexte",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 180,
+      "text": "Puis la mer elle-même a semblé devenir moins importante.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P4 v2 — candidate",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 220,
+      "text": "Ulysse d’Ithaque. Nous savons d’où tu viens. Nous savons ce que tu as fait devant Troie.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v2 — candidate",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 240,
+      "text": "Viens. Tu n’as pas besoin de rentrer pour être connu. Ton nom est déjà arrivé plus loin que toi.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v2 — candidate",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 240,
+      "text": "Ils t’oublieront chez toi. Ici, nous savons tout. Ici, rien de ce que tu as fait ne disparaît.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v2 — réaction",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 200,
+      "text": "J’ai tiré sur les cordes.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    }
+  ]
+}
