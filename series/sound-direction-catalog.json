@@ -93,6 +93,17 @@
         "continuous tension beds",
         "false documentary realism"
       ]
+    },
+    "odyssee": {
+      "mode": "audiobook",
+      "default_density": "scene-rich",
+      "goal": "Faire varier immensité, foyer, merveilleux et silence sans bruit de mer continu ni musique épique par défaut ; préserver la voix et l’identité des personnages comme fil principal.",
+      "avoid": [
+        "continuous generic sea bed",
+        "permanent epic music",
+        "monster DSP that damages French intelligibility",
+        "sound used to compensate for weak casting"
+      ]
     }
   },
   "rollout_rule": "Direct episode by episode. density=none is valid. Only modify audio programs when the direction sidecar identifies a concrete narrative gain."
