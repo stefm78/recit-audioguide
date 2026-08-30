@@ -146,9 +146,10 @@ P3–P6 seulement après identité centrale stabilisée **et après `NARRATIVE_F
 Statut Odyssée au 2026-08-30 :
 
 - P1 : PASS humain promu ;
-- P2 : artefact machine PASS, gate humain perceptuel autorisé ;
-- P3–P6 : **HOLD_NARRATIVE_FREEZE** ;
-- master long : **HOLD_NARRATIVE_FREEZE**.
+- P2 : artefact machine PASS, **HUMAN_REQUIRED** ;
+- NARRATIVE_FREEZE : PASS après N3, effectif à la fusion de ART-WP-002 ;
+- P3–P6 : **HOLD_P2_HUMAN** ;
+- master long : **HOLD_CRITICAL_PROBES**.
 
 ## Human gate policy
 

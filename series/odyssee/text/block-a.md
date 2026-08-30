@@ -706,6 +706,8 @@ ULYSSE — Ce n’est pas une identité.
 
 ALCINOOS — C’est suffisant pour un repas.
 
+NARRATRICE — Une servante lui verse de l’eau sur les mains ; le vin est mêlé, puis quelques gouttes sont offertes aux dieux.
+
 NARRATRICE — Ulysse baisse les yeux vers la table.
 
 ULYSSE — J’avais presque oublié.
