@@ -19,6 +19,10 @@ SITE_PREFIXES = (
     "data/",
 )
 
+SITE_EXACT = {
+    ".github/workflows/pages.yml",
+}
+
 
 def classify(paths):
     paths = [str(path).replace("\\", "/").lstrip("./") for path in paths if str(path).strip()]
@@ -40,7 +44,9 @@ def classify(paths):
             audio_reasons.append(path)
 
         build = audio
-        if path.startswith(SITE_PREFIXES):
+        if path in SITE_EXACT:
+            build = True
+        elif path.startswith(SITE_PREFIXES):
             build = True
         elif path.startswith("series/"):
             parts = path.split("/")
