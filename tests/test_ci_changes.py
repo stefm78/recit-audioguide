@@ -13,14 +13,14 @@ class ChangeRoutingTests(unittest.TestCase):
         self.assertFalse(result["audio_needed"])
         self.assertFalse(result["build_needed"])
 
-    def test_workflow_router_change_does_not_force_audio(self):
+    def test_pages_workflow_change_rebuilds_without_audio(self):
         result = classify([
             ".github/workflows/pages.yml",
             "tools/ci_changes.py",
             "tests/test_ci_changes.py",
         ])
         self.assertFalse(result["audio_needed"])
-        self.assertFalse(result["build_needed"])
+        self.assertTrue(result["build_needed"])
 
     def test_program_change_requires_audio_and_build(self):
         result = classify(["series/orleans-cathedral/audio/orleans-cathedral-ep01.json"])
@@ -44,6 +44,13 @@ class ChangeRoutingTests(unittest.TestCase):
         result = classify(["web/app.js", "series/orleans-cathedral/series.json"])
         self.assertFalse(result["audio_needed"])
         self.assertTrue(result["build_needed"])
+    def test_deploy_condition_survives_skipped_audio_chain(self):
+        workflow = open(".github/workflows/pages.yml", encoding="utf-8").read()
+        self.assertIn(
+            "if: always() && github.event_name != 'pull_request' && "
+            "needs.changes.outputs.build_needed == 'true' && needs.build.result == 'success'",
+            workflow,
+        )
 
 
 if __name__ == "__main__":
