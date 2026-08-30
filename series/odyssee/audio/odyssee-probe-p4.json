@@ -1,0 +1,131 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-probe-p4-sirenes",
+  "title": "L’Odyssée — P4 Sirènes",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "actors": {
+    "ulysse": {
+      "placement": "center"
+    },
+    "euryloque": {
+      "placement": "center"
+    },
+    "sirene": {
+      "placement": "center"
+    }
+  },
+  "segments": [
+    {
+      "scene": "P4 — première voix",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 180,
+      "text": "Puis la mer elle-même a semblé devenir moins importante.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P4 — première voix",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 240,
+      "text": "Ulysse.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-4%",
+      "pitch": "+0Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 — reconnaissance",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 140,
+      "text": "Elles connaissaient mon nom.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P4 — reconnaissance",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 180,
+      "text": "Ulysse d’Ithaque. Nous savons d’où tu viens. Nous savons ce que tu as fait devant Troie.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-4%",
+      "pitch": "+0Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 — bateau réel",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 160,
+      "text": "J’ai regardé mes compagnons. Ils ramaient. Ils n’entendaient rien.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P4 — proposition",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 260,
+      "text": "Viens. Tu n’as pas besoin de rentrer pour être connu. Ton nom est déjà arrivé plus loin que toi.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-4%",
+      "pitch": "+0Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 — cordes",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 140,
+      "text": "J’ai tiré sur les cordes.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P4 — cordes",
+      "character_id": "euryloque",
+      "speaker": "Euryloque",
+      "pause_after_ms": 170,
+      "text": "Tu as crié beaucoup de choses.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "-14Hz",
+      "volume": "+8%"
+    },
+    {
+      "scene": "P4 — piège",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 230,
+      "text": "Ils t’oublieront chez toi. Ici, nous savons tout. Ici, rien de ce que tu as fait ne disparaît.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-4%",
+      "pitch": "+0Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 — sens du piège",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 250,
+      "text": "Ce n’était pas seulement une belle voix. C’était une voix qui me proposait exactement ce que j’avais voulu quand j’avais crié mon nom au Cyclope.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    }
+  ]
+}
