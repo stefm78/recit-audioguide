@@ -1,0 +1,296 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-probe-p5-underworld",
+  "title": "L’Odyssée — H1 P5 Enfers",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "actors": {
+    "ulysse": {
+      "placement": "center"
+    },
+    "anticlee": {
+      "placement": "center"
+    },
+    "narratrice": {
+      "placement": "center"
+    }
+  },
+  "segments": [
+    {
+      "scene": "P5 — apparition",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 260,
+      "text": "Puis j’ai vu ma mère.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — apparition",
+      "character_id": "anticlee",
+      "speaker": "Anticlée",
+      "pause_after_ms": 220,
+      "text": "Ulysse.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-6Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P5 — apparition",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 170,
+      "text": "Anticlée.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — apparition",
+      "character_id": "anticlee",
+      "speaker": "Anticlée",
+      "pause_after_ms": 240,
+      "text": "Mon fils.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-6Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P5 — temps perdu",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 150,
+      "text": "Je ne savais pas.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — temps perdu",
+      "character_id": "anticlee",
+      "speaker": "Anticlée",
+      "pause_after_ms": 150,
+      "text": "Non.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-6Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P5 — temps perdu",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 150,
+      "text": "Quand ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — temps perdu",
+      "character_id": "anticlee",
+      "speaker": "Anticlée",
+      "pause_after_ms": 210,
+      "text": "Cela change quelque chose ?",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-6Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P5 — temps perdu",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 150,
+      "text": "Pour moi, oui.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — temps perdu",
+      "character_id": "anticlee",
+      "speaker": "Anticlée",
+      "pause_after_ms": 240,
+      "text": "Alors il y a longtemps.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-6Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P5 — famille",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 120,
+      "text": "Pénélope ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — famille",
+      "character_id": "anticlee",
+      "speaker": "Anticlée",
+      "pause_after_ms": 160,
+      "text": "Elle tient.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-6Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P5 — famille",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 120,
+      "text": "Télémaque ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — famille",
+      "character_id": "anticlee",
+      "speaker": "Anticlée",
+      "pause_after_ms": 260,
+      "text": "Il n’est plus l’enfant que tu as laissé.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-6Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P5 — contact impossible",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 180,
+      "text": "J’ai voulu la toucher.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — contact impossible",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 230,
+      "text": "Dans la salle des Phéaciens, ses mains se ferment l’une contre l’autre.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "P5 — contact impossible",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 260,
+      "text": "Mes bras ont traversé son absence.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — contact impossible",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 150,
+      "text": "J’ai essayé encore.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — contact impossible",
+      "character_id": "anticlee",
+      "speaker": "Anticlée",
+      "pause_after_ms": 180,
+      "text": "Ulysse.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-6Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P5 — contact impossible",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 140,
+      "text": "Encore une fois.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — contact impossible",
+      "character_id": "anticlee",
+      "speaker": "Anticlée",
+      "pause_after_ms": 220,
+      "text": "Arrête.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-6Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P5 — contact impossible",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 120,
+      "text": "Je voulais seulement—",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P5 — contact impossible",
+      "character_id": "anticlee",
+      "speaker": "Anticlée",
+      "pause_after_ms": 320,
+      "text": "Je sais.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-6Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P5 — retour au récit",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 260,
+      "text": "Le conteur qui avait souri en racontant le nom de Personne ne sourit plus.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "P5 — retour au récit",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 250,
+      "text": "Pour la première fois, je ne voulais plus connaître la prochaine aventure. Je voulais la dernière.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    }
+  ]
+}
