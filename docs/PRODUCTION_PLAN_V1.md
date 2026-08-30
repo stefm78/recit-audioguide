@@ -50,6 +50,15 @@ python tools/production_plan.py validate
 
 This validation is offline, read-only and does not call Audio Engine, TTS or any network service.
 
+## Long-form fit audit
+
+The exact read-only audit of open PR #42, `La nuit après Orléans`, is preserved in:
+
+- `docs/evidence/nuit-apres-orleans-production-plan-fit-2026-08-30.md`
+- `docs/evidence/nuit-apres-orleans-production-plan-fit-2026-08-30.json`
+
+It confirms that `program-ref` preserves a 150-segment direct v6 Program and its acting variation, while legacy `scene-sequences` would be lossy.
+
 ## Compiler decision
 
 ```text

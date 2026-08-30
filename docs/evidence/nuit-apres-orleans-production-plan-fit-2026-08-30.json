@@ -1,0 +1,356 @@
+{
+  "schema_version": 1,
+  "audit": "production-plan-fit",
+  "product_fit": "audiobook",
+  "source": {
+    "pull_request": 42,
+    "head": "203268827d5c5e7d7312545f465b653c5bd31690",
+    "state": "open-human-gate",
+    "program": {
+      "path": "series/nuit-apres-orleans/audio/nuit-apres-orleans-ep01.json",
+      "git_blob_sha1": "a966f1e6572d8ed7897181ce7c404d3cf10d6a34"
+    },
+    "sound_direction": {
+      "path": "series/nuit-apres-orleans/direction/nuit-apres-orleans-ep01.direction.json",
+      "git_blob_sha1": "a51f7799bd5be6ac44913aa19ab0b1dae5f7470d"
+    },
+    "series": {
+      "path": "series/nuit-apres-orleans/series.json",
+      "git_blob_sha1": "6dff9bfe13ca77adc3370ba42aed73591d0bcecf"
+    }
+  },
+  "observed": {
+    "program_schema_version": 6,
+    "segments": 150,
+    "scenes": [
+      {
+        "id": "prologue",
+        "label": "Prologue — sous la table",
+        "segment_range": [
+          1,
+          8
+        ]
+      },
+      {
+        "id": "orleans-respire",
+        "label": "1 — Orléans respire",
+        "segment_range": [
+          9,
+          19
+        ]
+      },
+      {
+        "id": "quai",
+        "label": "2 — Le quai",
+        "segment_range": [
+          20,
+          36
+        ]
+      },
+      {
+        "id": "paquet",
+        "label": "3 — Le paquet",
+        "segment_range": [
+          37,
+          52
+        ]
+      },
+      {
+        "id": "ferme-parole",
+        "label": "4 — Ce qui ferme une parole",
+        "segment_range": [
+          53,
+          61
+        ]
+      },
+      {
+        "id": "partir",
+        "label": "5 — Partir",
+        "segment_range": [
+          62,
+          72
+        ]
+      },
+      {
+        "id": "ville-retrecit",
+        "label": "6 — La ville rétrécit",
+        "segment_range": [
+          73,
+          93
+        ]
+      },
+      {
+        "id": "premiere-halte",
+        "label": "7 — La première halte",
+        "segment_range": [
+          94,
+          111
+        ]
+      },
+      {
+        "id": "phrase-de-trop",
+        "label": "8 — Une phrase de trop",
+        "segment_range": [
+          112,
+          150
+        ]
+      }
+    ],
+    "roles": {
+      "narrateur": {
+        "segments": 36,
+        "voice_variants": 1
+      },
+      "martin": {
+        "segments": 50,
+        "voice_variants": 24
+      },
+      "femme": {
+        "segments": 6,
+        "voice_variants": 1
+      },
+      "etienne": {
+        "segments": 18,
+        "voice_variants": 1
+      },
+      "agnes": {
+        "segments": 31,
+        "voice_variants": 16
+      },
+      "homme": {
+        "segments": 9,
+        "voice_variants": 1
+      }
+    },
+    "sound_direction_beats": 13,
+    "sound_events": 7
+  },
+  "proposed_production_plan": {
+    "production_plan_version": 1,
+    "product": "audiobook",
+    "id": "nuit-apres-orleans-ep01",
+    "title": "La nuit après Orléans",
+    "language": "fr-FR",
+    "objective": "Faire basculer l’auditeur d’une ville qui vient de survivre vers l’espace incertain de la Loire, puis montrer comment une phrase de trop devient une rumeur autonome.",
+    "content_binding": {
+      "mode": "program-ref",
+      "program": "series/nuit-apres-orleans/audio/nuit-apres-orleans-ep01.json",
+      "git_blob_sha1": "a966f1e6572d8ed7897181ce7c404d3cf10d6a34",
+      "content_authority": "program"
+    },
+    "casting": {
+      "narrateur": {
+        "continuity_key": "nuit-apres-orleans-narrator",
+        "program_selector": {
+          "character_id": "narrateur"
+        }
+      },
+      "martin": {
+        "continuity_key": "nuit-apres-orleans-martin",
+        "program_selector": {
+          "character_id": "martin"
+        }
+      },
+      "agnes": {
+        "continuity_key": "nuit-apres-orleans-agnes",
+        "program_selector": {
+          "character_id": "agnes"
+        }
+      },
+      "etienne": {
+        "continuity_key": "nuit-apres-orleans-etienne",
+        "program_selector": {
+          "character_id": "etienne"
+        }
+      },
+      "femme": {
+        "continuity_key": "nuit-apres-orleans-woman",
+        "program_selector": {
+          "character_id": "femme"
+        }
+      },
+      "homme": {
+        "continuity_key": "nuit-apres-orleans-ferryman",
+        "program_selector": {
+          "character_id": "homme"
+        }
+      }
+    },
+    "overlays": [
+      {
+        "id": "prologue",
+        "segment_range": [
+          1,
+          8
+        ],
+        "importance": "essential",
+        "performance_intent": "tactile-close-contained"
+      },
+      {
+        "id": "orleans-respire",
+        "segment_range": [
+          9,
+          19
+        ],
+        "importance": "essential",
+        "performance_intent": "factual-only-when-needed"
+      },
+      {
+        "id": "quai",
+        "segment_range": [
+          20,
+          36
+        ],
+        "importance": "essential",
+        "performance_intent": "dialogue-forward-practical"
+      },
+      {
+        "id": "paquet",
+        "segment_range": [
+          37,
+          52
+        ],
+        "importance": "essential",
+        "performance_intent": "tactile-object-reveal"
+      },
+      {
+        "id": "ferme-parole",
+        "segment_range": [
+          53,
+          61
+        ],
+        "importance": "essential",
+        "performance_intent": "trust-and-rule"
+      },
+      {
+        "id": "partir",
+        "segment_range": [
+          62,
+          72
+        ],
+        "importance": "essential",
+        "performance_intent": "departure-with-danger-retained"
+      },
+      {
+        "id": "ville-retrecit",
+        "segment_range": [
+          73,
+          93
+        ],
+        "importance": "essential",
+        "performance_intent": "city-to-river-acoustic-handoff"
+      },
+      {
+        "id": "premiere-halte",
+        "segment_range": [
+          94,
+          111
+        ],
+        "importance": "important",
+        "performance_intent": "guarded-intimacy"
+      },
+      {
+        "id": "phrase-de-trop",
+        "segment_range": [
+          112,
+          150
+        ],
+        "importance": "essential",
+        "performance_intent": "attention-seduction-to-shame"
+      }
+    ],
+    "fallback_policy": {
+      "essential_speech": "fail",
+      "supportive_sound": "omit-and-warn",
+      "optional_content": "omit-and-warn"
+    },
+    "risk_hints": [
+      "adolescent-voice-naturalness",
+      "narrator-dialogue-balance",
+      "bell-to-silence-to-river-transition",
+      "meung-halt-comprehension",
+      "final-river-fade"
+    ],
+    "product_context": {
+      "book_id": "nuit-apres-orleans",
+      "part_id": "prototype-v2",
+      "chapter_id": "continuous-prototype",
+      "scene_id": "orleans-to-first-rumour",
+      "arc_position": "opening-to-inciting-consequence",
+      "continuity_scope": "book",
+      "sound_density": "scene-rich-but-selective",
+      "narrator_pace_policy": "stable-long-form-with-dialogue-withdrawal",
+      "chapter_assembly_id": "nuit-apres-orleans-prototype-v2"
+    }
+  },
+  "artistic_authority": {
+    "policy": "preserve-separate-sound-direction",
+    "sound_direction_git_blob_sha1": "a51f7799bd5be6ac44913aa19ab0b1dae5f7470d",
+    "reason": "The 13 Sound Direction beats contain detailed handoff/exit semantics that should not be duplicated or normalized in Production Plan."
+  },
+  "legacy_scene_sequences": {
+    "applicable": false,
+    "current_rejection": "The strategy expects a clean canonical Program and rejects existing Program soundscape/ambience.",
+    "hardcoded_bridge_defaults": {
+      "foreground_ms": 3200,
+      "carry_under_speech_ms": 7000,
+      "gain_db": -16,
+      "fade_in_ms": 120,
+      "fade_out_ms": 1400
+    },
+    "authored_bridge_examples": [
+      {
+        "after_segment": 65,
+        "foreground_ms": 1000,
+        "carry_through_segments": 1,
+        "tail_ms": 0,
+        "gain_db": -31,
+        "fade_in_ms": 180,
+        "fade_out_ms": 650
+      },
+      {
+        "after_segment": 66,
+        "foreground_ms": 2300,
+        "carry_through_segments": 2,
+        "tail_ms": 900,
+        "gain_db": -29,
+        "fade_in_ms": 450,
+        "fade_out_ms": 1500
+      },
+      {
+        "after_segment": 90,
+        "foreground_ms": 4200,
+        "carry_through_segments": 2,
+        "tail_ms": 1200,
+        "gain_db": -27,
+        "fade_in_ms": 700,
+        "fade_out_ms": 1700
+      },
+      {
+        "after_segment": 149,
+        "foreground_ms": 3000,
+        "carry_through_segments": 1,
+        "tail_ms": 1200,
+        "gain_db": -29,
+        "fade_in_ms": 650,
+        "fade_out_ms": 1800
+      }
+    ],
+    "loss_if_forced": [
+      "existing v6 soundscape would first be rejected",
+      "scene events would be normalized into generic bridge behavior",
+      "foreground durations would be overwritten",
+      "carry semantics based on rendered segment durations would be overwritten",
+      "gain and fades would be overwritten",
+      "the bell-to-silence-to-river handoff would lose its authored timing"
+    ]
+  },
+  "decision": {
+    "production_plan_fit": "PASS",
+    "binding_mode": "program-ref",
+    "sound_direction": "KEEP_SEPARATE",
+    "legacy_scene_sequences": "DO_NOT_APPLY",
+    "common_compiler": "NO_COMMON_COMPILER_YET",
+    "human_gate": "UNCHANGED_PR_42_LISTENING_REQUIRED_BEFORE_PRODUCT_PROMOTION"
+  }
+}
