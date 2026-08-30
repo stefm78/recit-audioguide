@@ -280,6 +280,46 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
+
+  h1-p5p6-review-release:
+    needs: [changes, preview]
+    if: github.event_name == 'pull_request' && github.head_ref == 'probe/H1-p5-p6-prep' && needs.preview.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Download H1 P5/P6 review artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: recit-audio-previews
+          path: review-assets
+      - name: Prepare durable H1 P5/P6 assets
+        run: |
+          set -euo pipefail
+          cp review-assets/odyssee-probe-p5-full.mp3 review-assets/p5.mp3
+          cp review-assets/odyssee-probe-p5-manifest.json review-assets/p5-manifest.json
+          cp review-assets/odyssee-probe-p5-timing.json review-assets/p5-timing.json
+          cp review-assets/odyssee-probe-p6-full.mp3 review-assets/p6.mp3
+          cp review-assets/odyssee-probe-p6-manifest.json review-assets/p6-manifest.json
+          cp review-assets/odyssee-probe-p6-timing.json review-assets/p6-timing.json
+      - name: Publish durable H1 P5/P6 review release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          tag="odyssee-h1-p5p6-review-v1"
+          assets=(
+            review-assets/p5.mp3 review-assets/p5-manifest.json review-assets/p5-timing.json
+            review-assets/p6.mp3 review-assets/p6-manifest.json review-assets/p6-timing.json
+          )
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$tag" "${assets[@]}" --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$tag" "${assets[@]}" --target "$TARGET_SHA" --prerelease --title "Odyssée — H1 P5/P6 prep" --notes "Batched-human-review preparation. P5 Underworld and P6 bed. Both dry/near-dry. PENDING_HUMAN_BATCH_H1." --repo "$GITHUB_REPOSITORY"
+          fi
+
   build:
     needs: [changes, audio]
     if: always() && needs.changes.outputs.build_needed == 'true' && (needs.audio.result == 'success' || needs.audio.result == 'skipped')
