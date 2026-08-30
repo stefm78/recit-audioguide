@@ -1,0 +1,175 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-probe-p4v3-dialogue-trap",
+  "title": "L’Odyssée — P4 v3 Sirène dialogue-piège",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "actors": {
+    "ulysse": {
+      "placement": "center"
+    },
+    "euryloque": {
+      "placement": "center"
+    },
+    "sirene": {
+      "placement": "center"
+    }
+  },
+  "segments": [
+    {
+      "scene": "P4 v3 — approche",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 160,
+      "text": "Puis la mer elle-même a semblé devenir moins importante.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P4 v3 — nom",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 260,
+      "text": "Ulysse.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v3 — nom",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 150,
+      "text": "Elles connaissaient mon nom.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P4 v3 — identité",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 210,
+      "text": "Ulysse d’Ithaque.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v3 — question",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 220,
+      "text": "Tu veux rentrer ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v3 — question",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 250,
+      "text": "Ou tu veux qu’on sache ce que tu as fait ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v3 — réaction",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 180,
+      "text": "J’ai tiré sur les cordes.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P4 v3 — savoir",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 220,
+      "text": "Nous savons ce que Troie t’a coûté.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v3 — faille",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 250,
+      "text": "Nous savons pourquoi tu as crié ton nom au Cyclope.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v3 — bateau réel",
+      "character_id": "euryloque",
+      "speaker": "Euryloque",
+      "pause_after_ms": 180,
+      "text": "Tu as crié beaucoup de choses.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "-14Hz",
+      "volume": "+8%"
+    },
+    {
+      "scene": "P4 v3 — piège",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 300,
+      "text": "Reste.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v3 — piège",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 300,
+      "text": "Ici, tu n’as rien à prouver.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v3 — piège",
+      "character_id": "sirene",
+      "speaker": "Sirène",
+      "pause_after_ms": 340,
+      "text": "Nous savons déjà.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+2Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P4 v3 — sens",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 240,
+      "text": "Voilà ce qui m’a fait peur.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    }
+  ]
+}
