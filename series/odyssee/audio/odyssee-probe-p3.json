@@ -1,0 +1,131 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-probe-p3-polypheme",
+  "title": "L’Odyssée — P3 Polyphème",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "actors": {
+    "ulysse": {
+      "placement": "center"
+    },
+    "euryloque": {
+      "placement": "center"
+    },
+    "polypheme": {
+      "placement": "center"
+    }
+  },
+  "segments": [
+    {
+      "scene": "P3 — grotte des Cyclopes",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 150,
+      "text": "Nous avons trouvé une grotte. À l’intérieur, il y avait des fromages, des agneaux, des chevreaux, des récipients pleins de lait.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P3 — grotte des Cyclopes",
+      "character_id": "euryloque",
+      "speaker": "Euryloque",
+      "pause_after_ms": 160,
+      "text": "On prend ce qu’il faut et on repart.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "-14Hz",
+      "volume": "+8%"
+    },
+    {
+      "scene": "P3 — grotte des Cyclopes",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 170,
+      "text": "J’ai refusé. Je voulais voir qui habitait là.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P3 — arrivée de Polyphème",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 260,
+      "text": "Il est arrivé à la nuit. Polyphème. Il a poussé devant l’entrée une pierre que douze hommes n’auraient pas déplacée.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P3 — arrivée de Polyphème",
+      "character_id": "polypheme",
+      "speaker": "Polyphème",
+      "pause_after_ms": 300,
+      "text": "Qui êtes-vous ?",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-24Hz",
+      "volume": "+3%"
+    },
+    {
+      "scene": "P3 — hospitalité refusée",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 220,
+      "text": "Des hommes perdus sur la route du retour. Nous demandons l’accueil dû aux étrangers.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P3 — hospitalité refusée",
+      "character_id": "polypheme",
+      "speaker": "Polyphème",
+      "pause_after_ms": 380,
+      "text": "Dû ? Tes dieux regardent beaucoup.",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-24Hz",
+      "volume": "+3%"
+    },
+    {
+      "scene": "P3 — menace",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 220,
+      "text": "Il a pris deux de mes hommes. Je ne raconterai pas davantage ce geste.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P3 — enfermés",
+      "character_id": "euryloque",
+      "speaker": "Euryloque",
+      "pause_after_ms": 160,
+      "text": "Si on le tue, on reste enfermés.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "-14Hz",
+      "volume": "+8%"
+    },
+    {
+      "scene": "P3 — enfermés",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 250,
+      "text": "Oui.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    }
+  ]
+}
