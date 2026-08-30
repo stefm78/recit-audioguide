@@ -141,7 +141,14 @@ Si P1 échoue : ne pas produire P3–P6.
 
 Si P1 PASS mais P2 échoue : corriger casting/performance/handoff avant les probes de monde sonore.
 
-P3–P6 seulement après identité centrale stabilisée.
+P3–P6 seulement après identité centrale stabilisée **et après `NARRATIVE_FREEZE` du processus ART-WP-002**.
+
+Statut Odyssée au 2026-08-30 :
+
+- P1 : PASS humain promu ;
+- P2 : artefact machine PASS, gate humain perceptuel autorisé ;
+- P3–P6 : **HOLD_NARRATIVE_FREEZE** ;
+- master long : **HOLD_NARRATIVE_FREEZE**.
 
 ## Human gate policy
 
