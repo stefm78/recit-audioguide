@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "golden-reference-v1",
+  "title": "La nuit après Orléans — Golden Reference",
+  "status": "HUMAN_ACCEPTED",
+  "perceptual_authority": {
+    "release": "pr42-human-review-v2",
+    "candidate_sha": "203268827d5c5e7d7312545f465b653c5bd31690",
+    "master_sha256": "4fa33d168796ef745dc9bfae95ec58135490b673c048c998c8bda029d3674893",
+    "duration_seconds": 660.84,
+    "human_review": {
+      "decision": "PASS",
+      "scores": {
+        "teen_voice_naturalness": 4,
+        "narrator_dialogue_balance": 4,
+        "bells_space_water_transition": 4,
+        "meung_halt_comprehension": 4,
+        "final_fade": 4
+      },
+      "defects": []
+    }
+  },
+  "promoted_product_authority": {
+    "main_at_freeze": "016831abd7736c56ec5b6b79e54aedad3a305834",
+    "program_git_blob_sha1": "a966f1e6572d8ed7897181ce7c404d3cf10d6a34",
+    "sound_direction_git_blob_sha1": "a51f7799bd5be6ac44913aa19ab0b1dae5f7470d",
+    "series_git_blob_sha1": "6dff9bfe13ca77adc3370ba42aed73591d0bcecf"
+  },
+  "regression_policy": {
+    "byte_identical_audio_required": false,
+    "cheap_checks": [
+      "program_structure",
+      "segment_count",
+      "character_identity",
+      "measured_timing_bounds",
+      "sound_event_order_and_roles",
+      "clipping_and_truncation",
+      "fade_tail_and_carry_semantics",
+      "loudness_and_peak_sanity",
+      "missing_assets_or_segments",
+      "unexpected_provider_or_voice_change"
+    ],
+    "human_recheck": "only_if_perceptually_material_change_is_plausible"
+  }
+}
