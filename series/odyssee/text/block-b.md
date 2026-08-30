@@ -768,6 +768,56 @@ NARRATRICE — Pour Ulysse, le danger n’a plus la forme d’une pierre devant 
 
 NARRATRICE — Il ressemble à un repas chaud qu’on peut reprendre le soir suivant.
 
+MARIN — Tu crois qu’Ithaque a changé ?
+
+ULYSSE — Bien sûr.
+
+MARIN — Alors pourquoi tu en parles comme si elle était restée à la même place ?
+
+ULYSSE — Une île reste généralement à la même place.
+
+MARIN — Tu sais ce que je veux dire.
+
+ULYSSE — Oui.
+
+MARIN — Ma fille avait six ans quand je suis parti.
+
+ULYSSE — Quel âge a-t-elle maintenant ?
+
+MARIN — Je n’en sais rien.
+
+ULYSSE — Tu sais compter.
+
+MARIN — Ce n’est pas pareil.
+
+EURYLOQUE — Il veut dire qu’il ne sait pas qui elle est.
+
+MARIN — Je sais qui elle est.
+
+EURYLOQUE — Non. Tu sais qui elle était.
+
+MARIN — Et si elle ne me reconnaît pas ?
+
+ULYSSE — Alors tu lui diras ton nom.
+
+MARIN — Toi, tu crois toujours que ça suffit.
+
+NARRATRICE — Ulysse regarde l’homme.
+
+MARIN — Ici, au moins, personne ne me demande d’être celui que j’étais avant la guerre.
+
+ULYSSE — Tu veux rester ?
+
+MARIN — Je veux arrêter de perdre des années en essayant de retrouver celles qui sont déjà parties.
+
+EURYLOQUE — Et demain ?
+
+MARIN — Demain, je verrai.
+
+ULYSSE — Cette phrase nous a retenus longtemps.
+
+NARRATRICE — Le confort de Circé n’est pas seulement agréable. Il offre aux survivants une idée dangereuse : peut-être qu’on peut cesser de rentrer sans appeler cela un abandon.
+
 CIRCÉ — Tu comptes les jours ?
 
 ULYSSE — Non.
