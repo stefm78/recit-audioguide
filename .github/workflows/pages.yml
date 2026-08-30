@@ -17,7 +17,45 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      audio_needed: ${{ steps.route.outputs.audio_needed }}
+      build_needed: ${{ steps.route.outputs.build_needed }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - id: route
+        name: Classify changed paths
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            python tools/ci_changes.py --full > routing.json
+          else
+            if [ "$EVENT_NAME" = "pull_request" ]; then
+              BASE_SHA="$PR_BASE_SHA"
+              HEAD_SHA="$PR_HEAD_SHA"
+            else
+              BASE_SHA="$BEFORE_SHA"
+              HEAD_SHA="$GITHUB_SHA"
+            fi
+            mapfile -t changed < <(git diff --name-only "$BASE_SHA" "$HEAD_SHA")
+            printf '%s\n' "${changed[@]}" > changed-paths.txt
+            python tools/ci_changes.py "${changed[@]}" > routing.json
+          fi
+          cat routing.json
+          echo "audio_needed=$(jq -r '.audio_needed' routing.json)" >> "$GITHUB_OUTPUT"
+          echo "build_needed=$(jq -r '.build_needed' routing.json)" >> "$GITHUB_OUTPUT"
+
   sound-direction:
+    needs: changes
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -31,9 +69,12 @@ jobs:
         run: python tools/production.py validate
       - name: Test graceful degradation states
         run: python -m unittest tests.test_states -v
+      - name: Test change-aware routing
+        run: python -m unittest tests.test_ci_changes -v
 
   sounds:
-    needs: sound-direction
+    needs: [changes, sound-direction]
+    if: needs.changes.outputs.audio_needed == 'true'
     permissions:
       contents: write
     uses: stefm78/audio-engine/.github/workflows/hydrate-sounds.yml@3392d4f22f0a9b054a05b5c05a7856985c0ab030
@@ -46,8 +87,8 @@ jobs:
       fail_on_unresolved: false
 
   preview:
-    if: github.event_name == 'pull_request'
-    needs: sounds
+    if: github.event_name == 'pull_request' && needs.changes.outputs.audio_needed == 'true'
+    needs: [changes, sounds]
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -137,7 +178,8 @@ jobs:
           retention-days: 3
 
   audio:
-    needs: sounds
+    needs: [changes, sounds]
+    if: needs.changes.outputs.audio_needed == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -215,12 +257,14 @@ jobs:
           retention-days: 1
 
   build:
-    needs: audio
+    needs: [changes, audio]
+    if: always() && needs.changes.outputs.build_needed == 'true' && (needs.audio.result == 'success' || needs.audio.result == 'skipped')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
       - name: Download generated audio
+        if: needs.changes.outputs.audio_needed == 'true'
         uses: actions/download-artifact@v4
         with:
           name: recit-audio-assets
@@ -237,8 +281,8 @@ jobs:
           path: dist
 
   deploy:
-    if: github.event_name != 'pull_request'
-    needs: build
+    if: github.event_name != 'pull_request' && needs.changes.outputs.build_needed == 'true'
+    needs: [changes, build]
     runs-on: ubuntu-latest
     environment:
       name: github-pages
