@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "odyssee",
+  "type": "story",
+  "title": "L’Odyssée — le retour d’Ulysse",
+  "subtitle": "Après dix ans de guerre et dix ans d’errance, Ulysse veut rentrer à Ithaque. Mais revenir ne suffit pas : encore faut-il être reconnu.",
+  "note": "Préproduction — adaptation française originale inspirée de L’Odyssée attribuée à Homère. Ce manifeste reste hors catalogue public tant qu’il se nomme series.draft.json.",
+  "episodes": [
+    {
+      "id": "odyssee-longform-v1",
+      "title": "L’Odyssée — le retour d’Ulysse",
+      "stop": "Ithaque → mer des récits → Ithaque",
+      "summary": "Récit immersif continu de 75 à 90 minutes centré sur le retour, l’identité, les pertes et la reconnaissance."
+    }
+  ]
+}
