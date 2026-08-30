@@ -1,0 +1,57 @@
+name: Ephemeral PR42 promotion branch cleanup
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ephemeral-pr42-promotion-cleanup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Delete exact completed refs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const expected = {
+              "feature/nuit-apres-orleans-prototype": "203268827d5c5e7d7312545f465b653c5bd31690",
+              "promote/PROMOTE-WP-001-pr42-pass": "18c3f091341abd77998ee50d67e0e9d83baf64db"
+            };
+            for (const [name, sha] of Object.entries(expected)) {
+              const ref = await github.rest.git.getRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `heads/${name}`
+              });
+              if (ref.data.object.sha !== sha) {
+                core.setFailed(`Guard failed for ${name}: expected ${sha}, got ${ref.data.object.sha}`);
+                return;
+              }
+            }
+            for (const name of Object.keys(expected)) {
+              await github.rest.git.deleteRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `heads/${name}`
+              });
+              core.info(`Deleted completed ref: ${name}`);
+            }
+
+      - name: Self-delete workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/ephemeral-pr42-promotion-cleanup.yml
+          git commit -m "chore: remove ephemeral PR42 promotion cleanup"
+          git push origin HEAD:main
