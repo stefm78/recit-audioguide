@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Écoute humaine — Odyssée P4 v2 casting</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1117;--panel:#151c24;--line:#2b3541;--text:#f3f6f8;--muted:#aab4bf;--accent:#7dd3fc;--good:#86efac}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{width:min(900px,calc(100% - 28px));margin:auto;padding:28px 0 64px}h1{font-size:clamp(1.8rem,5vw,3.2rem);line-height:1.05;margin:.2em 0}
+.kicker{color:var(--accent);font-weight:750;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem}.lead,.hint{color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0}audio{width:100%;margin-top:8px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.candidate{border:1px solid var(--line);border-radius:14px;padding:14px;background:#111821}
+.choice,.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}.choice label,.checks label{display:flex;gap:7px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:9px;background:#111821}
+fieldset{border:0;padding:0;margin:22px 0}.question{border-top:1px solid var(--line);padding-top:18px}.question legend{font-weight:750;margin-bottom:8px}
+textarea{width:100%;min-height:100px;background:#0f151c;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}
+#summary{min-height:330px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem}.summary-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.copy{border:1px solid var(--line);background:#1d2732;color:var(--text);border-radius:10px;padding:9px 12px;cursor:pointer}.status{color:var(--good);font-weight:700}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.summary-head{align-items:flex-start;flex-direction:column}}
+</style></head><body><main>
+<div class="kicker">Gate humain ciblé · Odyssée P4 v2</div>
+<h1>Quelle Sirène fonctionne le mieux&nbsp;?</h1>
+<p class="lead">P4 v1 a échoué : voix trop narratrice, français borderline, attraction insuffisante. Ici, même texte, même Ulysse, aucun effet. Écoutez A puis B — idéalement deux fois — et choisissez uniquement sur ce que vous entendez.</p>
+<section class="card"><div class="grid">
+<div class="candidate"><h2>Candidate A</h2><audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p4v2-casting-review-v1/denise-directe.mp3"></audio>
+<p class="hint">Audio SHA-256 <code>ce60ef91547f1867135f0702a23e1bbb80faab5da9cfe47a491b2dc75aeb7f88</code></p></div>
+<div class="candidate"><h2>Candidate B</h2><audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p4v2-casting-review-v1/denise-retenue.mp3"></audio>
+<p class="hint">Audio SHA-256 <code>c94745117fa3dd710c8d456980c5783d8a2dcf19083698e5a2a8b79ab79b9307</code></p></div>
+</div>
+<p class="hint">Release <code>odyssee-p4v2-casting-review-v1</code> · candidate source <code>508c1e4248ee2680cc0c92feef2c64b4bd1ba06f</code>.</p>
+</section>
+<form id="review" class="card"><h2>Décision de casting</h2>
+<fieldset class="question"><legend>1. Meilleure candidate</legend><div class="choice">
+<label><input type="radio" name="winner" value="A">A</label>
+<label><input type="radio" name="winner" value="B">B</label>
+<label><input type="radio" name="winner" value="AUCUNE">Aucune</label></div></fieldset>
+<fieldset class="question"><legend>2. Français de la meilleure candidate</legend><div class="choice">
+<label><input type="radio" name="french" value="PASS">PASS</label>
+<label><input type="radio" name="french" value="BORDERLINE">BORDERLINE</label>
+<label><input type="radio" name="french" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="question"><legend>3. Trop « narratrice » ?</legend><div class="choice">
+<label><input type="radio" name="narrator" value="NON">Non</label>
+<label><input type="radio" name="narrator" value="UN PEU">Un peu</label>
+<label><input type="radio" name="narrator" value="OUI">Oui</label></div></fieldset>
+<fieldset class="question"><legend>4. Attraction — envie de continuer à écouter</legend><div class="choice">
+<label><input type="radio" name="attraction" value="PASS">PASS</label>
+<label><input type="radio" name="attraction" value="BORDERLINE">BORDERLINE</label>
+<label><input type="radio" name="attraction" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="question"><legend>5. Cliché séduction / mystique</legend><div class="choice">
+<label><input type="radio" name="cliche" value="AUCUN">Aucun</label>
+<label><input type="radio" name="cliche" value="LÉGER">Léger</label>
+<label><input type="radio" name="cliche" value="FORT">Fort</label></div></fieldset>
+<fieldset class="question"><legend>Défauts entendus</legend><div class="checks">
+<label><input type="checkbox" name="defect" value="A pas assez attirante">A pas assez attirante</label>
+<label><input type="checkbox" name="defect" value="B pas assez attirante">B pas assez attirante</label>
+<label><input type="checkbox" name="defect" value="A trop narratrice">A trop narratrice</label>
+<label><input type="checkbox" name="defect" value="B trop narratrice">B trop narratrice</label>
+<label><input type="checkbox" name="defect" value="français A dégradé">Français A dégradé</label>
+<label><input type="checkbox" name="defect" value="français B dégradé">Français B dégradé</label>
+<label><input type="checkbox" name="defect" value="aucune candidate suffisante">Aucune candidate suffisante</label></div></fieldset>
+<fieldset class="question"><legend>Décision</legend><div class="choice">
+<label><input type="radio" name="decision" value="PASS_CASTING">PASS CASTING — reconstruire P4 complet</label>
+<label><input type="radio" name="decision" value="FAIL_CASTING">FAIL CASTING — changer d’approche</label></div></fieldset>
+<label for="notes"><strong>Notes libres</strong></label><textarea id="notes" name="notes"></textarea>
+</form>
+<section class="card"><div class="summary-head"><div><h2 style="margin:0">Bilan à copier</h2><small>Aucun fichier à exporter.</small></div><button id="copy" class="copy" type="button">Copier le bilan</button></div>
+<textarea id="summary" readonly></textarea><p id="copyStatus" class="status" role="status" aria-live="polite"></p></section>
+<script>
+(function(){var f=document.getElementById('review'),s=document.getElementById('summary'),key='odyssee-p4v2-casting-review-v1';
+function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:'NON NOTÉ'}
+function st(){return{winner:sel('winner'),french:sel('french'),narrator:sel('narrator'),attraction:sel('attraction'),cliche:sel('cliche'),defects:Array.from(f.querySelectorAll('input[name="defect"]:checked')).map(x=>x.value),decision:sel('decision'),notes:f.notes.value.trim()}}
+function render(){var x=st();s.value='HUMAN REVIEW — ODYSSÉE P4 v2 SIREN CASTING\nCandidate source: 508c1e4248ee2680cc0c92feef2c64b4bd1ba06f\nReview release: odyssee-p4v2-casting-review-v1\nA SHA-256: ce60ef91547f1867135f0702a23e1bbb80faab5da9cfe47a491b2dc75aeb7f88\nB SHA-256: c94745117fa3dd710c8d456980c5783d8a2dcf19083698e5a2a8b79ab79b9307\n\nSCORES\n- Meilleure candidate: '+x.winner+'\n- Français: '+x.french+'\n- Trop narratrice: '+x.narrator+'\n- Attraction: '+x.attraction+'\n- Cliché: '+x.cliche+'\n\nDÉFAUTS ENTENDUS\n'+(x.defects.length?x.defects.map(v=>'- '+v).join('\n'):'- aucun signalé')+'\n\nDÉCISION\n'+x.decision+'\n\nNOTES\n'+(x.notes||'(aucune)');localStorage.setItem(key,JSON.stringify(x))}
+function restore(){try{var x=JSON.parse(localStorage.getItem(key)||'null');if(!x)return;['winner','french','narrator','attraction','cliche','decision'].forEach(n=>{var e=Array.from(f.querySelectorAll('input[name="'+n+'"]')).find(y=>y.value===x[n]);if(e)e.checked=true});(x.defects||[]).forEach(v=>{var e=Array.from(f.querySelectorAll('input[name="defect"]')).find(y=>y.value===v);if(e)e.checked=true});f.notes.value=x.notes||''}catch(_){}}
+f.addEventListener('input',render);f.addEventListener('change',render);document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(s.value)}catch(_){s.select();document.execCommand('copy')}document.getElementById('copyStatus').textContent='Bilan copié.'});restore();render()})();
+</script></main></body></html>
