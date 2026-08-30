@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "odyssee-h1-p4-chatterbox",
+  "upstream": {
+    "provider": "resemble-ai/chatterbox",
+    "commit": "5de7a54aa4e5e2baadb0182dde554908b48b85c2",
+    "model": "Chatterbox Multilingual V3",
+    "language_id": "fr",
+    "device": "cpu"
+  },
+  "variants": {
+    "a": {
+      "exaggeration": 0.55,
+      "cfg_weight": 0.4,
+      "temperature": 0.8
+    },
+    "b": {
+      "exaggeration": 0.75,
+      "cfg_weight": 0.3,
+      "temperature": 0.8
+    }
+  },
+  "segments": [
+    {
+      "speaker": "Ulysse",
+      "provider": "edge",
+      "text": "Puis la mer elle-même a semblé devenir moins importante.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%",
+      "pause_after_ms": 160
+    },
+    {
+      "speaker": "Sirène",
+      "provider": "chatterbox",
+      "text": "Ulysse.",
+      "pause_after_ms": 260
+    },
+    {
+      "speaker": "Ulysse",
+      "provider": "edge",
+      "text": "Elles connaissaient mon nom.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%",
+      "pause_after_ms": 150
+    },
+    {
+      "speaker": "Sirène",
+      "provider": "chatterbox",
+      "text": "Ulysse d’Ithaque. Tu veux rentrer ? Ou tu veux qu’on sache ce que tu as fait ?",
+      "pause_after_ms": 250
+    },
+    {
+      "speaker": "Ulysse",
+      "provider": "edge",
+      "text": "J’ai tiré sur les cordes.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%",
+      "pause_after_ms": 180
+    },
+    {
+      "speaker": "Sirène",
+      "provider": "chatterbox",
+      "text": "Nous savons ce que Troie t’a coûté. Nous savons pourquoi tu as crié ton nom au Cyclope.",
+      "pause_after_ms": 250
+    },
+    {
+      "speaker": "Euryloque",
+      "provider": "edge",
+      "text": "Tu as crié beaucoup de choses.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "-14Hz",
+      "volume": "+8%",
+      "pause_after_ms": 180
+    },
+    {
+      "speaker": "Sirène",
+      "provider": "chatterbox",
+      "text": "Reste. Ici, tu n’as rien à prouver. Nous savons déjà.",
+      "pause_after_ms": 340
+    },
+    {
+      "speaker": "Ulysse",
+      "provider": "edge",
+      "text": "Voilà ce qui m’a fait peur.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%",
+      "pause_after_ms": 240
+    }
+  ]
+}
