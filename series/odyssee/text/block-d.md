@@ -810,7 +810,7 @@ PÉNÉLOPE — Celui qu’aucun de vous n’aime toucher quand vous fouillez ses
 
 EURYMAQUE — Que veux-tu en faire ?
 
-PÉNÉLOPE — Celui qui saura le bander et tirer correctement remportera l’épreuve.
+PÉNÉLOPE — Celui qui saura le bander et faire passer une flèche à travers douze haches alignées remportera l’épreuve.
 
 ANTINOOS — Et ta main ?
 
