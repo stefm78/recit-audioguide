@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Odyssée — H1b revue corrective groupée</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1117;--panel:#151c24;--line:#2b3541;--text:#f3f6f8;--muted:#aab4bf;--accent:#7dd3fc;--good:#86efac}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{width:min(980px,calc(100% - 26px));margin:auto;padding:28px 0 64px}h1{font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.05;margin:.25em 0}h2{margin-top:0}
+.kicker{color:var(--accent);font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.lead,.hint{color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:18px 0}.audio-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.candidate{border:1px solid var(--line);border-radius:13px;padding:13px;background:#111821}audio{width:100%;margin:6px 0}
+.choice,.scale{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}.scale{grid-template-columns:repeat(5,1fr)}
+label.option{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:10px;padding:9px;background:#111821}
+fieldset{border:0;padding:0;margin:18px 0}.q{border-top:1px solid var(--line);padding-top:16px}.q legend{font-weight:750}
+textarea{width:100%;min-height:86px;background:#0f151c;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:11px;font:inherit}
+#summary{min-height:560px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88rem}
+.summary-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.copy{border:1px solid var(--line);background:#1d2732;color:var(--text);border-radius:10px;padding:10px 13px;cursor:pointer}
+.status{color:var(--good);font-weight:700}.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 8px;color:var(--muted);font-size:.85rem;margin:2px}
+code{overflow-wrap:anywhere}@media(max-width:700px){.audio-grid{grid-template-columns:1fr}.scale{grid-template-columns:repeat(5,1fr)}.summary-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body><main>
+<div class="kicker">H1b · revue corrective mutualisée</div>
+<h1>Six variantes, trois décisions</h1>
+<p class="lead">H1 a identifié trois problèmes distincts. H1b les corrige en parallèle. Pour chaque module, écoutez A puis B avant de répondre. Les verdicts restent indépendants : un PASS n’efface jamais un FAIL ailleurs.</p>
+<div><span class="badge">6 écoutes</span><span class="badge">P4 A/B</span><span class="badge">P5 A/B</span><span class="badge">P6 A/B</span><span class="badge">un seul bilan</span></div>
+
+<section class="card" id="p4">
+<h2>P4 — Sirènes · présence polyphonique</h2>
+<p class="hint">On ne cherche plus « la meilleure voix unique ». Deux Sirènes se répondent. Aucun chant, aucune réverbération, aucun effet mystique. La question est : cette pluralité rend-elle enfin l’appel réellement attirant ?</p>
+<div class="audio-grid">
+<div class="candidate"><strong>P4-A — respiration</strong><audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-h1b-corrective-review-v1/p4-a.mp3"></audio><small>SHA-256 <code>6801dbc716226d60af1a7aade963a636bdd65089897d2ff381295e1747c48e58</code></small></div>
+<div class="candidate"><strong>P4-B — interruption</strong><audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-h1b-corrective-review-v1/p4-b.mp3"></audio><small>SHA-256 <code>14f325e3a1404c260c9a5139b85bcb5267cdd91a60c2458ea80bd66f3d75365d</code></small></div>
+</div>
+<fieldset class="q"><legend>Meilleure variante</legend><div class="choice"><label class="option"><input type="radio" name="p4winner" value="A">A</label><label class="option"><input type="radio" name="p4winner" value="B">B</label><label class="option"><input type="radio" name="p4winner" value="AUCUNE">Aucune</label></div></fieldset>
+<fieldset class="q"><legend>Attraction / envie de continuer à écouter</legend><div class="choice"><label class="option"><input type="radio" name="p4attraction" value="PASS">PASS</label><label class="option"><input type="radio" name="p4attraction" value="BORDERLINE">BORDERLINE</label><label class="option"><input type="radio" name="p4attraction" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>Français des Sirènes</legend><div class="choice"><label class="option"><input type="radio" name="p4french" value="PASS">PASS</label><label class="option"><input type="radio" name="p4french" value="BORDERLINE">BORDERLINE</label><label class="option"><input type="radio" name="p4french" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>La pluralité améliore-t-elle la scène ?</legend><div class="choice"><label class="option"><input type="radio" name="p4poly" value="PASS">PASS</label><label class="option"><input type="radio" name="p4poly" value="BORDERLINE">BORDERLINE</label><label class="option"><input type="radio" name="p4poly" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>Cliché séduction / mystique</legend><div class="choice"><label class="option"><input type="radio" name="p4cliche" value="AUCUN">Aucun</label><label class="option"><input type="radio" name="p4cliche" value="LÉGER">Léger</label><label class="option"><input type="radio" name="p4cliche" value="FORT">Fort</label></div></fieldset>
+<fieldset class="q"><legend>Verdict P4</legend><div class="choice"><label class="option"><input type="radio" name="p4decision" value="PASS">PASS P4</label><label class="option"><input type="radio" name="p4decision" value="FAIL">FAIL P4</label></div></fieldset>
+</section>
+
+<section class="card" id="p5">
+<h2>P5 — Enfers · français sûr + espace minimal</h2>
+<p class="hint">H1 avait donné 4/5 d’étrangeté mais des mots entendus en anglais et un FAIL en version sèche. Anticlée est maintenant explicitement synthétisée en français. A ajoute un air sombre très discret ; B utilise seulement un reflet proche.</p>
+<div class="audio-grid">
+<div class="candidate"><strong>P5-A — air sombre</strong><audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-h1b-corrective-review-v1/p5-a.mp3"></audio><small>SHA-256 <code>4bbefbf7391cdaa1fd995169e9e971b00b649afc4071354dc9302cd960c34895</code></small></div>
+<div class="candidate"><strong>P5-B — reflet proche</strong><audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-h1b-corrective-review-v1/p5-b.mp3"></audio><small>SHA-256 <code>1372fafc5f47a26aa9e25320c822f6df129a4f08abe296b1bedc45bf24d55a22</code></small></div>
+</div>
+<fieldset class="q"><legend>Meilleure variante</legend><div class="choice"><label class="option"><input type="radio" name="p5winner" value="A">A</label><label class="option"><input type="radio" name="p5winner" value="B">B</label><label class="option"><input type="radio" name="p5winner" value="AUCUNE">Aucune</label></div></fieldset>
+<fieldset class="q"><legend>Français d’Anticlée</legend><div class="choice"><label class="option"><input type="radio" name="p5french" value="PASS">PASS</label><label class="option"><input type="radio" name="p5french" value="BORDERLINE">BORDERLINE</label><label class="option"><input type="radio" name="p5french" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>Avez-vous entendu des mots ou prononciations anglaises ?</legend><div class="choice"><label class="option"><input type="radio" name="p5english" value="NON">Non</label><label class="option"><input type="radio" name="p5english" value="OUI">Oui</label></div></fieldset>
+<fieldset class="q"><legend>Anticlée émotionnellement présente</legend><div class="choice"><label class="option"><input type="radio" name="p5anticlee" value="PASS">PASS</label><label class="option"><input type="radio" name="p5anticlee" value="BORDERLINE">BORDERLINE</label><label class="option"><input type="radio" name="p5anticlee" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>L’espace aide sans créer un cliché de fantôme</legend><div class="choice"><label class="option"><input type="radio" name="p5space" value="PASS">PASS</label><label class="option"><input type="radio" name="p5space" value="BORDERLINE">BORDERLINE</label><label class="option"><input type="radio" name="p5space" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>Étrangeté / présence des Enfers</legend><div class="scale"><label class="option"><input type="radio" name="p5strange" value="1">1</label><label class="option"><input type="radio" name="p5strange" value="2">2</label><label class="option"><input type="radio" name="p5strange" value="3">3</label><label class="option"><input type="radio" name="p5strange" value="4">4</label><label class="option"><input type="radio" name="p5strange" value="5">5</label></div></fieldset>
+<fieldset class="q"><legend>Verdict P5</legend><div class="choice"><label class="option"><input type="radio" name="p5decision" value="PASS">PASS P5</label><label class="option"><input type="radio" name="p5decision" value="FAIL">FAIL P5</label></div></fieldset>
+</section>
+
+<section class="card" id="p6">
+<h2>P6 — Le lit · deux mises en scène complètes</h2>
+<p class="hint">H1 avait donné 2/5 d’impact émotionnel. Ici, on ne retouche pas un détail : la scène a été resserrée. A reste sur les voix Edge validées ; B donne à Pénélope une interprétation plus expressive. Toujours aucune musique.</p>
+<div class="audio-grid">
+<div class="candidate"><strong>P6-A — direct retenu</strong><audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-h1b-corrective-review-v1/p6-a.mp3"></audio><small>SHA-256 <code>585ff7d54b409524670d16aa67f418ec61928f333b4911191850ffb44a249565</code></small></div>
+<div class="candidate"><strong>P6-B — Pénélope expressive</strong><audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-h1b-corrective-review-v1/p6-b.mp3"></audio><small>SHA-256 <code>474c2e41a5d702b2a84524aa3be9a0559ed7378af18d507ac082b666029d64ae</code></small></div>
+</div>
+<fieldset class="q"><legend>Meilleure variante</legend><div class="choice"><label class="option"><input type="radio" name="p6winner" value="A">A</label><label class="option"><input type="radio" name="p6winner" value="B">B</label><label class="option"><input type="radio" name="p6winner" value="AUCUNE">Aucune</label></div></fieldset>
+<fieldset class="q"><legend>Impact émotionnel</legend><div class="scale"><label class="option"><input type="radio" name="p6emotion" value="1">1</label><label class="option"><input type="radio" name="p6emotion" value="2">2</label><label class="option"><input type="radio" name="p6emotion" value="3">3</label><label class="option"><input type="radio" name="p6emotion" value="4">4</label><label class="option"><input type="radio" name="p6emotion" value="5">5</label></div></fieldset>
+<fieldset class="q"><legend>Pénélope possède-t-elle enfin le verdict final ?</legend><div class="choice"><label class="option"><input type="radio" name="p6penelope" value="PASS">PASS</label><label class="option"><input type="radio" name="p6penelope" value="BORDERLINE">BORDERLINE</label><label class="option"><input type="radio" name="p6penelope" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>Réaction d’Ulysse : immédiate et personnelle</legend><div class="choice"><label class="option"><input type="radio" name="p6ulysse" value="PASS">PASS</label><label class="option"><input type="radio" name="p6ulysse" value="BORDERLINE">BORDERLINE</label><label class="option"><input type="radio" name="p6ulysse" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>Rythme / pauses</legend><div class="choice"><label class="option"><input type="radio" name="p6pauses" value="PASS">PASS</label><label class="option"><input type="radio" name="p6pauses" value="BORDERLINE">BORDERLINE</label><label class="option"><input type="radio" name="p6pauses" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>Le climax fonctionne-t-il sans musique ?</legend><div class="choice"><label class="option"><input type="radio" name="p6dry" value="PASS">PASS</label><label class="option"><input type="radio" name="p6dry" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>Verdict P6</legend><div class="choice"><label class="option"><input type="radio" name="p6decision" value="PASS">PASS P6</label><label class="option"><input type="radio" name="p6decision" value="FAIL">FAIL P6</label></div></fieldset>
+</section>
+
+<section class="card">
+<h2>Contrôles transverses H1b</h2>
+<fieldset class="q"><legend>Français global</legend><div class="choice"><label class="option"><input type="radio" name="crossfrench" value="PASS">PASS</label><label class="option"><input type="radio" name="crossfrench" value="BORDERLINE">BORDERLINE</label><label class="option"><input type="radio" name="crossfrench" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="q"><legend>Avez-vous perçu une régression de l’identité d’Ulysse ?</legend><div class="choice"><label class="option"><input type="radio" name="crossulysse" value="NON">Non</label><label class="option"><input type="radio" name="crossulysse" value="BORDERLINE">Peut-être</label><label class="option"><input type="radio" name="crossulysse" value="OUI">Oui</label></div></fieldset>
+<fieldset class="q"><legend>Fatigue liée à cette session</legend><div class="choice"><label class="option"><input type="radio" name="fatigue" value="AUCUNE">Aucune</label><label class="option"><input type="radio" name="fatigue" value="LÉGÈRE">Légère</label><label class="option"><input type="radio" name="fatigue" value="FORTE">Forte</label></div></fieldset>
+<label for="notes"><strong>Notes libres / défauts précis entendus</strong></label><textarea id="notes" name="notes"></textarea>
+</section>
+
+<section class="card">
+<div class="summary-head"><div><h2 style="margin:0">Bilan H1b à copier</h2><small>Un bilan, trois verdicts indépendants. Aucun fichier à exporter.</small></div><button id="copy" class="copy" type="button">Copier le bilan</button></div>
+<textarea id="summary" readonly></textarea><p id="copyStatus" class="status"></p>
+</section>
+
+<script>
+(function(){
+ const root=document,names=['p4winner','p4attraction','p4french','p4poly','p4cliche','p4decision','p5winner','p5french','p5english','p5anticlee','p5space','p5strange','p5decision','p6winner','p6emotion','p6penelope','p6ulysse','p6pauses','p6dry','p6decision','crossfrench','crossulysse','fatigue'];
+ const key='odyssee-h1b-corrective-review-v1',summary=root.getElementById('summary'),notes=root.getElementById('notes');
+ function sel(n){const e=root.querySelector('input[name="'+n+'"]:checked');return e?e.value:'NON NOTÉ'}
+ function state(){const s={};names.forEach(n=>s[n]=sel(n));s.notes=notes.value.trim();return s}
+ function render(){const s=state();summary.value=
+'HUMAN REVIEW — ODYSSÉE H1b BATCHED CORRECTIVE LISTENING\n'+
+'Source: feb27315dd159a0ab1c071eee39eb106edebcea7\n'+
+'Release: odyssee-h1b-corrective-review-v1\n'+
+'P4-A SHA-256: 6801dbc716226d60af1a7aade963a636bdd65089897d2ff381295e1747c48e58\n'+
+'P4-B SHA-256: 14f325e3a1404c260c9a5139b85bcb5267cdd91a60c2458ea80bd66f3d75365d\n'+
+'P5-A SHA-256: 4bbefbf7391cdaa1fd995169e9e971b00b649afc4071354dc9302cd960c34895\n'+
+'P5-B SHA-256: 1372fafc5f47a26aa9e25320c822f6df129a4f08abe296b1bedc45bf24d55a22\n'+
+'P6-A SHA-256: 585ff7d54b409524670d16aa67f418ec61928f333b4911191850ffb44a249565\n'+
+'P6-B SHA-256: 474c2e41a5d702b2a84524aa3be9a0559ed7378af18d507ac082b666029d64ae\n\n'+
+'P4 — SIRÈNES\n- Winner: '+s.p4winner+'\n- Attraction: '+s.p4attraction+'\n- Français: '+s.p4french+'\n- Polyphonie utile: '+s.p4poly+'\n- Cliché: '+s.p4cliche+'\n- DÉCISION P4: '+s.p4decision+'\n\n'+
+'P5 — ENFERS\n- Winner: '+s.p5winner+'\n- Français Anticlée: '+s.p5french+'\n- Mots anglais: '+s.p5english+'\n- Anticlée: '+s.p5anticlee+'\n- Espace utile: '+s.p5space+'\n- Étrangeté: '+s.p5strange+'/5\n- DÉCISION P5: '+s.p5decision+'\n\n'+
+'P6 — LE LIT\n- Winner: '+s.p6winner+'\n- Impact émotionnel: '+s.p6emotion+'/5\n- Pénélope verdict: '+s.p6penelope+'\n- Réaction Ulysse: '+s.p6ulysse+'\n- Rythme / pauses: '+s.p6pauses+'\n- Sans musique: '+s.p6dry+'\n- DÉCISION P6: '+s.p6decision+'\n\n'+
+'TRANSVERSE\n- Français global: '+s.crossfrench+'\n- Régression identité Ulysse: '+s.crossulysse+'\n- Fatigue: '+s.fatigue+'\n\nNOTES\n'+(s.notes||'(aucune)');
+ localStorage.setItem(key,JSON.stringify(s));}
+ function restore(){try{const s=JSON.parse(localStorage.getItem(key)||'null');if(!s)return;names.forEach(n=>{const e=Array.from(root.querySelectorAll('input[name="'+n+'"]')).find(x=>x.value===s[n]);if(e)e.checked=true});notes.value=s.notes||''}catch(_){}}
+ root.addEventListener('change',render);notes.addEventListener('input',render);
+ root.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summary.value)}catch(_){summary.select();document.execCommand('copy')}root.getElementById('copyStatus').textContent='Bilan H1b copié.'});
+ restore();render();
+})();
+</script>
+</main></body></html>
