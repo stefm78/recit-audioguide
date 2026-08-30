@@ -150,10 +150,12 @@ Statut Odyssée au 2026-08-30 :
 - P2 watch non bloquant : Ulysse perçu « pas assez conteur » ; préserver l’identité P1 et réévaluer sur les probes/assemblages suivants sans retuning spéculatif ;
 - NARRATIVE_FREEZE : PASS après N3 ;
 - P3 : **PASS humain**, masse / menace 4/5, français PASS, aucune caricature, identité Ulysse PASS, distinction Ulysse/Euryloque PASS, scène sèche PASS ;
-- P4 : **FAIL_EDGE**, provider Edge insuffisant pour l’attraction de la Sirène ; nouveau provider/capability candidate requis ;
-- P5 : **AUTHORIZED_FOR_PARALLEL_PREP** ;
-- P6 : **AUTHORIZED_FOR_PARALLEL_PREP** ;
-- Human batch H1 : P4 + P5 + P6, verdicts indépendants sur une page commune ;
+- P4 : **H1 FAIL** — Edge puis Chatterbox mono A/B insuffisants pour l’attraction ; français et dialogue direct PASS ; H1b teste une présentation polyphonique avant escalade Azure ;
+- P5 : **H1 FAIL** — étrangeté 4/5 ; Anticlée BORDERLINE ; scène sèche FAIL ; mots entendus en anglais ; Ulysse conteur **PASS**, watch P2 clôturé ;
+- P6 : **H1 FAIL / STAGING_FAILURE** — impact émotionnel 2/5 ; verdict Pénélope FAIL ; réaction Ulysse FAIL ; pauses FAIL ; sans musique FAIL ;
+- Cross-H1 : identité Ulysse PASS ; Anticlée vs Pénélope PASS ; fatigue AUCUNE ; français global FAIL localisé à P5 par le retour humain ;
+- Human batch H1 : **COMPLETE** (#100) ;
+- Human batch H1b : **IN_PREPARATION** (#103), corrections P4/P5/P6 préparées en parallèle ;
 - master long : **HOLD_CRITICAL_PROBES**.
 
 ## Human gate policy
@@ -174,10 +176,12 @@ Aucune écoute de l’œuvre complète avant le master long.
 
 P4, P5 et P6 peuvent être préparés en parallèle dès lors que leurs dépendances propres sont satisfaites.
 
-La prochaine intervention humaine cible un **batch H1** unique :
-- P4 provider Sirène ;
-- P5 Enfers ;
-- P6 lit ;
-- watch « Ulysse pas assez conteur » réévalué dans P5.
+H1 est terminé. Le prochain humain cible un **batch H1b** unique :
+
+- P4 : variantes polyphoniques Sirènes ;
+- P5 : Anticlée explicitement française + traitement spatial minimal ;
+- P6 : deux mises en scène complètes du lit.
+
+Le watch « Ulysse pas assez conteur » est clos en PASS grâce à H1/P5.
 
 Chaque module garde son verdict PASS/FAIL indépendant.
