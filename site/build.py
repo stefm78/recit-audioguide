@@ -141,6 +141,8 @@ def main():
     (DIST/'data').mkdir()
     shutil.copy2(WEB/'index.html',DIST/'index.html')
     for name in ('styles.css','home.js','app.js'): shutil.copy2(WEB/name,DIST/'assets'/name)
+    reviews=WEB/'reviews'
+    if reviews.exists(): shutil.copytree(reviews,DIST/'reviews',dirs_exist_ok=True)
     tpl=(WEB/'series.html').read_text(encoding='utf-8')
     catalog=[]
     series_reports=[]
