@@ -346,6 +346,64 @@ CALYPSO — Tu préférerais une vérité qui te détruit à une vie où rien ne
 
 ULYSSE — Je préférerais ma vie.
 
+CALYPSO — Décris-la.
+
+ULYSSE — Quoi ?
+
+CALYPSO — Ta vie. Celle qui mérite mieux que ce que je t’offre.
+
+ULYSSE — Ithaque est petite.
+
+CALYPSO — Je n’ai pas demandé une carte.
+
+ULYSSE — Il y a des pierres partout où on voudrait planter quelque chose. Le vent change vite. Les chèvres trouvent toujours l’endroit qu’on voulait protéger.
+
+CALYPSO — Irrésistible.
+
+ULYSSE — Mon père se plaint de la terre quand elle est sèche et de la pluie quand elle arrive.
+
+CALYPSO — Encore mieux.
+
+ULYSSE — Pénélope déteste qu’on déplace les objets qu’elle utilise.
+
+CALYPSO — Comme toi.
+
+ULYSSE — Non. Moi, j’ai raison quand je me plains.
+
+CALYPSO — Naturellement.
+
+ULYSSE — Il y a un olivier près de la maison.
+
+CALYPSO — Un olivier.
+
+ULYSSE — Oui.
+
+CALYPSO — Tu refuses l’immortalité pour un arbre.
+
+ULYSSE — Pas seulement.
+
+CALYPSO — Ton fils.
+
+ULYSSE — Je ne sais même pas quel homme il est devenu.
+
+CALYPSO — Tu as peur qu’il ne te reconnaisse pas.
+
+ULYSSE — J’ai peur qu’il me reconnaisse seulement comme l’homme dont on lui a parlé.
+
+CALYPSO — Et ta femme ?
+
+ULYSSE — J’ai peur qu’elle ait appris à vivre sans moi.
+
+CALYPSO — Voilà enfin quelque chose d’honnête.
+
+ULYSSE — Tu crois que je ne le suis pas ?
+
+CALYPSO — Tu es honnête quand la vérité ne te donne aucun avantage.
+
+ULYSSE — C’est une définition sévère.
+
+CALYPSO — C’est une longue île.
+
 NARRATRICE — Cette fois, Calypso reste longtemps sans parler.
 
 CALYPSO — Les dieux ont décidé que tu partirais.
@@ -389,6 +447,44 @@ ULYSSE — Je n’avais pas prévu de mourir.
 CALYPSO — Voilà qui me rassure. Les morts suivent souvent leur plan.
 
 NARRATRICE — Il sourit.
+
+CALYPSO — Qu’est-ce que tu feras en premier ?
+
+ULYSSE — Quand ?
+
+CALYPSO — Si tu arrives.
+
+ULYSSE — Je ne sais pas.
+
+CALYPSO — Tu regardes cette mer depuis des années et tu n’as pas prévu la première heure.
+
+ULYSSE — J’ai prévu le voyage.
+
+CALYPSO — Ce n’est pas ce que j’ai demandé.
+
+ULYSSE — Peut-être que je marcherai jusqu’à la maison.
+
+CALYPSO — Et ensuite ?
+
+ULYSSE — J’entrerai.
+
+CALYPSO — Comme si tu étais parti hier ?
+
+ULYSSE — Non.
+
+CALYPSO — Alors comment ?
+
+ULYSSE — Je ne sais pas.
+
+CALYPSO — Tu connais mieux la manière de quitter une île que celle de rentrer chez toi.
+
+ULYSSE — C’est possible.
+
+CALYPSO — C’est certain.
+
+ULYSSE — Alors je commencerai par apprendre.
+
+CALYPSO — Voilà une réponse que je peux croire.
 
 NARRATRICE — Au matin, l’île s’éloigne.
 
@@ -463,6 +559,62 @@ NAUSICAA — Tu viens d’où ?
 ULYSSE — De la mer.
 
 NAUSICAA — Ça, j’avais compris.
+
+NAUSICAA — Tu es soldat ?
+
+ULYSSE — Pourquoi ?
+
+NAUSICAA — Tes mains.
+
+ULYSSE — Elles peuvent appartenir à un charpentier.
+
+NAUSICAA — Tu as une cicatrice ici.
+
+ULYSSE — Les charpentiers se blessent.
+
+NAUSICAA — Et là.
+
+ULYSSE — Les très mauvais charpentiers se blessent beaucoup.
+
+NAUSICAA — Tu évites la question.
+
+ULYSSE — Oui.
+
+NAUSICAA — Donc tu es soldat.
+
+ULYSSE — J’ai été soldat.
+
+NAUSICAA — Tu as tué des hommes ?
+
+NARRATRICE — Les compagnes de Nausicaa se taisent.
+
+ULYSSE — Oui.
+
+NAUSICAA — Beaucoup ?
+
+ULYSSE — Assez pour ne pas vouloir répondre avec un nombre.
+
+NAUSICAA — Et tu veux que nous t’aidions.
+
+ULYSSE — Oui.
+
+NAUSICAA — Pourquoi devrais-je croire que tu n’es pas dangereux ?
+
+ULYSSE — Tu ne devrais pas.
+
+JEUNE FEMME — Nausicaa.
+
+ULYSSE — Mais tu peux croire une autre chose.
+
+NAUSICAA — Laquelle ?
+
+ULYSSE — Si je voulais te faire croire que je suis inoffensif, j’aurais répondu autrement.
+
+NARRATRICE — Nausicaa le regarde plus longtemps.
+
+NAUSICAA — Tu es compliqué.
+
+ULYSSE — On me l’a déjà reproché.
 
 NARRATRICE — Ulysse hésite. Il sait parler aux rois. Il sait commander à des hommes qui ont peur. Il sait mentir quand un mensonge ouvre une porte.
 
