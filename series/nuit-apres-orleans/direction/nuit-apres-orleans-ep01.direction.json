@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "id": "nuit-apres-orleans-ep01",
+  "mode": "story",
+  "density": "scene-rich",
+  "goal": "Faire oublier le dispositif : conduire l’auditeur du confinement d’Orléans vers l’espace nocturne de la Loire en laissant les voix, les bruits de ville, les cloches, l’eau et le silence se transmettre réellement l’attention.",
+  "historical_mode": "evocation-composite",
+  "constraints": [
+    "no_narration_duplicates_obvious_sound",
+    "one_primary_attention_owner_per_beat",
+    "continuous_layers_need_narrative_reason",
+    "silence_is_allowed",
+    "measured_voice_timing_is_authoritative",
+    "dialogue_pause_is_semantic_not_default",
+    "interruption_beats_use_short_handoff",
+    "fr_french_story_avoids_multilingual_provider_voices"
+  ],
+  "characters": {
+    "martin": {
+      "arc": [
+        "alert-not-bravado",
+        "entrusted",
+        "quietly-honest-with-agnes",
+        "seduced-by-attention",
+        "ashamed"
+      ]
+    },
+    "agnes": {
+      "arc": [
+        "fifteen-year-old-guarded",
+        "dryly-amused",
+        "vulnerable-about-father",
+        "protective-of-truth"
+      ]
+    },
+    "etienne": {
+      "arc": [
+        "wounded-practical",
+        "trusting-without-sentimentality"
+      ]
+    },
+    "narrateur": {
+      "arc": [
+        "tactile-close",
+        "factual-only-when-needed",
+        "withdraws-during-dialogue",
+        "returns-to-shape-space-and-time"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "id": "dark-before-certainty",
+      "attention_owner": "space",
+      "purpose": "commencer dans un espace fermé et corporel sans bravade verbale de Martin",
+      "voice_state": "close-contained"
+    },
+    {
+      "id": "first-bell-breaks-room",
+      "after_segment": 3,
+      "attention_owner": "sound",
+      "sound": "church-bell-distant",
+      "purpose": "laisser le monde extérieur interrompre physiquement la cachette de Martin avant que quelqu’un ne vienne le chercher",
+      "handoff": "voice-to-sound-to-voice",
+      "exit": "fade-before-human-voice"
+    },
+    {
+      "id": "street-has-weight",
+      "after_segment": 11,
+      "attention_owner": "sound",
+      "sound": "historic-horse-hooves",
+      "purpose": "faire exister la rue par un passage concret avant que la narration ne la décrive davantage",
+      "handoff": "voice-to-sound-to-voice",
+      "exit": "short-pass"
+    },
+    {
+      "id": "historical-anchor-may-8",
+      "after_segment": 9,
+      "attention_owner": "voice",
+      "purpose": "donner une seule fois les repères indispensables sur le 8 mai 1429 puis revenir immédiatement aux corps et aux conséquences",
+      "voice_state": "clear-without-lecture"
+    },
+    {
+      "id": "seal-in-the-hand",
+      "after_segment": 53,
+      "attention_owner": "voice",
+      "purpose": "faire comprendre l’authentification par l’objet que Martin tient sans formule scolaire ni difficulté de liaison TTS",
+      "voice_state": "tactile-slower"
+    },
+    {
+      "id": "father-rule-lands",
+      "after_segment": 61,
+      "attention_owner": "silence",
+      "purpose": "laisser la distinction histoire/mensonge agir avant le départ",
+      "exit": "held-pause"
+    },
+    {
+      "id": "danger-remains-on-bank",
+      "after_segment": 65,
+      "attention_owner": "sound",
+      "sound": "historic-horse-hooves",
+      "purpose": "rappeler discrètement que la guerre et les circulations armées continuent hors de la barque",
+      "handoff": "sound-foreground-to-one-line-carry",
+      "exit": "measured-carry-no-tail"
+    },
+    {
+      "id": "orleans-stays-behind",
+      "after_segment": 66,
+      "attention_owner": "sound",
+      "sound": "church-bell-distant",
+      "purpose": "faire sentir que la ville reste acoustiquement derrière eux alors que la conversation reprend déjà sur l’eau",
+      "handoff": "sound-foreground-to-dialogue-carry",
+      "exit": "measured-carry-then-fade"
+    },
+    {
+      "id": "last-bell",
+      "after_segment": 89,
+      "attention_owner": "sound",
+      "sound": "church-bell-distant",
+      "purpose": "donner seule la dernière trace sonore d’Orléans et faire ressentir sa disparition plutôt que la raconter immédiatement",
+      "handoff": "voice-to-sound",
+      "exit": "long-fade-to-near-silence"
+    },
+    {
+      "id": "river-takes-the-scene",
+      "after_segment": 90,
+      "attention_owner": "sound",
+      "sound": "river-water-flow",
+      "purpose": "transférer le centre perceptif de la ville au fleuve puis laisser l’eau rester sous les deux premières répliques",
+      "handoff": "sound-foreground-to-dialogue-carry",
+      "exit": "measured-carry-then-fade"
+    },
+    {
+      "id": "lie-lands",
+      "after_segment": 133,
+      "attention_owner": "silence",
+      "purpose": "laisser une pause nette mais non théâtralement longue après « De la Pucelle »",
+      "exit": "held-pause"
+    },
+    {
+      "id": "agnes-cuts-martin",
+      "after_segment": 143,
+      "attention_owner": "voice",
+      "purpose": "faire sentir une interruption par un handoff quasi immédiat, faute d’overlap dialogue dans le contrat public",
+      "handoff": "short-handoff",
+      "exit": "next-voice-immediate"
+    },
+    {
+      "id": "rumour-now-independent",
+      "after_segment": 149,
+      "attention_owner": "sound",
+      "sound": "river-water-flow",
+      "purpose": "laisser la Loire reprendre le premier plan avant le dernier cliffhanger et continuer sous la dernière phrase",
+      "handoff": "sound-foreground-to-final-voice-carry",
+      "exit": "tail-after-final-line"
+    }
+  ]
+}
