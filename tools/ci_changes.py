@@ -25,7 +25,15 @@ SITE_EXACT = {
 
 
 def classify(paths):
-    paths = [str(path).replace("\\", "/").lstrip("./") for path in paths if str(path).strip()]
+    normalized = []
+    for path in paths:
+        value = str(path).replace("\\", "/")
+        if not value.strip():
+            continue
+        if value.startswith("./"):
+            value = value[2:]
+        normalized.append(value)
+    paths = normalized
     audio_reasons = []
     build_reasons = []
 
