@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Écoute humaine — La nuit après Orléans</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0c1117;--panel:#151c24;--line:#2b3541;--text:#f3f6f8;--muted:#aab4bf;--accent:#7dd3fc;--good:#86efac;--warn:#fde68a}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+    main{width:min(980px,calc(100% - 28px));margin:0 auto;padding:28px 0 64px}
+    h1{font-size:clamp(1.8rem,5vw,3.2rem);line-height:1.05;margin:.2em 0}.kicker{color:var(--accent);font-weight:750;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem}
+    .lead{font-size:1.08rem;color:var(--muted);max-width:74ch}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0}
+    .evidence{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:.88rem}
+    audio{width:100%;margin-top:10px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.clip h3{margin:.1em 0}.clip p{margin:.25em 0;color:var(--muted);font-size:.94rem}
+    button{font:inherit}.seek,.copy{border:1px solid var(--line);background:#1d2732;color:var(--text);border-radius:10px;padding:9px 12px;cursor:pointer}.seek:hover,.copy:hover{border-color:var(--accent)}
+    fieldset{border:0;padding:0;margin:22px 0}.question{border-top:1px solid var(--line);padding-top:18px}.question legend{font-weight:750;padding:0;margin-bottom:8px}.hint{color:var(--muted);font-size:.92rem}
+    .scale{display:grid;grid-template-columns:repeat(5,minmax(48px,1fr));gap:8px;margin-top:10px}.scale label,.choice label,.checks label{display:flex;gap:7px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:9px;background:#111821}
+    .choice{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px}
+    textarea{width:100%;min-height:100px;background:#0f151c;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}
+    #summary{min-height:230px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem}.summary-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .status{color:var(--good);font-weight:700}.warning{color:var(--warn)}small{color:var(--muted)}
+    @media(max-width:620px){.choice{grid-template-columns:1fr}.scale{grid-template-columns:repeat(5,1fr)}.scale label{display:block;text-align:center;padding:9px 3px}.summary-head{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="kicker">Gate humain · PR #42</div>
+  <h1>La nuit après Orléans</h1>
+  <p class="lead">Écoutez le master gelé puis notez uniquement ce que l’oreille peut décider. Le brouillon reste dans ce navigateur. À la fin, copiez le bilan et collez-le dans la discussion : aucun fichier à exporter.</p>
+
+  <section class="card">
+    <h2>Master de référence</h2>
+    <audio id="master" controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/pr42-human-review-v2/master.mp3"></audio>
+    <div class="evidence">
+      <span class="pill">11:00,84</span><span class="pill">150/150 timings mesurés</span><span class="pill">7/7 événements non tronqués</span><span class="pill">0 nouveau rendu</span>
+    </div>
+    <p class="hint">Autorité : candidat <code>203268827…</code>, Audio Engine <code>e3657805…</code>, master SHA-256 <code>4fa33d1687…</code>.</p>
+  </section>
+
+  <section class="card">
+    <h2>Passages ciblés</h2>
+    <div class="grid">
+      <article class="clip"><h3>Départ — sabots</h3><p>Bridge de départ, environ 5:16.</p><audio controls preload="none" src="https://github.com/stefm78/recit-audioguide/releases/download/pr42-human-review-v2/event-03.mp3"></audio></article>
+      <article class="clip"><h3>Cloche en bridge</h3><p>Cloche sous reprise de la parole, environ 5:26.</p><audio controls preload="none" src="https://github.com/stefm78/recit-audioguide/releases/download/pr42-human-review-v2/event-04.mp3"></audio></article>
+      <article class="clip"><h3>Cloche → espace</h3><p>La cloche se retire avant la Loire, environ 6:34.</p><audio controls preload="none" src="https://github.com/stefm78/recit-audioguide/releases/download/pr42-human-review-v2/event-05.mp3"></audio></article>
+      <article class="clip"><h3>Entrée de l’eau</h3><p>Premier bridge de Loire, environ 6:48.</p><audio controls preload="none" src="https://github.com/stefm78/recit-audioguide/releases/download/pr42-human-review-v2/event-06.mp3"></audio></article>
+      <article class="clip"><h3>Fondu final</h3><p>Dernière phrase puis eau, jusqu’à 11:00.</p><audio controls preload="none" src="https://github.com/stefm78/recit-audioguide/releases/download/pr42-human-review-v2/event-07.mp3"></audio></article>
+      <article class="clip"><h3>Halte avant Meung</h3><p>Écoute dans le master à partir de 7:12.</p><button class="seek" type="button" data-seek="431.88">Aller à 7:12 dans le master</button></article>
+    </div>
+  </section>
+
+  <form id="review" class="card">
+    <h2>Évaluation</h2>
+    <p class="hint">1 = rupture nette · 3 = acceptable mais perceptible · 5 = convaincant, on oublie le moteur.</p>
+
+    <fieldset class="question"><legend>1. Naturel des voix adolescentes</legend><div class="scale">
+      <label><input type="radio" name="voices" value="1">1</label><label><input type="radio" name="voices" value="2">2</label><label><input type="radio" name="voices" value="3">3</label><label><input type="radio" name="voices" value="4">4</label><label><input type="radio" name="voices" value="5">5</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>2. Équilibre narratrice / dialogues</legend><div class="scale">
+      <label><input type="radio" name="balance" value="1">1</label><label><input type="radio" name="balance" value="2">2</label><label><input type="radio" name="balance" value="3">3</label><label><input type="radio" name="balance" value="4">4</label><label><input type="radio" name="balance" value="5">5</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>3. Transition cloches → espace → eau</legend><div class="scale">
+      <label><input type="radio" name="transition" value="1">1</label><label><input type="radio" name="transition" value="2">2</label><label><input type="radio" name="transition" value="3">3</label><label><input type="radio" name="transition" value="4">4</label><label><input type="radio" name="transition" value="5">5</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>4. Compréhension spontanée de la halte avant Meung</legend><p class="hint">Sans relire le texte : comprend-on naturellement pourquoi ils peuvent s’arrêter ici et ce qui reste dangereux ?</p><div class="scale">
+      <label><input type="radio" name="meung" value="1">1</label><label><input type="radio" name="meung" value="2">2</label><label><input type="radio" name="meung" value="3">3</label><label><input type="radio" name="meung" value="4">4</label><label><input type="radio" name="meung" value="5">5</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>5. Qualité perceptive du dernier fondu</legend><div class="scale">
+      <label><input type="radio" name="fade" value="1">1</label><label><input type="radio" name="fade" value="2">2</label><label><input type="radio" name="fade" value="3">3</label><label><input type="radio" name="fade" value="4">4</label><label><input type="radio" name="fade" value="5">5</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>Défauts réellement entendus</legend><div class="checks">
+      <label><input type="checkbox" name="defect" value="voix adolescentes artificielles">Voix adolescentes artificielles</label>
+      <label><input type="checkbox" name="defect" value="narratrice trop présente">Narratrice trop présente</label>
+      <label><input type="checkbox" name="defect" value="dialogues noyés ou déséquilibrés">Dialogues noyés / déséquilibrés</label>
+      <label><input type="checkbox" name="defect" value="transition cloche-eau abrupte">Transition cloche → eau abrupte</label>
+      <label><input type="checkbox" name="defect" value="halte avant Meung peu claire">Halte avant Meung peu claire</label>
+      <label><input type="checkbox" name="defect" value="fondu final trop court ou trop long">Fondu final trop court / trop long</label>
+      <label><input type="checkbox" name="defect" value="autre rupture d’immersion">Autre rupture d’immersion</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>Décision</legend><div class="choice">
+      <label><input type="radio" name="decision" value="PASS">PASS — suffisamment bon pour promouvoir</label>
+      <label><input type="radio" name="decision" value="V3_TARGETED">V3_TARGETED — corriger seulement les défauts ciblés</label>
+      <label><input type="radio" name="decision" value="FAIL">FAIL — problème structurel perceptible</label>
+    </div></fieldset>
+
+    <label for="notes"><strong>Notes libres</strong></label>
+    <textarea id="notes" name="notes" placeholder="Seulement ce qui aidera à décider ou corriger…"></textarea>
+  </form>
+
+  <section class="card">
+    <div class="summary-head"><div><h2 style="margin:0">Bilan à copier</h2><small>Mis à jour automatiquement. Votre brouillon reste local à cet appareil.</small></div><button id="copy" class="copy" type="button">Copier le bilan</button></div>
+    <textarea id="summary" readonly aria-label="Bilan à copier"></textarea>
+    <p id="copyStatus" class="status" role="status" aria-live="polite"></p>
+  </section>
+</main>
+<script>
+(function () {
+  var form = document.getElementById('review');
+  var summary = document.getElementById('summary');
+  var master = document.getElementById('master');
+  var storageKey = 'pr42-human-review-v2';
+  var labels = {
+    voices:'Naturel voix adolescentes',
+    balance:'Équilibre narratrice/dialogues',
+    transition:'Transition cloches → espace → eau',
+    meung:'Compréhension halte avant Meung',
+    fade:'Dernier fondu'
+  };
+
+  document.querySelectorAll('[data-seek]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      master.currentTime = Number(btn.dataset.seek);
+      master.play();
+      master.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  });
+
+  function selected(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : 'NON NOTÉ';
+  }
+
+  function getState() {
+    var defects = Array.from(form.querySelectorAll('input[name="defect"]:checked')).map(function (x) { return x.value; });
+    var scores = {};
+    Object.keys(labels).forEach(function (key) { scores[key] = selected(key); });
+    return {scores:scores, defects:defects, decision:selected('decision'), notes:form.notes.value.trim()};
+  }
+
+  function render() {
+    var state = getState();
+    var scoreLines = Object.keys(labels).map(function (key) {
+      return '- ' + labels[key] + ' : ' + state.scores[key] + '/5';
+    }).join('\n');
+    summary.value =
+      'HUMAN REVIEW — PR42 / LA NUIT APRÈS ORLÉANS\n' +
+      'Candidate: 203268827d5c5e7d7312545f465b653c5bd31690\n' +
+      'Review release: pr42-human-review-v2\n' +
+      'Master SHA-256: 4fa33d168796ef745dc9bfae95ec58135490b673c048c998c8bda029d3674893\n\n' +
+      'SCORES\n' + scoreLines + '\n\n' +
+      'DÉFAUTS ENTENDUS\n' +
+      (state.defects.length ? state.defects.map(function (x) { return '- ' + x; }).join('\n') : '- aucun signalé') +
+      '\n\nDÉCISION\n' + state.decision +
+      '\n\nNOTES\n' + (state.notes || '(aucune)');
+    localStorage.setItem(storageKey, JSON.stringify(state));
+  }
+
+  function restore() {
+    try {
+      var state = JSON.parse(localStorage.getItem(storageKey) || 'null');
+      if (!state) return;
+      Object.keys(state.scores || {}).forEach(function (name) {
+        var value = state.scores[name];
+        var el = form.querySelector('input[name="' + name + '"][value="' + value + '"]');
+        if (el) el.checked = true;
+      });
+      (state.defects || []).forEach(function (value) {
+        var el = Array.from(form.querySelectorAll('input[name="defect"]')).find(function (x) { return x.value === value; });
+        if (el) el.checked = true;
+      });
+      var decision = form.querySelector('input[name="decision"][value="' + (state.decision || '') + '"]');
+      if (decision) decision.checked = true;
+      form.notes.value = state.notes || '';
+    } catch (_) {}
+  }
+
+  form.addEventListener('input', render);
+  form.addEventListener('change', render);
+  document.getElementById('copy').addEventListener('click', async function () {
+    try {
+      await navigator.clipboard.writeText(summary.value);
+      document.getElementById('copyStatus').textContent = 'Bilan copié.';
+    } catch (_) {
+      summary.select();
+      document.execCommand('copy');
+      document.getElementById('copyStatus').textContent = 'Bilan copié.';
+    }
+  });
+
+  restore();
+  render();
+})();
+</script>
+</body>
+</html>
