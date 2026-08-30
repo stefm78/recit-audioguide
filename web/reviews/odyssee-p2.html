@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Écoute humaine — L’Odyssée P2</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0c1117;--panel:#151c24;--line:#2b3541;--text:#f3f6f8;--muted:#aab4bf;--accent:#7dd3fc;--good:#86efac}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+    main{width:min(900px,calc(100% - 28px));margin:0 auto;padding:28px 0 64px}
+    h1{font-size:clamp(1.8rem,5vw,3.2rem);line-height:1.05;margin:.2em 0}.kicker{color:var(--accent);font-weight:750;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem}
+    .lead,.hint{color:var(--muted)}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0}
+    .evidence{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:.88rem}
+    audio{width:100%;margin-top:10px}fieldset{border:0;padding:0;margin:22px 0}.question{border-top:1px solid var(--line);padding-top:18px}.question legend{font-weight:750;padding:0;margin-bottom:8px}
+    .scale{display:grid;grid-template-columns:repeat(5,minmax(48px,1fr));gap:8px;margin-top:10px}.choice,.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}
+    .scale label,.choice label,.checks label{display:flex;gap:7px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:9px;background:#111821}
+    textarea{width:100%;min-height:100px;background:#0f151c;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}
+    #summary{min-height:330px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem}.summary-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .copy{border:1px solid var(--line);background:#1d2732;color:var(--text);border-radius:10px;padding:9px 12px;cursor:pointer}.copy:hover{border-color:var(--accent)}.status{color:var(--good);font-weight:700}
+    ol{padding-left:1.3rem}code{overflow-wrap:anywhere}
+    @media(max-width:620px){.scale{grid-template-columns:repeat(5,1fr)}.scale label{display:block;text-align:center;padding:9px 3px}.summary-head{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="kicker">Gate humain · Odyssée P2</div>
+  <h1>Qui possède maintenant le récit&nbsp;?</h1>
+  <p class="lead">Écoutez une première fois sans lire le script. Le seul enjeu est de savoir si, après la révélation du nom, vous sentez naturellement que la narratrice cède le récit à Ulysse — sans jingle, sans explication technique et sans rupture artificielle.</p>
+
+  <section class="card">
+    <h2>Écoute</h2>
+    <audio id="master" controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p2-review-v1/p2.mp3"></audio>
+    <div class="evidence">
+      <span class="pill">Machine PASS</span>
+      <span class="pill">Pipeline complet PASS</span>
+      <span class="pill">Near-dry</span>
+      <span class="pill">0 jingle · 0 musique · 0 mer générique</span>
+    </div>
+    <p class="hint">Ordre entendu : Narratrice → Alcinoos → Narratrice → Ulysse → Narratrice → Ulysse → Alcinoos → Ulysse → Narratrice → Ulysse conteur.</p>
+    <p class="hint">Candidate <code>67a22afc7d3f61a67f04706beeb313ffe5fefc54</code> · release <code>odyssee-p2-review-v1</code> · audio SHA-256 <code>31b8055dde3b5521952559ec49a988fe8c055bdd2e738f6b0e03671ad91df4e9</code>.</p>
+  </section>
+
+  <section class="card">
+    <h2>Ce qu’il faut écouter</h2>
+    <ol>
+      <li>Après « Ulysse », sentez-vous progressivement que le récit devient le sien ?</li>
+      <li>Lorsque commence « Nous avions quitté Troie… », qui vous semble porter l’histoire : Ulysse ou la narratrice ?</li>
+      <li>La transition paraît-elle naturelle, ou trop signalée ?</li>
+      <li>Ulysse reste-t-il le même personnage vocal que lors de P1 ?</li>
+      <li>Alcinoos reste-t-il un déclencheur secondaire sans voler la scène ?</li>
+      <li>Le français reste-t-il naturel ?</li>
+    </ol>
+    <p class="hint"><strong>Important :</strong> ne jugez pas ici le Cyclope, la musique ou le sound design. P2 teste uniquement la propriété du récit.</p>
+  </section>
+
+  <form id="review" class="card">
+    <h2>Évaluation</h2>
+
+    <fieldset class="question"><legend>1. Clarté de la bascule narratrice → Ulysse</legend><p class="hint">1 = aucune bascule perceptible · 3 = compréhensible mais mécanique · 5 = évidente sans y penser.</p><div class="scale">
+      <label><input type="radio" name="handoff" value="1">1</label><label><input type="radio" name="handoff" value="2">2</label><label><input type="radio" name="handoff" value="3">3</label><label><input type="radio" name="handoff" value="4">4</label><label><input type="radio" name="handoff" value="5">5</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>2. Après « Nous avions quitté Troie… », qui porte le récit ?</legend><div class="choice">
+      <label><input type="radio" name="owner" value="Ulysse">Ulysse</label>
+      <label><input type="radio" name="owner" value="Narratrice">Narratrice</label>
+      <label><input type="radio" name="owner" value="Ambigu">Ambigu</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>3. Naturel de la transition</legend><div class="choice">
+      <label><input type="radio" name="natural" value="PASS">PASS</label>
+      <label><input type="radio" name="natural" value="BORDERLINE">BORDERLINE</label>
+      <label><input type="radio" name="natural" value="FAIL">FAIL</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>4. Identité d’Ulysse vs P1</legend><div class="choice">
+      <label><input type="radio" name="identity" value="PASS">PASS — même personnage</label>
+      <label><input type="radio" name="identity" value="BORDERLINE">BORDERLINE</label>
+      <label><input type="radio" name="identity" value="FAIL">FAIL — dérive d’identité</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>5. Alcinoos reste secondaire</legend><div class="choice">
+      <label><input type="radio" name="alcinoos" value="PASS">PASS</label>
+      <label><input type="radio" name="alcinoos" value="TROP PRÉSENT">Trop présent</label>
+      <label><input type="radio" name="alcinoos" value="PROBLÈME VOIX">Problème voix</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>6. Français naturel</legend><div class="choice">
+      <label><input type="radio" name="french" value="PASS">PASS</label>
+      <label><input type="radio" name="french" value="FAIL">FAIL</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>Défauts entendus</legend><div class="checks">
+      <label><input type="checkbox" name="defect" value="bascule trop signalée">Bascule trop signalée</label>
+      <label><input type="checkbox" name="defect" value="bascule trop faible">Bascule trop faible</label>
+      <label><input type="checkbox" name="defect" value="narratrice concurrence Ulysse">Narratrice concurrence Ulysse</label>
+      <label><input type="checkbox" name="defect" value="Ulysse pas assez conteur">Ulysse pas assez conteur</label>
+      <label><input type="checkbox" name="defect" value="Alcinoos parasite">Alcinoos parasite</label>
+      <label><input type="checkbox" name="defect" value="problème français">Problème français</label>
+      <label><input type="checkbox" name="defect" value="autre">Autre</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>Décision</legend><div class="choice">
+      <label><input type="radio" name="decision" value="PASS">PASS — autoriser P3</label>
+      <label><input type="radio" name="decision" value="FAIL">FAIL — préparer P2 ciblé v2</label>
+    </div></fieldset>
+
+    <label for="notes"><strong>Notes libres</strong></label>
+    <textarea id="notes" name="notes" placeholder="Ce qui vous a fait sentir — ou non — que le récit passait à Ulysse…"></textarea>
+  </form>
+
+  <section class="card">
+    <div class="summary-head"><div><h2 style="margin:0">Bilan à copier</h2><small>Mis à jour automatiquement. Aucun fichier à exporter.</small></div><button id="copy" class="copy" type="button">Copier le bilan</button></div>
+    <textarea id="summary" readonly aria-label="Bilan à copier"></textarea>
+    <p id="copyStatus" class="status" role="status" aria-live="polite"></p>
+  </section>
+</main>
+<script>
+(function () {
+  var form = document.getElementById('review');
+  var summary = document.getElementById('summary');
+  var storageKey = 'odyssee-p2-review-v1';
+
+  function selected(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : 'NON NOTÉ';
+  }
+  function getState() {
+    return {
+      handoff:selected('handoff'),
+      owner:selected('owner'),
+      natural:selected('natural'),
+      identity:selected('identity'),
+      alcinoos:selected('alcinoos'),
+      french:selected('french'),
+      defects:Array.from(form.querySelectorAll('input[name="defect"]:checked')).map(function(x){return x.value;}),
+      decision:selected('decision'),
+      notes:form.notes.value.trim()
+    };
+  }
+  function render() {
+    var s = getState();
+    summary.value =
+      'HUMAN REVIEW — ODYSSÉE P2 NARRATIVE OWNERSHIP\n' +
+      'Candidate: 67a22afc7d3f61a67f04706beeb313ffe5fefc54\n' +
+      'Review release: odyssee-p2-review-v1\n' +
+      'Audio SHA-256: 31b8055dde3b5521952559ec49a988fe8c055bdd2e738f6b0e03671ad91df4e9\n\n' +
+      'SCORES\n' +
+      '- Clarté bascule: ' + s.handoff + '/5\n' +
+      '- Propriétaire après Troie: ' + s.owner + '\n' +
+      '- Naturel transition: ' + s.natural + '\n' +
+      '- Identité Ulysse vs P1: ' + s.identity + '\n' +
+      '- Alcinoos secondaire: ' + s.alcinoos + '\n' +
+      '- Français: ' + s.french + '\n\n' +
+      'DÉFAUTS ENTENDUS\n' +
+      (s.defects.length ? s.defects.map(function(x){return '- ' + x;}).join('\n') : '- aucun signalé') +
+      '\n\nDÉCISION\n' + s.decision +
+      '\n\nNOTES\n' + (s.notes || '(aucune)');
+    localStorage.setItem(storageKey, JSON.stringify(s));
+  }
+  function restore() {
+    try {
+      var s = JSON.parse(localStorage.getItem(storageKey) || 'null');
+      if (!s) return;
+      ['handoff','owner','natural','identity','alcinoos','french','decision'].forEach(function(name){
+        var value = s[name];
+        var el = form.querySelector('input[name="' + name + '"][value="' + value + '"]');
+        if (el) el.checked = true;
+      });
+      (s.defects || []).forEach(function(value){
+        var el = Array.from(form.querySelectorAll('input[name="defect"]')).find(function(x){return x.value === value;});
+        if (el) el.checked = true;
+      });
+      form.notes.value = s.notes || '';
+    } catch (_) {}
+  }
+  form.addEventListener('input', render);
+  form.addEventListener('change', render);
+  document.getElementById('copy').addEventListener('click', async function(){
+    try {
+      await navigator.clipboard.writeText(summary.value);
+    } catch (_) {
+      summary.select();
+      document.execCommand('copy');
+    }
+    document.getElementById('copyStatus').textContent = 'Bilan copié.';
+  });
+  restore();
+  render();
+})();
+</script>
+</body>
+</html>
