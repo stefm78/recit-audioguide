@@ -92,6 +92,42 @@ NARRATRICE — La phrase reste entre eux. Elle a été dite trop souvent pour fa
 
 PÉNÉLOPE — Moi aussi.
 
+TÉLÉMAQUE — Tu le dis comme si tu pouvais attendre encore dix ans.
+
+PÉNÉLOPE — Non.
+
+TÉLÉMAQUE — Pourtant tu attends.
+
+PÉNÉLOPE — Ce n’est pas la même chose.
+
+TÉLÉMAQUE — Quelle différence ?
+
+PÉNÉLOPE — Attendre quelqu’un, c’est croire qu’il reviendra. Tenir jusqu’à savoir, c’est autre chose.
+
+TÉLÉMAQUE — Et toi, tu fais quoi ?
+
+PÉNÉLOPE — Je tiens.
+
+TÉLÉMAQUE — Ça a l’air très proche.
+
+PÉNÉLOPE — Seulement de loin.
+
+NARRATRICE — Télémaque connaît cette réponse. Il connaît aussi les nuits où sa mère descend jusqu’au métier à tisser quand toute la maison dort. Le fil défait sous ses doigts a longtemps été une façon de voler du temps aux prétendants.
+
+NARRATRICE — Mais le secret s’use, lui aussi.
+
+TÉLÉMAQUE — Ils finiront par ne plus accepter aucun délai.
+
+PÉNÉLOPE — Oui.
+
+TÉLÉMAQUE — Et alors ?
+
+PÉNÉLOPE — Alors j’aurai besoin que tu sois autre chose qu’en colère.
+
+TÉLÉMAQUE — Je fais ce que je peux.
+
+PÉNÉLOPE — Je sais. C’est précisément pour cela que je te le dis.
+
 TÉLÉMAQUE — Et s’il est mort ?
 
 PÉNÉLOPE — Alors nous l’apprendrons.
@@ -149,6 +185,78 @@ ATHÉNA — Alors reviens en homme capable de l’aider, pas en garçon capable 
 NARRATRICE — Il détourne les yeux une seconde.
 
 NARRATRICE — Quand il regarde à nouveau, la cour semble plus vide.
+
+NARRATRICE — Cette nuit-là, Télémaque trouve sa mère près du métier.
+
+TÉLÉMAQUE — Je vais partir.
+
+PÉNÉLOPE — Où ?
+
+TÉLÉMAQUE — Chercher des hommes qui sont revenus de Troie.
+
+PÉNÉLOPE — Qui t’a mis cette idée en tête ?
+
+TÉLÉMAQUE — Une étrangère.
+
+PÉNÉLOPE — Voilà qui me rassure énormément.
+
+TÉLÉMAQUE — Elle avait raison.
+
+PÉNÉLOPE — Les gens qui ont raison peuvent être dangereux.
+
+TÉLÉMAQUE — Les gens qui restent ici aussi.
+
+NARRATRICE — Pénélope laisse passer quelques fils entre ses doigts.
+
+PÉNÉLOPE — Tu veux partir parce que tu espères trouver ton père ?
+
+TÉLÉMAQUE — Je veux partir parce que je ne supporte plus que tout le monde sache quelque chose sur lui sauf nous.
+
+PÉNÉLOPE — Tu peux revenir avec une mauvaise nouvelle.
+
+TÉLÉMAQUE — Oui.
+
+PÉNÉLOPE — Ou aucune.
+
+TÉLÉMAQUE — Oui.
+
+PÉNÉLOPE — Ou avec une histoire si belle que tu auras envie de la croire.
+
+TÉLÉMAQUE — Alors apprends-moi à ne pas la croire trop vite.
+
+NARRATRICE — Pénélope lève les yeux.
+
+PÉNÉLOPE — Demande toujours qui a vu quoi.
+
+TÉLÉMAQUE — D’accord.
+
+PÉNÉLOPE — Pas qui a entendu. Pas qui connaît un homme qui connaît un marin. Qui a vu.
+
+TÉLÉMAQUE — D’accord.
+
+PÉNÉLOPE — Et si quelqu’un te promet exactement ce que tu veux entendre, commence par te méfier de lui.
+
+TÉLÉMAQUE — Ça aussi, tu l’as appris ici ?
+
+PÉNÉLOPE — Tous les jours.
+
+NARRATRICE — Télémaque regarde le tissu.
+
+TÉLÉMAQUE — Tu continueras ?
+
+PÉNÉLOPE — Jusqu’à ce que ça ne marche plus.
+
+TÉLÉMAQUE — Et après ?
+
+PÉNÉLOPE — Après, j’inventerai autre chose.
+
+TÉLÉMAQUE — Comme père.
+
+PÉNÉLOPE — Non.
+
+NARRATRICE — Elle sourit à peine.
+
+PÉNÉLOPE — Comme moi.
 
 NARRATRICE — À Ithaque, tout le monde attend Ulysse.
 
