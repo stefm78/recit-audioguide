@@ -1,0 +1,30 @@
+name: Rebind Odyssée H1 P4 seeded release
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  rebind:
+    if: github.head_ref == 'probe/H1-p4-chatterbox-candidates'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Rebind seeded P4 assets to exact current HEAD
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir assets
+          gh release download odyssee-h1-p4-chatterbox-review-v1             --repo "$GITHUB_REPOSITORY"             --dir assets             --pattern 'p4-a.mp3'             --pattern 'p4-a-report.json'             --pattern 'p4-b.mp3'             --pattern 'p4-b-report.json'
+          tag="odyssee-h1-p4-chatterbox-review-v2"
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$tag" assets/* --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$tag" assets/*               --repo "$GITHUB_REPOSITORY"               --target "$TARGET_SHA"               --prerelease               --title "Odyssée — H1 P4 Chatterbox seeded candidates"               --notes "Provenance-corrected copy of deterministic seeded H1 P4 assets. Candidate A seed 4401; B seed 4402. v1 is superseded and must not be reviewed."
+          fi
