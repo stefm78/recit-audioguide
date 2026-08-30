@@ -336,6 +336,62 @@ MARIN — Tu es sûr ?
 
 ULYSSE — J’étais sûr.
 
+EURYLOQUE — Où est ta maison ?
+
+ULYSSE — Derrière cette hauteur.
+
+MARIN — On ne la voit pas.
+
+ULYSSE — Moi, si.
+
+EURYLOQUE — Tu vois un souvenir.
+
+ULYSSE — Je sais où elle est.
+
+MARIN — Il y a quelqu’un qui nous attendra sur la plage ?
+
+ULYSSE — Non.
+
+MARIN — Pourquoi ?
+
+ULYSSE — Parce que personne ne sait que nous arrivons.
+
+EURYLOQUE — Ça changera.
+
+ULYSSE — Oui.
+
+MARIN — Tu vas faire quoi ?
+
+ULYSSE — Quand nous toucherons terre ?
+
+MARIN — Oui.
+
+ULYSSE — Descendre du bateau.
+
+MARIN — Je veux dire après.
+
+ULYSSE — Moi aussi.
+
+NARRATRICE — Les hommes rient.
+
+ULYSSE — Pour eux, Ithaque est encore une île qu’ils peuvent regarder.
+
+ULYSSE — Pour moi, elle contient soudain toutes les choses que je n’ai pas préparées.
+
+EURYLOQUE — Tu as peur.
+
+ULYSSE — Non.
+
+EURYLOQUE — Ulysse.
+
+ULYSSE — Un peu.
+
+EURYLOQUE — C’est rassurant.
+
+ULYSSE — Pourquoi ?
+
+EURYLOQUE — Parce que si tu n’avais pas peur maintenant, je commencerais à croire que tu n’as vraiment rien appris.
+
 ULYSSE — Pour la première fois depuis Troie, j’ai pensé que je n’avais plus besoin de rester éveillé.
 
 ULYSSE — Alors j’ai dormi.
@@ -353,6 +409,52 @@ MARIN — De l’or ?
 EURYLOQUE — Pourquoi Éole lui donnerait de l’or ?
 
 MARIN — Parce qu’il est roi.
+
+EURYLOQUE — Il a gardé cette outre contre lui pendant neuf jours.
+
+MARIN — Parce qu’il ne nous fait pas confiance.
+
+EURYLOQUE — Ou parce qu’il y a vraiment du vent dedans.
+
+MARIN — Tu crois ça ?
+
+EURYLOQUE — Je crois surtout qu’on est assez près d’Ithaque pour ne pas découvrir maintenant que notre capitaine revient riche pendant que nous rentrons avec des cicatrices.
+
+MARIN — Alors ouvre.
+
+EURYLOQUE — Non.
+
+MARIN — Tu veux savoir.
+
+EURYLOQUE — Oui.
+
+MARIN — Tu veux savoir et tu veux que quelqu’un d’autre fasse le geste.
+
+EURYLOQUE — Oui.
+
+MARIN — Au moins, c’est honnête.
+
+EURYLOQUE — Non. C’est lâche.
+
+MARIN — Tu me laisses le choix ?
+
+EURYLOQUE — Je te dis de ne pas l’ouvrir.
+
+MARIN — Et si c’est de l’or ?
+
+EURYLOQUE — Alors demain, sur la plage, on lui demandera.
+
+MARIN — Et s’il ment ?
+
+EURYLOQUE — Alors on sera déjà chez nous.
+
+MARIN — Tu crois encore qu’on arrive toujours au lendemain qu’on imagine ?
+
+NARRATRICE — Euryloque regarde Ulysse endormi.
+
+EURYLOQUE — Non.
+
+MARIN — Alors regarde.
 
 EURYLOQUE — Nous aussi, on a combattu.
 
@@ -801,6 +903,46 @@ TIRÉSIAS — Tu continueras peut-être seul.
 ULYSSE — Peut-être ?
 
 TIRÉSIAS — Les morts évitent les promesses.
+
+ULYSSE — Tu me demandes encore de contrôler mes hommes.
+
+TIRÉSIAS — Non.
+
+ULYSSE — C’est pourtant ce que signifie ton avertissement.
+
+TIRÉSIAS — Tu entends toujours les avertissements comme des ordres à donner aux autres.
+
+ULYSSE — Que devrais-je entendre ?
+
+TIRÉSIAS — Une limite pour toi.
+
+ULYSSE — Je ne vais pas manger les troupeaux.
+
+TIRÉSIAS — Tu ne mangeras pas seul.
+
+ULYSSE — Alors je dois empêcher les autres.
+
+TIRÉSIAS — Tu ne peux pas empêcher tout.
+
+ULYSSE — Je suis leur capitaine.
+
+TIRÉSIAS — Et ils sont encore des hommes.
+
+ULYSSE — Si je sais ce qui va arriver, je peux l’éviter.
+
+TIRÉSIAS — Voilà la pensée qui t’a conduit dans beaucoup d’endroits.
+
+ULYSSE — Elle m’en a aussi sorti.
+
+TIRÉSIAS — Oui.
+
+ULYSSE — Alors que veux-tu que je fasse ?
+
+TIRÉSIAS — Sache la différence entre guider et croire que tous les choix t’appartiennent.
+
+ULYSSE — C’est une réponse de mort.
+
+TIRÉSIAS — C’est une réponse que les vivants trouvent généralement trop tard.
 
 NARRATRICE — Ulysse s’arrête une seconde.
 
