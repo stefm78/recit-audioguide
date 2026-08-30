@@ -146,6 +146,46 @@ ULYSSE — Et vous.
 
 NARRATRICE — Cette fois, il le dit sans sourire.
 
+EURYLOQUE — Tu sais ce qui m’a mis le plus en colère ?
+
+ULYSSE — Le fait que je me sois fait attacher volontairement à un mât ?
+
+EURYLOQUE — Non.
+
+ULYSSE — J’aurais parié dessus.
+
+EURYLOQUE — C’est que tu nous avais demandé de ne rien entendre.
+
+ULYSSE — Pour vous protéger.
+
+EURYLOQUE — Et toi, tu t’étais réservé le droit d’écouter.
+
+ULYSSE — Oui.
+
+EURYLOQUE — Comme si ce qui était dangereux pour nous devenait supportable parce que tu étais Ulysse.
+
+ULYSSE — Je pensais pouvoir revenir de l’autre côté avec quelque chose de plus.
+
+EURYLOQUE — De la connaissance ?
+
+ULYSSE — Oui.
+
+EURYLOQUE — Tu es revenu avec des marques de corde.
+
+ULYSSE — C’est déjà quelque chose.
+
+EURYLOQUE — Tu plaisantes.
+
+ULYSSE — Un peu.
+
+EURYLOQUE — Moi aussi, parfois, je plaisantais parce que la seule autre option était de t’étrangler avec les cordes.
+
+ULYSSE — Je m’en doutais.
+
+NARRATRICE — Ulysse ne présente pas cette dispute comme une victoire.
+
+NARRATRICE — Son équipage l’a sauvé d’un désir qu’il avait lui-même choisi d’approcher.
+
 # S10 — Choisir ce qu’on perd
 
 ULYSSE — Après les Sirènes, Circé nous avait donné une autre route.
@@ -204,6 +244,56 @@ NARRATRICE — Pas parce qu’il les a oubliés.
 
 ULYSSE — Nous avons continué.
 
+NARRATRICE — Après Scylla, les hommes ne parlent plus tout à fait à Ulysse comme avant.
+
+MARIN — Tu savais.
+
+ULYSSE — Oui.
+
+MARIN — Tu savais que certains d’entre nous allaient mourir.
+
+ULYSSE — Je savais qu’il n’existait pas de passage sans risque.
+
+MARIN — Ce n’est pas la même phrase.
+
+ULYSSE — Non.
+
+MARIN — Qui t’a donné le droit de choisir le risque ?
+
+ULYSSE — Personne.
+
+MARIN — Pourtant tu l’as choisi.
+
+ULYSSE — Parce que j’étais le capitaine.
+
+MARIN — Voilà une réponse bien pratique.
+
+EURYLOQUE — Assez.
+
+MARIN — Non. Pas assez. Chaque fois qu’on perd quelqu’un, on continue. Chaque fois qu’on a peur, il nous dit qu’il faut continuer. Chaque fois qu’il se trompe, il trouve une raison pour laquelle il fallait quand même faire ce qu’il a fait.
+
+ULYSSE — Tu veux que je dise quoi ?
+
+MARIN — Que tu ne sais pas.
+
+ULYSSE — Je ne sais pas.
+
+NARRATRICE — Le marin se tait.
+
+ULYSSE — Je ne sais pas si j’ai choisi le moindre mal.
+
+ULYSSE — Je sais seulement que nous sommes encore là.
+
+MARIN — Pas tous.
+
+ULYSSE — Non.
+
+NARRATRICE — À partir de ce jour, « rentrer » n’est plus un mot que les hommes reçoivent de la même manière.
+
+NARRATRICE — Pour Ulysse, c’est toujours la direction.
+
+NARRATRICE — Pour certains, c’est devenu le nom donné à tout ce qu’ils continuent d’endurer.
+
 ULYSSE — Puis nous avons atteint l’île du Soleil.
 
 EURYLOQUE — Et tu nous as dit de ne pas débarquer.
@@ -249,6 +339,14 @@ ULYSSE — Oui.
 NARRATRICE — Ulysse ferme les yeux une seconde.
 
 EURYLOQUE — Nous avions faim.
+
+NARRATRICE — La faim transforme les ordres.
+
+NARRATRICE — Le premier jour, « ne touchez pas aux troupeaux » est une règle.
+
+NARRATRICE — Le troisième, c’est une injustice.
+
+NARRATRICE — Plus tard, cela devient une phrase prononcée par un homme qui dort un peu plus loin.
 
 MARIN — On va mourir en regardant de la viande marcher devant nous.
 
