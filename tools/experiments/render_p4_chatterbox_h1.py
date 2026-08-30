@@ -4,10 +4,13 @@ import asyncio
 import hashlib
 import json
 import math
+import random
 import time
 from pathlib import Path
 
 import edge_tts
+import numpy as np
+import torch
 import torchaudio as ta
 from chatterbox.mtl_tts import ChatterboxMultilingualTTS
 from pydub import AudioSegment
@@ -50,6 +53,10 @@ def main() -> None:
     spec_path = Path(args.spec)
     spec = json.loads(spec_path.read_text(encoding="utf-8"))
     variant = spec["variants"][args.variant]
+    seed = int(variant["seed"])
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     work = out_dir / "segments"
@@ -108,6 +115,7 @@ def main() -> None:
         "id": spec["id"],
         "variant": args.variant,
         "variant_params": variant,
+        "seed": seed,
         "upstream": spec["upstream"],
         "edge_tts_version": getattr(edge_tts, "__version__", "unknown"),
         "model_load_seconds": model_loaded - t0,
