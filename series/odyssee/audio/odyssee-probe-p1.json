@@ -1,0 +1,93 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-probe-p1-core-identity",
+  "title": "L’Odyssée — P1 identité centrale",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "actors": {
+    "narratrice": {
+      "placement": "center"
+    },
+    "ulysse": {
+      "placement": "center"
+    },
+    "penelope": {
+      "placement": "center"
+    },
+    "telemaque": {
+      "placement": "center"
+    },
+    "athena": {
+      "placement": "center"
+    }
+  },
+  "segments": [
+    {
+      "scene": "P1 — identité centrale",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "À Ithaque, cinq voix peuvent se croiser sans qu’aucune ait besoin de forcer. L’enjeu est simple : l’auditeur doit savoir qui parle avant même que le nom du personnage soit prononcé.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "P1 — identité centrale",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 180,
+      "text": "Regardez-moi. Si vous venez m’annoncer encore une fois qu’Ulysse rentrera demain, commencez par me dire qui l’a vu, où, et quand. Je n’épouserai pas une rumeur.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P1 — identité centrale",
+      "character_id": "telemaque",
+      "speaker": "Télémaque",
+      "pause_after_ms": 170,
+      "text": "Courez si vous voulez prévenir les prétendants. Moi, je reste. J’ai passé assez d’années à attendre qu’un autre homme décide ce que je devais faire dans ma propre maison.",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+5%",
+      "pitch": "+8Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P1 — identité centrale",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 200,
+      "text": "Écoutez. Je ne vous demande pas de croire mon nom. J’ai appris qu’un nom peut sauver un homme, puis le condamner l’instant d’après. J’ai seulement besoin de savoir qui se tient encore de mon côté.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P1 — identité centrale",
+      "character_id": "athena",
+      "speaker": "Athéna",
+      "pause_after_ms": 220,
+      "text": "Approchez. Pas davantage. Vous voulez tous aller plus vite que ce que vous comprenez. Commencez par regarder la pièce, compter les portes, puis seulement décider qui doit parler.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-10%",
+      "pitch": "-14Hz",
+      "volume": "-4%"
+    },
+    {
+      "scene": "P1 — identité centrale",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 250,
+      "text": "Si ces cinq présences restent naturelles, distinctes et françaises sans artifices spectaculaires, le casting peut avancer. Sinon, le récit long s’arrête ici.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    }
+  ]
+}
