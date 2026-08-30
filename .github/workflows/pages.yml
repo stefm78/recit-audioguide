@@ -276,6 +276,50 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
+
+  probe-p4v2-review-release:
+    needs: [changes, preview]
+    if: github.event_name == 'pull_request' && github.head_ref == 'probe/PROBE-WP-004-odyssee-p4v2-casting' && needs.preview.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Download P4 v2 review artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: recit-audio-previews
+          path: review-assets
+      - name: Prepare durable P4 v2 review assets
+        run: |
+          set -euo pipefail
+          cp review-assets/odyssee-probe-p4v2-brigitte-full.mp3 review-assets/brigitte.mp3
+          cp review-assets/odyssee-probe-p4v2-coralie-full.mp3 review-assets/coralie.mp3
+          cp review-assets/odyssee-probe-p4v2-josephine-full.mp3 review-assets/josephine.mp3
+          cp review-assets/odyssee-probe-p4v2-brigitte-manifest.json review-assets/brigitte-manifest.json
+          cp review-assets/odyssee-probe-p4v2-coralie-manifest.json review-assets/coralie-manifest.json
+          cp review-assets/odyssee-probe-p4v2-josephine-manifest.json review-assets/josephine-manifest.json
+          cp review-assets/odyssee-probe-p4v2-brigitte-timing.json review-assets/brigitte-timing.json
+          cp review-assets/odyssee-probe-p4v2-coralie-timing.json review-assets/coralie-timing.json
+          cp review-assets/odyssee-probe-p4v2-josephine-timing.json review-assets/josephine-timing.json
+      - name: Publish durable P4 v2 review release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          tag="odyssee-p4v2-casting-review-v1"
+          assets=(
+            review-assets/brigitte.mp3 review-assets/coralie.mp3 review-assets/josephine.mp3
+            review-assets/brigitte-manifest.json review-assets/coralie-manifest.json review-assets/josephine-manifest.json
+            review-assets/brigitte-timing.json review-assets/coralie-timing.json review-assets/josephine-timing.json
+          )
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$tag" "${assets[@]}" --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$tag" "${assets[@]}" --target "$TARGET_SHA" --prerelease --title "Odyssée — P4 v2 Siren casting review" --notes "Comparative perceptual casting only. PENDING_HUMAN. Three standard fr-FR voices. Dry, neutral parameters, no effects." --repo "$GITHUB_REPOSITORY"
+          fi
+
   build:
     needs: [changes, audio]
     if: always() && needs.changes.outputs.build_needed == 'true' && (needs.audio.result == 'success' || needs.audio.result == 'skipped')
