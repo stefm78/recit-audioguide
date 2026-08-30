@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Écoute humaine — L’Odyssée P3</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1117;--panel:#151c24;--line:#2b3541;--text:#f3f6f8;--muted:#aab4bf;--accent:#7dd3fc;--good:#86efac}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{width:min(900px,calc(100% - 28px));margin:auto;padding:28px 0 64px}h1{font-size:clamp(1.8rem,5vw,3.2rem);line-height:1.05;margin:.2em 0}
+.kicker{color:var(--accent);font-weight:750;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem}.lead,.hint{color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0}.evidence{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:.88rem}audio{width:100%;margin-top:10px}
+fieldset{border:0;padding:0;margin:22px 0}.question{border-top:1px solid var(--line);padding-top:18px}.question legend{font-weight:750;margin-bottom:8px}
+.scale{display:grid;grid-template-columns:repeat(5,minmax(48px,1fr));gap:8px;margin-top:10px}.choice,.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}
+.scale label,.choice label,.checks label{display:flex;gap:7px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:9px;background:#111821}
+textarea{width:100%;min-height:100px;background:#0f151c;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}
+#summary{min-height:330px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem}.summary-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.copy{border:1px solid var(--line);background:#1d2732;color:var(--text);border-radius:10px;padding:9px 12px;cursor:pointer}.status{color:var(--good);font-weight:700}
+ol{padding-left:1.3rem}code{overflow-wrap:anywhere}@media(max-width:620px){.scale{grid-template-columns:repeat(5,1fr)}.scale label{display:block;text-align:center;padding:9px 3px}.summary-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head><body><main>
+<div class="kicker">Gate humain · Odyssée P3</div>
+<h1>Polyphème est-il grand sans qu’on triche&nbsp;?</h1>
+<p class="lead">Écoutez sans chercher un « effet de monstre ». Le probe est volontairement sec : pas de réverbération de grotte, pas de DSP, pas de musique. La voix, le rythme et le texte doivent suffire.</p>
+<section class="card"><h2>Écoute</h2>
+<audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p3-review-v1/p3.mp3"></audio>
+<div class="evidence"><span class="pill">Machine PASS</span><span class="pill">Dry</span><span class="pill">0 reverb</span><span class="pill">0 monster DSP</span><span class="pill">0 musique</span></div>
+<p class="hint">Ordre : Ulysse → Euryloque → Ulysse → Polyphème → Ulysse → Polyphème → Ulysse → Euryloque → Ulysse.</p>
+<p class="hint">Candidate <code>86b3654002073cfc4b7491265f5c3ef4ee744a3d</code> · release <code>odyssee-p3-review-v1</code> · audio SHA-256 <code>4f3e55c4bc22d386455cd97dd49b7a1f0363252a8b5b2a25ed718b56e8090dc0</code>.</p>
+</section>
+<section class="card"><h2>Ce qu’il faut écouter</h2><ol>
+<li>Polyphème donne-t-il spontanément une impression de masse et de danger ?</li>
+<li>Son français reste-t-il parfaitement naturel et intelligible ?</li>
+<li>Évite-t-il l’effet « grosse voix de monstre » caricatural ?</li>
+<li>Ulysse reste-t-il immédiatement le même personnage que P1/P2 ?</li>
+<li>Ulysse et Euryloque sont-ils distinguables sans regarder le texte, malgré leur voix fournisseur commune ?</li>
+<li>La scène fonctionne-t-elle déjà sans décor sonore ?</li>
+</ol><p class="hint"><strong>Ne jugez pas encore</strong> la grotte, les impacts, la musique ou le sound design : ils sont absents par conception.</p></section>
+<form id="review" class="card"><h2>Évaluation</h2>
+<fieldset class="question"><legend>1. Masse / menace de Polyphème</legend><p class="hint">1 = aucune · 3 = fonctionnel · 5 = immédiatement massif et inquiétant.</p><div class="scale">
+<label><input type="radio" name="mass" value="1">1</label><label><input type="radio" name="mass" value="2">2</label><label><input type="radio" name="mass" value="3">3</label><label><input type="radio" name="mass" value="4">4</label><label><input type="radio" name="mass" value="5">5</label></div></fieldset>
+<fieldset class="question"><legend>2. Français de Polyphème</legend><div class="choice">
+<label><input type="radio" name="french" value="PASS">PASS</label><label><input type="radio" name="french" value="BORDERLINE">BORDERLINE</label><label><input type="radio" name="french" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="question"><legend>3. Caricature « voix de monstre »</legend><div class="choice">
+<label><input type="radio" name="caricature" value="AUCUNE">Aucune</label><label><input type="radio" name="caricature" value="LÉGÈRE">Légère</label><label><input type="radio" name="caricature" value="FORTE">Forte</label></div></fieldset>
+<fieldset class="question"><legend>4. Identité d’Ulysse vs P1/P2</legend><div class="choice">
+<label><input type="radio" name="ulysse" value="PASS">PASS</label><label><input type="radio" name="ulysse" value="BORDERLINE">BORDERLINE</label><label><input type="radio" name="ulysse" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="question"><legend>5. Distinction Ulysse / Euryloque</legend><div class="choice">
+<label><input type="radio" name="collision" value="PASS">PASS — distincts</label><label><input type="radio" name="collision" value="BORDERLINE">BORDERLINE</label><label><input type="radio" name="collision" value="FAIL">FAIL — confusion</label></div></fieldset>
+<fieldset class="question"><legend>6. La scène fonctionne sèche</legend><div class="choice">
+<label><input type="radio" name="dry" value="PASS">PASS</label><label><input type="radio" name="dry" value="FAIL">FAIL — besoin d’un artifice pour la taille</label></div></fieldset>
+<fieldset class="question"><legend>Défauts entendus</legend><div class="checks">
+<label><input type="checkbox" name="defect" value="Polyphème pas assez massif">Polyphème pas assez massif</label>
+<label><input type="checkbox" name="defect" value="Polyphème trop caricatural">Polyphème trop caricatural</label>
+<label><input type="checkbox" name="defect" value="Polyphème trop lent">Polyphème trop lent</label>
+<label><input type="checkbox" name="defect" value="Polyphème trop grave">Polyphème trop grave</label>
+<label><input type="checkbox" name="defect" value="français Polyphème dégradé">Français Polyphème dégradé</label>
+<label><input type="checkbox" name="defect" value="Ulysse/Euryloque confus">Ulysse / Euryloque confus</label>
+<label><input type="checkbox" name="defect" value="Ulysse pas assez conteur">Ulysse pas assez conteur</label>
+<label><input type="checkbox" name="defect" value="autre">Autre</label></div></fieldset>
+<fieldset class="question"><legend>Décision</legend><div class="choice">
+<label><input type="radio" name="decision" value="PASS">PASS — autoriser P4</label>
+<label><input type="radio" name="decision" value="FAIL">FAIL — corriger P3</label></div></fieldset>
+<label for="notes"><strong>Notes libres</strong></label><textarea id="notes" name="notes"></textarea>
+</form>
+<section class="card"><div class="summary-head"><div><h2 style="margin:0">Bilan à copier</h2><small>Mis à jour automatiquement. Aucun fichier à exporter.</small></div><button id="copy" class="copy" type="button">Copier le bilan</button></div>
+<textarea id="summary" readonly></textarea><p id="copyStatus" class="status" role="status" aria-live="polite"></p></section>
+</main>
+<script>
+(function(){
+var form=document.getElementById('review'),summary=document.getElementById('summary'),key='odyssee-p3-review-v1';
+function sel(n){var e=form.querySelector('input[name="'+n+'"]:checked');return e?e.value:'NON NOTÉ'}
+function state(){return{mass:sel('mass'),french:sel('french'),caricature:sel('caricature'),ulysse:sel('ulysse'),collision:sel('collision'),dry:sel('dry'),defects:Array.from(form.querySelectorAll('input[name="defect"]:checked')).map(x=>x.value),decision:sel('decision'),notes:form.notes.value.trim()}}
+function render(){var s=state();summary.value='HUMAN REVIEW — ODYSSÉE P3 POLYPHÈME\nCandidate: 86b3654002073cfc4b7491265f5c3ef4ee744a3d\nReview release: odyssee-p3-review-v1\nAudio SHA-256: 4f3e55c4bc22d386455cd97dd49b7a1f0363252a8b5b2a25ed718b56e8090dc0\n\nSCORES\n- Masse / menace Polyphème: '+s.mass+'/5\n- Français Polyphème: '+s.french+'\n- Caricature monstre: '+s.caricature+'\n- Identité Ulysse vs P1/P2: '+s.ulysse+'\n- Distinction Ulysse / Euryloque: '+s.collision+'\n- Fonctionne sec: '+s.dry+'\n\nDÉFAUTS ENTENDUS\n'+(s.defects.length?s.defects.map(x=>'- '+x).join('\n'):'- aucun signalé')+'\n\nDÉCISION\n'+s.decision+'\n\nNOTES\n'+(s.notes||'(aucune)');localStorage.setItem(key,JSON.stringify(s))}
+function restore(){try{var s=JSON.parse(localStorage.getItem(key)||'null');if(!s)return;['mass','french','caricature','ulysse','collision','dry','decision'].forEach(n=>{var e=Array.from(form.querySelectorAll('input[name="'+n+'"]')).find(x=>x.value===s[n]);if(e)e.checked=true});(s.defects||[]).forEach(v=>{var e=Array.from(form.querySelectorAll('input[name="defect"]')).find(x=>x.value===v);if(e)e.checked=true});form.notes.value=s.notes||''}catch(_){}}
+form.addEventListener('input',render);form.addEventListener('change',render);document.getElementById('copy').addEventListener('click',async function(){try{await navigator.clipboard.writeText(summary.value)}catch(_){summary.select();document.execCommand('copy')}document.getElementById('copyStatus').textContent='Bilan copié.'});restore();render();
+})();
+</script></body></html>
