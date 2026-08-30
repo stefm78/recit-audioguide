@@ -1,0 +1,91 @@
+name: Chatterbox multilingual CPU capability smoke
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  chatterbox-cpu-smoke:
+    if: github.head_ref == 'probe/PROVIDER-WP-001-chatterbox-cpu-smoke'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: System context
+        shell: bash
+        run: |
+          set -euxo pipefail
+          uname -a
+          nproc
+          free -h
+          df -h /
+
+      - name: Install pinned Chatterbox
+        run: >-
+          python -m pip install --disable-pip-version-check
+          "git+https://github.com/resemble-ai/chatterbox.git@5de7a54aa4e5e2baadb0182dde554908b48b85c2"
+
+      - name: Load multilingual V3 and synthesize French on CPU
+        shell: bash
+        run: |
+          set -euo pipefail
+          /usr/bin/time -v python - <<'PY'
+          import json
+          import time
+          from pathlib import Path
+          import torchaudio as ta
+          from chatterbox.mtl_tts import ChatterboxMultilingualTTS
+
+          t0 = time.monotonic()
+          model = ChatterboxMultilingualTTS.from_pretrained(device="cpu", t3_model="v3")
+          loaded = time.monotonic()
+
+          text = "Ulysse. Tu veux rentrer ? Ou tu veux qu’on sache ce que tu as fait ?"
+          wav = model.generate(
+              text,
+              language_id="fr",
+              exaggeration=0.7,
+              cfg_weight=0.3,
+              temperature=0.8,
+          )
+          generated = time.monotonic()
+
+          Path("generated").mkdir(exist_ok=True)
+          ta.save("generated/chatterbox-fr.wav", wav, model.sr)
+          report = {
+              "provider": "chatterbox-multilingual-v3",
+              "upstream_commit": "5de7a54aa4e5e2baadb0182dde554908b48b85c2",
+              "device": "cpu",
+              "language": "fr",
+              "text": text,
+              "sample_rate": model.sr,
+              "samples": int(wav.shape[-1]),
+              "duration_seconds": float(wav.shape[-1] / model.sr),
+              "load_seconds": loaded - t0,
+              "generate_seconds": generated - loaded,
+              "total_seconds": generated - t0,
+              "exaggeration": 0.7,
+              "cfg_weight": 0.3,
+          }
+          Path("generated/report.json").write_text(
+              json.dumps(report, indent=2, ensure_ascii=False),
+              encoding="utf-8",
+          )
+          print(json.dumps(report, indent=2, ensure_ascii=False))
+          PY
+          ffmpeg -hide_banner -loglevel error -y -i generated/chatterbox-fr.wav -codec:a libmp3lame -q:a 2 generated/chatterbox-fr.mp3
+          sha256sum generated/chatterbox-fr.wav generated/chatterbox-fr.mp3 generated/report.json
+
+      - name: Upload smoke evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: chatterbox-multilingual-cpu-smoke
+          path: generated/
+          if-no-files-found: error
+          retention-days: 3
