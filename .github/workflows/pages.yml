@@ -293,15 +293,12 @@ jobs:
       - name: Prepare durable P4 v2 review assets
         run: |
           set -euo pipefail
-          cp review-assets/odyssee-probe-p4v2-brigitte-full.mp3 review-assets/brigitte.mp3
-          cp review-assets/odyssee-probe-p4v2-coralie-full.mp3 review-assets/coralie.mp3
-          cp review-assets/odyssee-probe-p4v2-josephine-full.mp3 review-assets/josephine.mp3
-          cp review-assets/odyssee-probe-p4v2-brigitte-manifest.json review-assets/brigitte-manifest.json
-          cp review-assets/odyssee-probe-p4v2-coralie-manifest.json review-assets/coralie-manifest.json
-          cp review-assets/odyssee-probe-p4v2-josephine-manifest.json review-assets/josephine-manifest.json
-          cp review-assets/odyssee-probe-p4v2-brigitte-timing.json review-assets/brigitte-timing.json
-          cp review-assets/odyssee-probe-p4v2-coralie-timing.json review-assets/coralie-timing.json
-          cp review-assets/odyssee-probe-p4v2-josephine-timing.json review-assets/josephine-timing.json
+          cp review-assets/odyssee-probe-p4v2-denise-directe-full.mp3 review-assets/denise-directe.mp3
+          cp review-assets/odyssee-probe-p4v2-denise-retenue-full.mp3 review-assets/denise-retenue.mp3
+          cp review-assets/odyssee-probe-p4v2-denise-directe-manifest.json review-assets/denise-directe-manifest.json
+          cp review-assets/odyssee-probe-p4v2-denise-retenue-manifest.json review-assets/denise-retenue-manifest.json
+          cp review-assets/odyssee-probe-p4v2-denise-directe-timing.json review-assets/denise-directe-timing.json
+          cp review-assets/odyssee-probe-p4v2-denise-retenue-timing.json review-assets/denise-retenue-timing.json
       - name: Publish durable P4 v2 review release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -310,38 +307,17 @@ jobs:
           set -euo pipefail
           tag="odyssee-p4v2-casting-review-v1"
           assets=(
-            review-assets/brigitte.mp3 review-assets/coralie.mp3 review-assets/josephine.mp3
-            review-assets/brigitte-manifest.json review-assets/coralie-manifest.json review-assets/josephine-manifest.json
-            review-assets/brigitte-timing.json review-assets/coralie-timing.json review-assets/josephine-timing.json
+            review-assets/denise-directe.mp3 review-assets/denise-retenue.mp3
+            review-assets/denise-directe-manifest.json review-assets/denise-retenue-manifest.json
+            review-assets/denise-directe-timing.json review-assets/denise-retenue-timing.json
           )
           if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
             gh release upload "$tag" "${assets[@]}" --clobber --repo "$GITHUB_REPOSITORY"
           else
-            gh release create "$tag" "${assets[@]}" --target "$TARGET_SHA" --prerelease --title "Odyssée — P4 v2 Siren casting review" --notes "Comparative perceptual casting only. PENDING_HUMAN. Three standard fr-FR voices. Dry, neutral parameters, no effects." --repo "$GITHUB_REPOSITORY"
+            gh release create "$tag" "${assets[@]}" --target "$TARGET_SHA" --prerelease --title "Odyssée — P4 v2 Siren casting review" --notes "Comparative perceptual casting only. PENDING_HUMAN. Two Edge-supported Denise performances. Dry, minimal parameters, no effects." --repo "$GITHUB_REPOSITORY"
           fi
 
 
-  probe-p4v2-voice-discovery:
-    if: github.event_name == 'pull_request' && github.head_ref == 'probe/PROBE-WP-004-odyssee-p4v2-casting'
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - name: Checkout audio-engine
-        uses: actions/checkout@v6
-        with:
-          repository: stefm78/audio-engine
-          ref: 3392d4f22f0a9b054a05b5c05a7856985c0ab030
-          path: .audio-engine
-      - uses: actions/setup-python@v6
-        with:
-          python-version: '3.12'
-      - name: Install exact provider stack
-        run: python -m pip install --disable-pip-version-check ./.audio-engine
-      - name: List fr-FR voices visible to edge-tts
-        shell: bash
-        run: |
-          set -euo pipefail
-          edge-tts --list-voices | awk '$1 ~ /^fr-FR-/ {print $1}' | sort
 
   build:
     needs: [changes, audio]
