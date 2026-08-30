@@ -190,7 +190,71 @@ EURYLOQUE — Et nous sommes partis.
 
 ULYSSE — Oui.
 
-EURYLOQUE — Fin de l’histoire.
+MARIN — Ramez.
+
+ULYSSE — La grotte diminuait derrière nous.
+
+EURYLOQUE — Ramez.
+
+ULYSSE — Polyphème criait sur la rive.
+
+MARIN — On est assez loin.
+
+EURYLOQUE — On ne sera assez loin que quand on ne l’entendra plus.
+
+ULYSSE — J’entendais mes hommes rire.
+
+EURYLOQUE — De soulagement.
+
+ULYSSE — Oui.
+
+MARIN — On l’a fait.
+
+EURYLOQUE — Tais-toi et rame.
+
+MARIN — Il ne peut plus nous voir.
+
+EURYLOQUE — Justement. Laissons-lui ce problème.
+
+ULYSSE — J’aurais pu faire cela.
+
+EURYLOQUE — Nous te l’avons demandé.
+
+ULYSSE — Je sais.
+
+EURYLOQUE — Plusieurs fois.
+
+ULYSSE — Je sais.
+
+MARIN — Ulysse, laisse-le.
+
+ULYSSE — Je savais que nous avions gagné.
+
+EURYLOQUE — Alors pourquoi ce n’était pas suffisant ?
+
+ULYSSE — Parce qu’il croyait avoir été vaincu par Personne.
+
+EURYLOQUE — C’était précisément l’idée.
+
+ULYSSE — Je voulais qu’il sache qu’un homme l’avait fait.
+
+EURYLOQUE — Il savait qu’un homme l’avait fait.
+
+ULYSSE — Je voulais qu’il sache lequel.
+
+EURYLOQUE — Voilà.
+
+ULYSSE — Quoi ?
+
+EURYLOQUE — La différence entre rentrer et être raconté.
+
+ULYSSE — À l’époque, je ne voyais pas la différence.
+
+EURYLOQUE — Nous, si.
+
+ULYSSE — Fin de l’histoire.
+
+EURYLOQUE — Ça aurait dû.
 
 ULYSSE — Non.
 
@@ -639,6 +703,44 @@ CIRCÉ — Tu as demandé la route.
 ULYSSE — J’espérais un cap.
 
 CIRCÉ — Tu as déjà eu des caps. Ils ne t’ont pas beaucoup aidé.
+
+EURYLOQUE — Quand il nous a annoncé où nous devions aller, personne n’a parlé.
+
+ULYSSE — Je m’en souviens.
+
+EURYLOQUE — Non. Tu te souviens du silence. Moi, je me souviens de ce qu’il y avait dedans.
+
+ULYSSE — Quoi ?
+
+EURYLOQUE — Des hommes qui venaient de retrouver leurs mains, leur visage, un lit, du pain chaud. Et leur capitaine leur disait que l’étape suivante était le pays des morts.
+
+ULYSSE — Tu voulais rester.
+
+EURYLOQUE — Oui.
+
+ULYSSE — Pourtant tu es venu.
+
+EURYLOQUE — Oui.
+
+ULYSSE — Pourquoi ?
+
+EURYLOQUE — Parce que partir sans toi, c’était renoncer à rentrer. Et te suivre, c’était peut-être mourir en essayant.
+
+ULYSSE — Beau choix.
+
+EURYLOQUE — C’était devenu notre spécialité.
+
+ULYSSE — Tu aurais pu prendre le bateau.
+
+EURYLOQUE — Et aller où ?
+
+ULYSSE — N’importe où.
+
+EURYLOQUE — Ce mot-là appartient aux hommes qui ont encore plusieurs maisons possibles.
+
+NARRATRICE — Ulysse ne répond pas.
+
+EURYLOQUE — Nous, on avait seulement la direction que tu continuais d’appeler Ithaque.
 
 # S08 — Ceux qui ne rentreront pas
 
