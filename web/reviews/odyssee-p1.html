@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Écoute humaine — L’Odyssée P1</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0c1117;--panel:#151c24;--line:#2b3541;--text:#f3f6f8;--muted:#aab4bf;--accent:#7dd3fc;--good:#86efac}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+    main{width:min(900px,calc(100% - 28px));margin:0 auto;padding:28px 0 64px}
+    h1{font-size:clamp(1.8rem,5vw,3.2rem);line-height:1.05;margin:.2em 0}.kicker{color:var(--accent);font-weight:750;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem}
+    .lead,.hint{color:var(--muted)}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0}
+    .evidence{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:.88rem}
+    audio{width:100%;margin-top:10px}fieldset{border:0;padding:0;margin:22px 0}.question{border-top:1px solid var(--line);padding-top:18px}.question legend{font-weight:750;padding:0;margin-bottom:8px}
+    .scale{display:grid;grid-template-columns:repeat(5,minmax(48px,1fr));gap:8px;margin-top:10px}.choice,.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}
+    .scale label,.choice label,.checks label{display:flex;gap:7px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:9px;background:#111821}
+    textarea{width:100%;min-height:100px;background:#0f151c;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}
+    #summary{min-height:310px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem}.summary-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .copy{border:1px solid var(--line);background:#1d2732;color:var(--text);border-radius:10px;padding:9px 12px;cursor:pointer}.copy:hover{border-color:var(--accent)}.status{color:var(--good);font-weight:700}
+    ol{padding-left:1.3rem}code{overflow-wrap:anywhere}
+    @media(max-width:620px){.scale{grid-template-columns:repeat(5,1fr)}.scale label{display:block;text-align:center;padding:9px 3px}.summary-head{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="kicker">Gate humain · Odyssée P1</div>
+  <h1>Identité centrale du casting</h1>
+  <p class="lead">Écoutez ces 69,5 secondes une première fois sans chercher les réglages. L’objectif est seulement de décider si les cinq présences sont naturelles, françaises et suffisamment distinctes pour autoriser la suite.</p>
+
+  <section class="card">
+    <h2>Écoute</h2>
+    <audio id="master" controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p1-review-v1/p1.mp3"></audio>
+    <div class="evidence">
+      <span class="pill">Machine PASS</span><span class="pill">6/6 segments mesurés</span><span class="pill">69,5 s</span><span class="pill">0 warning manifeste</span>
+    </div>
+    <p class="hint">Ordre entendu : Narratrice → Pénélope → Télémaque → Ulysse → Athéna → Narratrice.</p>
+    <p class="hint">Candidate <code>5b9eeca0977f252e588d64545b2b464e9aa3ca4d</code> · release <code>odyssee-p1-review-v1</code> · audio SHA-256 <code>b3c9629b920e31033c6aab7b6625d30d29d5c219d3458dfbb3f6a92e4949a5ea</code>.</p>
+  </section>
+
+  <section class="card">
+    <h2>Ce qu’il faut écouter</h2>
+    <ol>
+      <li>Les cinq présences sont-elles immédiatement différenciables ?</li>
+      <li>Narratrice et Athéna restent-elles distinctes malgré une base vocale proche ?</li>
+      <li>Ulysse et Télémaque se séparent-ils sans effort ?</li>
+      <li>Pénélope sonne-t-elle naturelle et crédible en français ?</li>
+      <li>Les mots « Regardez », « Courez », « Écoutez », « Approchez » sont-ils nets et naturels ?</li>
+      <li>Entendez-vous une voix enfantine, étrangère, malformée ou une collision d’identité ?</li>
+    </ol>
+  </section>
+
+  <form id="review" class="card">
+    <h2>Évaluation</h2>
+
+    <fieldset class="question"><legend>1. Distinction globale</legend><p class="hint">1 = confusion fréquente · 3 = acceptable mais perceptible · 5 = identification immédiate.</p><div class="scale">
+      <label><input type="radio" name="global" value="1">1</label><label><input type="radio" name="global" value="2">2</label><label><input type="radio" name="global" value="3">3</label><label><input type="radio" name="global" value="4">4</label><label><input type="radio" name="global" value="5">5</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>2. Narratrice vs Athéna</legend><div class="choice">
+      <label><input type="radio" name="narrAthena" value="PASS">PASS</label>
+      <label><input type="radio" name="narrAthena" value="BORDERLINE">BORDERLINE</label>
+      <label><input type="radio" name="narrAthena" value="FAIL">FAIL</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>3. Ulysse vs Télémaque</legend><div class="choice">
+      <label><input type="radio" name="ulyTel" value="PASS">PASS</label>
+      <label><input type="radio" name="ulyTel" value="BORDERLINE">BORDERLINE</label>
+      <label><input type="radio" name="ulyTel" value="FAIL">FAIL</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>4. Pénélope</legend><div class="choice">
+      <label><input type="radio" name="penelope" value="naturelle">Naturelle</label>
+      <label><input type="radio" name="penelope" value="acceptable">Acceptable</label>
+      <label><input type="radio" name="penelope" value="problème français">Problème français</label>
+      <label><input type="radio" name="penelope" value="problème identité">Problème identité</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>5. Français des quatre sentinelles</legend><div class="choice">
+      <label><input type="radio" name="sentinels" value="PASS">PASS</label>
+      <label><input type="radio" name="sentinels" value="FAIL">FAIL</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>6. Défaut bloquant entendu</legend><div class="checks">
+      <label><input type="checkbox" name="defect" value="enfantin">Voix enfantine</label>
+      <label><input type="checkbox" name="defect" value="étranger">Accent / rendu étranger</label>
+      <label><input type="checkbox" name="defect" value="mot malformé">Mot malformé</label>
+      <label><input type="checkbox" name="defect" value="identités confondues">Identités confondues</label>
+      <label><input type="checkbox" name="defect" value="autre">Autre</label>
+    </div></fieldset>
+
+    <fieldset class="question"><legend>Décision</legend><div class="choice">
+      <label><input type="radio" name="decision" value="PASS">PASS — autoriser P2</label>
+      <label><input type="radio" name="decision" value="FAIL">FAIL — préparer P1 ciblé v2</label>
+    </div></fieldset>
+
+    <label for="notes"><strong>Notes libres</strong></label>
+    <textarea id="notes" name="notes" placeholder="Ce qui aidera à décider ou à corriger…"></textarea>
+  </form>
+
+  <section class="card">
+    <div class="summary-head"><div><h2 style="margin:0">Bilan à copier</h2><small>Mis à jour automatiquement. Aucun fichier à exporter.</small></div><button id="copy" class="copy" type="button">Copier le bilan</button></div>
+    <textarea id="summary" readonly aria-label="Bilan à copier"></textarea>
+    <p id="copyStatus" class="status" role="status" aria-live="polite"></p>
+  </section>
+</main>
+<script>
+(function () {
+  var form = document.getElementById('review');
+  var summary = document.getElementById('summary');
+  var storageKey = 'odyssee-p1-review-v1';
+
+  function selected(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : 'NON NOTÉ';
+  }
+  function getState() {
+    return {
+      global:selected('global'),
+      narrAthena:selected('narrAthena'),
+      ulyTel:selected('ulyTel'),
+      penelope:selected('penelope'),
+      sentinels:selected('sentinels'),
+      defects:Array.from(form.querySelectorAll('input[name="defect"]:checked')).map(function(x){return x.value;}),
+      decision:selected('decision'),
+      notes:form.notes.value.trim()
+    };
+  }
+  function render() {
+    var s = getState();
+    summary.value =
+      'HUMAN REVIEW — ODYSSÉE P1 CORE IDENTITY\n' +
+      'Candidate: 5b9eeca0977f252e588d64545b2b464e9aa3ca4d\n' +
+      'Review release: odyssee-p1-review-v1\n' +
+      'Audio SHA-256: b3c9629b920e31033c6aab7b6625d30d29d5c219d3458dfbb3f6a92e4949a5ea\n\n' +
+      'SCORES\n' +
+      '- Distinction globale: ' + s.global + '/5\n' +
+      '- Narratrice vs Athéna: ' + s.narrAthena + '\n' +
+      '- Ulysse vs Télémaque: ' + s.ulyTel + '\n' +
+      '- Pénélope: ' + s.penelope + '\n' +
+      '- Français sentinelles: ' + s.sentinels + '\n\n' +
+      'DÉFAUTS ENTENDUS\n' +
+      (s.defects.length ? s.defects.map(function(x){return '- ' + x;}).join('\n') : '- aucun signalé') +
+      '\n\nDÉCISION\n' + s.decision +
+      '\n\nNOTES\n' + (s.notes || '(aucune)');
+    localStorage.setItem(storageKey, JSON.stringify(s));
+  }
+  function restore() {
+    try {
+      var s = JSON.parse(localStorage.getItem(storageKey) || 'null');
+      if (!s) return;
+      ['global','narrAthena','ulyTel','penelope','sentinels','decision'].forEach(function(name){
+        var value = s[name];
+        var el = form.querySelector('input[name="' + name + '"][value="' + value + '"]');
+        if (el) el.checked = true;
+      });
+      (s.defects || []).forEach(function(value){
+        var el = Array.from(form.querySelectorAll('input[name="defect"]')).find(function(x){return x.value === value;});
+        if (el) el.checked = true;
+      });
+      form.notes.value = s.notes || '';
+    } catch (_) {}
+  }
+  form.addEventListener('input', render);
+  form.addEventListener('change', render);
+  document.getElementById('copy').addEventListener('click', async function(){
+    try {
+      await navigator.clipboard.writeText(summary.value);
+    } catch (_) {
+      summary.select();
+      document.execCommand('copy');
+    }
+    document.getElementById('copyStatus').textContent = 'Bilan copié.';
+  });
+  restore();
+  render();
+})();
+</script>
+</body>
+</html>
