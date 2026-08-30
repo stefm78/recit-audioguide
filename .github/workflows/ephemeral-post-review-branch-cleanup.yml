@@ -1,0 +1,72 @@
+name: Ephemeral post-review branch cleanup
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ephemeral-post-review-branch-cleanup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Delete only exact merged temporary refs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const expected = {
+              "review/HUMAN-GATE-WP-002-pr42-page": "23170f970eb85702d9dc995c86b4d73f73915380",
+              "ci/CI-WP-003-pages-deploy-skip-fix": "d58f4774aa7f2c4dca171c8e2dbe73585348a231"
+            };
+
+            for (const [name, sha] of Object.entries(expected)) {
+              const current = await github.rest.git.getRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `heads/${name}`
+              });
+              if (current.data.object.sha !== sha) {
+                core.setFailed(`Ref guard failed for ${name}: expected ${sha}, got ${current.data.object.sha}`);
+                return;
+              }
+            }
+
+            const candidateName = "feature/nuit-apres-orleans-prototype";
+            const candidateSha = "203268827d5c5e7d7312545f465b653c5bd31690";
+            const candidate = await github.rest.git.getRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: `heads/${candidateName}`
+            });
+            if (candidate.data.object.sha !== candidateSha) {
+              core.setFailed(`Protected PR42 candidate moved: expected ${candidateSha}, got ${candidate.data.object.sha}`);
+              return;
+            }
+
+            for (const name of Object.keys(expected)) {
+              await github.rest.git.deleteRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `heads/${name}`
+              });
+              core.info(`Deleted merged temporary ref: ${name}`);
+            }
+            core.info(`Preserved PR42 candidate: ${candidateName}@${candidateSha}`);
+
+      - name: Self-delete cleanup workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/ephemeral-post-review-branch-cleanup.yml
+          git commit -m "chore: remove ephemeral post-review branch cleanup"
+          git push origin HEAD:main
