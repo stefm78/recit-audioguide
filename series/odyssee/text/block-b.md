@@ -376,6 +376,64 @@ ULYSSE — J’avais un bateau.
 
 ULYSSE — Et chaque voix que je connaissais semblait prendre plus de place parce qu’il y en avait moins.
 
+NARRATRICE — Ulysse laisse passer un silence.
+
+ULYSSE — Sur une flotte, un capitaine peut perdre des hommes et continuer à parler de navires.
+
+ULYSSE — Sur un seul bateau, il ne reste plus de chiffres derrière lesquels se cacher.
+
+EURYLOQUE — Tu les comptais.
+
+ULYSSE — Oui.
+
+EURYLOQUE — Tous les soirs.
+
+ULYSSE — Oui.
+
+EURYLOQUE — Je t’entendais.
+
+ULYSSE — Je pensais que non.
+
+EURYLOQUE — Tu pensais beaucoup de choses.
+
+ULYSSE — Au début, je comptais pour savoir combien de rameurs il restait.
+
+ULYSSE — Ensuite je comptais parce qu’un homme qui répond au moment de l’appel est encore là.
+
+MARIN — Présent.
+
+ULYSSE — Un autre.
+
+MARIN — Présent.
+
+ULYSSE — Encore un.
+
+EURYLOQUE — Présent.
+
+ULYSSE — Et quand je finissais, je recommençais mentalement avec ceux qui n’avaient pas répondu.
+
+EURYLOQUE — Ça ne les faisait pas revenir.
+
+ULYSSE — Non.
+
+EURYLOQUE — Alors pourquoi ?
+
+ULYSSE — Parce qu’un chef qui cesse de compter ses morts finit par croire qu’il n’en a pas causé.
+
+EURYLOQUE — Tu crois les avoir causés ?
+
+ULYSSE — Certains.
+
+EURYLOQUE — Lesquels ?
+
+ULYSSE — Tu veux vraiment que je choisisse ?
+
+EURYLOQUE — Non.
+
+ULYSSE — Moi non plus.
+
+NARRATRICE — La salle des Phéaciens entend soudain le vide qui entoure le dernier bateau.
+
 # S07 — Circé
 
 ULYSSE — Nous avons atteint une île couverte d’arbres.
@@ -505,6 +563,44 @@ ULYSSE — Les hommes se remettent vite à aimer le confort.
 EURYLOQUE — Même toi.
 
 ULYSSE — Surtout moi.
+
+NARRATRICE — Au début, ils parlent chaque soir du départ.
+
+MARIN — Demain.
+
+EURYLOQUE — Demain.
+
+ULYSSE — Demain.
+
+NARRATRICE — Puis le mot change de place.
+
+MARIN — Quand les voiles seront réparées.
+
+EURYLOQUE — Quand les hommes seront reposés.
+
+ULYSSE — Quand le vent sera meilleur.
+
+NARRATRICE — Le bateau reste tiré sur la grève.
+
+NARRATRICE — Les vêtements sèchent. Les blessures ferment. Les hommes recommencent à dormir sans se réveiller au moindre bruit.
+
+MARIN — On pourrait rester encore quelques jours.
+
+EURYLOQUE — Tu disais demain.
+
+MARIN — Hier.
+
+EURYLOQUE — C’est généralement comme ça que fonctionne demain.
+
+ULYSSE — Je les ai laissés rester.
+
+EURYLOQUE — Tu t’es laissé rester.
+
+ULYSSE — Oui.
+
+NARRATRICE — Pour Ulysse, le danger n’a plus la forme d’une pierre devant une grotte ni d’une tempête.
+
+NARRATRICE — Il ressemble à un repas chaud qu’on peut reprendre le soir suivant.
 
 CIRCÉ — Tu comptes les jours ?
 
@@ -637,6 +733,42 @@ ANTICLÉE — Elle tient.
 ULYSSE — Télémaque ?
 
 ANTICLÉE — Il n’est plus l’enfant que tu as laissé.
+
+ULYSSE — Est-ce qu’il parle de moi ?
+
+ANTICLÉE — Comment veux-tu que je réponde ?
+
+ULYSSE — Comme tu peux.
+
+ANTICLÉE — Il a grandi entouré d’hommes qui lui expliquaient qui était son père.
+
+ULYSSE — Et toi ?
+
+ANTICLÉE — Je lui ai parlé de l’homme avant la guerre.
+
+ULYSSE — Lequel ?
+
+ANTICLÉE — Celui qui riait quand il avait réussi une ruse trop simple pour mériter qu’on la raconte.
+
+ULYSSE — Je ne me souviens pas de lui.
+
+ANTICLÉE — Lui non plus ne se souviendrait peut-être pas de toi.
+
+ULYSSE — Pénélope tient encore la maison ?
+
+ANTICLÉE — Oui.
+
+ULYSSE — Seule ?
+
+ANTICLÉE — Non. Avec ce qu’il reste de ta famille, de tes serviteurs et de sa patience.
+
+ULYSSE — Elle m’attend ?
+
+ANTICLÉE — Ne lui demande pas vingt ans d’immobilité pour justifier tes vingt ans d’absence.
+
+ULYSSE — Je ne demande pas—
+
+ANTICLÉE — Alors rentre et demande-lui à elle.
 
 ULYSSE — J’ai essayé de rentrer.
 
