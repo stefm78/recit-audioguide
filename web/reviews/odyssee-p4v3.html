@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Écoute humaine — Odyssée P4 v3</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1117;--panel:#151c24;--line:#2b3541;--text:#f3f6f8;--muted:#aab4bf;--accent:#7dd3fc;--good:#86efac}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{width:min(900px,calc(100% - 28px));margin:auto;padding:28px 0 64px}.kicker{color:var(--accent);font-weight:750;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(1.8rem,5vw,3.1rem);line-height:1.05}.lead,.hint{color:var(--muted)}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0}
+audio{width:100%}.choice,.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}.choice label,.checks label{display:flex;gap:7px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:9px;background:#111821}
+fieldset{border:0;padding:0;margin:22px 0}.question{border-top:1px solid var(--line);padding-top:18px}.question legend{font-weight:750}
+textarea{width:100%;min-height:100px;background:#0f151c;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}
+#summary{min-height:300px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem}.summary-head{display:flex;justify-content:space-between;gap:12px}
+.copy{border:1px solid var(--line);background:#1d2732;color:var(--text);border-radius:10px;padding:9px 12px}.status{color:var(--good);font-weight:700}
+</style></head><body><main>
+<div class="kicker">Gate humain final Edge · Odyssée P4 v3</div>
+<h1>Enfin un dialogue, ou toujours une narratrice&nbsp;?</h1>
+<p class="lead">Même voix Denise que la candidate A précédente. Aucun effet. Seule la forme change : phrases très courtes, questions directes, réponses physiques d’Ulysse. Si cela échoue encore, nous arrêterons Edge pour ce rôle.</p>
+<section class="card"><h2>Écoute</h2>
+<audio controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p4v3-dialogue-review-v1/p4v3.mp3"></audio>
+<p class="hint">Candidate <code>a18706ba560e9bda21dcaf3754d32dcc702cfae8</code> · audio SHA-256 <code>fe1b5d7f3d129f7869a7a4335704d729f1b4b83805a67bbee0f23b23c14a592d</code>.</p>
+</section>
+<form id="review" class="card"><h2>Verdict</h2>
+<fieldset class="question"><legend>1. La Sirène parle-t-elle vraiment à Ulysse ?</legend><div class="choice">
+<label><input type="radio" name="dialogue" value="PASS">PASS</label><label><input type="radio" name="dialogue" value="BORDERLINE">BORDERLINE</label><label><input type="radio" name="dialogue" value="FAIL">FAIL — encore narratrice</label></div></fieldset>
+<fieldset class="question"><legend>2. Français</legend><div class="choice">
+<label><input type="radio" name="french" value="PASS">PASS</label><label><input type="radio" name="french" value="BORDERLINE">BORDERLINE</label><label><input type="radio" name="french" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="question"><legend>3. Attraction / envie de continuer à écouter</legend><div class="choice">
+<label><input type="radio" name="attraction" value="PASS">PASS</label><label><input type="radio" name="attraction" value="BORDERLINE">BORDERLINE</label><label><input type="radio" name="attraction" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="question"><legend>4. La proposition paraît-elle personnelle pour Ulysse ?</legend><div class="choice">
+<label><input type="radio" name="personal" value="PASS">PASS</label><label><input type="radio" name="personal" value="BORDERLINE">BORDERLINE</label><label><input type="radio" name="personal" value="FAIL">FAIL</label></div></fieldset>
+<fieldset class="question"><legend>5. Cliché séduction / mystique</legend><div class="choice">
+<label><input type="radio" name="cliche" value="AUCUN">Aucun</label><label><input type="radio" name="cliche" value="LÉGER">Léger</label><label><input type="radio" name="cliche" value="FORT">Fort</label></div></fieldset>
+<fieldset class="question"><legend>Défauts entendus</legend><div class="checks">
+<label><input type="checkbox" name="defect" value="encore trop narratrice">Encore trop narratrice</label>
+<label><input type="checkbox" name="defect" value="pas assez attirante">Pas assez attirante</label>
+<label><input type="checkbox" name="defect" value="français dégradé">Français dégradé</label>
+<label><input type="checkbox" name="defect" value="dialogue artificiel">Dialogue artificiel</label>
+<label><input type="checkbox" name="defect" value="proposition pas assez personnelle">Proposition pas assez personnelle</label></div></fieldset>
+<fieldset class="question"><legend>Décision</legend><div class="choice">
+<label><input type="radio" name="decision" value="PASS_EDGE">PASS EDGE — reconstruire P4 complet</label>
+<label><input type="radio" name="decision" value="FAIL_EDGE">FAIL EDGE — ouvrir nouveau provider</label></div></fieldset>
+<label for="notes"><strong>Notes libres</strong></label><textarea id="notes" name="notes"></textarea>
+</form>
+<section class="card"><div class="summary-head"><div><h2 style="margin:0">Bilan à copier</h2><small>Aucun fichier à exporter.</small></div><button id="copy" class="copy" type="button">Copier le bilan</button></div>
+<textarea id="summary" readonly></textarea><p id="copyStatus" class="status"></p></section>
+<script>
+(function(){var f=document.getElementById('review'),s=document.getElementById('summary');
+function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:'NON NOTÉ'}
+function render(){var defects=Array.from(f.querySelectorAll('input[name="defect"]:checked')).map(x=>x.value);s.value='HUMAN REVIEW — ODYSSÉE P4 v3 DIALOGUE TRAP\nCandidate: a18706ba560e9bda21dcaf3754d32dcc702cfae8\nReview release: odyssee-p4v3-dialogue-review-v1\nAudio SHA-256: fe1b5d7f3d129f7869a7a4335704d729f1b4b83805a67bbee0f23b23c14a592d\n\nSCORES\n- Dialogue réel: '+sel('dialogue')+'\n- Français: '+sel('french')+'\n- Attraction: '+sel('attraction')+'\n- Proposition personnelle: '+sel('personal')+'\n- Cliché: '+sel('cliche')+'\n\nDÉFAUTS ENTENDUS\n'+(defects.length?defects.map(x=>'- '+x).join('\n'):'- aucun signalé')+'\n\nDÉCISION\n'+sel('decision')+'\n\nNOTES\n'+(f.notes.value.trim()||'(aucune)')}
+f.addEventListener('input',render);f.addEventListener('change',render);document.getElementById('copy').onclick=async()=>{try{await navigator.clipboard.writeText(s.value)}catch(_){s.select();document.execCommand('copy')}document.getElementById('copyStatus').textContent='Bilan copié.'};render()})();
+</script></main></body></html>
