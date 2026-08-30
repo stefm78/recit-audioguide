@@ -149,8 +149,9 @@ Statut Odyssée au 2026-08-30 :
 - P2 : **PASS humain**, clarté 4/5, propriété Ulysse PASS, transition naturelle PASS ;
 - P2 watch non bloquant : Ulysse perçu « pas assez conteur » ; préserver l’identité P1 et réévaluer sur les probes/assemblages suivants sans retuning spéculatif ;
 - NARRATIVE_FREEZE : PASS après N3 ;
-- P3 : **AUTHORIZED** ;
-- P4–P6 : séquencés après P3 selon leur propre gate ;
+- P3 : **PASS humain**, masse / menace 4/5, français PASS, aucune caricature, identité Ulysse PASS, distinction Ulysse/Euryloque PASS, scène sèche PASS ;
+- P4 : **AUTHORIZED** ;
+- P5–P6 : séquencés après P4 selon leur propre gate ;
 - master long : **HOLD_CRITICAL_PROBES**.
 
 ## Human gate policy
