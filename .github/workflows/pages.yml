@@ -278,6 +278,39 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
+
+  probe-p4v3-review-release:
+    needs: [changes, preview]
+    if: github.event_name == 'pull_request' && github.head_ref == 'probe/PROBE-WP-004-odyssee-p4v3-dialogue' && needs.preview.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Download P4 v3 review artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: recit-audio-previews
+          path: review-assets
+      - name: Prepare durable P4 v3 review assets
+        run: |
+          set -euo pipefail
+          cp review-assets/odyssee-probe-p4v3-full.mp3 review-assets/p4v3.mp3
+          cp review-assets/odyssee-probe-p4v3-manifest.json review-assets/manifest.json
+          cp review-assets/odyssee-probe-p4v3-timing.json review-assets/timing.json
+      - name: Publish durable P4 v3 review release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          tag="odyssee-p4v3-dialogue-review-v1"
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$tag" review-assets/p4v3.mp3 review-assets/manifest.json review-assets/timing.json --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$tag" review-assets/p4v3.mp3 review-assets/manifest.json review-assets/timing.json --target "$TARGET_SHA" --prerelease --title "Odyssée — P4 v3 dialogue-trap review" --notes "Perceptual architecture review. PENDING_HUMAN. Denise performance fixed from P4 v2 A; only dialogue form changes. Dry, no sound effects." --repo "$GITHUB_REPOSITORY"
+          fi
+
   build:
     needs: [changes, audio]
     if: always() && needs.changes.outputs.build_needed == 'true' && (needs.audio.result == 'success' || needs.audio.result == 'skipped')
