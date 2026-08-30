@@ -1,0 +1,84 @@
+name: Odyssée H1b corrective candidates
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    if: github.head_ref == 'probe/H1b-corrective-batch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [p4-a, p4-b, p5-a, p5-b, p6-a, p6-b]
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install providers
+        run: >-
+          python -m pip install --disable-pip-version-check
+          edge-tts==7.2.8
+          pydub
+          "git+https://github.com/resemble-ai/chatterbox.git@5de7a54aa4e5e2baadb0182dde554908b48b85c2"
+
+      - name: Render candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "generated/${{ matrix.variant }}"
+          /usr/bin/time -v python tools/experiments/render_h1b.py             --spec series/odyssee/provider-spikes/h1b-corrective.json             --variant "${{ matrix.variant }}"             --out "generated/${{ matrix.variant }}"
+          sha256sum "generated/${{ matrix.variant }}/${{ matrix.variant }}.mp3"                     "generated/${{ matrix.variant }}/${{ matrix.variant }}-report.json"
+
+      - name: Upload candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: h1b-${{ matrix.variant }}
+          path: |
+            generated/${{ matrix.variant }}/${{ matrix.variant }}.mp3
+            generated/${{ matrix.variant }}/${{ matrix.variant }}-report.json
+          if-no-files-found: error
+          retention-days: 3
+
+  release:
+    if: github.head_ref == 'probe/H1b-corrective-batch'
+    needs: render
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Download all candidates
+        uses: actions/download-artifact@v4
+        with:
+          pattern: h1b-*
+          path: review-assets
+          merge-multiple: true
+
+      - name: Publish H1b review release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="odyssee-h1b-corrective-review-v1"
+          assets=(review-assets/*.mp3 review-assets/*-report.json)
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$tag" "${assets[@]}" --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$tag" "${assets[@]}"               --target "$TARGET_SHA"               --prerelease               --title "Odyssée — H1b corrective candidates"               --notes "Batched H1b corrective review: P4 A/B, P5 A/B, P6 A/B. Independent verdicts. PENDING_HUMAN_H1B."               --repo "$GITHUB_REPOSITORY"
+          fi
