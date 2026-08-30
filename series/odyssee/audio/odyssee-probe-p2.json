@@ -1,0 +1,164 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-probe-p2-narrative-transfer",
+  "title": "L’Odyssée — P2 propriété du récit",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "actors": {
+    "narratrice": {
+      "placement": "center"
+    },
+    "alcinoos": {
+      "placement": "center"
+    },
+    "ulysse": {
+      "placement": "center"
+    }
+  },
+  "segments": [
+    {
+      "scene": "P2 — salle des Phéaciens",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 180,
+      "text": "L’étranger ne répond pas. Il connaît les noms de Troie, et surtout les silences entre les noms. Alcinoos l’observe avant de reprendre.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "P2 — salle des Phéaciens",
+      "character_id": "alcinoos",
+      "speaker": "Alcinoos",
+      "pause_after_ms": 220,
+      "text": "Comment t’appelles-tu ?",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "-8%",
+      "pitch": "-6Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P2 — salle des Phéaciens",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 260,
+      "text": "Le silence est très simple.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "P2 — nom révélé",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 250,
+      "text": "Ulysse.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P2 — nom révélé",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 180,
+      "text": "Personne ne bouge.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "P2 — nom révélé",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 180,
+      "text": "Mon père s’appelait Laërte. Ma maison est à Ithaque.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P2 — salle des Phéaciens",
+      "character_id": "alcinoos",
+      "speaker": "Alcinoos",
+      "pause_after_ms": 180,
+      "text": "Alors comment es-tu arrivé seul sur notre rivage ?",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "-8%",
+      "pitch": "-6Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P2 — transfert",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 220,
+      "text": "Si tu veux comprendre comment je suis arrivé ici, il faut commencer par le moment où j’ai cru que mon intelligence suffisait à me ramener chez moi.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P2 — transfert",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 120,
+      "text": "La voix de l’étranger change à peine.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "P2 — transfert",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 260,
+      "text": "Pourtant, à partir de cet instant, ce n’est plus la salle qui contient Ulysse. C’est Ulysse qui contient la mer.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "P2 — Ulysse conteur",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 180,
+      "text": "Nous avions quitté Troie. Nous avions encore des navires. Encore des hommes. Et nous pensions tous que le plus difficile était derrière nous.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P2 — Ulysse conteur",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 220,
+      "text": "Nous avions tort.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P2 — Cyclopes",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 250,
+      "text": "Nous avions encore plusieurs navires lorsque nous avons aperçu l’île des Cyclopes. De loin, elle n’avait rien d’un piège.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    }
+  ]
+}
