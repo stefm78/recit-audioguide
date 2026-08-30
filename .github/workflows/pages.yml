@@ -67,10 +67,14 @@ jobs:
         run: python tools/sound_direction.py validate
       - name: Validate Production v1 specifications
         run: python tools/production.py validate
+      - name: Validate Production Plan v1 sidecars
+        run: python tools/production_plan.py validate
       - name: Test graceful degradation states
         run: python -m unittest tests.test_states -v
       - name: Test change-aware routing
         run: python -m unittest tests.test_ci_changes -v
+      - name: Test Production Plan validation
+        run: python -m unittest tests.test_production_plan -v
 
   sounds:
     needs: [changes, sound-direction]

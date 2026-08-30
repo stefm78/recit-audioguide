@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "plan": "orleans-cathedral-ep01.plan.json",
+  "program": "../audio/orleans-cathedral-ep01.json",
+  "entries": [
+    {
+      "path": "/production_plan_version",
+      "disposition": "consumer_metadata",
+      "reason": "authoring contract version"
+    },
+    {
+      "path": "/product",
+      "disposition": "consumer_metadata",
+      "reason": "selects the Audioguide profile"
+    },
+    {
+      "path": "/id",
+      "disposition": "program",
+      "target": "/id"
+    },
+    {
+      "path": "/title",
+      "disposition": "program",
+      "target": "/title"
+    },
+    {
+      "path": "/language",
+      "disposition": "program",
+      "target": "/language"
+    },
+    {
+      "path": "/objective",
+      "disposition": "consumer_metadata",
+      "reason": "editorial/experiential objective"
+    },
+    {
+      "path": "/content_binding/mode",
+      "disposition": "consumer_metadata",
+      "reason": "binds and guards the canonical Program"
+    },
+    {
+      "path": "/content_binding/program",
+      "disposition": "consumer_metadata",
+      "reason": "binds and guards the canonical Program"
+    },
+    {
+      "path": "/content_binding/git_blob_sha1",
+      "disposition": "consumer_metadata",
+      "reason": "binds and guards the canonical Program"
+    },
+    {
+      "path": "/content_binding/content_authority",
+      "disposition": "consumer_metadata",
+      "reason": "binds and guards the canonical Program"
+    },
+    {
+      "path": "/casting/narrator/continuity_key",
+      "disposition": "consumer_metadata",
+      "reason": "cross-station casting continuity"
+    },
+    {
+      "path": "/casting/narrator/program_selector/character_id",
+      "disposition": "program",
+      "target": "@program-selector:character_id"
+    },
+    {
+      "path": "/overlays/0/id",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/0/segment_range/0",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/0/segment_range/1",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/0/importance",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/0/performance_intent",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/1/id",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/1/segment_range/0",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/1/segment_range/1",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/1/importance",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/1/performance_intent",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/2/id",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/2/segment_range/0",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/2/segment_range/1",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/2/importance",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/2/performance_intent",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/3/id",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/3/segment_range/0",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/3/segment_range/1",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/3/importance",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/3/performance_intent",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/4/id",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/4/segment_range/0",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/4/segment_range/1",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/4/importance",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/overlays/4/performance_intent",
+      "disposition": "consumer_metadata",
+      "reason": "production intent overlay; does not rewrite canonical Program"
+    },
+    {
+      "path": "/fallback_policy/essential_speech",
+      "disposition": "consumer_metadata",
+      "reason": "consumer production fallback policy"
+    },
+    {
+      "path": "/fallback_policy/supportive_sound",
+      "disposition": "consumer_metadata",
+      "reason": "consumer production fallback policy"
+    },
+    {
+      "path": "/fallback_policy/optional_content",
+      "disposition": "consumer_metadata",
+      "reason": "consumer production fallback policy"
+    },
+    {
+      "path": "/risk_hints/0",
+      "disposition": "consumer_metadata",
+      "reason": "cheap risk/probe-selection hint"
+    },
+    {
+      "path": "/risk_hints/1",
+      "disposition": "consumer_metadata",
+      "reason": "cheap risk/probe-selection hint"
+    },
+    {
+      "path": "/risk_hints/2",
+      "disposition": "consumer_metadata",
+      "reason": "cheap risk/probe-selection hint"
+    },
+    {
+      "path": "/product_context/station_id",
+      "disposition": "consumer_metadata",
+      "reason": "Audioguide-only visit metadata"
+    },
+    {
+      "path": "/product_context/location_label",
+      "disposition": "consumer_metadata",
+      "reason": "Audioguide-only visit metadata"
+    },
+    {
+      "path": "/product_context/visual_cue",
+      "disposition": "consumer_metadata",
+      "reason": "Audioguide-only visit metadata"
+    },
+    {
+      "path": "/product_context/target_duration_s",
+      "disposition": "consumer_metadata",
+      "reason": "Audioguide-only visit metadata"
+    },
+    {
+      "path": "/product_context/max_duration_s",
+      "disposition": "consumer_metadata",
+      "reason": "Audioguide-only visit metadata"
+    },
+    {
+      "path": "/product_context/resume_after_beats/0",
+      "disposition": "consumer_metadata",
+      "reason": "Audioguide-only visit metadata"
+    },
+    {
+      "path": "/product_context/resume_after_beats/1",
+      "disposition": "consumer_metadata",
+      "reason": "Audioguide-only visit metadata"
+    },
+    {
+      "path": "/product_context/listening_environment",
+      "disposition": "consumer_metadata",
+      "reason": "Audioguide-only visit metadata"
+    },
+    {
+      "path": "/product_context/next_step",
+      "disposition": "consumer_metadata",
+      "reason": "Audioguide-only visit metadata"
+    },
+    {
+      "path": "/product_context/optional_content_policy",
+      "disposition": "consumer_metadata",
+      "reason": "Audioguide-only visit metadata"
+    }
+  ]
+}
