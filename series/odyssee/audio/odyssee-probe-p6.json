@@ -1,0 +1,329 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-probe-p6-bed",
+  "title": "L’Odyssée — H1 P6 Le lit",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "actors": {
+    "ulysse": {
+      "placement": "center"
+    },
+    "penelope": {
+      "placement": "center"
+    },
+    "narratrice": {
+      "placement": "center"
+    }
+  },
+  "segments": [
+    {
+      "scene": "P6 — test",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 200,
+      "text": "Et fais sortir le lit. Mettez-le dans le couloir. Nous aurons plus de place.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P6 — test",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 320,
+      "text": "Le silence change.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "P6 — test",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 180,
+      "text": "Quoi ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — test",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 200,
+      "text": "Le lit. Faites-le déplacer.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P6 — réaction",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 180,
+      "text": "On ne peut pas.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — réaction",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 170,
+      "text": "Pourquoi ?",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P6 — réaction",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 170,
+      "text": "Tu le sais.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — réaction",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 180,
+      "text": "Explique-moi.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P6 — preuve",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 180,
+      "text": "On ne peut pas déplacer ce lit.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — preuve",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 180,
+      "text": "Il n’a pas été posé dans cette chambre.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — preuve",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 160,
+      "text": "J’ai construit la chambre autour de lui.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — preuve",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 150,
+      "text": "Il y avait un olivier à cet endroit. Vivant.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — preuve",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 150,
+      "text": "Je n’ai pas voulu le couper.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — preuve",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 160,
+      "text": "J’ai taillé le tronc à la hauteur qu’il fallait. J’en ai fait un des pieds du lit.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — preuve",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 260,
+      "text": "J’ai bâti autour.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — preuve",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 240,
+      "text": "Si quelqu’un a déplacé ce lit, alors il a fallu couper l’arbre.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — preuve",
+      "character_id": "narratrice",
+      "speaker": "Narratrice",
+      "pause_after_ms": 260,
+      "text": "Sa voix se casse pour la première fois.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "P6 — preuve",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 320,
+      "text": "Alors tu aurais dû le savoir.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — verdict",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 180,
+      "text": "Il n’a pas été déplacé.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P6 — verdict",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 140,
+      "text": "Alors pourquoi—",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — verdict",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 200,
+      "text": "Parce que je devais savoir si toi, tu pouvais l’être.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P6 — verdict",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 150,
+      "text": "Être quoi ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — verdict",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 300,
+      "text": "Déplacé.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P6 — reconnaissance",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 180,
+      "text": "J’avais besoin d’une chose qui ne puisse pas voyager avec ton histoire.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P6 — reconnaissance",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 150,
+      "text": "L’olivier.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — reconnaissance",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 170,
+      "text": "Notre lit.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    {
+      "scene": "P6 — reconnaissance",
+      "character_id": "ulysse",
+      "speaker": "Ulysse",
+      "pause_after_ms": 160,
+      "text": "Tu savais.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "P6 — reconnaissance",
+      "character_id": "penelope",
+      "speaker": "Pénélope",
+      "pause_after_ms": 300,
+      "text": "Je sais maintenant.",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    }
+  ]
+}
