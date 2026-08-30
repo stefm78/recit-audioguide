@@ -12,12 +12,14 @@
     "a": {
       "exaggeration": 0.55,
       "cfg_weight": 0.4,
-      "temperature": 0.8
+      "temperature": 0.8,
+      "seed": 4401
     },
     "b": {
       "exaggeration": 0.75,
       "cfg_weight": 0.3,
-      "temperature": 0.8
+      "temperature": 0.8,
+      "seed": 4402
     }
   },
   "segments": [
