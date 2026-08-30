@@ -458,6 +458,56 @@ ALCINOOS — Tu as raconté les monstres, les dieux, les morts.
 
 ULYSSE — Oui.
 
+ALCINOOS — Qu’est-ce que tu gardes de tout cela ?
+
+ULYSSE — Mes souvenirs.
+
+ALCINOOS — Ce n’est pas ce que je demande.
+
+ULYSSE — Je sais.
+
+ALCINOOS — Tu es parti de Troie avec des hommes, des navires et un nom que tu aimais beaucoup.
+
+ULYSSE — C’est une façon cruelle de résumer.
+
+ALCINOOS — Je t’ai écouté longtemps. J’ai gagné le droit d’être bref.
+
+ULYSSE — Très bien.
+
+ALCINOOS — Qu’est-ce qu’il reste ?
+
+NARRATRICE — Ulysse regarde autour de lui.
+
+ULYSSE — Un homme qui veut rentrer.
+
+ALCINOOS — Seulement ?
+
+ULYSSE — Tu trouves cela peu ?
+
+ALCINOOS — Pour un roi célèbre, oui.
+
+ULYSSE — Pour quelqu’un qui a essayé d’être beaucoup d’autres choses, c’est assez.
+
+ALCINOOS — Tu crois que ta maison t’attend telle que tu l’as laissée ?
+
+ULYSSE — Non.
+
+ALCINOOS — Ta femme ?
+
+ULYSSE — Non.
+
+ALCINOOS — Ton fils ?
+
+ULYSSE — Non.
+
+ALCINOOS — Alors tu ne rentres pas vers ce que tu as quitté.
+
+ULYSSE — Je rentre vers ce qui a continué sans moi.
+
+ALCINOOS — Voilà une destination plus difficile à trouver qu’une île.
+
+ULYSSE — Oui.
+
 ALCINOOS — Et maintenant tu veux simplement rentrer.
 
 ULYSSE — Oui.
