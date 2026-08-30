@@ -89,6 +89,8 @@ jobs:
         run: python -m unittest tests.test_odyssee_p3_review_surface -v
       - name: Test Odyssée P4 browser review surface
         run: python -m unittest tests.test_odyssee_p4_review_surface -v
+      - name: Test Odyssée P4 v2 casting review surface
+        run: python -m unittest tests.test_odyssee_p4v2_casting_review_surface -v
       - name: Test Odyssée full script contract
         run: python -m unittest tests.test_odyssee_script -v
 
