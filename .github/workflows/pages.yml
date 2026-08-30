@@ -291,7 +291,7 @@ jobs:
           path: dist
 
   deploy:
-    if: github.event_name != 'pull_request' && needs.changes.outputs.build_needed == 'true'
+    if: always() && github.event_name != 'pull_request' && needs.changes.outputs.build_needed == 'true' && needs.build.result == 'success'
     needs: [changes, build]
     runs-on: ubuntu-latest
     environment:
