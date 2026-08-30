@@ -6,8 +6,14 @@
       "type": "event",
       "query": "WWS Clatterofhorseshoesonthepavement",
       "required_tags": [],
-      "preferred_tags": ["horse", "horseshoes", "pavement"],
-      "providers": ["wikimedia-commons"],
+      "preferred_tags": [
+        "horse",
+        "horseshoes",
+        "pavement"
+      ],
+      "providers": [
+        "wikimedia-commons"
+      ],
       "limit": 8,
       "min_score": 70
     },
@@ -16,8 +22,29 @@
       "type": "event",
       "query": "Zajeci zvony kostel 2025",
       "required_tags": [],
-      "preferred_tags": ["church", "bell"],
-      "providers": ["wikimedia-commons"],
+      "preferred_tags": [
+        "church",
+        "bell"
+      ],
+      "providers": [
+        "wikimedia-commons"
+      ],
+      "limit": 8,
+      "min_score": 70
+    },
+    {
+      "id": "river-water-flow",
+      "type": "event",
+      "query": "Flowing-water-100019.ogg",
+      "required_tags": [],
+      "preferred_tags": [
+        "flowing",
+        "water",
+        "natural"
+      ],
+      "providers": [
+        "wikimedia-commons"
+      ],
       "limit": 8,
       "min_score": 70
     },
@@ -26,8 +53,14 @@
       "type": "event",
       "query": "Veni.creator.spiritus",
       "required_tags": [],
-      "preferred_tags": ["gregorian", "chant", "hymn"],
-      "providers": ["wikimedia-commons"],
+      "preferred_tags": [
+        "gregorian",
+        "chant",
+        "hymn"
+      ],
+      "providers": [
+        "wikimedia-commons"
+      ],
       "limit": 8,
       "min_score": 70
     },
@@ -36,8 +69,15 @@
       "type": "ambience",
       "query": "Veni.creator.spiritus.ogg Membeth",
       "required_tags": [],
-      "preferred_tags": ["gregorian", "chant", "hymn", "voice"],
-      "providers": ["wikimedia-commons"],
+      "preferred_tags": [
+        "gregorian",
+        "chant",
+        "hymn",
+        "voice"
+      ],
+      "providers": [
+        "wikimedia-commons"
+      ],
       "limit": 8,
       "min_score": 70
     },
@@ -46,8 +86,13 @@
       "type": "event",
       "query": "BDT LNClerambault",
       "required_tags": [],
-      "preferred_tags": ["organ", "pipe organ"],
-      "providers": ["wikimedia-commons"],
+      "preferred_tags": [
+        "organ",
+        "pipe organ"
+      ],
+      "providers": [
+        "wikimedia-commons"
+      ],
       "limit": 8,
       "min_score": 70
     },
@@ -56,8 +101,13 @@
       "type": "ambience",
       "query": "BDT LNClerambault",
       "required_tags": [],
-      "preferred_tags": ["organ", "pipe organ"],
-      "providers": ["wikimedia-commons"],
+      "preferred_tags": [
+        "organ",
+        "pipe organ"
+      ],
+      "providers": [
+        "wikimedia-commons"
+      ],
       "limit": 8,
       "min_score": 70
     }

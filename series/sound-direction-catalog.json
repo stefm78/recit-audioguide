@@ -6,49 +6,93 @@
       "mode": "route",
       "default_density": "light",
       "goal": "Rester intelligible en voiture tout en réservant quelques transitions sonores nettes aux changements de paysage ou d'époque.",
-      "avoid": ["subtle continuous beds", "dense effects under narration", "decorative medieval ambience"]
+      "avoid": [
+        "subtle continuous beds",
+        "dense effects under narration",
+        "decorative medieval ambience"
+      ]
     },
     "jeanne-vers-le-roi": {
       "mode": "story",
       "default_density": "scene-rich",
       "goal": "Faire sentir les obstacles, déplacements et changements de pouvoir par les voix, les silences et quelques événements de premier plan.",
-      "avoid": ["triumphal music by default", "continuous pseudo-medieval ambience", "sound that turns reconstruction into asserted fact"]
+      "avoid": [
+        "triumphal music by default",
+        "continuous pseudo-medieval ambience",
+        "sound that turns reconstruction into asserted fact"
+      ]
+    },
+    "nuit-apres-orleans": {
+      "mode": "story",
+      "default_density": "scene-rich",
+      "goal": "Créer une immersion de fiction continue où le son mesure l'espace, le corps et le passage du temps ; laisser cloches, eau et silence prendre ponctuellement la scène sans fabriquer une fausse authenticité documentaire.",
+      "avoid": [
+        "continuous pseudo-medieval ambience",
+        "music explaining emotion",
+        "sound on every action",
+        "fake authentic Loire or Orléans sound claims"
+      ]
     },
     "orleans-cathedral": {
       "mode": "visit",
       "default_density": "light",
       "goal": "Laisser le lieu réel dominer ; utiliser surtout espace, silence, cloche, chant ou orgue lorsqu'ils font comprendre le monument.",
-      "avoid": ["continuous virtual ambience competing with the real cathedral", "long reverberated narration", "effects without spatial purpose"]
+      "avoid": [
+        "continuous virtual ambience competing with the real cathedral",
+        "long reverberated narration",
+        "effects without spatial purpose"
+      ]
     },
     "orleans-marly": {
       "mode": "route",
       "default_density": "none",
       "goal": "Priorité absolue à la voix et au paysage réel de la route ; ajouter du son seulement si un changement de chapitre est plus clair grâce à lui.",
-      "avoid": ["low-level ambience masked by road noise", "busy scenes", "sound cues requiring headphones"]
+      "avoid": [
+        "low-level ambience masked by road noise",
+        "busy scenes",
+        "sound cues requiring headphones"
+      ]
     },
     "orleans-walk": {
       "mode": "visit",
       "default_density": "light",
       "goal": "Compléter la ville présente sans la recouvrir ; laisser les lieux, rues et pauses réelles constituer l'ambiance principale.",
-      "avoid": ["fake present-day ambience", "constant beds", "effects that distract from walking and orientation"]
+      "avoid": [
+        "fake present-day ambience",
+        "constant beds",
+        "effects that distract from walking and orientation"
+      ]
     },
     "orleans": {
       "mode": "story",
       "default_density": "light",
       "goal": "Donner des repères historiques durables avec quelques scènes sonores fortes, sans transformer chaque épisode en fiction radiophonique.",
-      "avoid": ["sound on every paragraph", "redundant narration of obvious effects", "uniform density across episodes"]
+      "avoid": [
+        "sound on every paragraph",
+        "redundant narration of obvious effects",
+        "uniform density across episodes"
+      ]
     },
     "val-de-loire": {
       "mode": "story",
       "default_density": "light",
       "goal": "Faire émerger ponctuellement la Loire, le voyage, la cour ou les ruptures historiques tout en gardant la narration comme fil principal.",
-      "avoid": ["postcard music", "continuous river ambience", "same sound palette for every château or city"]
+      "avoid": [
+        "postcard music",
+        "continuous river ambience",
+        "same sound palette for every château or city"
+      ]
     },
     "vendee-revolution": {
       "mode": "story",
       "default_density": "light",
       "goal": "Renforcer compréhension, tension et humanité sans spectaculariser la violence ni transformer une histoire complexe en bande-annonce.",
-      "avoid": ["heroic battle music", "graphic violence effects", "continuous tension beds", "false documentary realism"]
+      "avoid": [
+        "heroic battle music",
+        "graphic violence effects",
+        "continuous tension beds",
+        "false documentary realism"
+      ]
     }
   },
   "rollout_rule": "Direct episode by episode. density=none is valid. Only modify audio programs when the direction sidecar identifies a concrete narrative gain."

@@ -1,0 +1,1687 @@
+{
+  "schema_version": 6,
+  "id": "nuit-apres-orleans-ep01",
+  "title": "La nuit après Orléans",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 4,
+  "series": "La nuit après Orléans",
+  "episode": 1,
+  "stop": "Orléans → Loire vers Blois",
+  "location": "Orléans et vallée de la Loire, France",
+  "summary": "Prototype immersif : le 8 mai 1429, quelques heures après la levée du siège d’Orléans, Martin et Agnès quittent la ville par la Loire avec un document scellé. Une phrase de trop transforme leur voyage en rumeur.",
+  "historical_note": "Fiction historique assumée. Martin, Agnès, Étienne, Jehan, le passeur et le document transporté sont fictifs. Le cadre historique est réel : le siège d’Orléans est levé le 8 mai 1429 après la prise des Tourelles le 7 mai ; la Loire est un axe ancien de navigation et d’approvisionnement ; les sceaux servent à authentifier des actes ; des lettres closes sont physiquement transportées au XVe siècle. Les dialogues sont reconstruits en français modernisé. Jeanne d’Arc n’est jamais rencontrée : elle n’existe ici que par les conséquences documentées de sa présence et par la rumeur. Les sons sont des évocations plausibles, jamais des reconstitutions authentiques d’Orléans ou de la Loire de 1429. Après la levée du siège, des positions anglaises subsistent sur la Loire, notamment à Meung-sur-Loire et Beaugency jusqu'à la campagne de juin ; la halte avant Meung et Pierre sont des éléments fictifs destinés à faire de cette contrainte militaire une cause dramatique explicite.",
+  "sources": [
+    "https://www.orleans-metropole.fr/fileadmin/orleans/MEDIA/document/culture/musees/offre_pedagogique/2022/mja/dossier/vdh_jeannedarc.pdf",
+    "https://www.orleans-metropole.fr/fileadmin/orleans/MEDIA/kiosque/ville_art_histoire/vdh_orleans-et-la-Loire.pdf",
+    "https://www.orleans-metropole.fr/fileadmin/orleans/MEDIA/kiosque/ville_art_histoire/vdh_bords_loire.pdf",
+    "https://www.archives-nationales.culture.gouv.fr/ateliers-pedagogiques/les-sceaux-temoins-de-leur-temps",
+    "https://ccfr.bnf.fr/portailccfr/ark%3A/16871/004D39A10350",
+    "https://www.orleans-metropole.fr/sites/default/files/2020-05/fiche_pedagogique_jeanne_d_arc_2020.pdf"
+  ],
+  "acoustic_space": "outdoor-open",
+  "actors": {
+    "narrateur": {
+      "placement": "center"
+    },
+    "martin": {
+      "placement": "left"
+    },
+    "agnes": {
+      "placement": "right"
+    },
+    "etienne": {
+      "placement": "right"
+    },
+    "femme": {
+      "placement": "right"
+    },
+    "homme": {
+      "placement": "right"
+    }
+  },
+  "soundscape": {
+    "events": [
+      {
+        "sound": "church-bell-distant",
+        "role": "scene",
+        "after_segment": 3,
+        "space_ms": 3200,
+        "gain_db": -27,
+        "placement": "right",
+        "fade_in_ms": 250,
+        "fade_out_ms": 900
+      },
+      {
+        "sound": "historic-horse-hooves",
+        "role": "scene",
+        "after_segment": 11,
+        "space_ms": 1500,
+        "gain_db": -26,
+        "placement": "left",
+        "fade_in_ms": 120,
+        "fade_out_ms": 650
+      },
+      {
+        "sound": "historic-horse-hooves",
+        "role": "bridge",
+        "after_segment": 65,
+        "foreground_ms": 1000,
+        "carry_through_segments": 1,
+        "tail_ms": 0,
+        "gain_db": -31,
+        "placement": "right",
+        "fade_in_ms": 180,
+        "fade_out_ms": 650
+      },
+      {
+        "sound": "church-bell-distant",
+        "role": "bridge",
+        "after_segment": 66,
+        "foreground_ms": 2300,
+        "carry_through_segments": 2,
+        "tail_ms": 900,
+        "gain_db": -29,
+        "placement": "right",
+        "fade_in_ms": 450,
+        "fade_out_ms": 1500
+      },
+      {
+        "sound": "church-bell-distant",
+        "role": "scene",
+        "after_segment": 89,
+        "space_ms": 4800,
+        "gain_db": -31,
+        "placement": "right",
+        "fade_in_ms": 250,
+        "fade_out_ms": 2600
+      },
+      {
+        "sound": "river-water-flow",
+        "role": "bridge",
+        "after_segment": 90,
+        "foreground_ms": 4200,
+        "carry_through_segments": 2,
+        "tail_ms": 1200,
+        "gain_db": -27,
+        "placement": "center",
+        "fade_in_ms": 700,
+        "fade_out_ms": 1700
+      },
+      {
+        "sound": "river-water-flow",
+        "role": "bridge",
+        "after_segment": 149,
+        "foreground_ms": 3000,
+        "carry_through_segments": 1,
+        "tail_ms": 1200,
+        "gain_db": -29,
+        "placement": "center",
+        "fade_in_ms": 650,
+        "fade_out_ms": 1800
+      }
+    ],
+    "ducking": "speech"
+  },
+  "segments": [
+    {
+      "scene": "Prologue — sous la table",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Au début, Martin ne voit rien. Il est couché sur le ventre sous une table, une joue contre des dalles froides. Au-dessus de lui, quelque chose tremble dans un gobelet. Dehors, un grondement roule, s'arrête, puis revient. Il retient son souffle et écoute. Le gobelet recommence à trembler.",
+      "acoustic_space": "confined-stone",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "Prologue — sous la table",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 120,
+      "text": "Ça venait du pont ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+13%",
+      "pitch": "+22Hz",
+      "volume": "+2%",
+      "acoustic_space": "confined-stone"
+    },
+    {
+      "scene": "Prologue — sous la table",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 100,
+      "text": "Personne ne lui répond. Un choc sec claque quelque part dans la rue. Martin se fige. Puis, dehors, quelque chose change.",
+      "acoustic_space": "confined-stone",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "Prologue — sous la table",
+      "character_id": "femme",
+      "speaker": "Une femme",
+      "pause_after_ms": 100,
+      "text": "Martin ! Martin, sors de là !",
+      "preset": "marchande-truculente",
+      "acoustic_space": "confined-stone"
+    },
+    {
+      "scene": "Prologue — sous la table",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 110,
+      "text": "J'étais en train de chercher la petite cuillère.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+14%",
+      "pitch": "+22Hz",
+      "volume": "+2%",
+      "acoustic_space": "confined-stone"
+    },
+    {
+      "scene": "Prologue — sous la table",
+      "character_id": "femme",
+      "speaker": "Une femme",
+      "pause_after_ms": 80,
+      "text": "Sous la table ?",
+      "preset": "marchande-truculente",
+      "acoustic_space": "confined-stone"
+    },
+    {
+      "scene": "Prologue — sous la table",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 250,
+      "text": "Elle aurait pu tomber.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+14%",
+      "pitch": "+22Hz",
+      "volume": "+2%",
+      "acoustic_space": "confined-stone"
+    },
+    {
+      "scene": "Prologue — sous la table",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 300,
+      "text": "La femme ne discute pas. Elle lui attrape le poignet et le tire vers l'escalier. Quand Martin remonte dans la lumière, il comprend que quelque chose a changé.",
+      "acoustic_space": "small-stone-room",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 380,
+      "text": "Nous sommes à Orléans, le dimanche 8 mai 1429. Depuis près de sept mois, une armée anglaise assiège la ville. Hier encore, on s'est battu aux Tourelles, à l'extrémité sud du pont. Jeanne, celle que beaucoup appellent déjà la Pucelle, y a été blessée. Ce matin, les Anglais se sont rangés en ordre de bataille à l'ouest de la ville. Les Français leur ont fait face. Puis les Anglais ont commencé à partir. Le siège est levé.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 110,
+      "text": "Ils fuient ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+15%",
+      "pitch": "+22Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "femme",
+      "speaker": "Une femme",
+      "pause_after_ms": 180,
+      "text": "Ils partent. Ne leur cours pas après pour leur demander.",
+      "preset": "marchande-truculente"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 250,
+      "text": "Dans la rue, personne ne ressemble vraiment à un vainqueur. Des hommes ont des bandages sales. Une charrette passe avec une roue de travers. Une porte n'a plus qu'un gond. La fumée pique les yeux. Pourtant les gens rient. Certains pleurent en riant. D'autres se signent. Et partout, les cloches.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 90,
+      "text": "Moi, je l'ai vue hier.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+14%",
+      "pitch": "+22Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "femme",
+      "speaker": "Une femme",
+      "pause_after_ms": 70,
+      "text": "Qui ça ?",
+      "preset": "marchande-truculente"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 80,
+      "text": "La Pucelle. De près.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+13%",
+      "pitch": "+22Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "femme",
+      "speaker": "Une femme",
+      "pause_after_ms": 70,
+      "text": "Ah oui ?",
+      "preset": "marchande-truculente"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 110,
+      "text": "Très près. Elle m'a regardé.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+12%",
+      "pitch": "+22Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "femme",
+      "speaker": "Une femme",
+      "pause_after_ms": 300,
+      "text": "Et elle t'a demandé si tu avais retrouvé ta petite cuillère ?",
+      "preset": "marchande-truculente"
+    },
+    {
+      "scene": "1 — Orléans respire",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 300,
+      "text": "Martin ouvre la bouche. La femme est déjà partie. Il a quatorze ans, connaît la Loire mieux que certaines rues de la ville, et possède un talent que son père apprécie beaucoup moins que lui : Martin sait rendre une histoire meilleure qu'elle ne l'était.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 240,
+      "text": "Son père l'attend près du fleuve. Étienne est batelier. Depuis des années, il transporte ce que les routes transportent mal : du bois, des tonneaux, du grain, parfois des hommes. Pendant le siège, la Loire a été une frontière, un obstacle et une voie de ravitaillement. Aujourd'hui encore, les rives ne sont pas devenues sûres simplement parce que les cloches sonnent.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 90,
+      "text": "Tu étais où ?",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 70,
+      "text": "J'aidais.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+11%",
+      "pitch": "+21Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 60,
+      "text": "À quoi ?",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 70,
+      "text": "À surveiller.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+11%",
+      "pitch": "+21Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 260,
+      "text": "Sous une table ?",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Martin se demande très brièvement comment son père peut savoir cela. Puis il voit Agnès.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 260,
+      "text": "Elle a quinze ans. Elle se tient près de la barque, une cape trop grande sur les épaules et un sac serré contre elle. Martin la connaît depuis toujours. Mais depuis quelques semaines, les gens baissent la voix quand elle approche. Son père, Jehan, est mort pendant le siège. On raconte qu'il travaillait pour les Anglais.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 90,
+      "text": "Elle vient avec nous ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+8%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 150,
+      "text": "Je suis juste là. Tu peux me demander.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 220,
+      "text": "Le paquet doit descendre jusqu'à Blois. Vous, vous l'emmenez d'abord jusqu'à notre halte avant Meung.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 90,
+      "text": "Nous ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+8%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 160,
+      "text": "Moi, je ne peux pas tenir l'aviron longtemps avec ça.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Étienne soulève légèrement son bras bandé. Martin l'avait vu. Il avait seulement décidé de ne pas comprendre.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 180,
+      "text": "Là, vous attendez Pierre et des nouvelles sûres. Vous n'essayez pas de passer Meung seuls, vous ne naviguez pas de nuit, vous ne débarquez pas si vous voyez des hommes armés, et si je dis que le fleuve est encore dangereux, tu ne réponds pas que tu le connais.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 80,
+      "text": "Je le connais.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+10%",
+      "pitch": "+21Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "2 — Le quai",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 260,
+      "text": "Ça commence bien.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+1%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Étienne glisse alors la main sous sa tunique. Il en sort un paquet plat, protégé par une étoffe. À l'intérieur : un document plié, fermé par un lien et marqué d'un sceau de cire.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 90,
+      "text": "C'est quoi ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+7%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 120,
+      "text": "Quelque chose qui doit arriver à Blois.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 80,
+      "text": "Pour qui ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+7%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 120,
+      "text": "Maître Guillaume saura à qui le remettre.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 90,
+      "text": "Et qu'est-ce qu'il y a dedans ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+7%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 150,
+      "text": "Tu n'as pas besoin de le savoir.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 100,
+      "text": "Donc c'est important.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+9%",
+      "pitch": "+21Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 210,
+      "text": "Tout devient important dès que je te dis de ne pas y toucher.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 280,
+      "text": "C'est à propos de mon père ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-1%",
+      "pitch": "+7Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 240,
+      "text": "Étienne ne répond pas tout de suite. Le visage d'Agnès ne bouge presque pas.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 360,
+      "text": "Oui.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 130,
+      "text": "Alors donne-le-moi.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+0%",
+      "pitch": "+7Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 170,
+      "text": "Je vous le donne à tous les deux. Si l'un tombe à l'eau, l'autre continue.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 110,
+      "text": "Pourquoi est-ce que ce serait moi qui tombe à l'eau ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+10%",
+      "pitch": "+21Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "3 — Le paquet",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 220,
+      "text": "Parce que tu viens de demander.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+3%",
+      "pitch": "+9Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "4 — Ce qui ferme une parole",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 260,
+      "text": "Martin retourne le paquet entre ses doigts. Le sceau lui paraît presque décevant : un peu de cire marquée d'une empreinte. Pourtant, ce petit morceau de cire n'est pas un décor. Il dit qu'un acte a été reconnu et validé par celui qui l'a scellé. Martin sait peu lire. Mais il comprend très bien une chose : s'il brise cette cire, il ne pourra pas la remettre comme avant.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "4 — Ce qui ferme une parole",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 90,
+      "text": "Tu ne l'ouvres pas.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "4 — Ce qui ferme une parole",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 60,
+      "text": "Je sais.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+7%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "4 — Ce qui ferme une parole",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 110,
+      "text": "Je te connais.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "4 — Ce qui ferme une parole",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 80,
+      "text": "C'est différent.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+6%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "4 — Ce qui ferme une parole",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 60,
+      "text": "Pourquoi ?",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "4 — Ce qui ferme une parole",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 230,
+      "text": "Parce que tu me l'as confié.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "+19Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "4 — Ce qui ferme une parole",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 140,
+      "text": "Étienne le regarde un instant. Il hoche la tête. Puis il ajoute, presque doucement :",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "4 — Ce qui ferme une parole",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 480,
+      "text": "Une histoire, c'est quand tout le monde sait que tu inventes. Un mensonge, c'est quand quelqu'un risque de te croire.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 180,
+      "text": "Ils poussent la barque. L'eau prend son poids. Étienne garde une main sur le bord jusqu'au dernier moment.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 70,
+      "text": "Martin.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 70,
+      "text": "Quoi ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+5%",
+      "pitch": "+19Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "etienne",
+      "speaker": "Étienne",
+      "pause_after_ms": 330,
+      "text": "Aujourd'hui, personne ne sait vraiment où sont tous les Anglais. Le siège est fini. La guerre, non.",
+      "preset": "marin-bourru"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Martin acquiesce. Agnès se place à l'avant. Un coup d'aviron, puis un autre. La rive commence à glisser.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 90,
+      "text": "Tu sais, hier, j'étais presque aux Tourelles.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+11%",
+      "pitch": "+22Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 50,
+      "text": "Presque ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+9Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 70,
+      "text": "Enfin... pas loin.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+9%",
+      "pitch": "+22Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 50,
+      "text": "À combien ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+9Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 160,
+      "text": "Ça dépend d'où on mesure.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+10%",
+      "pitch": "+22Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "5 — Partir",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 250,
+      "text": "De sous la table ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+4%",
+      "pitch": "+10Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Orléans reste d'abord immense derrière eux. Les murs, les toits, la fumée, le pont meurtri. Et surtout les cloches. Elles couvrent presque le clapot contre la coque.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 110,
+      "text": "Tu l'as vraiment vue, Jeanne ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-1%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 60,
+      "text": "Qui ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+6%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 90,
+      "text": "Tu sais très bien.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-1%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 110,
+      "text": "Je l'ai vue passer, oui.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "+19Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 70,
+      "text": "De près, cette fois ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-1%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 90,
+      "text": "Pas vraiment près.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+3%",
+      "pitch": "+19Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 110,
+      "text": "Et elle t'a regardé ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-1%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 320,
+      "text": "Non.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+0%",
+      "pitch": "+18Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 160,
+      "text": "Agnès ne se moque pas. Elle regarde la ville. Au bout d'un moment, Martin demande :",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 190,
+      "text": "Ton père... tu l'as vraiment vu travailler pour eux ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-2%",
+      "pitch": "+17Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 300,
+      "text": "Oui.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-4%",
+      "pitch": "+6Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 170,
+      "text": "D'accord...",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-2%",
+      "pitch": "+17Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 300,
+      "text": "Je l'ai vu monter sur leurs bateaux. Je l'ai vu leur parler. Une fois, il est revenu avec de l'argent. Après sa mort, les gens ont décidé qu'ils connaissaient toute l'histoire.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-3%",
+      "pitch": "+6Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 100,
+      "text": "Et toi, tu le crois ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-2%",
+      "pitch": "+17Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 320,
+      "text": "Moi, j'aimerais bien lire la fin.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-3%",
+      "pitch": "+6Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 250,
+      "text": "Orléans ne remplit plus tout l'horizon. Les toits se tassent derrière eux, la fumée se mêle au soir. Agnès ne parle plus. Martin rame.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Puis plus rien de la ville. Martin écoute. Ce qu'il prenait pour du silence est en réalité un autre monde, plus bas, plus proche.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 220,
+      "text": "On dirait que la ville a fermé une porte derrière nous.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-2%",
+      "pitch": "+17Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 260,
+      "text": "Alors rame.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+0%",
+      "pitch": "+7Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "6 — La ville rétrécit",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 420,
+      "text": "Martin plonge l'aviron. Devant eux, la Loire s'assombrit. Ils ne savent pas encore que leur première erreur est déjà derrière eux. La seconde, Martin la fera tout seul.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Pendant près d'une heure, ils ne rencontrent personne. Le fleuve se divise autour de bancs de sable pâles. Martin cesse peu à peu de penser à Orléans. Ses mains commencent à tirer. Chaque coup d'aviron lui rappelle qu'un bateau chargé descend peut-être avec le courant, mais qu'il faut encore lui dire où aller.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 60,
+      "text": "Tu fatigues ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 50,
+      "text": "Non.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "+19Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 80,
+      "text": "Tu changes de main toutes les dix secondes.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 160,
+      "text": "C'est pour équilibrer les muscles.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+9%",
+      "pitch": "+22Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Agnès lève les yeux au ciel. Martin sourit. Le froid, lui, ne plaisante pas. Il remonte depuis l'eau. La laine de leurs vêtements retient une humidité glacée autour des poignets et des chevilles. Ils ont quitté une ville en fête ; à quelques kilomètres à peine, le monde redevient vaste, sombre et incertain.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 70,
+      "text": "J'ai faim.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+5%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 110,
+      "text": "Ça, je te crois.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+3%",
+      "pitch": "+9Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 150,
+      "text": "Ils sortent le pain donné par Étienne. Martin essaie d'en arracher un morceau. Le pain résiste.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 100,
+      "text": "On pourrait assommer un Anglais avec.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+11%",
+      "pitch": "+22Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 180,
+      "text": "Essaie déjà de le manger.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+5%",
+      "pitch": "+10Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Martin mouille un coin du pain dans sa bouche et mâche avec sérieux. Le repas n'a rien d'héroïque. C'est précisément pour cela qu'il le retiendra : la faim, le froid, les doigts raides, et cette fille qui refuse de rire à ses meilleures plaisanteries.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 90,
+      "text": "Là, regarde.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+1%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "Une petite lumière tremble près de la rive. Pas une ville. Quelques bâtiments, un débarcadère sommaire, deux bateaux attachés. Ils doivent remplir leur gourde et demander si la rive en aval est libre.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 140,
+      "text": "Père a dit de ne pas débarquer s'il y avait des hommes armés.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+2%",
+      "pitch": "+19Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 60,
+      "text": "Tu en vois ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+0%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 60,
+      "text": "Pas que je voie.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+2%",
+      "pitch": "+19Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "7 — La première halte",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 180,
+      "text": "Alors pour une fois, obéis exactement.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+2%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 170,
+      "text": "Ils approchent. Un homme tient la corde pendant qu'Agnès saute sur la rive. Il a la barbe grise et des mains qui ressemblent à celles d'Étienne.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "homme",
+      "speaker": "Le passeur",
+      "pause_after_ms": 90,
+      "text": "Vous venez d'Orléans ?",
+      "preset": "homme-age-sage"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 50,
+      "text": "Oui.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "+19Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "homme",
+      "speaker": "Le passeur",
+      "pause_after_ms": 90,
+      "text": "Alors ? Ils sont vraiment partis ?",
+      "preset": "homme-age-sage"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 100,
+      "text": "Tous. On les a vus se retirer.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+5%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "homme",
+      "speaker": "Le passeur",
+      "pause_after_ms": 90,
+      "text": "Et la fille ? Celle avec l'étendard ?",
+      "preset": "homme-age-sage"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 60,
+      "text": "Jeanne ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+7%",
+      "pitch": "+21Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "homme",
+      "speaker": "Le passeur",
+      "pause_after_ms": 90,
+      "text": "Tu la connais ?",
+      "preset": "homme-age-sage"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 150,
+      "text": "La bonne réponse est non. Martin la connaît parfaitement. Elle est courte, solide, sans danger. Mais derrière l'homme, deux autres personnes se sont tournées vers lui.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 100,
+      "text": "Je l'ai vue.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+6%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "homme",
+      "speaker": "Le passeur",
+      "pause_after_ms": 55,
+      "text": "De près ?",
+      "preset": "homme-age-sage"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 60,
+      "text": "Martin.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-2%",
+      "pitch": "+7Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 90,
+      "text": "Assez près.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+5%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "homme",
+      "speaker": "Le passeur",
+      "pause_after_ms": 90,
+      "text": "Et vous allez où, comme ça ?",
+      "preset": "homme-age-sage"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 60,
+      "text": "À Blois.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+6%",
+      "pitch": "+20Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "homme",
+      "speaker": "Le passeur",
+      "pause_after_ms": 90,
+      "text": "Pour quoi faire ?",
+      "preset": "homme-age-sage"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 130,
+      "text": "Agnès serre le sac contre elle. Martin le voit. L'homme le voit aussi.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 55,
+      "text": "On porte un message.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+7%",
+      "pitch": "+21Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 55,
+      "text": "On repart.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+3%",
+      "pitch": "+8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "homme",
+      "speaker": "Le passeur",
+      "pause_after_ms": 90,
+      "text": "Un message de qui ?",
+      "preset": "homme-age-sage"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 130,
+      "text": "Il suffit à Martin de regarder l'homme pour comprendre ce qu'il espère entendre. Pendant une seconde, il sent presque la phrase se former toute seule.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 330,
+      "text": "De la Pucelle.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+1%",
+      "pitch": "+18Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 140,
+      "text": "Agnès ferme les yeux.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "homme",
+      "speaker": "Le passeur",
+      "pause_after_ms": 100,
+      "text": "Un message de Jeanne d'Arc ?",
+      "preset": "homme-age-sage"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 60,
+      "text": "Chut.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "+19Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 120,
+      "text": "C'est le pire mot qu'il pouvait ajouter. À présent, l'homme est certain que l'affaire est secrète.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 130,
+      "text": "Dans le bateau. Maintenant.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "+7%",
+      "pitch": "+9Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 150,
+      "text": "Ils repoussent la rive. Martin évite son regard. Derrière eux, le passeur parle déjà à quelqu'un.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 70,
+      "text": "Pourquoi ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-4%",
+      "pitch": "+6Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 80,
+      "text": "Je ne sais pas.",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-3%",
+      "pitch": "+17Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 60,
+      "text": "Si. Tu sais.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-3%",
+      "pitch": "+6Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 20,
+      "text": "Il me regardait comme si",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-2%",
+      "pitch": "+17Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 170,
+      "text": "Comme si tu étais important ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-2%",
+      "pitch": "+6Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 180,
+      "text": "Martin ne répond pas. Le courant les reprend. Sur la rive, un homme répète à un autre qu'un garçon venu d'Orléans transporte un message de la Pucelle vers Blois. La phrase n'a plus besoin de Martin.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 220,
+      "text": "En 1429, une rumeur voyage à la vitesse des jambes, des chevaux, des bateaux et des bouches. Elle s'arrête pour manger, change de mots à chaque halte, repart avec un autre. Elle est lente. Mais Martin va découvrir qu'elle peut tout de même arriver avant lui.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 90,
+      "text": "Donne-moi le paquet.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-2%",
+      "pitch": "+6Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "martin",
+      "speaker": "Martin",
+      "pause_after_ms": 70,
+      "text": "Pourquoi ?",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-1%",
+      "pitch": "+17Hz",
+      "volume": "+2%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "agnes",
+      "speaker": "Agnès",
+      "pause_after_ms": 300,
+      "text": "Parce que ton père t'a confié une vérité et qu'en moins de deux heures tu viens de lui inventer une armée autour.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-3%",
+      "pitch": "+6Hz",
+      "volume": "+1%"
+    },
+    {
+      "scene": "8 — Une phrase de trop",
+      "character_id": "narrateur",
+      "speaker": "Narratrice",
+      "pause_after_ms": 1500,
+      "text": "Martin garde la main sur le sac. Devant eux, quelque part, il y a Blois. Et désormais, peut-être, des gens qui les attendent.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    }
+  ]
+}
