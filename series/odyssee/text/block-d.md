@@ -364,6 +364,60 @@ NARRATRICE — Ulysse pourrait répondre : « Mon fils. »
 
 NARRATRICE — Il répond à la question.
 
+ULYSSE — D’abord, tu me dis tout ce que je ne sais pas.
+
+TÉLÉMAQUE — Tu vas avoir besoin de temps.
+
+ULYSSE — Combien sont-ils ?
+
+TÉLÉMAQUE — Assez pour que « je suis Ulysse » ne soit pas un plan.
+
+ULYSSE — Ça, Athéna me l’a déjà expliqué.
+
+TÉLÉMAQUE — Elle a dû te connaître longtemps.
+
+ULYSSE — Trop.
+
+TÉLÉMAQUE — Antinoos commande surtout parce qu’il agit comme si la maison lui appartenait déjà. Eurymaque parle mieux. Les autres suivent celui qui semble gagner.
+
+ULYSSE — Les armes ?
+
+TÉLÉMAQUE — Dans la salle. Sur les murs. Certaines dans la réserve.
+
+ULYSSE — Serviteurs ?
+
+TÉLÉMAQUE — Certains nous sont fidèles. Certains ont choisi le camp qui mange le mieux.
+
+ULYSSE — Ta mère ?
+
+TÉLÉMAQUE — Elle ne choisira pas un camp parce que tu lui demandes.
+
+ULYSSE — Je n’allais pas—
+
+TÉLÉMAQUE — Si.
+
+ULYSSE — Tu ne me connais pas assez pour savoir ce que j’allais dire.
+
+TÉLÉMAQUE — Je connais ma mère assez pour savoir ce qu’il ne faut pas lui dire.
+
+NARRATRICE — Ulysse accepte le coup.
+
+ULYSSE — Très bien.
+
+TÉLÉMAQUE — Elle a entendu trop d’hommes promettre ton retour. Si tu veux qu’elle te croie, ne lui demande pas de te croire.
+
+ULYSSE — C’est étrange d’entendre mon fils m’expliquer Pénélope.
+
+TÉLÉMAQUE — C’est étrange d’expliquer ma mère à mon père.
+
+ULYSSE — Nous avons beaucoup de retard.
+
+TÉLÉMAQUE — On ne le rattrapera pas avant le dîner.
+
+ULYSSE — Alors on commence par rester vivants.
+
+TÉLÉMAQUE — Là, je te reconnais un peu plus.
+
 ULYSSE — On compte leurs armes.
 
 # S13 — Ceux qui savent
@@ -575,6 +629,40 @@ PÉNÉLOPE — Alors tu es le premier.
 ULYSSE — Il disait que tu étais plus dangereuse quand tu parlais doucement.
 
 PÉNÉLOPE — Il avait donc parfois raison.
+
+ULYSSE — Il disait que tu pouvais écouter quelqu’un très longtemps sans lui donner la moindre indication sur ce que tu pensais.
+
+PÉNÉLOPE — Voilà une observation que tu aurais pu faire toi-même depuis que tu es entré.
+
+ULYSSE — Oui.
+
+PÉNÉLOPE — Autre chose.
+
+ULYSSE — Il détestait quand tu changeais une décision après l’avoir laissé croire qu’elle était prise.
+
+PÉNÉLOPE — Parce qu’il n’aimait pas découvrir que quelqu’un d’autre pouvait préparer une ruse.
+
+ULYSSE — Il admirait ça.
+
+PÉNÉLOPE — Après s’être mis en colère.
+
+ULYSSE — Souvent pendant.
+
+PÉNÉLOPE — Tu l’as vraiment connu.
+
+ULYSSE — Oui.
+
+PÉNÉLOPE — Alors tu sais qu’il pouvait raconter une histoire vraie d’une manière qui la rendait suspecte.
+
+ULYSSE — C’est un talent.
+
+PÉNÉLOPE — C’est épuisant.
+
+ULYSSE — Je veux bien le croire.
+
+PÉNÉLOPE — Non. Tu as l’air de quelqu’un qui trouve ça amusant.
+
+NARRATRICE — Ulysse doit retenir un sourire.
 
 ULYSSE — Il disait aussi que tu repérais une mauvaise couture plus vite qu’une servante qui l’avait faite.
 
@@ -1269,6 +1357,44 @@ PÉNÉLOPE — À moi, non.
 ULYSSE — Non.
 
 PÉNÉLOPE — Alors demain.
+
+ULYSSE — Tu voudras tout entendre ?
+
+PÉNÉLOPE — Non.
+
+ULYSSE — Non ?
+
+PÉNÉLOPE — Je voudrai entendre ce qui compte.
+
+ULYSSE — Comment sauras-tu ce qui compte si tu ne connais pas tout ?
+
+PÉNÉLOPE — J’ai vécu vingt ans sans tout connaître. Je suis devenue assez compétente.
+
+ULYSSE — Il y a des choses que je ne sais pas encore raconter.
+
+PÉNÉLOPE — Alors ne les raconte pas encore.
+
+ULYSSE — Et si certaines choses changent la manière dont tu me vois ?
+
+PÉNÉLOPE — Ulysse.
+
+ULYSSE — Oui ?
+
+PÉNÉLOPE — La manière dont je te voyais a déjà eu vingt ans pour changer.
+
+NARRATRICE — Il reçoit la phrase sans chercher à la détourner.
+
+ULYSSE — J’ai cru longtemps qu’il suffisait d’arriver.
+
+PÉNÉLOPE — Je sais.
+
+ULYSSE — Non. Tu ne peux pas savoir combien de fois j’ai imaginé cette pièce.
+
+PÉNÉLOPE — Et toi, tu ne peux pas savoir combien de fois j’ai imaginé qu’elle resterait vide.
+
+ULYSSE — Alors qu’est-ce qu’on fait de toutes ces versions ?
+
+PÉNÉLOPE — On cesse de leur demander d’être vraies.
 
 ULYSSE — Et ce soir ?
 
