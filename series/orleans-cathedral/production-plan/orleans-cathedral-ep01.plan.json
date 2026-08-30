@@ -1,0 +1,93 @@
+{
+  "production_plan_version": 1,
+  "product": "audioguide",
+  "id": "orleans-cathedral-ep01",
+  "title": "Avant d’entrer : une cathédrale qui trompe l’œil",
+  "language": "fr-FR",
+  "objective": "Faire regarder la façade comme un monument de plusieurs siècles superposés, puis conduire naturellement l’auditeur vers l’entrée sans transformer l’étape en cours d’architecture.",
+  "content_binding": {
+    "mode": "program-ref",
+    "program": "series/orleans-cathedral/audio/orleans-cathedral-ep01.json",
+    "git_blob_sha1": "9ed3f6552cf997e57c6a4a33e3c4696015d2debb",
+    "content_authority": "program"
+  },
+  "casting": {
+    "narrator": {
+      "continuity_key": "orleans-cathedral-main-narrator",
+      "program_selector": {
+        "character_id": "narrateur"
+      }
+    }
+  },
+  "overlays": [
+    {
+      "id": "orient-on-façade",
+      "segment_range": [
+        1,
+        1
+      ],
+      "importance": "essential",
+      "performance_intent": "guiding-visual-orientation"
+    },
+    {
+      "id": "historical-layers",
+      "segment_range": [
+        2,
+        3
+      ],
+      "importance": "important",
+      "performance_intent": "clear-without-lecture"
+    },
+    {
+      "id": "embodied-scale",
+      "segment_range": [
+        4,
+        4
+      ],
+      "importance": "important",
+      "performance_intent": "embodied-scale"
+    },
+    {
+      "id": "memory-vs-monument",
+      "segment_range": [
+        5,
+        6
+      ],
+      "importance": "important",
+      "performance_intent": "precise-memory-distinction"
+    },
+    {
+      "id": "handoff-to-entry",
+      "segment_range": [
+        7,
+        7
+      ],
+      "importance": "essential",
+      "performance_intent": "clear-next-step"
+    }
+  ],
+  "fallback_policy": {
+    "essential_speech": "fail",
+    "supportive_sound": "omit-and-warn",
+    "optional_content": "omit-and-warn"
+  },
+  "risk_hints": [
+    "outdoor-intelligibility",
+    "visual-cue-timing",
+    "preserve-existing-program-soundscape"
+  ],
+  "product_context": {
+    "station_id": "orleans-cathedral-ep01",
+    "location_label": "Parvis et façade occidentale",
+    "visual_cue": "Reculez assez pour voir les deux tours, la flèche et l’axe de la rue Jeanne-d’Arc.",
+    "target_duration_s": 170,
+    "max_duration_s": 200,
+    "resume_after_beats": [
+      "historical-layers",
+      "memory-vs-monument"
+    ],
+    "listening_environment": "outdoor-noisy",
+    "next_step": "orleans-cathedral-ep02",
+    "optional_content_policy": "skip-on-time-pressure"
+  }
+}

@@ -16,6 +16,15 @@ Compagnon de voyage audio statique, simple et résilient.
 - On bloque uniquement ce qui rend l'expérience fausse, inutilisable ou dangereuse.
 - Aucun backend permanent, aucune base de données, aucun compte utilisateur.
 
+## Production Plan
+
+Le Production Plan est l’enveloppe de décision côté produit : objectif d’écoute, continuité du casting, priorités, fallback/risques et contexte de visite. Pour un contenu existant ou long, le mode `program-ref` référence le Program Audio Engine canonique par Git blob SHA sans recopier le texte.
+
+- Contrat consumer : `docs/PRODUCTION_PLAN_V1.md`
+- Validation offline : `python tools/production_plan.py validate`
+
+Il reste distinct du Sound Director (intention sonore détaillée) et de l’ancien `scene-sequences` (stratégie d’implémentation).
+
 ## Sound Director
 
 Sound Director v1 est la couche éditoriale commune située au-dessus d'`audio-engine`. Il décide qui porte l'attention, où laisser du silence, comment faire évoluer la diction et quand un son mérite réellement le premier plan. Il est disponible pour toute série, mais reste optionnel épisode par épisode : `density: none` est une décision valide.
