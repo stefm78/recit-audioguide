@@ -1,0 +1,86 @@
+name: Odyssée H1 P4 Chatterbox candidates
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  p4-chatterbox:
+    if: github.head_ref == 'probe/H1-p4-chatterbox-candidates'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [a, b]
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install pinned providers
+        run: >-
+          python -m pip install --disable-pip-version-check
+          edge-tts==7.2.8
+          "git+https://github.com/resemble-ai/chatterbox.git@5de7a54aa4e5e2baadb0182dde554908b48b85c2"
+
+      - name: Render mixed-provider P4 candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p generated/p4-${{ matrix.variant }}
+          /usr/bin/time -v python tools/experiments/render_p4_chatterbox_h1.py             --spec series/odyssee/provider-spikes/p4-chatterbox-h1.json             --variant "${{ matrix.variant }}"             --out "generated/p4-${{ matrix.variant }}"
+          sha256sum "generated/p4-${{ matrix.variant }}/p4-${{ matrix.variant }}.mp3"                     "generated/p4-${{ matrix.variant }}/p4-${{ matrix.variant }}-report.json"
+
+      - name: Upload P4 candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: odyssee-h1-p4-${{ matrix.variant }}
+          path: |
+            generated/p4-${{ matrix.variant }}/p4-${{ matrix.variant }}.mp3
+            generated/p4-${{ matrix.variant }}/p4-${{ matrix.variant }}-report.json
+          if-no-files-found: error
+          retention-days: 3
+
+  p4-review-release:
+    if: github.head_ref == 'probe/H1-p4-chatterbox-candidates'
+    needs: p4-chatterbox
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Download P4 candidates
+        uses: actions/download-artifact@v4
+        with:
+          pattern: odyssee-h1-p4-*
+          path: review-assets
+          merge-multiple: true
+
+      - name: Publish durable P4 H1 review release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="odyssee-h1-p4-chatterbox-review-v1"
+          assets=(
+            review-assets/p4-a.mp3 review-assets/p4-a-report.json
+            review-assets/p4-b.mp3 review-assets/p4-b-report.json
+          )
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$tag" "${assets[@]}" --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$tag" "${assets[@]}"               --target "$TARGET_SHA"               --prerelease               --title "Odyssée — H1 P4 Chatterbox candidates"               --notes "H1 batch P4 candidates. Edge for Ulysses/Euryloque; Chatterbox Multilingual V3 for Siren only. Dry, no effects. PENDING_HUMAN_BATCH_H1."               --repo "$GITHUB_REPOSITORY"
+          fi
