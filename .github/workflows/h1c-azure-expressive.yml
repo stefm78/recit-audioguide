@@ -26,11 +26,15 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ -z "${AZURE_SPEECH_KEY:-}" ] || [ -z "${AZURE_SPEECH_REGION:-}" ]; then
-            echo "::error::Azure Speech credentials missing. Required repository secrets: AZURE_SPEECH_KEY and AZURE_SPEECH_REGION."
+          missing=()
+          if [ -z "${AZURE_SPEECH_KEY:-}" ]; then missing+=("AZURE_SPEECH_KEY"); fi
+          if [ -z "${AZURE_SPEECH_REGION:-}" ]; then missing+=("AZURE_SPEECH_REGION"); fi
+          if [ "${#missing[@]}" -gt 0 ]; then
+            printf -v joined '%s, ' "${missing[@]}"
+            echo "::error::Missing Azure Speech repository secret(s): ${joined%, }"
             exit 42
           fi
-          echo "Azure Speech region configured."
+          echo "Azure Speech credentials are configured; values remain masked."
 
       - name: Install ffmpeg
         run: |
