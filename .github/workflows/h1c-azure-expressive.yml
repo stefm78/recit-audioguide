@@ -1,0 +1,100 @@
+name: Odyssée H1c Azure expressive
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    if: github.head_ref == 'probe/H1c-azure-expressive'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Azure capability preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${AZURE_SPEECH_KEY:-}" ] || [ -z "${AZURE_SPEECH_REGION:-}" ]; then
+            echo "::error::Azure Speech credentials missing. Required repository secrets: AZURE_SPEECH_KEY and AZURE_SPEECH_REGION."
+            exit 42
+          fi
+          echo "Azure Speech region configured."
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install providers
+        run: >-
+          python -m pip install --disable-pip-version-check
+          edge-tts==7.2.8
+          pydub
+          "git+https://github.com/stefm78/audio-engine.git@6ca0aa878cf65426f18aa672a02aa573638f37ae"
+          "git+https://github.com/resemble-ai/chatterbox.git@5de7a54aa4e5e2baadb0182dde554908b48b85c2"
+
+      - name: Render all H1c variants with shared cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p generated/h1c
+          /usr/bin/time -v python tools/experiments/render_h1c.py             --spec series/odyssee/provider-spikes/h1c-azure-expressive.json             --out generated/h1c
+          sha256sum generated/h1c/p4-a.mp3 generated/h1c/p4-b.mp3                     generated/h1c/p6-a.mp3 generated/h1c/p6-b.mp3                     generated/h1c/h1c-summary.json
+
+      - name: Upload H1c candidates
+        uses: actions/upload-artifact@v4
+        with:
+          name: odyssee-h1c-azure-expressive
+          path: |
+            generated/h1c/p4-a.mp3
+            generated/h1c/p4-b.mp3
+            generated/h1c/p6-a.mp3
+            generated/h1c/p6-b.mp3
+            generated/h1c/p4-a-report.json
+            generated/h1c/p4-b-report.json
+            generated/h1c/p6-a-report.json
+            generated/h1c/p6-b-report.json
+            generated/h1c/h1c-summary.json
+          if-no-files-found: error
+          retention-days: 3
+
+  release:
+    if: github.head_ref == 'probe/H1c-azure-expressive'
+    needs: render
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Download candidates
+        uses: actions/download-artifact@v4
+        with:
+          name: odyssee-h1c-azure-expressive
+          path: review-assets
+
+      - name: Publish H1c review release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="odyssee-h1c-azure-expressive-review-v1"
+          assets=(review-assets/*.mp3 review-assets/*-report.json review-assets/h1c-summary.json)
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$tag" "${assets[@]}" --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$tag" "${assets[@]}"               --target "$TARGET_SHA"               --prerelease               --title "Odyssée — H1c Azure expressive candidates"               --notes "H1c closeout: P4 Azure expressive Sirens and P6 same-identity Henri expressive dialogue. PENDING_HUMAN_H1C."               --repo "$GITHUB_REPOSITORY"
+          fi
