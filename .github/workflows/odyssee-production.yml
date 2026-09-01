@@ -26,3 +26,6 @@ jobs:
       cache_namespace: odyssee-production-v1
       max_parallel: 12
       publish_release: false
+      publish_review_release: true
+      review_release_tag: odyssee-h2-integrated-review-v1
+      review_release_prerelease: true
