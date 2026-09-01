@@ -78,6 +78,30 @@ No loudness-normalization correction is requested by Stream 1.
 
 Machine QA found no abnormal assembly silence in Block A and no technical scene failures. No artistic conclusion is inferred from those checks.
 
+## Deterministic casting defect found and corrected before H2
+
+A Program/voice-pack adjacency audit found that `MARIN` and Euryloque used the exact same Henri voice and exact same synthesis parameters.
+
+Direct alternating turns with identical voice identity:
+
+- S05: 5;
+- S06: 32;
+- S07: 17;
+- S10: 9;
+- total: **63**.
+
+This is not left for the human reviewer because the causal defect is already known.
+
+Stream 1 correction:
+
+- Euryloque remains unchanged and human-accepted;
+- MARIN moves to `fr-FR-AlainNeural`, rate +2%, pitch +0Hz, volume +2%;
+- only S05/S06/S07/S10 are rerendered;
+- those four first-run audios are no longer H2 review candidates;
+- the first-run metrics above remain valid as pipeline and pacing evidence, but pacing for the corrected renders must be remeasured.
+
+No other H2-watch role is pre-emptively recast.
+
 ## H2 hypotheses — only these require ears
 
 ### H2-PACE-1 — long-form breathing
@@ -186,7 +210,7 @@ The page should ask one compact set of transverse questions, not one verdict per
 Reason:
 
 - Block A is ready;
-- the highest-value independent scenes are rendered;
+- the highest-value independent scenes are rendered, with S05/S06/S07/S10 requiring one narrow MARIN rerender before H2;
 - P4 is actively rendering in Stream 2;
 - P6 current failure is pre-synthesis infrastructure, not artistic evidence;
 - generic multi-provider routing needed by P5 is already merged in Audio Engine;
