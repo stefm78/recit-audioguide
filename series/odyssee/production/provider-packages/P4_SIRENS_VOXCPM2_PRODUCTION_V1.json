@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "id": "odyssee-p4-voxcpm2-production-v1",
+  "provider": {
+    "id": "voxcpm2",
+    "implementation_version": "1.0.0"
+  },
+  "runtime": {
+    "kind": "python",
+    "python": "3.11.16",
+    "device": "cpu",
+    "dependencies": [
+      {
+        "name": "voxcpm",
+        "revision": "ee8161e9e1b7b082cb5721a3a9980da4204401e6"
+      },
+      {
+        "name": "torch",
+        "version": "2.7.1+cpu"
+      },
+      {
+        "name": "torchaudio",
+        "version": "2.7.1+cpu"
+      },
+      {
+        "name": "pydub",
+        "version": "0.25.1"
+      },
+      {
+        "name": "soundfile",
+        "version": "0.12.1"
+      },
+      {
+        "name": "huggingface-hub",
+        "version": "1.29.0"
+      },
+      {
+        "name": "transformers",
+        "version": "5.16.1"
+      },
+      {
+        "name": "funasr",
+        "version": "1.4.11"
+      }
+    ],
+    "runtime_lock": "audio-engine/requirements/voxcpm2-p4-runtime.txt@fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
+    "system_dependencies": [
+      {
+        "name": "ffmpeg",
+        "commands": [
+          "ffmpeg",
+          "ffprobe"
+        ],
+        "reference_version": "7:6.1.1-3ubuntu5"
+      }
+    ]
+  },
+  "model": {
+    "id": "openbmb/VoxCPM2",
+    "source": "huggingface",
+    "revision": "32279effe8c19989596f05d353d1447f51d9e915",
+    "integrity": [
+      {
+        "name": ".gitattributes",
+        "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+      },
+      {
+        "name": "README.md",
+        "sha256": "c18d2ffbfb2f0aec770481c967842aee6c200cde65f6b033efd892a849986fda"
+      },
+      {
+        "name": "audiovae.pth",
+        "sha256": "94b5d51e107e0507d4acc976cfdadb64edd6fd06d1f751dadbf2fd1594274bf1"
+      },
+      {
+        "name": "config.json",
+        "sha256": "405f0dcd92f7feba6011ed4eac5c8d4f74cba9712f07fd5cfa3063bbdd95402c"
+      },
+      {
+        "name": "model.safetensors",
+        "sha256": "f7f964cfa9da23653baec6e6f7750719977ad944ed9f95fe52fe3a620506891d"
+      },
+      {
+        "name": "special_tokens_map.json",
+        "sha256": "068594063e37662c02b21acf42ebb334ef6a74fb810e68a2368f88f08351de76"
+      },
+      {
+        "name": "tokenization_voxcpm2.py",
+        "sha256": "84489ea32b6ee0cae22ed5480cacb6df85c46624c3119be9a2021c3649a12729"
+      },
+      {
+        "name": "tokenizer.json",
+        "sha256": "f8984687e4a92a3503d521396d454b7d68e9fdaab2a0288eb3536c7c1aa4bc20"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "sha256": "e78a3ebb48a0b9437efd1823b6b726c823da89e49dd8bcc90c02419d9baa772b"
+      }
+    ]
+  },
+  "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
+  "synthesis": {
+    "seed": 2026090100,
+    "parameters": {
+      "reference": "claire",
+      "control": "An intimate, intelligent invitation addressed personally to Ulysses. Warm recognition, quiet curiosity and genuine pleasure in understanding him. Compelling and close, but never sexualised, never mystical, never theatrical, never whispered and never sung. Natural adult French diction.",
+      "cfg_value": 2,
+      "inference_timesteps": 10,
+      "normalize_model_output": false,
+      "denoise": false,
+      "retry_badcase": false
+    },
+    "normalization": {
+      "target_dbfs": -20
+    }
+  },
+  "references": [
+    {
+      "id": "claire",
+      "path": "series/odyssee/production/provider-assets/p4/reference-claire.wav",
+      "sha256": "3366f993d108f42525627f1be03e71fdec312b559e067616d2019b69da35cafe",
+      "source": {
+        "type": "github_release_archive",
+        "repository": "stefm78/audio-engine",
+        "tag": "voice-lab-reference-pack-v1",
+        "asset": "voice-lab-reference-pack-v1.tar.xz",
+        "asset_sha256": "688eaa76d700f6ce5b5410e5fe37fa17877c7673737c31d7a50442304d6a4759",
+        "member_basename": "reference-claire.wav"
+      }
+    }
+  ],
+  "fallback": "fail",
+  "acceptance": {
+    "product_authority": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
+    "artistic_package": "series/odyssee/production/provider-packages/P4_SIRENS_VOXCPM2_V1.json",
+    "human_gate": "P4_SIRENS_HUMAN_PASS",
+    "winning_variant": "p4-voxcpm2-a",
+    "candidate_sha256": "e630b78a0a7def96b3b1cd4934a2272919f1d6433c3ad0f66e850f17ede7572f",
+    "accepted_probe_replacement_indices": [
+      2,
+      4,
+      6,
+      8,
+      12
+    ],
+    "accepted_probe_provider_seeds": [
+      2026090102,
+      2026090104,
+      2026090106,
+      2026090108,
+      2026090112
+    ],
+    "production_mapping": "HOLD_P4_FROZEN_S09_LINE_BINDING_REQUIRED",
+    "global_recast": false
+  }
+}
