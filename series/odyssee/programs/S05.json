@@ -1,0 +1,1027 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s05",
+  "title": "L’Odyssée — S05 — Personne",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-b.md",
+      "git_blob_sha1": "12a9a582df0dae2949aec7f19f2d526f27943da4",
+      "sequence": "S05"
+    }
+  ],
+  "production": {
+    "block": "B",
+    "direction": "series/odyssee/production/blocks/BLOCK_B.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avions encore plusieurs navires lorsque nous avons aperçu l’île des Cyclopes.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "De loin, elle n’avait rien d’un piège.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "De l’herbe. Des bêtes. Des pentes où l’on pouvait distinguer des troupeaux. Mes hommes pensaient surtout à l’eau douce, au feu, à ce que nous pourrions emporter.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "On prend ce qu’il faut et on repart.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’était raisonnable.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu dis cela comme quelqu’un qui ne l’a pas fait.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je raconte ce qui est arrivé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et moi, je me souviens de ce que j’ai dit.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avons trouvé une grotte.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "À l’intérieur, il y avait des fromages rangés, des agneaux, des chevreaux, des récipients pleins de lait.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "On prend les fromages.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "On prend les petits aussi. Et on retourne au bateau.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai refusé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Parce que je voulais voir qui habitait là.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Voilà.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Voilà quoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "La partie de l’histoire où tout le monde comprend qu’il fallait prendre le fromage.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous étions chez quelqu’un. Je voulais savoir s’il respecterait les lois de l’hospitalité.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Il a respecté une loi. La sienne.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il est arrivé à la nuit.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "D’abord, nous avons entendu les bêtes entrer.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Puis lui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Polyphème.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il a poussé devant l’entrée une pierre que douze hommes n’auraient pas déplacée.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et il nous a vus.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Qui êtes-vous ?",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Des hommes perdus sur la route du retour. Nous avons combattu à Troie. Nous demandons l’accueil dû aux étrangers.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Dû ?",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les dieux regardent la manière dont on reçoit ceux qui arrivent sans défense.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Tes dieux regardent beaucoup.",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Dans la salle des Phéaciens, personne ne mange plus.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il a pris deux de mes hommes.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne raconterai pas davantage ce geste.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il suffit de dire qu’après cela, aucun de nous n’a encore parlé de prendre du fromage.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avions nos épées. Elles ne servaient à rien tant que la pierre fermait la sortie.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Si on le tue, on reste enfermés.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Alors on attend qu’il nous mange tous ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avons trouvé un tronc d’olivier qu’il utilisait comme bâton. Nous l’avons taillé. Durci au feu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et j’avais du vin.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Le vin que tu voulais garder pour une meilleure occasion.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai trouvé l’occasion.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Donne.",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Doucement.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Donne encore.",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il buvait vite. Trop vite pour comprendre que c’était précisément ce que je voulais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Ton nom.",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mon nom ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Tu veux l’hospitalité. Dis ton nom.",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Personne.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Personne ?",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ma mère m’appelle Personne. Mon père m’appelle Personne. Mes compagnons aussi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Alors, Personne, je te ferai un cadeau.",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Lequel ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Je te mangerai le dernier.",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il a ri.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Puis le vin l’a couché.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avons chauffé la pointe.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et quand il a dormi assez profondément, nous avons frappé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "AAAAAH !",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Son cri a traversé la pierre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les autres Cyclopes sont venus de l’extérieur.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "cyclope",
+      "speaker": "CYCLOPE",
+      "text": "Polyphème ! Qui t’attaque ?",
+      "preset": "odyssee-cyclope-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Personne !",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "cyclope",
+      "speaker": "CYCLOPE",
+      "text": "Qui t’a blessé ?",
+      "preset": "odyssee-cyclope-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Personne m’a blessé !",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "cyclope",
+      "speaker": "CYCLOPE",
+      "text": "Alors pourquoi tu hurles ?",
+      "preset": "odyssee-cyclope-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Parce que Personne m’a—",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "cyclope",
+      "speaker": "CYCLOPE",
+      "text": "Dors.",
+      "preset": "odyssee-cyclope-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne pouvais pas m’empêcher de sourire.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Moi, si.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Au matin, aveugle, il a déplacé la pierre pour laisser sortir ses bêtes.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il s’est assis à l’entrée.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Je vous sentirai passer.",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il connaissait le dos de chaque animal.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors nous nous sommes attachés sous les plus grands béliers.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse parle moins vite.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’entendais sa main passer sur la laine.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un homme après l’autre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un bélier après l’autre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Puis le mien.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Toi, tu sors le dernier aujourd’hui.",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Sa main s’est arrêtée juste au-dessus de moi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Tu es triste pour ton maître ?",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai retenu ma respiration.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "polypheme",
+      "speaker": "POLYPHÈME",
+      "text": "Si seulement tu pouvais parler. Tu me dirais où se cache Personne.",
+      "preset": "odyssee-polypheme"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Le bélier a avancé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous étions dehors.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avons couru jusqu’au bateau.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et nous sommes partis.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Ramez.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "La grotte diminuait derrière nous.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ramez.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Polyphème criait sur la rive.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "On est assez loin.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "On ne sera assez loin que quand on ne l’entendra plus.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’entendais mes hommes rire.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "De soulagement.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "On l’a fait.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tais-toi et rame.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Il ne peut plus nous voir.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Justement. Laissons-lui ce problème.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’aurais pu faire cela.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous te l’avons demandé.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je sais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Plusieurs fois.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je sais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Ulysse, laisse-le.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je savais que nous avions gagné.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Alors pourquoi ce n’était pas suffisant ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Parce qu’il croyait avoir été vaincu par Personne.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "C’était précisément l’idée.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je voulais qu’il sache qu’un homme l’avait fait.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Il savait qu’un homme l’avait fait.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je voulais qu’il sache lequel.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Voilà.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "La différence entre rentrer et être raconté.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "À l’époque, je ne voyais pas la différence.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous, si.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Fin de l’histoire.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ça aurait dû.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ça aurait dû.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Le Cyclope était sur la rive. Il jetait des pierres au hasard. Il ne savait pas qui l’avait vaincu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et moi, je le savais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ulysse.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai crié.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ulysse !",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai crié mon nom.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je lui ai dit que ce n’était pas Personne. Que c’était Ulysse, roi d’Ithaque, qui lui avait pris son œil.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous étions vivants. Il fallait seulement partir.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je voulais qu’il sache.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Pour quoi faire ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pour que quelqu’un sache.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "À la table des Phéaciens, Ulysse s’arrête.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Polyphème était fils de Poséidon.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Jusque-là, la mer avait été difficile.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S05 — Personne",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Après mon cri, elle est devenue personnelle.",
+      "preset": "odyssee-ulysse"
+    }
+  ]
+}
