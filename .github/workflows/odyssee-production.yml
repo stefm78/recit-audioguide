@@ -16,6 +16,8 @@ concurrency:
 
 jobs:
   production:
+    permissions:
+      contents: write
     uses: stefm78/audio-engine/.github/workflows/production.yml@52c933b6371103b977a2ccbcade291700bd0eb73
     with:
       manifest_path: series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json
