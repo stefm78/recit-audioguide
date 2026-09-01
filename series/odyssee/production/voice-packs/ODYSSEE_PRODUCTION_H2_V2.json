@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "id": "odyssee-production-voice-pack-v1",
+  "authority": {
+    "stream1_handoff": "series/odyssee/production/STREAM3_HANDOFF_V1.json",
+    "casting": "series/odyssee/production/CASTING_ACCEPTANCE_V1.md",
+    "baseline_main": "e5592161f2bb6b0a524c0dd0ef1f4a1b97a6a3c0"
+  },
+  "fallback_policy": "fail",
+  "notes": [
+    "HUMAN_ACCEPTED and PROBE_ACCEPTED entries copy Stream 1 locks.",
+    "H2_WATCH entries are bounded production implementations of Stream 1-selected provider families; they are not relabeled as human accepted.",
+    "HOLD entries are deliberately unroutable until their promoted provider packages exist."
+  ],
+  "providers": {
+    "edge": {
+      "state": "PRODUCTION",
+      "runtime": "edge-tts==7.2.8",
+      "processing": "remote",
+      "fallback": "fail"
+    },
+    "chatterbox-multilingual-v3": {
+      "state": "HOLD_GENERIC_PROVIDER_PACKAGE",
+      "upstream_repo": "resemble-ai/chatterbox",
+      "upstream_commit": "5de7a54aa4e5e2baadb0182dde554908b48b85c2",
+      "model": "Chatterbox Multilingual V3",
+      "fallback": "fail"
+    },
+    "stream2-p4": {
+      "state": "HOLD_STREAM2",
+      "package": "P4_SIRENS_HUMAN_PASS",
+      "fallback": "fail"
+    },
+    "stream2-p6-ulysse": {
+      "state": "HOLD_STREAM2",
+      "package": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+      "fallback": "fail"
+    }
+  },
+  "presets": [
+    {
+      "id": "odyssee-narratrice",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%",
+      "provider": "edge",
+      "acceptance": "HUMAN_ACCEPTED_P1_P2"
+    },
+    {
+      "id": "odyssee-ulysse",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%",
+      "provider": "edge",
+      "acceptance": "HUMAN_ACCEPTED_P1_P5"
+    },
+    {
+      "id": "odyssee-penelope",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%",
+      "provider": "edge",
+      "acceptance": "HUMAN_ACCEPTED_P1"
+    },
+    {
+      "id": "odyssee-telemaque",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+5%",
+      "pitch": "+8Hz",
+      "volume": "+2%",
+      "provider": "edge",
+      "acceptance": "HUMAN_ACCEPTED_P1"
+    },
+    {
+      "id": "odyssee-athena",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-10%",
+      "pitch": "-14Hz",
+      "volume": "-4%",
+      "provider": "edge",
+      "acceptance": "HUMAN_ACCEPTED_P1"
+    },
+    {
+      "id": "odyssee-alcinoos",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "-8%",
+      "pitch": "-6Hz",
+      "volume": "+0%",
+      "provider": "edge",
+      "acceptance": "PROBE_ACCEPTED_P2"
+    },
+    {
+      "id": "odyssee-euryloque",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+4%",
+      "pitch": "-14Hz",
+      "volume": "+8%",
+      "provider": "edge",
+      "acceptance": "HUMAN_ACCEPTED_P3"
+    },
+    {
+      "id": "odyssee-polypheme",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "-10%",
+      "pitch": "-24Hz",
+      "volume": "+3%",
+      "provider": "edge",
+      "acceptance": "HUMAN_ACCEPTED_P3"
+    },
+    {
+      "id": "odyssee-calypso-h2",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-3%",
+      "pitch": "+0Hz",
+      "volume": "+2%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "Vivienne family / warm restrained"
+    },
+    {
+      "id": "odyssee-nausicaa-h2",
+      "voice": "fr-FR-EloiseNeural",
+      "rate": "+0%",
+      "pitch": "+0Hz",
+      "volume": "+0%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "Eloise fr-FR neutral adult candidate; reject child colour at H2"
+    },
+    {
+      "id": "odyssee-jeune-femme-h2",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "+0%",
+      "pitch": "+0Hz",
+      "volume": "+0%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "brief Vivienne-family ensemble function"
+    },
+    {
+      "id": "odyssee-eole-h2",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+0%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "Remy family / restrained older authority"
+    },
+    {
+      "id": "odyssee-circe-h2",
+      "voice": "fr-FR-EloiseNeural",
+      "rate": "-4%",
+      "pitch": "+0Hz",
+      "volume": "+0%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "Eloise fr-FR / slower controlled authority"
+    },
+    {
+      "id": "odyssee-tiresias-h2",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "-8%",
+      "pitch": "-12Hz",
+      "volume": "+0%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "Remy family / low simple cadence"
+    },
+    {
+      "id": "odyssee-marin-h2",
+      "voice": "fr-FR-AlainNeural",
+      "rate": "+2%",
+      "pitch": "+0Hz",
+      "volume": "+2%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "Stream 1 authorized correction: separate MARIN from HUMAN_ACCEPTED_P3 Euryloque; shared H2 is the only perceptual watch."
+    },
+    {
+      "id": "odyssee-cyclope-h2",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "-5%",
+      "pitch": "-10Hz",
+      "volume": "+2%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "brief ensemble Cyclope, no monster DSP"
+    },
+    {
+      "id": "odyssee-antinoos-h2",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-2%",
+      "pitch": "-6Hz",
+      "volume": "+4%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "Henri family / dominant dry occupier"
+    },
+    {
+      "id": "odyssee-eurymaque-h2",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "-2%",
+      "pitch": "-6Hz",
+      "volume": "+4%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "Remy family / negotiator"
+    },
+    {
+      "id": "odyssee-eumee-h2",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "+0%",
+      "pitch": "-4Hz",
+      "volume": "+2%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "warm restrained adult male"
+    },
+    {
+      "id": "odyssee-euryclee-h2",
+      "voice": "fr-FR-EloiseNeural",
+      "rate": "-8%",
+      "pitch": "-2Hz",
+      "volume": "-2%",
+      "provider": "edge",
+      "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+      "direction": "Eloise family / older restrained; age/collision watched in H2"
+    },
+    {
+      "id": "odyssee-anticlea-p5",
+      "voice": "provider-slot:p5-anticlea",
+      "rate": "+0%",
+      "pitch": "+0Hz",
+      "volume": "+0%",
+      "provider": "chatterbox-multilingual-v3",
+      "acceptance": "HUMAN_ACCEPTED_P5_H1B",
+      "state": "HOLD_GENERIC_PROVIDER_PACKAGE"
+    },
+    {
+      "id": "odyssee-sirens-p4",
+      "voice": "provider-slot:p4-sirens",
+      "rate": "+0%",
+      "pitch": "+0Hz",
+      "volume": "+0%",
+      "provider": "stream2-p4",
+      "acceptance": "BLOCKED_STREAM2",
+      "state": "HOLD_STREAM2"
+    },
+    {
+      "id": "odyssee-penelope-s15-p6",
+      "voice": "provider-slot:p6-penelope-chatterbox",
+      "rate": "+0%",
+      "pitch": "+0Hz",
+      "volume": "+0%",
+      "provider": "chatterbox-multilingual-v3",
+      "acceptance": "HUMAN_ACCEPTED_LOCAL_H1B",
+      "state": "HOLD_GENERIC_PROVIDER_PACKAGE"
+    }
+  ]
+}

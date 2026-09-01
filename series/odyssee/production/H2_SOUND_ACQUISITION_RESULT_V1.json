@@ -1,0 +1,50 @@
+{
+  "schema": "recit.odyssee.sound_acquisition_result.v1",
+  "id": "odyssee-h2-sound-acquisition-v1",
+  "authority": "series/odyssee/production/ASSET_PLAN.md",
+  "binding_authority": "series/odyssee/production/H2_SOUND_DIRECTION_BINDINGS_V1.json",
+  "workflow_run": 33523766524,
+  "engine_ref": "b227c23dc3c4555c0667e6e994f26cc2990a6ec8",
+  "providers": [
+    "wikimedia-commons",
+    "openverse"
+  ],
+  "min_score": 70,
+  "policy": "No threshold relaxation, no manual best-of-N, no fourth asset. no-selection materializes the declared fallback.",
+  "results": [
+    {
+      "stable_id": "odyssee-strong-wind",
+      "status": "no-selection",
+      "affected_directives": [
+        "S02_STORM_ARRIVAL",
+        "S06_BAG_WINDS_RELEASE"
+      ],
+      "materialization": "omit-and-warn",
+      "narrative_result": "explicit_silence",
+      "release_asset": null
+    },
+    {
+      "stable_id": "odyssee-wood-stress",
+      "status": "no-selection",
+      "affected_directives": [
+        "S02_RAFT_FAILURE",
+        "S06_LESTRYGON_LOSS"
+      ],
+      "materialization": "silence",
+      "narrative_result": "explicit_silence",
+      "release_asset": null
+    },
+    {
+      "stable_id": "odyssee-bow-release",
+      "status": "no-selection",
+      "affected_directives": [
+        "S14_BOW_RELEASE"
+      ],
+      "materialization": "silence",
+      "narrative_result": "explicit_silence",
+      "release_asset": null
+    }
+  ],
+  "stop_condition": "SATISFIED",
+  "additional_asset_search": "FORBIDDEN_UNLESS_STREAM1_CONCRETE_INTEGRATED_DEFECT"
+}
