@@ -10,17 +10,80 @@ permissions:
 jobs:
   render:
     if: github.head_ref == 'probe/H1c-azure-expressive'
-    runs-on: ubuntu-latest
-    timeout-minutes: 35
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
     env:
+      GH_TOKEN: ${{ github.token }}
       AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
       AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+      H1B_TAG: odyssee-h1b-corrective-review-v1
+      BASELINE_DIR: generated/h1c/baseline
+
     steps:
       - uses: actions/checkout@v6
 
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
+
+      - name: Recover exact immutable H1b-B baselines
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$BASELINE_DIR"
+          gh release download "$H1B_TAG" --repo "$GITHUB_REPOSITORY"             -p p4-b.mp3             -p p4-b-report.json             -p p6-b.mp3             -p p6-b-report.json             -D "$BASELINE_DIR"
+
+          test "$(sha256sum "$BASELINE_DIR/p4-b.mp3" | cut -d' ' -f1)" =             "14f325e3a1404c260c9a5139b85bcb5267cdd91a60c2458ea80bd66f3d75365d"
+          test "$(sha256sum "$BASELINE_DIR/p4-b-report.json" | cut -d' ' -f1)" =             "8f3d2e0a63752d09974c2553c25f28fe9e0b5c6ec800fb734d16ae859f65aa06"
+          test "$(sha256sum "$BASELINE_DIR/p6-b.mp3" | cut -d' ' -f1)" =             "474c2e41a5d702b2a84524aa3be9a0559ed7378af18d507ac082b666029d64ae"
+          test "$(sha256sum "$BASELINE_DIR/p6-b-report.json" | cut -d' ' -f1)" =             "366091a73e7597626384535e900a5b30e7943c485d0197ec25f015c384b6d891"
+
+      - name: Verify frozen surgical scope before credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/experiments/render_h1c.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          spec=json.loads(Path("series/odyssee/provider-spikes/h1c-azure-expressive.json").read_text())
+          frozen={
+            "P4":{
+              2:("Sirène gauche","Ulysse d’Ithaque."),
+              4:("Sirène gauche","Troie."),
+              6:("Sirène gauche","Pourquoi tu as crié ton nom."),
+              8:("Sirène gauche","…ou être connu ?"),
+              12:("Sirène gauche","Nous savons déjà."),
+            },
+            "P6":{
+              2:("Ulysse","Non."),
+              4:("Ulysse","Ce lit ne sort pas de cette chambre."),
+              10:("Ulysse","Tu le savais."),
+              12:("Ulysse","Pénélope…"),
+              15:("Ulysse","Notre lit."),
+            },
+          }
+          reports={
+            "P4":json.loads(Path("generated/h1c/baseline/p4-b-report.json").read_text()),
+            "P6":json.loads(Path("generated/h1c/baseline/p6-b-report.json").read_text()),
+          }
+          assert spec["stream1_contract"]["commit"]=="e5592161f2bb6b0a524c0dd0ef1f4a1b97a6a3c0"
+          for module, expected in frozen.items():
+            by_i={int(s["i"]):s for s in reports[module]["segments"]}
+            for i,(speaker,text) in expected.items():
+              assert by_i[i]["speaker"]==speaker
+              assert by_i[i]["text"]==text
+            variants=[v for v in spec["variants"].values() if v["module"]==module]
+            assert len(variants)==2
+            for variant in variants:
+              reps={int(r["i"]):r for r in variant["replacements"]}
+              assert set(reps)==set(expected)
+              for i,(speaker,text) in expected.items():
+                assert reps[i]["speaker"]==speaker
+                assert reps[i]["text"]==text
+          print("H1C_SURGICAL_SCOPE_PASS")
+          PY
 
       - name: Azure capability preflight
         shell: bash
@@ -38,24 +101,22 @@ jobs:
 
       - name: Install ffmpeg
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
 
-      - name: Install providers
+      - name: Install minimal H1c runtime
         run: >-
           python -m pip install --disable-pip-version-check
-          edge-tts==7.2.8
           pydub
           "git+https://github.com/stefm78/audio-engine.git@6ca0aa878cf65426f18aa672a02aa573638f37ae"
-          "git+https://github.com/resemble-ai/chatterbox.git@5de7a54aa4e5e2baadb0182dde554908b48b85c2"
 
-      - name: Render all H1c variants with shared cache
+      - name: Render surgical H1c candidates
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p generated/h1c
-          /usr/bin/time -v python tools/experiments/render_h1c.py             --spec series/odyssee/provider-spikes/h1c-azure-expressive.json             --out generated/h1c
-          sha256sum generated/h1c/p4-a.mp3 generated/h1c/p4-b.mp3                     generated/h1c/p6-a.mp3 generated/h1c/p6-b.mp3                     generated/h1c/h1c-summary.json
+          /usr/bin/time -v python tools/experiments/render_h1c.py             --spec series/odyssee/provider-spikes/h1c-azure-expressive.json             --baseline-dir "$BASELINE_DIR"             --out generated/h1c
+
+          sha256sum             generated/h1c/p4-a.mp3             generated/h1c/p4-b.mp3             generated/h1c/p6-a.mp3             generated/h1c/p6-b.mp3             generated/h1c/slots/*.wav             generated/h1c/h1c-summary.json
 
       - name: Upload H1c candidates
         uses: actions/upload-artifact@v4
@@ -71,13 +132,14 @@ jobs:
             generated/h1c/p6-a-report.json
             generated/h1c/p6-b-report.json
             generated/h1c/h1c-summary.json
+            generated/h1c/slots/*.wav
           if-no-files-found: error
-          retention-days: 3
+          retention-days: 7
 
   release:
     if: github.head_ref == 'probe/H1c-azure-expressive'
     needs: render
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     permissions:
       contents: write
@@ -95,10 +157,21 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          tag="odyssee-h1c-azure-expressive-review-v1"
-          assets=(review-assets/*.mp3 review-assets/*-report.json review-assets/h1c-summary.json)
+          tag="odyssee-h1c-azure-expressive-review-v2"
+          assets=(
+            review-assets/p4-a.mp3
+            review-assets/p4-b.mp3
+            review-assets/p6-a.mp3
+            review-assets/p6-b.mp3
+            review-assets/p4-a-report.json
+            review-assets/p4-b-report.json
+            review-assets/p6-a-report.json
+            review-assets/p6-b-report.json
+            review-assets/h1c-summary.json
+            review-assets/slots/*.wav
+          )
           if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
             gh release upload "$tag" "${assets[@]}" --clobber --repo "$GITHUB_REPOSITORY"
           else
-            gh release create "$tag" "${assets[@]}"               --target "$TARGET_SHA"               --prerelease               --title "Odyssée — H1c Azure expressive candidates"               --notes "H1c closeout: P4 Azure expressive Sirens and P6 same-identity Henri expressive dialogue. PENDING_HUMAN_H1C."               --repo "$GITHUB_REPOSITORY"
+            gh release create "$tag" "${assets[@]}"               --target "$TARGET_SHA"               --prerelease               --title "Odyssée — H1c surgical Azure candidates"               --notes "P4/P6 only. H1b-B accepted material is preserved from immutable release audio; only Stream 2 frozen slots are replaced. PENDING_HUMAN_H1C."               --repo "$GITHUB_REPOSITORY"
           fi
