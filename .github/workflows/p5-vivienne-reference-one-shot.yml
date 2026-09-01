@@ -1,0 +1,101 @@
+name: P5 Vivienne conditioning reference one-shot
+
+on:
+  push:
+    branches:
+      - prod/p5-provider-package-v1
+    paths:
+      - .github/workflows/p5-vivienne-reference-one-shot.yml
+
+permissions:
+  contents: write
+
+jobs:
+  freeze-reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11.16'
+
+      - name: Install exact H1b reference runtime
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check edge-tts==7.2.8 pydub==0.25.1
+
+      - name: Generate exact H1b synthetic Vivienne recipe
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p generated/p5-reference
+          python - <<'PY'
+          import asyncio, hashlib, json
+          from pathlib import Path
+          import edge_tts
+          from pydub import AudioSegment
+
+          out=Path("generated/p5-reference")
+          text="Je suis là. Écoute-moi. Je te parle maintenant."
+          voice="fr-FR-VivienneMultilingualNeural"
+          mp3=out/"synthetic-vivienne.mp3"
+          wav=out/"synthetic-vivienne.wav"
+
+          async def render():
+              await edge_tts.Communicate(
+                  text, voice, rate="+0%", pitch="+0Hz", volume="+0%"
+              ).save(str(mp3))
+          asyncio.run(render())
+          AudioSegment.from_file(mp3).export(wav, format="wav")
+
+          def sha(path):
+              h=hashlib.sha256()
+              h.update(path.read_bytes())
+              return h.hexdigest()
+
+          evidence={
+              "schema_version":1,
+              "id":"odyssee-p5-synthetic-vivienne-reference-v1",
+              "basis":"exact H1b conditioning-reference recipe regenerated once for Production freezing",
+              "voice":voice,
+              "text":text,
+              "rate":"+0%",
+              "pitch":"+0Hz",
+              "volume":"+0%",
+              "edge_tts":"7.2.8",
+              "python":"3.11.16",
+              "mp3_sha256":sha(mp3),
+              "wav_sha256":sha(wav),
+              "wav_bytes":wav.stat().st_size,
+              "perceptual_status":"PENDING_BATCH_H2_REGRESSION_CHECK",
+          }
+          (out/"synthetic-vivienne.provenance.json").write_text(
+              json.dumps(evidence,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"
+          )
+          print(json.dumps(evidence,ensure_ascii=False,indent=2))
+          PY
+          sha256sum generated/p5-reference/*
+
+      - name: Publish immutable Production reference assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="odyssee-p5-provider-assets-v1"
+          assets=(
+            generated/p5-reference/synthetic-vivienne.wav
+            generated/p5-reference/synthetic-vivienne.provenance.json
+          )
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "ERROR: $tag already exists; one-shot reference freeze is immutable." >&2
+            exit 2
+          fi
+          gh release create "$tag" "${assets[@]}" \
+            --target "$GITHUB_SHA" --prerelease \
+            --title "Odyssée P5 — frozen provider assets v1" \
+            --notes "Frozen synthetic Vivienne conditioning reference for the HUMAN_PASS H1b P5 recipe. Regeneration is not a fallback. Batch H2 remains the perceptual regression gate." \
+            --repo "$GITHUB_REPOSITORY"
