@@ -1,0 +1,321 @@
+{
+  "schema": "recit.odyssee.p6.penelope_provider_binding.v1",
+  "id": "odyssee-p6-penelope-provider-binding-v1",
+  "authority": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
+  "human_gate": "H1b",
+  "winning_variant": "p6-b",
+  "source_probe_seed": 6602,
+  "production_seed_base": 660200,
+  "seed_rule": "provider_seed = 660200 + exact one-based S15 Program segment",
+  "provider_package": "series/odyssee/production/provider-packages/P6_PENELOPE_CHATTERBOX_MULTILINGUAL_V3_V1.json",
+  "engine_capability": "performance_provider@0d66509ffdeeca37dc727954949587155e80832f",
+  "identity": {
+    "character_id": "penelope",
+    "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+    "performance_provider": "chatterbox-multilingual-v3",
+    "conditioning_reference": "synthetic-vivienne",
+    "fallback": "fail"
+  },
+  "placement": {
+    "probe_pan": 0.04,
+    "production_placement": "center",
+    "authority": "series/odyssee/production/blocks/BLOCK_D.md — simple intimate placement"
+  },
+  "segments": [
+    {
+      "segment": 110,
+      "speaker": "PÉNÉLOPE",
+      "text": "Et fais sortir le lit. Mettez-le dans le couloir. Nous aurons plus de place.",
+      "slot": "trap-command",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660310,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.48,
+        "cfg_weight": 0.42,
+        "temperature": 0.76
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 113,
+      "speaker": "PÉNÉLOPE",
+      "text": "Le lit. Faites-le déplacer.",
+      "slot": "trap-hold",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660313,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 115,
+      "speaker": "PÉNÉLOPE",
+      "text": "Pourquoi ?",
+      "slot": "trap-hold",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660315,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 117,
+      "speaker": "PÉNÉLOPE",
+      "text": "Explique-moi.",
+      "slot": "trap-hold",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660317,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 119,
+      "speaker": "PÉNÉLOPE",
+      "text": "Avec assez d’hommes—",
+      "slot": "trap-hold",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660319,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 139,
+      "speaker": "PÉNÉLOPE",
+      "text": "Il n’a pas été déplacé.",
+      "slot": "verdict-open",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660339,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.44,
+        "cfg_weight": 0.46,
+        "temperature": 0.74
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 141,
+      "speaker": "PÉNÉLOPE",
+      "text": "Le lit.",
+      "slot": "verdict-open",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660341,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.44,
+        "cfg_weight": 0.46,
+        "temperature": 0.74
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 143,
+      "speaker": "PÉNÉLOPE",
+      "text": "Parce que je devais savoir si toi, tu pouvais l’être.",
+      "slot": "verdict-test",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660343,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 145,
+      "speaker": "PÉNÉLOPE",
+      "text": "Déplacé.",
+      "slot": "verdict-test",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660345,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 147,
+      "speaker": "PÉNÉLOPE",
+      "text": "Les hommes reviennent de la guerre et disent qu’ils sont les mêmes.",
+      "slot": "verdict-test",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660347,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 148,
+      "speaker": "PÉNÉLOPE",
+      "text": "Les voyageurs reviennent et racontent qu’ils ont seulement vu davantage de choses.",
+      "slot": "verdict-test",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660348,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 149,
+      "speaker": "PÉNÉLOPE",
+      "text": "Toi, tu as disparu vingt ans.",
+      "slot": "verdict-test",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660349,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 150,
+      "speaker": "PÉNÉLOPE",
+      "text": "J’avais besoin d’une chose qui ne puisse pas voyager avec ton histoire.",
+      "slot": "verdict-test",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660350,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 152,
+      "speaker": "PÉNÉLOPE",
+      "text": "Notre lit.",
+      "slot": "recognition-contained",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660352,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.42,
+        "cfg_weight": 0.48,
+        "temperature": 0.72
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 154,
+      "speaker": "PÉNÉLOPE",
+      "text": "Je sais maintenant.",
+      "slot": "recognition-contained",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660354,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.42,
+        "cfg_weight": 0.48,
+        "temperature": 0.72
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    },
+    {
+      "segment": 159,
+      "speaker": "PÉNÉLOPE",
+      "text": "Oui.",
+      "slot": "recognition-contained",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "casting_identity": "edge:fr-FR-VivienneMultilingualNeural",
+      "provider_seed": 660359,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.42,
+        "cfg_weight": 0.48,
+        "temperature": 0.72
+      },
+      "h1b_probe_pan": 0.04,
+      "production_placement": "center"
+    }
+  ],
+  "preserved": {
+    "frozen_text": true,
+    "non_mapped_penelope": "baseline odyssee-penelope",
+    "ulysses_explanatory": "baseline odyssee-ulysse",
+    "ulysses_emotional": "HOLD_STREAM2_ONLY",
+    "no_music": true
+  }
+}

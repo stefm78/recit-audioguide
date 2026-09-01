@@ -18,17 +18,34 @@
     "stage": "scene-foundation-v1",
     "state": "HOLD",
     "blockers": [
-      "P6_FROZEN_S15_LINE_BINDING",
-      "ULYSSES_EMOTIONAL_HUMAN_PASS",
-      "P6_GENERIC_CHATTERBOX_PROVIDER_PACKAGE"
+      "ULYSSES_EMOTIONAL_HUMAN_PASS"
     ],
     "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
     "no_silent_fallback": true,
-    "handoff_defect": {
-      "state": "HOLD",
-      "authority_issue": 110,
-      "reason": "P6-B accepted probe lines are not a one-to-one textual match for the frozen full S15 scene; Stream 3 will not infer which frozen lines receive the local Pénélope performance or Ulysse emotional package.",
-      "required_resolution": "product-owned mapping from frozen S15 segment(s) to accepted P6-B staging/performance slots"
+    "p6_penelope": {
+      "state": "MATERIALIZED_HUMAN_ACCEPTED_LOCAL_H1B",
+      "binding": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
+      "provider_package": "series/odyssee/production/provider-packages/P6_PENELOPE_CHATTERBOX_MULTILINGUAL_V3_V1.json",
+      "mapped_segments": [
+        110,
+        113,
+        115,
+        117,
+        119,
+        139,
+        141,
+        143,
+        145,
+        147,
+        148,
+        149,
+        150,
+        152,
+        154,
+        159
+      ],
+      "remaining_hold": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+      "fallback": "fail"
     }
   },
   "segments": [
@@ -800,7 +817,17 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Et fais sortir le lit. Mettez-le dans le couloir. Nous aurons plus de place.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660310,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.48,
+        "cfg_weight": 0.42,
+        "temperature": 0.76
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -821,7 +848,17 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Le lit. Faites-le déplacer.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660313,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -836,7 +873,17 @@
       "speaker": "PÉNÉLOPE",
       "text": "Pourquoi ?",
       "preset": "odyssee-penelope",
-      "pause_after_ms": 180
+      "pause_after_ms": 180,
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660315,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -850,7 +897,17 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Explique-moi.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660317,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -864,7 +921,17 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Avec assez d’hommes—",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660319,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -1005,7 +1072,17 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Il n’a pas été déplacé.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660339,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.44,
+        "cfg_weight": 0.46,
+        "temperature": 0.74
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -1019,7 +1096,17 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Le lit.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660341,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.44,
+        "cfg_weight": 0.46,
+        "temperature": 0.74
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -1033,7 +1120,17 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Parce que je devais savoir si toi, tu pouvais l’être.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660343,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -1047,7 +1144,17 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Déplacé.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660345,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -1061,28 +1168,68 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Les hommes reviennent de la guerre et disent qu’ils sont les mêmes.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660347,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Les voyageurs reviennent et racontent qu’ils ont seulement vu davantage de choses.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660348,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Toi, tu as disparu vingt ans.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660349,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "J’avais besoin d’une chose qui ne puisse pas voyager avec ton histoire.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660350,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -1097,7 +1244,17 @@
       "speaker": "PÉNÉLOPE",
       "text": "Notre lit.",
       "preset": "odyssee-penelope",
-      "pause_after_ms": 560
+      "pause_after_ms": 560,
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660352,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.42,
+        "cfg_weight": 0.48,
+        "temperature": 0.72
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -1111,7 +1268,17 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je sais maintenant.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660354,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.42,
+        "cfg_weight": 0.48,
+        "temperature": 0.72
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
@@ -1146,7 +1313,17 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Oui.",
-      "preset": "odyssee-penelope"
+      "preset": "odyssee-penelope",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 660359,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.42,
+        "cfg_weight": 0.48,
+        "temperature": 0.72
+      },
+      "placement": "center"
     },
     {
       "scene": "S15 — Le lit",
