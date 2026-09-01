@@ -1,4 +1,4 @@
-name: P5 package bindings one-shot
+name: P5 production plan one-shot
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 jobs:
-  bind:
+  plan:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -26,10 +26,25 @@ jobs:
           python-version: '3.12'
       - name: Install engine
         run: python -m pip install --disable-pip-version-check ./.audio-engine
-      - name: Validate contracts and emit exact bindings
+      - name: Validate and plan Production
         shell: bash
         run: |
           set -euo pipefail
-          audio-engine validate series/odyssee/programs/S08.json --kind program
-          audio-engine provider-package validate             series/odyssee/production/provider-packages/P5_CHATTERBOX_MULTILINGUAL_V3_V1.json
-          sha256sum             series/odyssee/programs/S08.json             series/odyssee/production/provider-packages/P5_CHATTERBOX_MULTILINGUAL_V3_V1.json             series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json
+          audio-engine production validate             series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json             --verify-files --workspace-root .
+          audio-engine production plan             series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json             --workspace-root . | tee /tmp/plan.json
+          python - <<'PY'
+          import json
+          plan=json.load(open("/tmp/plan.json",encoding="utf-8"))
+          s08=next(item for item in plan["ready_units"] if item["id"]=="S08")
+          assert s08["providers"] == ["edge","chatterbox-multilingual-v3"], s08
+          assert s08["provider_package_count"] == 1, s08
+          assert s08["asset_count"] == 1, s08
+          assert s08["python_version"] == "3.11.16", s08
+          block_b=next(item for item in plan["assemblies"] if item["id"]=="B")
+          assert block_b["state"] == "ready", block_b
+          print(json.dumps({
+              "S08":s08,
+              "BlockB":block_b,
+              "master":plan["master"],
+          },ensure_ascii=False,indent=2))
+          PY
