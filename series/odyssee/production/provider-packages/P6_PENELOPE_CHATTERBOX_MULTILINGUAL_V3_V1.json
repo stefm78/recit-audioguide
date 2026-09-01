@@ -43,7 +43,7 @@
         "version": "0.25.1"
       }
     ],
-    "runtime_lock": "audio-engine/requirements/chatterbox-mtl-v3-h1b-runtime.txt@a3af1565f7b6799bced8dbb318fafd5807bafafc",
+    "runtime_lock": "audio-engine/requirements/chatterbox-mtl-v3-h1b-runtime.txt@0d66509ffdeeca37dc727954949587155e80832f",
     "system_dependencies": [
       {
         "name": "ffmpeg",
@@ -113,6 +113,13 @@
     "winning_variant": "p6-b",
     "accepted_audio_sha256": "474c2e41a5d702b2a84524aa3be9a0559ed7378af18d507ac082b666029d64ae",
     "scope": "Pénélope local expressive family only; Ulysse emotional segments remain external HOLD",
-    "seed_provenance": "H1b p6-b seed 6602; Production base seed preserves historical seed*100 convention and adds exact Program sequence per segment"
+    "seed_provenance": "H1b p6-b seed 6602; Production base seed preserves historical seed*100 convention and adds exact Program sequence per segment",
+    "performance_provider_contract": "audio-engine@0d66509ffdeeca37dc727954949587155e80832f performance_provider",
+    "placement_normalization": {
+      "h1b_probe_pan": 0.04,
+      "production_public_placement": "center",
+      "authority": "series/odyssee/production/blocks/BLOCK_D.md: simple intimate placement",
+      "rationale": "The public Production contract intentionally exposes semantic placement rather than arbitrary numeric pan; +0.04 is normalized to center without adding a new spatial artistic decision."
+    }
   }
 }
