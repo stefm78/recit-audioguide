@@ -49,11 +49,35 @@ These choices exist to make block production possible. They are deliberately ver
 | Éole | Remy family, restrained older authority | practical host, not wizard | no Polyphème residue |
 | Circé | Eloise fr-FR, slower controlled authority | threat → comfort with same identity | no “mystical woman” cliché |
 | Tirésias | Remy family, low simple cadence | information without oracle theatre | distinct enough from Polyphème by rhythm/context |
-| Marin(s) | bounded ensemble reuse | functional crew, never a new lead | do not blur Euryloque |
+| Marin(s) | `fr-FR-AlainNeural`, rate +2%, pitch +0Hz, volume +2% | functional adult crew voice, never a new lead | natural French; distinct from Euryloque |
 | Antinoos | Henri-family production performance, dominant and dry | confidence of an occupier, not villain caricature | direct collision with disguised Ulysse in S13/S14 is a priority H2 check |
 | Eurymaque | Remy-family production performance, more negotiator than bully | secondary pretender | direct collision with Télémaque is a priority H2 check |
 | Eumée | warm restrained adult male production performance | hospitality direct, no noble-retainer voice | distinguish from Ulysse/Télémaque in S12 |
 | Euryclée | Eloise-family older restrained performance | warmth; recognition mainly via stop/breath | distinct from Pénélope and Narratrice in S13/S15 |
+
+## Pre-H2 deterministic collision correction
+
+The first industrial render exposed one collision that no longer requires a perceptual hypothesis:
+
+- previous `Marin(s)` preset was **exactly identical** to Euryloque: `fr-FR-HenriNeural`, rate +4%, pitch -14Hz, volume +8%;
+- Program adjacency audit found **63 direct Euryloque ↔ MARIN turns**:
+  - S05: 5;
+  - S06: 32;
+  - S07: 17;
+  - S10: 9.
+
+This is a concrete production defect: two distinct scripted speakers can be synthesized with the same voice identity and same parameters in immediate dialogue.
+
+Narrow correction:
+
+- preserve Euryloque exactly; he is HUMAN_ACCEPTED P3;
+- move `Marin(s)` only to `fr-FR-AlainNeural`, rate +2%, pitch +0Hz, volume +2%;
+- keep MARIN a secondary `PRODUCTION_CHOICE_H2_WATCH`;
+- rerender only affected scenes S05, S06, S07 and S10;
+- H2 validates natural French and role distinction;
+- no standalone casting gate.
+
+The old four scene renders remain valid pipeline/QA evidence but are superseded for H2 perceptual review.
 
 ## Why secondary collisions do not create a pre-render HOLD
 

@@ -261,7 +261,54 @@
     "state": "PRODUCTION_CHOICES_H2_WATCH",
     "authority_file": "series/odyssee/production/CASTING_ACCEPTANCE_V1.md",
     "standalone_human_gate": false,
-    "rule": "target only material collisions found in block integration"
+    "rule": "target only material collisions found in block integration",
+    "pre_h2_corrections": [
+      {
+        "id": "MARIN_EURYLOQUE_EXACT_PRESET_COLLISION",
+        "state": "CORRECTION_AUTHORIZED_STREAM1",
+        "evidence": {
+          "previous_marin": {
+            "voice": "fr-FR-HenriNeural",
+            "rate": "+4%",
+            "pitch": "-14Hz",
+            "volume": "+8%"
+          },
+          "euryloque": {
+            "voice": "fr-FR-HenriNeural",
+            "rate": "+4%",
+            "pitch": "-14Hz",
+            "volume": "+8%"
+          },
+          "adjacent_turns": {
+            "S05": 5,
+            "S06": 32,
+            "S07": 17,
+            "S10": 9,
+            "total": 63
+          }
+        },
+        "correction": {
+          "character": "MARIN",
+          "voice": "fr-FR-AlainNeural",
+          "rate": "+2%",
+          "pitch": "+0Hz",
+          "volume": "+2%",
+          "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+          "rerender_only": [
+            "S05",
+            "S06",
+            "S07",
+            "S10"
+          ]
+        },
+        "preserve": [
+          "EURYLOQUE_HUMAN_ACCEPTED_P3",
+          "frozen_text",
+          "all_other_casting"
+        ],
+        "human_gate": "shared_H2_only"
+      }
+    ]
   },
   "qa": {
     "h2": {
