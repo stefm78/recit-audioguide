@@ -361,6 +361,27 @@
           "short_legible_violence",
           "density_drop_toward_S15"
         ]
+      },
+      "asset_acquisition": {
+        "authority_file": "series/odyssee/production/ASSET_PLAN.md",
+        "max_new_assets_before_h2": 3,
+        "stable_ids": [
+          "odyssee-strong-wind",
+          "odyssee-wood-stress",
+          "odyssee-bow-release"
+        ],
+        "generic_workflow": "stefm78/audio-engine/.github/workflows/acquire-sound.yml",
+        "preferred_autonomous_providers": [
+          "wikimedia-commons",
+          "openverse"
+        ],
+        "no_selection_fallback": "omit-and-warn",
+        "fourth_asset_rule": "requires_concrete_integrated_render_defect",
+        "prohibited_pre_h2": [
+          "generic_sea_bed",
+          "decorative_sound_library_build",
+          "manual_best_of_N_asset_search"
+        ]
       }
     },
     "h3": {
