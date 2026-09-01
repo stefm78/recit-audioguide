@@ -1,0 +1,873 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s10",
+  "title": "L’Odyssée — S10 — Choisir ce qu’on perd",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-c.md",
+      "git_blob_sha1": "4589733f7e7f5302f12511e802cb6a8f0557b1b7",
+      "sequence": "S10"
+    }
+  ],
+  "production": {
+    "block": "C",
+    "direction": "series/odyssee/production/blocks/BLOCK_C.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Après les Sirènes, Circé nous avait donné une autre route.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Une route qu’aucun capitaine n’aurait choisie s’il en existait une meilleure.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Scylla d’un côté.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Charybde de l’autre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Une chose qui prend des hommes.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et une autre qui prend la mer avec le bateau.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu savais.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Pas nous.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas tout.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "C’est une réponse de roi.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est une réponse d’homme qui savait que s’il disait : « Nous allons passer assez près d’un monstre pour qu’il prenne quelques-uns d’entre nous », personne ne regarderait plus l’eau du bon côté.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu aurais pu nous laisser décider.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Décider quoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Si nous voulions te suivre.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous étions déjà là.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La salle des Phéaciens semble plus petite autour de cette dispute ancienne.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne vais pas prétendre avoir trouvé une bonne solution.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je n’en avais pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai rapproché le bateau de Scylla.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et nous avons regardé Charybde.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est comme cela que j’ai commandé ce jour-là : en demandant à mes hommes de regarder le danger qui pouvait tous nous tuer, pendant que j’acceptais celui qui n’en tuerait que quelques-uns.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Combien ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Assez pour que le reste de la traversée ait leur place vide.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il ne donne pas de noms.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pas parce qu’il les a oubliés.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avons continué.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Après Scylla, les hommes ne parlent plus tout à fait à Ulysse comme avant.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu savais.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu savais que certains d’entre nous allaient mourir.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je savais qu’il n’existait pas de passage sans risque.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Ce n’est pas la même phrase.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Qui t’a donné le droit de choisir le risque ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Personne.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Pourtant tu l’as choisi.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Parce que j’étais le capitaine.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Voilà une réponse bien pratique.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Assez.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Non. Pas assez. Chaque fois qu’on perd quelqu’un, on continue. Chaque fois qu’on a peur, il nous dit qu’il faut continuer. Chaque fois qu’il se trompe, il trouve une raison pour laquelle il fallait quand même faire ce qu’il a fait.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu veux que je dise quoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Que tu ne sais pas.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne sais pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le marin se tait.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne sais pas si j’ai choisi le moindre mal.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je sais seulement que nous sommes encore là.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Pas tous.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "À partir de ce jour, « rentrer » n’est plus un mot que les hommes reçoivent de la même manière.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pour Ulysse, c’est toujours la direction.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pour certains, c’est devenu le nom donné à tout ce qu’ils continuent d’endurer.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Puis nous avons atteint l’île du Soleil.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et tu nous as dit de ne pas débarquer.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous étions épuisés.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu avais promis une côte.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas celle-là.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Essaie d’expliquer à des hommes qui n’ont presque plus de nourriture que l’herbe sous leurs pieds appartient à un dieu qui surveille ses bêtes.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je l’ai expliqué.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu as ordonné.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’avais vu Tirésias.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous, non.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je vous ai dit ce qu’il avait dit.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et puis le vent nous a enfermés là.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les jours ont passé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Les réserves ont diminué.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et toi, un jour, tu es parti prier.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu t’es endormi.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse ferme les yeux une seconde.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous avions faim.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La faim transforme les ordres.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le premier jour, « ne touchez pas aux troupeaux » est une règle.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le troisième, c’est une injustice.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Plus tard, cela devient une phrase prononcée par un homme qui dort un peu plus loin.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "On va mourir en regardant de la viande marcher devant nous.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ulysse a dit—",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Ulysse dort.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Le dieu—",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Si le dieu préfère ses bêtes à nos vies, il pourra se plaindre ensuite.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous ne pouvons pas toucher à celles-là.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Nous avons brûlé des villes pour des rois. Tu vas me dire que tuer une vache nous condamne ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "J’ai dit non.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et ensuite ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ensuite, j’ai eu faim aussi.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pour la première fois depuis le début du récit, Euryloque ne cherche pas à corriger Ulysse.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous en avons tué une.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Plusieurs.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Oui.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quand je me suis réveillé, j’ai senti l’odeur.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je savais avant d’arriver.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avons repris la mer.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Le ciel a tenu assez longtemps pour que nous comprenions que rien n’était pardonné.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse ne décrit pas la colère du Soleil.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il décrit la voile qui se déchire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le mât qui cesse d’être vertical.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les hommes qui disparaissent de sa vue un par un dans une mer devenue trop forte pour qu’un nom les retienne.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai crié.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Cela ne servait plus à rien.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai vu Euryloque une dernière fois.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ulysse !",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Puis je n’ai plus eu d’équipage.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse attend.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Personne dans la salle ne lui demande de continuer.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai survécu sur des morceaux de bois.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je suis repassé près de Charybde seul.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai dérivé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et finalement, je suis arrivé sur l’île de Calypso.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Là où nous t’avons rencontré au début de ton récit.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Là où vous m’avez rencontré, oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Seul.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Seul.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Combien d’hommes avaient quitté Troie avec toi ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Assez pour que j’aie longtemps cru que je ne pouvais pas finir seul.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il regarde ses mains.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S10 — Choisir ce qu’on perd",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’avais tort sur cela aussi.",
+      "preset": "odyssee-ulysse"
+    }
+  ]
+}
