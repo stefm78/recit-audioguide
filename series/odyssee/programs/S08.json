@@ -15,18 +15,20 @@
   "production": {
     "block": "B",
     "direction": "series/odyssee/production/blocks/BLOCK_B.md",
-    "stage": "scene-foundation-v1",
-    "state": "HOLD",
-    "blockers": [
-      "P5_GENERIC_CHATTERBOX_PROVIDER_PACKAGE"
-    ],
+    "stage": "sound-integrated-p5-v1",
+    "state": "READY",
+    "blockers": [],
     "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
     "no_silent_fallback": true,
     "p5_recipe": {
       "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
       "state": "HUMAN_PASS_H1B",
       "provider": "chatterbox-multilingual-v3",
-      "conditioning_reference": "synthetic fr-FR-VivienneMultilingualNeural",
+      "conditioning_reference": {
+        "id": "synthetic-vivienne",
+        "sha256": "9495d6f07acad6025286cbbeda5ef799655f5ced41cb4589049a7a7ec89ba160",
+        "release": "odyssee-p5-provider-assets-v1"
+      },
       "deterministic_default": {
         "exaggeration": 0.34,
         "cfg_weight": 0.5,
@@ -35,13 +37,16 @@
       },
       "sound": {
         "type": "dark_air",
-        "target_dbfs": -43
+        "target_dbfs": -43,
+        "asset": "../production/provider-assets/p5/p5-dark-air-6501.wav",
+        "sha256": "86410b8809cd85874eaaec67cf25dc55c4ed92076cfe00fd344f8174bef1225d"
       },
       "rules": [
         "no_music",
         "no_heavy_reverb",
         "no_silent_fallback"
-      ]
+      ],
+      "provider_package": "series/odyssee/production/provider-packages/P5_CHATTERBOX_MULTILINGUAL_V3_V1.json"
     }
   },
   "segments": [
@@ -425,7 +430,8 @@
       "accepted_recipe_default": {
         "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
         "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
-      }
+      },
+      "provider_seed": 650102
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -450,7 +456,8 @@
       "accepted_recipe_default": {
         "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
         "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
-      }
+      },
+      "provider_seed": 650102
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -482,7 +489,8 @@
       "accepted_recipe_default": {
         "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
         "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
-      }
+      },
+      "provider_seed": 650104
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -507,7 +515,8 @@
       "accepted_recipe_default": {
         "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
         "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
-      }
+      },
+      "provider_seed": 650104
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -542,7 +551,8 @@
         "exaggeration": 0.34,
         "cfg_weight": 0.5,
         "temperature": 0.74
-      }
+      },
+      "provider_seed": 650106
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -602,7 +612,8 @@
         "exaggeration": 0.34,
         "cfg_weight": 0.5,
         "temperature": 0.74
-      }
+      },
+      "provider_seed": 650108
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -637,7 +648,8 @@
         "exaggeration": 0.34,
         "cfg_weight": 0.5,
         "temperature": 0.74
-      }
+      },
+      "provider_seed": 650110
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -1068,7 +1080,8 @@
       "accepted_recipe_default": {
         "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
         "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
-      }
+      },
+      "provider_seed": 650115
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -1093,7 +1106,8 @@
       "accepted_recipe_default": {
         "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
         "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
-      }
+      },
+      "provider_seed": 650115
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -1118,7 +1132,8 @@
       "accepted_recipe_default": {
         "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
         "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
-      }
+      },
+      "provider_seed": 650117
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -1211,5 +1226,15 @@
       "text": "Je voulais la dernière.",
       "preset": "odyssee-ulysse"
     }
-  ]
+  ],
+  "ambience": {
+    "file": "../production/provider-assets/p5/p5-dark-air-6501.wav",
+    "gain_db": 0,
+    "loop": false,
+    "fade_in_ms": 1200,
+    "fade_out_ms": 1600,
+    "ducking": "off",
+    "license": "generated-synthetic",
+    "attribution": "Deterministic dark_air texture from the accepted P5 H1b recipe; no third-party recording."
+  }
 }
