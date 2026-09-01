@@ -1,0 +1,1048 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s07",
+  "title": "L’Odyssée — S07 — Circé",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-b.md",
+      "git_blob_sha1": "12a9a582df0dae2949aec7f19f2d526f27943da4",
+      "sequence": "S07"
+    }
+  ],
+  "production": {
+    "block": "B",
+    "direction": "series/odyssee/production/blocks/BLOCK_B.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avons atteint une île couverte d’arbres.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Cette fois, tu es resté au bateau.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’avais appris quelque chose.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Un peu tard.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je t’ai envoyé avec des hommes.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Merci de le rappeler.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ils ont trouvé une maison.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Une belle maison.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Il y a quelqu’un.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Entrez.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous aurions dû repartir.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Elle nous invite.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "C’est justement ce qui m’inquiète.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Vous avez faim ?",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Depuis des jours.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Alors mangez.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Je suis resté dehors.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et les autres ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ils ont mangé.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse regarde Euryloque comme s’il le revoyait revenir seul.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Je ne sais pas comment l’expliquer.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Essaie.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ils ne sont pas morts.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Où sont-ils ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Dans l’enclos.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Parce qu’ils sont devenus des porcs.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "À la table phéacienne, quelqu’un laisse échapper un souffle qui pourrait être un rire. Ulysse ne rit pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je suis allé les chercher.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Seul.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Je t’ai dit que c’était une mauvaise idée.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu le dis souvent.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "J’ai souvent raison.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Sur le chemin, un dieu m’a aidé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse ne s’attarde pas sur la forme du dieu ni sur son nom.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il m’a donné de quoi résister à Circé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Mange.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Tu refuses mon pain ?",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je refuse surtout ce que tu as mis dedans.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Tes hommes n’ont pas refusé.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mes hommes ne sont pas des porcs.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Pour le moment, si.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Rends-les-moi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Tu es entré seul dans ma maison et tu donnes déjà des ordres.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai perdu assez d’hommes.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Et tu crois que cela te rend plus dangereux ?",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Cela me rend moins patient.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Circé comprend que ce visiteur n’est pas comme les autres.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La confrontation se termine autrement qu’elle a commencé.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elle leur a rendu leur forme.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Mes mains.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Oui.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "J’ai des mains.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Garde-les loin de son assiette.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous aurions pu partir ce jour-là.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous sommes restés.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Parce qu’après des mois où chaque rivage pouvait tuer quelqu’un, cette maison avait du feu. Des lits. De la nourriture. Et plus personne ne nous transformait en quoi que ce soit.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les hommes se remettent vite à aimer le confort.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Même toi.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Surtout moi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Au début, ils parlent chaque soir du départ.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Demain.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Demain.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Demain.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Puis le mot change de place.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Quand les voiles seront réparées.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Quand les hommes seront reposés.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quand le vent sera meilleur.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le bateau reste tiré sur la grève.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les vêtements sèchent. Les blessures ferment. Les hommes recommencent à dormir sans se réveiller au moindre bruit.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "On pourrait rester encore quelques jours.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu disais demain.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Hier.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "C’est généralement comme ça que fonctionne demain.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je les ai laissés rester.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu t’es laissé rester.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pour Ulysse, le danger n’a plus la forme d’une pierre devant une grotte ni d’une tempête.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il ressemble à un repas chaud qu’on peut reprendre le soir suivant.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu crois qu’Ithaque a changé ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Bien sûr.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Alors pourquoi tu en parles comme si elle était restée à la même place ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Une île reste généralement à la même place.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu sais ce que je veux dire.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Ma fille avait six ans quand je suis parti.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quel âge a-t-elle maintenant ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Je n’en sais rien.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu sais compter.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Ce n’est pas pareil.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Il veut dire qu’il ne sait pas qui elle est.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Je sais qui elle est.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Non. Tu sais qui elle était.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Et si elle ne me reconnaît pas ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors tu lui diras ton nom.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Toi, tu crois toujours que ça suffit.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse regarde l’homme.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Ici, au moins, personne ne me demande d’être celui que j’étais avant la guerre.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu veux rester ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Je veux arrêter de perdre des années en essayant de retrouver celles qui sont déjà parties.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et demain ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Demain, je verrai.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Cette phrase nous a retenus longtemps.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le confort de Circé n’est pas seulement agréable. Il offre aux survivants une idée dangereuse : peut-être qu’on peut cesser de rentrer sans appeler cela un abandon.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Tu comptes les jours ?",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "C’est mauvais signe.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Quand un homme qui veut rentrer cesse de compter les jours, il commence à apprendre à rester.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu veux que je parte ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Je veux savoir si toi, tu le veux encore.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Alors cesse de répondre comme si quelqu’un t’interrogeait. Pars.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Dis-moi où.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Pas encore vers Ithaque.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Évidemment.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Tu dois aller consulter Tirésias.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Où ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Chez les morts.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Voilà donc ce que tu appelles repartir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Tu as demandé la route.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’espérais un cap.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "circe",
+      "speaker": "CIRCÉ",
+      "text": "Tu as déjà eu des caps. Ils ne t’ont pas beaucoup aidé.",
+      "preset": "odyssee-circe-h2"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Quand il nous a annoncé où nous devions aller, personne n’a parlé.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je m’en souviens.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Non. Tu te souviens du silence. Moi, je me souviens de ce qu’il y avait dedans.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Des hommes qui venaient de retrouver leurs mains, leur visage, un lit, du pain chaud. Et leur capitaine leur disait que l’étape suivante était le pays des morts.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu voulais rester.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Oui.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourtant tu es venu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Oui.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Parce que partir sans toi, c’était renoncer à rentrer. Et te suivre, c’était peut-être mourir en essayant.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Beau choix.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "C’était devenu notre spécialité.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu aurais pu prendre le bateau.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et aller où ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "N’importe où.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ce mot-là appartient aux hommes qui ont encore plusieurs maisons possibles.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse ne répond pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S07 — Circé",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous, on avait seulement la direction que tu continuais d’appeler Ithaque.",
+      "preset": "odyssee-euryloque"
+    }
+  ]
+}
