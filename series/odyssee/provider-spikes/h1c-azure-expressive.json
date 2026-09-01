@@ -1,703 +1,289 @@
 {
-  "schema_version": 1,
-  "id": "odyssee-h1c-azure-expressive",
+  "schema_version": 2,
+  "id": "odyssee-h1c-azure-expressive-surgical",
   "language": "fr",
+  "stream1_contract": {
+    "commit": "e5592161f2bb6b0a524c0dd0ef1f4a1b97a6a3c0",
+    "roadmap": "series/odyssee/production/STREAM1_MASTER_ROADMAP.md",
+    "p4_package": "P4_SIRENS_HUMAN_PASS",
+    "p6_package": "ULYSSES_EMOTIONAL_HUMAN_PASS"
+  },
   "upstream": {
     "audio_engine_commit": "6ca0aa878cf65426f18aa672a02aa573638f37ae",
     "azure_capability": "audio_engine.voice_lab_azure",
-    "chatterbox_repo": "resemble-ai/chatterbox",
-    "chatterbox_commit": "5de7a54aa4e5e2baadb0182dde554908b48b85c2",
-    "edge_tts_version": "7.2.8"
+    "azure_model_revision": "provider-managed-not-exposed",
+    "azure_output_format": "audio-24khz-96kbitrate-mono-mp3"
+  },
+  "baseline_release": {
+    "tag": "odyssee-h1b-corrective-review-v1",
+    "target_commit": "feb27315dd159a0ab1c071eee39eb106edebcea7"
+  },
+  "modules": {
+    "P4": {
+      "module": "P4",
+      "variant": "p4-b",
+      "audio": "p4-b.mp3",
+      "audio_sha256": "14f325e3a1404c260c9a5139b85bcb5267cdd91a60c2458ea80bd66f3d75365d",
+      "report": "p4-b-report.json",
+      "report_sha256": "8f3d2e0a63752d09974c2553c25f28fe9e0b5c6ec800fb734d16ae859f65aa06",
+      "preserve_rule": "all H1b-B segments except left/lead Siren slots 2,4,6,8,12"
+    },
+    "P6": {
+      "module": "P6",
+      "variant": "p6-b",
+      "audio": "p6-b.mp3",
+      "audio_sha256": "474c2e41a5d702b2a84524aa3be9a0559ed7378af18d507ac082b666029d64ae",
+      "report": "p6-b-report.json",
+      "report_sha256": "366091a73e7597626384535e900a5b30e7943c485d0197ec25f015c384b6d891",
+      "preserve_rule": "all H1b-B staging, Penelope and explanatory Ulysses; replace only slots 2,4,10,12,15"
+    }
   },
   "azure_credentials": [
     "AZURE_SPEECH_KEY",
     "AZURE_SPEECH_REGION"
   ],
-  "synthetic_references": {
-    "vivienne": {
-      "voice": "fr-FR-VivienneMultilingualNeural",
-      "text": "Je suis là. Écoute-moi. Je te parle maintenant.",
-      "rate": "+0%",
-      "pitch": "+0Hz",
-      "volume": "+0%"
-    }
-  },
   "variants": {
     "p4-a": {
       "module": "P4",
-      "title": "Sirènes Azure — softvoice",
-      "azure_style": "softvoice",
-      "azure_styledegree": 0.85,
-      "segments": [
+      "title": "Sirènes — H1b-B + Soleil softvoice",
+      "replacements": [
         {
-          "speaker": "Ulysse",
-          "provider": "edge",
-          "text": "Puis la mer elle-même a semblé devenir moins importante.",
-          "voice": "fr-FR-HenriNeural",
-          "rate": "-4%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 150
-        },
-        {
+          "i": 2,
           "speaker": "Sirène gauche",
-          "provider": "azure",
-          "voice": "fr-FR-Soleil:MAI-Voice-2",
-          "locale": "fr-FR",
-          "style": "softvoice",
-          "styledegree": 0.85,
           "text": "Ulysse d’Ithaque.",
-          "pan": -0.16,
-          "pause_after_ms": 90
-        },
-        {
-          "speaker": "Sirène droite",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Nous savons.",
-          "exaggeration": 0.62,
-          "cfg_weight": 0.34,
-          "temperature": 0.82,
-          "pan": 0.16,
-          "pause_after_ms": 90
-        },
-        {
-          "speaker": "Sirène gauche",
-          "provider": "azure",
           "voice": "fr-FR-Soleil:MAI-Voice-2",
           "locale": "fr-FR",
           "style": "softvoice",
           "styledegree": 0.85,
+          "pan": -0.16
+        },
+        {
+          "i": 4,
+          "speaker": "Sirène gauche",
           "text": "Troie.",
-          "pan": -0.16,
-          "pause_after_ms": 70
-        },
-        {
-          "speaker": "Sirène droite",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Le Cyclope.",
-          "exaggeration": 0.6,
-          "cfg_weight": 0.36,
-          "temperature": 0.8,
-          "pan": 0.16,
-          "pause_after_ms": 70
-        },
-        {
-          "speaker": "Sirène gauche",
-          "provider": "azure",
           "voice": "fr-FR-Soleil:MAI-Voice-2",
           "locale": "fr-FR",
           "style": "softvoice",
           "styledegree": 0.85,
+          "pan": -0.16
+        },
+        {
+          "i": 6,
+          "speaker": "Sirène gauche",
           "text": "Pourquoi tu as crié ton nom.",
-          "pan": -0.16,
-          "pause_after_ms": 110
-        },
-        {
-          "speaker": "Sirène droite",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Tu veux rentrer…",
-          "exaggeration": 0.6,
-          "cfg_weight": 0.34,
-          "temperature": 0.8,
-          "pan": 0.16,
-          "pause_after_ms": 80
-        },
-        {
-          "speaker": "Sirène gauche",
-          "provider": "azure",
           "voice": "fr-FR-Soleil:MAI-Voice-2",
           "locale": "fr-FR",
           "style": "softvoice",
           "styledegree": 0.85,
+          "pan": -0.16
+        },
+        {
+          "i": 8,
+          "speaker": "Sirène gauche",
           "text": "…ou être connu ?",
-          "pan": -0.16,
-          "pause_after_ms": 220
-        },
-        {
-          "speaker": "Ulysse",
-          "provider": "edge",
-          "text": "J’ai tiré sur les cordes.",
-          "voice": "fr-FR-HenriNeural",
-          "rate": "-4%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 160
-        },
-        {
-          "speaker": "Euryloque",
-          "provider": "edge",
-          "text": "Tu as crié beaucoup de choses.",
-          "voice": "fr-FR-HenriNeural",
-          "rate": "+4%",
-          "pitch": "-14Hz",
-          "volume": "+8%",
-          "pause_after_ms": 160
-        },
-        {
-          "speaker": "Sirène droite",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Reste.",
-          "exaggeration": 0.58,
-          "cfg_weight": 0.38,
-          "temperature": 0.78,
-          "pan": 0.16,
-          "pause_after_ms": 80
-        },
-        {
-          "speaker": "Sirène gauche",
-          "provider": "azure",
           "voice": "fr-FR-Soleil:MAI-Voice-2",
           "locale": "fr-FR",
           "style": "softvoice",
           "styledegree": 0.85,
-          "text": "Nous savons déjà.",
-          "pan": -0.16,
-          "pause_after_ms": 260
+          "pan": -0.16
         },
         {
-          "speaker": "Ulysse",
-          "provider": "edge",
-          "text": "Voilà ce qui m’a fait peur.",
-          "voice": "fr-FR-HenriNeural",
-          "rate": "-4%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 240
+          "i": 12,
+          "speaker": "Sirène gauche",
+          "text": "Nous savons déjà.",
+          "voice": "fr-FR-Soleil:MAI-Voice-2",
+          "locale": "fr-FR",
+          "style": "softvoice",
+          "styledegree": 0.85,
+          "pan": -0.16
         }
       ]
     },
     "p4-b": {
       "module": "P4",
-      "title": "Sirènes Azure — hopeful",
-      "azure_style": "hopeful",
-      "azure_styledegree": 0.9,
-      "segments": [
+      "title": "Sirènes — H1b-B + Soleil hopeful",
+      "replacements": [
         {
-          "speaker": "Ulysse",
-          "provider": "edge",
-          "text": "Puis la mer elle-même a semblé devenir moins importante.",
-          "voice": "fr-FR-HenriNeural",
-          "rate": "-4%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 150
-        },
-        {
+          "i": 2,
           "speaker": "Sirène gauche",
-          "provider": "azure",
-          "voice": "fr-FR-Soleil:MAI-Voice-2",
-          "locale": "fr-FR",
-          "style": "hopeful",
-          "styledegree": 0.9,
           "text": "Ulysse d’Ithaque.",
-          "pan": -0.16,
-          "pause_after_ms": 90
-        },
-        {
-          "speaker": "Sirène droite",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Nous savons.",
-          "exaggeration": 0.62,
-          "cfg_weight": 0.34,
-          "temperature": 0.82,
-          "pan": 0.16,
-          "pause_after_ms": 90
-        },
-        {
-          "speaker": "Sirène gauche",
-          "provider": "azure",
           "voice": "fr-FR-Soleil:MAI-Voice-2",
           "locale": "fr-FR",
           "style": "hopeful",
           "styledegree": 0.9,
+          "pan": -0.16
+        },
+        {
+          "i": 4,
+          "speaker": "Sirène gauche",
           "text": "Troie.",
-          "pan": -0.16,
-          "pause_after_ms": 70
-        },
-        {
-          "speaker": "Sirène droite",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Le Cyclope.",
-          "exaggeration": 0.6,
-          "cfg_weight": 0.36,
-          "temperature": 0.8,
-          "pan": 0.16,
-          "pause_after_ms": 70
-        },
-        {
-          "speaker": "Sirène gauche",
-          "provider": "azure",
           "voice": "fr-FR-Soleil:MAI-Voice-2",
           "locale": "fr-FR",
           "style": "hopeful",
           "styledegree": 0.9,
+          "pan": -0.16
+        },
+        {
+          "i": 6,
+          "speaker": "Sirène gauche",
           "text": "Pourquoi tu as crié ton nom.",
-          "pan": -0.16,
-          "pause_after_ms": 110
-        },
-        {
-          "speaker": "Sirène droite",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Tu veux rentrer…",
-          "exaggeration": 0.6,
-          "cfg_weight": 0.34,
-          "temperature": 0.8,
-          "pan": 0.16,
-          "pause_after_ms": 80
-        },
-        {
-          "speaker": "Sirène gauche",
-          "provider": "azure",
           "voice": "fr-FR-Soleil:MAI-Voice-2",
           "locale": "fr-FR",
           "style": "hopeful",
           "styledegree": 0.9,
+          "pan": -0.16
+        },
+        {
+          "i": 8,
+          "speaker": "Sirène gauche",
           "text": "…ou être connu ?",
-          "pan": -0.16,
-          "pause_after_ms": 220
-        },
-        {
-          "speaker": "Ulysse",
-          "provider": "edge",
-          "text": "J’ai tiré sur les cordes.",
-          "voice": "fr-FR-HenriNeural",
-          "rate": "-4%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 160
-        },
-        {
-          "speaker": "Euryloque",
-          "provider": "edge",
-          "text": "Tu as crié beaucoup de choses.",
-          "voice": "fr-FR-HenriNeural",
-          "rate": "+4%",
-          "pitch": "-14Hz",
-          "volume": "+8%",
-          "pause_after_ms": 160
-        },
-        {
-          "speaker": "Sirène droite",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Reste.",
-          "exaggeration": 0.58,
-          "cfg_weight": 0.38,
-          "temperature": 0.78,
-          "pan": 0.16,
-          "pause_after_ms": 80
-        },
-        {
-          "speaker": "Sirène gauche",
-          "provider": "azure",
           "voice": "fr-FR-Soleil:MAI-Voice-2",
           "locale": "fr-FR",
           "style": "hopeful",
           "styledegree": 0.9,
-          "text": "Nous savons déjà.",
-          "pan": -0.16,
-          "pause_after_ms": 260
+          "pan": -0.16
         },
         {
-          "speaker": "Ulysse",
-          "provider": "edge",
-          "text": "Voilà ce qui m’a fait peur.",
-          "voice": "fr-FR-HenriNeural",
-          "rate": "-4%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 240
+          "i": 12,
+          "speaker": "Sirène gauche",
+          "text": "Nous savons déjà.",
+          "voice": "fr-FR-Soleil:MAI-Voice-2",
+          "locale": "fr-FR",
+          "style": "hopeful",
+          "styledegree": 0.9,
+          "pan": -0.16
         }
       ]
     },
     "p6-a": {
       "module": "P6",
-      "title": "Le lit — Ulysse Azure retenu",
-      "segments": [
+      "title": "Le lit — H1b-B + Ulysse Azure retenu",
+      "replacements": [
         {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Euryclée. Prépare le lit d’Ulysse dans le couloir.",
-          "exaggeration": 0.48,
-          "cfg_weight": 0.42,
-          "temperature": 0.76,
-          "pan": 0.04,
-          "pause_after_ms": 260
-        },
-        {
+          "i": 2,
           "speaker": "Ulysse",
-          "provider": "azure",
+          "text": "Non.",
           "voice": "fr-FR-HenriNeural",
           "locale": "fr-FR",
-          "text": "Non.",
-          "rate": "+2%",
-          "pitch": "-10Hz",
-          "volume": "+3%",
           "style": "excited",
           "styledegree": 0.65,
-          "pause_after_ms": 180
+          "rate": "+2%",
+          "pitch": "-10Hz",
+          "volume": "+3%"
         },
         {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Non ?",
-          "exaggeration": 0.45,
-          "cfg_weight": 0.44,
-          "temperature": 0.75,
-          "pan": 0.04,
-          "pause_after_ms": 140
-        },
-        {
+          "i": 4,
           "speaker": "Ulysse",
-          "provider": "azure",
+          "text": "Ce lit ne sort pas de cette chambre.",
           "voice": "fr-FR-HenriNeural",
           "locale": "fr-FR",
-          "text": "Ce lit ne sort pas de cette chambre.",
-          "rate": "-2%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
           "style": "excited",
           "styledegree": 0.58,
-          "pause_after_ms": 170
-        },
-        {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Pourquoi ?",
-          "exaggeration": 0.45,
-          "cfg_weight": 0.44,
-          "temperature": 0.75,
-          "pan": 0.04,
-          "pause_after_ms": 180
-        },
-        {
-          "speaker": "Ulysse",
-          "provider": "azure",
-          "voice": "fr-FR-HenriNeural",
-          "locale": "fr-FR",
-          "text": "Parce que l’un de ses pieds est un olivier.",
-          "rate": "-3%",
+          "rate": "-2%",
           "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 140
+          "volume": "+2%"
         },
         {
+          "i": 10,
           "speaker": "Ulysse",
-          "provider": "azure",
-          "voice": "fr-FR-HenriNeural",
-          "locale": "fr-FR",
-          "text": "Il était vivant quand j’ai construit la chambre.",
-          "rate": "-3%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 120
-        },
-        {
-          "speaker": "Ulysse",
-          "provider": "azure",
-          "voice": "fr-FR-HenriNeural",
-          "locale": "fr-FR",
-          "text": "J’ai taillé le tronc. J’ai bâti les murs autour.",
-          "rate": "-3%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 850
-        },
-        {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Alors personne ne l’a déplacé.",
-          "exaggeration": 0.44,
-          "cfg_weight": 0.46,
-          "temperature": 0.74,
-          "pan": 0.04,
-          "pause_after_ms": 260
-        },
-        {
-          "speaker": "Ulysse",
-          "provider": "azure",
-          "voice": "fr-FR-HenriNeural",
-          "locale": "fr-FR",
           "text": "Tu le savais.",
-          "rate": "-4%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
+          "voice": "fr-FR-HenriNeural",
+          "locale": "fr-FR",
           "style": "sad",
           "styledegree": 0.72,
-          "pause_after_ms": 220
+          "rate": "-4%",
+          "pitch": "-10Hz",
+          "volume": "+2%"
         },
         {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Je devais savoir si toi, tu le savais encore.",
-          "exaggeration": 0.5,
-          "cfg_weight": 0.4,
-          "temperature": 0.76,
-          "pan": 0.04,
-          "pause_after_ms": 760
-        },
-        {
+          "i": 12,
           "speaker": "Ulysse",
-          "provider": "azure",
+          "text": "Pénélope…",
           "voice": "fr-FR-HenriNeural",
           "locale": "fr-FR",
-          "text": "Pénélope…",
-          "rate": "-6%",
-          "pitch": "-10Hz",
-          "volume": "+1%",
           "style": "sad",
           "styledegree": 0.78,
-          "pause_after_ms": 300
+          "rate": "-6%",
+          "pitch": "-10Hz",
+          "volume": "+1%"
         },
         {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Ulysse.",
-          "exaggeration": 0.46,
-          "cfg_weight": 0.44,
-          "temperature": 0.74,
-          "pan": 0.04,
-          "pause_after_ms": 480
-        },
-        {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Je n’avais besoin que d’une chose qui ne puisse pas voyager avec tes histoires.",
-          "exaggeration": 0.5,
-          "cfg_weight": 0.4,
-          "temperature": 0.76,
-          "pan": 0.04,
-          "pause_after_ms": 260
-        },
-        {
+          "i": 15,
           "speaker": "Ulysse",
-          "provider": "azure",
+          "text": "Notre lit.",
           "voice": "fr-FR-HenriNeural",
           "locale": "fr-FR",
-          "text": "Notre lit.",
-          "rate": "-5%",
-          "pitch": "-10Hz",
-          "volume": "+1%",
           "style": "sad",
           "styledegree": 0.6,
-          "pause_after_ms": 200
-        },
-        {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Notre lit.",
-          "exaggeration": 0.42,
-          "cfg_weight": 0.48,
-          "temperature": 0.72,
-          "pan": 0.04,
-          "pause_after_ms": 560
+          "rate": "-5%",
+          "pitch": "-10Hz",
+          "volume": "+1%"
         }
       ]
     },
     "p6-b": {
       "module": "P6",
-      "title": "Le lit — Ulysse Azure plus marqué",
-      "segments": [
+      "title": "Le lit — H1b-B + Ulysse Azure plus marqué",
+      "replacements": [
         {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Euryclée. Prépare le lit d’Ulysse dans le couloir.",
-          "exaggeration": 0.48,
-          "cfg_weight": 0.42,
-          "temperature": 0.76,
-          "pan": 0.04,
-          "pause_after_ms": 260
-        },
-        {
+          "i": 2,
           "speaker": "Ulysse",
-          "provider": "azure",
+          "text": "Non.",
           "voice": "fr-FR-HenriNeural",
           "locale": "fr-FR",
-          "text": "Non.",
-          "rate": "+2%",
-          "pitch": "-10Hz",
-          "volume": "+3%",
           "style": "excited",
           "styledegree": 0.95,
-          "pause_after_ms": 180
+          "rate": "+2%",
+          "pitch": "-10Hz",
+          "volume": "+3%"
         },
         {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Non ?",
-          "exaggeration": 0.45,
-          "cfg_weight": 0.44,
-          "temperature": 0.75,
-          "pan": 0.04,
-          "pause_after_ms": 140
-        },
-        {
+          "i": 4,
           "speaker": "Ulysse",
-          "provider": "azure",
+          "text": "Ce lit ne sort pas de cette chambre.",
           "voice": "fr-FR-HenriNeural",
           "locale": "fr-FR",
-          "text": "Ce lit ne sort pas de cette chambre.",
-          "rate": "-2%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
           "style": "excited",
           "styledegree": 0.85,
-          "pause_after_ms": 170
-        },
-        {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Pourquoi ?",
-          "exaggeration": 0.45,
-          "cfg_weight": 0.44,
-          "temperature": 0.75,
-          "pan": 0.04,
-          "pause_after_ms": 180
-        },
-        {
-          "speaker": "Ulysse",
-          "provider": "azure",
-          "voice": "fr-FR-HenriNeural",
-          "locale": "fr-FR",
-          "text": "Parce que l’un de ses pieds est un olivier.",
-          "rate": "-3%",
+          "rate": "-2%",
           "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 140
+          "volume": "+2%"
         },
         {
+          "i": 10,
           "speaker": "Ulysse",
-          "provider": "azure",
-          "voice": "fr-FR-HenriNeural",
-          "locale": "fr-FR",
-          "text": "Il était vivant quand j’ai construit la chambre.",
-          "rate": "-3%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 120
-        },
-        {
-          "speaker": "Ulysse",
-          "provider": "azure",
-          "voice": "fr-FR-HenriNeural",
-          "locale": "fr-FR",
-          "text": "J’ai taillé le tronc. J’ai bâti les murs autour.",
-          "rate": "-3%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
-          "pause_after_ms": 850
-        },
-        {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Alors personne ne l’a déplacé.",
-          "exaggeration": 0.44,
-          "cfg_weight": 0.46,
-          "temperature": 0.74,
-          "pan": 0.04,
-          "pause_after_ms": 260
-        },
-        {
-          "speaker": "Ulysse",
-          "provider": "azure",
-          "voice": "fr-FR-HenriNeural",
-          "locale": "fr-FR",
           "text": "Tu le savais.",
-          "rate": "-4%",
-          "pitch": "-10Hz",
-          "volume": "+2%",
+          "voice": "fr-FR-HenriNeural",
+          "locale": "fr-FR",
           "style": "sad",
           "styledegree": 1.05,
-          "pause_after_ms": 220
+          "rate": "-4%",
+          "pitch": "-10Hz",
+          "volume": "+2%"
         },
         {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Je devais savoir si toi, tu le savais encore.",
-          "exaggeration": 0.5,
-          "cfg_weight": 0.4,
-          "temperature": 0.76,
-          "pan": 0.04,
-          "pause_after_ms": 760
-        },
-        {
+          "i": 12,
           "speaker": "Ulysse",
-          "provider": "azure",
+          "text": "Pénélope…",
           "voice": "fr-FR-HenriNeural",
           "locale": "fr-FR",
-          "text": "Pénélope…",
-          "rate": "-6%",
-          "pitch": "-10Hz",
-          "volume": "+1%",
           "style": "sad",
           "styledegree": 1.1,
-          "pause_after_ms": 300
+          "rate": "-6%",
+          "pitch": "-10Hz",
+          "volume": "+1%"
         },
         {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Ulysse.",
-          "exaggeration": 0.46,
-          "cfg_weight": 0.44,
-          "temperature": 0.74,
-          "pan": 0.04,
-          "pause_after_ms": 480
-        },
-        {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Je n’avais besoin que d’une chose qui ne puisse pas voyager avec tes histoires.",
-          "exaggeration": 0.5,
-          "cfg_weight": 0.4,
-          "temperature": 0.76,
-          "pan": 0.04,
-          "pause_after_ms": 260
-        },
-        {
+          "i": 15,
           "speaker": "Ulysse",
-          "provider": "azure",
+          "text": "Notre lit.",
           "voice": "fr-FR-HenriNeural",
           "locale": "fr-FR",
-          "text": "Notre lit.",
-          "rate": "-5%",
-          "pitch": "-10Hz",
-          "volume": "+1%",
           "style": "sad",
           "styledegree": 0.85,
-          "pause_after_ms": 200
-        },
-        {
-          "speaker": "Pénélope",
-          "provider": "chatterbox",
-          "ref": "vivienne",
-          "text": "Notre lit.",
-          "exaggeration": 0.42,
-          "cfg_weight": 0.48,
-          "temperature": 0.72,
-          "pan": 0.04,
-          "pause_after_ms": 560
+          "rate": "-5%",
+          "pitch": "-10Hz",
+          "volume": "+1%"
         }
       ]
     }
