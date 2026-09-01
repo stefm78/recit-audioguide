@@ -324,7 +324,44 @@
         "penelope_continuity",
         "argos_without_sentimental_cue",
         "action_vs_emotional_climax"
-      ]
+      ],
+      "entry_contract": {
+        "voice_foundation_is_sufficient_for_machine_preflight": true,
+        "human_review_requires": [
+          "product_sound_direction_materialized_or_explicit_silence",
+          "scene_and_block_transitions_materialized_where_applicable",
+          "non_generated_sound_asset_provenance_integrity",
+          "machine_QA_PASS",
+          "immutable_browser_consumable_audio"
+        ],
+        "current_scene_foundation_v1_is_human_h2_candidate": false,
+        "reuse_existing_speech_audio": true,
+        "rule": "Do not add decorative sound merely to satisfy this gate; deliberate silence is a valid integrated decision."
+      },
+      "minimum_required_punctuations": {
+        "S02": [
+          "bounded_storm_breakage_event",
+          "no_permanent_sea_bed"
+        ],
+        "S05": [
+          "bounded_confinement_or_stone_punctuation_if_useful",
+          "no_monster_dsp"
+        ],
+        "S06": [
+          "bag_opening_wind_event",
+          "compressed_lestrygon_destruction",
+          "perceptible_fleet_reduction"
+        ],
+        "S08": [
+          "exact_P5_dark_air_minus_43_dbfs",
+          "no_extra_layer"
+        ],
+        "S14": [
+          "bow_string_privileged_punctuation",
+          "short_legible_violence",
+          "density_drop_toward_S15"
+        ]
+      }
     },
     "h3": {
       "type": "ONE_CONTINUOUS_MASTER_LISTEN",
