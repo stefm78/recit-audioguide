@@ -1,0 +1,35 @@
+name: P5 package bindings one-shot
+
+on:
+  push:
+    branches:
+      - prod/p5-integration-v2
+    paths:
+      - .github/workflows/p5-package-bindings-one-shot.yml
+
+permissions:
+  contents: read
+
+jobs:
+  bind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: ea57a1dca1277526be010ad301de1eeca624f409
+          path: .audio-engine
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install engine
+        run: python -m pip install --disable-pip-version-check ./.audio-engine
+      - name: Validate contracts and emit exact bindings
+        shell: bash
+        run: |
+          set -euo pipefail
+          audio-engine validate series/odyssee/programs/S08.json --kind program
+          audio-engine provider-package validate             series/odyssee/production/provider-packages/P5_CHATTERBOX_MULTILINGUAL_V3_V1.json
+          sha256sum             series/odyssee/programs/S08.json             series/odyssee/production/provider-packages/P5_CHATTERBOX_MULTILINGUAL_V3_V1.json             series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json
