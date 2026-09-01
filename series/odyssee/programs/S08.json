@@ -1,0 +1,952 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s08",
+  "title": "L’Odyssée — S08 — Ceux qui ne rentreront pas",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-b.md",
+      "git_blob_sha1": "12a9a582df0dae2949aec7f19f2d526f27943da4",
+      "sequence": "S08"
+    }
+  ],
+  "production": {
+    "block": "B",
+    "direction": "series/odyssee/production/blocks/BLOCK_B.md",
+    "stage": "scene-foundation-v1",
+    "state": "HOLD",
+    "blockers": [
+      "P5_GENERIC_CHATTERBOX_PROVIDER_PACKAGE"
+    ],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne peux pas décrire le pays des morts comme une île.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Une île a des bords.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Là, le plus difficile était de comprendre jusqu’où allait l’espace autour de nous.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "On devrait repartir.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas encore.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu dis toujours ça juste avant que quelque chose s’approche.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avions suivi les instructions de Circé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et des voix sont venues.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Certaines avaient des noms que je connaissais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "D’autres non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Ulysse.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tirésias ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Tu veux rentrer.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Tu réponds vite.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai eu le temps d’y penser.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Tu rentreras si tu sais encore obéir à une limite.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Laquelle ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Lorsque tu atteindras l’île où paissent les troupeaux du Soleil, ne les touche pas.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est tout ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Tu trouves cela facile ?",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai résisté à pire.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "C’est précisément ce que disent les hommes avant de manquer de nourriture.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et si mes hommes obéissent ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Tu peux revoir Ithaque.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et s’ils n’obéissent pas ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Tu continueras peut-être seul.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Peut-être ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Les morts évitent les promesses.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu me demandes encore de contrôler mes hommes.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Non.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est pourtant ce que signifie ton avertissement.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Tu entends toujours les avertissements comme des ordres à donner aux autres.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Que devrais-je entendre ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Une limite pour toi.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne vais pas manger les troupeaux.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Tu ne mangeras pas seul.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors je dois empêcher les autres.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Tu ne peux pas empêcher tout.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je suis leur capitaine.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Et ils sont encore des hommes.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Si je sais ce qui va arriver, je peux l’éviter.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Voilà la pensée qui t’a conduit dans beaucoup d’endroits.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elle m’en a aussi sorti.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Oui.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors que veux-tu que je fasse ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "Sache la différence entre guider et croire que tous les choix t’appartiennent.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est une réponse de mort.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "tiresias",
+      "speaker": "TIRÉSIAS",
+      "text": "C’est une réponse que les vivants trouvent généralement trop tard.",
+      "preset": "odyssee-tiresias-h2"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse s’arrête une seconde.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Puis j’ai vu ma mère.",
+      "preset": "odyssee-ulysse",
+      "pause_after_ms": 260,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 1,
+        "seed": 650101
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Ulysse.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Anticlée.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Mon fils.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne savais pas.",
+      "preset": "odyssee-ulysse",
+      "pause_after_ms": 160,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 3,
+        "seed": 650103
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Non.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quand ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Cela change quelque chose ?",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pour moi, oui.",
+      "preset": "odyssee-ulysse",
+      "pause_after_ms": 160,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 5,
+        "seed": 650105
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Alors il y a longtemps.",
+      "preset": "odyssee-anticlea-p5",
+      "pause_after_ms": 240,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 6,
+        "seed": 650106
+      },
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Père ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Il vit.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pénélope ?",
+      "preset": "odyssee-ulysse",
+      "pause_after_ms": 120,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 7,
+        "seed": 650107
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Elle tient.",
+      "preset": "odyssee-anticlea-p5",
+      "pause_after_ms": 150,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 8,
+        "seed": 650108
+      },
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Télémaque ?",
+      "preset": "odyssee-ulysse",
+      "pause_after_ms": 120,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 9,
+        "seed": 650109
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Il n’est plus l’enfant que tu as laissé.",
+      "preset": "odyssee-anticlea-p5",
+      "pause_after_ms": 250,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 10,
+        "seed": 650110
+      },
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Est-ce qu’il parle de moi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Comment veux-tu que je réponde ?",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Comme tu peux.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Il a grandi entouré d’hommes qui lui expliquaient qui était son père.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et toi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Je lui ai parlé de l’homme avant la guerre.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Lequel ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Celui qui riait quand il avait réussi une ruse trop simple pour mériter qu’on la raconte.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne me souviens pas de lui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Lui non plus ne se souviendrait peut-être pas de toi.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pénélope tient encore la maison ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Oui.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Seule ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Non. Avec ce qu’il reste de ta famille, de tes serviteurs et de sa patience.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elle m’attend ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Ne lui demande pas vingt ans d’immobilité pour justifier tes vingt ans d’absence.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne demande pas—",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Alors rentre et demande-lui à elle.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai essayé de rentrer.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Je sais.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu es morte avant que—",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Ne fais pas de mon absence une accusation contre toi.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je n’étais pas là.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "C’est vrai.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’aurais dû—",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Tu veux réparer la mort ?",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Alors rentre chez les vivants.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse tend les bras.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai voulu la toucher.",
+      "preset": "odyssee-ulysse",
+      "pause_after_ms": 180,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 11,
+        "seed": 650111
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Dans la salle des Phéaciens, ses mains se ferment l’une contre l’autre.",
+      "preset": "odyssee-narratrice",
+      "pause_after_ms": 230,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 12,
+        "seed": 650112
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mes bras ont traversé son absence.",
+      "preset": "odyssee-ulysse",
+      "pause_after_ms": 250,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 13,
+        "seed": 650113
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai essayé encore.",
+      "preset": "odyssee-ulysse",
+      "pause_after_ms": 150,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 14,
+        "seed": 650114
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Ulysse.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Encore une fois.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Arrête.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je voulais seulement—",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "anticlea",
+      "speaker": "ANTICLÉE",
+      "text": "Je sais.",
+      "preset": "odyssee-anticlea-p5"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elle était là.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et elle n’était plus dans un monde où mes mains pouvaient faire quelque chose.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le conteur qui avait souri en racontant le nom de Personne ne sourit plus.",
+      "preset": "odyssee-narratrice",
+      "pause_after_ms": 240,
+      "accepted_probe": {
+        "human_gate": "H1b",
+        "variant": "p5-a",
+        "probe_sequence": 18,
+        "seed": 650118
+      }
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai vu d’autres morts.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Des hommes de guerre. Des rois. Des compagnons dont les noms rempliraient une nuit entière.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne vais pas te les donner tous.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ce que j’ai rapporté de ce lieu tient en moins de mots.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les morts savent très bien ce que les vivants gaspillent.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Et tu es reparti.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pour la première fois, je ne voulais plus connaître la prochaine aventure.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S08 — Ceux qui ne rentreront pas",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je voulais la dernière.",
+      "preset": "odyssee-ulysse"
+    }
+  ]
+}
