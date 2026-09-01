@@ -1,0 +1,53 @@
+name: H2 production plan one-shot
+
+on:
+  push:
+    branches:
+      - prod/h2-materialization-v1
+    paths:
+      - .github/workflows/h2-production-plan-one-shot.yml
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: e82559cbd60b1d29de208e7e36ccd7505dcfcdcc
+          path: .audio-engine
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check ./.audio-engine
+      - name: Validate H2-scoped Production plan
+        shell: bash
+        run: |
+          set -euo pipefail
+          manifest=series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json
+          audio-engine production validate "$manifest" --verify-files --workspace-root .
+          audio-engine production plan "$manifest" --workspace-root . > /tmp/plan.json
+          python - <<'PY'
+          import json
+          plan=json.load(open("/tmp/plan.json",encoding="utf-8"))
+          units={x["id"]:x for x in plan["ready_units"]}
+          v2="series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V2.json"
+          v1="series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json"
+          for unit in ("S05","S06","S07","S10"):
+              assert units[unit]["voice_pack"]==v2,(unit,units[unit]["voice_pack"])
+          for unit in ("S01","S02","S03","S04","S08","S11","S12","S13","S14"):
+              assert units[unit]["voice_pack"]==v1,(unit,units[unit]["voice_pack"])
+          assert units["S08"]["provider_package_count"]==1
+          assert units["S08"]["asset_count"]==1
+          print(json.dumps({
+              "affected_v2":["S05","S06","S07","S10"],
+              "preserved_v1":["S01","S02","S03","S04","S08","S11","S12","S13","S14"],
+              "block_states":plan["assemblies"],
+              "master":plan["master"],
+          },ensure_ascii=False,indent=2))
+          PY
