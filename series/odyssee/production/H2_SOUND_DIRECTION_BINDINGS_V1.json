@@ -1,0 +1,326 @@
+{
+  "schema": "recit.odyssee.sound_direction_binding.v1",
+  "id": "odyssee-h2-sound-direction-binding-v1",
+  "authority_issue": 110,
+  "downstream_issue": 112,
+  "purpose": "Bind Stream 1 artistic sound decisions to exact frozen Program locations without encoding engine implementation details.",
+  "authority_rules": {
+    "locator_basis": "one-based Program segment index plus exact speaker/text guard",
+    "no_fuzzy_matching": true,
+    "no_spoken_text_change": true,
+    "timing_policy": "Stream 1 defines narrative placement and bounded carry. Stream 3 derives concrete milliseconds from real assets/runtime.",
+    "silence_is_valid": true,
+    "no_decorative_quota": true
+  },
+  "program_bindings": {
+    "S02": {
+      "program_path": "series/odyssee/programs/S02.json",
+      "program_git_blob_sha1": "c335dafcd4f699b1d534394272169623751dc701",
+      "directives": [
+        {
+          "id": "S02_STORM_ARRIVAL",
+          "type": "sound_event",
+          "asset_id": "odyssee-strong-wind",
+          "role": "scene",
+          "anchor": {
+            "after": {
+              "segment": 114,
+              "speaker": "NARRATRICE",
+              "text": "Puis Poséidon voit l’homme qui lui a échappé trop longtemps."
+            },
+            "before": {
+              "segment": 115,
+              "speaker": "NARRATRICE",
+              "text": "Le ciel se ferme. Le vent arrive de plusieurs côtés à la fois. L’embarcation cesse d’être une construction et devient une question : combien de temps peut-elle encore tenir ?"
+            }
+          },
+          "carry": {
+            "through_last_segment": 118,
+            "stop_before_segment": 119
+          },
+          "artistic_intent": "The storm must arrive as an event before narration fully explains it; it may briefly pressure the speech but must not become a generic sea bed.",
+          "constraints": [
+            "bounded_event_not_bed",
+            "no_permanent_sea",
+            "no_epic_music",
+            "no_thunder_required",
+            "speech_intelligibility_first"
+          ],
+          "fallback": "omit-and-warn if no qualified wind asset"
+        },
+        {
+          "id": "S02_RAFT_FAILURE",
+          "type": "sound_event",
+          "asset_id": "odyssee-wood-stress",
+          "role": "punctuation",
+          "anchor": {
+            "after": {
+              "segment": 118,
+              "speaker": "ULYSSE",
+              "text": "Pas après tout cela."
+            },
+            "before": {
+              "segment": 119,
+              "speaker": "NARRATRICE",
+              "text": "Le bois cède."
+            }
+          },
+          "carry": {
+            "stop_before_segment": 120
+          },
+          "artistic_intent": "A single brief wood-failure punctuation may prefigure the narrated break. Do not illustrate every action.",
+          "constraints": [
+            "brief",
+            "single_event",
+            "no_crash_wall",
+            "no_embedded_voices",
+            "no_embedded_ambience"
+          ],
+          "fallback": "silence"
+        }
+      ]
+    },
+    "S05": {
+      "program_path": "series/odyssee/programs/S05.json",
+      "program_git_blob_sha1": "f5ef701ecba8c2bb8e20d58e30915e16d8853477",
+      "directives": [
+        {
+          "id": "S05_CONFINEMENT_BY_SUBTRACTION",
+          "type": "explicit_no_asset",
+          "scope": {
+            "starts_at": {
+              "segment": 25,
+              "speaker": "ULYSSE",
+              "text": "Il a poussé devant l’entrée une pierre que douze hommes n’auraient pas déplacée."
+            },
+            "releases_at": {
+              "segment": 90,
+              "speaker": "ULYSSE",
+              "text": "Nous étions dehors."
+            }
+          },
+          "artistic_intent": "Confinement is carried by P3 voice mass, rhythm, spatial restraint and silence. A library stone impact is not required.",
+          "constraints": [
+            "no_required_stone_asset",
+            "no_monster_dsp",
+            "no_continuous_cave_bed",
+            "preserve_P3_identity",
+            "dry_or_subtle_existing_space_is_valid"
+          ],
+          "fallback": "silence"
+        }
+      ]
+    },
+    "S06": {
+      "program_path": "series/odyssee/programs/S06.json",
+      "program_git_blob_sha1": "9d19925b5c8fcd01bb5db557f391e2e5498a355c",
+      "directives": [
+        {
+          "id": "S06_BAG_WINDS_RELEASE",
+          "type": "sound_event",
+          "asset_id": "odyssee-strong-wind",
+          "role": "scene",
+          "anchor": {
+            "after": {
+              "segment": 90,
+              "speaker": "ULYSSE",
+              "text": "Je me suis réveillé quand le bateau a changé sous mon corps."
+            },
+            "before": {
+              "segment": 91,
+              "speaker": "ULYSSE",
+              "text": "On sent le vent avant même de l’entendre. Le bois n’appuie plus au même endroit. La voile tire autrement."
+            }
+          },
+          "carry": {
+            "through_last_segment": 96,
+            "stop_before_segment": 97
+          },
+          "artistic_intent": "The listener should feel the released winds before the explanation catches up. The event then disappears; it must not become voyage ambience.",
+          "constraints": [
+            "bounded_event_not_bed",
+            "speech_intelligibility_first",
+            "no_generic_sea",
+            "no_music"
+          ],
+          "fallback": "omit-and-warn if no qualified wind asset"
+        },
+        {
+          "id": "S06_LESTRYGON_LOSS",
+          "type": "sound_event_plus_subtraction",
+          "asset_id": "odyssee-wood-stress",
+          "role": "punctuation",
+          "anchor": {
+            "after": {
+              "segment": 121,
+              "speaker": "ULYSSE",
+              "text": "Un seul."
+            },
+            "before": {
+              "segment": 122,
+              "speaker": "ULYSSE",
+              "text": "Les autres n’ont pas eu le temps de sortir."
+            }
+          },
+          "carry": {
+            "stop_before_segment": 123
+          },
+          "artistic_intent": "Use at most one compressed wood-under-stress punctuation. The real consequence is heard afterwards through reduced ensemble density and the words 'J’avais un bateau.'",
+          "constraints": [
+            "single_compressed_event",
+            "no_battle_wall",
+            "no_screaming_asset",
+            "no_extended_destruction_montage",
+            "fleet_reduction_by_subtraction"
+          ],
+          "post_event_rule": {
+            "segments": [
+              123,
+              124,
+              125,
+              126
+            ],
+            "sound_density": "reduce",
+            "new_sound_events": "none"
+          },
+          "fallback": "silence plus ensemble subtraction"
+        }
+      ]
+    },
+    "S08": {
+      "program_path": "series/odyssee/programs/S08.json",
+      "program_git_blob_sha1": "105748f763d6e1270aed90bf32cdc51edfcfd05e",
+      "directives": [
+        {
+          "id": "S08_P5_ACCEPTED_DARK_AIR",
+          "type": "accepted_bed",
+          "asset_authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+          "scope": {
+            "starts_at": {
+              "segment": 1,
+              "speaker": "ULYSSE",
+              "text": "Je ne peux pas décrire le pays des morts comme une île."
+            },
+            "ends_at": {
+              "segment": 116,
+              "speaker": "ULYSSE",
+              "text": "Je voulais la dernière."
+            }
+          },
+          "artistic_intent": "Strangeness by subtraction. Preserve the exact human-accepted P5 dark-air layer and no other atmospheric layer.",
+          "fixed_artistic_parameters": {
+            "target_level_dbfs": -43,
+            "music": false,
+            "heavy_reverb": false,
+            "additional_bed": false
+          },
+          "constraints": [
+            "exact_P5_recipe",
+            "no_extra_layer",
+            "no_horror_cliche",
+            "no_music",
+            "no_heavy_reverb"
+          ],
+          "fallback": "fail-closed; do not silently replace accepted P5 recipe"
+        }
+      ]
+    },
+    "S14": {
+      "program_path": "series/odyssee/programs/S14.json",
+      "program_git_blob_sha1": "37eb6fe9316811494d28659b4a5060ec977d7761",
+      "directives": [
+        {
+          "id": "S14_BOW_RELEASE",
+          "type": "sound_event",
+          "asset_id": "odyssee-bow-release",
+          "role": "punctuation",
+          "anchor": {
+            "after": {
+              "segment": 57,
+              "speaker": "NARRATRICE",
+              "text": "Trop tard."
+            },
+            "before": {
+              "segment": 58,
+              "speaker": "NARRATRICE",
+              "text": "La flèche part."
+            }
+          },
+          "carry": {
+            "stop_before_segment": 60
+          },
+          "artistic_intent": "The bow/string event is the privileged physical punctuation. It should tell the action a fraction before narration confirms it.",
+          "constraints": [
+            "brief",
+            "dry",
+            "legible",
+            "no_firearm_character",
+            "no_heroic_swell",
+            "no_music"
+          ],
+          "fallback": "silence"
+        },
+        {
+          "id": "S14_COMBAT_RESTRAINT",
+          "type": "explicit_density_rule",
+          "scope": {
+            "starts_at": {
+              "segment": 75,
+              "speaker": "NARRATRICE",
+              "text": "Le combat n’a rien d’un chant."
+            },
+            "ends_at": {
+              "segment": 95,
+              "speaker": "NARRATRICE",
+              "text": "Et puis, aussi brutalement qu’elle a commencé, la lutte s’arrête."
+            }
+          },
+          "artistic_intent": "Violence is short, close and legible. Voices and narration carry it; no catalogue of impacts is required.",
+          "constraints": [
+            "no_victory_anthem",
+            "no_graphic_violence_fx",
+            "no_impact_catalogue",
+            "no_continuous_tension_bed"
+          ]
+        },
+        {
+          "id": "S14_TO_S15_HEADROOM",
+          "type": "explicit_density_rule",
+          "anchor": {
+            "after": {
+              "segment": 95,
+              "speaker": "NARRATRICE",
+              "text": "Et puis, aussi brutalement qu’elle a commencé, la lutte s’arrête."
+            }
+          },
+          "scope": {
+            "through_segment": 118
+          },
+          "artistic_intent": "Drop sound density sharply after action so S15 can become the emotional climax without music.",
+          "constraints": [
+            "no_new_music",
+            "no_resolution_swell",
+            "silence_is_positive",
+            "preserve_S15_emotional_headroom"
+          ]
+        }
+      ]
+    }
+  },
+  "acquisition_boundary": {
+    "authority": "series/odyssee/production/ASSET_PLAN.md",
+    "allowed_new_asset_ids": [
+      "odyssee-strong-wind",
+      "odyssee-wood-stress",
+      "odyssee-bow-release"
+    ],
+    "fourth_asset_requires_stream1_exception": true
+  },
+  "validation_contract": [
+    "Every locator speaker/text must match its bound Program blob before materialization.",
+    "If a bound Program blob changes, Stream 3 must fail closed and return the mismatch to Stream 1.",
+    "No fuzzy matching or nearest-line substitution.",
+    "Concrete gain, fade and millisecond values are Stream 3 implementation details, constrained by the artistic intent above.",
+    "No sound is preferable to a weak, clichéd, unlicensed or narratively redundant asset."
+  ]
+}
