@@ -1,0 +1,663 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s03",
+  "title": "L’Odyssée — S03 — Nausicaa",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-a.md",
+      "git_blob_sha1": "c8ec855d8e1096df6ddbbec65f8d0bfc152730f5",
+      "sequence": "S03"
+    }
+  ],
+  "production": {
+    "block": "A",
+    "direction": "series/odyssee/production/blocks/BLOCK_A.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Quand il touche la terre, il ne sait pas où il est.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il sait seulement qu’il y a du sable sous sa joue et qu’aucune vague ne l’emporte.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il rampe assez loin pour que la prochaine ne le reprenne pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Puis il dort.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Il y a quelqu’un.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "jeune-femme",
+      "speaker": "JEUNE FEMME",
+      "text": "Où ?",
+      "preset": "odyssee-jeune-femme-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Là.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "jeune-femme",
+      "speaker": "JEUNE FEMME",
+      "text": "C’est un homme ?",
+      "preset": "odyssee-jeune-femme-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Oui.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "jeune-femme",
+      "speaker": "JEUNE FEMME",
+      "text": "Il est mort ?",
+      "preset": "odyssee-jeune-femme-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse ouvre les yeux.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les jeunes femmes reculent.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est déjà une bonne nouvelle.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Reste où tu es.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je n’avais pas l’intention de courir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Qui es-tu ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse regarde ses vêtements déchirés, sa peau couverte de sel, ses mains vides.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pour l’instant ? Un homme qui aurait besoin d’eau.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Ce n’est pas un nom.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un nom viendra après l’eau.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "jeune-femme",
+      "speaker": "JEUNE FEMME",
+      "text": "Nausicaa, on devrait partir.",
+      "preset": "odyssee-jeune-femme-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Il tient à peine debout.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "jeune-femme",
+      "speaker": "JEUNE FEMME",
+      "text": "Justement.",
+      "preset": "odyssee-jeune-femme-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu viens d’où ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "De la mer.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Ça, j’avais compris.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu es soldat ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tes mains.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elles peuvent appartenir à un charpentier.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu as une cicatrice ici.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les charpentiers se blessent.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Et là.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les très mauvais charpentiers se blessent beaucoup.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu évites la question.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Donc tu es soldat.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai été soldat.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu as tué des hommes ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les compagnes de Nausicaa se taisent.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Beaucoup ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Assez pour ne pas vouloir répondre avec un nombre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Et tu veux que nous t’aidions.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Pourquoi devrais-je croire que tu n’es pas dangereux ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu ne devrais pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "jeune-femme",
+      "speaker": "JEUNE FEMME",
+      "text": "Nausicaa.",
+      "preset": "odyssee-jeune-femme-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mais tu peux croire une autre chose.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Laquelle ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Si je voulais te faire croire que je suis inoffensif, j’aurais répondu autrement.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Nausicaa le regarde plus longtemps.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu es compliqué.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "On me l’a déjà reproché.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse hésite. Il sait parler aux rois. Il sait commander à des hommes qui ont peur. Il sait mentir quand un mensonge ouvre une porte.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Mais ici, devant une jeune femme qui pourrait simplement s’enfuir, il comprend qu’il doit faire moins.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mon bateau a disparu. Mes affaires aussi. Je ne sais pas le nom de cette terre. Je ne te demande pas de t’approcher. Dis-moi seulement où trouver de l’eau et des hommes qui ne me frapperont pas avant de me laisser parler.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu demandes beaucoup.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je peux réduire à l’eau.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Nausicaa le regarde.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Il y a une source derrière les arbres.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "jeune-femme",
+      "speaker": "JEUNE FEMME",
+      "text": "Nausicaa.",
+      "preset": "odyssee-jeune-femme-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Et il ne va pas boire la mer.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Elles déposent à distance de quoi se couvrir et manger.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Plus tard, Ulysse revient lavé, coiffé comme il peut, redevenu à peu près un homme qu’on peut regarder sans imaginer un naufrage.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "C’est mieux.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je te remercie.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu as toujours l’air de quelqu’un qui a dormi sous un buisson.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est exactement ce que j’ai fait.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Nous sommes chez les Phéaciens.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et toi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Nausicaa.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Fille de ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu veux déjà savoir à qui tu dois être poli ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est une vieille habitude.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Mon père est Alcinoos.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Le roi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Voilà. L’habitude est revenue vite.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Elle lui explique comment atteindre le palais.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "N’entre pas avec nous.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Parce que si je reviens avec un homme inconnu sorti de la mer, les gens parleront davantage de moi que de ton naufrage.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai connu des villes où cela n’aurait arrêté personne.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Ici, cela m’arrête moi.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors je garderai mes distances.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu sais faire ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’apprends.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Nausicaa part avec les autres.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse les suit de loin.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S03 — Nausicaa",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pour la première fois depuis longtemps, il avance vers une maison où personne ne sait qui il est.",
+      "preset": "odyssee-narratrice"
+    }
+  ]
+}
