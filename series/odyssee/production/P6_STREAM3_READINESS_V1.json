@@ -21,7 +21,23 @@
   },
   "ulysses_emotional": {
     "state": "HOLD_STREAM2_ONLY",
-    "required_package": "ULYSSES_EMOTIONAL_HUMAN_PASS"
+    "required_package": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "last_rejected_attempt": {
+      "architecture": "Qwen3 hybrid x-vector-only + contained-sadness style transplant",
+      "machine_run": 33514546032,
+      "candidate_sha256": "4f4f6b352db9d981cef3db6a29c8c510b5396fa009163e07415388bde33ce033",
+      "human": {
+        "impact": 1,
+        "reaction": "FAIL",
+        "identity": "FAIL",
+        "french": "PASS",
+        "melodrama": "PRESENT",
+        "staging": "PASS"
+      },
+      "decision": "ARTISTIC_FAIL_IDENTITY_FAIL",
+      "retry_policy": "DO_NOT_TUNE_OR_RETRY_SAME_ARCHITECTURE"
+    },
+    "next_attempt_requirement": "MATERIALLY_DISTINCT_ARCHITECTURE_ONLY"
   },
   "staging": {
     "no_music": true,
