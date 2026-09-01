@@ -30,7 +30,61 @@ Block A immutable Actions artifact from this run:
 - artifact ZIP SHA-256: `1e0991364fa1d257d0cc097ab80434594209d419ccd2ed95f3b3bd79fecba958`;
 - measured assembly duration: **1017.6 s / 16:57.6**.
 
-The Actions artifact is evidence, not durable human-review authority because it expires. H2 must bind a durable release/Pages-consumable asset before human review.
+The Actions artifact is evidence, not durable human-review authority because it expires. In addition, this Block A is a speech-only `scene-foundation-v1` assembly. H2 requires an integrated sound-direction render and a durable release/Pages-consumable asset.
+
+## Render maturity correction — voice foundation is not H2 integration
+
+Audit of the materialized scene Programs on current main shows:
+
+- S01–S15 are marked `stage: scene-foundation-v1`;
+- current rendered Programs contain speech segments only;
+- `soundscape`, `ambience`, `music` and transition execution are absent from the current scene Programs;
+- the first industrial Block A therefore proves **voice rendering, timing, fan-in and technical QA**, not final artistic integration.
+
+Classification:
+
+`FIRST_INDUSTRIAL_RUN = VOICE_FOUNDATION_EVIDENCE`
+
+It is valid evidence for:
+- pacing risk;
+- vocal identity;
+- casting collisions;
+- narrative ownership carried by voices;
+- pipeline reproducibility.
+
+It is **not yet an H2 human candidate** for:
+- sound-density consistency;
+- scene-space transitions;
+- event punctuation;
+- S14 action-vs-S15 headroom;
+- the full listener experience.
+
+### H2 entry contract
+
+There remains exactly **one H2**, not H2a/H2b.
+
+Before its human page is published, Stream 3 must materialize the product-owned sound direction into the review candidates. “Materialize” does not mean adding sound everywhere: an explicit dry/silence choice is valid when that is the artistic direction.
+
+Minimum contract:
+
+1. preserve frozen speech and accepted voice identities;
+2. implement only narratively justified sound/space decisions from `production/blocks/BLOCK_A.md` … `BLOCK_D.md`;
+3. preserve intentional silence and avoid permanent sea/music/crowd beds;
+4. include scene/block transitions where they are part of the listening judgment;
+5. bind every non-generated audio asset to provenance/license/integrity evidence;
+6. machine-QA the resulting integrated scenes/blocks;
+7. publish immutable browser-consumable audio for H2.
+
+High-value required punctuations before H2:
+- S02: storm/breakage as a bounded event, not a sea bed;
+- S05: confinement/stone only as useful punctuation; no monster DSP;
+- S06: bag opening wind event + compressed destruction; fleet reduction must become perceptible;
+- S08: exact accepted P5 dark-air recipe, no extra layer;
+- S14: bow/string as privileged punctuation + short legible violence + sharp density drop toward S15.
+
+Other supportive layers may be omitted if silence/voice better satisfies the block direction.
+
+The existing speech-only renders should be reused wherever the engine can compose sound around immutable speech. They must not be rerendered merely to add ambience unless the generic runtime requires it.
 
 ## Machine pacing table
 
@@ -189,7 +243,7 @@ Current H2 can still detect an obvious S14 excess:
 
 Do **not** launch human review from the expiring Actions artifacts.
 
-When durable assets exist, one page should expose:
+When sound-integrated durable assets exist, one page should expose:
 
 1. Block A continuous assembly — mandatory full listen;
 2. S05 — P3 integration + Ulysse/Euryloque/Polyphème;
@@ -209,7 +263,7 @@ The page should ask one compact set of transverse questions, not one verdict per
 
 Reason:
 
-- Block A is ready;
+- Block A voice foundation is ready, but its product sound direction is not yet materialized;
 - the highest-value independent scenes are rendered, with S05/S06/S07/S10 requiring one narrow MARIN rerender before H2;
 - P4 is actively rendering in Stream 2;
 - P6 current failure is pre-synthesis infrastructure, not artistic evidence;
@@ -224,5 +278,5 @@ This is not a global production hold. Stream 1 continues machine preparation whi
 - no global slowdown based only on WPM;
 - no new casting research from Stream 1;
 - no duplicate review issue;
-- no human gate until audio references are immutable and browser-consumable;
+- no human gate until audio references are sound-integrated, immutable and browser-consumable;
 - if H2 identifies a defect, fix the smallest causal unit and re-listen only what changed.

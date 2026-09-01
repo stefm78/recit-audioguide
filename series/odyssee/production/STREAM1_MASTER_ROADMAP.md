@@ -158,7 +158,11 @@ A material H2 collision can trigger one targeted recast. No provider exploration
 
 ### S1-WP-H2 — Block integration
 
-Starts as soon as representative block renders exist; P4/P6 need not be resolved to review independent A/B and nonblocked C/D material.
+Machine preflight starts as soon as representative voice-foundation renders exist.
+
+**Human H2 entry is stricter:** the review candidates must have the product-owned sound direction materialized (including deliberate silence), machine QA PASS and immutable browser-consumable references. A speech-only `scene-foundation-v1` render is evidence for pacing/casting but is not a final H2 integration candidate.
+
+P4/P6 need not be resolved to review independent A/B and nonblocked C/D material.
 
 One GitHub Pages session, not one page per block.
 
