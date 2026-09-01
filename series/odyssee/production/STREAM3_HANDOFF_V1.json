@@ -382,7 +382,38 @@
           "decorative_sound_library_build",
           "manual_best_of_N_asset_search"
         ]
-      }
+      },
+      "sound_direction_binding_authority": "series/odyssee/production/H2_SOUND_DIRECTION_BINDINGS_V1.json",
+      "sound_direction_locator_status": {
+        "S02": "BOUND_PENDING_STREAM3_MATERIALIZATION",
+        "S05": "BOUND_EXPLICIT_NO_ASSET",
+        "S06": "BOUND_PENDING_STREAM3_MATERIALIZATION",
+        "S08": "BOUND_IN_PRODUCT_RUNTIME_RENDER_PENDING",
+        "S14": "BOUND_PENDING_STREAM3_MATERIALIZATION"
+      },
+      "pre_h2_materialization_findings": [
+        {
+          "id": "MARIN_EURYLOQUE_CORRECTION_NOT_YET_CONSUMED",
+          "severity": "BLOCK_H2_FOR_AFFECTED_SCENES",
+          "observed_on_main": "voice pack still binds odyssee-marin-h2 to fr-FR-HenriNeural +4%/-14Hz/+8%, identical to Euryloque",
+          "affected_scenes": [
+            "S05",
+            "S06",
+            "S07",
+            "S10"
+          ],
+          "required_action": "Stream 3 must consume the already-authorized MARIN replacement before H2 audio is eligible."
+        },
+        {
+          "id": "P5_RUNTIME_RENDER_FFPROBE",
+          "severity": "TECHNICAL_ONLY",
+          "observed_run": 33516343290,
+          "affected_scene": "S08",
+          "observed_failure": "render_failed_rc_2 after missing ffprobe",
+          "artistic_effect": "NONE",
+          "required_action": "Stream 3 fixes runtime/orchestration only; do not reopen P5 recipe."
+        }
+      ]
     },
     "h3": {
       "type": "ONE_CONTINUOUS_MASTER_LISTEN",
