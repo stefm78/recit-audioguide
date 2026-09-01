@@ -19,7 +19,7 @@ jobs:
   production:
     permissions:
       contents: write
-    uses: stefm78/audio-engine/.github/workflows/production.yml@47f2ff79d39377176a84152282d675528266234a
+    uses: stefm78/audio-engine/.github/workflows/production.yml@b227c23dc3c4555c0667e6e994f26cc2990a6ec8
     with:
       manifest_path: series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json
       artifact_prefix: odyssee-production-v1
