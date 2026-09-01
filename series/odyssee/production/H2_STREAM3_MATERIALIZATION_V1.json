@@ -1,0 +1,50 @@
+{
+  "schema": "recit.odyssee.stream3_h2_materialization.v1",
+  "id": "odyssee-h2-stream3-materialization-v1",
+  "authorities": {
+    "sound_direction": "series/odyssee/production/H2_SOUND_DIRECTION_BINDINGS_V1.json",
+    "acquisition": "series/odyssee/production/H2_SOUND_ACQUISITION_RESULT_V1.json",
+    "stream1_handoff": "series/odyssee/production/STREAM3_HANDOFF_V1.json"
+  },
+  "engine_ref": "e82559cbd60b1d29de208e7e36ccd7505dcfcdcc",
+  "sound": {
+    "acquisition_run": 33523766524,
+    "acquisition_stop_condition": "SATISFIED",
+    "directives": {
+      "S02_STORM_ARRIVAL": "EXPLICIT_SILENCE_OMIT_AND_WARN_AFTER_NO_SELECTION",
+      "S02_RAFT_FAILURE": "EXPLICIT_SILENCE_AFTER_NO_SELECTION",
+      "S05_CONFINEMENT_BY_SUBTRACTION": "EXPLICIT_NO_ASSET_AS_AUTHORED",
+      "S06_BAG_WINDS_RELEASE": "EXPLICIT_SILENCE_OMIT_AND_WARN_AFTER_NO_SELECTION",
+      "S06_LESTRYGON_LOSS": "EXPLICIT_SILENCE_PLUS_ENSEMBLE_SUBTRACTION_AFTER_NO_SELECTION",
+      "S14_BOW_RELEASE": "EXPLICIT_SILENCE_AFTER_NO_SELECTION",
+      "S14_COMBAT_RESTRAINT": "DENSITY_RULE_NO_NEW_ASSET",
+      "S14_TO_S15_HEADROOM": "DENSITY_RULE_SILENCE_POSITIVE",
+      "S08_P5_ACCEPTED_DARK_AIR": "PENDING_CURRENT_PRODUCTION_RUN_33525198119"
+    },
+    "new_release_assets": 0,
+    "fourth_asset_search": "NOT_AUTHORIZED"
+  },
+  "casting": {
+    "correction": "MARIN_EURYLOQUE_EXACT_PRESET_COLLISION",
+    "status": "MATERIALIZED_FOR_H2_WATCH",
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V2.json",
+    "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b",
+    "changed_presets": [
+      "odyssee-marin-h2"
+    ],
+    "affected_units": [
+      "S05",
+      "S06",
+      "S07",
+      "S10"
+    ],
+    "preserve": [
+      "odyssee-euryloque HUMAN_ACCEPTED_P3",
+      "all other voice presets",
+      "frozen spoken text"
+    ],
+    "human_gate": "shared_H2_only"
+  },
+  "p4": "HOLD_STREAM2_ONLY",
+  "p6_ulysse_emotional": "HOLD_STREAM2_ONLY"
+}
