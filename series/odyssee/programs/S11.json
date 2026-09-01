@@ -1,0 +1,845 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s11",
+  "title": "L’Odyssée — S11 — Le récit est terminé",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-c.md",
+      "git_blob_sha1": "4589733f7e7f5302f12511e802cb6a8f0557b1b7",
+      "sequence": "S11"
+    }
+  ],
+  "production": {
+    "block": "C",
+    "direction": "series/odyssee/production/blocks/BLOCK_C.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse se tait.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il n’y a plus de Cyclope.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Plus de Circé.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Plus de voix dans la mer.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il reste une salle, une table, des hommes qui l’ont écouté raconter plusieurs années sans quitter leur siège.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Voilà donc comment tu es arrivé chez nous.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Et Calypso t’a laissé repartir.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les dieux lui ont ordonné de me laisser repartir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Tu fais une différence.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elle aussi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Tu as raconté les monstres, les dieux, les morts.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Qu’est-ce que tu gardes de tout cela ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mes souvenirs.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Ce n’est pas ce que je demande.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je sais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Tu es parti de Troie avec des hommes, des navires et un nom que tu aimais beaucoup.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est une façon cruelle de résumer.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Je t’ai écouté longtemps. J’ai gagné le droit d’être bref.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Très bien.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Qu’est-ce qu’il reste ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse regarde autour de lui.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un homme qui veut rentrer.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Seulement ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu trouves cela peu ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Pour un roi célèbre, oui.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pour quelqu’un qui a essayé d’être beaucoup d’autres choses, c’est assez.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Tu crois que ta maison t’attend telle que tu l’as laissée ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Ta femme ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Ton fils ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Alors tu ne rentres pas vers ce que tu as quitté.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je rentre vers ce qui a continué sans moi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Voilà une destination plus difficile à trouver qu’une île.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Et maintenant tu veux simplement rentrer.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Tu sais que c’est presque décevant.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse regarde le roi. Puis il comprend qu’Alcinoos sourit.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je peux ajouter un monstre sur la plage d’Ithaque si cela aide.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Non. Nous allons essayer une méthode moins héroïque.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Laquelle ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Un bon navire.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Cela me convient.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le lendemain, les Phéaciens préparent son départ.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse n’a plus de navire à commander. Plus d’hommes à convaincre. Pour la première fois, quelqu’un d’autre organise son retour et ne lui demande rien en échange.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Alors tu avais un nom.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Un nom assez connu.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il m’a causé quelques problèmes.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu aurais pu me le dire.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quand tu m’as trouvé, je n’étais pas certain d’avoir encore grand-chose en commun avec l’homme que ce nom désignait.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Et maintenant ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Maintenant, je vais voir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Ta femme t’attend ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne sais pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Ton fils ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne sais pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Ta maison ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les maisons attendent mieux que les gens.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "C’est faux.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu as raison.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Tu as une réponse à tout ?",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "C’est rassurant.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’essaie d’apprendre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "nausicaa",
+      "speaker": "NAUSICAA",
+      "text": "Alors commence par rentrer.",
+      "preset": "odyssee-nausicaa-h2"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse monte sur le navire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le voyage est presque indécent de simplicité.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le bateau avance. Personne n’ouvre une outre. Personne ne propose de visiter une grotte. Aucun monstre ne réclame son nom.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse s’allonge.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il dort.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Celui qui a passé des années à manquer Ithaque parce qu’il voulait regarder, décider, savoir ou commander arrive enfin chez lui les yeux fermés.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les Phéaciens le déposent sur le rivage avec les présents qu’ils lui ont donnés.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Puis ils repartent.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le matin, Ulysse ouvre les yeux.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Où…",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il regarde la plage.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les rochers.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les arbres.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Rien ne ressemble immédiatement au souvenir qu’il a porté pendant vingt ans.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ils m’ont trompé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Non.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ils m’ont déposé sur une autre île.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Non.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Qui—",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Tu es chez toi.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse regarde l’étrangère devant lui.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Chez moi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Ithaque.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ce n’est pas—",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Tu as passé tant d’années à imaginer ton retour que la vraie île te paraît fausse.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Athéna.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Enfin.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourquoi je ne la reconnais pas ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Parce que tu n’es plus celui qui est parti.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et elle ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Elle non plus.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pénélope ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Vivante.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Télémaque ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Vivant.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ma maison ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Pleine d’hommes qui aimeraient qu’elle ne soit plus la tienne.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors j’y vais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Comme cela ?",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Comme quoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "En annonçant ton nom depuis la plage ?",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse la regarde.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Tu as déjà essayé cette méthode.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je vois.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Non. Justement.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Elle s’approche.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S11 — Le récit est terminé",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Pour rentrer chez toi, Ulysse, il va falloir recommencer par être Personne.",
+      "preset": "odyssee-athena"
+    }
+  ]
+}

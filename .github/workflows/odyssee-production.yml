@@ -1,0 +1,25 @@
+name: Odyssée production
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json'
+      - 'series/odyssee/production/voice-packs/**'
+      - 'series/odyssee/programs/**'
+      - '.github/workflows/odyssee-production.yml'
+
+concurrency:
+  group: odyssee-production
+  cancel-in-progress: false
+
+jobs:
+  production:
+    uses: stefm78/audio-engine/.github/workflows/production.yml@52c933b6371103b977a2ccbcade291700bd0eb73
+    with:
+      manifest_path: series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json
+      artifact_prefix: odyssee-production-v1
+      cache_namespace: odyssee-production-v1
+      max_parallel: 12
+      publish_release: false

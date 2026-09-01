@@ -1,0 +1,1482 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s12",
+  "title": "L’Odyssée — S12 — Personne, une seconde fois",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-d.md",
+      "git_blob_sha1": "a036ae79ba5102af871cb722e0cc5d6ef313236c",
+      "sequence": "S12"
+    }
+  ],
+  "production": {
+    "block": "D",
+    "direction": "series/odyssee/production/blocks/BLOCK_D.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Athéna ne rend pas Ulysse invisible.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Elle fait quelque chose de plus utile.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Elle le rend regardable sans être reconnu.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mes mains.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Quoi, tes mains ?",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elles ont l’air plus vieilles.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Elles sont plus vieilles.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas à ce point.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Tu as réclamé un déguisement, pas un compliment.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et mon visage ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Si Pénélope te croisait maintenant sur un chemin, elle ne verrait pas son mari.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est censé me rassurer ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "C’est censé te garder vivant.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je pourrais entrer avec une arme.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Dans une salle pleine d’hommes qui vivent depuis des années dans ta maison ?",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est précisément pour cela.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Tu veux retrouver ton royaume ou mourir avec une belle première phrase ?",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je n’avais pas préparé de phrase.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Voilà au moins un progrès.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Elle lui indique une ferme à l’écart.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Va chez Eumée.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il est encore là ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Oui.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il me reconnaîtra.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Non.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu es sûre de ton travail.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Beaucoup plus que toi du tien.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Eumée garde les porcs d’Ulysse depuis bien avant le départ pour Troie.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Quand il voit approcher le vieil étranger mal vêtu, il ne court pas chercher des hommes armés.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il appelle ses chiens.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Ici !",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les chiens s’arrêtent.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Tu cherches quelque chose ?",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un endroit où m’asseoir sans être mordu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Ça, je peux te le trouver.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et un peu de nourriture, si je peux travailler pour.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Entre d’abord.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu accueilles toujours les inconnus comme ça ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Non.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourquoi moi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Parce que tu as l’air d’avoir marché assez longtemps pour ne pas avoir choisi cette tête-là exprès.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Eumée lui donne du pain, de la viande, une place près du feu.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ton maître ne te reprochera pas de nourrir un inconnu avec ses bêtes ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Mon maître ?",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Celui à qui appartient cette terre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Ulysse.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "S’il revient, il pourra me reprocher ce qu’il voudra.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu penses qu’il reviendra ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Je pense surtout que tous les hommes qui passent par ici savent très bien me raconter où ils l’ont vu.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ah.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Tu vas me dire que toi aussi ?",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je pourrais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Alors mange d’abord. Les mensonges sont meilleurs le ventre plein.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu n’en crois aucun ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "J’en ai cru assez.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et pourtant tu parles encore de lui comme de ton maître.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Une absence ne change pas tout.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Vingt ans, c’est plus qu’une absence.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Pour certains.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et sa maison ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Mangée vivante.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Par les prétendants.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Tu connais donc l’histoire.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elle voyage.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Eux aussi voyagent. Entre la salle et la réserve.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pénélope ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Tient encore.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Télémaque ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Revient bientôt, si les dieux sont moins stupides que d’habitude.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Où était-il ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Chercher son père.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Son père ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Oui. Tu vois, l’histoire voyage dans les deux sens.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse baisse les yeux vers le pain.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il pourrait dire la vérité.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il sait désormais combien un nom peut coûter.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Alors il invente.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai entendu parler d’Ulysse.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Évidemment.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "On m’a dit qu’il vivait.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Évidemment.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et qu’il cherchait un moyen de rentrer.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Évidemment.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu pourrais varier tes réponses.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Les histoires, elles, varient assez.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Celle-ci est vraie.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Elles le sont toutes, jusqu’au départ du conteur.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse sourit malgré lui.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Quoi ?",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Rien.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Tu mens comme quelqu’un qui a beaucoup pratiqué.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et toi, tu accueilles les menteurs.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "L’hospitalité n’est pas un prix qu’on donne aux hommes parfaitement honnêtes.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse cesse de sourire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Dans une grotte, autrefois, il avait demandé les lois de l’hospitalité à un être qui n’en reconnaissait aucune.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ici, un homme pauvre lui donne à manger sans même connaître son nom.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le lendemain, Télémaque revient.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Télémaque !",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Eumée.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Tu es entier.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "C’était mon objectif.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Ta mère va enfin respirer.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Les prétendants ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Toujours là.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Ils savent que je suis revenu ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Pas encore.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Alors ne leur dis rien.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Tu commences à parler comme ton père.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "On me dit surtout que je parle trop peu comme lui.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Entre.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque voit l’étranger près du feu.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Qui est-ce ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Un homme qui a faim et beaucoup d’histoires.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les histoires diminuent à mesure que je mange.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu viens d’où ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "De plusieurs endroits qui ne t’aideront pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu connais Ithaque ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un peu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Alors tu sais que ce n’est pas le meilleur moment pour arriver chez nous.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai connu de pires moments.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tout le monde dit ça avant de rencontrer nos prétendants.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse regarde son fils.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le nourrisson qu’il a laissé n’existe plus.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il y a devant lui un jeune homme qui se tient trop droit parce qu’il refuse de montrer qu’il a peur.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse veut se lever.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il ne le fait pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Eumée sort porter un message à Pénélope : Télémaque est revenu sain et sauf.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La porte se referme.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Athéna est là.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Qui—",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le visage du vieil étranger change.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pas comme un masque qu’on retire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Comme si les années ajoutées par la déesse perdaient soudain leur prise.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Recule.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Télémaque.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Qui es-tu ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Regarde-moi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Je te regarde.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je suis Ulysse.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque rit une fois.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Un son bref, sans joie.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Non.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Si.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Non.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Athéna—",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tous les hommes qui arrivent à Ithaque ont vu mon père. Certains ont bu avec lui. D’autres lui ont parlé hier. Et maintenant toi, tu es lui ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je comprends.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Non, tu ne comprends pas.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu as raison.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Mon père est parti quand j’étais enfant.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu ne peux pas entrer dans une pièce et dire ce mot comme si—",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne sais pas comment le dire autrement.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Alors ne le dis pas.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse reste immobile.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ta mère avait un olivier près de la cour intérieure.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Beaucoup de gens savent ça.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu avais une petite marque derrière l’oreille gauche.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Beaucoup de nourrices savent ça.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quand je suis parti, tu as serré mon doigt et tu ne voulais pas le lâcher.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Moi, je ne sais pas ça.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "C’est pratique.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ils restent face à face avec toutes les preuves qui ne suffisent pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je n’ai rien d’autre à te donner maintenant.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Si tu es vraiment lui…",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Pourquoi maintenant ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Parce que j’ai passé vingt ans à essayer de répondre à une question plus simple : comment revenir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Et tu n’as pas pensé à la suivante.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Comment être père.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque baisse la tête.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Quand il relève les yeux, il ne ressemble pas davantage à un enfant.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Qu’est-ce qu’on fait ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse pourrait répondre : « Mon fils. »",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il répond à la question.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "D’abord, tu me dis tout ce que je ne sais pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu vas avoir besoin de temps.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Combien sont-ils ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Assez pour que « je suis Ulysse » ne soit pas un plan.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ça, Athéna me l’a déjà expliqué.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Elle a dû te connaître longtemps.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Trop.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Antinoos commande surtout parce qu’il agit comme si la maison lui appartenait déjà. Eurymaque parle mieux. Les autres suivent celui qui semble gagner.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les armes ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Dans la salle. Sur les murs. Certaines dans la réserve.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Serviteurs ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Certains nous sont fidèles. Certains ont choisi le camp qui mange le mieux.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ta mère ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Elle ne choisira pas un camp parce que tu lui demandes.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je n’allais pas—",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Si.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu ne me connais pas assez pour savoir ce que j’allais dire.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Je connais ma mère assez pour savoir ce qu’il ne faut pas lui dire.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse accepte le coup.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Très bien.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Elle a entendu trop d’hommes promettre ton retour. Si tu veux qu’elle te croie, ne lui demande pas de te croire.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est étrange d’entendre mon fils m’expliquer Pénélope.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "C’est étrange d’expliquer ma mère à mon père.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avons beaucoup de retard.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "On ne le rattrapera pas avant le dîner.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors on commence par rester vivants.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Là, je te reconnais un peu plus.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "On compte leurs armes.",
+      "preset": "odyssee-ulysse"
+    }
+  ]
+}

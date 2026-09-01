@@ -1,0 +1,1104 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s06",
+  "title": "L’Odyssée — S06 — Ithaque en vue",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-b.md",
+      "git_blob_sha1": "12a9a582df0dae2949aec7f19f2d526f27943da4",
+      "sequence": "S06"
+    }
+  ],
+  "production": {
+    "block": "B",
+    "direction": "series/odyssee/production/blocks/BLOCK_B.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il y eut d’autres terres.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "D’autres erreurs.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mais je ne vais pas te demander de retenir le nom de chaque rive où nous avons échoué.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je veux te parler d’un matin où nous avons vu Ithaque.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Alcinoos se penche légèrement.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Éole nous avait donné les vents enfermés dans une outre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un seul vent devait rester libre : celui qui nous poussait chez nous.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai gardé l’outre près de moi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Trop près.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Parce qu’elle ne devait pas être ouverte.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu n’as pas dit ce qu’il y avait dedans.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai dit qu’il ne fallait pas l’ouvrir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ce n’est pas la même chose.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Neuf jours, nous avons navigué.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "La dixième nuit, j’ai vu les feux d’Ithaque.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je connaissais cette ligne noire au-dessus de la mer. Je connaissais l’endroit où la côte s’abaissait.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’aurais pu montrer du doigt la direction de ma maison.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "C’est elle ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu es sûr ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’étais sûr.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Où est ta maison ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Derrière cette hauteur.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "On ne la voit pas.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Moi, si.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu vois un souvenir.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je sais où elle est.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Il y a quelqu’un qui nous attendra sur la plage ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Parce que personne ne sait que nous arrivons.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ça changera.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu vas faire quoi ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quand nous toucherons terre ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Oui.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Descendre du bateau.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Je veux dire après.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Moi aussi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les hommes rient.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pour eux, Ithaque est encore une île qu’ils peuvent regarder.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pour moi, elle contient soudain toutes les choses que je n’ai pas préparées.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu as peur.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ulysse.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un peu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "C’est rassurant.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Parce que si tu n’avais pas peur maintenant, je commencerais à croire que tu n’as vraiment rien appris.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pour la première fois depuis Troie, j’ai pensé que je n’avais plus besoin de rester éveillé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors j’ai dormi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et nous avons regardé l’outre.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Il la garde depuis qu’on est partis.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Elle est lourde.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "De l’or ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Pourquoi Éole lui donnerait de l’or ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Parce qu’il est roi.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Il a gardé cette outre contre lui pendant neuf jours.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Parce qu’il ne nous fait pas confiance.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ou parce qu’il y a vraiment du vent dedans.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu crois ça ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Je crois surtout qu’on est assez près d’Ithaque pour ne pas découvrir maintenant que notre capitaine revient riche pendant que nous rentrons avec des cicatrices.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Alors ouvre.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Non.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu veux savoir.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Oui.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu veux savoir et tu veux que quelqu’un d’autre fasse le geste.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Oui.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Au moins, c’est honnête.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Non. C’est lâche.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu me laisses le choix ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Je te dis de ne pas l’ouvrir.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Et si c’est de l’or ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Alors demain, sur la plage, on lui demandera.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Et s’il ment ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Alors on sera déjà chez nous.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu crois encore qu’on arrive toujours au lendemain qu’on imagine ?",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Euryloque regarde Ulysse endormi.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Non.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Alors regarde.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous aussi, on a combattu.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Alors regarde.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Non.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Tu viens de dire—",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "J’ai dit que je voulais savoir.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "C’est une façon rapide.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je dormais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je me suis réveillé quand le bateau a changé sous mon corps.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "On sent le vent avant même de l’entendre. Le bois n’appuie plus au même endroit. La voile tire autrement.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai ouvert les yeux.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ithaque s’éloignait.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Ferme-la !",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "On essaie !",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tous les vents sortaient à la fois.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avions mis dix ans à gagner une guerre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Des années à traverser la mer.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avions notre île devant nous.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et nous l’avons perdue pendant mon sommeil.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Personne dans la salle ne l’interrompt.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Éole nous a revus revenir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "eole",
+      "speaker": "ÉOLE",
+      "text": "Non.",
+      "preset": "odyssee-eole-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Écoute—",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "eole",
+      "speaker": "ÉOLE",
+      "text": "Je t’ai donné une route.",
+      "preset": "odyssee-eole-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mes hommes—",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "eole",
+      "speaker": "ÉOLE",
+      "text": "Et vous êtes revenus avec tous les vents libérés.",
+      "preset": "odyssee-eole-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous pouvons recommencer.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "eole",
+      "speaker": "ÉOLE",
+      "text": "Pas avec mon aide.",
+      "preset": "odyssee-eole-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu ne sais pas ce qui s’est passé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "eole",
+      "speaker": "ÉOLE",
+      "text": "Je sais ce que je vois. Un homme que la mer refuse.",
+      "preset": "odyssee-eole-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ce n’est pas la mer.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "eole",
+      "speaker": "ÉOLE",
+      "text": "Alors demande au dieu qui la commande.",
+      "preset": "odyssee-eole-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous sommes repartis à la rame.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Plus tard, dans le pays des Lestrygons, nous avons commis une erreur différente.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mes capitaines ont fait entrer leurs navires au fond d’un port étroit.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Le mien est resté plus près de la sortie.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Parce que tu n’aimais pas l’endroit.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Parce que je n’aimais pas les ports où l’on ne voit pas ce qui arrive derrière soi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Cette méfiance a sauvé un navire.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un seul.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les autres n’ont pas eu le temps de sortir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quand nous avons repris la mer, je n’avais plus une flotte.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’avais un bateau.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et chaque voix que je connaissais semblait prendre plus de place parce qu’il y en avait moins.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse laisse passer un silence.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Sur une flotte, un capitaine peut perdre des hommes et continuer à parler de navires.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Sur un seul bateau, il ne reste plus de chiffres derrière lesquels se cacher.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu les comptais.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tous les soirs.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Je t’entendais.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je pensais que non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu pensais beaucoup de choses.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Au début, je comptais pour savoir combien de rameurs il restait.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ensuite je comptais parce qu’un homme qui répond au moment de l’appel est encore là.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Présent.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un autre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "marin",
+      "speaker": "MARIN",
+      "text": "Présent.",
+      "preset": "odyssee-marin-h2"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Encore un.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Présent.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et quand je finissais, je recommençais mentalement avec ceux qui n’avaient pas répondu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ça ne les faisait pas revenir.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Alors pourquoi ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Parce qu’un chef qui cesse de compter ses morts finit par croire qu’il n’en a pas causé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu crois les avoir causés ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Certains.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Lesquels ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu veux vraiment que je choisisse ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Non.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Moi non plus.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S06 — Ithaque en vue",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La salle des Phéaciens entend soudain le vide qui entoure le dernier bateau.",
+      "preset": "odyssee-narratrice"
+    }
+  ]
+}

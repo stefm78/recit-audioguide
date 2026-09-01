@@ -1,0 +1,1293 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s13",
+  "title": "L’Odyssée — S13 — Ceux qui savent",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-d.md",
+      "git_blob_sha1": "a036ae79ba5102af871cb722e0cc5d6ef313236c",
+      "sequence": "S13"
+    }
+  ],
+  "production": {
+    "block": "D",
+    "direction": "series/odyssee/production/blocks/BLOCK_D.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le plan ne ressemble pas à un retour de roi.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse rentre chez lui comme un pauvre homme que personne n’a de raison de regarder longtemps.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque entre séparément.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Eumée les aide sans connaître encore toute l’histoire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Dans la cour, un vieux chien est couché sur le côté.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Son poil est terne. Ses pattes ne le portent presque plus.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Ne t’approche pas. Il ne mord plus, mais il n’aime pas qu’on le dérange.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Comment s’appelle-t-il ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Argos.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse s’arrête.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Tu le connais ?",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Argos lève la tête.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Rien d’autre ne change.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pas de cri. Pas d’homme qui se retourne.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le vieux chien regarde l’étranger.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Sa queue frappe une fois le sol.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Puis une seconde.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il appartenait à Ulysse ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Oui. Avant.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Avant quoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Avant qu’il parte. Avant que le chien vieillisse en attendant un maître qui n’est pas revenu.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse voudrait s’accroupir.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Toucher la tête de l’animal.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Dire son nom comme on dit enfin la vérité à quelqu’un.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il ne peut pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les prétendants sont à quelques pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Argos pose la tête.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse entre.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il ne se retourne pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Qui a laissé entrer ça ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "eumee",
+      "speaker": "EUMÉE",
+      "text": "Un voyageur.",
+      "preset": "odyssee-eumee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Je vois bien que ce n’est pas un meuble.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Laisse-le. Il donnera au moins à Télémaque quelqu’un sur qui régner.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu as peur qu’il prenne ta place ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Ma place ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "À table. Tu as l’air très attaché à ce qui ne t’appartient pas.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Ton voyage t’a donné du courage.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Non. Il m’a surtout donné des comparaisons.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse baisse la tête pour cacher un sourire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Hé, vieux.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Moi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Tu vois quelqu’un d’autre qui ressemble à un sac oublié dans un fossé ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’allais dire ton voisin, mais je préfère manger avant de me faire jeter dehors.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Quelques prétendants rient.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Tu es drôle.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quand j’ai faim, oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Viens donc.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse avance.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Tu demandes dans beaucoup de maisons ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Seulement dans celles où il reste quelque chose après le repas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Ici, il reste toujours quelque chose.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai remarqué.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Tu connais le propriétaire ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Il est mort.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est ce qu’on m’a dit.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Alors tu peux manger sans craindre qu’il réclame sa part.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est généreux de ta part.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "De la sienne.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse tend la main.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Antinoos lui jette un morceau trop petit pour être un don et assez fort pour être une insulte.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse le ramasse.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il ne répond pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque regarde ailleurs parce qu’on lui a ordonné de ne pas agir trop tôt.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ce soir-là, Pénélope demande à voir l’étranger.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "On m’a dit que tu avais voyagé.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "On dit beaucoup de choses sur moi depuis ce matin.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tu sembles les encourager.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est une manière de gagner le dîner.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tu connais Ulysse ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Voilà.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Voilà quoi ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "La question pour laquelle on me nourrit.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Je peux te faire sortir si elle t’ennuie.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Alors réponds.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je l’ai connu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il ment et dit vrai dans les mêmes mots.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Où ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Sur une route.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Laquelle ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Une route assez longue pour que le lieu compte moins que l’homme.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Les hommes qui mentent commencent souvent par dire que les détails ne comptent pas.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et ceux qui disent vrai ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Ils donnent un détail que le menteur n’aurait pas choisi.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quel détail veux-tu ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Aucun que je te dicte.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse la regarde.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pendant vingt ans, il a imaginé ce moment.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Dans aucune de ses versions, sa femme ne l’interroge comme un marchand suspect.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il avait une façon de toucher sa barbe lorsqu’il préparait une mauvaise idée.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Beaucoup d’hommes ont une barbe.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il se mettait en colère quand quelqu’un déplaçait ses outils.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Beaucoup d’hommes pensent que leurs outils sont des objets sacrés.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il prétendait ne pas aimer qu’on le félicite. Puis il trouvait un moyen de raconter à nouveau l’exploit.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pénélope ne bouge presque pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Cela ressemble davantage.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il parlait de toi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tous les conteurs qui veulent mon argent disent ça.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne veux pas ton argent.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Alors tu es le premier.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il disait que tu étais plus dangereuse quand tu parlais doucement.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Il avait donc parfois raison.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il disait que tu pouvais écouter quelqu’un très longtemps sans lui donner la moindre indication sur ce que tu pensais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Voilà une observation que tu aurais pu faire toi-même depuis que tu es entré.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Autre chose.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il détestait quand tu changeais une décision après l’avoir laissé croire qu’elle était prise.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Parce qu’il n’aimait pas découvrir que quelqu’un d’autre pouvait préparer une ruse.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il admirait ça.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Après s’être mis en colère.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Souvent pendant.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tu l’as vraiment connu.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Alors tu sais qu’il pouvait raconter une histoire vraie d’une manière qui la rendait suspecte.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est un talent.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "C’est épuisant.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je veux bien le croire.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Non. Tu as l’air de quelqu’un qui trouve ça amusant.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse doit retenir un sourire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il disait aussi que tu repérais une mauvaise couture plus vite qu’une servante qui l’avait faite.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Celle-là est connue.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas le jour où tu as cousu toi-même la manche d’un manteau parce que tu refusais d’admettre que tu l’avais déchirée.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pénélope respire différemment.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Quel manteau ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Brun. Une agrafe d’or. Tu avais dit que le tissu était mauvais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Il était mauvais.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu l’avais accroché à une poignée.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Qui t’a raconté cela ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ulysse.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Où est-il ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Près.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "« Près » n’est pas un lieu.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je sais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Est-il vivant ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La réponse pourrait tout finir.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse choisit encore d’attendre.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tu en es sûr ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Alors dis-lui une chose de ma part.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Laquelle ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Qu’il n’a pas intérêt à rentrer avec une histoire médiocre.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse baisse la tête.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je transmettrai.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pénélope appelle Euryclée.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Fais-lui laver les pieds. Il a marché assez loin pour mériter au moins cela.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ce n’est pas nécessaire.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tu refuses souvent ce qu’on t’offre ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Plus qu’avant.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Mauvaise habitude.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Euryclée apporte l’eau.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse recule un pied.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "euryclee",
+      "speaker": "EURYCLÉE",
+      "text": "Tu crains l’eau ?",
+      "preset": "odyssee-euryclee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’en ai eu assez pour plusieurs vies.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "euryclee",
+      "speaker": "EURYCLÉE",
+      "text": "Alors celle-ci te paraîtra petite.",
+      "preset": "odyssee-euryclee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Elle prend sa jambe.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ses doigts passent sur une ancienne cicatrice.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ils s’arrêtent.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "euryclee",
+      "speaker": "EURYCLÉE",
+      "text": "Cette—",
+      "preset": "odyssee-euryclee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La bassine bascule.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Euryclée ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "euryclee",
+      "speaker": "EURYCLÉE",
+      "text": "Rien.",
+      "preset": "odyssee-euryclee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse saisit doucement mais fermement le poignet de la vieille femme.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas un mot.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "euryclee",
+      "speaker": "EURYCLÉE",
+      "text": "Mon enfant.",
+      "preset": "odyssee-euryclee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas maintenant.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "euryclee",
+      "speaker": "EURYCLÉE",
+      "text": "Je t’ai—",
+      "preset": "odyssee-euryclee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je sais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "euryclee",
+      "speaker": "EURYCLÉE",
+      "text": "Pénélope—",
+      "preset": "odyssee-euryclee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas encore.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Euryclée le regarde comme Argos l’a regardé.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Mais elle, il peut lui répondre.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "S’il te plaît.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La nourrice reprend la bassine.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "euryclee",
+      "speaker": "EURYCLÉE",
+      "text": "L’étranger a une vieille cicatrice.",
+      "preset": "odyssee-euryclee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Beaucoup d’hommes en ont.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "euryclee",
+      "speaker": "EURYCLÉE",
+      "text": "Oui.",
+      "preset": "odyssee-euryclee-h2"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Trois personnes dans cette maison savent désormais que l’étranger n’est pas un étranger.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S13 — Ceux qui savent",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pénélope n’en fait toujours pas partie.",
+      "preset": "odyssee-narratrice"
+    }
+  ]
+}

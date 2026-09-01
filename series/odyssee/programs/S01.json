@@ -1,0 +1,929 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s01",
+  "title": "L’Odyssée — S01 — Une maison qui attend",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-a.md",
+      "git_blob_sha1": "c8ec855d8e1096df6ddbbec65f8d0bfc152730f5",
+      "sequence": "S01"
+    }
+  ],
+  "production": {
+    "block": "A",
+    "direction": "series/odyssee/production/blocks/BLOCK_A.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "À Ithaque, les hommes qui mangent dans la maison d’Ulysse n’ont pas été invités.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ils sont venus un jour pour parler à Pénélope. Puis ils sont revenus le lendemain. Puis ils ont cessé de demander s’ils pouvaient rester.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ils boivent le vin d’un absent. Ils font abattre ses bêtes. Ils jouent avec ses coupes, déplacent ses sièges, rient dans les pièces où son fils a grandi sans lui.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Encore du vin.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu en as déjà.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Alors apporte celui que ton père gardait pour ses amis.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Mon père ne t’a jamais compté parmi ses amis.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le rire part d’un côté de la salle et gagne les autres tables.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Ton père ne compte plus grand monde parmi ses amis, Télémaque.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Laisse-le. Il protège les réserves d’un mort. C’est une occupation comme une autre.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque serre la mâchoire. Il pourrait répondre. Il pourrait renverser la coupe. Il pourrait tenter de jeter dehors des hommes deux fois plus nombreux que ses serviteurs.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il ne fait rien de tout cela.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il a grandi avec des histoires sur Ulysse. Ulysse le rusé. Ulysse le roi. Ulysse parti pour Troie alors que son fils était encore assez petit pour tenir contre un seul bras.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Dix années de guerre. Puis encore des années sans retour. À présent, même ceux qui affirment l’avoir connu parlent de lui comme on parle d’un homme déjà rangé parmi les souvenirs.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Antinoos.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La salle se calme d’un degré. Pas assez pour devenir silencieuse. Assez pour que chacun sache qu’elle est là.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tu demandes mon vin comme si tu étais chez toi.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Je demande seulement qu’on cesse de servir le moins bon à des hommes qui attendent depuis des années.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Vous attendez mal. Vous mangez beaucoup.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Nous attendons une décision.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "La mienne.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Justement.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Alors tu vois : elle m’appartient encore.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pénélope ne hausse pas la voix. Elle n’en a pas besoin. Depuis des années, elle vit au milieu d’hommes qui interprètent chaque silence comme une faiblesse et chaque délai comme une promesse.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Elle a appris à leur donner juste assez d’espoir pour gagner un jour de plus.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Combien de temps comptes-tu encore repousser ce mariage ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Jusqu’à ce que j’aie terminé ce que j’ai commencé.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Ton ouvrage ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Le linceul du père d’Ulysse.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Tu tisses depuis bien longtemps pour un seul mort.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Il a eu le tort de vivre vieux.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Quelques hommes rient malgré eux. Antinoos, lui, ne rit pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pénélope s’éloigne. Télémaque la rejoint dans le passage.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu ne peux pas continuer.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Si.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Ils savent pour le tissu.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Ils soupçonnent.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Ils savent que tu défais la nuit ce que tu tisses le jour.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Alors il faudra trouver autre chose.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Voilà ce qu’on fait depuis que je sais parler. Trouver autre chose. Attendre. Gagner une journée. Puis une autre.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tu préférerais que je choisisse l’un d’eux ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Je préférerais que mon père rentre.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La phrase reste entre eux. Elle a été dite trop souvent pour faire du bien. Pas assez souvent pour ne plus faire mal.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Moi aussi.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu le dis comme si tu pouvais attendre encore dix ans.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Non.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Pourtant tu attends.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Ce n’est pas la même chose.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Quelle différence ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Attendre quelqu’un, c’est croire qu’il reviendra. Tenir jusqu’à savoir, c’est autre chose.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Et toi, tu fais quoi ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Je tiens.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Ça a l’air très proche.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Seulement de loin.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque connaît cette réponse. Il connaît aussi les nuits où sa mère descend jusqu’au métier à tisser quand toute la maison dort. Le fil défait sous ses doigts a longtemps été une façon de voler du temps aux prétendants.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Mais le secret s’use, lui aussi.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Ils finiront par ne plus accepter aucun délai.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Oui.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Et alors ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Alors j’aurai besoin que tu sois autre chose qu’en colère.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Je fais ce que je peux.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Je sais. C’est précisément pour cela que je te le dis.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Et s’il est mort ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Alors nous l’apprendrons.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Comment ? Chaque marin qui arrive raconte autre chose. Chaque marchand a vu quelqu’un qui a parlé à quelqu’un qui jure l’avoir croisé. Un jour il est en Égypte. Le lendemain à Chypre. La semaine suivante, un dieu l’a changé en pierre.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "C’est pour cela que je n’épouse pas une rumeur.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le soir, Télémaque reste seul dans la cour.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Une étrangère est arrivée à la porte. Elle a l’allure de quelqu’un qui sait exactement pourquoi elle est venue.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "On m’a dit que cette maison appartenait à Ulysse.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Elle lui appartient.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Pourtant d’autres la remplissent.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu connais mon père ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "J’ai connu un homme qui n’aurait pas supporté longtemps qu’on vide ses jarres en discutant de son héritage.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Cet homme-là n’est pas ici.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Et toi, tu es ici.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Cela n’a pas l’air de suffire.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Parce que tu attends qu’un absent te donne la permission d’être son fils.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Qui es-tu ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Quelqu’un qui te conseille de cesser d’écouter ceux qui savent très bien ce que devient ton vin et très mal ce qu’est devenu ton père.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu sais où il est ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Non.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Alors tu ne sais rien de plus que les autres.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Je sais que tu peux chercher mieux qu’eux.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque lève les yeux. L’étrangère ne sourit pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Va parler aux hommes qui sont revenus de Troie. Demande ce qu’ils savent vraiment. Pas ce qu’ils ont entendu. Pas ce qu’ils espèrent. Ce qu’ils savent.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Et pendant ce temps, je laisse ma mère ici avec eux ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Ta mère tient cette maison depuis plus longtemps que toi.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "C’est précisément le problème.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "athena",
+      "speaker": "ATHÉNA",
+      "text": "Alors reviens en homme capable de l’aider, pas en garçon capable de s’inquiéter.",
+      "preset": "odyssee-athena"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il détourne les yeux une seconde.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Quand il regarde à nouveau, la cour semble plus vide.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Cette nuit-là, Télémaque trouve sa mère près du métier.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Je vais partir.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Où ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Chercher des hommes qui sont revenus de Troie.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Qui t’a mis cette idée en tête ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Une étrangère.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Voilà qui me rassure énormément.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Elle avait raison.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Les gens qui ont raison peuvent être dangereux.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Les gens qui restent ici aussi.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pénélope laisse passer quelques fils entre ses doigts.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tu veux partir parce que tu espères trouver ton père ?",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Je veux partir parce que je ne supporte plus que tout le monde sache quelque chose sur lui sauf nous.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tu peux revenir avec une mauvaise nouvelle.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Oui.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Ou aucune.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Oui.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Ou avec une histoire si belle que tu auras envie de la croire.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Alors apprends-moi à ne pas la croire trop vite.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pénélope lève les yeux.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Demande toujours qui a vu quoi.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "D’accord.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Pas qui a entendu. Pas qui connaît un homme qui connaît un marin. Qui a vu.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "D’accord.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Et si quelqu’un te promet exactement ce que tu veux entendre, commence par te méfier de lui.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Ça aussi, tu l’as appris ici ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Tous les jours.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque regarde le tissu.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu continueras ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Jusqu’à ce que ça ne marche plus.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Et après ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Après, j’inventerai autre chose.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Comme père.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Non.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Elle sourit à peine.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Comme moi.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "À Ithaque, tout le monde attend Ulysse.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S01 — Une maison qui attend",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Mais très loin de là, Ulysse attend lui aussi.",
+      "preset": "odyssee-narratrice"
+    }
+  ]
+}

@@ -1,0 +1,866 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s02",
+  "title": "L’Odyssée — S02 — L’île où l’on pourrait rester",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-a.md",
+      "git_blob_sha1": "c8ec855d8e1096df6ddbbec65f8d0bfc152730f5",
+      "sequence": "S02"
+    }
+  ],
+  "production": {
+    "block": "A",
+    "direction": "series/odyssee/production/blocks/BLOCK_A.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il est assis face à la mer.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pas sur un trône. Pas devant des soldats. Sur une pierre lisse, au bord d’une île où rien ne manque.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Derrière lui, il y a des arbres chargés de fruits, de l’eau douce, un abri, du feu. Il y a Calypso.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Devant lui, il n’y a que la mer.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu vas encore rester là jusqu’à la nuit ?",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Probablement.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Elle ne va pas te répondre.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne lui parle pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Alors que fais-tu ?",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je regarde vers l’est.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Ithaque n’est pas visible d’ici.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je sais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu regardes donc quelque chose que tu sais ne pas pouvoir voir.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Calypso s’assied près de lui.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "J’ai essayé de comprendre ce que cette île a de si terrible.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elle n’a rien de terrible.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu y manges. Tu y dors. Personne ne veut te tuer. Aucun roi ne t’ordonne de repartir en guerre. Aucun homme ne compte tes navires. Aucun dieu ne te demande de prendre une ville.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je sais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Et tu es malheureux.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu pourrais rester.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je suis resté.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu sais ce que je veux dire.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse ne répond pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Les hommes passent leur vie à demander plus de temps. Quand on leur en offre, ils regardent une mer vide.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu m’offres de ne plus vieillir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Je t’offre de ne plus perdre.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ce n’est pas la même chose.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Cela y ressemble beaucoup.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas pour quelqu’un qui a déjà trop perdu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Ta femme a vieilli.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Ton fils aussi.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Peut-être qu’ils ont cessé de t’attendre.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Peut-être.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Peut-être que tu rentrerais dans une maison qui n’est plus la tienne.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors je veux le savoir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu préférerais une vérité qui te détruit à une vie où rien ne t’oblige à partir.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je préférerais ma vie.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Décris-la.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Ta vie. Celle qui mérite mieux que ce que je t’offre.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ithaque est petite.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Je n’ai pas demandé une carte.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il y a des pierres partout où on voudrait planter quelque chose. Le vent change vite. Les chèvres trouvent toujours l’endroit qu’on voulait protéger.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Irrésistible.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mon père se plaint de la terre quand elle est sèche et de la pluie quand elle arrive.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Encore mieux.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pénélope déteste qu’on déplace les objets qu’elle utilise.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Comme toi.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non. Moi, j’ai raison quand je me plains.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Naturellement.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il y a un olivier près de la maison.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Un olivier.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu refuses l’immortalité pour un arbre.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas seulement.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Ton fils.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne sais même pas quel homme il est devenu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu as peur qu’il ne te reconnaisse pas.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai peur qu’il me reconnaisse seulement comme l’homme dont on lui a parlé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Et ta femme ?",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai peur qu’elle ait appris à vivre sans moi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Voilà enfin quelque chose d’honnête.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu crois que je ne le suis pas ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu es honnête quand la vérité ne te donne aucun avantage.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est une définition sévère.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "C’est une longue île.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Cette fois, Calypso reste longtemps sans parler.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Les dieux ont décidé que tu partirais.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Les dieux décident beaucoup de choses.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu pourrais au moins faire semblant d’être reconnaissant lorsqu’ils décident enfin ce que tu voulais.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je le serai quand je serai arrivé.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu ne changes donc jamais.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Si.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il regarde la mer.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est ce qui m’inquiète.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il construit l’embarcation de ses propres mains.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le bois sous ses doigts est une chose simple. Une pièce. Une autre. Une corde. Un nœud. Après tant d’années où les vents, les rois, les monstres et les dieux ont décidé de la direction, construire quelque chose qui obéit à la main suffit presque à le rendre heureux.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Cette traverse est trop courte.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elle tiendra.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "C’est ce que disent les hommes juste avant que quelque chose casse.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Dans ce cas, elle est parfaitement à sa place.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Calypso lui apporte de quoi partir.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Si le vent tourne, ne cherche pas à gagner du temps. Laisse-le te déporter.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu me donnes des conseils pour te quitter.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Je préférerais ne pas te regarder mourir cinq jours après avoir attendu des années que tu partes.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je n’avais pas prévu de mourir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Voilà qui me rassure. Les morts suivent souvent leur plan.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il sourit.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Qu’est-ce que tu feras en premier ?",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Quand ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Si tu arrives.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne sais pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu regardes cette mer depuis des années et tu n’as pas prévu la première heure.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai prévu le voyage.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Ce n’est pas ce que j’ai demandé.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Peut-être que je marcherai jusqu’à la maison.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Et ensuite ?",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’entrerai.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Comme si tu étais parti hier ?",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Alors comment ?",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je ne sais pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Tu connais mieux la manière de quitter une île que celle de rentrer chez toi.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est possible.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "C’est certain.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors je commencerai par apprendre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "calypso",
+      "speaker": "CALYPSO",
+      "text": "Voilà une réponse que je peux croire.",
+      "preset": "odyssee-calypso-h2"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Au matin, l’île s’éloigne.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pendant plusieurs jours, la mer se contente d’être immense.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Puis Poséidon voit l’homme qui lui a échappé trop longtemps.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le ciel se ferme. Le vent arrive de plusieurs côtés à la fois. L’embarcation cesse d’être une construction et devient une question : combien de temps peut-elle encore tenir ?",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas maintenant.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse s’accroche.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas après tout cela.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le bois cède.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S02 — L’île où l’on pourrait rester",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pour la première fois depuis l’île de Calypso, Ulysse n’a plus rien qu’il ait construit entre lui et la mer.",
+      "preset": "odyssee-narratrice"
+    }
+  ]
+}
