@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "id": "odyssee-stream1-stream3-handoff-v1",
+  "authority_issue": 110,
+  "baseline_main": "ad565381a66a46f823a42ee0a945bbad978fe075",
+  "narrative_freeze": {
+    "status": "PASS",
+    "spoken_words": 11788,
+    "sequences": 15,
+    "allowed_post_freeze_edits": [
+      "oral_failure",
+      "human_comprehension_failure",
+      "factual_source_correction",
+      "production_impossibility"
+    ]
+  },
+  "motto": "Fail cheap. Commit late. Finish robustly. Listener wins.",
+  "accepted_anchors": {
+    "narratrice": {
+      "state": "HUMAN_ACCEPTED",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "pitch": "-8Hz",
+      "volume": "+1%"
+    },
+    "ulysse": {
+      "state": "HUMAN_ACCEPTED",
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    "penelope": {
+      "state": "HUMAN_ACCEPTED",
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "+0%"
+    },
+    "telemaque": {
+      "state": "HUMAN_ACCEPTED",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+5%",
+      "pitch": "+8Hz",
+      "volume": "+2%"
+    },
+    "athena": {
+      "state": "HUMAN_ACCEPTED",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-10%",
+      "pitch": "-14Hz",
+      "volume": "-4%"
+    }
+  },
+  "promoted_recipes": {
+    "p2_ownership_transfer": {
+      "status": "HUMAN_PASS",
+      "use": "S04_to_S05",
+      "rule": "no_jingle"
+    },
+    "p3_polypheme": {
+      "status": "HUMAN_PASS",
+      "polypheme": {
+        "voice": "fr-FR-RemyMultilingualNeural",
+        "rate": "-10%",
+        "pitch": "-24Hz",
+        "volume": "+3%"
+      },
+      "euryloque": {
+        "voice": "fr-FR-HenriNeural",
+        "rate": "+4%",
+        "pitch": "-14Hz",
+        "volume": "+8%"
+      },
+      "rules": [
+        "no_monster_dsp",
+        "dry_or_near_dry",
+        "french_intelligibility_first"
+      ]
+    },
+    "p5_underworld": {
+      "status": "HUMAN_PASS_H1B",
+      "authority_file": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+      "rules": [
+        "no_music",
+        "no_heavy_reverb",
+        "minimal_dark_air_minus_43_dbfs"
+      ]
+    },
+    "p6_b_staging": {
+      "status": "PASS_EXCEPT_ULYSSES_EMOTIONAL_LINES",
+      "preserve": [
+        "penelope_chatterbox_vivienne_conditioned",
+        "pauses",
+        "no_music",
+        "staging"
+      ],
+      "blocked_lines": [
+        "Non.",
+        "Ce lit ne sort pas de cette chambre.",
+        "Tu le savais.",
+        "Pénélope…",
+        "Notre lit."
+      ]
+    }
+  },
+  "external_stream2_packages": [
+    {
+      "id": "P4_SIRENS_HUMAN_PASS",
+      "scope": [
+        "S09_siren_performance_only"
+      ],
+      "required": [
+        "attraction_PASS",
+        "french_PASS",
+        "cliche_NONE_OR_LIGHT",
+        "polyphony_USEFUL"
+      ],
+      "provider_agnostic": true
+    },
+    {
+      "id": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+      "scope": [
+        "S15_ulysse_high_emotion_lines_only"
+      ],
+      "required": [
+        "reaction_PASS",
+        "impact_GTE_4_OF_5",
+        "identity_continuity_PASS",
+        "french_PASS",
+        "no_melodrama"
+      ],
+      "provider_agnostic": true
+    }
+  ],
+  "blocks": [
+    {
+      "id": "A",
+      "sequences": [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "source": "series/odyssee/text/block-a.md",
+      "source_blob": "c8ec855d8e1096df6ddbbec65f8d0bfc152730f5",
+      "spoken_words": 2937,
+      "state": "READY_FOR_STREAM3_BLOCK_RENDER",
+      "external_dependencies": [],
+      "direction": "series/odyssee/production/blocks/BLOCK_A.md"
+    },
+    {
+      "id": "B",
+      "sequences": [
+        "S05",
+        "S06",
+        "S07",
+        "S08"
+      ],
+      "source": "series/odyssee/text/block-b.md",
+      "source_blob": "12a9a582df0dae2949aec7f19f2d526f27943da4",
+      "spoken_words": 3142,
+      "state": "READY_FOR_STREAM3_BLOCK_RENDER",
+      "external_dependencies": [],
+      "direction": "series/odyssee/production/blocks/BLOCK_B.md"
+    },
+    {
+      "id": "C",
+      "sequences": [
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "source": "series/odyssee/text/block-c.md",
+      "source_blob": "4589733f7e7f5302f12511e802cb6a8f0557b1b7",
+      "spoken_words": 1949,
+      "state": "PARTIALLY_RENDERABLE",
+      "ready_now": [
+        "S09_non_siren_frame",
+        "S10",
+        "S11"
+      ],
+      "blocked_only": [
+        "S09_siren_performance"
+      ],
+      "external_dependencies": [
+        "P4_SIRENS_HUMAN_PASS"
+      ],
+      "direction": "series/odyssee/production/blocks/BLOCK_C.md"
+    },
+    {
+      "id": "D",
+      "sequences": [
+        "S12",
+        "S13",
+        "S14",
+        "S15"
+      ],
+      "source": "series/odyssee/text/block-d.md",
+      "source_blob": "a036ae79ba5102af871cb722e0cc5d6ef313236c",
+      "spoken_words": 3760,
+      "state": "PARTIALLY_RENDERABLE",
+      "ready_now": [
+        "S12",
+        "S13",
+        "S14",
+        "S15_staging",
+        "S15_penelope",
+        "S15_ulysse_explanatory_lines"
+      ],
+      "blocked_only": [
+        "S15_ulysse_high_emotion_lines"
+      ],
+      "external_dependencies": [
+        "ULYSSES_EMOTIONAL_HUMAN_PASS"
+      ],
+      "direction": "series/odyssee/production/blocks/BLOCK_D.md"
+    }
+  ],
+  "secondary_casting": {
+    "state": "PRODUCTION_CHOICES_H2_WATCH",
+    "authority_file": "series/odyssee/production/CASTING_ACCEPTANCE_V1.md",
+    "standalone_human_gate": false,
+    "rule": "target only material collisions found in block integration"
+  },
+  "qa": {
+    "h2": {
+      "type": "BATCHED_BLOCK_INTEGRATION",
+      "one_pages_surface": true,
+      "criteria": [
+        "ownership_transitions",
+        "pacing_and_fatigue",
+        "secondary_cast_collisions",
+        "sound_density",
+        "crew_loss_continuity",
+        "ulysse_identity",
+        "penelope_continuity",
+        "argos_without_sentimental_cue",
+        "action_vs_emotional_climax"
+      ]
+    },
+    "h3": {
+      "type": "ONE_CONTINUOUS_MASTER_LISTEN",
+      "after": [
+        "all_blocks_machine_qualified",
+        "P4_SIRENS_HUMAN_PASS",
+        "ULYSSES_EMOTIONAL_HUMAN_PASS",
+        "H2_no_material_open_defect"
+      ]
+    }
+  },
+  "engine_contract": {
+    "change_requested": false,
+    "policy": "NO_ENGINE_CHANGE unless a concrete scene proves an absent generic capability"
+  }
+}
