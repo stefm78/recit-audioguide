@@ -1,0 +1,62 @@
+name: Odyssée H2 sound acquisition one-shot
+
+on:
+  push:
+    branches:
+      - prod/h2-sound-acquisition-v1
+    paths:
+      - .github/workflows/odyssee-h2-sound-acquisition-one-shot.yml
+
+permissions:
+  contents: write
+
+jobs:
+  strong_wind:
+    permissions:
+      contents: write
+    uses: stefm78/audio-engine/.github/workflows/acquire-sound.yml@b227c23dc3c4555c0667e6e994f26cc2990a6ec8
+    with:
+      query: natural strong wind gust without thunder voices music or sea ambience
+      sound_type: event
+      sound_id: odyssee-strong-wind
+      preferred_tags: wind,gust,natural
+      providers: wikimedia-commons,openverse
+      min_score: 70
+      engine_ref: b227c23dc3c4555c0667e6e994f26cc2990a6ec8
+      artifact_name: odyssee-h2-sound
+      publish_release: true
+      release_tag: odyssee-h2-sound-assets-v1
+
+  wood_stress:
+    needs: strong_wind
+    permissions:
+      contents: write
+    uses: stefm78/audio-engine/.github/workflows/acquire-sound.yml@b227c23dc3c4555c0667e6e994f26cc2990a6ec8
+    with:
+      query: brief wood creak timber stress cracking without footsteps voices music or ambience
+      sound_type: event
+      sound_id: odyssee-wood-stress
+      preferred_tags: wood,creak,crack
+      providers: wikimedia-commons,openverse
+      min_score: 70
+      engine_ref: b227c23dc3c4555c0667e6e994f26cc2990a6ec8
+      artifact_name: odyssee-h2-sound
+      publish_release: true
+      release_tag: odyssee-h2-sound-assets-v1
+
+  bow_release:
+    needs: wood_stress
+    permissions:
+      contents: write
+    uses: stefm78/audio-engine/.github/workflows/acquire-sound.yml@b227c23dc3c4555c0667e6e994f26cc2990a6ec8
+    with:
+      query: dry archery bow string release without firearm gunshot voices music or ambience
+      sound_type: event
+      sound_id: odyssee-bow-release
+      preferred_tags: bow,archery,string
+      providers: wikimedia-commons,openverse
+      min_score: 70
+      engine_ref: b227c23dc3c4555c0667e6e994f26cc2990a6ec8
+      artifact_name: odyssee-h2-sound
+      publish_release: true
+      release_tag: odyssee-h2-sound-assets-v1
