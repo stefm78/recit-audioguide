@@ -1,0 +1,76 @@
+{
+  "schema": "recit.odyssee.stream2.critical_casting_result.v1",
+  "id": "odyssee-stream2-critical-casting-result-v1",
+  "reviewed_at": "2026-09-01",
+  "human_review_schema": "odyssee-stream2-human-review-v1",
+  "cloud_policy": "CLOUD_TTS_FORBIDDEN_FOR_ODYSSEE_CRITICAL_CASTING",
+  "p4_sirens": {
+    "decision": "P4_SIRENS_HUMAN_PASS",
+    "human": {
+      "attraction": "PASS",
+      "french": "PASS",
+      "polyphony": "PASS",
+      "cliche": "LIGHT",
+      "addressed": "PASS"
+    },
+    "authoritative_machine": {
+      "repo": "stefm78/audio-engine",
+      "run_id": 33514535576,
+      "head_sha": "949888aae8cc0c5b632245688539445dad10bb3e",
+      "candidate_sha256": "e630b78a0a7def96b3b1cd4934a2272919f1d6433c3ad0f66e850f17ede7572f",
+      "artifact_name": "local-tts-p4-voxcpm2-one-shot",
+      "artifact_digest": "sha256:dcee0f7ffa10e10b736fd07067d6a567acf5cbdc4a8307978a9f5ebc381d7833"
+    },
+    "scope": [
+      "S09_siren_performance_only"
+    ],
+    "provider_package": "series/odyssee/production/provider-packages/P4_SIRENS_VOXCPM2_V1.json",
+    "provider_agnostic_handoff": true,
+    "global_provider_promotion": false,
+    "stream3_state": "READY_TO_BIND"
+  },
+  "p6_ulysse_emotional": {
+    "decision": "HOLD_STREAM2",
+    "last_attempt": "REJECTED",
+    "rejection_class": [
+      "ARTISTIC_FAIL",
+      "IDENTITY_FAIL"
+    ],
+    "human": {
+      "impact": 1,
+      "reaction": "FAIL",
+      "identity": "FAIL",
+      "french": "PASS",
+      "melodrama": "PRESENT",
+      "staging": "PASS"
+    },
+    "authoritative_machine": {
+      "repo": "stefm78/audio-engine",
+      "run_id": 33514546032,
+      "head_sha": "2120c3952f64eb2b5ab76c486a2961e9b26a0751",
+      "candidate_sha256": "4f4f6b352db9d981cef3db6a29c8c510b5396fa009163e07415388bde33ce033",
+      "artifact_name": "local-tts-p6-qwen3-hybrid",
+      "artifact_digest": "sha256:50fc48433363362adfe730ef54fdd83f88bf87a5231786eb3a0c11ccd80f9b40"
+    },
+    "preserve": [
+      "same_Ulysse_identity",
+      "french_PASS",
+      "Penelope_H1b_B",
+      "pauses",
+      "no_music",
+      "staging"
+    ],
+    "forbidden_retries": [
+      "same_Qwen3_hybrid",
+      "prompt_tuning",
+      "seed_retry",
+      "best_of_N",
+      "DSP_rescue",
+      "donor_swap",
+      "NUC_retry_for_capability_failure",
+      "cloud_TTS"
+    ],
+    "next_hypothesis_requirement": "materially_distinct_architecture_only",
+    "stream3_state": "BLOCKED_ONLY_ON_ULYSSES_EMOTIONAL_HUMAN_PASS"
+  }
+}

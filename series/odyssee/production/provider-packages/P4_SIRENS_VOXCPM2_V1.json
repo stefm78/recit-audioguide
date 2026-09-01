@@ -1,0 +1,67 @@
+{
+  "schema": "recit.odyssee.provider_package.v1",
+  "id": "P4_SIRENS_VOXCPM2_V1",
+  "state": "HUMAN_ACCEPTED_LOCAL",
+  "capability": "P4_SIRENS_HUMAN_PASS",
+  "scope": [
+    "S09_siren_performance_only"
+  ],
+  "provider": {
+    "family": "VoxCPM2",
+    "upstream": "OpenBMB/VoxCPM",
+    "upstream_revision": "ee8161e9e1b7b082cb5721a3a9980da4204401e6",
+    "model": "openbmb/VoxCPM2",
+    "model_revision": "32279effe8c19989596f05d353d1447f51d9e915",
+    "license": "Apache-2.0",
+    "execution": "local_cpu"
+  },
+  "reference": {
+    "id": "reference-claire.wav",
+    "sha256": "3366f993d108f42525627f1be03e71fdec312b559e067616d2019b69da35cafe"
+  },
+  "parameters": {
+    "cfg_value": 2,
+    "inference_timesteps": 10,
+    "seed_base": 2026090100,
+    "seed_rule": "seed_base + H1b segment index",
+    "retry_badcase": false,
+    "normalize_model_output": false,
+    "denoise": false
+  },
+  "artistic_variant": {
+    "id": "p4-voxcpm2-a",
+    "title": "Invitation intime et intelligente",
+    "replacement_indices": [
+      2,
+      4,
+      6,
+      8,
+      12
+    ]
+  },
+  "baseline": {
+    "release": "odyssee-h1b-corrective-review-v1",
+    "variant": "p4-b",
+    "audio_sha256": "14f325e3a1404c260c9a5139b85bcb5267cdd91a60c2458ea80bd66f3d75365d",
+    "report_sha256": "8f3d2e0a63752d09974c2553c25f28fe9e0b5c6ec800fb734d16ae859f65aa06"
+  },
+  "authoritative_candidate": {
+    "run_id": 33514535576,
+    "head_sha": "949888aae8cc0c5b632245688539445dad10bb3e",
+    "candidate_sha256": "e630b78a0a7def96b3b1cd4934a2272919f1d6433c3ad0f66e850f17ede7572f",
+    "artifact_digest": "sha256:dcee0f7ffa10e10b736fd07067d6a567acf5cbdc4a8307978a9f5ebc381d7833"
+  },
+  "human_acceptance": {
+    "attraction": "PASS",
+    "french": "PASS",
+    "polyphony": "PASS",
+    "cliche": "LIGHT",
+    "addressed": "PASS"
+  },
+  "production_rules": {
+    "no_global_recast": true,
+    "no_provider_global_promotion": true,
+    "no_cloud_tts": true,
+    "fallback": "fail"
+  }
+}

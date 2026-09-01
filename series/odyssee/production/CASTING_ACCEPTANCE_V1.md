@@ -34,8 +34,8 @@ A production choice is not mislabeled as human accepted.
 | Polyphème | HUMAN_ACCEPTED P3 | Remy, rate -10%, pitch -24Hz, volume +3%; mass by cadence, no DSP |
 | Anticlée | HUMAN_ACCEPTED P5 H1b | Chatterbox Multilingual V3, exact `P5_UNDERWORLD_ACCEPTED_RECIPE.json` |
 | Pénélope — S15 climax | HUMAN_ACCEPTED_LOCAL H1b | preserve P6-B Chatterbox performance conditioned from synthetic Vivienne reference; no global recast implied |
-| Sirènes — S09 | BLOCKED_STREAM2 | must arrive as `P4_SIRENS_HUMAN_PASS` |
-| Ulysse — S15 emotional lines | BLOCKED_STREAM2 | must arrive as `ULYSSES_EMOTIONAL_HUMAN_PASS`; same identity |
+| Sirènes — S09 | HUMAN_ACCEPTED_LOCAL P4 | `P4_SIRENS_HUMAN_PASS`; VoxCPM2 one-shot package `provider-packages/P4_SIRENS_VOXCPM2_V1.json`; attraction/French/polyphony/address PASS, cliché LIGHT; no global provider promotion |
+| Ulysse — S15 emotional lines | BLOCKED_STREAM2 | `ULYSSES_EMOTIONAL_HUMAN_PASS` still required; Qwen3 hybrid attempt rejected humanly (impact 1/5, reaction FAIL, identity FAIL, melodrama PRESENT); same identity remains mandatory |
 
 ## Secondary production choices
 
@@ -111,3 +111,13 @@ No state authorizes a provider recast.
 - S15: calm trap → recognition release.
 
 The H1b P6-B expressive performance is local evidence for the climax, not permission to exaggerate earlier scenes.
+
+
+## Stream 2 critical casting verdict — 2026-09-01
+
+Authority: `series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json`.
+
+- P4 Sirènes is resolved: `P4_SIRENS_HUMAN_PASS`.
+- P6 Ulysse emotional remains unresolved.
+- The rejected P6 Qwen3 hybrid must not be retried through prompt tuning, seed changes, best-of-N, donor substitution, DSP rescue, NUC rerun, or cloud TTS.
+- Any next P6 attempt must use a materially distinct architecture while preserving the established Ulysse identity and the accepted Pénélope/staging.
