@@ -1,0 +1,38 @@
+{
+  "schema": "recit.odyssee.marin_capability_hold.v1",
+  "id": "odyssee-marin-capability-hold-v1",
+  "status": "HOLD_PRODUCT_BINDING",
+  "authority": {
+    "stream1_issue": 110,
+    "stream3_issue": 112,
+    "stream3_comment": 5496907327
+  },
+  "observed_production_run": 33527560116,
+  "capability_probe_run": 33530359342,
+  "runtime": "edge-tts==7.2.8",
+  "requested_voice": "fr-FR-AlainNeural",
+  "requested_voice_available": false,
+  "observed_fr_fr_catalog": [
+    "fr-FR-DeniseNeural",
+    "fr-FR-EloiseNeural",
+    "fr-FR-HenriNeural",
+    "fr-FR-RemyMultilingualNeural",
+    "fr-FR-VivienneMultilingualNeural"
+  ],
+  "affected_units": [
+    "S05",
+    "S06",
+    "S07",
+    "S10"
+  ],
+  "preserved": {
+    "euryloque": "HUMAN_ACCEPTED_P3 unchanged",
+    "voice_pack_v2_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b",
+    "frozen_text": true
+  },
+  "policy": {
+    "silent_fallback": "FORBIDDEN",
+    "stream3_voice_selection": "FORBIDDEN",
+    "next_action": "consume one replacement MARIN voice/rate/pitch/volume binding from Stream 1, then restore only affected units to ready"
+  }
+}
