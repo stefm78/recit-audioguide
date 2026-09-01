@@ -21,7 +21,28 @@
       "P5_GENERIC_CHATTERBOX_PROVIDER_PACKAGE"
     ],
     "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
-    "no_silent_fallback": true
+    "no_silent_fallback": true,
+    "p5_recipe": {
+      "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+      "state": "HUMAN_PASS_H1B",
+      "provider": "chatterbox-multilingual-v3",
+      "conditioning_reference": "synthetic fr-FR-VivienneMultilingualNeural",
+      "deterministic_default": {
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74,
+        "language_id": "fr"
+      },
+      "sound": {
+        "type": "dark_air",
+        "target_dbfs": -43
+      },
+      "rules": [
+        "no_music",
+        "no_heavy_reverb",
+        "no_silent_fallback"
+      ]
+    }
   },
   "segments": [
     {
@@ -393,7 +414,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Ulysse.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -407,7 +439,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Mon fils.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -428,7 +471,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Non.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -442,7 +496,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Cela change quelque chose ?",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -491,7 +556,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Il vit.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -575,7 +651,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Comment veux-tu que je réponde ?",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -589,7 +676,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Il a grandi entouré d’hommes qui lui expliquaient qui était son père.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -603,7 +701,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Je lui ai parlé de l’homme avant la guerre.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -617,7 +726,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Celui qui riait quand il avait réussi une ruse trop simple pour mériter qu’on la raconte.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -631,7 +751,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Lui non plus ne se souviendrait peut-être pas de toi.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -645,7 +776,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Oui.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -659,7 +801,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Non. Avec ce qu’il reste de ta famille, de tes serviteurs et de sa patience.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -673,7 +826,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Ne lui demande pas vingt ans d’immobilité pour justifier tes vingt ans d’absence.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -687,7 +851,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Alors rentre et demande-lui à elle.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -701,7 +876,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Je sais.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -715,7 +901,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Ne fais pas de mon absence une accusation contre toi.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -729,7 +926,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "C’est vrai.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -743,7 +951,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Tu veux réparer la mort ?",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -757,7 +976,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Alors rentre chez les vivants.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -827,7 +1057,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Ulysse.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -841,7 +1082,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Arrête.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
@@ -855,7 +1107,18 @@
       "character_id": "anticlea",
       "speaker": "ANTICLÉE",
       "text": "Je sais.",
-      "preset": "odyssee-anticlea-p5"
+      "preset": "odyssee-anticlea-p5",
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.34,
+        "cfg_weight": 0.5,
+        "temperature": 0.74
+      },
+      "accepted_recipe_default": {
+        "authority": "series/odyssee/production/P5_UNDERWORLD_ACCEPTED_RECIPE.json",
+        "basis": "deterministic point inside HUMAN_PASS H1b accepted ranges"
+      }
     },
     {
       "scene": "S08 — Ceux qui ne rentreront pas",
