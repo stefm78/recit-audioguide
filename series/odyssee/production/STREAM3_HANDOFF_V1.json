@@ -88,20 +88,58 @@
       ]
     },
     "p6_b_staging": {
-      "status": "PASS_EXCEPT_ULYSSES_EMOTIONAL_LINES",
+      "status": "PASS_STAGING_FROZEN_BINDING_RESOLVED_AWAITING_EXTERNAL_VOICE_PACKAGES",
       "preserve": [
         "penelope_chatterbox_vivienne_conditioned",
         "pauses",
         "no_music",
         "staging"
       ],
-      "blocked_lines": [
-        "Non.",
-        "Ce lit ne sort pas de cette chambre.",
-        "Tu le savais.",
-        "Pénélope…",
-        "Notre lit."
-      ]
+      "frozen_binding_authority": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
+      "penelope_local_segments": [
+        110,
+        113,
+        115,
+        117,
+        119,
+        139,
+        141,
+        143,
+        145,
+        147,
+        148,
+        149,
+        150,
+        152,
+        154,
+        159
+      ],
+      "ulysses_emotional_segments": [
+        112,
+        114,
+        116,
+        118,
+        120,
+        133,
+        135,
+        140,
+        142,
+        151,
+        153,
+        158
+      ],
+      "ulysses_explanatory_baseline_segments": [
+        123,
+        124,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "rule": "P6-B probe wording is not executable text authority; use exact frozen S15 segment binding only."
     }
   },
   "external_stream2_packages": [
@@ -205,16 +243,18 @@
         "S13",
         "S14",
         "S15_staging",
-        "S15_penelope",
+        "S15_frozen_line_binding",
+        "S15_penelope_local_performance_mapping",
         "S15_ulysse_explanatory_lines"
       ],
       "blocked_only": [
-        "S15_ulysse_high_emotion_lines"
+        "S15_ulysse_high_emotion_segments"
       ],
       "external_dependencies": [
         "ULYSSES_EMOTIONAL_HUMAN_PASS"
       ],
-      "direction": "series/odyssee/production/blocks/BLOCK_D.md"
+      "direction": "series/odyssee/production/blocks/BLOCK_D.md",
+      "binding_authority": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json"
     }
   ],
   "secondary_casting": {

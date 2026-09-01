@@ -65,14 +65,18 @@ No final frozen-text exception for S09 is committed until the passing package pr
 
 Scope: accepted P6-B staging only.
 
-Eligible expressive lines:
-- « Non. »
-- « Ce lit ne sort pas de cette chambre. »
-- « Tu le savais. »
-- « Pénélope… »
-- « Notre lit. »
+The condensed P6-B probe wording is **not** executable text authority.
 
-The olive-tree explanation stays on the established Ulysse identity without forced emotion unless a concrete regression demonstrates otherwise.
+Exact frozen S15 binding is owned by:
+`series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json`.
+
+The external emotional package is consumed only on these exact frozen Program segments:
+
+- bed shock / refusal: 112, 114, 116, 118, 120;
+- tree wound: 133, 135;
+- test reveal / recognition release: 140, 142, 151, 153, 158.
+
+The olive-tree explanation remains on the established Ulysse identity at segments 123, 124 and 126–132. No forced emotion unless H2 exposes a concrete regression.
 
 Required evidence:
 - Ulysse reaction PASS;
@@ -138,7 +142,9 @@ Ready now:
 - pauses and no-music rule.
 
 External slot:
-- five high-emotion Ulysse lines in S15.
+- the exact Ulysse emotional segment set bound in `P6_FROZEN_S15_BINDING_V1.json`.
+
+The previous five-line probe shorthand is retired.
 
 ### S1-WP-CAST — Secondary casting collision control
 
