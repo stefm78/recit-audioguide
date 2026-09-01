@@ -1,0 +1,678 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s09",
+  "title": "L’Odyssée — S09 — Ce qu’Ulysse veut entendre",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-c.md",
+      "git_blob_sha1": "4589733f7e7f5302f12511e802cb6a8f0557b1b7",
+      "sequence": "S09"
+    }
+  ],
+  "production": {
+    "block": "C",
+    "direction": "series/odyssee/production/blocks/BLOCK_C.md",
+    "stage": "scene-foundation-v1",
+    "state": "HOLD",
+    "blockers": [
+      "P4_SIRENS_HUMAN_PASS"
+    ],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Circé nous avait prévenus.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Il y avait une partie de la mer où des voix pouvaient faire oublier à un homme tout ce qu’il avait encore à perdre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Les Sirènes.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et tu as décidé qu’il fallait quand même les entendre.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Je voudrais que tu racontes cette décision lentement.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Pour que personne ne puisse croire qu’elle paraissait raisonnable.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Quelques rires très courts dans la salle phéacienne.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai bouché les oreilles de mes hommes avec de la cire.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et les tiennes ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Bien sûr.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je voulais savoir.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu veux toujours savoir ce qu’on t’interdit d’entendre.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est souvent là que se trouvent les choses importantes.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Ou les raisons de l’interdiction.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je leur ai demandé de m’attacher au mât.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Demandé ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ordonné.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Voilà.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et je leur ai dit : quoi que je fasse, quoi que je dise, ne me détachez pas.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu as aussi dit que si tu nous suppliais, il fallait ajouter des cordes.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’avais prévu que je pourrais changer d’avis.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "C’est la partie la plus raisonnable.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Le bateau a continué.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Au début, je n’ai rien entendu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Puis la mer elle-même a semblé devenir moins importante.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Ulysse.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elles connaissaient mon nom.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Ulysse d’Ithaque.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pas « voyageur ». Pas « roi ». Mon nom.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Nous savons d’où tu viens.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Nous savons ce que tu as fait devant Troie.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Nous savons ce que les hommes raconteront.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai regardé mes compagnons.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ils ramaient.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ils n’entendaient rien.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Viens.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Tu n’as pas besoin de rentrer pour être connu.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Ton nom est déjà arrivé plus loin que toi.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai tiré sur les cordes.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Oui.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je t’ai crié de me détacher.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu as crié beaucoup de choses.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Lesquelles ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu préfères vraiment savoir ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Enfin.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Ils t’oublieront chez toi.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Ici, nous savons tout.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Ici, rien de ce que tu as fait ne disparaît.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ce n’était pas seulement une belle voix.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’était une voix qui me proposait exactement ce que j’avais voulu quand j’avais crié mon nom au Cyclope.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Être connu.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Même si tu ne rentrais jamais.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Voilà le piège.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse tourne légèrement la tête vers le chanteur qui, un peu plus tôt, avait raconté Troie sans savoir qu’il était là.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je pouvais devenir une histoire avant d’avoir retrouvé ma maison.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Ulysse.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai tiré encore.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Nous avons serré les cordes.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Puis la voix a commencé à s’éloigner.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "sirene",
+      "speaker": "SIRÈNE",
+      "text": "Ulysse.",
+      "preset": "odyssee-sirens-p4",
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai cru que je perdais quelque chose.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et quand je n’ai plus rien entendu, j’ai compris que j’avais seulement recommencé à entendre le bateau.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et nous.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Et vous.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Cette fois, il le dit sans sourire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu sais ce qui m’a mis le plus en colère ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Le fait que je me sois fait attacher volontairement à un mât ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Non.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’aurais parié dessus.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "C’est que tu nous avais demandé de ne rien entendre.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pour vous protéger.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Et toi, tu t’étais réservé le droit d’écouter.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Comme si ce qui était dangereux pour nous devenait supportable parce que tu étais Ulysse.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je pensais pouvoir revenir de l’autre côté avec quelque chose de plus.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "De la connaissance ?",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu es revenu avec des marques de corde.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est déjà quelque chose.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Tu plaisantes.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Un peu.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "euryloque",
+      "speaker": "EURYLOQUE",
+      "text": "Moi aussi, parfois, je plaisantais parce que la seule autre option était de t’étrangler avec les cordes.",
+      "preset": "odyssee-euryloque"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je m’en doutais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse ne présente pas cette dispute comme une victoire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S09 — Ce qu’Ulysse veut entendre",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Son équipage l’a sauvé d’un désir qu’il avait lui-même choisi d’approcher.",
+      "preset": "odyssee-narratrice"
+    }
+  ]
+}
