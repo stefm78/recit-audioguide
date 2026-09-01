@@ -43,7 +43,17 @@
         "version": "0.25.1"
       }
     ],
-    "runtime_lock": "audio-engine/requirements/chatterbox-mtl-v3-h1b-runtime.txt@ea57a1dca1277526be010ad301de1eeca624f409"
+    "runtime_lock": "audio-engine/requirements/chatterbox-mtl-v3-h1b-runtime.txt@e82559cbd60b1d29de208e7e36ccd7505dcfcdcc",
+    "system_dependencies": [
+      {
+        "name": "ffmpeg",
+        "commands": [
+          "ffmpeg",
+          "ffprobe"
+        ],
+        "reference_version": "7:6.1.1-3ubuntu5"
+      }
+    ]
   },
   "model": {
     "id": "ResembleAI/chatterbox",
