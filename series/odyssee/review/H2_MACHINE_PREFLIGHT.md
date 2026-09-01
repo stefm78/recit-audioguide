@@ -8,6 +8,26 @@ Current product main when this preflight is recorded: `5de36966a3fb7ceb38c210860
 
 Status: **H2_PREP_ACTIVE — MACHINE PREFLIGHT PASS WITH PACING WATCH**
 
+## Current delta — post P5 product integration
+
+As of product main `b55834cc2f6ed75dc1f243048aa39282bd89f9ed`:
+
+- P5/S08 product binding is promoted and validated;
+- S08 is now `sound-integrated-p5-v1` at the Program/product-contract level;
+- its first full Production render still fails on a runtime `ffprobe` defect after provider/model/reference hydration succeeds;
+- this is **technical only** and does not reopen the HUMAN_PASS P5 recipe;
+- Block B is therefore not yet an H2 audio candidate.
+
+A second materialization gap remains:
+
+- the current Production voice pack still maps `odyssee-marin-h2` to the exact Euryloque Henri preset;
+- the Stream 1 correction to `fr-FR-AlainNeural` has **not yet been consumed**;
+- S05/S06/S07/S10 remain ineligible for human H2 until the corrected MARIN renders exist.
+
+Exact sound-direction locators for S02/S05/S06/S08/S14 are now authoritative in:
+`series/odyssee/production/H2_SOUND_DIRECTION_BINDINGS_V1.json`.
+
+
 This file is not a human verdict. It narrows the future H2 listening session to questions that machine QA cannot answer.
 
 ## Evidence available
