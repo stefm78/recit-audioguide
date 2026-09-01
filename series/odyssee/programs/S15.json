@@ -18,11 +18,18 @@
     "stage": "scene-foundation-v1",
     "state": "HOLD",
     "blockers": [
+      "P6_FROZEN_S15_LINE_BINDING",
       "ULYSSES_EMOTIONAL_HUMAN_PASS",
       "P6_GENERIC_CHATTERBOX_PROVIDER_PACKAGE"
     ],
     "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
-    "no_silent_fallback": true
+    "no_silent_fallback": true,
+    "handoff_defect": {
+      "state": "HOLD",
+      "authority_issue": 110,
+      "reason": "P6-B accepted probe lines are not a one-to-one textual match for the frozen full S15 scene; Stream 3 will not infer which frozen lines receive the local Pénélope performance or Ulysse emotional package.",
+      "required_resolution": "product-owned mapping from frozen S15 segment(s) to accepted P6-B staging/performance slots"
+    }
   },
   "segments": [
     {
@@ -44,7 +51,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Qu’y a-t-il ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -58,7 +65,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Tu trembles.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -72,7 +79,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Qui ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -86,7 +93,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Non.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -114,7 +121,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Beaucoup d’hommes ont été en bas.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -128,7 +135,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Tu l’as reconnu ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -142,7 +149,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Comment ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -156,7 +163,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Une cicatrice se décrit.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -170,7 +177,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Et les prétendants ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -198,7 +205,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je te crois.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -212,7 +219,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je crois que tu as reconnu une cicatrice. Je crois que les prétendants sont morts. Je ne sais pas encore ce que je dois croire du reste.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -226,7 +233,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Depuis vingt ans, chaque homme qui m’apporte une nouvelle veut que je sois soulagée avant de vérifier si elle est vraie.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -240,7 +247,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Hier, il m’a menti en face.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -254,7 +261,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "C’est exactement ce qu’aurait fait Ulysse.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -268,7 +275,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Alors cela prouve qu’il lui ressemble.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -303,7 +310,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Télémaque.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -317,7 +324,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Tu vas bien ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -331,7 +338,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Tu es sûr ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -352,7 +359,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Père.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -366,7 +373,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Tu es sûr ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -380,7 +387,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Athéna ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -394,7 +401,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Tu lui as parlé ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -408,7 +415,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "À lui.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -422,7 +429,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Et tu le crois.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -436,7 +443,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Bien.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -450,7 +457,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je suis heureuse pour toi.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -464,7 +471,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Tu as trouvé ton père.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -478,7 +485,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je sais qui il dit être.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -534,7 +541,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je vois.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -548,7 +555,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Qu’attendais-tu ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -562,7 +569,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Voilà une réponse que je n’entendais pas souvent autrefois.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -576,7 +583,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je sais.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -590,7 +597,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Euryclée l’a vue.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -604,7 +611,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Il te croit.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -618,7 +625,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Elle a déjà pris beaucoup de visages.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -632,7 +639,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je pense que tu es un homme qui sait des choses sur Ulysse.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -646,7 +653,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Tu l’as dit.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -660,7 +667,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "C’est ce que je fais.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -702,7 +709,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Quoi ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -716,7 +723,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Non. Termine.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -730,7 +737,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je ne te demande pas la mer.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -744,7 +751,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Vraiment ?",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -765,7 +772,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Prépare-lui un endroit pour dormir.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -779,7 +786,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Dans la chambre.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -793,7 +800,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Et fais sortir le lit. Mettez-le dans le couloir. Nous aurons plus de place.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -814,7 +821,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Le lit. Faites-le déplacer.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -828,21 +835,8 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Pourquoi ?",
-      "preset": "odyssee-penelope-s15-p6",
-      "pause_after_ms": 180,
-      "accepted_probe": {
-        "human_gate": "H1b",
-        "variant": "p6-b",
-        "probe_sequence": 5,
-        "seed": 660205
-      },
-      "provider_parameters": {
-        "language_id": "fr",
-        "reference": "synthetic-vivienne",
-        "exaggeration": 0.45,
-        "cfg_weight": 0.44,
-        "temperature": 0.75
-      }
+      "preset": "odyssee-penelope",
+      "pause_after_ms": 180
     },
     {
       "scene": "S15 — Le lit",
@@ -856,7 +850,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Explique-moi.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -870,7 +864,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Avec assez d’hommes—",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -878,14 +872,7 @@
       "speaker": "ULYSSE",
       "text": "Non.",
       "preset": "odyssee-ulysse",
-      "external_voice_slot": "ULYSSES_EMOTIONAL_HUMAN_PASS",
-      "pause_after_ms": 180,
-      "accepted_probe": {
-        "human_gate": "H1b",
-        "variant": "p6-b",
-        "probe_sequence": 2,
-        "seed": 660202
-      }
+      "pause_after_ms": 180
     },
     {
       "scene": "S15 — Le lit",
@@ -1018,7 +1005,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Il n’a pas été déplacé.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1032,7 +1019,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Le lit.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1046,7 +1033,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Parce que je devais savoir si toi, tu pouvais l’être.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1060,7 +1047,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Déplacé.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1074,28 +1061,28 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Les hommes reviennent de la guerre et disent qu’ils sont les mêmes.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Les voyageurs reviennent et racontent qu’ils ont seulement vu davantage de choses.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Toi, tu as disparu vingt ans.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "J’avais besoin d’une chose qui ne puisse pas voyager avec ton histoire.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1109,21 +1096,8 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Notre lit.",
-      "preset": "odyssee-penelope-s15-p6",
-      "pause_after_ms": 560,
-      "accepted_probe": {
-        "human_gate": "H1b",
-        "variant": "p6-b",
-        "probe_sequence": 16,
-        "seed": 660216
-      },
-      "provider_parameters": {
-        "language_id": "fr",
-        "reference": "synthetic-vivienne",
-        "exaggeration": 0.42,
-        "cfg_weight": 0.48,
-        "temperature": 0.72
-      }
+      "preset": "odyssee-penelope",
+      "pause_after_ms": 560
     },
     {
       "scene": "S15 — Le lit",
@@ -1137,7 +1111,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je sais maintenant.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1172,7 +1146,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Oui.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1186,7 +1160,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "J’en étais sûre.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1200,7 +1174,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Tu la raconteras demain.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1214,7 +1188,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "À moi, non.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1222,21 +1196,14 @@
       "speaker": "ULYSSE",
       "text": "Non.",
       "preset": "odyssee-ulysse",
-      "external_voice_slot": "ULYSSES_EMOTIONAL_HUMAN_PASS",
-      "pause_after_ms": 180,
-      "accepted_probe": {
-        "human_gate": "H1b",
-        "variant": "p6-b",
-        "probe_sequence": 2,
-        "seed": 660202
-      }
+      "pause_after_ms": 180
     },
     {
       "scene": "S15 — Le lit",
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Alors demain.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1250,7 +1217,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Non.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1264,7 +1231,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je voudrai entendre ce qui compte.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1278,7 +1245,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "J’ai vécu vingt ans sans tout connaître. Je suis devenue assez compétente.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1292,7 +1259,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Alors ne les raconte pas encore.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1306,21 +1273,8 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Ulysse.",
-      "preset": "odyssee-penelope-s15-p6",
-      "pause_after_ms": 480,
-      "accepted_probe": {
-        "human_gate": "H1b",
-        "variant": "p6-b",
-        "probe_sequence": 13,
-        "seed": 660213
-      },
-      "provider_parameters": {
-        "language_id": "fr",
-        "reference": "synthetic-vivienne",
-        "exaggeration": 0.46,
-        "cfg_weight": 0.44,
-        "temperature": 0.74
-      }
+      "preset": "odyssee-penelope",
+      "pause_after_ms": 480
     },
     {
       "scene": "S15 — Le lit",
@@ -1334,7 +1288,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "La manière dont je te voyais a déjà eu vingt ans pour changer.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1355,7 +1309,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Je sais.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1369,7 +1323,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Et toi, tu ne peux pas savoir combien de fois j’ai imaginé qu’elle resterait vide.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1383,7 +1337,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "On cesse de leur demander d’être vraies.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
@@ -1397,7 +1351,7 @@
       "character_id": "penelope",
       "speaker": "PÉNÉLOPE",
       "text": "Ce soir, tu peux arrêter de rentrer.",
-      "preset": "odyssee-penelope-s15-p6"
+      "preset": "odyssee-penelope"
     },
     {
       "scene": "S15 — Le lit",
