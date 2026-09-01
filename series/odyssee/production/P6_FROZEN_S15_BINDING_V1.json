@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "id": "odyssee-p6-frozen-s15-binding-v1",
+  "authority_issue": 110,
+  "decision": "P6_FROZEN_S15_LINE_BINDING_RESOLVED",
+  "rationale": "P6-B was a condensed perceptual probe. This file maps its accepted dramatic/performance functions onto exact frozen S15 Program segments without fuzzy text matching and without changing the frozen narrative.",
+  "human_authority": {
+    "review_issue": 103,
+    "review_batch": "H1b",
+    "winning_variant": "p6-b",
+    "source_commit": "feb27315dd159a0ab1c071eee39eb106edebcea7",
+    "evidence": {
+      "emotional_impact": "4/5",
+      "penelope_final_verdict": "PASS",
+      "rhythm_pauses": "PASS",
+      "works_without_music": "PASS",
+      "ulysses_reaction": "FAIL_LOCALIZED"
+    }
+  },
+  "frozen_authority": {
+    "source_path": "series/odyssee/text/block-d.md",
+    "source_git_blob_sha1": "a036ae79ba5102af871cb722e0cc5d6ef313236c",
+    "sequence": "S15",
+    "program_path": "series/odyssee/programs/S15.json",
+    "program_git_blob_sha1_at_binding": "97fdb2e92ed9a1bc50cb8789bb270e6e0ddcd14d",
+    "segment_count": 193,
+    "text_change_authorized": false,
+    "locator_basis": "one-based Program segment index + exact speaker/text guard"
+  },
+  "staging_contract": {
+    "no_music": true,
+    "no_resolution_swell": true,
+    "placement": "simple-intimate",
+    "pauses": "preserve H1b-B earned-pause intent; measured timing remains authoritative",
+    "rule": "The bed test grows more intimate by subtraction, not by increased sound density."
+  },
+  "penelope_local_performance": {
+    "state": "HUMAN_ACCEPTED_LOCAL_H1B",
+    "provider": "Chatterbox Multilingual V3",
+    "upstream_commit": "5de7a54aa4e5e2baadb0182dde554908b48b85c2",
+    "language_id": "fr",
+    "conditioning_reference": "synthetic fr-FR-VivienneMultilingualNeural",
+    "pan": 0.04,
+    "scope_rule": "Apply the accepted P6-B expressive family only to the bed-test trap/verdict segments below. Pénélope outside this list keeps the established production baseline unless H2 reveals a concrete regression.",
+    "segments": [
+      {
+        "segment": 110,
+        "speaker": "PÉNÉLOPE",
+        "text": "Et fais sortir le lit. Mettez-le dans le couloir. Nous aurons plus de place.",
+        "slot": "trap-command",
+        "exaggeration": 0.48,
+        "cfg_weight": 0.42,
+        "temperature": 0.76
+      },
+      {
+        "segment": 113,
+        "speaker": "PÉNÉLOPE",
+        "text": "Le lit. Faites-le déplacer.",
+        "slot": "trap-hold",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      {
+        "segment": 115,
+        "speaker": "PÉNÉLOPE",
+        "text": "Pourquoi ?",
+        "slot": "trap-hold",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      {
+        "segment": 117,
+        "speaker": "PÉNÉLOPE",
+        "text": "Explique-moi.",
+        "slot": "trap-hold",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      {
+        "segment": 119,
+        "speaker": "PÉNÉLOPE",
+        "text": "Avec assez d’hommes—",
+        "slot": "trap-hold",
+        "exaggeration": 0.45,
+        "cfg_weight": 0.44,
+        "temperature": 0.75
+      },
+      {
+        "segment": 139,
+        "speaker": "PÉNÉLOPE",
+        "text": "Il n’a pas été déplacé.",
+        "slot": "verdict-open",
+        "exaggeration": 0.44,
+        "cfg_weight": 0.46,
+        "temperature": 0.74
+      },
+      {
+        "segment": 141,
+        "speaker": "PÉNÉLOPE",
+        "text": "Le lit.",
+        "slot": "verdict-open",
+        "exaggeration": 0.44,
+        "cfg_weight": 0.46,
+        "temperature": 0.74
+      },
+      {
+        "segment": 143,
+        "speaker": "PÉNÉLOPE",
+        "text": "Parce que je devais savoir si toi, tu pouvais l’être.",
+        "slot": "verdict-test",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      {
+        "segment": 145,
+        "speaker": "PÉNÉLOPE",
+        "text": "Déplacé.",
+        "slot": "verdict-test",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      {
+        "segment": 147,
+        "speaker": "PÉNÉLOPE",
+        "text": "Les hommes reviennent de la guerre et disent qu’ils sont les mêmes.",
+        "slot": "verdict-test",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      {
+        "segment": 148,
+        "speaker": "PÉNÉLOPE",
+        "text": "Les voyageurs reviennent et racontent qu’ils ont seulement vu davantage de choses.",
+        "slot": "verdict-test",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      {
+        "segment": 149,
+        "speaker": "PÉNÉLOPE",
+        "text": "Toi, tu as disparu vingt ans.",
+        "slot": "verdict-test",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      {
+        "segment": 150,
+        "speaker": "PÉNÉLOPE",
+        "text": "J’avais besoin d’une chose qui ne puisse pas voyager avec ton histoire.",
+        "slot": "verdict-test",
+        "exaggeration": 0.5,
+        "cfg_weight": 0.4,
+        "temperature": 0.76
+      },
+      {
+        "segment": 152,
+        "speaker": "PÉNÉLOPE",
+        "text": "Notre lit.",
+        "slot": "recognition-contained",
+        "exaggeration": 0.42,
+        "cfg_weight": 0.48,
+        "temperature": 0.72
+      },
+      {
+        "segment": 154,
+        "speaker": "PÉNÉLOPE",
+        "text": "Je sais maintenant.",
+        "slot": "recognition-contained",
+        "exaggeration": 0.42,
+        "cfg_weight": 0.48,
+        "temperature": 0.72
+      },
+      {
+        "segment": 159,
+        "speaker": "PÉNÉLOPE",
+        "text": "Oui.",
+        "slot": "recognition-contained",
+        "exaggeration": 0.42,
+        "cfg_weight": 0.48,
+        "temperature": 0.72
+      }
+    ]
+  },
+  "ulysses_emotional_performance": {
+    "state": "BLOCKED_ONLY_ON_ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "package_id": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "baseline_identity": {
+      "voice": "fr-FR-HenriNeural",
+      "rate": "-4%",
+      "pitch": "-10Hz",
+      "volume": "+2%"
+    },
+    "scope_rule": "Apply the human-qualified emotional capability only to these exact reaction segments. Do not recast Ulysse globally and do not apply expressive styling to the explanatory olive-tree passage by default.",
+    "groups": [
+      {
+        "id": "bed-shock",
+        "intent": "immediate personal shock; low theatricality; no shout",
+        "segments": [
+          {
+            "segment": 112,
+            "speaker": "ULYSSE",
+            "text": "Quoi ?"
+          },
+          {
+            "segment": 114,
+            "speaker": "ULYSSE",
+            "text": "On ne peut pas."
+          },
+          {
+            "segment": 116,
+            "speaker": "ULYSSE",
+            "text": "Tu le sais."
+          },
+          {
+            "segment": 118,
+            "speaker": "ULYSSE",
+            "text": "On ne peut pas déplacer ce lit."
+          },
+          {
+            "segment": 120,
+            "speaker": "ULYSSE",
+            "text": "Non."
+          }
+        ]
+      },
+      {
+        "id": "tree-wound",
+        "intent": "contained hurt; the voice may catch, but never melodrama",
+        "segments": [
+          {
+            "segment": 133,
+            "speaker": "ULYSSE",
+            "text": "Et si l’arbre a été coupé—"
+          },
+          {
+            "segment": 135,
+            "speaker": "ULYSSE",
+            "text": "Alors tu aurais dû le savoir."
+          }
+        ]
+      },
+      {
+        "id": "test-reveal",
+        "intent": "shock turning into recognition and intimate release; reduce projection",
+        "segments": [
+          {
+            "segment": 140,
+            "speaker": "ULYSSE",
+            "text": "Quoi ?"
+          },
+          {
+            "segment": 142,
+            "speaker": "ULYSSE",
+            "text": "Alors pourquoi—"
+          },
+          {
+            "segment": 151,
+            "speaker": "ULYSSE",
+            "text": "L’olivier."
+          },
+          {
+            "segment": 153,
+            "speaker": "ULYSSE",
+            "text": "Tu savais."
+          },
+          {
+            "segment": 158,
+            "speaker": "ULYSSE",
+            "text": "Pénélope."
+          }
+        ]
+      }
+    ],
+    "explanatory_baseline_segments": [
+      {
+        "segment": 123,
+        "text": "Il n’a pas été posé dans cette chambre."
+      },
+      {
+        "segment": 124,
+        "text": "J’ai construit la chambre autour de lui."
+      },
+      {
+        "segment": 126,
+        "text": "Il y avait un olivier à cet endroit."
+      },
+      {
+        "segment": 127,
+        "text": "Vivant."
+      },
+      {
+        "segment": 128,
+        "text": "Je n’ai pas voulu le couper."
+      },
+      {
+        "segment": 129,
+        "text": "J’ai taillé le tronc à la hauteur qu’il fallait."
+      },
+      {
+        "segment": 130,
+        "text": "J’en ai fait un des pieds du lit."
+      },
+      {
+        "segment": 131,
+        "text": "J’ai bâti autour."
+      },
+      {
+        "segment": 132,
+        "text": "Si quelqu’un a déplacé ce lit, alors il a fallu couper l’arbre."
+      }
+    ]
+  },
+  "fail_closed_guards": [
+    "Each mapped segment must still match the exact speaker and text above.",
+    "If S15 Program segment numbering or text drifts, this binding is invalid until Stream 1 deliberately rebinds it.",
+    "No fuzzy matching.",
+    "No silent fallback from the Pénélope local recipe or Ulysse emotional package.",
+    "No narrative rewrite is authorized by this binding."
+  ]
+}
