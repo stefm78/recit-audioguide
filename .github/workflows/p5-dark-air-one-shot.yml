@@ -77,7 +77,7 @@ jobs:
               "wav_sha256":h,
               "wav_bytes":wav.stat().st_size,
               "render_policy":{
-                  "loop":false,
+                  "loop":False,
                   "gain_db":0,
                   "fade_in_ms":1200,
                   "fade_out_ms":1600,
