@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "id": "odyssee-longform-production-v1",
+  "engine_ref": "f26efb0df49d6a9045f34f6ec0f3e09aac8d2d6f",
+  "product": {
+    "repository": "stefm78/recit-audioguide",
+    "stream1_handoff": "series/odyssee/production/STREAM3_HANDOFF_V1.json",
+    "stream1_main": "e5592161f2bb6b0a524c0dd0ef1f4a1b97a6a3c0",
+    "narrative_freeze": "PASS",
+    "spoken_words": 11788,
+    "sequence_count": 15
+  },
+  "policy": {
+    "fallback": "fail",
+    "cache": "optional-acceleration-only",
+    "human_review": "batched",
+    "final_master_gate": [
+      "all_assemblies_ready",
+      "automatic_QA_PASS",
+      "H2_no_material_open_defect",
+      "P4_SIRENS_HUMAN_PASS",
+      "ULYSSES_EMOTIONAL_HUMAN_PASS"
+    ]
+  },
+  "units": [
+    {
+      "id": "S01",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S01.json",
+      "program_sha256": "223b8e1b39e2f9aece86f939f0833a273c79b8a2df2a939d973979d717dbc068",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S02",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S02.json",
+      "program_sha256": "632b6d9b24a6f227a8663245a07ba9461fffd75ed37fb3601e11a14d4dfde0cc",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S03",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S03.json",
+      "program_sha256": "443ffd1855435de7098b98ca095acf428bb227eb7306a6c88ffdd805c37a3cb7",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S04",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S04.json",
+      "program_sha256": "ff814c971ff4d8aec5297eb8848f9538e0a1a1a85a5fe3cd02a2b6069dbb2f27",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S05",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S05.json",
+      "program_sha256": "c3d327ecbdc15e6200dd9e30c6c9b69225290908ba7e31141e7ecf45a50205aa",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S06",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S06.json",
+      "program_sha256": "2347ce76a501309fefa95f7d5532c3685e322567d695eb9356ea00c20ab49303",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S07",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S07.json",
+      "program_sha256": "f79aca02502729d65e110a2ea2ec9f9ad93a60a31059d540c9f479452352e928",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S08",
+      "state": "hold",
+      "provider": "edge+chatterbox-multilingual-v3",
+      "program": "series/odyssee/programs/S08.json",
+      "program_sha256": "87fde78cf3042c957e8911d671fa5f2dc54811b8ef740eb305a401931165f63b",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
+      "hold_reason": "P5 is HUMAN_PASS H1b, but the generic Chatterbox Production provider package/integrity contract is not promoted yet (#202)."
+    },
+    {
+      "id": "S09",
+      "state": "hold",
+      "provider": "edge+stream2-p4",
+      "program": "series/odyssee/programs/S09.json",
+      "program_sha256": "3451b7099d42137c7cab7f1bfbc289f6260fc9800d1d06ac1b143b19390d629a",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
+      "hold_reason": "P4_SIRENS_HUMAN_PASS package has not been delivered by Stream 2."
+    },
+    {
+      "id": "S10",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S10.json",
+      "program_sha256": "cedbbd2bf72d4bb68e25fed90a045138bd098135afd58a86689ae1d5107ee0dd",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S11",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S11.json",
+      "program_sha256": "252045c2b281e229a4a58f881cefc00e9d649ddb3740fd9d6e2970d6e0991edd",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S12",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S12.json",
+      "program_sha256": "fdbc6e6e09d9e449a8e63ab86f12ea154f3304b9cf36e8f6b47bd771153283cc",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S13",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S13.json",
+      "program_sha256": "01383be01cd125dadab3c15a755279e106987c61579f3bdde3d3740fc238b483",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S14",
+      "state": "ready",
+      "provider": "edge",
+      "program": "series/odyssee/programs/S14.json",
+      "program_sha256": "8a5637abcf3ed5407f1a88f7318936998bad2963005c1684a720c26767d5c531",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+    },
+    {
+      "id": "S15",
+      "state": "hold",
+      "provider": "edge+chatterbox-multilingual-v3+stream2-p6-ulysse",
+      "program": "series/odyssee/programs/S15.json",
+      "program_sha256": "043e9cdbcd556c1f03e71fb00a374b8ba89af04ca730c67b49fcc1eb592e5206",
+      "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+      "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
+      "hold_reason": "ULYSSES_EMOTIONAL_HUMAN_PASS is pending and Stream 1 must bind the accepted P6-B probe slots to frozen S15 lines; generic Chatterbox Production package also pending."
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "A",
+      "units": [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "id": "B",
+      "units": [
+        "S05",
+        "S06",
+        "S07",
+        "S08"
+      ]
+    },
+    {
+      "id": "C",
+      "units": [
+        "S09",
+        "S10",
+        "S11"
+      ]
+    },
+    {
+      "id": "D",
+      "units": [
+        "S12",
+        "S13",
+        "S14",
+        "S15"
+      ]
+    }
+  ],
+  "master": {
+    "assemblies": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  }
+}
