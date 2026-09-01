@@ -1,0 +1,33 @@
+name: P5 system runtime binding one-shot
+
+on:
+  push:
+    branches:
+      - prod/p5-system-runtime-binding-v1
+    paths:
+      - .github/workflows/p5-system-runtime-binding-one-shot.yml
+
+permissions:
+  contents: read
+
+jobs:
+  bind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: e82559cbd60b1d29de208e7e36ccd7505dcfcdcc
+          path: .audio-engine
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate package and emit exact SHA
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check ./.audio-engine
+          audio-engine provider-package validate             series/odyssee/production/provider-packages/P5_CHATTERBOX_MULTILINGUAL_V3_V1.json
+          sha256sum             series/odyssee/production/provider-packages/P5_CHATTERBOX_MULTILINGUAL_V3_V1.json
