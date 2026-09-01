@@ -1,0 +1,33 @@
+{
+  "schema": "recit.odyssee.p6.stream3_readiness.v1",
+  "id": "odyssee-p6-stream3-readiness-v1",
+  "status": "PARTIALLY_MATERIALIZED_SINGLE_EXTERNAL_HOLD",
+  "product_program": "series/odyssee/programs/S15.json",
+  "program_sha256": "180b422c27f4cae2a91a0d8bcfc8a368d56e0556e10a1604b96b4124bc48f395",
+  "product_binding": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
+  "penelope_mapping": "series/odyssee/production/P6_PENELOPE_PROVIDER_BINDING_V1.json",
+  "penelope_mapping_sha256": "8b127f510b89b490acfd22a9fa50be0fa47a3eb1bb65ec3e19bb97953d049072",
+  "penelope_provider_package": "series/odyssee/production/provider-packages/P6_PENELOPE_CHATTERBOX_MULTILINGUAL_V3_V1.json",
+  "penelope_provider_package_sha256": "0a529e30f6e6780dae89dad7f44316ec6072ec012c5f3225d4b93372250da1bf",
+  "performance_provider_engine_ref": "0d66509ffdeeca37dc727954949587155e80832f",
+  "machine_preflight_run": 33531592043,
+  "penelope": {
+    "mapped_segments": 16,
+    "human_gate": "H1b PASS",
+    "identity": "edge:fr-FR-VivienneMultilingualNeural",
+    "performance_provider": "chatterbox-multilingual-v3",
+    "fallback": "fail",
+    "state": "READY_FOR_FINAL_S15_COMPOSITION"
+  },
+  "ulysses_emotional": {
+    "state": "HOLD_STREAM2_ONLY",
+    "required_package": "ULYSSES_EMOTIONAL_HUMAN_PASS"
+  },
+  "staging": {
+    "no_music": true,
+    "dry": true,
+    "placement": "simple-intimate / center",
+    "frozen_text_preserved": true
+  },
+  "master_effect": "S15 and Block D remain HOLD; all other production stays independent."
+}
