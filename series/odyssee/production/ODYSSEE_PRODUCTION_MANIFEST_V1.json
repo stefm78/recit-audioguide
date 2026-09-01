@@ -183,18 +183,21 @@
     {
       "id": "S15",
       "state": "hold",
-      "provider": "edge+chatterbox-multilingual-v3+stream2-p6-ulysse",
       "program": "series/odyssee/programs/S15.json",
       "program_sha256": "180b422c27f4cae2a91a0d8bcfc8a368d56e0556e10a1604b96b4124bc48f395",
       "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
       "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
-      "hold_reason": "ULYSSES_EMOTIONAL_HUMAN_PASS is pending. Pénélope H1b-B is materialized with an immutable Chatterbox performance package; activation also requires the already-promoted performance_provider engine contract.",
+      "hold_reason": "ULYSSES_EMOTIONAL_HUMAN_PASS provider package is pending. Pénélope H1b-B Chatterbox performance is already materialized; no fallback allowed.",
       "provider_packages": [
         {
           "provider": "chatterbox-multilingual-v3",
           "package": "series/odyssee/production/provider-packages/P6_PENELOPE_CHATTERBOX_MULTILINGUAL_V3_V1.json",
           "package_sha256": "0a529e30f6e6780dae89dad7f44316ec6072ec012c5f3225d4b93372250da1bf"
         }
+      ],
+      "providers": [
+        "edge",
+        "chatterbox-multilingual-v3"
       ]
     }
   ],
