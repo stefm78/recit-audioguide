@@ -1,0 +1,112 @@
+name: P5 dark-air bed one-shot
+
+on:
+  push:
+    branches:
+      - prod/p5-provider-package-v1
+    paths:
+      - .github/workflows/p5-dark-air-one-shot.yml
+
+permissions:
+  contents: write
+
+jobs:
+  freeze-bed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11.16'
+
+      - name: Install exact H1b bed runtime
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check numpy==1.26.4 pydub==0.25.1
+
+      - name: Generate deterministic H1b dark-air texture
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p generated/p5-bed
+          python - <<'PY'
+          import hashlib, json, math
+          from pathlib import Path
+          import numpy as np
+          from pydub import AudioSegment
+
+          out=Path("generated/p5-bed")
+          seed=6501
+          sample_rate=24000
+          duration_seconds=480
+          target_dbfs=-43.0
+          rng=np.random.default_rng(seed)
+          x=np.clip(
+              rng.normal(0,0.18,int(sample_rate*duration_seconds)),
+              -1,1,
+          )
+          pcm=(x*32767).astype(np.int16).tobytes()
+          audio=AudioSegment(
+              data=pcm,
+              sample_width=2,
+              frame_rate=sample_rate,
+              channels=1,
+          )
+          audio=audio.low_pass_filter(180).high_pass_filter(35)
+          if math.isfinite(audio.dBFS):
+              audio=audio.apply_gain(target_dbfs-audio.dBFS)
+          wav=out/"p5-dark-air-6501.wav"
+          audio.export(wav,format="wav")
+
+          h=hashlib.sha256(wav.read_bytes()).hexdigest()
+          evidence={
+              "schema_version":1,
+              "id":"odyssee-p5-dark-air-6501-v1",
+              "basis":"H1b P5-A dark_air algorithm extended as a deterministic Production bed",
+              "seed":seed,
+              "sample_rate_hz":sample_rate,
+              "channels":1,
+              "duration_seconds":duration_seconds,
+              "normal_distribution_sigma":0.18,
+              "low_pass_hz":180,
+              "high_pass_hz":35,
+              "target_dbfs":target_dbfs,
+              "wav_sha256":h,
+              "wav_bytes":wav.stat().st_size,
+              "render_policy":{
+                  "loop":false,
+                  "gain_db":0,
+                  "fade_in_ms":1200,
+                  "fade_out_ms":1600,
+                  "ducking":"speech"
+              },
+              "perceptual_status":"PENDING_BATCH_H2_REGRESSION_CHECK",
+          }
+          (out/"p5-dark-air-6501.provenance.json").write_text(
+              json.dumps(evidence,ensure_ascii=False,indent=2)+"\n",
+              encoding="utf-8",
+          )
+          print(json.dumps(evidence,ensure_ascii=False,indent=2))
+          PY
+          sha256sum generated/p5-bed/*
+
+      - name: Append once to immutable P5 provider asset release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="odyssee-p5-provider-assets-v1"
+          gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null
+          if gh release download "$tag" --repo "$GITHUB_REPOSITORY" \
+              --pattern "p5-dark-air-6501.wav" --dir /tmp/p5-existing >/dev/null 2>&1; then
+            echo "ERROR: p5-dark-air-6501.wav already exists; immutable asset will not be replaced." >&2
+            exit 2
+          fi
+          gh release upload "$tag" \
+            generated/p5-bed/p5-dark-air-6501.wav \
+            generated/p5-bed/p5-dark-air-6501.provenance.json \
+            --repo "$GITHUB_REPOSITORY"
