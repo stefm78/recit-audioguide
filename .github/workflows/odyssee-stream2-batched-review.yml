@@ -1,0 +1,80 @@
+name: Odyssée Stream 2 batched review
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  P4_RUN_ID: "33514535576"
+  P6_RUN_ID: "33514546032"
+
+jobs:
+  build-review:
+    if: github.head_ref == 'stream2/p4-p6-batched-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Download authoritative machine-PASS P4 and P6
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p inputs/p4 inputs/p6
+
+          gh run download "$P4_RUN_ID"             --repo stefm78/audio-engine             -n local-tts-p4-voxcpm2-one-shot             -D inputs/p4
+
+          gh run download "$P6_RUN_ID"             --repo stefm78/audio-engine             -n local-tts-p6-qwen3-hybrid             -D inputs/p6
+
+          test -f inputs/p4/manifest.json
+          test -f inputs/p4/p4-voxcpm2-a.mp3
+          test -f inputs/p6/manifest.json
+          test -f inputs/p6/p6-qwen3-hybrid.mp3
+
+      - name: Verify authoritative candidate bindings
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p4=json.loads(Path("inputs/p4/manifest.json").read_text())
+          p6=json.loads(Path("inputs/p6/manifest.json").read_text())
+
+          assert p4["status"]=="MACHINE_PASS"
+          assert p4["cloud_tts"] is False
+          assert p4["nuc_required"] is False
+          assert len(p4["results"])==1
+          assert p4["results"][0]["variant"]=="p4-voxcpm2-a"
+          assert p4["results"][0]["candidate_sha256"]=="e630b78a0a7def96b3b1cd4934a2272919f1d6433c3ad0f66e850f17ede7572f"
+
+          assert p6["status"]=="MACHINE_PASS"
+          assert p6["cloud_tts"] is False
+          assert p6["nuc_required"] is False
+          assert p6["candidate_sha256"]=="4f4f6b352db9d981cef3db6a29c8c510b5396fa009163e07415388bde33ce033"
+
+          print("STREAM2_REVIEW_BINDING_PASS")
+          PY
+
+      - name: Build one P4 + P6 review surface
+        run: |
+          python tools/experiments/build_stream2_batched_review.py             --p4-dir inputs/p4             --p6-dir inputs/p6             --out generated/stream2-review
+
+      - name: Upload single listening bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: odyssee-stream2-p4-p6-review
+          path: generated/stream2-review/
+          if-no-files-found: error
+          retention-days: 14
