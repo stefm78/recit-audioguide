@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "odyssee-longform-production-v1",
-  "engine_ref": "52c933b6371103b977a2ccbcade291700bd0eb73",
+  "engine_ref": "ea57a1dca1277526be010ad301de1eeca624f409",
   "product": {
     "repository": "stefm78/recit-audioguide",
     "stream1_handoff": "series/odyssee/production/STREAM3_HANDOFF_V1.json",
@@ -22,7 +22,7 @@
       "ULYSSES_EMOTIONAL_HUMAN_PASS"
     ],
     "automatic_qa": "audio-engine qa v1 (scene + assembly)",
-    "production_workflow": "stefm78/audio-engine/.github/workflows/production.yml@52c933b6371103b977a2ccbcade291700bd0eb73"
+    "production_workflow": "stefm78/audio-engine/.github/workflows/production.yml@ea57a1dca1277526be010ad301de1eeca624f409"
   },
   "units": [
     {
@@ -90,13 +90,36 @@
     },
     {
       "id": "S08",
-      "state": "hold",
+      "state": "ready",
       "provider": "edge+chatterbox-multilingual-v3",
       "program": "series/odyssee/programs/S08.json",
-      "program_sha256": "87fde78cf3042c957e8911d671fa5f2dc54811b8ef740eb305a401931165f63b",
+      "program_sha256": "700a353fa1cfc9bc4d499796ed227f088dd1dc750001d762a4465140638789f2",
       "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
       "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
-      "hold_reason": "P5 is HUMAN_PASS H1b, but the generic Chatterbox Production provider package/integrity contract is not promoted yet (#202)."
+      "providers": [
+        "edge",
+        "chatterbox-multilingual-v3"
+      ],
+      "provider_packages": [
+        {
+          "provider": "chatterbox-multilingual-v3",
+          "package": "series/odyssee/production/provider-packages/P5_CHATTERBOX_MULTILINGUAL_V3_V1.json",
+          "package_sha256": "d4adb2f0a415e7b951e5b7181398f23ebe7f0a12fe575117d36832f89d4016a3"
+        }
+      ],
+      "assets": [
+        {
+          "id": "p5-dark-air-6501",
+          "path": "series/odyssee/production/provider-assets/p5/p5-dark-air-6501.wav",
+          "sha256": "86410b8809cd85874eaaec67cf25dc55c4ed92076cfe00fd344f8174bef1225d",
+          "source": {
+            "type": "github_release",
+            "repository": "stefm78/recit-audioguide",
+            "tag": "odyssee-p5-provider-assets-v1",
+            "asset": "p5-dark-air-6501.wav"
+          }
+        }
+      ]
     },
     {
       "id": "S09",
@@ -161,7 +184,7 @@
       "program_sha256": "043e9cdbcd556c1f03e71fb00a374b8ba89af04ca730c67b49fcc1eb592e5206",
       "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
       "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
-      "hold_reason": "ULYSSES_EMOTIONAL_HUMAN_PASS is pending and Stream 1 must bind the accepted P6-B probe slots to frozen S15 lines; generic Chatterbox Production package also pending."
+      "hold_reason": "ULYSSES_EMOTIONAL_HUMAN_PASS is pending; the generic Chatterbox Production provider package is now available."
     }
   ],
   "assemblies": [

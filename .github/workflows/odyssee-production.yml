@@ -7,6 +7,7 @@ on:
     paths:
       - 'series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json'
       - 'series/odyssee/production/voice-packs/**'
+      - 'series/odyssee/production/provider-packages/**'
       - 'series/odyssee/programs/**'
       - '.github/workflows/odyssee-production.yml'
 
@@ -18,7 +19,7 @@ jobs:
   production:
     permissions:
       contents: write
-    uses: stefm78/audio-engine/.github/workflows/production.yml@52c933b6371103b977a2ccbcade291700bd0eb73
+    uses: stefm78/audio-engine/.github/workflows/production.yml@ea57a1dca1277526be010ad301de1eeca624f409
     with:
       manifest_path: series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json
       artifact_prefix: odyssee-production-v1
