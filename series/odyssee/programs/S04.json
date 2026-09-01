@@ -1,0 +1,413 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s04",
+  "title": "L’Odyssée — S04 — L’étranger qui pleure",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-a.md",
+      "git_blob_sha1": "c8ec855d8e1096df6ddbbec65f8d0bfc152730f5",
+      "sequence": "S04"
+    }
+  ],
+  "production": {
+    "block": "A",
+    "direction": "series/odyssee/production/blocks/BLOCK_A.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les Phéaciens ne lui demandent pas tout de suite son histoire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ils lui donnent d’abord à manger.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "C’est peut-être pour cela qu’il reste.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Tu peux dormir ici. Demain, si les vents le permettent, nous trouverons un navire pour te conduire où tu voudras.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Sans savoir qui je suis ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Je sais que tu as faim.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ce n’est pas une identité.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "C’est suffisant pour un repas.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Une servante lui verse de l’eau sur les mains ; le vin est mêlé, puis quelques gouttes sont offertes aux dieux.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse baisse les yeux vers la table.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’avais presque oublié.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Quoi ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Qu’une table pouvait servir seulement à manger.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le roi ne pose pas de question.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Plus tard, un chanteur prend place dans la salle.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il chante une guerre terminée depuis longtemps. Une ville entourée de navires. Des hommes qui ont passé dix années devant des murs. Des noms que les convives connaissent comme on connaît les noms d’une histoire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "L’étranger ne mange plus.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il écoute.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Puis il détourne le visage.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Arrête.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le chant s’interrompt.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pourquoi ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Parce que tu pleures.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Chez nous, nous avons l’habitude de regarder les gens quand nous leur parlons.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse essuie sa joue d’un geste presque irrité.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Reprenez.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Cette chanson te fait du mal.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Elle parle d’hommes morts. Elle devrait faire du mal à quelqu’un.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Elle parle de Troie.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Tu y étais.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "L’étranger ne répond pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Tu connais les noms.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Beaucoup les connaissent.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Tu connais les silences entre les noms.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse regarde le chanteur, puis les hommes autour de la table.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Nous allons te ramener chez toi. Je te l’ai promis. Mais je voudrais savoir qui notre navire va transporter.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse pose les deux mains sur la table.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Depuis des années, son nom a été une arme, un danger, un souvenir, une chose criée trop fort au-dessus de l’eau et une chose qu’il aurait parfois préféré perdre.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Comment t’appelles-tu ?",
+      "preset": "odyssee-alcinoos",
+      "pause_after_ms": 220
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le silence est très simple.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ulysse.",
+      "preset": "odyssee-ulysse",
+      "pause_after_ms": 250
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Personne ne bouge.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Mon père s’appelait Laërte. Ma maison est à Ithaque.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Ulysse d’Ithaque.",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "alcinoos",
+      "speaker": "ALCINOOS",
+      "text": "Alors comment es-tu arrivé seul sur notre rivage ?",
+      "preset": "odyssee-alcinoos"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse respire.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Si tu veux comprendre comment je suis arrivé ici, il faut commencer par le moment où j’ai cru que mon intelligence suffisait à me ramener chez moi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La voix de l’étranger change à peine.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pourtant, à partir de cet instant, ce n’est plus la salle qui contient Ulysse.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "C’est Ulysse qui contient la mer.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avions quitté Troie. Nous avions encore des navires. Encore des hommes. Et nous pensions tous que le plus difficile était derrière nous.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S04 — L’étranger qui pleure",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Nous avions tort.",
+      "preset": "odyssee-ulysse"
+    }
+  ]
+}
