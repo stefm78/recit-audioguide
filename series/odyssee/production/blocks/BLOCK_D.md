@@ -3,7 +3,7 @@
 Authority: #110  
 Frozen source: `series/odyssee/text/block-d.md` @ blob `a036ae79ba5102af871cb722e0cc5d6ef313236c`  
 Spoken words: 3,760  
-State: **PARTIALLY_RENDERABLE — FIVE S15 ULYSSE LINES ONLY BLOCKED**
+State: **PARTIALLY_RENDERABLE — FROZEN S15 BINDING RESOLVED; VOCAL CAPABILITIES ONLY BLOCKED**
 
 ## Block dramatic job
 
@@ -113,17 +113,25 @@ Preserve P6-B:
 - simple intimate placement;
 - no restaging.
 
-Ulysse baseline remains accepted for explanatory lines:
-- « Parce que l’un de ses pieds est un olivier. »
-- « Il était vivant quand j’ai construit la chambre. »
-- « J’ai taillé le tronc. J’ai bâti les murs autour. »
+Frozen S15 binding:
+- **RESOLVED** by `series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json`;
+- locator authority is one-based `series/odyssee/programs/S15.json` segment index plus exact speaker/text guard;
+- P6-B probe wording is not executable text authority and must never be fuzzy-matched.
 
-Replace only with `ULYSSES_EMOTIONAL_HUMAN_PASS`:
-- « Non. »
-- « Ce lit ne sort pas de cette chambre. »
-- « Tu le savais. »
-- « Pénélope… »
-- « Notre lit. »
+Pénélope local accepted performance is bound only to the bed-test trap/verdict segments:
+- 110, 113, 115, 117, 119;
+- 139, 141, 143, 145, 147–150, 152, 154, 159.
+
+Ulysse remains on the accepted baseline for the explanatory olive-tree passage:
+- 123, 124;
+- 126–132.
+
+`ULYSSES_EMOTIONAL_HUMAN_PASS` is consumed only on the exact frozen reaction segments:
+- bed shock / refusal: 112, 114, 116, 118, 120;
+- tree wound: 133, 135;
+- test reveal / recognition release: 140, 142, 151, 153, 158.
+
+This replaces the obsolete five-line probe shorthand. The full frozen S15 text is unchanged.
 
 Sound:
 - voice, silence, optional almost-imperceptible wood/textile if already qualified;
