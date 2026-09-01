@@ -63,30 +63,33 @@
     },
     {
       "id": "S05",
-      "state": "ready",
+      "state": "hold",
       "provider": "edge",
       "program": "series/odyssee/programs/S05.json",
       "program_sha256": "c3d327ecbdc15e6200dd9e30c6c9b69225290908ba7e31141e7ecf45a50205aa",
       "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V2.json",
-      "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b"
+      "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b",
+      "hold_reason": "MARIN_AUTHORIZED_VOICE_UNAVAILABLE_IN_CURRENT_EDGE_PROVIDER: Stream 1 replacement MARIN binding pending; no fallback allowed."
     },
     {
       "id": "S06",
-      "state": "ready",
+      "state": "hold",
       "provider": "edge",
       "program": "series/odyssee/programs/S06.json",
       "program_sha256": "2347ce76a501309fefa95f7d5532c3685e322567d695eb9356ea00c20ab49303",
       "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V2.json",
-      "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b"
+      "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b",
+      "hold_reason": "MARIN_AUTHORIZED_VOICE_UNAVAILABLE_IN_CURRENT_EDGE_PROVIDER: Stream 1 replacement MARIN binding pending; no fallback allowed."
     },
     {
       "id": "S07",
-      "state": "ready",
+      "state": "hold",
       "provider": "edge",
       "program": "series/odyssee/programs/S07.json",
       "program_sha256": "f79aca02502729d65e110a2ea2ec9f9ad93a60a31059d540c9f479452352e928",
       "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V2.json",
-      "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b"
+      "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b",
+      "hold_reason": "MARIN_AUTHORIZED_VOICE_UNAVAILABLE_IN_CURRENT_EDGE_PROVIDER: Stream 1 replacement MARIN binding pending; no fallback allowed."
     },
     {
       "id": "S08",
@@ -133,12 +136,13 @@
     },
     {
       "id": "S10",
-      "state": "ready",
+      "state": "hold",
       "provider": "edge",
       "program": "series/odyssee/programs/S10.json",
       "program_sha256": "cedbbd2bf72d4bb68e25fed90a045138bd098135afd58a86689ae1d5107ee0dd",
       "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V2.json",
-      "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b"
+      "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b",
+      "hold_reason": "MARIN_AUTHORIZED_VOICE_UNAVAILABLE_IN_CURRENT_EDGE_PROVIDER: Stream 1 replacement MARIN binding pending; no fallback allowed."
     },
     {
       "id": "S11",
