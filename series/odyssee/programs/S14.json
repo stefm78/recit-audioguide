@@ -1,0 +1,852 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-s14",
+  "title": "L’Odyssée — S14 — L’arc",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "sources": [
+    {
+      "path": "series/odyssee/text/block-d.md",
+      "git_blob_sha1": "a036ae79ba5102af871cb722e0cc5d6ef313236c",
+      "sequence": "S14"
+    }
+  ],
+  "production": {
+    "block": "D",
+    "direction": "series/odyssee/production/blocks/BLOCK_D.md",
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
+  },
+  "segments": [
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le lendemain, Pénélope entre dans la salle avec une décision.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Cela suffit.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Enfin.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Ne sois pas si heureux. Tu n’as encore rien gagné.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Tu vas choisir.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Oui.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque la regarde.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse ne bouge pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "On va apporter l’arc d’Ulysse.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Son arc ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Celui qu’aucun de vous n’aime toucher quand vous fouillez ses affaires.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Que veux-tu en faire ?",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Celui qui saura le bander et faire passer une flèche à travers douze haches alignées remportera l’épreuve.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Et ta main ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Si tu préfères, je peux seulement te donner l’arc.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Fais-le apporter.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "L’arme arrive.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pendant un instant, la salle devient attentive à un objet.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Antinoos le prend.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Il est lourd.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "C’est le bois.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Merci, Télémaque.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il essaie.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La corde ne vient pas où il veut.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Il a séché.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Le bois ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Tais-toi.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Un autre prétendant essaie.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Puis un autre.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "On chauffe l’arc. On le frotte. On explique l’échec précédent.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Plus les hommes parlent, moins l’arme bouge.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je peux essayer ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le silence tombe d’abord sur les plus proches.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Toi ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "J’ai déjà tenu un arc.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Et moi j’ai déjà tenu une coupe. Cela ne fait pas de moi un amphore.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Non. Mais tu as beaucoup pratiqué.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les rires sont plus nerveux que la veille.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Sors.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Il a demandé à essayer.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Ce concours ne concerne pas les mendiants.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "C’est mon concours.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Et nous sommes ceux qui attendent ton choix.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "penelope",
+      "speaker": "PÉNÉLOPE",
+      "text": "Voilà pourquoi j’essaie une méthode qui vous oblige enfin à faire quelque chose.",
+      "preset": "odyssee-penelope"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque intervient.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Donnez-lui l’arc.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Tu prends goût à donner des ordres.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "J’en ai entendu assez pour apprendre.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "L’arc passe de main en main jusqu’à Ulysse.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ses doigts trouvent le bois.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il ne se précipite pas.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il vérifie ce qu’il connaît déjà.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Puis il tend la corde.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le geste est simple.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "C’est précisément ce qui fait peur.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Attends.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Trop tard.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La flèche part.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le bruit est bref.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Quand les hommes regardent à nouveau Ulysse, quelque chose a changé dans la manière dont il tient son corps.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Qui es-tu ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu m’as posé la question hier.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Qui es-tu ?",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu as mangé assez longtemps chez moi pour connaître le nom du propriétaire.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque ferme une porte.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Ulysse.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Oui.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Impossible.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Cette journée semble difficile pour ce mot.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le premier mouvement d’Antinoos est vers une arme.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il n’y en a plus à portée.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Je les ai déplacées.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "antinoos",
+      "speaker": "ANTINOOS",
+      "text": "Traître.",
+      "preset": "odyssee-antinoos-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "À qui ?",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Le combat n’a rien d’un chant.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il est proche, confus, rapide.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Les hommes qui avaient passé des années à agir comme s’ils ne pouvaient jamais être chassés découvrent que les portes ont changé de côté.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Arrête !",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Pose ce que tu tiens.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Antinoos est mort. C’était lui qui poussait les autres.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Vous avez tous mangé ici.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Nous rendrons ce que nous avons pris.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Vingt ans ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Les troupeaux. Le vin. Tout.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu vas rendre les années à Pénélope ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Non.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "À Télémaque ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "eurymaque",
+      "speaker": "EURYMAQUE",
+      "text": "Non.",
+      "preset": "odyssee-eurymaque-h2"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Alors cesse de proposer des comptes que tu sais faux.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Eurymaque attaque.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Après cela, il n’y a plus de négociation.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Télémaque combat près de son père.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Pas comme un enfant qui retrouve un héros.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Comme un jeune homme qui essaie de rester vivant à côté d’un homme qu’il commence seulement à connaître.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Et puis, aussi brutalement qu’elle a commencé, la lutte s’arrête.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "La maison ne devient pas paisible.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Elle devient vide d’ennemis.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Père.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse se tourne.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "C’est la première fois que Télémaque l’appelle ainsi sans que le mot soit une question.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Tu es blessé ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Non.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Montre-moi.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Je vais bien.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Montre.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Je vais bien.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Très bien.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu n’es pas obligé de rattraper vingt ans aujourd’hui.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Je sais.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu mens mal.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "C’est nouveau.",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ils rient une seconde.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Puis Ulysse cherche du regard.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "ulysse",
+      "speaker": "ULYSSE",
+      "text": "Ta mère ?",
+      "preset": "odyssee-ulysse"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "On va la chercher.",
+      "preset": "odyssee-telemaque"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Ulysse pose l’arc.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il a repris sa maison.",
+      "preset": "odyssee-narratrice"
+    },
+    {
+      "scene": "S14 — L’arc",
+      "character_id": "narratrice",
+      "speaker": "NARRATRICE",
+      "text": "Il n’est pas encore rentré.",
+      "preset": "odyssee-narratrice"
+    }
+  ]
+}
