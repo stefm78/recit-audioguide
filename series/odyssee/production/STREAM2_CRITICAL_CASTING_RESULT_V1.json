@@ -31,27 +31,26 @@
   },
   "p6_ulysse_emotional": {
     "decision": "HOLD_STREAM2",
-    "last_attempt": "REJECTED_PRE_HUMAN",
+    "last_attempt": "REJECTED",
     "rejection_class": [
-      "CAPABILITY_REJECT",
-      "STAGING_DURATION_FAIL",
-      "TIMBRE_DIRECTION_FAIL"
+      "ARTISTIC_FAIL_MELODRAMA"
     ],
     "human": {
-      "impact": 3,
+      "impact": 4,
       "reaction": "PASS",
       "identity": "PASS",
-      "french": "FAIL",
+      "french": "PASS",
       "melodrama": "PRESENT",
-      "staging": "FAIL"
+      "staging": "PASS"
     },
     "authoritative_machine": {
-      "repo": "stefm78/audio-engine",
-      "run_id": 33605631004,
-      "head_sha": "f883138231e0ab17ae9cd4d11209e3b4afa78cf5",
-      "candidate_sha256": "6f7e25da627c5b89974831f9043bf901b5b06eba7bd8121690da1d5812cf0e47",
-      "artifact_name": "local-tts-p6-voicedesign-beltout-one-shot",
-      "artifact_digest": "sha256:5320de5a7b06de801706821ad1ed4aa6baee01f913fd031b98191f81fecb49ac"
+      "execution": "PRIVATE_LOCAL_SANDBOX",
+      "final_wav_sha256": "6240551fe91141a517bb687aead9a78c69bb353c731c9b45cd4f2b4efcdea0ee",
+      "final_mp3_sha256": "674df24d7291bce2ee6a0168a638095112b9c9ef50678742ab0e57d34032a39f",
+      "manifest_sha256": "7018243a83f321c8e41b00c2906bfe63afd776a039d538dd97aa79bfca0d145b",
+      "raw_human_audio_uploaded_to_github": false,
+      "converted_slots": 5,
+      "machine_gate": "PASS"
     },
     "preserve": [
       "same_Ulysse_identity",
@@ -66,17 +65,17 @@
       "same_Confucius4_single_prompt",
       "same_VoiceDesign_to_BeltOut_cell",
       "same_CosyVoice3_to_BeltOut_cell",
-      "instruction_tuning",
+      "same_frozen_human_source_set_to_BeltOut",
       "seed_retry",
+      "second_BeltOut_pass",
       "best_of_N",
       "x_vector_blending",
       "checkpoint_sweep",
       "duration_DSP_rescue",
       "DSP_rescue",
-      "NUC_retry_for_capability_failure",
       "cloud_TTS"
     ],
-    "next_hypothesis_requirement": "human_french_performance_source_with_fixed_timing_and_restraint_then_single_BeltOut_identity_conversion",
+    "next_hypothesis_requirement": "first_localize_melodrama_source_vs_conversion_then_if_source_open_new_independently_selected_underplayed_human_source_set",
     "stream3_state": "BLOCKED_ONLY_ON_ULYSSES_EMOTIONAL_HUMAN_PASS",
     "attempt_history": [
       {
@@ -174,15 +173,41 @@
             "cosine_output_to_henri": 0.41906675696372986
           }
         }
+      },
+      {
+        "architecture": "Human French performance source -> BeltOut timbre transfer to immutable Henri/Ulysse",
+        "decision": "REJECTED",
+        "rejection_class": [
+          "ARTISTIC_FAIL_MELODRAMA"
+        ],
+        "human": {
+          "impact": 4,
+          "reaction": "PASS",
+          "identity": "PASS",
+          "french": "PASS",
+          "melodrama": "PRESENT",
+          "staging": "PASS"
+        },
+        "machine": {
+          "execution": "PRIVATE_LOCAL_SANDBOX",
+          "final_wav_sha256": "6240551fe91141a517bb687aead9a78c69bb353c731c9b45cd4f2b4efcdea0ee",
+          "final_mp3_sha256": "674df24d7291bce2ee6a0168a638095112b9c9ef50678742ab0e57d34032a39f",
+          "manifest_sha256": "7018243a83f321c8e41b00c2906bfe63afd776a039d538dd97aa79bfca0d145b",
+          "raw_human_audio_uploaded_to_github": false,
+          "converted_slots": 5,
+          "machine_gate": "PASS"
+        }
       }
     ],
     "learning": {
-      "identity_preservation": "DEMONSTRATED_BY_CONFUCIUS4_AND_VOICEDESIGN_BELTOUT",
-      "emotional_reaction": "DEMONSTRATED_BY_VOICEDESIGN_BELTOUT",
-      "natural_french_restrained_source_performance": "NOT_YET_QUALIFIED",
-      "staging": "COSYVOICE3_SOURCE_DURATION_REJECT_ON_SLOT_2",
-      "beltout": "CAPABILITY_PROVEN_BUT_NOT_DIRECTIONALLY_RELIABLE_FOR_EVERY_SOURCE",
-      "remaining_failure": "QUALIFIED_NATURAL_FRENCH_HUMAN_LEVEL_PERFORMANCE_WITH_TIMING_AND_RESTRAINT"
+      "identity_preservation": "PASS_ON_LATEST",
+      "emotional_reaction": "PASS_ON_LATEST",
+      "impact": "4_OF_5_PASS",
+      "french": "PASS_ON_LATEST",
+      "staging": "PASS_ON_LATEST",
+      "melodrama": "PRESENT_ON_LATEST_ONLY_REMAINING_BLOCKER",
+      "remaining_failure": "RESTRAINT_ONLY",
+      "next_diagnostic": "COMPARE_FROZEN_HUMAN_SOURCE_VS_BELTOUT_CONVERTED_TO_LOCALIZE_MELODRAMA"
     }
   }
 }
