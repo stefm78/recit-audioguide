@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.marin_capability_hold.v1",
   "id": "odyssee-marin-capability-hold-v1",
-  "status": "RESOLVED_STREAM1_V3_BOUND_REQUALIFYING_SCENE_V4",
+  "status": "RESOLVED_STREAM1_V3_SCENE_SHARDS_QUALIFIED",
   "authority": {
     "stream1_issue": 110,
     "stream3_issue": 112,
@@ -33,7 +33,7 @@
   "policy": {
     "silent_fallback": "FORBIDDEN",
     "stream3_voice_selection": "FORBIDDEN",
-    "next_action": "Stream 3 performs final scene-v4 product qualification; no standalone human gate."
+    "next_action": "No MARIN recast or standalone human gate. Requalify shared Block B after generic mastering fix."
   },
   "resolution": {
     "stream1_main": "dae91ec3870b77a6fb49598ff47f1bc33d3fbf28",
@@ -74,7 +74,19 @@
       "final_retry_cache_schema": "scene-v4",
       "final_retry_normal_source": "scene-v2 only",
       "final_retry_legacy_engine_ref": "e82559cbd60b1d29de208e7e36ccd7505dcfcdcc",
-      "final_retry_legacy_voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
+      "final_retry_legacy_voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
+      "scene_v4_qualification_run": 33613126226,
+      "scene_v4_result": "MARIN_EXACT_CACHE_CONTRACT_PASS",
+      "scene_v4_voice_cache_hits": {
+        "S05": 135,
+        "S06": 128,
+        "S07": 125,
+        "S10": 108
+      },
+      "block_b_state": "PENDING_GENERIC_MASTERING_ONLY",
+      "block_b_mastering_issue": 248,
+      "block_b_mastering_pr": 249,
+      "block_b_target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f"
     }
   }
 }
