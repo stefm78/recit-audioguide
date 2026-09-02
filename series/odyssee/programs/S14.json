@@ -15,25 +15,11 @@
   "production": {
     "block": "D",
     "direction": "series/odyssee/production/blocks/BLOCK_D.md",
-    "stage": "sound-integrated-h2-v1",
+    "stage": "scene-foundation-v1",
     "state": "READY",
     "blockers": [],
     "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
-    "no_silent_fallback": true,
-    "sound_materialization": {
-      "state": "INTEGRATED_FOR_H2",
-      "mode": "BOUND_NO_SELECTION_FALLBACKS",
-      "authority": "series/odyssee/production/ASSET_PLAN.md",
-      "acquisition_result": "series/odyssee/production/H2_SOUND_ACQUISITION_RESULT_V1.json",
-      "binding": "series/odyssee/production/H2_SOUND_DIRECTION_BINDINGS_V1.json",
-      "directives": [
-        "S14_BOW_RELEASE",
-        "S14_COMBAT_RESTRAINT",
-        "S14_TO_S15_HEADROOM"
-      ],
-      "new_assets": 0,
-      "rule": "Pre-H2 acquisition is exhausted; optional or no-selection material resolves to authored silence/omit-and-warn. Do not add decorative sound."
-    }
+    "no_silent_fallback": true
   },
   "segments": [
     {
