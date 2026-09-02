@@ -35,7 +35,7 @@ A production choice is not mislabeled as human accepted.
 | Anticlée | HUMAN_ACCEPTED P5 H1b | Chatterbox Multilingual V3, exact `P5_UNDERWORLD_ACCEPTED_RECIPE.json` |
 | Pénélope — S15 climax | HUMAN_ACCEPTED_LOCAL H1b | preserve P6-B Chatterbox performance conditioned from synthetic Vivienne reference; no global recast implied |
 | Sirènes — S09 | HUMAN_ACCEPTED_LOCAL P4 | `P4_SIRENS_HUMAN_PASS`; exact frozen-scene disposition in `P4_FROZEN_S09_BINDING_V1.json`; five left VoxCPM2 lines + eight right Chatterbox/Vivienne lines; attraction/French/polyphony/address PASS, cliché LIGHT |
-| Ulysse — S15 emotional lines | BLOCKED_STREAM2 | `ULYSSES_EMOTIONAL_HUMAN_PASS` still required; Qwen3 hybrid attempt rejected humanly (impact 1/5, reaction FAIL, identity FAIL, melodrama PRESENT); same identity remains mandatory |
+| Ulysse — S15 emotional lines | HUMAN_ACCEPTED_LOCAL P6 | Human French performance → BeltOut → Henri/Ulysse; impact 4/5, reaction/identity/French/staging PASS; melodrama PRESENT observed and explicitly accepted as appropriate for this scene; `ULYSSES_EMOTIONAL_HUMAN_PASS` |
 
 ## Secondary production choices
 
@@ -120,6 +120,8 @@ The H1b P6-B expressive performance is local evidence for the climax, not permis
 Authority: `series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json`.
 
 - P4 Sirènes is resolved: `P4_SIRENS_HUMAN_PASS`.
-- P6 Ulysse emotional remains unresolved.
-- The rejected P6 Qwen3 hybrid must not be retried through prompt tuning, seed changes, best-of-N, donor substitution, DSP rescue, NUC rerun, or cloud TTS.
-- Any next P6 attempt must use a materially distinct architecture while preserving the established Ulysse identity and the accepted Pénélope/staging.
+- P6 Ulysse emotional is resolved: `ULYSSES_EMOTIONAL_HUMAN_PASS`.
+- Accepted capability: human French performance → BeltOut → Henri/Ulysse.
+- Human review: impact 4/5; reaction PASS; identity PASS; French PASS; staging PASS.
+- Melodrama was observed as PRESENT and explicitly accepted as appropriate for this scene. Observation and acceptance are separate facts.
+- Stream 2 exits the critical path; Stream 3 may bind and industrialize the accepted capability for S15.
