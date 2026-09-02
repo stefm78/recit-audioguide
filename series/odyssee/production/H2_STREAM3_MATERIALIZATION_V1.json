@@ -10,9 +10,8 @@
   },
   "engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
   "latest_clean_control": {
-    "production_run": 33603091550,
-    "product_head": "82a41c335194ab06353d3b7480346cfd82fed99e",
-    "production_manifest_sha256": "6b062c5d00a437d81ffbd6fd66e82030dd2ced335137b4a92e5ed4c0b15da288",
+    "production_run": 33614971059,
+    "product_head": "ef8f2c329e94c96c0fec4270b000c1d80f184972",
     "workflow_conclusion": "success",
     "business_state": "hold",
     "machine_ready_units": [
@@ -20,14 +19,23 @@
       "S02",
       "S03",
       "S04",
+      "S05",
+      "S06",
+      "S07",
       "S08",
+      "S10",
       "S11",
       "S12",
       "S13",
       "S14"
     ],
     "machine_ready_assemblies": [
-      "A"
+      "A",
+      "B"
+    ],
+    "held_units": [
+      "S09",
+      "S15"
     ],
     "master": "hold"
   },
@@ -51,7 +59,7 @@
   },
   "casting": {
     "correction": "MARIN_EURYLOQUE_EXACT_PRESET_COLLISION",
-    "status": "SCENE_SHARDS_QUALIFIED_BLOCK_B_MASTERING_PENDING",
+    "status": "PRODUCTION_QUALIFIED_SHARED_H2_PENDING",
     "historical_failed_voice": "fr-FR-AlainNeural",
     "authorized_voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V3.json",
     "voice_pack_sha256": "81794bed6df8d7163d1cdccfaac2e84b91bdc726c8f79edb1e5da43d391edb1a",
@@ -217,6 +225,21 @@
         "clipping": "PASS"
       },
       "human_h2_eligible": false
+    },
+    "block_b_qualification": {
+      "production_run": 33614971059,
+      "state": "READY",
+      "automatic_qa": "PASS",
+      "audio_sha256": "950d01bf2979ff4ebb508713f74947eafdeb0de11c729180dacf10bab90058cf",
+      "integrated_lufs": -17.74,
+      "target_lufs": -16,
+      "loudness_delta_lu": 1.74,
+      "true_peak_dbtp": -2.62,
+      "target_true_peak_dbtp": -2.5,
+      "limiter_ceiling_dbfs": -5.71,
+      "mastering_engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
+      "mastering_issue": 248,
+      "mastering_pr": 249
     }
   },
   "p4": {
@@ -278,13 +301,19 @@
       "target_true_peak_dbtp": -2.5,
       "correction": "audio-engine #220 generic encoded true-peak guard"
     },
-    "current_block_b_state": "PENDING_GENERIC_MASTERING_REQUALIFICATION",
+    "current_block_b_state": "READY",
     "rule": "Do not reopen P5.",
     "block_b_mastering_fix": {
       "engine_issue": 248,
       "engine_pr": 249,
       "target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
       "policy": "KEEP_QA_THRESHOLDS; PRESERVE_LOUDNESS_TARGET; LIMIT_PEAKS_ONLY"
+    },
+    "block_b_qualification": {
+      "production_run": 33614971059,
+      "state": "ready",
+      "automatic_qa": "PASS",
+      "audio_sha256": "950d01bf2979ff4ebb508713f74947eafdeb0de11c729180dacf10bab90058cf"
     }
   },
   "review_release": {
@@ -305,7 +334,7 @@
       "S14",
       "Block B if qualified"
     ],
-    "current_batch_maturity": "WAITING_FOR_BLOCK_B_MASTERING_AND_P4_MACHINE_QUALIFICATION",
+    "current_batch_maturity": "WAITING_FOR_P4_S09_MACHINE_QUALIFICATION",
     "rule": "Do not dispatch the human H2 review release merely because independent machine-ready audio exists."
   },
   "program_materialization": {
@@ -423,7 +452,7 @@
       "quarantined": true
     },
     "scene_v4_recovery": {
-      "state": "SCENE_CACHE_AND_UNIT_QUALIFIED_BLOCK_B_MASTERING_PENDING",
+      "state": "QUALIFIED_PRODUCT",
       "target_engine_ref": "5a23a1a7858047a6eba9ddc092b98ad3b9743bd3",
       "generic_issue": 246,
       "generic_pr": 247,
@@ -447,7 +476,7 @@
         "Block B READY",
         "no human review triggered"
       ],
-      "qualified_product_run": 33613126226,
+      "qualified_product_run": 33614971059,
       "unit_contract": {
         "all_ready_unit_jobs": "PASS",
         "marin_exact_cache_hits": "PASS",
@@ -455,10 +484,13 @@
         "scene_v3_restore": "NONE"
       },
       "block_b_mastering": {
-        "state": "FAILED_LEVELS_ONLY",
+        "state": "QUALIFIED",
         "issue": 248,
         "pr": 249,
-        "target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f"
+        "target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
+        "integrated_lufs": -17.74,
+        "true_peak_dbtp": -2.62,
+        "automatic_qa": "PASS"
       }
     }
   }
