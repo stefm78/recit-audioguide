@@ -8,7 +8,7 @@
     "stream2_result": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
     "marin_hold": "series/odyssee/production/MARIN_CAPABILITY_HOLD_V1.json"
   },
-  "engine_ref": "601049702c92adf840724528e295ab76c9290a36",
+  "engine_ref": "5c505c432f086687253f706dd2d7191980066126",
   "latest_clean_control": {
     "production_run": 33597992496,
     "product_head": "2eedbe2ac93a298d7bac1ee9c2c32b932a3a5c61",
@@ -78,16 +78,37 @@
     "generic_provider": "READY",
     "generic_provider_main": "fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
     "generic_provider_smoke_run": 33537558645,
-    "product_state": "HOLD_EXACT_FROZEN_BINDING",
-    "hold_reason": "P4_FROZEN_S09_LINE_BINDING_REQUIRED",
+    "product_state": "READY_BINDING_RESOLVED_WAITING_STREAM3_MATERIALIZATION",
     "prepared_product_pr": 132,
-    "rule": "Do not infer compact H1b probe slots onto frozen S09 by order, fuzzy text, semantics, or artistic intuition."
+    "rule": "Do not infer compact H1b probe slots onto frozen S09 by order, fuzzy text, semantics, or artistic intuition.",
+    "binding_authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
+    "subtle_stereo_capability": {
+      "state": "READY_IN_TARGET_ENGINE",
+      "engine_ref": "5c505c432f086687253f706dd2d7191980066126",
+      "placements": [
+        "slight-left",
+        "slight-right"
+      ],
+      "pan": [
+        -0.16,
+        0.16
+      ]
+    }
   },
   "p6_ulysse_emotional": {
     "state": "HOLD_STREAM2_ONLY",
     "required_package": "ULYSSES_EMOTIONAL_HUMAN_PASS",
-    "last_attempt": "ARTISTIC_FAIL_IDENTITY_FAIL",
-    "next_attempt_requirement": "MATERIALLY_DISTINCT_ARCHITECTURE_ONLY",
+    "last_attempt": "CONFUCIUS4_REJECTED",
+    "rejection_class": [
+      "ARTISTIC_FAIL_REACTION"
+    ],
+    "impact": 2,
+    "reaction": "FAIL",
+    "identity": "PASS",
+    "french": "PASS",
+    "melodrama": "NONE",
+    "staging": "PASS",
+    "next_attempt_requirement": "MATERIALLY_DISTINCT_ARCHITECTURE_WITH_DECOUPLED_IDENTITY_AND_EMOTION_CONDITIONING",
     "penelope_side": "MATERIALIZED"
   },
   "p5": {
@@ -167,7 +188,7 @@
       }
     },
     "required_product_action": "Restore pre-edit Programs and manifest hashes so the previously qualified speech cache identity remains authoritative.",
-    "required_engine_action": "RESOLVED_GENERICALLY_BY_AUDIO_ENGINE_231_PENDING_PRODUCT_REPIN_QUALIFICATION",
+    "required_engine_action": "RESOLVED_GENERICALLY_BY_AUDIO_ENGINE_231_AND_236_PENDING_PRODUCT_REPIN_QUALIFICATION",
     "h2_sound_authority": "Keep explicit no-selection/silence decisions in H2_STREAM3_MATERIALIZATION_V1.json and H2_SOUND_DIRECTION_BINDINGS_V1.json until the cache identity defect is resolved.",
     "rules": [
       "reuse_existing_speech_audio",
@@ -177,12 +198,33 @@
     ]
   },
   "engine_migration": {
-    "state": "PENDING_PRODUCT_QUALIFICATION",
+    "state": "RETRY_PENDING_PRODUCT_QUALIFICATION",
     "source_engine_ref": "a3af1565f7b6799bced8dbb318fafd5807bafafc",
-    "target_engine_ref": "601049702c92adf840724528e295ab76c9290a36",
-    "generic_fix_pr": 231,
-    "generic_fix_issue": 230,
-    "migration_mode": "FAIL_CLOSED_LEGACY_SCENE_CACHE",
+    "rejected_target_engine_ref": "601049702c92adf840724528e295ab76c9290a36",
+    "rejected_product_run": 33602222201,
+    "rejected_reason": "LEGACY_CACHE_PREFIX_SELECTED_WRONG_PROGRAM_REVISION",
+    "rejected_evidence": {
+      "S02": {
+        "expected": "41f60d134caebdbd300fd14bb0ceb75c2fbb819d674af66c21fcf08b14ebe178",
+        "observed": "b093a4220c512282852849be9279a6047f200121d640295767647c9b07a9f515"
+      },
+      "S04": {
+        "expected": "2088a76cd073f7f12c0dcd5132714155ec8258459cdf6c69356554aeac6def7b",
+        "observed": "56b864dbcc1d9f92d2a4ec72081ebb180da3837d4a3cab785e1f58e1c9a86c9e"
+      },
+      "S11": {
+        "expected": "3230e858791300dd3455dfb64bf1833335d190185a65c521f864ad34af4cd85e",
+        "observed": "33bbf1f0879ecd4787deeacce3eed3ae1748e1681c799b3147f03acea76cbf76"
+      },
+      "S14": {
+        "expected": "5cc41897e9dad64a33b6adb981e108e69153422ac5400c572e45986131d76924",
+        "observed": "c8ddeec6a81297bc64bdd798bb29b2e229fa6cf81b98848543b0a9565e6edffe"
+      }
+    },
+    "corrective_engine_pr": 236,
+    "corrective_issue": 235,
+    "target_engine_ref": "5c505c432f086687253f706dd2d7191980066126",
+    "migration_mode": "FAIL_CLOSED_LEGACY_SCENE_CACHE_EXACT_PROGRAM_SHA",
     "current_ready_units": [
       "S01",
       "S02",
@@ -197,9 +239,9 @@
     "acceptance": [
       "Production plan PASS",
       "all current READY units automatic QA PASS",
-      "qualified baseline audio SHA-256 remains byte-identical where baseline digest is recorded",
-      "no previously qualified Edge speech is remotely resynthesized"
-    ],
-    "human_review": "NOT_TRIGGERED"
+      "S02/S04/S11/S14 audio SHA-256 byte-identical to qualified baseline",
+      "no wrong-Program legacy cache selected",
+      "no human review triggered"
+    ]
   }
 }
