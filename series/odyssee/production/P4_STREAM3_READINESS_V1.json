@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.p4.stream3_readiness.v1",
   "id": "odyssee-p4-stream3-readiness-v1",
-  "status": "READY_FOR_PRODUCT_MATERIALIZATION",
+  "status": "MATERIALIZED_PENDING_MACHINE_QUALIFICATION",
   "human_gate": "P4_SIRENS_HUMAN_PASS",
   "generic_engine_ref": "fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
   "generic_provider_smoke": {
@@ -59,6 +59,26 @@
     ],
     "rule": "Executable placement comes only from the exact frozen binding; no probe-order or fuzzy inference."
   },
-  "target_engine_ref": "601049702c92adf840724528e295ab76c9290a36",
-  "next_step": "Stream 3 materializes S09 performance_provider mapping and requalifies Block C; no new P4 human gate."
+  "target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
+  "next_step": "Qualify S09 and Block C in Production; no new P4 human gate.",
+  "materialization": {
+    "program": "series/odyssee/programs/S09.json",
+    "program_sha256": "b68a7e905e7b8409801a452b52748d5bcb9b6d8ed4ec8fa11271fc906d880662",
+    "original_frozen_program_blob_sha1": "234c0138423478e7ea36b4f24a2075543a154983",
+    "exact_binding_authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
+    "exact_guard_count": 13,
+    "left_count": 5,
+    "right_count": 8,
+    "left_provider": "voxcpm2",
+    "right_provider": "chatterbox-multilingual-v3",
+    "placements": {
+      "left": "slight-left",
+      "right": "slight-right",
+      "pan": [
+        -0.16,
+        0.16
+      ]
+    },
+    "legacy_scene_cache_recovery": "DISABLED_BEFORE_FIRST_S09_RENDER"
+  }
 }
