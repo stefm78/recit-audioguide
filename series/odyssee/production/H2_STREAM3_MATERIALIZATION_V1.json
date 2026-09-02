@@ -4,9 +4,33 @@
   "authorities": {
     "sound_direction": "series/odyssee/production/H2_SOUND_DIRECTION_BINDINGS_V1.json",
     "acquisition": "series/odyssee/production/H2_SOUND_ACQUISITION_RESULT_V1.json",
-    "stream1_handoff": "series/odyssee/production/STREAM3_HANDOFF_V1.json"
+    "stream1_handoff": "series/odyssee/production/STREAM3_HANDOFF_V1.json",
+    "stream2_result": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
+    "marin_hold": "series/odyssee/production/MARIN_CAPABILITY_HOLD_V1.json"
   },
   "engine_ref": "a3af1565f7b6799bced8dbb318fafd5807bafafc",
+  "latest_clean_control": {
+    "production_run": 33535591183,
+    "product_head": "191d08067b098e75642f4b8be8ddc9297573911e",
+    "production_manifest_sha256": "f47f14c455acdb4795ab51d2344a473695b7527c3eb2a78c0a9d541e130a0636",
+    "workflow_conclusion": "success",
+    "business_state": "hold",
+    "machine_ready_units": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S08",
+      "S11",
+      "S12",
+      "S13",
+      "S14"
+    ],
+    "machine_ready_assemblies": [
+      "A"
+    ],
+    "master": "hold"
+  },
   "sound": {
     "acquisition_run": 33523766524,
     "acquisition_stop_condition": "SATISFIED",
@@ -22,16 +46,17 @@
       "S08_P5_ACCEPTED_DARK_AIR": "MACHINE_READY_SCENE_RUN_33525198119"
     },
     "new_release_assets": 0,
-    "fourth_asset_search": "NOT_AUTHORIZED"
+    "fourth_asset_search": "NOT_AUTHORIZED",
+    "rule": "No-selection is a valid authored outcome. Do not lower thresholds, start manual best-of-N, or add decorative assets."
   },
   "casting": {
     "correction": "MARIN_EURYLOQUE_EXACT_PRESET_COLLISION",
-    "status": "MATERIALIZED_FOR_H2_WATCH",
-    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V2.json",
+    "status": "HOLD_CAPABILITY_UNAVAILABLE",
+    "authorized_voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V2.json",
     "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b",
-    "changed_presets": [
-      "odyssee-marin-h2"
-    ],
+    "authorized_marin_voice": "fr-FR-AlainNeural",
+    "capability_probe_run": 33530359342,
+    "hold_reason": "MARIN_AUTHORIZED_VOICE_UNAVAILABLE_IN_CURRENT_EDGE_PROVIDER",
     "affected_units": [
       "S05",
       "S06",
@@ -43,14 +68,31 @@
       "all other voice presets",
       "frozen spoken text"
     ],
+    "required_input": "Stream 1 replacement MARIN binding using an actually available approved capability, with exact voice/rate/pitch/volume.",
+    "fallback": "fail",
     "human_gate": "shared_H2_only"
   },
-  "p4": "HOLD_STREAM2_ONLY",
-  "p6_ulysse_emotional": "HOLD_STREAM2_ONLY",
+  "p4": {
+    "human_gate": "P4_SIRENS_HUMAN_PASS",
+    "human_state": "PASS",
+    "generic_provider": "READY",
+    "generic_provider_main": "fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
+    "generic_provider_smoke_run": 33537558645,
+    "product_state": "HOLD_EXACT_FROZEN_BINDING",
+    "hold_reason": "P4_FROZEN_S09_LINE_BINDING_REQUIRED",
+    "prepared_product_pr": 132,
+    "rule": "Do not infer compact H1b probe slots onto frozen S09 by order, fuzzy text, semantics, or artistic intuition."
+  },
+  "p6_ulysse_emotional": {
+    "state": "HOLD_STREAM2_ONLY",
+    "required_package": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "last_attempt": "ARTISTIC_FAIL_IDENTITY_FAIL",
+    "next_attempt_requirement": "MATERIALLY_DISTINCT_ARCHITECTURE_ONLY",
+    "penelope_side": "MATERIALIZED"
+  },
   "p5": {
-    "status": "SCENE_MACHINE_READY_BLOCK_REQUALIFICATION_PENDING",
+    "status": "SCENE_MACHINE_READY",
     "production_run": 33525198119,
-    "production_manifest_sha256": "c16537c608a34c5cbf94119dab4e4541682b0999aed92cbba2e17e4169081e22",
     "scene": {
       "unit": "S08",
       "state": "ready",
@@ -58,18 +100,38 @@
       "artifact_id": 9807932806,
       "artifact_digest": "sha256:9dfeb9ca64266723d4a372207f7354edf1fa1636e731a0c3608a1ca035468d1b"
     },
-    "previous_block_b": {
-      "state": "failed",
-      "reason": "qa_command_failed_rc_2",
-      "failed_checks": [
+    "historical_block_b_peak_guard": {
+      "state": "RESOLVED_GENERICALLY",
+      "previous_failed_checks": [
         "clipping",
         "levels"
       ],
-      "measured_true_peak_dbtp": 0.31,
+      "previous_measured_true_peak_dbtp": 0.31,
       "target_true_peak_dbtp": -2.5,
-      "artistic_effect": "NONE",
       "correction": "audio-engine #220 generic encoded true-peak guard"
     },
-    "next_gate": "rerun Block B on exact engine_ref; do not reopen P5"
+    "current_block_b_state": "HOLD_PROPAGATED_FROM_MARIN",
+    "rule": "Do not reopen P5."
+  },
+  "review_release": {
+    "engine_capability_at_current_pin": "AVAILABLE",
+    "product_entrypoint": "MANUAL_WORKFLOW_DISPATCH",
+    "publish_review_release_default": false,
+    "immutable_tag_required": true,
+    "prerelease": true,
+    "final_master_publication": false,
+    "status": "AVAILABLE_MANUAL_DISPATCH_NOT_TRIGGERED",
+    "human_h2_state": "NOT_STARTED",
+    "batch_policy": "ONE_BATCH_NO_MICRO_GATES",
+    "stream1_planned_review_set": [
+      "Block A",
+      "S05",
+      "S11",
+      "S13",
+      "S14",
+      "Block B if qualified"
+    ],
+    "current_batch_maturity": "WAITING_FOR_S05_MARIN_CAPABILITY",
+    "rule": "Do not dispatch the human H2 review release merely because independent machine-ready audio exists."
   }
 }
