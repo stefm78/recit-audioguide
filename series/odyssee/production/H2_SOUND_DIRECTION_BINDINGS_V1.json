@@ -225,12 +225,14 @@
           "materialization_status": {
             "product_program": "BOUND_ON_MAIN",
             "machine_binding_validation": "PASS",
-            "production_render": "BLOCKED_BY_RUNTIME_FFPROBE_DEFECT",
-            "rule": "Do not reopen P5 artistic recipe because of runtime failure."
+            "production_render": "MACHINE_READY",
+            "production_run": 33525198119,
+            "automatic_qa": "PASS",
+            "rule": "P5 remains closed artistically; do not reopen the accepted recipe."
           }
         }
       ],
-      "execution_state": "PRODUCT_BOUND_P5_SOUND_INTEGRATION_PRESENT; RUNTIME_RENDER_NOT_YET_QUALIFIED"
+      "execution_state": "PRODUCT_BOUND_P5_SOUND_INTEGRATION_PRESENT; PRODUCTION_RENDER_MACHINE_READY"
     },
     "S14": {
       "program_path": "series/odyssee/programs/S14.json",
@@ -330,5 +332,13 @@
     "Concrete gain, fade and millisecond values are Stream 3 implementation details, constrained by the artistic intent above.",
     "No sound is preferable to a weak, clichéd, unlicensed or narratively redundant asset."
   ],
-  "baseline_main_commit": "b55834cc2f6ed75dc1f243048aa39282bd89f9ed"
+  "baseline_main_commit": "b55834cc2f6ed75dc1f243048aa39282bd89f9ed",
+  "current_materialization_evidence": {
+    "product_main": "dae91ec3870b77a6fb49598ff47f1bc33d3fbf28",
+    "sidecar_authority": "series/odyssee/production/H2_STREAM3_MATERIALIZATION_V1.json",
+    "sound_acquisition_state": "STOP_CONDITION_SATISFIED",
+    "no_selection_is_valid": true,
+    "p5_s08": "MACHINE_READY",
+    "rule": "Explicit silence/no-selection outcomes remain valid sound-direction materialization; no manual asset search or lower threshold is authorized."
+  }
 }
