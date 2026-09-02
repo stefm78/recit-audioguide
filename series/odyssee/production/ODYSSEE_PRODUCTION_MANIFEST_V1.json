@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "odyssee-longform-production-v1",
-  "engine_ref": "5c505c432f086687253f706dd2d7191980066126",
+  "engine_ref": "10826d103d94c32f044142e405b1618014a5ca53",
   "product": {
     "repository": "stefm78/recit-audioguide",
     "stream1_handoff": "series/odyssee/production/STREAM3_HANDOFF_V1.json",
@@ -22,7 +22,7 @@
       "ULYSSES_EMOTIONAL_HUMAN_PASS"
     ],
     "automatic_qa": "audio-engine qa v1 (scene + assembly)",
-    "production_workflow": "stefm78/audio-engine/.github/workflows/production.yml@5c505c432f086687253f706dd2d7191980066126"
+    "production_workflow": "stefm78/audio-engine/.github/workflows/production.yml@10826d103d94c32f044142e405b1618014a5ca53"
   },
   "units": [
     {
