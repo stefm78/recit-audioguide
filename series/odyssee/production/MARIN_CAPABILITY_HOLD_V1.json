@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.marin_capability_hold.v1",
   "id": "odyssee-marin-capability-hold-v1",
-  "status": "RESOLVED_STREAM1_V3_BOUND_PENDING_PRODUCTION_QUALIFICATION",
+  "status": "RESOLVED_STREAM1_V3_BOUND_REQUALIFYING_CACHE_PRESERVATION",
   "authority": {
     "stream1_issue": 110,
     "stream3_issue": 112,
@@ -33,7 +33,7 @@
   "policy": {
     "silent_fallback": "FORBIDDEN",
     "stream3_voice_selection": "FORBIDDEN",
-    "next_action": "Stream 3 production-qualifies S05/S06/S07/S10; no standalone human gate."
+    "next_action": "Stream 3 requalifies S05/S06/S07/S10 using exact V1 cache migration; no standalone human gate."
   },
   "resolution": {
     "stream1_main": "dae91ec3870b77a6fb49598ff47f1bc33d3fbf28",
@@ -52,6 +52,20 @@
       "S10"
     ],
     "direct_marin_remy_family_adjacency_audit": 0,
-    "euryloque": "UNCHANGED_HUMAN_ACCEPTED_P3"
+    "euryloque": "UNCHANGED_HUMAN_ACCEPTED_P3",
+    "production_cache_preservation": {
+      "first_attempt_run": 33606403078,
+      "first_attempt_result": "REJECTED_CACHE_PRESERVATION",
+      "retry_engine_ref": "10826d103d94c32f044142e405b1618014a5ca53",
+      "retry_legacy_engine_ref": "e82559cbd60b1d29de208e7e36ccd7505dcfcdcc",
+      "retry_legacy_voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
+      "forced_units": [
+        "S05",
+        "S06",
+        "S07",
+        "S10"
+      ],
+      "rule": "No human H2 review until unchanged speech is demonstrably cache-reused."
+    }
   }
 }
