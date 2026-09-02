@@ -197,7 +197,7 @@
     ]
   },
   "ulysses_emotional_performance": {
-    "state": "BLOCKED_ONLY_ON_ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "state": "P6_S15_PRODUCTION_HUMAN_CAPTURE_PENDING",
     "package_id": "ULYSSES_EMOTIONAL_HUMAN_PASS",
     "baseline_identity": {
       "voice": "fr-FR-HenriNeural",
@@ -331,8 +331,17 @@
       "candidate_sha256": "55702f253cbfc9c758d02d7f9952a94dfb68d2877f402fc0a5e6215bec0b2b9d",
       "machine_state": "MACHINE_PASS",
       "human_state": "PENDING",
-      "authority_rule": "Do not consume or materialize this candidate unless Stream 2 publishes ULYSSES_EMOTIONAL_HUMAN_PASS."
-    }
+      "authority_rule": "Do not consume or materialize this candidate unless Stream 2 publishes ULYSSES_EMOTIONAL_HUMAN_PASS.",
+      "historical": true,
+      "consumption_state": "SUPERSEDED_BY_ULYSSES_EMOTIONAL_HUMAN_PASS"
+    },
+    "casting_state": "CLOSED",
+    "stream2_state": "EXIT_CRITICAL_PATH",
+    "provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json",
+    "capture_contract": "series/odyssee/production/P6_S15_PRODUCTION_CAPTURE_V1.json",
+    "capture_surface": "web/reviews/odyssee-p6-human-performance.html",
+    "production_capture_rule": "Record and human-select exactly one clean take for each of the 12 exact mapped S15 segments before any BeltOut conversion. Raw human audio remains private.",
+    "post_capture_rule": "Exactly one BeltOut conversion per frozen selected take; no best-of-N, no second pass, constant level alignment only."
   },
   "fail_closed_guards": [
     "Each mapped segment must still match the exact speaker and text above.",
