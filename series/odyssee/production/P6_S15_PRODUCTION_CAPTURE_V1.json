@@ -1,0 +1,513 @@
+{
+  "schema": "recit.odyssee.p6.s15.production_capture.v1",
+  "id": "odyssee-p6-s15-production-capture-v1",
+  "status": "P6_S15_PRODUCTION_HUMAN_CAPTURE_PENDING",
+  "authority": {
+    "program": "series/odyssee/programs/S15.json",
+    "frozen_binding": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
+    "readiness": "series/odyssee/production/P6_STREAM3_READINESS_V1.json",
+    "stream2_result": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
+    "provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json"
+  },
+  "scope": {
+    "exact_segments": [
+      112,
+      114,
+      116,
+      118,
+      120,
+      133,
+      135,
+      140,
+      142,
+      151,
+      153,
+      158
+    ],
+    "exact_guard_count": 12,
+    "text_change_authorized": false,
+    "global_recast": false
+  },
+  "capture": {
+    "local_first": true,
+    "automatic_upload": false,
+    "raw_human_voice_repository_policy": "NEVER_COMMIT_TO_PUBLIC_REPOSITORY",
+    "selected_take_rule": "EXACTLY_ONE_SELECTED_TAKE_PER_SEGMENT_BEFORE_ANY_BELTOUT_CONVERSION",
+    "retakes_before_selection": "UNLIMITED",
+    "post_selection_conversion_rule": "EXACTLY_ONE_BELTOUT_CONVERSION_PER_SELECTED_TAKE",
+    "post_conversion_best_of_n": false,
+    "second_pass": false,
+    "post_conversion_processing": [
+      "constant_level_alignment_only"
+    ],
+    "hygiene": [
+      "quiet_room",
+      "avoid_clicks_and_handling_noise",
+      "no_added_reverb",
+      "no_aggressive_noise_reduction",
+      "no_audible_auto_level_or_compression",
+      "leave_clean_leading_trailing_room_tone"
+    ]
+  },
+  "direction": {
+    "common": [
+      "close_intimate_one_meter_from_penelope",
+      "no_heroic_projection",
+      "natural_daily_french",
+      "emotion_real_not_manufactured",
+      "no_shout",
+      "no_systematic_whisper",
+      "no_forced_sob",
+      "accepted_scene_melodrama_may_be_present_if_it_arises_naturally_but_must_not_be_manufactured"
+    ],
+    "groups": {
+      "bed-shock": {
+        "intent": "immediate personal shock; low theatricality; no shout"
+      },
+      "tree-wound": {
+        "intent": "contained hurt; the voice may catch, but never melodrama"
+      },
+      "test-reveal": {
+        "intent": "shock turning into recognition and intimate release; reduce projection"
+      }
+    }
+  },
+  "reference_audio": {
+    "role": "DRAMATURGIC_REFERENCE_ONLY_NEVER_PRODUCTION_SOURCE",
+    "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-h1b-corrective-review-v1/p6-b.mp3",
+    "sha256": "474c2e41a5d702b2a84524aa3be9a0559ed7378af18d507ac082b666029d64ae",
+    "warning": "The noisy human capability probe must never be reused as a Production performance source."
+  },
+  "export": {
+    "filename": "odyssee-p6-s15-production-selected-takes.zip",
+    "contents": [
+      "12 selected audio takes only",
+      "recording-manifest.json",
+      "SHA256SUMS.txt",
+      "README.txt"
+    ],
+    "completeness": "12/12_selected_and_clean_confirmed"
+  },
+  "targets": [
+    {
+      "segment": 112,
+      "speaker": "ULYSSE",
+      "text": "Quoi ?",
+      "group": "bed-shock",
+      "intent": "immediate personal shock; low theatricality; no shout",
+      "context_before": [
+        {
+          "segment": 110,
+          "speaker": "PÉNÉLOPE",
+          "text": "Et fais sortir le lit. Mettez-le dans le couloir. Nous aurons plus de place."
+        },
+        {
+          "segment": 111,
+          "speaker": "NARRATRICE",
+          "text": "Le silence change."
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 113,
+          "speaker": "PÉNÉLOPE",
+          "text": "Le lit. Faites-le déplacer."
+        },
+        {
+          "segment": 114,
+          "speaker": "ULYSSE",
+          "text": "On ne peut pas."
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        0,
+        10.734
+      ]
+    },
+    {
+      "segment": 114,
+      "speaker": "ULYSSE",
+      "text": "On ne peut pas.",
+      "group": "bed-shock",
+      "intent": "immediate personal shock; low theatricality; no shout",
+      "context_before": [
+        {
+          "segment": 112,
+          "speaker": "ULYSSE",
+          "text": "Quoi ?"
+        },
+        {
+          "segment": 113,
+          "speaker": "PÉNÉLOPE",
+          "text": "Le lit. Faites-le déplacer."
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 115,
+          "speaker": "PÉNÉLOPE",
+          "text": "Pourquoi ?"
+        },
+        {
+          "segment": 116,
+          "speaker": "ULYSSE",
+          "text": "Tu le sais."
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        0,
+        10.734
+      ]
+    },
+    {
+      "segment": 116,
+      "speaker": "ULYSSE",
+      "text": "Tu le sais.",
+      "group": "bed-shock",
+      "intent": "immediate personal shock; low theatricality; no shout",
+      "context_before": [
+        {
+          "segment": 114,
+          "speaker": "ULYSSE",
+          "text": "On ne peut pas."
+        },
+        {
+          "segment": 115,
+          "speaker": "PÉNÉLOPE",
+          "text": "Pourquoi ?"
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 117,
+          "speaker": "PÉNÉLOPE",
+          "text": "Explique-moi."
+        },
+        {
+          "segment": 118,
+          "speaker": "ULYSSE",
+          "text": "On ne peut pas déplacer ce lit."
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        0,
+        10.734
+      ]
+    },
+    {
+      "segment": 118,
+      "speaker": "ULYSSE",
+      "text": "On ne peut pas déplacer ce lit.",
+      "group": "bed-shock",
+      "intent": "immediate personal shock; low theatricality; no shout",
+      "context_before": [
+        {
+          "segment": 116,
+          "speaker": "ULYSSE",
+          "text": "Tu le sais."
+        },
+        {
+          "segment": 117,
+          "speaker": "PÉNÉLOPE",
+          "text": "Explique-moi."
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 119,
+          "speaker": "PÉNÉLOPE",
+          "text": "Avec assez d’hommes—"
+        },
+        {
+          "segment": 120,
+          "speaker": "ULYSSE",
+          "text": "Non."
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        0,
+        10.734
+      ]
+    },
+    {
+      "segment": 120,
+      "speaker": "ULYSSE",
+      "text": "Non.",
+      "group": "bed-shock",
+      "intent": "immediate personal shock; low theatricality; no shout",
+      "context_before": [
+        {
+          "segment": 118,
+          "speaker": "ULYSSE",
+          "text": "On ne peut pas déplacer ce lit."
+        },
+        {
+          "segment": 119,
+          "speaker": "PÉNÉLOPE",
+          "text": "Avec assez d’hommes—"
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 121,
+          "speaker": "NARRATRICE",
+          "text": "Il ne parle plus à une reine."
+        },
+        {
+          "segment": 122,
+          "speaker": "NARRATRICE",
+          "text": "Il parle à quelqu’un qui vient de toucher une chose que personne d’autre dans la maison n’a le droit de redéfinir."
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        0,
+        10.734
+      ]
+    },
+    {
+      "segment": 133,
+      "speaker": "ULYSSE",
+      "text": "Et si l’arbre a été coupé—",
+      "group": "tree-wound",
+      "intent": "contained hurt; the voice may catch, but never melodrama",
+      "context_before": [
+        {
+          "segment": 131,
+          "speaker": "ULYSSE",
+          "text": "J’ai bâti autour."
+        },
+        {
+          "segment": 132,
+          "speaker": "ULYSSE",
+          "text": "Si quelqu’un a déplacé ce lit, alors il a fallu couper l’arbre."
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 134,
+          "speaker": "NARRATRICE",
+          "text": "Sa voix se casse pour la première fois."
+        },
+        {
+          "segment": 135,
+          "speaker": "ULYSSE",
+          "text": "Alors tu aurais dû le savoir."
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        10,
+        29.208
+      ]
+    },
+    {
+      "segment": 135,
+      "speaker": "ULYSSE",
+      "text": "Alors tu aurais dû le savoir.",
+      "group": "tree-wound",
+      "intent": "contained hurt; the voice may catch, but never melodrama",
+      "context_before": [
+        {
+          "segment": 133,
+          "speaker": "ULYSSE",
+          "text": "Et si l’arbre a été coupé—"
+        },
+        {
+          "segment": 134,
+          "speaker": "NARRATRICE",
+          "text": "Sa voix se casse pour la première fois."
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 136,
+          "speaker": "NARRATRICE",
+          "text": "Pénélope ferme les yeux."
+        },
+        {
+          "segment": 137,
+          "speaker": "NARRATRICE",
+          "text": "Pas parce qu’elle doute encore."
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        10,
+        29.208
+      ]
+    },
+    {
+      "segment": 140,
+      "speaker": "ULYSSE",
+      "text": "Quoi ?",
+      "group": "test-reveal",
+      "intent": "shock turning into recognition and intimate release; reduce projection",
+      "context_before": [
+        {
+          "segment": 138,
+          "speaker": "NARRATRICE",
+          "text": "Parce qu’elle ne doute plus."
+        },
+        {
+          "segment": 139,
+          "speaker": "PÉNÉLOPE",
+          "text": "Il n’a pas été déplacé."
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 141,
+          "speaker": "PÉNÉLOPE",
+          "text": "Le lit."
+        },
+        {
+          "segment": 142,
+          "speaker": "ULYSSE",
+          "text": "Alors pourquoi—"
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        22.272,
+        40.12
+      ]
+    },
+    {
+      "segment": 142,
+      "speaker": "ULYSSE",
+      "text": "Alors pourquoi—",
+      "group": "test-reveal",
+      "intent": "shock turning into recognition and intimate release; reduce projection",
+      "context_before": [
+        {
+          "segment": 140,
+          "speaker": "ULYSSE",
+          "text": "Quoi ?"
+        },
+        {
+          "segment": 141,
+          "speaker": "PÉNÉLOPE",
+          "text": "Le lit."
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 143,
+          "speaker": "PÉNÉLOPE",
+          "text": "Parce que je devais savoir si toi, tu pouvais l’être."
+        },
+        {
+          "segment": 144,
+          "speaker": "ULYSSE",
+          "text": "Être quoi ?"
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        22.272,
+        40.12
+      ]
+    },
+    {
+      "segment": 151,
+      "speaker": "ULYSSE",
+      "text": "L’olivier.",
+      "group": "test-reveal",
+      "intent": "shock turning into recognition and intimate release; reduce projection",
+      "context_before": [
+        {
+          "segment": 149,
+          "speaker": "PÉNÉLOPE",
+          "text": "Toi, tu as disparu vingt ans."
+        },
+        {
+          "segment": 150,
+          "speaker": "PÉNÉLOPE",
+          "text": "J’avais besoin d’une chose qui ne puisse pas voyager avec ton histoire."
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 152,
+          "speaker": "PÉNÉLOPE",
+          "text": "Notre lit."
+        },
+        {
+          "segment": 153,
+          "speaker": "ULYSSE",
+          "text": "Tu savais."
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        22.272,
+        40.12
+      ]
+    },
+    {
+      "segment": 153,
+      "speaker": "ULYSSE",
+      "text": "Tu savais.",
+      "group": "test-reveal",
+      "intent": "shock turning into recognition and intimate release; reduce projection",
+      "context_before": [
+        {
+          "segment": 151,
+          "speaker": "ULYSSE",
+          "text": "L’olivier."
+        },
+        {
+          "segment": 152,
+          "speaker": "PÉNÉLOPE",
+          "text": "Notre lit."
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 154,
+          "speaker": "PÉNÉLOPE",
+          "text": "Je sais maintenant."
+        },
+        {
+          "segment": 155,
+          "speaker": "NARRATRICE",
+          "text": "Il fait un pas."
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        22.272,
+        40.12
+      ]
+    },
+    {
+      "segment": 158,
+      "speaker": "ULYSSE",
+      "text": "Pénélope.",
+      "group": "test-reveal",
+      "intent": "shock turning into recognition and intimate release; reduce projection",
+      "context_before": [
+        {
+          "segment": 156,
+          "speaker": "NARRATRICE",
+          "text": "Elle aussi."
+        },
+        {
+          "segment": 157,
+          "speaker": "NARRATRICE",
+          "text": "Ils s’arrêtent encore trop loin pour deux personnes qui se sont attendues vingt ans et beaucoup trop près pour deux étrangers."
+        }
+      ],
+      "context_after": [
+        {
+          "segment": 159,
+          "speaker": "PÉNÉLOPE",
+          "text": "Oui."
+        },
+        {
+          "segment": 160,
+          "speaker": "ULYSSE",
+          "text": "J’ai une histoire médiocre."
+        }
+      ],
+      "dramaturgic_reference_cue_seconds": [
+        22.272,
+        40.12
+      ]
+    }
+  ]
+}
