@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Odyssée — H2 final partagé</title>
+<style>
+:root{color-scheme:light dark;--bg:#0f1115;--panel:#171a21;--soft:#222733;--text:#f2f4f8;--muted:#aeb6c4;--line:#343b49;--good:#7ee787;--bad:#ff7b72;--warn:#f2cc60;--accent:#79c0ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:1120px;margin:0 auto;padding:28px 18px 96px}
+h1{font-size:clamp(30px,5vw,50px);line-height:1.05;margin:.15em 0 .3em}
+h2{margin-top:34px} h3{margin-bottom:6px}
+p,li{max-width:88ch}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.subcard{background:var(--soft);border-radius:10px;padding:14px;margin-top:12px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.badge,.status{display:inline-block;border-radius:999px;padding:5px 10px;border:1px solid var(--line);font-weight:650}
+.good{color:var(--good);border-color:color-mix(in srgb,var(--good),transparent 50%)}
+.bad{color:var(--bad);border-color:color-mix(in srgb,var(--bad),transparent 50%)}
+.warn{color:var(--warn);border-color:color-mix(in srgb,var(--warn),transparent 50%)}
+.muted{color:var(--muted)}
+button,input,textarea,select{font:inherit}
+button{border:1px solid var(--line);border-radius:9px;padding:9px 13px;background:var(--soft);color:var(--text);cursor:pointer}
+button:hover{border-color:var(--accent)}
+button:disabled{opacity:.45;cursor:not-allowed}
+input[type=text]{width:min(620px,100%);padding:10px 12px;border-radius:9px;border:1px solid var(--line);background:var(--soft);color:var(--text)}
+textarea{width:100%;min-height:90px;padding:10px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--text)}
+audio{width:100%;margin:10px 0}
+.locked{opacity:.55;pointer-events:none;filter:grayscale(.25)}
+.criterion{border-left:4px solid var(--line)}
+.criterion.fail{border-left-color:var(--bad)} .criterion.pass{border-left-color:var(--good)}
+.verdict label{margin-right:14px;font-weight:700}
+.callout{border-left:4px solid var(--accent);padding:10px 14px;background:var(--soft);border-radius:8px}
+.passcond{border-left:3px solid var(--good);padding-left:10px}
+.module-done{font-weight:650}
+.sticky{position:sticky;bottom:0;background:color-mix(in srgb,var(--bg),transparent 4%);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:12px 0;margin-top:26px;z-index:10}
+pre{white-space:pre-wrap;word-break:break-word;background:#0a0c10;border:1px solid var(--line);border-radius:10px;padding:14px;max-height:520px;overflow:auto}
+table{border-collapse:collapse;width:100%}td,th{padding:7px;border-bottom:1px solid var(--line);text-align:left}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+<p class="badge">H2 · SINGLE BATCH · intégration réelle</p>
+<h1>Odyssée — H2 final partagé</h1>
+<p class="muted">Une seule revue d’intégration. Aucun micro-gate, aucun nouveau casting, aucune recherche d’asset sans défaut concret.</p>
+
+<section class="card">
+<h2 style="margin-top:0">1. Charger l’unique Release H2</h2>
+<p>H2 reste verrouillé tant que Stream 3 n’a pas confirmé exactement <strong>A+B+C+D MACHINE_QUALIFIED</strong> et publié tous les assets dans une même Release immutable.</p>
+<div class="row">
+<input id="tagInput" type="text" placeholder="ex. odyssee-h2-review-<manifest>" aria-label="Tag de Release H2">
+<button id="loadButton" type="button">Charger la Release</button>
+<span id="gateStatus" class="status warn">EN ATTENTE DES AUDIOS</span>
+</div>
+<div id="gateDetails" class="subcard muted">La page vérifie la présence des 4 blocs, de leurs QA, de S09/S13/S14/S15, de leurs QA et de review-index.json.</div>
+</section>
+
+<section class="card">
+<h2 style="margin-top:0">Règle de jugement humain</h2>
+<div class="grid">
+<div>
+<h3>Observation perceptive</h3>
+<p>Décrivez seulement ce que vous entendez, sans lui donner automatiquement une valeur artistique.</p>
+<p class="muted">Exemple : « la dramatisation est très présente ».</p>
+</div>
+<div>
+<h3>Verdict artistique</h3>
+<p>Choisissez ensuite <strong>PASS</strong> ou <strong>FAIL</strong> contre la condition explicitement affichée.</p>
+<p class="muted">Exemple : observation <code>melodrama PRESENT</code>, verdict <code>melodrama approprié = PASS</code>.</p>
+</div>
+</div>
+<div class="callout"><strong>PRESENT / ABSENT / LIGHT / STRONG ne sont jamais des verdicts.</strong> L’observation et l’acceptation restent deux champs distincts.</div>
+</section>
+
+<div id="reviewArea" class="locked" aria-disabled="true">
+<section>
+<h2>2. Parcours d’écoute obligatoire</h2>
+<p>Le batch est volontairement plus long que l’ancien H2 : P4/P6 sont clos, donc on juge désormais l’œuvre réelle. H3 restera la seule écoute intégrale du master final.</p>
+<div id="modules"></div>
+</section>
+
+<section>
+<h2>3. Critères transverses</h2>
+<p>Chaque critère doit avoir une observation perceptive et un verdict artistique explicite.</p>
+<div id="criteria"></div>
+</section>
+
+<section class="card">
+<h2 style="margin-top:0">4. Décision H2</h2>
+<p><strong>PASS_H2_SINGLE_BATCH</strong> seulement si tous les critères obligatoires sont PASS. Aucun score moyen ne compense un FAIL.</p>
+<p>Sinon : <strong>FAIL_H2_TARGETED_CORRECTION</strong>, avec correction du plus petit causal unit puis réécoute de ce qui a changé et de la frontière impactée.</p>
+<label for="globalNote"><strong>Note globale / finding principal</strong></label>
+<textarea id="globalNote" placeholder="Synthèse courte : ce qui fonctionne, ou le plus petit défaut causal à corriger."></textarea>
+<div class="row" style="margin-top:12px">
+<button id="buildReport" type="button">Construire le bilan</button>
+<button id="copyReport" type="button" disabled>Copier le bilan</button>
+<span id="reportStatus" class="status warn">Revue incomplète</span>
+</div>
+<pre id="reportOutput" hidden></pre>
+</section>
+</div>
+
+<div class="sticky">
+<div class="row">
+<span id="progressText"><strong>H2 verrouillé</strong></span>
+<span class="muted">· one batch · no micro-review · no decorative finish</span>
+</div>
+</div>
+</main>
+
+<script>
+(function(){
+"use strict";
+var REPO="stefm78/recit-audioguide";
+var API="https://api.github.com/repos/"+REPO+"/releases/tags/";
+var REQUIRED=[
+ "review-index.json",
+ "block-A.mp3","block-A.qa-report.json",
+ "block-B.mp3","block-B.qa-report.json",
+ "block-C.mp3","block-C.qa-report.json",
+ "block-D.mp3","block-D.qa-report.json",
+ "scene-S09.mp3","scene-S09.qa-report.json",
+ "scene-S13.mp3","scene-S13.qa-report.json",
+ "scene-S14.mp3","scene-S14.qa-report.json",
+ "scene-S15.mp3","scene-S15.qa-report.json"
+];
+
+var MODULES=[
+ {id:"block-a",title:"Block A — continuité / référence",asset:"block-A.mp3",full:true,help:"Écoute continue obligatoire. Pacing, compréhension, fatigue de référence, ownership Narratrice/personnages, niveau de référence."},
+ {id:"block-b",title:"Block B — MARIN en contexte + P5/S08",asset:"block-B.mp3",full:true,help:"Écoute continue obligatoire. MARIN/Euryloque/Ulysse, P5 dans son bloc, pertes d’équipage, silences et soustraction, continuité de niveau avec A."},
+ {id:"s09",title:"S09 complet — Sirènes P4 dans la vraie scène",asset:"scene-S09.mp3",full:true,help:"Deux lignées, spatialisation subtile, attraction/intelligibilité, français naturel, continuité d’Ulysse. Ce n’est pas une recertification de capability."},
+ {id:"b-to-c",title:"Transition B → C",boundary:["block-B.mp3","block-C.mp3"],help:"Écouter les ~45 dernières secondes de B puis les ~45 premières de C. Continuité narrative, espace, densité et niveaux."},
+ {id:"c-to-d",title:"Transition C → D",boundary:["block-C.mp3","block-D.mp3"],help:"Écouter les ~45 dernières secondes de C puis les ~45 premières de D. Retour à Ithaque, ownership, reset d’énergie, niveaux."},
+ {id:"s13",title:"S13 complet — reconnaissances / préparation",asset:"scene-S13.mp3",full:true,help:"Identités secondaires, Argos sans sentimentalisation, Pénélope, préparation du climax sans le dépenser."},
+ {id:"s14",title:"S14 complet — climax d’action",asset:"scene-S14.mp3",full:true,help:"Action lisible, violence courte, densité contrôlée, baisse d’énergie suffisante avant S15."},
+ {id:"s15",title:"S15 complet — climax émotionnel réel",asset:"scene-S15.mp3",full:true,help:"Les 12 vraies lignes Ulysse + Pénélope dans la scène Production complète. Jugez intégration, émotion, identité, dramatisation appropriée, silences et hygiène de capture/conversion."},
+ {id:"global-comparison",title:"Comparaison globale A / B / C / D",multi:["block-A.mp3","block-B.mp3","block-C.mp3","block-D.mp3"],help:"Comparer les quatre blocs. Dynamique globale, niveaux relatifs, stabilité des identités, fatigue et invisibilité du mécanisme de production."}
+];
+
+var CRITERIA=[
+ {id:"pacing_comprehension",title:"Pacing et compréhension",pass:"Les informations, actions et changements de lieu se comprennent à la première écoute sans devoir mentalement rattraper le récit."},
+ {id:"listening_fatigue",title:"Fatigue d’écoute",pass:"Après les écoutes longues, l’attention reste disponible; la densité ou le débit ne donnent pas envie de décrocher."},
+ {id:"identity_coherence",title:"Cohérence des identités",pass:"Les personnages importants restent identifiables d’une scène à l’autre, notamment Ulysse, Pénélope, MARIN/Euryloque et les prétendants."},
+ {id:"marin_context",title:"MARIN dans son contexte",pass:"MARIN se distingue suffisamment d’Euryloque/Ulysse sans attirer artificiellement l’attention ni devenir un nouveau rôle principal."},
+ {id:"p5_integration",title:"P5 / S08 dans Block B",pass:"Le monde des morts est étrange par soustraction; dark-air discret, voix lisibles, aucun cliché horrifique ou effet qui vole la scène."},
+ {id:"p4_s09_integration",title:"P4 / S09 réel",pass:"Les deux lignées de Sirènes forment un dispositif cohérent; spatialisation subtile, français naturel, attraction intelligible et personnellement dangereuse pour Ulysse."},
+ {id:"block_transitions",title:"Transitions B→C et C→D",pass:"Les changements de bloc sont narrativement lisibles et acoustiquement continus; pas de saut de niveau, trou d’énergie ou marqueur artificiel nécessaire."},
+ {id:"climax_build",title:"Préparation et climax S13/S14",pass:"S13 prépare sans épuiser; S14 est clair et intense mais garde assez de silence et de réserve émotionnelle pour S15."},
+ {id:"s15_climax",title:"S15 complet",pass:"La scène du lit fonctionne comme climax émotionnel: Ulysse et Pénélope restent eux-mêmes, la réaction est crédible, la dramatisation est appropriée, le texte et les silences portent la scène sans musique."},
+ {id:"global_dynamics",title:"Dynamique globale",pass:"L’œuvre respire: alternance de densité, tension et calme lisible, sans aplatissement permanent ni surenchère."},
+ {id:"sound_density_silence",title:"Sound density et silences intentionnels",pass:"Le son n’illustre pas mécaniquement le texte; omissions et silences paraissent choisis, pas inachevés."},
+ {id:"interblock_levels",title:"Continuité des niveaux entre blocs",pass:"Aucun bloc ne paraît soudain trop faible, trop fort ou subjectivement éloigné; les transitions de niveau ne distraient pas."},
+ {id:"audible_technical_defects",title:"Absence de défaut technique audible",pass:"Aucun clic, parasite, coupure, artefact de conversion, pompage, saturation, mauvais raccord ou autre défaut audible matériel."}
+];
+
+var state={tag:"",release:null,index:null,assets:{},moduleDone:{},criteria:{}};
+var boundaryPlayers=[];
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]})}
+function assetUrl(name){return state.assets[name]&&state.assets[name].browser_download_url||""}
+function storageKey(){return "odyssee-h2-review-v1::"+state.tag}
+function save(){
+ if(!state.tag)return;
+ localStorage.setItem(storageKey(),JSON.stringify({moduleDone:state.moduleDone,criteria:state.criteria,globalNote:document.getElementById("globalNote").value}));
+}
+function restore(){
+ try{
+  var raw=localStorage.getItem(storageKey());if(!raw)return;
+  var x=JSON.parse(raw);state.moduleDone=x.moduleDone||{};state.criteria=x.criteria||{};
+  document.getElementById("globalNote").value=x.globalNote||"";
+ }catch(_){}
+}
+function stopBoundary(){boundaryPlayers.forEach(function(a){try{a.pause()}catch(_){}});boundaryPlayers=[]}
+
+function buildModules(){
+ var host=document.getElementById("modules");
+ host.innerHTML=MODULES.map(function(m,n){
+  var media="";
+  if(m.asset){
+   media='<audio controls preload="metadata" data-asset="'+esc(m.asset)+'"></audio>';
+  }else if(m.boundary){
+   media='<div class="row"><button type="button" data-boundary="'+esc(m.id)+'">▶ Lire automatiquement la frontière ~45 s + ~45 s</button><span class="muted">Vous pouvez aussi utiliser les lecteurs des blocs ci-dessous.</span></div>'+
+    '<div class="grid"><div><strong>Fin '+esc(m.boundary[0])+'</strong><audio controls preload="metadata" data-asset="'+esc(m.boundary[0])+'"></audio></div>'+
+    '<div><strong>Début '+esc(m.boundary[1])+'</strong><audio controls preload="metadata" data-asset="'+esc(m.boundary[1])+'"></audio></div></div>';
+  }else if(m.multi){
+   media='<div class="grid">'+m.multi.map(function(a){return '<div><strong>'+esc(a.replace(".mp3",""))+'</strong><audio controls preload="metadata" data-asset="'+esc(a)+'"></audio></div>'}).join("")+'</div>';
+  }
+  return '<article class="card" id="module-'+esc(m.id)+'"><div class="row"><span class="badge">'+(n+1)+' / '+MODULES.length+'</span><h3 style="margin:0">'+esc(m.title)+'</h3></div>'+
+   '<p>'+esc(m.help)+'</p>'+media+
+   '<label class="row module-done"><input type="checkbox" data-module-done="'+esc(m.id)+'"> J’ai effectué cette écoute dans le batch H2.</label></article>';
+ }).join("");
+ document.querySelectorAll("[data-module-done]").forEach(function(el){
+  el.checked=!!state.moduleDone[el.dataset.moduleDone];
+  el.addEventListener("change",function(){state.moduleDone[el.dataset.moduleDone]=el.checked;save();renderProgress()});
+ });
+ document.querySelectorAll("[data-boundary]").forEach(function(el){
+  el.addEventListener("click",function(){playBoundary(el.dataset.boundary,el)});
+ });
+ bindAudioSources();
+}
+
+function bindAudioSources(){
+ document.querySelectorAll("audio[data-asset]").forEach(function(a){
+  var u=assetUrl(a.dataset.asset);if(u)a.src=u;
+ });
+}
+
+function loadedMetadata(audio){
+ return new Promise(function(resolve,reject){
+  if(Number.isFinite(audio.duration)&&audio.duration>0)return resolve();
+  var ok=function(){cleanup();resolve()},bad=function(){cleanup();reject(new Error("metadata audio indisponible"))};
+  var cleanup=function(){audio.removeEventListener("loadedmetadata",ok);audio.removeEventListener("error",bad)};
+  audio.addEventListener("loadedmetadata",ok,{once:true});audio.addEventListener("error",bad,{once:true});audio.load();
+ });
+}
+async function playBoundary(id,button){
+ stopBoundary();
+ var m=MODULES.find(function(x){return x.id===id});if(!m||!m.boundary)return;
+ var a=new Audio(assetUrl(m.boundary[0])),b=new Audio(assetUrl(m.boundary[1]));boundaryPlayers=[a,b];
+ try{
+  button.disabled=true;button.textContent="Préparation…";
+  await Promise.all([loadedMetadata(a),loadedMetadata(b)]);
+  a.currentTime=Math.max(0,a.duration-45);
+  button.textContent="Lecture de la fin du premier bloc…";
+  await a.play();
+  var advance=function(){
+   if(a.ended||a.currentTime>=a.duration-0.15){
+    a.removeEventListener("timeupdate",advance);a.pause();b.currentTime=0;
+    button.textContent="Lecture du début du bloc suivant…";
+    b.play().then(function(){
+      var stopAt=setInterval(function(){if(b.currentTime>=45||b.ended){clearInterval(stopAt);b.pause();button.disabled=false;button.textContent="▶ Rejouer la frontière ~45 s + ~45 s";}},100);
+    }).catch(function(){button.disabled=false;button.textContent="▶ Rejouer la frontière ~45 s + ~45 s"});
+   }
+  };
+  a.addEventListener("timeupdate",advance);
+ }catch(e){button.disabled=false;button.textContent="▶ Rejouer la frontière ~45 s + ~45 s";alert("Lecture automatique impossible : "+e.message)}
+}
+
+function buildCriteria(){
+ var host=document.getElementById("criteria");
+ host.innerHTML=CRITERIA.map(function(c,n){
+  var v=state.criteria[c.id]||{};
+  return '<article class="card criterion" id="criterion-'+esc(c.id)+'">'+
+   '<div class="row"><span class="badge">'+(n+1)+' / '+CRITERIA.length+'</span><h3 style="margin:0">'+esc(c.title)+'</h3></div>'+
+   '<p class="passcond"><strong>PASS si :</strong> '+esc(c.pass)+'</p>'+
+   '<label><strong>Observation perceptive — ce que vous entendez</strong><textarea data-observation="'+esc(c.id)+'" placeholder="Description factuelle, sans verdict implicite.">'+esc(v.observation||"")+'</textarea></label>'+
+   '<div class="verdict"><strong>Verdict artistique :</strong> '+
+   '<label><input type="radio" name="verdict-'+esc(c.id)+'" value="PASS" '+(v.verdict==="PASS"?"checked":"")+'> PASS</label>'+
+   '<label><input type="radio" name="verdict-'+esc(c.id)+'" value="FAIL" '+(v.verdict==="FAIL"?"checked":"")+'> FAIL</label></div>'+
+   '</article>';
+ }).join("");
+ document.querySelectorAll("[data-observation]").forEach(function(el){
+  el.addEventListener("input",function(){var id=el.dataset.observation;state.criteria[id]=state.criteria[id]||{};state.criteria[id].observation=el.value;save();});
+ });
+ CRITERIA.forEach(function(c){
+  document.querySelectorAll('input[name="verdict-'+c.id+'"]').forEach(function(el){
+   el.addEventListener("change",function(){state.criteria[c.id]=state.criteria[c.id]||{};state.criteria[c.id].verdict=el.value;save();styleCriterion(c.id);renderProgress();});
+  });
+  styleCriterion(c.id);
+ });
+}
+function styleCriterion(id){
+ var card=document.getElementById("criterion-"+id);if(!card)return;
+ card.classList.remove("pass","fail");var v=state.criteria[id]&&state.criteria[id].verdict;if(v==="PASS")card.classList.add("pass");if(v==="FAIL")card.classList.add("fail");
+}
+function renderProgress(){
+ if(!state.index){document.getElementById("progressText").innerHTML="<strong>H2 verrouillé</strong>";return}
+ var m=MODULES.filter(function(x){return state.moduleDone[x.id]}).length;
+ var c=CRITERIA.filter(function(x){return state.criteria[x.id]&&state.criteria[x.id].verdict}).length;
+ document.getElementById("progressText").innerHTML="<strong>Écoutes "+m+"/"+MODULES.length+" · verdicts "+c+"/"+CRITERIA.length+"</strong>";
+}
+
+async function loadTag(){
+ stopBoundary();
+ var tag=document.getElementById("tagInput").value.trim();
+ if(!tag)return;
+ state={tag:tag,release:null,index:null,assets:{},moduleDone:{},criteria:{}};
+ var status=document.getElementById("gateStatus"),details=document.getElementById("gateDetails");
+ status.textContent="Vérification…";status.className="status warn";
+ document.getElementById("reviewArea").classList.add("locked");
+ try{
+  var rr=await fetch(API+encodeURIComponent(tag),{headers:{Accept:"application/vnd.github+json"}});
+  if(!rr.ok)throw new Error("Release introuvable ("+rr.status+")");
+  var release=await rr.json();state.release=release;
+  (release.assets||[]).forEach(function(a){state.assets[a.name]=a});
+  var missing=REQUIRED.filter(function(name){return !state.assets[name]});
+  if(missing.length){
+   status.textContent="H2 VERROUILLÉ";status.className="status bad";
+   details.innerHTML="<strong>Release partielle — ce n’est pas H2.</strong><br>Assets manquants : "+missing.map(esc).join(", ");
+   renderProgress();return;
+  }
+  var ir=await fetch(assetUrl("review-index.json"));
+  if(!ir.ok)throw new Error("review-index.json illisible ("+ir.status+")");
+  var index=await ir.json();
+  if(index.status!=="machine-ready-review-assets")throw new Error("review-index status inattendu: "+index.status);
+  var indexNames=new Set((index.assets||[]).map(function(x){return x.name}));
+  var missingIndex=REQUIRED.filter(function(name){return name!=="review-index.json"&&!indexNames.has(name)});
+  if(missingIndex.length)throw new Error("review-index incomplet: "+missingIndex.join(", "));
+  state.index=index;
+  restore();
+  buildModules();buildCriteria();bindAudioSources();
+  document.getElementById("reviewArea").classList.remove("locked");
+  document.getElementById("reviewArea").setAttribute("aria-disabled","false");
+  status.textContent="A+B+C+D MACHINE_QUALIFIED";status.className="status good";
+  details.innerHTML="<strong>Gate ouvert.</strong> Release immutable <code>"+esc(tag)+"</code> · manifest SHA-256 <code>"+esc(index.production_manifest_sha256||"n/a")+"</code> · engine <code>"+esc(index.engine_ref||"n/a")+"</code>.";
+  var u=new URL(location.href);u.searchParams.set("tag",tag);history.replaceState(null,"",u);
+  renderProgress();
+ }catch(e){
+  status.textContent="H2 VERROUILLÉ";status.className="status bad";
+  details.textContent="Impossible de prouver le gate H2 : "+e.message;
+  renderProgress();
+ }
+}
+
+function buildReport(){
+ if(!state.index){alert("Chargez d’abord une Release H2 complète.");return}
+ var missingModules=MODULES.filter(function(m){return !state.moduleDone[m.id]});
+ var missingCriteria=CRITERIA.filter(function(c){return !(state.criteria[c.id]&&state.criteria[c.id].verdict)});
+ if(missingModules.length||missingCriteria.length){
+  document.getElementById("reportStatus").textContent="Revue incomplète";document.getElementById("reportStatus").className="status warn";
+  alert("Il manque "+missingModules.length+" écoute(s) déclarée(s) et "+missingCriteria.length+" verdict(s).");return;
+ }
+ var failed=CRITERIA.filter(function(c){return state.criteria[c.id].verdict==="FAIL"});
+ var decision=failed.length?"FAIL_H2_TARGETED_CORRECTION":"PASS_H2_SINGLE_BATCH";
+ var report={
+  schema:"recit.odyssee.h2_human_review.v1",
+  review:"H2_SINGLE_BATCH",
+  release_tag:state.tag,
+  gate:"A+B+C+D MACHINE_QUALIFIED",
+  production_manifest_sha256:state.index.production_manifest_sha256,
+  engine_ref:state.index.engine_ref,
+  module_completion:Object.fromEntries(MODULES.map(function(m){return [m.id,true]})),
+  criteria:Object.fromEntries(CRITERIA.map(function(c){
+   var v=state.criteria[c.id]||{};
+   return [c.id,{observation:v.observation||"",artistic_verdict:v.verdict,pass_condition:c.pass}];
+  })),
+  overall_decision:decision,
+  failed_criteria:failed.map(function(c){return c.id}),
+  global_note:document.getElementById("globalNote").value.trim(),
+  semantics:{
+   observation_separate_from_artistic_verdict:true,
+   descriptive_terms_have_no_implicit_valence:true
+  },
+  constraints:{
+   casting_reopened:false,
+   micro_review_created:false,
+   new_asset_search_authorized:false
+  }
+ };
+ var out=document.getElementById("reportOutput");out.hidden=false;out.textContent=JSON.stringify(report,null,2);
+ document.getElementById("copyReport").disabled=false;
+ var rs=document.getElementById("reportStatus");rs.textContent=decision;rs.className="status "+(failed.length?"bad":"good");
+ save();
+}
+async function copyReport(){
+ var t=document.getElementById("reportOutput").textContent;if(!t)return;
+ try{await navigator.clipboard.writeText(t)}catch(_){
+  var ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();
+ }
+ document.getElementById("copyReport").textContent="✓ Bilan copié";
+ setTimeout(function(){document.getElementById("copyReport").textContent="Copier le bilan"},1400);
+}
+
+document.getElementById("loadButton").addEventListener("click",loadTag);
+document.getElementById("tagInput").addEventListener("keydown",function(e){if(e.key==="Enter")loadTag()});
+document.getElementById("buildReport").addEventListener("click",buildReport);
+document.getElementById("copyReport").addEventListener("click",copyReport);
+document.getElementById("globalNote").addEventListener("input",save);
+
+var initial=new URL(location.href).searchParams.get("tag");
+if(initial){document.getElementById("tagInput").value=initial;loadTag()}
+})();
+</script>
+</body>
+</html>
