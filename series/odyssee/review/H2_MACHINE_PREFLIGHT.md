@@ -8,7 +8,7 @@ Current product main when this preflight is recorded: `5de36966a3fb7ceb38c210860
 
 Status: **H2_PREP_ACTIVE — MACHINE PREFLIGHT PASS WITH PACING WATCH**
 
-## Current delta — post P5 product integration
+## Historical delta — post P5 product integration (superseded)
 
 As of product main `b55834cc2f6ed75dc1f243048aa39282bd89f9ed`:
 
@@ -27,6 +27,19 @@ A second materialization gap remains:
 Exact sound-direction locators for S02/S05/S06/S08/S14 are now authoritative in:
 `series/odyssee/production/H2_SOUND_DIRECTION_BINDINGS_V1.json`.
 
+
+## Current authoritative delta — 2026-09-02
+
+As of product main `dae91ec3870b77a6fb49598ff47f1bc33d3fbf28`:
+
+- P5/S08 is fully industrialized and machine-ready; Production run `33525198119` is automatic-QA PASS. The earlier `ffprobe` defect is closed and must not reopen P5 artistically.
+- bounded sound acquisition is complete. The three optional assets produced no automatic selection at the authorized threshold; Stream 1 therefore accepts the authored fallbacks: deliberate silence / omit-and-warn / ensemble subtraction. No manual best-of-N, threshold reduction or fourth asset is authorized.
+- P4 Sirens is HUMAN_PASS and product-bound exactly through `P4_FROZEN_S09_BINDING_V1.json`; S09 now waits only on Stream 3 materialization, not on Stream 2.
+- MARIN V2 / Alain is retired because the voice is absent from the current Edge catalog. Stream 1 V3 is `fr-FR-RemyMultilingualNeural`, rate `+3%`, pitch `-4Hz`, volume `+2%`; deterministic audit found zero direct MARIN ↔ Remy-family adjacent turns across S05/S06/S07/S10. Those four scenes await narrow Stream 3 rerender only.
+- P6/Confucius4 produced one MACHINE_PASS candidate in run `33598325723`, candidate SHA-256 `55702f253cbfc9c758d02d7f9952a94dfb68d2877f402fc0a5e6215bec0b2b9d`. It is not product-consumable until Stream 2 publishes `ULYSSES_EMOTIONAL_HUMAN_PASS`.
+- the exact frozen S15 binding has been revalidated against current Program blob `2d07fd4bc16d77286012e641948bd1b5b3e2100b`: 37/37 guards PASS, zero mismatches.
+
+H2 remains a single batched human session. Do not dispatch it yet: the value of one review will materially increase once corrected MARIN/Block B and P4/Block C renders are available, while P6 can remain independent if its human verdict is still pending.
 
 This file is not a human verdict. It narrows the future H2 listening session to questions that machine QA cannot answer.
 
@@ -169,7 +182,7 @@ This is not left for the human reviewer because the causal defect is already kno
 Stream 1 correction:
 
 - Euryloque remains unchanged and human-accepted;
-- MARIN moves to `fr-FR-AlainNeural`, rate +2%, pitch +0Hz, volume +2%;
+- MARIN V2 / Alain was attempted but is unavailable in current Edge; MARIN V3 is `fr-FR-RemyMultilingualNeural`, rate +3%, pitch -4Hz, volume +2%;
 - only S05/S06/S07/S10 are rerendered;
 - those four first-run audios are no longer H2 review candidates;
 - the first-run metrics above remain valid as pipeline and pacing evidence, but pacing for the corrected renders must be remeasured.
@@ -284,9 +297,9 @@ The page should ask one compact set of transverse questions, not one verdict per
 Reason:
 
 - Block A voice foundation is ready, but its product sound direction is not yet materialized;
-- the highest-value independent scenes are rendered, with S05/S06/S07/S10 requiring one narrow MARIN rerender before H2;
-- P4 is actively rendering in Stream 2;
-- P6 current failure is pre-synthesis infrastructure, not artistic evidence;
+- the highest-value independent scenes are machine-ready; S05/S06/S07/S10 require the narrow MARIN V3 rerender and S09 requires P4 materialization before the shared H2 batch is worth dispatching;
+- P4 is HUMAN_PASS and exact S09 binding is complete; Stream 3 materialization is pending;
+- P6 Confucius4 is MACHINE_PASS and awaits the only remaining Stream 2 human verdict;
 - generic multi-provider routing needed by P5 is already merged in Audio Engine;
 - a short wait for durable assets and near-term integrations can materially increase the value of one listening session.
 
