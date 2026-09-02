@@ -10,8 +10,8 @@
   },
   "engine_ref": "a3af1565f7b6799bced8dbb318fafd5807bafafc",
   "latest_clean_control": {
-    "production_run": 33535591183,
-    "product_head": "191d08067b098e75642f4b8be8ddc9297573911e",
+    "production_run": 33597992496,
+    "product_head": "2eedbe2ac93a298d7bac1ee9c2c32b932a3a5c61",
     "production_manifest_sha256": "f47f14c455acdb4795ab51d2344a473695b7527c3eb2a78c0a9d541e130a0636",
     "workflow_conclusion": "success",
     "business_state": "hold",
@@ -133,5 +133,47 @@
     ],
     "current_batch_maturity": "WAITING_FOR_S05_MARIN_CAPABILITY",
     "rule": "Do not dispatch the human H2 review release merely because independent machine-ready audio exists."
+  },
+  "program_materialization": {
+    "state": "EXPLICIT_SIDECAR_ONLY",
+    "program_stage_mutation": "REJECTED_CACHE_IDENTITY_CHURN",
+    "rejected_product_commit": "59910a97ba99801768975bdc7d1a4f63872bd0e4",
+    "evidence_run": 33598548843,
+    "root_cause": "At the pinned Production workflow, the optional scene cache key includes the full Program SHA-256 and has no cross-Program restore key. Metadata-only Program edits therefore missed the scene cache and regenerated unchanged Edge TTS segments.",
+    "representative_audio_drift": {
+      "S02": {
+        "baseline_audio_sha256": "41f60d134caebdbd300fd14bb0ceb75c2fbb819d674af66c21fcf08b14ebe178",
+        "metadata_edit_audio_sha256": "b093a4220c512282852849be9279a6047f200121d640295767647c9b07a9f515",
+        "baseline_voice_cache_hits": 120,
+        "metadata_edit_voice_cache_hits": 6
+      },
+      "S04": {
+        "baseline_audio_sha256": "2088a76cd073f7f12c0dcd5132714155ec8258459cdf6c69356554aeac6def7b",
+        "metadata_edit_audio_sha256": "56b864dbcc1d9f92d2a4ec72081ebb180da3837d4a3cab785e1f58e1c9a86c9e",
+        "baseline_voice_cache_hits": 55,
+        "metadata_edit_voice_cache_hits": 1
+      },
+      "S11": {
+        "baseline_audio_sha256": "3230e858791300dd3455dfb64bf1833335d190185a65c521f864ad34af4cd85e",
+        "metadata_edit_audio_sha256": "33bbf1f0879ecd4787deeacce3eed3ae1748e1681c799b3147f03acea76cbf76",
+        "baseline_voice_cache_hits": 117,
+        "metadata_edit_voice_cache_hits": 9
+      },
+      "S14": {
+        "baseline_audio_sha256": "5cc41897e9dad64a33b6adb981e108e69153422ac5400c572e45986131d76924",
+        "metadata_edit_audio_sha256": "c8ddeec6a81297bc64bdd798bb29b2e229fa6cf81b98848543b0a9565e6edffe",
+        "baseline_voice_cache_hits": 118,
+        "metadata_edit_voice_cache_hits": 3
+      }
+    },
+    "required_product_action": "Restore pre-edit Programs and manifest hashes so the previously qualified speech cache identity remains authoritative.",
+    "required_engine_action": "Provide safe content-addressed reuse of unchanged voice clips across Program-metadata SHA changes before encoding H2 status into executable Programs.",
+    "h2_sound_authority": "Keep explicit no-selection/silence decisions in H2_STREAM3_MATERIALIZATION_V1.json and H2_SOUND_DIRECTION_BINDINGS_V1.json until the cache identity defect is resolved.",
+    "rules": [
+      "reuse_existing_speech_audio",
+      "no_metadata_only_TTS_rerender",
+      "no_human_H2_on_drifted_metadata_edit_audio",
+      "no_artistic_reinterpretation"
+    ]
   }
 }
