@@ -30,11 +30,12 @@ jobs:
   production:
     permissions:
       contents: write
-    uses: stefm78/audio-engine/.github/workflows/production.yml@de3620a293092aa2931480d32561ba84b151203f
+    uses: stefm78/audio-engine/.github/workflows/production.yml@94e606d5bf45a8c12677cb732b1b93bc415e0078
     with:
       manifest_path: series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json
       artifact_prefix: odyssee-production-v1
       cache_namespace: odyssee-production-v1
+      fresh_scene_cache_units_json: '["S09"]'
       max_parallel: 12
       publish_release: false
       publish_review_release: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_review_release }}

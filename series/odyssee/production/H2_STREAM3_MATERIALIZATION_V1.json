@@ -8,7 +8,7 @@
     "stream2_result": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
     "marin_hold": "series/odyssee/production/MARIN_CAPABILITY_HOLD_V1.json"
   },
-  "engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
+  "engine_ref": "94e606d5bf45a8c12677cb732b1b93bc415e0078",
   "latest_clean_control": {
     "production_run": 33614971059,
     "product_head": "ef8f2c329e94c96c0fec4270b000c1d80f184972",
@@ -248,7 +248,7 @@
     "generic_provider": "READY",
     "generic_provider_main": "fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
     "generic_provider_smoke_run": 33537558645,
-    "product_state": "MATERIALIZED_PENDING_MACHINE_QUALIFICATION",
+    "product_state": "MATERIALIZED_PENDING_ISOLATED_MACHINE_QUALIFICATION",
     "prepared_product_pr": 132,
     "rule": "Do not infer compact H1b probe slots onto frozen S09 by order, fuzzy text, semantics, or artistic intuition.",
     "binding_authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
@@ -264,7 +264,7 @@
         0.16
       ]
     },
-    "target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
+    "target_engine_ref": "94e606d5bf45a8c12677cb732b1b93bc415e0078",
     "s09_materialization": {
       "state": "READY_IN_MANIFEST_PENDING_PRODUCTION_RUN",
       "program_sha256": "9b039eee99d0846b1a397a963cc0d913cd183c9e9dca673e4e6872bd7cc14cc6",
@@ -301,6 +301,25 @@
         ]
       },
       "legacy_cache_recovery": "DISABLED"
+    },
+    "runtime_isolation": {
+      "state": "RERUN_PENDING",
+      "engine_issue": 251,
+      "engine_pr": 252,
+      "fresh_cache_issue": 253,
+      "fresh_cache_pr": 254,
+      "fresh_unit": "S09",
+      "first_shared_runtime_run": 33620918255,
+      "first_shared_runtime_qualification": "REJECTED_BY_PROVENANCE_REGARDLESS_OF_JOB_CONCLUSION",
+      "acceptance": [
+        "S09 automatic QA PASS",
+        "voxcpm2 isolated prewarm report ready",
+        "chatterbox-multilingual-v3 isolated prewarm report ready",
+        "final manifest reports both promoted providers cache-only",
+        "provider cache identities match prewarm reports",
+        "Block C READY",
+        "no H2 human dispatch"
+      ]
     }
   },
   "p6_ulysse_emotional": {
@@ -372,7 +391,7 @@
       "S14",
       "Block B if qualified"
     ],
-    "current_batch_maturity": "WAITING_FOR_P4_S09_AND_BLOCK_C_MACHINE_QUALIFICATION",
+    "current_batch_maturity": "WAITING_FOR_P4_S09_ISOLATED_RUNTIME_AND_BLOCK_C_MACHINE_QUALIFICATION",
     "rule": "Do not dispatch the human H2 review release merely because independent machine-ready audio exists."
   },
   "program_materialization": {
