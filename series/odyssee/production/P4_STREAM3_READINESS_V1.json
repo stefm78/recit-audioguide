@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.p4.stream3_readiness.v1",
   "id": "odyssee-p4-stream3-readiness-v1",
-  "status": "MATERIALIZED_PENDING_ISOLATED_HYDRATION_QUALIFICATION",
+  "status": "MATERIALIZED_PENDING_ISOLATED_BOOTSTRAP_QUALIFICATION",
   "human_gate": "P4_SIRENS_HUMAN_PASS",
   "generic_engine_ref": "fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
   "generic_provider_smoke": {
@@ -59,8 +59,8 @@
     ],
     "rule": "Executable placement comes only from the exact frozen binding; no probe-order or fuzzy inference."
   },
-  "target_engine_ref": "694dcf330accda33f0ab84a0630a5bebfb231e6f",
-  "next_step": "Qualify fresh S09 and regression S08 with provider hydration inside each exact isolated runtime; then qualify Block C.",
+  "target_engine_ref": "2409c14ab82e9cbdba8d37cfde714d8aa8f31d48",
+  "next_step": "Qualify S08 regression and fresh S09 with isolated provider runtimes plus exact engine bootstrap; then qualify Block C.",
   "materialization": {
     "program": "series/odyssee/programs/S09.json",
     "program_sha256": "9b039eee99d0846b1a397a963cc0d913cd183c9e9dca673e4e6872bd7cc14cc6",
@@ -82,7 +82,7 @@
     "legacy_scene_cache_recovery": "DISABLED_BEFORE_FIRST_S09_RENDER"
   },
   "runtime_isolation": {
-    "state": "READY_AFTER_ISOLATED_HYDRATION_FIX",
+    "state": "READY_AFTER_ENGINE_BOOTSTRAP_FIX",
     "engine_issue": 251,
     "engine_pr": 252,
     "fresh_cache_issue": 253,
@@ -108,6 +108,18 @@
       "reason": "Promoted-provider model hydration still ran in the base environment after runtime isolation; huggingface-hub was intentionally absent there.",
       "artistic_or_binding_failure": false
     },
-    "target_engine_ref": "694dcf330accda33f0ab84a0630a5bebfb231e6f"
+    "target_engine_ref": "694dcf330accda33f0ab84a0630a5bebfb231e6f",
+    "engine_bootstrap_fix": {
+      "engine_issue": 257,
+      "engine_pr": 258,
+      "target_engine_ref": "2409c14ab82e9cbdba8d37cfde714d8aa8f31d48",
+      "failed_product_run": 33625303334,
+      "failed_units": [
+        "S08",
+        "S09"
+      ],
+      "failed_reason": "ISOLATED_VENV_MISSING_IMAGEIO_FFMPEG",
+      "policy": "INSTALL_EXACT_ENGINE_BOOTSTRAP_PACKAGES_WITH_NO_DEPS_BEFORE_EXACT_ENGINE"
+    }
   }
 }
