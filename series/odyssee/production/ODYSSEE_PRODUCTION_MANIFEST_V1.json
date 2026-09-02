@@ -196,10 +196,10 @@
       "id": "S15",
       "state": "hold",
       "program": "series/odyssee/programs/S15.json",
-      "program_sha256": "180b422c27f4cae2a91a0d8bcfc8a368d56e0556e10a1604b96b4124bc48f395",
+      "program_sha256": "aa40040c0857ade3e213749dfa46b81b4e51f08c2c2783e15981a7a4bfedc629",
       "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
       "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
-      "hold_reason": "ULYSSES_EMOTIONAL_HUMAN_PASS provider package is pending. Pénélope H1b-B Chatterbox performance is already materialized; no fallback allowed.",
+      "hold_reason": "P6_S15_PRODUCTION_HUMAN_CAPTURE_PENDING. ULYSSES_EMOTIONAL_HUMAN_PASS is artistically closed and the authoritative BeltOut Production package exists; Pénélope is materialized. S15 remains HOLD until 12/12 exact Ulysse Production takes are human-selected, clean-confirmed, frozen and privately handed to Stream 3. No fallback.",
       "provider_packages": [
         {
           "provider": "chatterbox-multilingual-v3",
