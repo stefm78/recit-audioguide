@@ -30,18 +30,17 @@
     "stream3_state": "READY_TO_BIND"
   },
   "p6_ulysse_emotional": {
-    "decision": "HOLD_STREAM2",
-    "last_attempt": "REJECTED",
-    "rejection_class": [
-      "ARTISTIC_FAIL_MELODRAMA"
-    ],
+    "decision": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "last_attempt": "HUMAN_PASS_WITH_ARTISTIC_ARBITRATION",
+    "rejection_class": [],
     "human": {
       "impact": 4,
       "reaction": "PASS",
       "identity": "PASS",
       "french": "PASS",
       "melodrama": "PRESENT",
-      "staging": "PASS"
+      "staging": "PASS",
+      "melodrama_acceptance": "ARTISTICALLY_ACCEPTED"
     },
     "authoritative_machine": {
       "execution": "PRIVATE_LOCAL_SANDBOX",
@@ -75,8 +74,8 @@
       "DSP_rescue",
       "cloud_TTS"
     ],
-    "next_hypothesis_requirement": "first_localize_melodrama_source_vs_conversion_then_if_source_open_new_independently_selected_underplayed_human_source_set",
-    "stream3_state": "BLOCKED_ONLY_ON_ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "next_hypothesis_requirement": null,
+    "stream3_state": "READY_TO_BIND_AND_INDUSTRIALIZE",
     "attempt_history": [
       {
         "architecture": "Qwen3 hybrid x-vector-only + contained-sadness style transplant",
@@ -200,14 +199,28 @@
       }
     ],
     "learning": {
-      "identity_preservation": "PASS_ON_LATEST",
-      "emotional_reaction": "PASS_ON_LATEST",
+      "identity_preservation": "PASS",
+      "emotional_reaction": "PASS",
       "impact": "4_OF_5_PASS",
-      "french": "PASS_ON_LATEST",
-      "staging": "PASS_ON_LATEST",
-      "melodrama": "PRESENT_ON_LATEST_ONLY_REMAINING_BLOCKER",
-      "remaining_failure": "RESTRAINT_ONLY",
-      "next_diagnostic": "COMPARE_FROZEN_HUMAN_SOURCE_VS_BELTOUT_CONVERTED_TO_LOCALIZE_MELODRAMA"
+      "french": "PASS",
+      "staging": "PASS",
+      "melodrama": "PRESENT_BUT_ARTISTICALLY_ACCEPTED",
+      "remaining_failure": "NONE_FOR_STREAM2_CASTING",
+      "note": "Clicks/noise in the human recording are production-capture hygiene, not a casting-capability blocker."
+    },
+    "artistic_arbitration": {
+      "date": "2026-09-02",
+      "decision": "ACCEPT_PRESENT_MELODRAMA_FOR_THIS_SCENE",
+      "raw_perceptual_label_preserved": true,
+      "raw_label": "PRESENT",
+      "accepted": true,
+      "rationale": "Human artistic authority explicitly judged the perceived melodramatic quality as correct for this scene."
     }
+  },
+  "stream2": {
+    "state": "EXIT_CRITICAL_PATH",
+    "p4": "P4_SIRENS_HUMAN_PASS",
+    "p6": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "exit_reason": "Both critical casting capabilities have authoritative human PASS decisions."
   }
 }
