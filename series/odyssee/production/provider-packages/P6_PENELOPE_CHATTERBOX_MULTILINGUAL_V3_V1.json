@@ -112,7 +112,7 @@
     "human_gate": "H1b",
     "winning_variant": "p6-b",
     "accepted_audio_sha256": "474c2e41a5d702b2a84524aa3be9a0559ed7378af18d507ac082b666029d64ae",
-    "scope": "Pénélope local expressive family only; Ulysse emotional segments remain external HOLD",
+    "scope": "Pénélope local expressive family only; Ulysse emotional capability is resolved separately by P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json.",
     "seed_provenance": "H1b p6-b seed 6602; Production base seed preserves historical seed*100 convention and adds exact Program sequence per segment",
     "performance_provider_contract": "audio-engine@0d66509ffdeeca37dc727954949587155e80832f performance_provider",
     "placement_normalization": {
