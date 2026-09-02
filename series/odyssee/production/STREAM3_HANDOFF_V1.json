@@ -154,7 +154,8 @@
           "melodrama_appropriate": "PASS",
           "staging": "PASS"
         },
-        "production_capture_note": "Probe source had clicks/noise; this is capture hygiene, not a casting blocker. Exact S15 production recordings should be captured cleanly before freeze."
+        "production_capture_note": "Probe source had clicks/noise; this is capture hygiene, not a casting blocker. Exact S15 production recordings should be captured cleanly before freeze.",
+        "provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json"
       }
     },
     "p4_sirens": {
