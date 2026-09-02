@@ -267,7 +267,7 @@
     "target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
     "s09_materialization": {
       "state": "READY_IN_MANIFEST_PENDING_PRODUCTION_RUN",
-      "program_sha256": "b68a7e905e7b8409801a452b52748d5bcb9b6d8ed4ec8fa11271fc906d880662",
+      "program_sha256": "9b039eee99d0846b1a397a963cc0d913cd183c9e9dca673e4e6872bd7cc14cc6",
       "exact_guard_count": 13,
       "left_segments": [
         32,

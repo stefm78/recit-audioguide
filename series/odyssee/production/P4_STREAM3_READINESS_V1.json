@@ -63,7 +63,7 @@
   "next_step": "Qualify S09 and Block C in Production; no new P4 human gate.",
   "materialization": {
     "program": "series/odyssee/programs/S09.json",
-    "program_sha256": "b68a7e905e7b8409801a452b52748d5bcb9b6d8ed4ec8fa11271fc906d880662",
+    "program_sha256": "9b039eee99d0846b1a397a963cc0d913cd183c9e9dca673e4e6872bd7cc14cc6",
     "original_frozen_program_blob_sha1": "234c0138423478e7ea36b4f24a2075543a154983",
     "exact_binding_authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
     "exact_guard_count": 13,

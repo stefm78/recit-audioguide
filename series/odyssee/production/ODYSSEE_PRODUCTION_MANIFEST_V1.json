@@ -126,7 +126,7 @@
       "state": "ready",
       "provider": "edge+voxcpm2+chatterbox-multilingual-v3",
       "program": "series/odyssee/programs/S09.json",
-      "program_sha256": "b68a7e905e7b8409801a452b52748d5bcb9b6d8ed4ec8fa11271fc906d880662",
+      "program_sha256": "9b039eee99d0846b1a397a963cc0d913cd183c9e9dca673e4e6872bd7cc14cc6",
       "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
       "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
       "providers": [

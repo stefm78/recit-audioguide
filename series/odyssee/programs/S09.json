@@ -16,10 +16,8 @@
     "block": "C",
     "direction": "series/odyssee/production/blocks/BLOCK_C.md",
     "stage": "scene-foundation-v1",
-    "state": "HOLD",
-    "blockers": [
-      "P4_SIRENS_HUMAN_PASS"
-    ],
+    "state": "READY",
+    "blockers": [],
     "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
     "no_silent_fallback": true
   },
