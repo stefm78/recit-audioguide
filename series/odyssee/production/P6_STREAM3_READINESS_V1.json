@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.p6.stream3_readiness.v1",
   "id": "odyssee-p6-stream3-readiness-v1",
-  "status": "PARTIALLY_MATERIALIZED_SINGLE_EXTERNAL_HOLD",
+  "status": "READY_FOR_STREAM3_MATERIALIZATION",
   "product_program": "series/odyssee/programs/S15.json",
   "program_sha256": "180b422c27f4cae2a91a0d8bcfc8a368d56e0556e10a1604b96b4124bc48f395",
   "product_binding": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
@@ -20,24 +20,31 @@
     "state": "READY_FOR_FINAL_S15_COMPOSITION"
   },
   "ulysses_emotional": {
-    "state": "HOLD_STREAM2_ONLY",
-    "required_package": "ULYSSES_EMOTIONAL_HUMAN_PASS",
-    "last_rejected_attempt": {
-      "architecture": "Qwen3 hybrid x-vector-only + contained-sadness style transplant",
-      "machine_run": 33514546032,
-      "candidate_sha256": "4f4f6b352db9d981cef3db6a29c8c510b5396fa009163e07415388bde33ce033",
-      "human": {
-        "impact": 1,
-        "reaction": "FAIL",
-        "identity": "FAIL",
-        "french": "PASS",
-        "melodrama": "PRESENT",
-        "staging": "PASS"
-      },
-      "decision": "ARTISTIC_FAIL_IDENTITY_FAIL",
-      "retry_policy": "DO_NOT_TUNE_OR_RETRY_SAME_ARCHITECTURE"
+    "state": "READY_TO_MATERIALIZE",
+    "capability": "human_french_performance_to_beltout_to_henri_ulysse",
+    "authority": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
+    "human_gate": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "human": {
+      "impact": 4,
+      "reaction": "PASS",
+      "identity": "PASS",
+      "french": "PASS",
+      "melodrama_observation": "PRESENT",
+      "melodrama_appropriate": "PASS",
+      "staging": "PASS"
     },
-    "next_attempt_requirement": "MATERIALLY_DISTINCT_ARCHITECTURE_ONLY"
+    "beltout_revision": "f71295e33cc9c0092083089ed0f9c1a532e77e6b",
+    "target_identity": "immutable_H1b_B_Henri_Ulysse_anchor_segments_6_7_8",
+    "production_rule": "Record exact frozen S15 Ulysse emotional segments as natural French human performances, freeze one selected take per segment before conversion, then apply exactly one BeltOut identity conversion per selected take.",
+    "capture_hygiene": [
+      "avoid_clicks_and_handling_noise",
+      "quiet_room",
+      "no_added_reverb",
+      "no_time_stretch",
+      "no_pitch_shift",
+      "deterministic_codec_normalization_only_before_freeze_if_needed"
+    ],
+    "raw_human_audio_policy": "Do not commit raw human voice recordings to the public repository."
   },
   "staging": {
     "no_music": true,
@@ -45,5 +52,5 @@
     "placement": "simple-intimate / center",
     "frozen_text_preserved": true
   },
-  "master_effect": "S15 and Block D remain HOLD; all other production stays independent."
+  "master_effect": "S15 and Block D are no longer blocked by Stream 2. Stream 3 owns exact S15 performance capture, BeltOut materialization, production hygiene, QA and H2 integration."
 }
