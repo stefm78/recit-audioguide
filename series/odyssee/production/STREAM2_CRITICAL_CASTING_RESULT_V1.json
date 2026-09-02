@@ -31,12 +31,11 @@
   },
   "p6_ulysse_emotional": {
     "decision": "HOLD_STREAM2",
-    "last_attempt": "REJECTED",
+    "last_attempt": "REJECTED_PRE_HUMAN",
     "rejection_class": [
-      "ARTISTIC_FAIL",
-      "FRENCH_FAIL",
-      "MELODRAMA_PRESENT",
-      "STAGING_FAIL"
+      "CAPABILITY_REJECT",
+      "STAGING_DURATION_FAIL",
+      "TIMBRE_DIRECTION_FAIL"
     ],
     "human": {
       "impact": 3,
@@ -66,16 +65,18 @@
       "same_Qwen3_hybrid",
       "same_Confucius4_single_prompt",
       "same_VoiceDesign_to_BeltOut_cell",
+      "same_CosyVoice3_to_BeltOut_cell",
       "instruction_tuning",
       "seed_retry",
       "best_of_N",
       "x_vector_blending",
       "checkpoint_sweep",
+      "duration_DSP_rescue",
       "DSP_rescue",
       "NUC_retry_for_capability_failure",
       "cloud_TTS"
     ],
-    "next_hypothesis_requirement": "materially_distinct_source_performance_architecture_or_human_performance_source_with_identity_conversion",
+    "next_hypothesis_requirement": "human_french_performance_source_with_fixed_timing_and_restraint_then_single_BeltOut_identity_conversion",
     "stream3_state": "BLOCKED_ONLY_ON_ULYSSES_EMOTIONAL_HUMAN_PASS",
     "attempt_history": [
       {
@@ -147,16 +148,41 @@
           "candidate_sha256": "6f7e25da627c5b89974831f9043bf901b5b06eba7bd8121690da1d5812cf0e47",
           "artifact_digest": "sha256:5320de5a7b06de801706821ad1ed4aa6baee01f913fd031b98191f81fecb49ac"
         }
+      },
+      {
+        "architecture": "CosyVoice3 expressive French performance -> BeltOut timbre transfer to immutable Henri/Ulysse",
+        "decision": "REJECTED_PRE_HUMAN",
+        "rejection_class": [
+          "CAPABILITY_REJECT",
+          "STAGING_DURATION_FAIL",
+          "TIMBRE_DIRECTION_FAIL"
+        ],
+        "human": null,
+        "machine": {
+          "repo": "stefm78/audio-engine",
+          "run_id": 33611974977,
+          "head_sha": "c124792024db8e40242e44345142e7a9b7469e67",
+          "artifact_digest": "sha256:64d6d452d40e00b8c4fe81575bd704016a03e93ad1a747fd7abf8a2f3c8157de",
+          "first_rejected_slot": {
+            "i": 2,
+            "text": "Non.",
+            "cosyvoice_source_duration_seconds": 0.32,
+            "h1b_slot_duration_seconds": 1.776,
+            "duration_ratio_vs_h1b_slot": 0.18018018018018017,
+            "beltout_duration_ratio_vs_source": 1,
+            "cosine_source_to_henri": 0.43311530351638794,
+            "cosine_output_to_henri": 0.41906675696372986
+          }
+        }
       }
     ],
     "learning": {
-      "identity_preservation": "PASS_ON_LATEST",
-      "emotional_reaction": "PASS_ON_LATEST",
-      "impact": "3_OF_5_BELOW_GATE",
-      "french": "FAIL_ON_LATEST",
-      "melodrama": "PRESENT_ON_LATEST",
-      "staging": "FAIL_ON_LATEST",
-      "remaining_failure": "NATURAL_FRENCH_RESTRAINT_AND_SCENE_RHYTHM_WITH_SUFFICIENT_IMPACT"
+      "identity_preservation": "DEMONSTRATED_BY_CONFUCIUS4_AND_VOICEDESIGN_BELTOUT",
+      "emotional_reaction": "DEMONSTRATED_BY_VOICEDESIGN_BELTOUT",
+      "natural_french_restrained_source_performance": "NOT_YET_QUALIFIED",
+      "staging": "COSYVOICE3_SOURCE_DURATION_REJECT_ON_SLOT_2",
+      "beltout": "CAPABILITY_PROVEN_BUT_NOT_DIRECTIONALLY_RELIABLE_FOR_EVERY_SOURCE",
+      "remaining_failure": "QUALIFIED_NATURAL_FRENCH_HUMAN_LEVEL_PERFORMANCE_WITH_TIMING_AND_RESTRAINT"
     }
   }
 }
