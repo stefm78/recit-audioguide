@@ -18,7 +18,7 @@
     "stage": "scene-foundation-v1",
     "state": "HOLD",
     "blockers": [
-      "P4_SIRENS_HUMAN_PASS"
+      "P4_FROZEN_S09_LINE_BINDING_REQUIRED"
     ],
     "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
     "no_silent_fallback": true
