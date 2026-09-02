@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Odyssée — P6 — Studio Ulysse</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1016;--panel:#141c25;--panel2:#101720;--line:#2a3644;--text:#f5f7fa;--muted:#a8b4c2;--accent:#7dd3fc;--good:#86efac;--warn:#fde68a;--danger:#fca5a5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{width:min(1050px,calc(100% - 24px));margin:auto;padding:28px 0 70px}
+h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.03;margin:.2em 0 .35em}h2,h3{line-height:1.15}
+.kicker{color:var(--accent);font-size:.8rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase}
+.lead,.muted{color:var(--muted)}.lead{font-size:1.08rem;max-width:850px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:18px 0}
+.subcard{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 9px;color:var(--muted);font-size:.84rem;margin:2px}
+.badge.good{color:var(--good);border-color:#2f6b46}.badge.warn{color:var(--warn);border-color:#705f2c}
+button{border:1px solid var(--line);background:#1d2936;color:var(--text);border-radius:11px;padding:10px 13px;font:inherit;font-weight:700;cursor:pointer}
+button:hover{border-color:#4c6074}button.primary{background:#17364a;border-color:#2b6689;color:#e8f7ff}
+button.record{background:#4a1717;border-color:#873636}button.stop{background:#6f1d1d;border-color:#bd4d4d}
+button.good{background:#173c28;border-color:#2d7750}button.danger{background:#421a1a;border-color:#6f3333;color:#ffdede}
+button:disabled{opacity:.45;cursor:not-allowed}
+audio{width:100%;margin:7px 0}.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.target{font-size:clamp(1.6rem,5vw,2.5rem);font-weight:850;margin:.25rem 0}
+.direction{border-left:3px solid var(--accent);padding-left:12px}
+.dialogue{display:grid;gap:7px;margin:12px 0}.line{display:grid;grid-template-columns:104px 1fr;gap:10px;border-radius:10px;padding:8px 10px;background:#0d141c;border:1px solid transparent}
+.line .speaker{font-weight:800;color:var(--muted);font-size:.86rem;text-transform:uppercase}.line.targetline{border-color:#3c7798;background:#102332}.line.targetline .speaker{color:var(--accent)}
+.take{border:1px solid var(--line);border-radius:12px;padding:11px;margin:9px 0;background:#0e151d}.take.selected{border-color:#3c8558;background:#10231a}
+.take-head{display:flex;justify-content:space-between;gap:8px;align-items:center}.timer{font-variant-numeric:tabular-nums;font-weight:800;color:var(--warn)}
+.notice{border:1px solid #665925;background:#211e12;color:#f8eab0;border-radius:12px;padding:12px}
+.privacy{border:1px solid #285c45;background:#102219;color:#bdf3d1;border-radius:12px;padding:12px}
+.progress{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:12px 0}.progress a{border:1px solid var(--line);border-radius:10px;text-align:center;padding:8px;text-decoration:none;color:var(--muted)}.progress a.done{color:var(--good);border-color:#356d4c;background:#102319}
+#fullScript{max-height:480px;overflow:auto;padding-right:4px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0b1118;border:1px solid var(--line);padding:12px;border-radius:12px;color:#dce7f1}
+small code,code{overflow-wrap:anywhere}.status{font-weight:800}.status.good{color:var(--good)}.status.warn{color:var(--warn)}.status.bad{color:var(--danger)}
+.sticky{position:sticky;bottom:10px;z-index:5;background:rgba(11,16,22,.94);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:11px;margin-top:20px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.line{grid-template-columns:82px 1fr}.progress{grid-template-columns:repeat(5,1fr);font-size:.78rem}.sticky .row{align-items:stretch}.sticky button{flex:1}}
+</style>
+</head>
+<body>
+<main>
+<div class="kicker">Stream 2 · P6 · studio d’enregistrement</div>
+<h1>Ulysse — Le lit</h1>
+<p class="lead">Enregistre les cinq réactions humaines qui manquent à la scène. Tu joues l’émotion et le rythme ; BeltOut transférera ensuite uniquement le timbre vers Henri/Ulysse.</p>
+<div class="row">
+<span class="badge">5 répliques</span><span class="badge">prise humaine</span><span class="badge">BeltOut ensuite</span><span class="badge good">aucun upload automatique</span>
+</div>
+
+<section class="card">
+<h2>Avant de commencer</h2>
+<div class="privacy"><strong>Confidentialité :</strong> les prises restent dans ce navigateur, dans le stockage local de la page. Elles ne sont envoyées nulle part. Le seul transfert a lieu quand tu télécharges le ZIP puis me le téléverses dans la conversation.</div>
+<p><strong>Le principe de jeu :</strong> aucune grandeur héroïque. Ulysse est à un mètre de Pénélope, dans sa maison, après vingt ans. Le lit construit autour d’un olivier vivant devient la preuve qu’ils partagent encore une histoire que personne d’autre ne peut connaître.</p>
+<div class="notice"><strong>Attention :</strong> l’audio H1b-B ci-dessous sert à entendre <em>Pénélope, les pauses et le contexte</em>. N’imite pas le jeu d’Ulysse de cette version : c’est précisément la partie jugée trop mécanique que nous remplaçons.</div>
+<h3>Scène de référence complète — 40,68 s</h3>
+<audio id="referenceAudio" controls preload="metadata" src="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-h1b-corrective-review-v1/p6-b.mp3"></audio>
+<div class="row"><button id="micButton" class="primary" type="button">Autoriser le microphone</button><span id="micStatus" class="status warn">Micro non initialisé</span></div>
+<p class="muted">Conseil : pièce calme, téléphone ou micro à 15–30 cm, pas de musique, pas de réverbération ajoutée. Laisse 200–500 ms de silence naturel avant et après la phrase.</p>
+</section>
+
+<section class="card">
+<h2>Le dialogue complet du probe P6</h2>
+<p class="muted">Lis-le une fois avant d’enregistrer. Les cinq lignes d’Ulysse à remplacer sont mises en évidence.</p>
+<div id="fullScript" class="dialogue"></div>
+</section>
+
+<div class="progress" id="progress"></div>
+<div id="cards"></div>
+
+<section class="card">
+<h2>Validation avant export</h2>
+<div id="validation"></div>
+<p class="muted">Tu peux refaire autant d’essais que nécessaire avant l’export. Le ZIP ne contient que la prise que tu as explicitement retenue pour chaque ligne.</p>
+<div class="row">
+<button id="exportButton" class="good" type="button">Télécharger le ZIP des 5 prises retenues</button>
+<button id="clearButton" class="danger" type="button">Effacer toutes les prises locales</button>
+</div>
+<p id="exportStatus" class="status"></p>
+</section>
+
+<div class="sticky">
+<div class="row"><strong>État :</strong><span id="globalStatus">0/5 prises retenues</span><span style="flex:1"></span><button id="stickyExport" class="good" type="button">Exporter le ZIP</button></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var REF_URL="https://github.com/stefm78/recit-audioguide/releases/download/odyssee-h1b-corrective-review-v1/p6-b.mp3";
+var SCRIPT=[
+ {i:1,speaker:"Pénélope",text:"Euryclée. Prépare le lit d’Ulysse dans le couloir.",audioMs:3760,pauseMs:260},
+ {i:2,speaker:"Ulysse",text:"Non.",audioMs:1776,pauseMs:180,target:true},
+ {i:3,speaker:"Pénélope",text:"Non ?",audioMs:760,pauseMs:140},
+ {i:4,speaker:"Ulysse",text:"Ce lit ne sort pas de cette chambre.",audioMs:2688,pauseMs:170,target:true},
+ {i:5,speaker:"Pénélope",text:"Pourquoi ?",audioMs:1000,pauseMs:180},
+ {i:6,speaker:"Ulysse",text:"Parce que l’un de ses pieds est un olivier.",audioMs:2832,pauseMs:140},
+ {i:7,speaker:"Ulysse",text:"Il était vivant quand j’ai construit la chambre.",audioMs:3120,pauseMs:120},
+ {i:8,speaker:"Ulysse",text:"J’ai taillé le tronc. J’ai bâti les murs autour.",audioMs:4296,pauseMs:850},
+ {i:9,speaker:"Pénélope",text:"Alors personne ne l’a déplacé.",audioMs:2120,pauseMs:260},
+ {i:10,speaker:"Ulysse",text:"Tu le savais.",audioMs:1776,pauseMs:220,target:true},
+ {i:11,speaker:"Pénélope",text:"Je devais savoir si toi, tu le savais encore.",audioMs:2560,pauseMs:760},
+ {i:12,speaker:"Ulysse",text:"Pénélope…",audioMs:1776,pauseMs:300,target:true},
+ {i:13,speaker:"Pénélope",text:"Ulysse.",audioMs:880,pauseMs:480},
+ {i:14,speaker:"Pénélope",text:"Je n’avais besoin que d’une chose qui ne puisse pas voyager avec tes histoires.",audioMs:3480,pauseMs:260},
+ {i:15,speaker:"Ulysse",text:"Notre lit.",audioMs:1776,pauseMs:200,target:true},
+ {i:16,speaker:"Pénélope",text:"Notre lit.",audioMs:1000,pauseMs:560}
+];
+
+var TARGETS=[
+ {id:2,key:"02-non",text:"Non.",window:"1,4–2,1 s",cue:[0,6.736],functionText:"Le corps réagit avant l’intelligence.",direction:"Refus réflexe. Choc bas et immédiat. Souffle court possible. Le mot tombe plutôt qu’il n’est projeté.",avoid:"Pas de colère, pas de cri, pas de « Nooon » prolongé, pas d’effet tragique."},
+ {id:4,key:"04-ce-lit",text:"Ce lit ne sort pas de cette chambre.",window:"2,2–3,2 s",cue:[5.976,10.734],functionText:"Après le choc, la certitude.",direction:"Ferme sans hausser la voix. Précision et tension intime. La certitude est plus forte que la colère.",avoid:"Pas de menace, pas de démonstration, pas de récitation solennelle."},
+ {id:10,key:"10-tu-le-savais",text:"Tu le savais.",window:"1,4–2,1 s",cue:[22.272,29.208],functionText:"Le basculement : il comprend qu’elle savait et qu’elle vient de le reconnaître.",direction:"Reconnaissance bouleversée mais contenue. Soulagement mêlé d’une ancienne blessure. Moins de projection.",avoid:"Ne pleure pas la phrase. Ne surligne ni « tu » ni « savais ». Ne fabrique pas une voix cassée."},
+ {id:12,key:"12-penelope",text:"Pénélope…",window:"1,4–2,1 s",cue:[26.648,32.924],functionText:"Le nom n’est plus une tentative de convaincre.",direction:"Très simple, intime, étonnement doux. Le silence après le nom compte plus que l’allongement du nom.",avoid:"Pas de chuchotement, pas de syllabes traînées, pas de déclaration d’amour."},
+ {id:15,key:"15-notre-lit",text:"Notre lit.",window:"1,4–2,1 s",cue:[33.404,40.12],functionText:"Résolution intime.",direction:"Chaleur grave, soulagement, certitude retrouvée. Presque plus simple que les lignes précédentes.",avoid:"Pas de pathos, pas de sourire forcé, ne souligne pas démonstrativement « notre »."}
+];
+
+var ref=document.getElementById("referenceAudio");
+var micButton=document.getElementById("micButton");
+var micStatus=document.getElementById("micStatus");
+var cards=document.getElementById("cards");
+var fullScript=document.getElementById("fullScript");
+var progress=document.getElementById("progress");
+var validation=document.getElementById("validation");
+var exportStatus=document.getElementById("exportStatus");
+var globalStatus=document.getElementById("globalStatus");
+
+var stream=null,recorder=null,currentSlot=null,currentChunks=[],recordStarted=0,timerHandle=null,cueStopHandle=null;
+var takes={};
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]})}
+function fmt(sec){return sec.toFixed(2).replace(".",",")+" s"}
+function mimeExt(mime){if((mime||"").indexOf("ogg")>=0)return"ogg";if((mime||"").indexOf("mp4")>=0)return"m4a";if((mime||"").indexOf("wav")>=0)return"wav";return"webm"}
+function supportedMime(){
+ var list=["audio/webm;codecs=opus","audio/webm","audio/ogg;codecs=opus","audio/mp4"];
+ if(!window.MediaRecorder)return"";
+ for(var i=0;i<list.length;i++){if(!MediaRecorder.isTypeSupported||MediaRecorder.isTypeSupported(list[i]))return list[i]}
+ return"";
+}
+
+function buildBounds(){
+ var t=0,out={};
+ SCRIPT.forEach(function(s){out[s.i]={start:t/1000,end:(t+s.audioMs)/1000};t+=s.audioMs+s.pauseMs});
+ return out;
+}
+var bounds=buildBounds();
+
+function contextFor(id){
+ var idx=SCRIPT.findIndex(function(s){return s.i===id});
+ return SCRIPT.slice(Math.max(0,idx-1),Math.min(SCRIPT.length,idx+2));
+}
+
+function renderScript(){
+ fullScript.innerHTML=SCRIPT.map(function(s){
+  return '<div class="line '+(s.target?"targetline":"")+'"><div class="speaker">'+esc(s.speaker)+'</div><div>'+esc(s.text)+(s.target?' <span class="badge">à enregistrer</span>':'')+'</div></div>';
+ }).join("");
+}
+
+function renderCards(){
+ cards.innerHTML=TARGETS.map(function(t,n){
+  var ctx=contextFor(t.id).map(function(s){return '<div class="line '+(s.i===t.id?"targetline":"")+'"><div class="speaker">'+esc(s.speaker)+'</div><div>'+esc(s.text)+'</div></div>'}).join("");
+  return '<section class="card" id="slot-'+t.id+'">'+
+   '<div class="row"><span class="badge">prise '+(n+1)+'/5</span><span class="badge">durée visée '+t.window+'</span><span id="slotStatus-'+t.id+'" class="badge warn">aucune prise retenue</span></div>'+
+   '<div class="target">'+esc(t.text)+'</div>'+
+   '<div class="grid"><div><h3>Contexte immédiat</h3><div class="dialogue">'+ctx+'</div><button type="button" data-cue="'+t.id+'">▶ Écouter ce passage dans H1b-B</button></div>'+
+   '<div><h3>Direction</h3><p><strong>'+esc(t.functionText)+'</strong></p><p class="direction">'+esc(t.direction)+'</p><p class="muted"><strong>À éviter :</strong> '+esc(t.avoid)+'</p></div></div>'+
+   '<div class="subcard"><div class="row"><button type="button" class="record" data-record="'+t.id+'">● Enregistrer un essai</button><span id="timer-'+t.id+'" class="timer">00:00.0</span><span class="muted">Tu peux refaire autant d’essais que nécessaire avant de retenir une prise.</span></div><div id="takes-'+t.id+'"></div></div>'+
+   '</section>';
+ }).join("");
+
+ Array.from(document.querySelectorAll("[data-cue]")).forEach(function(b){b.addEventListener("click",function(){playCue(Number(b.getAttribute("data-cue")))})});
+ Array.from(document.querySelectorAll("[data-record]")).forEach(function(b){b.addEventListener("click",function(){toggleRecord(Number(b.getAttribute("data-record")),b)})});
+}
+
+function playCue(id){
+ var t=TARGETS.find(function(x){return x.id===id});if(!t)return;
+ if(cueStopHandle)clearInterval(cueStopHandle);
+ ref.currentTime=t.cue[0];ref.play();
+ cueStopHandle=setInterval(function(){if(ref.currentTime>=t.cue[1]||ref.paused){clearInterval(cueStopHandle);cueStopHandle=null;if(ref.currentTime>=t.cue[1])ref.pause()}},60);
+}
+
+function openDb(){
+ return new Promise(function(resolve,reject){
+  var req=indexedDB.open("odyssee-p6-human-recordings-v1",1);
+  req.onupgradeneeded=function(){var db=req.result;if(!db.objectStoreNames.contains("takes"))db.createObjectStore("takes",{keyPath:"uid"})};
+  req.onsuccess=function(){resolve(req.result)};req.onerror=function(){reject(req.error)};
+ });
+}
+async function dbAll(){var db=await openDb();return new Promise(function(resolve,reject){var tx=db.transaction("takes","readonly"),r=tx.objectStore("takes").getAll();r.onsuccess=function(){resolve(r.result||[])};r.onerror=function(){reject(r.error)}})}
+async function dbPut(v){var db=await openDb();return new Promise(function(resolve,reject){var tx=db.transaction("takes","readwrite"),r=tx.objectStore("takes").put(v);r.onsuccess=function(){resolve()};r.onerror=function(){reject(r.error)}})}
+async function dbDelete(uid){var db=await openDb();return new Promise(function(resolve,reject){var tx=db.transaction("takes","readwrite"),r=tx.objectStore("takes").delete(uid);r.onsuccess=function(){resolve()};r.onerror=function(){reject(r.error)}})}
+async function dbClear(){var db=await openDb();return new Promise(function(resolve,reject){var tx=db.transaction("takes","readwrite"),r=tx.objectStore("takes").clear();r.onsuccess=function(){resolve()};r.onerror=function(){reject(r.error)}})}
+
+async function loadTakes(){
+ var all=await dbAll();takes={};TARGETS.forEach(function(t){takes[t.id]=[]});
+ all.sort(function(a,b){return a.createdAt-b.createdAt}).forEach(function(x){if(takes[x.slotId])takes[x.slotId].push(x)});
+ renderAllTakes();renderProgress();
+}
+
+async function ensureMic(){
+ if(stream&&stream.active)return true;
+ if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.MediaRecorder){
+  micStatus.textContent="Enregistrement non supporté dans ce navigateur";
+  micStatus.className="status bad";return false;
+ }
+ try{
+  stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:false,noiseSuppression:false,autoGainControl:false},video:false});
+  micStatus.textContent="Micro prêt — enregistrement local uniquement";micStatus.className="status good";micButton.textContent="Micro autorisé";
+  return true;
+ }catch(e){
+  micStatus.textContent="Accès micro refusé ou indisponible";micStatus.className="status bad";return false;
+ }
+}
+
+async function toggleRecord(id,button){
+ if(recorder&&recorder.state==="recording"){
+  if(currentSlot!==id)return;
+  recorder.stop();button.textContent="● Enregistrer un essai";button.classList.remove("stop");button.classList.add("record");return;
+ }
+ if(!(await ensureMic()))return;
+ currentSlot=id;currentChunks=[];recordStarted=performance.now();
+ var mime=supportedMime();
+ try{recorder=mime?new MediaRecorder(stream,{mimeType:mime}):new MediaRecorder(stream)}catch(_){recorder=new MediaRecorder(stream)}
+ recorder.ondataavailable=function(e){if(e.data&&e.data.size)currentChunks.push(e.data)};
+ recorder.onstop=async function(){
+  clearInterval(timerHandle);timerHandle=null;
+  var duration=(performance.now()-recordStarted)/1000;
+  var blob=new Blob(currentChunks,{type:recorder.mimeType||mime||"audio/webm"});
+  var list=takes[id]||[];
+  var item={uid:id+"-"+Date.now()+"-"+Math.random().toString(16).slice(2),slotId:id,number:list.length+1,blob:blob,mime:blob.type||"audio/webm",duration:duration,createdAt:Date.now(),selected:false};
+  await dbPut(item);await loadTakes();
+  document.getElementById("timer-"+id).textContent="00:00.0";
+ };
+ recorder.start(100);
+ button.textContent="■ Arrêter et conserver l’essai";button.classList.remove("record");button.classList.add("stop");
+ timerHandle=setInterval(function(){
+  var s=(performance.now()-recordStarted)/1000;
+  document.getElementById("timer-"+id).textContent=String(Math.floor(s/60)).padStart(2,"0")+":"+String(Math.floor(s%60)).padStart(2,"0")+"."+Math.floor((s%1)*10);
+ },100);
+}
+
+function renderAllTakes(){
+ TARGETS.forEach(function(t){
+  var host=document.getElementById("takes-"+t.id),list=takes[t.id]||[];
+  if(!list.length){host.innerHTML='<p class="muted">Aucun essai enregistré.</p>';return}
+  host.innerHTML=list.map(function(x){
+   var url=URL.createObjectURL(x.blob);
+   return '<div class="take '+(x.selected?"selected":"")+'"><div class="take-head"><strong>Essai '+x.number+(x.selected?' — RETENU':'')+'</strong><span>'+fmt(x.duration)+'</span></div>'+
+    '<audio controls preload="metadata" src="'+url+'"></audio>'+
+    '<div class="row"><button type="button" class="'+(x.selected?"good":"")+'" data-select="'+esc(x.uid)+'">'+(x.selected?"✓ Prise retenue":"Retenir cette prise")+'</button>'+
+    '<button type="button" data-download="'+esc(x.uid)+'">Télécharger</button><button type="button" class="danger" data-delete="'+esc(x.uid)+'">Supprimer</button></div></div>';
+  }).join("");
+ });
+ Array.from(document.querySelectorAll("[data-select]")).forEach(function(b){b.addEventListener("click",function(){selectTake(b.getAttribute("data-select"))})});
+ Array.from(document.querySelectorAll("[data-delete]")).forEach(function(b){b.addEventListener("click",function(){deleteTake(b.getAttribute("data-delete"))})});
+ Array.from(document.querySelectorAll("[data-download]")).forEach(function(b){b.addEventListener("click",function(){downloadTake(b.getAttribute("data-download"))})});
+}
+
+function findTake(uid){for(var id in takes){var x=(takes[id]||[]).find(function(v){return v.uid===uid});if(x)return x}return null}
+
+async function selectTake(uid){
+ var x=findTake(uid);if(!x)return;
+ var list=takes[x.slotId]||[];
+ for(var i=0;i<list.length;i++){if(list[i].selected){list[i].selected=false;await dbPut(list[i])}}
+ x.selected=true;await dbPut(x);await loadTakes();
+}
+
+async function deleteTake(uid){
+ var x=findTake(uid);if(!x)return;
+ if(!confirm("Supprimer définitivement cet essai local ?"))return;
+ await dbDelete(uid);await loadTakes();
+}
+
+function downloadBlob(blob,name){
+ var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);
+}
+function downloadTake(uid){var x=findTake(uid);if(!x)return;var t=TARGETS.find(function(v){return v.id===x.slotId});downloadBlob(x.blob,t.key+"."+mimeExt(x.mime))}
+
+function selectedFor(id){return (takes[id]||[]).find(function(x){return x.selected})||null}
+function renderProgress(){
+ var count=0;
+ progress.innerHTML=TARGETS.map(function(t,n){
+  var s=selectedFor(t.id);if(s)count++;
+  var st=document.getElementById("slotStatus-"+t.id);
+  if(st){st.textContent=s?"prise retenue · "+fmt(s.duration):"aucune prise retenue";st.className="badge "+(s?"good":"warn")}
+  return '<a href="#slot-'+t.id+'" class="'+(s?"done":"")+'">'+(n+1)+' · '+(s?"✓":"—")+'</a>';
+ }).join("");
+ globalStatus.textContent=count+"/5 prises retenues";
+ validation.innerHTML=count===5?'<p class="status good">✓ Les 5 lignes ont une prise retenue. Le ZIP peut être exporté.</p>':'<p class="status warn">Il manque '+(5-count)+' prise(s) retenue(s).</p>';
+}
+
+async function sha256Hex(blob){
+ var buf=await blob.arrayBuffer(),dig=await crypto.subtle.digest("SHA-256",buf),arr=Array.from(new Uint8Array(dig));
+ return arr.map(function(b){return b.toString(16).padStart(2,"0")}).join("");
+}
+var crcTable=null;
+function crc32(bytes){
+ if(!crcTable){crcTable=[];for(var n=0;n<256;n++){var c=n;for(var k=0;k<8;k++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;crcTable[n]=c>>>0}}
+ var crc=0xffffffff;for(var i=0;i<bytes.length;i++)crc=crcTable[(crc^bytes[i])&255]^(crc>>>8);return (crc^0xffffffff)>>>0;
+}
+function le16(n){return new Uint8Array([n&255,(n>>>8)&255])}
+function le32(n){return new Uint8Array([n&255,(n>>>8)&255,(n>>>16)&255,(n>>>24)&255])}
+function concat(arrays){
+ var len=arrays.reduce(function(a,b){return a+b.length},0),out=new Uint8Array(len),off=0;
+ arrays.forEach(function(a){out.set(a,off);off+=a.length});return out;
+}
+async function makeZip(files){
+ var enc=new TextEncoder(),locals=[],centrals=[],offset=0;
+ for(var i=0;i<files.length;i++){
+  var f=files[i],name=enc.encode(f.name),data=new Uint8Array(await f.blob.arrayBuffer()),crc=crc32(data);
+  var local=concat([le32(0x04034b50),le16(20),le16(0),le16(0),le16(0),le16(0),le32(crc),le32(data.length),le32(data.length),le16(name.length),le16(0),name,data]);
+  locals.push(local);
+  var central=concat([le32(0x02014b50),le16(20),le16(20),le16(0),le16(0),le16(0),le16(0),le32(crc),le32(data.length),le32(data.length),le16(name.length),le16(0),le16(0),le16(0),le16(0),le32(0),le32(offset),name]);
+  centrals.push(central);offset+=local.length;
+ }
+ var centralBlock=concat(centrals);
+ var end=concat([le32(0x06054b50),le16(0),le16(0),le16(files.length),le16(files.length),le32(centralBlock.length),le32(offset),le16(0)]);
+ return new Blob([concat(locals),centralBlock,end],{type:"application/zip"});
+}
+
+async function exportZip(){
+ exportStatus.textContent="";
+ var selected=TARGETS.map(function(t){return {target:t,take:selectedFor(t.id)}});if(selected.some(function(x){return !x.take})){exportStatus.textContent="Sélectionne une prise pour chacune des 5 lignes.";exportStatus.className="status bad";return}
+ exportStatus.textContent="Préparation du ZIP et calcul des SHA-256…";exportStatus.className="status warn";
+ try{
+  var files=[],manifest={schema:"odyssee-p6-human-performance-web-intake-v1",created_at:new Date().toISOString(),source_page:location.href,reference_audio:{url:REF_URL,sha256:"474c2e41a5d702b2a84524aa3be9a0559ed7378af18d507ac082b666029d64ae"},freeze_rule:"One human-selected take per slot before any BeltOut conversion.",slots:[]};
+  for(var i=0;i<selected.length;i++){
+   var x=selected[i],ext=mimeExt(x.take.mime),name=x.target.key+"."+ext,sha=await sha256Hex(x.take.blob);
+   files.push({name:name,blob:x.take.blob});
+   manifest.slots.push({id:x.target.id,text:x.target.text,filename:name,mime:x.take.mime,duration_seconds:Number(x.take.duration.toFixed(3)),sha256:sha});
+  }
+  var mb=new Blob([JSON.stringify(manifest,null,2)+"\n"],{type:"application/json"});
+  files.push({name:"recording-manifest.json",blob:mb});
+  files.push({name:"README.txt",blob:new Blob(["Odyssée P6 — 5 prises humaines sélectionnées avant toute conversion BeltOut.\nNe pas remplacer une prise après écoute d'une conversion.\n"],{type:"text/plain"})});
+  var zip=await makeZip(files);
+  downloadBlob(zip,"odyssee-p6-human-performance-selected.zip");
+  exportStatus.textContent="✓ ZIP prêt. Téléverse ce fichier dans la conversation.";exportStatus.className="status good";
+ }catch(e){exportStatus.textContent="Échec de l’export : "+e.message;exportStatus.className="status bad"}
+}
+
+async function clearAll(){
+ if(!confirm("Effacer toutes les prises enregistrées par cette page sur cet appareil ?"))return;
+ if(recorder&&recorder.state==="recording")recorder.stop();
+ await dbClear();await loadTakes();
+}
+
+micButton.addEventListener("click",ensureMic);
+document.getElementById("exportButton").addEventListener("click",exportZip);
+document.getElementById("stickyExport").addEventListener("click",exportZip);
+document.getElementById("clearButton").addEventListener("click",clearAll);
+
+renderScript();renderCards();loadTakes().catch(function(e){validation.innerHTML='<p class="status bad">Stockage local indisponible : '+esc(e.message)+'</p>'});
+})();
+</script>
+</main>
+</body>
+</html>
