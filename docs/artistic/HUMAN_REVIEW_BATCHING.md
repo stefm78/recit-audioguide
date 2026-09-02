@@ -62,16 +62,36 @@ H1 publishes only when all included modules have immutable machine-PASS candidat
 
 A failure in P4 does not invalidate P5/P6 and vice versa.
 
-### H2 — block integration
+### H2 — final shared block integration
 
-After critical probe promotions:
-- representative block joins;
-- pacing/fatigue;
-- narrator ↔ character handoffs;
-- sound-density consistency;
-- loudness/space continuity.
+The historical representative-scene scope is superseded once P4/P5/P6 capabilities are closed.
 
-H2 should prefer longer integrated excerpts over many isolated micro-probes.
+H2 now reviews the **real integrated work**, in one shared long-form structured batch:
+
+1. Block A continuous — continuity / reference / pacing / fatigue;
+2. Block B continuous — MARIN in context + P5/S08;
+3. complete S09 — real P4 Sirens, two lineages, spatialization, attraction and intelligibility;
+4. B→C boundary — final ~45 s of B into first ~45 s of C;
+5. C→D boundary — final ~45 s of C into first ~45 s of D;
+6. complete S13;
+7. complete S14;
+8. complete S15 — real Production Ulysse + Pénélope, never the capability probe;
+9. short A/B/C/D comparison for global dynamics and inter-block levels.
+
+Hard entry gate:
+
+`A+B+C+D MACHINE_QUALIFIED`
+
+H2 is not dispatched from partial review assets.
+
+This H2 may exceed the usual 3–10 minute batch guidance because it is a long-form integration gate, not a capability-selection batch. It remains intentionally shorter and more diagnostic than H3, which is the uninterrupted final-master listen.
+
+Authority:
+- `series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.md`;
+- `series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.json`;
+- `web/reviews/odyssee-h2.html`.
+
+There is exactly one H2. No H2a/H2b and no capability micro-review.
 
 ### H3 — final master
 
@@ -110,14 +130,17 @@ Human reviewers never confirm:
 
 ## Review output
 
-One consolidated copyable report with separate sections:
+Capability batches keep independent module verdicts.
 
-- P4 verdict;
-- P5 verdict;
-- P6 verdict;
-- cross-cutting notes.
+The final Odyssée H2 instead produces one consolidated integration report with:
+- one neutral perceptual observation per required dimension;
+- one explicit artistic PASS / FAIL per dimension;
+- one final `PASS_H2_SINGLE_BATCH` or `FAIL_H2_TARGETED_CORRECTION`;
+- exact immutable Release / manifest provenance.
 
-Promotions remain independent.
+No weighted average compensates for a failed H2 dimension.
+
+A descriptive observation such as `melodrama PRESENT` is never itself the artistic verdict.
 
 ## Stop rule
 

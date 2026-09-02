@@ -1,0 +1,283 @@
+{
+  "schema": "recit.odyssee.h2_single_batch_review.v1",
+  "id": "odyssee-h2-single-batch-review-v1",
+  "status": "H2_SINGLE_BATCH_REVIEW_READY_PENDING_AUDIO",
+  "authority_issue": 110,
+  "downstream_issue": 112,
+  "supersedes": "historical representative-scene H2 scope defined before P4/P6 closure",
+  "purpose": "One shared long-form integration review of the real Odyssée after critical capabilities are closed, without duplicating H3 final-master listening.",
+  "entry_gate": {
+    "exact_confirmation": "A+B+C+D MACHINE_QUALIFIED",
+    "fail_closed": true,
+    "dispatch_forbidden_before_confirmation": true,
+    "release_policy": "immutable prerelease from the Production review-release workflow",
+    "required_assets": [
+      "review-index.json",
+      "block-A.mp3",
+      "block-A.qa-report.json",
+      "block-B.mp3",
+      "block-B.qa-report.json",
+      "block-C.mp3",
+      "block-C.qa-report.json",
+      "block-D.mp3",
+      "block-D.qa-report.json",
+      "scene-S09.mp3",
+      "scene-S09.qa-report.json",
+      "scene-S13.mp3",
+      "scene-S13.qa-report.json",
+      "scene-S14.mp3",
+      "scene-S14.qa-report.json",
+      "scene-S15.mp3",
+      "scene-S15.qa-report.json"
+    ],
+    "unlock_rule": "The H2 page unlocks only when every required asset is present in the same immutable review Release and review-index.json reports machine-ready-review-assets.",
+    "partial_release_rule": "A partial machine-ready review Release is useful production evidence but is not H2."
+  },
+  "review_surface": {
+    "page": "web/reviews/odyssee-h2.html",
+    "release_tag_query_parameter": "tag",
+    "repository": "stefm78/recit-audioguide",
+    "persistence": "browser localStorage keyed by immutable Release tag",
+    "one_batch": true,
+    "micro_reviews_forbidden": true
+  },
+  "ordered_modules": [
+    {
+      "id": "block-a",
+      "title": "Block A — continuité / référence",
+      "asset": "block-A.mp3",
+      "mandatory_full_listen": true,
+      "purpose": [
+        "reference_long_form_continuity",
+        "pacing_and_comprehension",
+        "listener_fatigue_baseline",
+        "narrator_character_handoffs",
+        "level_reference"
+      ]
+    },
+    {
+      "id": "block-b",
+      "title": "Block B — MARIN en contexte + P5/S08",
+      "asset": "block-B.mp3",
+      "mandatory_full_listen": true,
+      "purpose": [
+        "marin_euryloque_distinction_in_real_context",
+        "p5_underworld_integration",
+        "pacing_dense_loss_sequences",
+        "intentional_silence_and_subtraction",
+        "level_continuity_against_block_a"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "S09 complet — Sirènes P4 dans la vraie scène",
+      "asset": "scene-S09.mp3",
+      "mandatory_full_listen": true,
+      "purpose": [
+        "two_siren_lineages",
+        "subtle_spatialization",
+        "attraction_through_attention_and_knowledge",
+        "french_intelligibility",
+        "ulysse_identity_continuity",
+        "no_singing_or_cliche_rescue"
+      ]
+    },
+    {
+      "id": "b-to-c",
+      "title": "Transition B → C",
+      "assets": [
+        "block-B.mp3",
+        "block-C.mp3"
+      ],
+      "cue": {
+        "from_tail_seconds": 45,
+        "to_head_seconds": 45
+      },
+      "mandatory": true,
+      "purpose": [
+        "narrative_transition",
+        "space_and_density_transition",
+        "inter_block_level_continuity"
+      ]
+    },
+    {
+      "id": "c-to-d",
+      "title": "Transition C → D",
+      "assets": [
+        "block-C.mp3",
+        "block-D.mp3"
+      ],
+      "cue": {
+        "from_tail_seconds": 45,
+        "to_head_seconds": 45
+      },
+      "mandatory": true,
+      "purpose": [
+        "return_to_ithaca_continuity",
+        "narrative_ownership_transition",
+        "inter_block_level_continuity",
+        "energy_reset_before_climax"
+      ]
+    },
+    {
+      "id": "s13",
+      "title": "S13 complet — reconnaissances / préparation du climax",
+      "asset": "scene-S13.mp3",
+      "mandatory_full_listen": true,
+      "purpose": [
+        "secondary_cast_identity",
+        "argos_restraint",
+        "penelope_continuity",
+        "climax_preparation_without_premature_peak"
+      ]
+    },
+    {
+      "id": "s14",
+      "title": "S14 complet — climax d'action",
+      "asset": "scene-S14.mp3",
+      "mandatory_full_listen": true,
+      "purpose": [
+        "action_legibility",
+        "sound_density_restraint",
+        "short_violence",
+        "headroom_for_s15"
+      ]
+    },
+    {
+      "id": "s15",
+      "title": "S15 complet — climax émotionnel réel",
+      "asset": "scene-S15.mp3",
+      "mandatory_full_listen": true,
+      "purpose": [
+        "real_12_line_p6_production_capture",
+        "ulysses_penelope_scene_integration",
+        "identity_continuity",
+        "emotional_impact",
+        "melodrama_appropriateness",
+        "dry_no_music_staging",
+        "capture_hygiene"
+      ],
+      "rule": "H2 judges the real Production scene, not the capability probe and not the raw human source recording."
+    },
+    {
+      "id": "global-comparison",
+      "title": "Comparaison globale A / B / C / D",
+      "assets": [
+        "block-A.mp3",
+        "block-B.mp3",
+        "block-C.mp3",
+        "block-D.mp3"
+      ],
+      "mandatory": true,
+      "purpose": [
+        "global_dynamics",
+        "inter_block_levels",
+        "identity_stability",
+        "fatigue_after_extended_listening",
+        "production_mechanism_invisibility"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "pacing_comprehension",
+      "title": "Pacing et compréhension",
+      "pass_condition": "Les informations, actions et changements de lieu se comprennent à la première écoute sans devoir mentalement rattraper le récit."
+    },
+    {
+      "id": "listening_fatigue",
+      "title": "Fatigue d'écoute",
+      "pass_condition": "Après les écoutes longues, l'attention reste disponible; la densité ou le débit ne donnent pas envie de décrocher."
+    },
+    {
+      "id": "identity_coherence",
+      "title": "Cohérence des identités",
+      "pass_condition": "Les personnages importants restent identifiables d'une scène à l'autre, notamment Ulysse, Pénélope, MARIN/Euryloque et les prétendants."
+    },
+    {
+      "id": "marin_context",
+      "title": "MARIN dans son contexte",
+      "pass_condition": "MARIN se distingue suffisamment d'Euryloque/Ulysse sans attirer artificiellement l'attention ni devenir un nouveau rôle principal."
+    },
+    {
+      "id": "p5_integration",
+      "title": "P5 / S08 dans Block B",
+      "pass_condition": "Le monde des morts est étrange par soustraction; dark-air discret, voix lisibles, aucun cliché horrifique ou effet qui vole la scène."
+    },
+    {
+      "id": "p4_s09_integration",
+      "title": "P4 / S09 réel",
+      "pass_condition": "Les deux lignées de Sirènes sont perceptibles comme un dispositif cohérent; spatialisation subtile, français naturel, attraction intelligible et personnellement dangereuse pour Ulysse."
+    },
+    {
+      "id": "block_transitions",
+      "title": "Transitions B→C et C→D",
+      "pass_condition": "Les changements de bloc sont narrativement lisibles et acoustiquement continus; pas de saut de niveau, de trou d'énergie ou de marqueur artificiel nécessaire."
+    },
+    {
+      "id": "climax_build",
+      "title": "Préparation et climax S13/S14",
+      "pass_condition": "S13 prépare sans épuiser; S14 est clair et intense mais garde assez de silence et de réserve émotionnelle pour S15."
+    },
+    {
+      "id": "s15_climax",
+      "title": "S15 complet",
+      "pass_condition": "La scène du lit fonctionne comme climax émotionnel: Ulysse et Pénélope restent eux-mêmes, la réaction est crédible, la dramatisation est appropriée, le texte et les silences portent la scène sans musique."
+    },
+    {
+      "id": "global_dynamics",
+      "title": "Dynamique globale",
+      "pass_condition": "L'œuvre respire: alternance de densité, tension et calme lisible, sans aplatissement permanent ni surenchère."
+    },
+    {
+      "id": "sound_density_silence",
+      "title": "Sound density et silences intentionnels",
+      "pass_condition": "Le son n'illustre pas mécaniquement le texte; les omissions et silences paraissent choisis, pas inachevés."
+    },
+    {
+      "id": "interblock_levels",
+      "title": "Continuité des niveaux entre blocs",
+      "pass_condition": "Aucun bloc ne paraît soudain trop faible, trop fort ou subjectivement éloigné; les transitions de niveau ne distraient pas."
+    },
+    {
+      "id": "audible_technical_defects",
+      "title": "Absence de défaut technique audible",
+      "pass_condition": "Aucun clic, parasite, coupure, artefact de conversion, pompage, saturation, mauvais raccord ou défaut audible matériel."
+    }
+  ],
+  "review_semantics": {
+    "observation_is_not_verdict": true,
+    "observation_field": "Describe only what was heard, in neutral perceptual language.",
+    "acceptance_field": "PASS or FAIL against the explicit scene/product condition.",
+    "descriptive_terms_never_imply_value": [
+      "PRESENT",
+      "ABSENT",
+      "LIGHT",
+      "STRONG",
+      "MELODRAMA"
+    ],
+    "example": {
+      "observation": "melodrama_present=true",
+      "acceptance": "melodrama_appropriate=PASS"
+    }
+  },
+  "decision": {
+    "pass": "PASS_H2_SINGLE_BATCH",
+    "fail": "FAIL_H2_TARGETED_CORRECTION",
+    "pass_rule": "Every required criterion is PASS and no material audible technical defect remains.",
+    "fail_rule": "Any required criterion FAIL produces one H2 FAIL with findings tied to the smallest causal unit.",
+    "no_weighted_average": true,
+    "no_partial_promotion": true,
+    "no_casting_reopen": true,
+    "correction_rule": "Fix only the smallest demonstrated production cause, then re-listen only the changed causal scope plus any affected boundary."
+  },
+  "stop_rules": [
+    "one_H2_batch_only",
+    "no_micro_review",
+    "no_new_asset_search_without_concrete_H2_defect",
+    "no_decorative_embellishment_to_look_finished",
+    "no_casting_research",
+    "no_script_change_without_concrete_downstream_comprehension_failure",
+    "do_not_dispatch_before_A+B+C+D_MACHINE_QUALIFIED"
+  ]
+}
