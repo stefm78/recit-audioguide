@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "id": "odyssee-p6-ulysse-human-beltout-production-v1",
+  "provider": {
+    "id": "human-performance-beltout",
+    "implementation_version": "1.0.0"
+  },
+  "runtime": {
+    "kind": "python",
+    "python": "3.12.14",
+    "device": "cpu",
+    "dependencies": [
+      {
+        "name": "beltout",
+        "revision": "f71295e33cc9c0092083089ed0f9c1a532e77e6b"
+      },
+      {
+        "name": "torch",
+        "version": "2.6.0+cpu"
+      },
+      {
+        "name": "torchaudio",
+        "version": "2.6.0+cpu"
+      },
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "librosa",
+        "version": "0.11.0"
+      },
+      {
+        "name": "s3tokenizer",
+        "version": "0.3.0"
+      },
+      {
+        "name": "torchcrepe",
+        "version": "0.0.24"
+      },
+      {
+        "name": "transformers",
+        "version": "4.46.3"
+      },
+      {
+        "name": "diffusers",
+        "version": "0.29.0"
+      },
+      {
+        "name": "conformer",
+        "version": "0.3.2"
+      },
+      {
+        "name": "safetensors",
+        "version": "0.5.3"
+      },
+      {
+        "name": "huggingface-hub",
+        "version": "0.33.1"
+      },
+      {
+        "name": "scipy",
+        "version": "1.15.3"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.67.1"
+      },
+      {
+        "name": "soundfile",
+        "version": "0.13.1"
+      }
+    ],
+    "validated_runtime": {
+      "source_run": 33618143904,
+      "head_sha": "5463450237ee9d14f3f8fb17b790cdd563521f9b",
+      "artifact_name": "beltout-portable-runtime-linux-x86_64",
+      "artifact_digest": "sha256:b3aa9953782b965a2ac3e28a27b414a7414db0f6de9b2c9e47c9a1c1d15ba349",
+      "contains_human_audio": false
+    }
+  },
+  "model": {
+    "id": "Bill13579/beltout",
+    "source": "huggingface",
+    "revision": "f71295e33cc9c0092083089ed0f9c1a532e77e6b",
+    "checkpoints": [
+      {
+        "file": "cfm_step_117580.safetensors",
+        "sha256": "32c7599e48c99e4583d4e390d7cf5438573e168198aabd5d7375881c90ef04f4"
+      },
+      {
+        "file": "encoder_step_0.safetensors",
+        "sha256": "285f525e81ce163ee9dd259d431bd059d3cb4a5cd87a0f8530d1a20c392580bf"
+      },
+      {
+        "file": "flow_step_0.safetensors",
+        "sha256": "f294f889ffe297428b8e153abcb99966eb81f0e29124c778da78322b178a328d"
+      },
+      {
+        "file": "mel2wav_step_0.safetensors",
+        "sha256": "4c7a439280cf053c093b5d14ef0b41992e21efb8928926cd295082bf3551a688"
+      },
+      {
+        "file": "pitchmvmt_step_117580.safetensors",
+        "sha256": "79d930d2b300d2a0428a7040340a064738943cdf9752006d914816d0a98d1826"
+      },
+      {
+        "file": "speaker_encoder_step_0.safetensors",
+        "sha256": "96b8cc0a066e9c3fc5928c270a59f3d63c815de845211f05879b387edb1b474d"
+      },
+      {
+        "file": "tokenizer_step_0.safetensors",
+        "sha256": "1641b71a0059b74f37f0c56e4200f3d8b28fcff0fd0328ba452ebfc776db4564"
+      }
+    ]
+  },
+  "target_identity": {
+    "character": "Ulysse",
+    "baseline_family": "fr-FR-HenriNeural",
+    "authority_audio_sha256": "474c2e41a5d702b2a84524aa3be9a0559ed7378af18d507ac082b666029d64ae",
+    "authority_report_sha256": "366091a73e7597626384535e900a5b30e7943c485d0197ec25f015c384b6d891",
+    "anchor_segments": [
+      6,
+      7,
+      8
+    ],
+    "derived_anchor_sha256": "dc6266a224a3de4236c0eca8cbfb2364e97b16f558f514da48616451a3acad45"
+  },
+  "performance_source": {
+    "type": "human_french_performance",
+    "requirement": "one_selected_take_per_exact_frozen_S15_segment_before_any_BeltOut_conversion",
+    "privacy": "raw_human_audio_must_not_be_committed_to_public_repository",
+    "allowed_pre_freeze": [
+      "rehearsal",
+      "retakes",
+      "self_listening",
+      "clean_capture_selection"
+    ],
+    "allowed_transport_normalization": [
+      "codec_decode",
+      "downmix_to_mono",
+      "resample",
+      "bounded_leading_trailing_silence_trim_without_touching_active_speech"
+    ],
+    "forbidden_post_freeze": [
+      "take_substitution_after_converted_output_is_heard",
+      "time_stretch",
+      "pitch_shift",
+      "emotion_DSP",
+      "best_of_N",
+      "second_BeltOut_pass"
+    ],
+    "capture_hygiene": [
+      "quiet_room",
+      "avoid_clicks_handling_noise",
+      "no_added_reverb",
+      "no_aggressive_noise_reduction",
+      "no_audible_auto_level_or_compression",
+      "leave_clean_leading_trailing_room_tone"
+    ]
+  },
+  "synthesis": {
+    "parameters": {
+      "n_timesteps": 10,
+      "target_identity": "H1b-B Henri/Ulysse anchor",
+      "seed_scheme": "202609060000 + exact S15 segment id"
+    },
+    "post_conversion": {
+      "allowed": [
+        "constant_level_alignment_only"
+      ],
+      "gain_clamp_db": 8,
+      "preserve_original_post_slot_pause": true
+    }
+  },
+  "acceptance": {
+    "product_authority": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
+    "readiness_authority": "series/odyssee/production/P6_STREAM3_READINESS_V1.json",
+    "human_gate": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "accepted_probe": {
+      "final_wav_sha256": "6240551fe91141a517bb687aead9a78c69bb353c731c9b45cd4f2b4efcdea0ee",
+      "final_mp3_sha256": "674df24d7291bce2ee6a0168a638095112b9c9ef50678742ab0e57d34032a39f",
+      "machine_manifest_sha256": "7018243a83f321c8e41b00c2906bfe63afd776a039d538dd97aa79bfca0d145b",
+      "human": {
+        "impact": 4,
+        "reaction": "PASS",
+        "identity": "PASS",
+        "french": "PASS",
+        "melodrama_observation": "PRESENT",
+        "melodrama_appropriate": "PASS",
+        "staging": "PASS"
+      }
+    },
+    "production_mapping": {
+      "state": "READY_FOR_EXACT_S15_MATERIALIZATION",
+      "authority": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
+      "segments": [
+        112,
+        114,
+        116,
+        118,
+        120,
+        133,
+        135,
+        140,
+        142,
+        151,
+        153,
+        158
+      ]
+    },
+    "global_recast": false,
+    "scope": "S15 Ulysse high-emotion lines only"
+  },
+  "fallback": "fail"
+}
