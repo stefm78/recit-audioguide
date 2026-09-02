@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.marin_capability_hold.v1",
   "id": "odyssee-marin-capability-hold-v1",
-  "status": "RESOLVED_STREAM1_V3_BOUND_REQUALIFYING_CACHE_PRESERVATION",
+  "status": "RESOLVED_STREAM1_V3_BOUND_REQUALIFYING_SCENE_V4",
   "authority": {
     "stream1_issue": 110,
     "stream3_issue": 112,
@@ -33,7 +33,7 @@
   "policy": {
     "silent_fallback": "FORBIDDEN",
     "stream3_voice_selection": "FORBIDDEN",
-    "next_action": "Stream 3 requalifies S05/S06/S07/S10 using exact V1 cache migration; no standalone human gate."
+    "next_action": "Stream 3 performs final scene-v4 product qualification; no standalone human gate."
   },
   "resolution": {
     "stream1_main": "dae91ec3870b77a6fb49598ff47f1bc33d3fbf28",
@@ -65,7 +65,16 @@
         "S07",
         "S10"
       ],
-      "rule": "No human H2 review until unchanged speech is demonstrably cache-reused."
+      "rule": "No human H2 review until MARIN exact-cache targets and global control byte identity pass in the same scene-v4 run.",
+      "second_attempt_run": 33607841330,
+      "second_attempt_marin_result": "PASS_EXACT_CACHE_CONTRACT",
+      "second_attempt_global_result": "REJECTED_GLOBAL_CACHE_PROVENANCE",
+      "quarantined_cache_schema": "scene-v3",
+      "final_retry_engine_ref": "5a23a1a7858047a6eba9ddc092b98ad3b9743bd3",
+      "final_retry_cache_schema": "scene-v4",
+      "final_retry_normal_source": "scene-v2 only",
+      "final_retry_legacy_engine_ref": "e82559cbd60b1d29de208e7e36ccd7505dcfcdcc",
+      "final_retry_legacy_voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894"
     }
   }
 }
