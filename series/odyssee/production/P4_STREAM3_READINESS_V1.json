@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.p4.stream3_readiness.v1",
   "id": "odyssee-p4-stream3-readiness-v1",
-  "status": "MATERIALIZED_PENDING_ISOLATED_BOOTSTRAP_QUALIFICATION",
+  "status": "MATERIALIZED_PENDING_STRUCTURED_BINDING_QUALIFICATION",
   "human_gate": "P4_SIRENS_HUMAN_PASS",
   "generic_engine_ref": "fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
   "generic_provider_smoke": {
@@ -59,8 +59,8 @@
     ],
     "rule": "Executable placement comes only from the exact frozen binding; no probe-order or fuzzy inference."
   },
-  "target_engine_ref": "2409c14ab82e9cbdba8d37cfde714d8aa8f31d48",
-  "next_step": "Qualify S08 regression and fresh S09 with isolated provider runtimes plus exact engine bootstrap; then qualify Block C.",
+  "target_engine_ref": "d79bbe2d5aa47d7073186510a9b6d07f834a43ca",
+  "next_step": "Run S08 regression and fresh S09; require structured production-binding PASS, S09 automatic QA PASS, then real Block C audio + QA PASS.",
   "materialization": {
     "program": "series/odyssee/programs/S09.json",
     "program_sha256": "9b039eee99d0846b1a397a963cc0d913cd183c9e9dca673e4e6872bd7cc14cc6",
@@ -82,7 +82,7 @@
     "legacy_scene_cache_recovery": "DISABLED_BEFORE_FIRST_S09_RENDER"
   },
   "runtime_isolation": {
-    "state": "READY_AFTER_ENGINE_BOOTSTRAP_FIX",
+    "state": "RERUN_AFTER_STRUCTURED_BINDING_FIX_PENDING",
     "engine_issue": 251,
     "engine_pr": 252,
     "fresh_cache_issue": 253,
@@ -120,6 +120,26 @@
       ],
       "failed_reason": "ISOLATED_VENV_MISSING_IMAGEIO_FFMPEG",
       "policy": "INSTALL_EXACT_ENGINE_BOOTSTRAP_PACKAGES_WITH_NO_DEPS_BEFORE_EXACT_ENGINE"
+    },
+    "binding_evidence_fix": {
+      "engine_issue": 260,
+      "engine_pr": 261,
+      "target_engine_ref": "d79bbe2d5aa47d7073186510a9b6d07f834a43ca",
+      "failed_product_run": 33626418357,
+      "s09_render_manifest_status": "success",
+      "s09_duration_seconds": 186.86,
+      "voxcpm2_prewarm": "READY",
+      "chatterbox_prewarm": "READY",
+      "final_promoted_processing": {
+        "voxcpm2": "cache-only:local",
+        "chatterbox": "cache-only:local"
+      },
+      "cache_identity_relationship": "MATCHED_FOR_BOTH_PROMOTED_PROVIDERS",
+      "actual_failure": "CHATTERBOX_PREWARM_REPORT_STDOUT_PREFIX_INVALID_JSON",
+      "offending_stdout": "loaded PerthNet (Implicit) at step 250,000",
+      "automatic_qa": "NOT_RUN_BINDING_FAILED",
+      "block_c": "FAILED_ONE_OR_MORE_SCENE_SHARDS_NOT_READY",
+      "rule": "Do not accept GitHub SUCCESS or Block C failure artifact as machine qualification."
     }
   }
 }
