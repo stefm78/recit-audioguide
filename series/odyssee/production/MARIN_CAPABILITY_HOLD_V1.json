@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.marin_capability_hold.v1",
   "id": "odyssee-marin-capability-hold-v1",
-  "status": "RESOLVED_STREAM1_V3_SCENE_SHARDS_QUALIFIED",
+  "status": "RESOLVED_STREAM1_V3_PRODUCTION_QUALIFIED",
   "authority": {
     "stream1_issue": 110,
     "stream3_issue": 112,
@@ -33,7 +33,7 @@
   "policy": {
     "silent_fallback": "FORBIDDEN",
     "stream3_voice_selection": "FORBIDDEN",
-    "next_action": "No MARIN recast or standalone human gate. Requalify shared Block B after generic mastering fix."
+    "next_action": "No MARIN recast or standalone human gate. Include MARIN only in the shared H2 batch when Stream 3 launches it."
   },
   "resolution": {
     "stream1_main": "dae91ec3870b77a6fb49598ff47f1bc33d3fbf28",
@@ -86,7 +86,13 @@
       "block_b_state": "PENDING_GENERIC_MASTERING_ONLY",
       "block_b_mastering_issue": 248,
       "block_b_mastering_pr": 249,
-      "block_b_target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f"
+      "block_b_target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
+      "production_qualification_run": 33614971059,
+      "production_qualification_result": "PASS",
+      "block_b_result": "READY_QA_PASS",
+      "block_b_audio_sha256": "950d01bf2979ff4ebb508713f74947eafdeb0de11c729180dacf10bab90058cf",
+      "block_b_integrated_lufs": -17.74,
+      "block_b_true_peak_dbtp": -2.62
     }
   }
 }
