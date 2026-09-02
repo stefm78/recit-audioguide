@@ -33,23 +33,26 @@
     "decision": "HOLD_STREAM2",
     "last_attempt": "REJECTED",
     "rejection_class": [
-      "ARTISTIC_FAIL_REACTION"
+      "ARTISTIC_FAIL",
+      "FRENCH_FAIL",
+      "MELODRAMA_PRESENT",
+      "STAGING_FAIL"
     ],
     "human": {
-      "impact": 2,
-      "reaction": "FAIL",
+      "impact": 3,
+      "reaction": "PASS",
       "identity": "PASS",
-      "french": "PASS",
-      "melodrama": "NONE",
-      "staging": "PASS"
+      "french": "FAIL",
+      "melodrama": "PRESENT",
+      "staging": "FAIL"
     },
     "authoritative_machine": {
       "repo": "stefm78/audio-engine",
-      "run_id": 33598325723,
-      "head_sha": "72d4978145eb5c35a75781f1e2b472f7e42e679c",
-      "candidate_sha256": "55702f253cbfc9c758d02d7f9952a94dfb68d2877f402fc0a5e6215bec0b2b9d",
-      "artifact_name": "local-tts-p6-confucius4-one-shot",
-      "artifact_digest": "sha256:1b81e7c929feae23ba37d5b28d840a97b29bfe6bffb5eb34b1fdca451a460865"
+      "run_id": 33605631004,
+      "head_sha": "f883138231e0ab17ae9cd4d11209e3b4afa78cf5",
+      "candidate_sha256": "6f7e25da627c5b89974831f9043bf901b5b06eba7bd8121690da1d5812cf0e47",
+      "artifact_name": "local-tts-p6-voicedesign-beltout-one-shot",
+      "artifact_digest": "sha256:5320de5a7b06de801706821ad1ed4aa6baee01f913fd031b98191f81fecb49ac"
     },
     "preserve": [
       "same_Ulysse_identity",
@@ -62,15 +65,17 @@
     "forbidden_retries": [
       "same_Qwen3_hybrid",
       "same_Confucius4_single_prompt",
-      "prompt_tuning",
+      "same_VoiceDesign_to_BeltOut_cell",
+      "instruction_tuning",
       "seed_retry",
       "best_of_N",
+      "x_vector_blending",
+      "checkpoint_sweep",
       "DSP_rescue",
-      "donor_swap_without_new_architecture",
       "NUC_retry_for_capability_failure",
       "cloud_TTS"
     ],
-    "next_hypothesis_requirement": "materially_distinct_architecture_with_decoupled_identity_and_emotion_conditioning",
+    "next_hypothesis_requirement": "materially_distinct_source_performance_architecture_or_human_performance_source_with_identity_conversion",
     "stream3_state": "BLOCKED_ONLY_ON_ULYSSES_EMOTIONAL_HUMAN_PASS",
     "attempt_history": [
       {
@@ -117,14 +122,41 @@
           "candidate_sha256": "55702f253cbfc9c758d02d7f9952a94dfb68d2877f402fc0a5e6215bec0b2b9d",
           "artifact_digest": "sha256:1b81e7c929feae23ba37d5b28d840a97b29bfe6bffb5eb34b1fdca451a460865"
         }
+      },
+      {
+        "architecture": "Qwen3 VoiceDesign expressive French performance -> BeltOut timbre transfer to immutable Henri/Ulysse",
+        "decision": "REJECTED",
+        "rejection_class": [
+          "ARTISTIC_FAIL",
+          "FRENCH_FAIL",
+          "MELODRAMA_PRESENT",
+          "STAGING_FAIL"
+        ],
+        "human": {
+          "impact": 3,
+          "reaction": "PASS",
+          "identity": "PASS",
+          "french": "FAIL",
+          "melodrama": "PRESENT",
+          "staging": "FAIL"
+        },
+        "machine": {
+          "repo": "stefm78/audio-engine",
+          "run_id": 33605631004,
+          "head_sha": "f883138231e0ab17ae9cd4d11209e3b4afa78cf5",
+          "candidate_sha256": "6f7e25da627c5b89974831f9043bf901b5b06eba7bd8121690da1d5812cf0e47",
+          "artifact_digest": "sha256:5320de5a7b06de801706821ad1ed4aa6baee01f913fd031b98191f81fecb49ac"
+        }
       }
     ],
     "learning": {
-      "identity_preservation": "DEMONSTRATED_BY_CONFUCIUS4",
-      "french": "PASS_ON_LATEST",
-      "melodrama": "ABSENT_ON_LATEST",
-      "staging": "PASS_ON_LATEST",
-      "remaining_failure": "EMOTIONAL_REACTION_AND_IMPACT_ONLY"
+      "identity_preservation": "PASS_ON_LATEST",
+      "emotional_reaction": "PASS_ON_LATEST",
+      "impact": "3_OF_5_BELOW_GATE",
+      "french": "FAIL_ON_LATEST",
+      "melodrama": "PRESENT_ON_LATEST",
+      "staging": "FAIL_ON_LATEST",
+      "remaining_failure": "NATURAL_FRENCH_RESTRAINT_AND_SCENE_RHYTHM_WITH_SUFFICIENT_IMPACT"
     }
   }
 }
