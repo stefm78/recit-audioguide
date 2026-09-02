@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.marin_capability_hold.v1",
   "id": "odyssee-marin-capability-hold-v1",
-  "status": "HOLD_PRODUCT_BINDING",
+  "status": "RESOLVED_STREAM1_V3_BOUND_PENDING_PRODUCTION_QUALIFICATION",
   "authority": {
     "stream1_issue": 110,
     "stream3_issue": 112,
@@ -33,6 +33,25 @@
   "policy": {
     "silent_fallback": "FORBIDDEN",
     "stream3_voice_selection": "FORBIDDEN",
-    "next_action": "consume one replacement MARIN voice/rate/pitch/volume binding from Stream 1, then restore only affected units to ready"
+    "next_action": "Stream 3 production-qualifies S05/S06/S07/S10; no standalone human gate."
+  },
+  "resolution": {
+    "stream1_main": "dae91ec3870b77a6fb49598ff47f1bc33d3fbf28",
+    "stream1_issue": 110,
+    "stream1_comment_id": 5505494735,
+    "voice": "fr-FR-RemyMultilingualNeural",
+    "rate": "+3%",
+    "pitch": "-4Hz",
+    "volume": "+2%",
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V3.json",
+    "voice_pack_sha256": "81794bed6df8d7163d1cdccfaac2e84b91bdc726c8f79edb1e5da43d391edb1a",
+    "affected_units": [
+      "S05",
+      "S06",
+      "S07",
+      "S10"
+    ],
+    "direct_marin_remy_family_adjacency_audit": 0,
+    "euryloque": "UNCHANGED_HUMAN_ACCEPTED_P3"
   }
 }
