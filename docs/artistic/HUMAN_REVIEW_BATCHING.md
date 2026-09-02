@@ -124,3 +124,35 @@ Promotions remain independent.
 If a module fails, continue preparing independent modules.
 
 Do not force the reviewer back into a one-page/one-loop cadence unless a true dependency requires it.
+
+
+## Review semantics — observation vs acceptance
+
+Human-review forms must never encode artistic value implicitly in a descriptive label.
+
+For every perceptual dimension, distinguish:
+
+1. **Observation** — what the reviewer actually hears.
+2. **Acceptance** — whether that observation is appropriate for this scene and purpose.
+
+Example:
+
+- ambiguous: `melodrama: PRESENT`
+- explicit observation: `melodrama_present: true`
+- explicit judgement: `melodrama_appropriate: PASS`
+
+User-facing wording should prefer direct questions whose valence is obvious, for example:
+
+- “Le niveau de dramatisation vous paraît-il approprié à cette scène ?”
+- “La voix reste-t-elle naturelle en français ?”
+- “Le jeu vous semble-t-il trop appuyé ?”
+
+Rules:
+
+- never assume that `PRESENT`, `ABSENT`, `LIGHT`, `STRONG`, etc. are positive or negative by themselves;
+- if a descriptive field is retained for provenance, pair it with an explicit acceptance field;
+- every review page must state the PASS condition in plain language before the reviewer submits;
+- avoid inverted semantics where selecting a seemingly neutral observation silently causes FAIL;
+- when an artistic authority explicitly accepts a perceptual trait, preserve both the raw observation and the acceptance decision.
+
+This rule applies to all future casting, performance, sound-design, H2 and final-master human review surfaces.
