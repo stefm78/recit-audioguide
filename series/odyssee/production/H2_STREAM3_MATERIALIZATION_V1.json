@@ -10,9 +10,9 @@
   },
   "engine_ref": "5c505c432f086687253f706dd2d7191980066126",
   "latest_clean_control": {
-    "production_run": 33597992496,
-    "product_head": "2eedbe2ac93a298d7bac1ee9c2c32b932a3a5c61",
-    "production_manifest_sha256": "f47f14c455acdb4795ab51d2344a473695b7527c3eb2a78c0a9d541e130a0636",
+    "production_run": 33603091550,
+    "product_head": "82a41c335194ab06353d3b7480346cfd82fed99e",
+    "production_manifest_sha256": "6b062c5d00a437d81ffbd6fd66e82030dd2ced335137b4a92e5ed4c0b15da288",
     "workflow_conclusion": "success",
     "business_state": "hold",
     "machine_ready_units": [
@@ -51,24 +51,32 @@
   },
   "casting": {
     "correction": "MARIN_EURYLOQUE_EXACT_PRESET_COLLISION",
-    "status": "HOLD_CAPABILITY_UNAVAILABLE",
-    "authorized_voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V2.json",
-    "voice_pack_sha256": "8f1ad2a2d270f774a244afab5f481101a6bbe6aabed86e7f0257aec46490bb0b",
-    "authorized_marin_voice": "fr-FR-AlainNeural",
-    "capability_probe_run": 33530359342,
-    "hold_reason": "MARIN_AUTHORIZED_VOICE_UNAVAILABLE_IN_CURRENT_EDGE_PROVIDER",
+    "status": "PRODUCTION_QUALIFICATION_PENDING",
+    "historical_failed_voice": "fr-FR-AlainNeural",
+    "authorized_voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V3.json",
+    "voice_pack_sha256": "81794bed6df8d7163d1cdccfaac2e84b91bdc726c8f79edb1e5da43d391edb1a",
+    "authorized_marin_voice": "fr-FR-RemyMultilingualNeural",
+    "rate": "+3%",
+    "pitch": "-4Hz",
+    "volume": "+2%",
     "affected_units": [
       "S05",
       "S06",
       "S07",
       "S10"
     ],
+    "expected_marin_synthesis_count": {
+      "S05": 8,
+      "S06": 28,
+      "S07": 21,
+      "S10": 13,
+      "total": 70
+    },
     "preserve": [
       "odyssee-euryloque HUMAN_ACCEPTED_P3",
       "all other voice presets",
       "frozen spoken text"
     ],
-    "required_input": "Stream 1 replacement MARIN binding using an actually available approved capability, with exact voice/rate/pitch/volume.",
     "fallback": "fail",
     "human_gate": "shared_H2_only"
   },
@@ -131,7 +139,7 @@
       "target_true_peak_dbtp": -2.5,
       "correction": "audio-engine #220 generic encoded true-peak guard"
     },
-    "current_block_b_state": "HOLD_PROPAGATED_FROM_MARIN",
+    "current_block_b_state": "PENDING_MARIN_V3_PRODUCTION_QUALIFICATION",
     "rule": "Do not reopen P5."
   },
   "review_release": {
@@ -152,7 +160,7 @@
       "S14",
       "Block B if qualified"
     ],
-    "current_batch_maturity": "WAITING_FOR_S05_MARIN_CAPABILITY",
+    "current_batch_maturity": "WAITING_FOR_MARIN_V3_AND_P4_MACHINE_QUALIFICATION",
     "rule": "Do not dispatch the human H2 review release merely because independent machine-ready audio exists."
   },
   "program_materialization": {
@@ -188,7 +196,7 @@
       }
     },
     "required_product_action": "Restore pre-edit Programs and manifest hashes so the previously qualified speech cache identity remains authoritative.",
-    "required_engine_action": "RESOLVED_GENERICALLY_BY_AUDIO_ENGINE_231_AND_236_PENDING_PRODUCT_REPIN_QUALIFICATION",
+    "required_engine_action": "RESOLVED_AND_PRODUCT_QUALIFIED_BY_AUDIO_ENGINE_231_236_RUN_33603091550",
     "h2_sound_authority": "Keep explicit no-selection/silence decisions in H2_STREAM3_MATERIALIZATION_V1.json and H2_SOUND_DIRECTION_BINDINGS_V1.json until the cache identity defect is resolved.",
     "rules": [
       "reuse_existing_speech_audio",
@@ -198,7 +206,7 @@
     ]
   },
   "engine_migration": {
-    "state": "RETRY_PENDING_PRODUCT_QUALIFICATION",
+    "state": "QUALIFIED_PRODUCT",
     "source_engine_ref": "a3af1565f7b6799bced8dbb318fafd5807bafafc",
     "rejected_target_engine_ref": "601049702c92adf840724528e295ab76c9290a36",
     "rejected_product_run": 33602222201,
@@ -242,6 +250,14 @@
       "S02/S04/S11/S14 audio SHA-256 byte-identical to qualified baseline",
       "no wrong-Program legacy cache selected",
       "no human review triggered"
-    ]
+    ],
+    "qualified_product_run": 33603091550,
+    "qualified_product_head": "82a41c335194ab06353d3b7480346cfd82fed99e",
+    "byte_identity": {
+      "S02": "41f60d134caebdbd300fd14bb0ceb75c2fbb819d674af66c21fcf08b14ebe178",
+      "S04": "2088a76cd073f7f12c0dcd5132714155ec8258459cdf6c69356554aeac6def7b",
+      "S11": "3230e858791300dd3455dfb64bf1833335d190185a65c521f864ad34af4cd85e",
+      "S14": "5cc41897e9dad64a33b6adb981e108e69153422ac5400c572e45986131d76924"
+    }
   }
 }
