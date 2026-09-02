@@ -150,7 +150,19 @@
       2026090108,
       2026090112
     ],
-    "production_mapping": "HOLD_P4_FROZEN_S09_LINE_BINDING_REQUIRED",
+    "production_mapping": {
+      "state": "RESOLVED_EXACT_FROZEN_BINDING",
+      "authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
+      "frozen_program_blob_sha1": "234c0138423478e7ea36b4f24a2075543a154983",
+      "lineage": "left",
+      "segments": [
+        32,
+        35,
+        41,
+        42,
+        52
+      ]
+    },
     "global_recast": false
   }
 }
