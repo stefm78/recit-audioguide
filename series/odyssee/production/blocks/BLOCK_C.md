@@ -3,7 +3,7 @@
 Authority: #110  
 Frozen source: `series/odyssee/text/block-c.md` @ blob `4589733f7e7f5302f12511e802cb6a8f0557b1b7`  
 Spoken words: 1,949  
-State: **PARTIALLY_RENDERABLE — S09 SIREN SLOT ONLY BLOCKED**
+State: **READY_FOR_STREAM3_BLOCK_RENDER — P4 HUMAN PASS + EXACT FROZEN BINDING AVAILABLE**
 
 ## Block dramatic job
 
@@ -21,15 +21,12 @@ Ready now:
 - rope/hull staging shell if assets are already qualified;
 - dry/near-dry mix architecture.
 
-External slot:
-`P4_SIRENS_HUMAN_PASS`.
-
-P4 package must prove:
-- attraction PASS;
-- French PASS;
-- cliché none/light;
-- polyphony useful;
-- proposition is personally dangerous to Ulysse.
+Resolved P4 authority:
+- `P4_SIRENS_HUMAN_PASS` is authoritative;
+- exact S09 mapping: `series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json`;
+- five exact frozen Siren lines use the accepted VoxCPM2 left lineage;
+- eight exact frozen Siren lines use the preserved Chatterbox/Vivienne right lineage;
+- no text rewrite and no new human gate.
 
 Sound rule:
 - no music;
