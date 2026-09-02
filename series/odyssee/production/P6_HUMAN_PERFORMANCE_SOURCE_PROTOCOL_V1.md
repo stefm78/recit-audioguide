@@ -159,6 +159,22 @@ Le mot important est `notre`, mais il ne doit pas être surligné. Le lit est la
 - sourire audible forcé ;
 - accentuation démonstrative de `notre`.
 
+## Surface Web recommandée
+
+Utiliser en priorité :
+
+`web/reviews/odyssee-p6-human-performance.html`
+
+Cette surface :
+
+- affiche le dialogue H1b-B complet et les répliques de Pénélope ;
+- permet d'écouter la scène complète et le contexte immédiat de chaque ligne ;
+- demande l'autorisation microphone uniquement à l'utilisateur ;
+- conserve tous les essais localement dans IndexedDB ;
+- permet de retenir exactement une prise par ligne ;
+- exporte uniquement les cinq prises retenues dans un ZIP avec manifeste et SHA-256 ;
+- n'effectue aucun upload automatique.
+
 ## Procédure d'enregistrement
 
 ### Avant le gel
