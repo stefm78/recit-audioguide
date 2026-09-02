@@ -44,7 +44,8 @@
       "no_pitch_shift",
       "deterministic_codec_normalization_only_before_freeze_if_needed"
     ],
-    "raw_human_audio_policy": "Do not commit raw human voice recordings to the public repository."
+    "raw_human_audio_policy": "Do not commit raw human voice recordings to the public repository.",
+    "provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json"
   },
   "staging": {
     "no_music": true,
@@ -52,5 +53,6 @@
     "placement": "simple-intimate / center",
     "frozen_text_preserved": true
   },
-  "master_effect": "S15 and Block D are no longer blocked by Stream 2. Stream 3 owns exact S15 performance capture, BeltOut materialization, production hygiene, QA and H2 integration."
+  "master_effect": "S15 and Block D are no longer blocked by Stream 2. Stream 3 owns exact S15 performance capture, BeltOut materialization, production hygiene, QA and H2 integration.",
+  "ulysses_provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json"
 }
