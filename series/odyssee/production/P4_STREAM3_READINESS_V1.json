@@ -1,0 +1,64 @@
+{
+  "schema": "recit.odyssee.p4.stream3_readiness.v1",
+  "id": "odyssee-p4-stream3-readiness-v1",
+  "status": "READY_FOR_PRODUCT_MATERIALIZATION",
+  "human_gate": "P4_SIRENS_HUMAN_PASS",
+  "generic_engine_ref": "fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
+  "generic_provider_smoke": {
+    "run": 33537558645,
+    "status": "PASS",
+    "audio_sha256": "40c908e808e314cf6252d7c6555ac263af6bf4e3bcd6015ca47e0010c6f22b8f"
+  },
+  "packages": {
+    "voxcpm2": {
+      "path": "series/odyssee/production/provider-packages/P4_SIRENS_VOXCPM2_PRODUCTION_V1.json",
+      "sha256": "b833c736f1d37a96b6ce3be4a214ef5ba1c5c174096aa4c7ba4c77e46170597a",
+      "accepted_probe_indices": [
+        2,
+        4,
+        6,
+        8,
+        12
+      ]
+    },
+    "preserved_chatterbox_vivienne": {
+      "path": "series/odyssee/production/provider-packages/P4_SIRENS_CHATTERBOX_BASELINE_V1.json",
+      "sha256": "70df211910ee2047f31d406e3d56ac0f402f89cd07124b51d4f4dd892a826190",
+      "accepted_probe_indices": [
+        3,
+        5,
+        7,
+        11
+      ]
+    }
+  },
+  "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
+  "p6_independence": "P6 Ulysse emotional remains Stream 2 HOLD and does not block P4 integration.",
+  "fallback": "fail",
+  "binding": {
+    "state": "RESOLVED",
+    "authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
+    "frozen_program_blob_sha1": "234c0138423478e7ea36b4f24a2075543a154983",
+    "exact_guards": "13/13 PASS",
+    "left_segments": [
+      32,
+      35,
+      41,
+      42,
+      52
+    ],
+    "right_segments": [
+      30,
+      34,
+      36,
+      40,
+      51,
+      53,
+      62,
+      66
+    ],
+    "rule": "Executable placement comes only from the exact frozen binding; no probe-order or fuzzy inference."
+  },
+  "target_engine_ref": "601049702c92adf840724528e295ab76c9290a36",
+  "next_step": "Stream 3 materializes S09 performance_provider mapping and requalifies Block C; no new P4 human gate."
+}

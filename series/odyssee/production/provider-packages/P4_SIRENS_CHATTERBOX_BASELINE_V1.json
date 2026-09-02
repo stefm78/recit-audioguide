@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "id": "odyssee-p4-chatterbox-vivienne-baseline-v1",
+  "provider": {
+    "id": "chatterbox-multilingual-v3",
+    "implementation_version": "1.0.0"
+  },
+  "runtime": {
+    "kind": "python",
+    "python": "3.11.16",
+    "device": "cpu",
+    "dependencies": [
+      {
+        "name": "chatterbox-tts",
+        "revision": "5de7a54aa4e5e2baadb0182dde554908b48b85c2"
+      },
+      {
+        "name": "resemble-perth",
+        "revision": "ce86c49d029f42272c1902eccb675556b9ed2330"
+      },
+      {
+        "name": "torch",
+        "version": "2.6.0"
+      },
+      {
+        "name": "torchaudio",
+        "version": "2.6.0"
+      },
+      {
+        "name": "transformers",
+        "version": "5.2.0"
+      },
+      {
+        "name": "huggingface-hub",
+        "version": "1.29.0"
+      },
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "pydub",
+        "version": "0.25.1"
+      }
+    ],
+    "runtime_lock": "audio-engine/requirements/chatterbox-mtl-v3-h1b-runtime.txt@fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
+    "system_dependencies": [
+      {
+        "name": "ffmpeg",
+        "commands": [
+          "ffmpeg",
+          "ffprobe"
+        ],
+        "reference_version": "7:6.1.1-3ubuntu5"
+      }
+    ]
+  },
+  "model": {
+    "id": "ResembleAI/chatterbox",
+    "source": "huggingface",
+    "revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+    "revision_provenance": "reconstructed from upstream model history for the H1b date; file integrity is independently verified by SHA-256",
+    "integrity": [
+      {
+        "name": "t3_mtl23ls_v3.safetensors",
+        "sha256": "5abca8321ede76f8e61f1cc0d19aea6c946b28871017ce8726f8a69203f05953"
+      },
+      {
+        "name": "s3gen.pt",
+        "sha256": "9b9ff07e60b20c136e2b1b3d7563a24604e8d2c4c267888d1ee929dd0151d2a3"
+      },
+      {
+        "name": "ve.pt",
+        "sha256": "4b16d836bc598509860f6fa068165a8bb5e9ac84f05582dfcf278a5a372879f1"
+      },
+      {
+        "name": "grapheme_mtl_merged_expanded_v1.json",
+        "sha256": "69632f47220a788a52ce2661d096453c5655e9bf25289d89a8d832c46ee07dbf"
+      }
+    ]
+  },
+  "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
+  "synthesis": {
+    "seed": 640200,
+    "parameters": {
+      "language_id": "fr",
+      "reference": "synthetic-vivienne",
+      "exaggeration": 0.62,
+      "cfg_weight": 0.34,
+      "temperature": 0.82
+    },
+    "normalization": {
+      "target_dbfs": -20
+    }
+  },
+  "references": [
+    {
+      "id": "synthetic-vivienne",
+      "path": "series/odyssee/production/provider-assets/p5/synthetic-vivienne.wav",
+      "sha256": "9495d6f07acad6025286cbbeda5ef799655f5ced41cb4589049a7a7ec89ba160",
+      "source": {
+        "type": "github_release",
+        "repository": "stefm78/recit-audioguide",
+        "tag": "odyssee-p5-provider-assets-v1",
+        "asset": "synthetic-vivienne.wav"
+      }
+    }
+  ],
+  "fallback": "fail",
+  "acceptance": {
+    "product_authority": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
+    "baseline_authority": "odyssee-h1b-corrective-review-v1 / p4-b",
+    "human_gate": "P4_SIRENS_HUMAN_PASS",
+    "winning_hybrid": "p4-voxcpm2-a",
+    "preserved_probe_indices": [
+      3,
+      5,
+      7,
+      11
+    ],
+    "preserved_probe_parameters": [
+      {
+        "probe_index": 3,
+        "provider_seed": 640203,
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.62,
+        "cfg_weight": 0.34,
+        "temperature": 0.82,
+        "probe_pan": 0.16
+      },
+      {
+        "probe_index": 5,
+        "provider_seed": 640205,
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.6,
+        "cfg_weight": 0.36,
+        "temperature": 0.8,
+        "probe_pan": 0.16
+      },
+      {
+        "probe_index": 7,
+        "provider_seed": 640207,
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.6,
+        "cfg_weight": 0.34,
+        "temperature": 0.8,
+        "probe_pan": 0.16
+      },
+      {
+        "probe_index": 11,
+        "provider_seed": 640211,
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.58,
+        "cfg_weight": 0.38,
+        "temperature": 0.78,
+        "probe_pan": 0.16
+      }
+    ],
+    "production_mapping": {
+      "state": "RESOLVED_EXACT_FROZEN_BINDING",
+      "authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
+      "frozen_program_blob_sha1": "234c0138423478e7ea36b4f24a2075543a154983",
+      "lineage": "right",
+      "segments": [
+        30,
+        34,
+        36,
+        40,
+        51,
+        53,
+        62,
+        66
+      ]
+    },
+    "note": "Production placement is now governed only by the exact frozen S09 binding; probe order is not executable authority."
+  }
+}
