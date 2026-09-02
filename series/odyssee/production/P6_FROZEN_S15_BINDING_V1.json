@@ -22,10 +22,17 @@
     "source_git_blob_sha1": "a036ae79ba5102af871cb722e0cc5d6ef313236c",
     "sequence": "S15",
     "program_path": "series/odyssee/programs/S15.json",
-    "program_git_blob_sha1_at_binding": "97fdb2e92ed9a1bc50cb8789bb270e6e0ddcd14d",
+    "program_git_blob_sha1_at_binding": "2d07fd4bc16d77286012e641948bd1b5b3e2100b",
     "segment_count": 193,
     "text_change_authorized": false,
-    "locator_basis": "one-based Program segment index + exact speaker/text guard"
+    "locator_basis": "one-based Program segment index + exact speaker/text guard",
+    "rebound_on_product_main": "dae91ec3870b77a6fb49598ff47f1bc33d3fbf28",
+    "rebind_reason": "Program metadata/cache-identity maintenance changed the Program blob while frozen spoken text and all 37 product-owned guards remained exact.",
+    "guard_revalidation": {
+      "checked_guards": 37,
+      "mismatches": 0,
+      "result": "PASS"
+    }
   },
   "staging_contract": {
     "no_music": true,
@@ -316,7 +323,16 @@
         "segment": 132,
         "text": "Si quelqu’un a déplacé ce lit, alors il a fallu couper l’arbre."
       }
-    ]
+    ],
+    "latest_external_candidate": {
+      "architecture": "Confucius4",
+      "repo": "stefm78/audio-engine",
+      "run_id": 33598325723,
+      "candidate_sha256": "55702f253cbfc9c758d02d7f9952a94dfb68d2877f402fc0a5e6215bec0b2b9d",
+      "machine_state": "MACHINE_PASS",
+      "human_state": "PENDING",
+      "authority_rule": "Do not consume or materialize this candidate unless Stream 2 publishes ULYSSES_EMOTIONAL_HUMAN_PASS."
+    }
   },
   "fail_closed_guards": [
     "Each mapped segment must still match the exact speaker and text above.",
