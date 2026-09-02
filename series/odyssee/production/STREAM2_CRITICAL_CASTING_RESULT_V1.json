@@ -175,10 +175,8 @@
       },
       {
         "architecture": "Human French performance source -> BeltOut timbre transfer to immutable Henri/Ulysse",
-        "decision": "REJECTED",
-        "rejection_class": [
-          "ARTISTIC_FAIL_MELODRAMA"
-        ],
+        "decision": "HUMAN_PASS_WITH_ARTISTIC_ARBITRATION",
+        "rejection_class": [],
         "human": {
           "impact": 4,
           "reaction": "PASS",
@@ -195,6 +193,11 @@
           "raw_human_audio_uploaded_to_github": false,
           "converted_slots": 5,
           "machine_gate": "PASS"
+        },
+        "artistic_arbitration": {
+          "raw_melodrama_observation": "PRESENT",
+          "melodrama_appropriate": "PASS",
+          "accepted": true
         }
       }
     ],
