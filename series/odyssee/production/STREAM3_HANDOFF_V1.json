@@ -140,22 +140,40 @@
         132
       ],
       "rule": "P6-B probe wording is not executable text authority; use exact frozen S15 segment binding only."
+    },
+    "p4_sirens": {
+      "status": "P4_SIRENS_HUMAN_PASS",
+      "authority_file": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
+      "frozen_binding_authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
+      "left_provider_package": "series/odyssee/production/provider-packages/P4_SIRENS_VOXCPM2_PRODUCTION_V1.json",
+      "right_provider_package": "series/odyssee/production/provider-packages/P4_SIRENS_CHATTERBOX_BASELINE_V1.json",
+      "left_segments": [
+        32,
+        35,
+        41,
+        42,
+        52
+      ],
+      "right_segments": [
+        30,
+        34,
+        36,
+        40,
+        51,
+        53,
+        62,
+        66
+      ],
+      "rules": [
+        "no_text_change",
+        "two_lineages_only",
+        "no_singing",
+        "no_reverb_rescue",
+        "french_intelligibility_first"
+      ]
     }
   },
   "external_stream2_packages": [
-    {
-      "id": "P4_SIRENS_HUMAN_PASS",
-      "scope": [
-        "S09_siren_performance_only"
-      ],
-      "required": [
-        "attraction_PASS",
-        "french_PASS",
-        "cliche_NONE_OR_LIGHT",
-        "polyphony_USEFUL"
-      ],
-      "provider_agnostic": true
-    },
     {
       "id": "ULYSSES_EMOTIONAL_HUMAN_PASS",
       "scope": [
@@ -212,19 +230,15 @@
       "source": "series/odyssee/text/block-c.md",
       "source_blob": "4589733f7e7f5302f12511e802cb6a8f0557b1b7",
       "spoken_words": 1949,
-      "state": "PARTIALLY_RENDERABLE",
+      "state": "READY_FOR_STREAM3_BLOCK_RENDER",
       "ready_now": [
-        "S09_non_siren_frame",
+        "S09",
         "S10",
         "S11"
       ],
-      "blocked_only": [
-        "S09_siren_performance"
-      ],
-      "external_dependencies": [
-        "P4_SIRENS_HUMAN_PASS"
-      ],
-      "direction": "series/odyssee/production/blocks/BLOCK_C.md"
+      "external_dependencies": [],
+      "direction": "series/odyssee/production/blocks/BLOCK_C.md",
+      "binding_authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json"
     },
     {
       "id": "D",
@@ -265,7 +279,7 @@
     "pre_h2_corrections": [
       {
         "id": "MARIN_EURYLOQUE_EXACT_PRESET_COLLISION",
-        "state": "CORRECTION_AUTHORIZED_STREAM1",
+        "state": "REPLACEMENT_V3_AUTHORIZED_AVAILABLE_PROVIDER",
         "evidence": {
           "previous_marin": {
             "voice": "fr-FR-HenriNeural",
@@ -289,11 +303,12 @@
         },
         "correction": {
           "character": "MARIN",
-          "voice": "fr-FR-AlainNeural",
-          "rate": "+2%",
-          "pitch": "+0Hz",
+          "voice": "fr-FR-RemyMultilingualNeural",
+          "rate": "+3%",
+          "pitch": "-4Hz",
           "volume": "+2%",
           "acceptance": "PRODUCTION_CHOICE_H2_WATCH",
+          "rationale": "Current Edge catalog exposes Remy; affected-scene adjacency audit has zero direct MARIN-to-Remy-family speaker turns, avoiding the dominant Henri collision with Ulysse/Euryloque.",
           "rerender_only": [
             "S05",
             "S06",
@@ -306,7 +321,14 @@
           "frozen_text",
           "all_other_casting"
         ],
-        "human_gate": "shared_H2_only"
+        "human_gate": "shared_H2_only",
+        "previous_unavailable_replacement": {
+          "voice": "fr-FR-AlainNeural",
+          "rate": "+2%",
+          "pitch": "+0Hz",
+          "volume": "+2%",
+          "machine_capability": "UNAVAILABLE_EDGE_7_2_8"
+        }
       }
     ]
   },
@@ -393,25 +415,15 @@
       },
       "pre_h2_materialization_findings": [
         {
-          "id": "MARIN_EURYLOQUE_CORRECTION_NOT_YET_CONSUMED",
+          "id": "MARIN_REPLACEMENT_V3_PENDING_STREAM3_MATERIALIZATION",
           "severity": "BLOCK_H2_FOR_AFFECTED_SCENES",
-          "observed_on_main": "voice pack still binds odyssee-marin-h2 to fr-FR-HenriNeural +4%/-14Hz/+8%, identical to Euryloque",
           "affected_scenes": [
             "S05",
             "S06",
             "S07",
             "S10"
           ],
-          "required_action": "Stream 3 must consume the already-authorized MARIN replacement before H2 audio is eligible."
-        },
-        {
-          "id": "P5_RUNTIME_RENDER_FFPROBE",
-          "severity": "TECHNICAL_ONLY",
-          "observed_run": 33516343290,
-          "affected_scene": "S08",
-          "observed_failure": "render_failed_rc_2 after missing ffprobe",
-          "artistic_effect": "NONE",
-          "required_action": "Stream 3 fixes runtime/orchestration only; do not reopen P5 recipe."
+          "required_action": "Materialize Remy +3%/-4Hz/+2% for MARIN only, rerender/QA only affected scenes, preserve Euryloque."
         }
       ]
     },

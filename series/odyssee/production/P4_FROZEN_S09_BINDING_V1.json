@@ -1,0 +1,228 @@
+{
+  "schema": "recit.odyssee.p4_frozen_s09_binding.v1",
+  "id": "odyssee-p4-frozen-s09-binding-v1",
+  "authority_issue": 110,
+  "downstream_issue": 112,
+  "decision": "P4_SIRENS_HUMAN_PASS_CONSUMED",
+  "frozen_program": {
+    "path": "series/odyssee/programs/S09.json",
+    "git_blob_sha1": "234c0138423478e7ea36b4f24a2075543a154983",
+    "frozen_source_blob_sha1": "4589733f7e7f5302f12511e802cb6a8f0557b1b7",
+    "siren_line_count": 13
+  },
+  "accepted_hybrid": {
+    "product_authority": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
+    "human_decision": "P4_SIRENS_HUMAN_PASS",
+    "candidate_run_id": 33514535576,
+    "candidate_sha256": "e630b78a0a7def96b3b1cd4934a2272919f1d6433c3ad0f66e850f17ede7572f",
+    "candidate_manifest_sha256": "41139b77078447e1479ac687b7e0c4b6e102114f02c13dc9ccc57897c4a8726d",
+    "left_package": "series/odyssee/production/provider-packages/P4_SIRENS_VOXCPM2_PRODUCTION_V1.json",
+    "right_package": "series/odyssee/production/provider-packages/P4_SIRENS_CHATTERBOX_BASELINE_V1.json",
+    "provider_packages_prepared_in_pr": 132
+  },
+  "lineage_rules": {
+    "left": {
+      "identity": "sirene_gauche_voxcpm2",
+      "provider": "voxcpm2",
+      "artistic_function": "personal recognition and fame proposition addressed directly to Ulysse",
+      "accepted_control": "An intimate, intelligent invitation addressed personally to Ulysses. Warm recognition, quiet curiosity and genuine pleasure in understanding him. Compelling and close, but never sexualised, never mystical, never theatrical, never whispered and never sung. Natural adult French diction.",
+      "allowed_probe_slots": [
+        2,
+        4,
+        6,
+        8,
+        12
+      ],
+      "placement": "left",
+      "numeric_pan": "preserve accepted H1b implementation if encoded by Stream 3; do not widen beyond accepted probe"
+    },
+    "right": {
+      "identity": "sirene_droite_chatterbox_vivienne",
+      "provider": "chatterbox-multilingual-v3",
+      "artistic_function": "supporting knowledge, return and permanence propositions",
+      "allowed_probe_slots": [
+        3,
+        5,
+        7,
+        11
+      ],
+      "placement": "right",
+      "numeric_pan_evidence": 0.16
+    }
+  },
+  "assignments": [
+    {
+      "segment": 30,
+      "speaker": "SIRÈNE",
+      "text": "Ulysse.",
+      "lineage": "right",
+      "probe_index": 3,
+      "provider_seed": 640203,
+      "basis": "opening recognition call; use the preserved right-side knowledge/recognition identity"
+    },
+    {
+      "segment": 32,
+      "speaker": "SIRÈNE",
+      "text": "Ulysse d’Ithaque.",
+      "lineage": "left",
+      "probe_index": 2,
+      "provider_seed": 2026090102,
+      "basis": "exact accepted probe wording: Ulysse d’Ithaque."
+    },
+    {
+      "segment": 34,
+      "speaker": "SIRÈNE",
+      "text": "Nous savons d’où tu viens.",
+      "lineage": "right",
+      "probe_index": 3,
+      "provider_seed": 640203,
+      "basis": "direct expansion of preserved right probe: Nous savons."
+    },
+    {
+      "segment": 35,
+      "speaker": "SIRÈNE",
+      "text": "Nous savons ce que tu as fait devant Troie.",
+      "lineage": "left",
+      "probe_index": 4,
+      "provider_seed": 2026090104,
+      "basis": "direct Troie lineage from accepted left probe slot 4"
+    },
+    {
+      "segment": 36,
+      "speaker": "SIRÈNE",
+      "text": "Nous savons ce que les hommes raconteront.",
+      "lineage": "right",
+      "probe_index": 5,
+      "provider_seed": 640205,
+      "basis": "historical-deed/legacy knowledge lineage; supporting rather than intimate proposition"
+    },
+    {
+      "segment": 40,
+      "speaker": "SIRÈNE",
+      "text": "Viens.",
+      "lineage": "right",
+      "probe_index": 7,
+      "provider_seed": 640207,
+      "basis": "approach/return lineage from preserved right probe: Tu veux rentrer…"
+    },
+    {
+      "segment": 41,
+      "speaker": "SIRÈNE",
+      "text": "Tu n’as pas besoin de rentrer pour être connu.",
+      "lineage": "left",
+      "probe_index": 8,
+      "provider_seed": 2026090108,
+      "basis": "direct accepted fame-versus-return proposition: …ou être connu ?"
+    },
+    {
+      "segment": 42,
+      "speaker": "SIRÈNE",
+      "text": "Ton nom est déjà arrivé plus loin que toi.",
+      "lineage": "left",
+      "probe_index": 6,
+      "provider_seed": 2026090106,
+      "basis": "name/fame consequence lineage from accepted left probe: Pourquoi tu as crié ton nom.; semantic placement deliberately overrides compact-probe order"
+    },
+    {
+      "segment": 51,
+      "speaker": "SIRÈNE",
+      "text": "Ils t’oublieront chez toi.",
+      "lineage": "right",
+      "probe_index": 7,
+      "provider_seed": 640207,
+      "basis": "home/return threat carried by preserved right return lineage"
+    },
+    {
+      "segment": 52,
+      "speaker": "SIRÈNE",
+      "text": "Ici, nous savons tout.",
+      "lineage": "left",
+      "probe_index": 12,
+      "provider_seed": 2026090112,
+      "basis": "direct knowledge-certainty lineage from accepted left probe: Nous savons déjà."
+    },
+    {
+      "segment": 53,
+      "speaker": "SIRÈNE",
+      "text": "Ici, rien de ce que tu as fait ne disparaît.",
+      "lineage": "right",
+      "probe_index": 11,
+      "provider_seed": 640211,
+      "basis": "permanence/stay proposition carried by preserved right Reste lineage"
+    },
+    {
+      "segment": 62,
+      "speaker": "SIRÈNE",
+      "text": "Ulysse.",
+      "lineage": "right",
+      "probe_index": 11,
+      "provider_seed": 640211,
+      "basis": "lingering personal call after the explicit proposition; preserve right-side pull"
+    },
+    {
+      "segment": 66,
+      "speaker": "SIRÈNE",
+      "text": "Ulysse.",
+      "lineage": "right",
+      "probe_index": 11,
+      "provider_seed": 640211,
+      "basis": "final receding call; same right-side identity, fade by scene staging rather than new voice"
+    }
+  ],
+  "baseline_slot_parameters": {
+    "3": {
+      "reference": "synthetic-vivienne",
+      "exaggeration": 0.62,
+      "cfg_weight": 0.34,
+      "temperature": 0.82,
+      "probe_pan": 0.16
+    },
+    "5": {
+      "reference": "synthetic-vivienne",
+      "exaggeration": 0.6,
+      "cfg_weight": 0.36,
+      "temperature": 0.8,
+      "probe_pan": 0.16
+    },
+    "7": {
+      "reference": "synthetic-vivienne",
+      "exaggeration": 0.6,
+      "cfg_weight": 0.34,
+      "temperature": 0.8,
+      "probe_pan": 0.16
+    },
+    "11": {
+      "reference": "synthetic-vivienne",
+      "exaggeration": 0.58,
+      "cfg_weight": 0.38,
+      "temperature": 0.78,
+      "probe_pan": 0.16
+    }
+  },
+  "constraints": [
+    "no_frozen_text_change",
+    "no_fuzzy_mapping",
+    "exact_segment_speaker_text_guards",
+    "exactly_two_siren_lineages",
+    "no_extra_chorus_or_voice",
+    "no_singing",
+    "no_reverb_rescue",
+    "no_generic_sea_bed",
+    "french_intelligibility_first",
+    "attraction_is_attention_and_knowledge_not_seduction"
+  ],
+  "validation": {
+    "guard_count": 13,
+    "left_assignment_count": 5,
+    "right_assignment_count": 8,
+    "left_probe_slots_used_exactly_once": [
+      2,
+      4,
+      6,
+      8,
+      12
+    ],
+    "rule": "If S09 spoken lines or locators drift, fail closed and return to Stream 1."
+  },
+  "baseline_main_commit": "06ed843b08c327e5bb805069a999a67ffdeb9cb8"
+}
