@@ -73,7 +73,38 @@
     "placement": "simple-intimate / center",
     "frozen_text_preserved": true
   },
-  "master_effect": "P6 casting is closed and Stream 2 has exited the critical path. S15 and Block D remain machine-HOLD only until exact 12-line Production human capture is completed, frozen and privately handed to Stream 3.",
+  "master_effect": "A+B can remain qualified while C is independently requalified. D remains HOLD only on exact S15 Production human capture and the subsequent deterministic BeltOut/composition/QA path.",
   "ulysses_provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json",
-  "capture_required": "P6_S15_PRODUCTION_HUMAN_CAPTURE_REQUIRED"
+  "capture_required": "P6_S15_PRODUCTION_HUMAN_CAPTURE_REQUIRED",
+  "machine_preparation": {
+    "state": "PRIVATE_INTAKE_FREEZE_GATE_READY",
+    "intake_tool": "tools/p6_s15_pipeline.py",
+    "private_workspace_rule": "MUST_RESOLVE_OUTSIDE_PUBLIC_REPOSITORY_CHECKOUT",
+    "intake_validates": [
+      "exact_12_frozen_segments",
+      "exact_speaker_text_authority",
+      "recording_manifest_sha256",
+      "each_selected_audio_sha256",
+      "SHA256SUMS_consistency",
+      "one_selected_take_per_segment_before_conversion",
+      "clean_capture_confirmed_12_of_12",
+      "no_unexpected_zip_members"
+    ],
+    "freeze_outputs": [
+      "frozen-intake.json",
+      "FREEZE.lock",
+      "conversion-plan.json"
+    ],
+    "conversion_plan": {
+      "deterministic_seed_scheme": "202609060000 + exact S15 segment",
+      "exactly_one_conversion_per_selected_take": true,
+      "allow_retry_after_audio_output_exists": false,
+      "best_of_n": false,
+      "second_pass": false,
+      "post_conversion_processing": [
+        "constant_level_alignment_only"
+      ]
+    },
+    "raw_human_audio_publication": "FORBIDDEN"
+  }
 }
