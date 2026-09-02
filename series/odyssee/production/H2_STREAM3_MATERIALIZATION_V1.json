@@ -248,7 +248,7 @@
     "generic_provider": "READY",
     "generic_provider_main": "fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
     "generic_provider_smoke_run": 33537558645,
-    "product_state": "READY_BINDING_RESOLVED_WAITING_STREAM3_MATERIALIZATION",
+    "product_state": "MATERIALIZED_PENDING_MACHINE_QUALIFICATION",
     "prepared_product_pr": 132,
     "rule": "Do not infer compact H1b probe slots onto frozen S09 by order, fuzzy text, semantics, or artistic intuition.",
     "binding_authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
@@ -263,6 +263,44 @@
         -0.16,
         0.16
       ]
+    },
+    "target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
+    "s09_materialization": {
+      "state": "READY_IN_MANIFEST_PENDING_PRODUCTION_RUN",
+      "program_sha256": "b68a7e905e7b8409801a452b52748d5bcb9b6d8ed4ec8fa11271fc906d880662",
+      "exact_guard_count": 13,
+      "left_segments": [
+        32,
+        35,
+        41,
+        42,
+        52
+      ],
+      "right_segments": [
+        30,
+        34,
+        36,
+        40,
+        51,
+        53,
+        62,
+        66
+      ],
+      "left_provider": "voxcpm2",
+      "right_provider": "chatterbox-multilingual-v3",
+      "provider_packages": {
+        "voxcpm2": "b833c736f1d37a96b6ce3be4a214ef5ba1c5c174096aa4c7ba4c77e46170597a",
+        "chatterbox": "70df211910ee2047f31d406e3d56ac0f402f89cd07124b51d4f4dd892a826190"
+      },
+      "placement": {
+        "left": "slight-left",
+        "right": "slight-right",
+        "pan": [
+          -0.16,
+          0.16
+        ]
+      },
+      "legacy_cache_recovery": "DISABLED"
     }
   },
   "p6_ulysse_emotional": {
@@ -334,7 +372,7 @@
       "S14",
       "Block B if qualified"
     ],
-    "current_batch_maturity": "WAITING_FOR_P4_S09_MACHINE_QUALIFICATION",
+    "current_batch_maturity": "WAITING_FOR_P4_S09_AND_BLOCK_C_MACHINE_QUALIFICATION",
     "rule": "Do not dispatch the human H2 review release merely because independent machine-ready audio exists."
   },
   "program_materialization": {
