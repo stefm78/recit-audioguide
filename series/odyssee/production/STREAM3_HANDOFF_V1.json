@@ -359,18 +359,22 @@
   },
   "qa": {
     "h2": {
-      "type": "BATCHED_BLOCK_INTEGRATION",
+      "type": "FINAL_SHARED_SINGLE_BATCH_INTEGRATION",
       "one_pages_surface": true,
       "criteria": [
-        "ownership_transitions",
-        "pacing_and_fatigue",
-        "secondary_cast_collisions",
-        "sound_density",
-        "crew_loss_continuity",
-        "ulysse_identity",
-        "penelope_continuity",
-        "argos_without_sentimental_cue",
-        "action_vs_emotional_climax"
+        "pacing_comprehension",
+        "listening_fatigue",
+        "identity_coherence",
+        "marin_context",
+        "p5_underworld_integration",
+        "p4_s09_real_scene_integration",
+        "block_B_to_C_and_C_to_D_transitions",
+        "s13_s14_climax_build",
+        "s15_real_scene_emotional_climax",
+        "global_dynamics",
+        "sound_density_and_intentional_silence",
+        "inter_block_level_continuity",
+        "absence_of_material_audible_technical_defect"
       ],
       "entry_contract": {
         "voice_foundation_is_sufficient_for_machine_preflight": true,
@@ -383,7 +387,29 @@
         ],
         "current_scene_foundation_v1_is_human_h2_candidate": false,
         "reuse_existing_speech_audio": true,
-        "rule": "Do not add decorative sound merely to satisfy this gate; deliberate silence is a valid integrated decision."
+        "rule": "Dispatch exactly one H2 only after all four blocks are machine-qualified in the same immutable review Release. The page must remain fail-closed on missing assets.",
+        "machine_confirmation_exact": "A+B+C+D MACHINE_QUALIFIED",
+        "dispatch_forbidden_before_confirmation": true,
+        "required_review_release_assets": [
+          "review-index.json",
+          "block-A.mp3",
+          "block-A.qa-report.json",
+          "block-B.mp3",
+          "block-B.qa-report.json",
+          "block-C.mp3",
+          "block-C.qa-report.json",
+          "block-D.mp3",
+          "block-D.qa-report.json",
+          "scene-S09.mp3",
+          "scene-S09.qa-report.json",
+          "scene-S13.mp3",
+          "scene-S13.qa-report.json",
+          "scene-S14.mp3",
+          "scene-S14.qa-report.json",
+          "scene-S15.mp3",
+          "scene-S15.qa-report.json"
+        ],
+        "partial_review_release_is_h2": false
       },
       "minimum_required_punctuations": {
         "S02": [
@@ -438,18 +464,46 @@
         "S08": "BOUND_IN_PRODUCT_RUNTIME_RENDER_PENDING",
         "S14": "BOUND_PENDING_STREAM3_MATERIALIZATION"
       },
-      "pre_h2_materialization_findings": [
-        {
-          "id": "MARIN_REPLACEMENT_V3_PENDING_STREAM3_MATERIALIZATION",
-          "severity": "BLOCK_H2_FOR_AFFECTED_SCENES",
-          "affected_scenes": [
-            "S05",
-            "S06",
-            "S07",
-            "S10"
-          ],
-          "required_action": "Materialize Remy +3%/-4Hz/+2% for MARIN only, rerender/QA only affected scenes, preserve Euryloque."
+      "pre_h2_materialization_findings": [],
+      "current_state": "H2_SINGLE_BATCH_REVIEW_READY_PENDING_AUDIO",
+      "historical_representative_scope_superseded": true,
+      "review_authority": "series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.json",
+      "review_protocol": "series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.md",
+      "review_page": "web/reviews/odyssee-h2.html",
+      "mandatory_listening_order": [
+        "Block_A_continuous",
+        "Block_B_continuous",
+        "S09_complete",
+        "Block_B_to_C_boundary",
+        "Block_C_to_D_boundary",
+        "S13_complete",
+        "S14_complete",
+        "S15_complete",
+        "A_B_C_D_global_comparison"
+      ],
+      "human_review_semantics": {
+        "observation_field": "neutral_perceptual_observation",
+        "artistic_verdict_field": "PASS_or_FAIL_against_explicit_condition",
+        "descriptive_terms_have_no_implicit_valence": true,
+        "example": {
+          "observation": "melodrama_present=true",
+          "acceptance": "melodrama_appropriate=PASS"
         }
+      },
+      "final_decision": {
+        "pass": "PASS_H2_SINGLE_BATCH",
+        "fail": "FAIL_H2_TARGETED_CORRECTION",
+        "weighted_average": false,
+        "partial_promotion": false,
+        "correction_rule": "smallest demonstrated production cause only; re-listen changed scope plus affected boundary"
+      },
+      "stop_rules": [
+        "one_H2_batch_only",
+        "no_micro_review",
+        "no_new_asset_search_without_concrete_H2_defect",
+        "no_decorative_embellishment",
+        "no_casting_research",
+        "no_H2_dispatch_before_A+B+C+D_MACHINE_QUALIFIED"
       ]
     },
     "h3": {
