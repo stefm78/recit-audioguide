@@ -26,10 +26,10 @@ Climax émotionnel: S15, le lit.
 | P2 ownership handoff | HUMAN PASS | S04 → S05 transfer is locked; no jingle |
 | Ulysse storyteller watch | CLOSED / PASS in H1 | no global retuning |
 | P3 Polyphème / Euryloque | HUMAN PASS | accepted dry/near-dry vocal recipe usable in S05 |
-| P4 Sirènes | FAIL / external capability slot | blocks only the Siren performance inside S09 |
+| P4 Sirènes | HUMAN PASS / exact S09 binding ready | Stream 3 may materialize S09 from `P4_FROZEN_S09_BINDING_V1.json` |
 | P5 Enfers | HUMAN PASS H1b | use accepted recipe exactly; no reopening without regression |
 | P6 staging | HUMAN PASS except Ulysse emotional acting | preserve P6-B staging, Pénélope, pauses and no-music rule |
-| Long master | NOT YET ASSEMBLABLE | only because two local vocal packages are missing plus H2/H3 remain |
+| Long master | NOT YET ASSEMBLABLE | P6 Ulysse emotional remains external; MARIN V3 + P4 binding await Stream 3 materialization; H2/H3 remain |
 
 ## Frozen source bindings
 
@@ -44,24 +44,13 @@ Total: 11,788 spoken words.
 
 ## Real dependencies on Stream 2
 
-Stream 1 consumes only two provider-agnostic, human-qualified packages.
+P4 is now consumed and product-bound. The only remaining Stream 2 dependency is ULYSSES_EMOTIONAL_HUMAN_PASS.
 
-### 1. P4_SIRENS_HUMAN_PASS
+### P4_SIRENS_HUMAN_PASS — CONSUMED
 
-Scope: S09 Siren performance only.
+Human PASS is authoritative. The frozen product mapping is `series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json`. No S09 text exception is required.
 
-Required evidence:
-- attraction PASS, not BORDERLINE;
-- French PASS;
-- cliché none/light;
-- polyphony useful;
-- Ulysse/Euryloque identities intact.
-
-Stream 1 does not care whether the provider is local, Azure, Qwen, or another qualified implementation.
-
-No final frozen-text exception for S09 is committed until the passing package proves that a text-architecture change is actually necessary.
-
-### 2. ULYSSES_EMOTIONAL_HUMAN_PASS
+### ULYSSES_EMOTIONAL_HUMAN_PASS
 
 Scope: accepted P6-B staging only.
 
@@ -117,18 +106,9 @@ Acceptance focus:
 
 ### S1-WP-C — Block C, S09–S11
 
-State: **PARTIALLY_RENDERABLE**.
+State: **READY_FOR_STREAM3_BLOCK_RENDER**.
 
-Ready now:
-- S09 Ulysse/Euryloque/narrative frame;
-- S09 sound/staging shell;
-- all of S10;
-- all of S11.
-
-External slot:
-- S09 Siren performance only.
-
-Do not wait on P4 to render/qualify S10–S11 or the non-Siren parts of S09.
+P4 is HUMAN_PASS and exact frozen S09 left/right lineage mapping is available in `P4_FROZEN_S09_BINDING_V1.json`. S09/S10/S11 may now be materialized and qualified without another P4 human loop.
 
 ### S1-WP-D — Block D, S12–S15
 
