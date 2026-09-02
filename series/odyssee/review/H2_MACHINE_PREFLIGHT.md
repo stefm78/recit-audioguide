@@ -6,7 +6,54 @@ Product source used by run: `31030ac45c5343b23a2e7c858f49990e888c9a1a`
 Generic runtime used by run: `stefm78/audio-engine@52c933b6371103b977a2ccbcade291700bd0eb73`  
 Current product main when this preflight is recorded: `5de36966a3fb7ceb38c2108609776350c221894f`
 
-Status: **H2_PREP_ACTIVE — MACHINE PREFLIGHT PASS WITH PACING WATCH**
+Status: **H2_SINGLE_BATCH_REVIEW_READY_PENDING_AUDIO**
+
+## Current H2 authority — final shared batch
+
+The historical H2 scope below is retained as production history but is **superseded** for human review design.
+
+Current artistic/product facts:
+- P4 = `P4_SIRENS_HUMAN_PASS`; H2 reviews the real complete S09 integration, not the capability;
+- P5 is closed; H2 reviews P5/S08 only as part of Block B integration;
+- MARIN / Block B is machine-side closed; H2 reviews MARIN only in real context;
+- P6 = `ULYSSES_EMOTIONAL_HUMAN_PASS`; the only remaining pre-H2 human work is clean Production capture of the exact 12 frozen S15 Ulysse lines, owned by Stream 3;
+- Stream 2 has exited the critical path;
+- no casting research is authorized.
+
+Final H2 authority:
+- `series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.md`;
+- `series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.json`;
+- `web/reviews/odyssee-h2.html`.
+
+Hard entry gate:
+`A+B+C+D MACHINE_QUALIFIED`
+
+The review surface is fail-closed against one immutable review Release and requires:
+- Block A/B/C/D audio + QA;
+- complete S09/S13/S14/S15 audio + QA;
+- `review-index.json`.
+
+Final mandatory scope:
+1. Block A continuous;
+2. Block B continuous;
+3. S09 complete;
+4. B→C boundary;
+5. C→D boundary;
+6. S13 complete;
+7. S14 complete;
+8. S15 complete;
+9. global A/B/C/D comparison.
+
+Decision semantics:
+- observation is descriptive;
+- artistic acceptance is a separate PASS / FAIL;
+- `PRESENT`, `ABSENT`, `LIGHT`, `STRONG` never carry implicit valence;
+- final outcomes are only `PASS_H2_SINGLE_BATCH` or `FAIL_H2_TARGETED_CORRECTION`.
+
+This preparation is complete before final audio exists.
+
+Target state:
+`H2_SINGLE_BATCH_REVIEW_READY_PENDING_AUDIO`.
 
 ## Historical delta — post P5 product integration (superseded)
 
