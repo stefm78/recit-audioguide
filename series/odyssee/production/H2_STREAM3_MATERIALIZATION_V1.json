@@ -347,20 +347,34 @@
     }
   },
   "p6_ulysse_emotional": {
-    "state": "HOLD_STREAM2_ONLY",
-    "required_package": "ULYSSES_EMOTIONAL_HUMAN_PASS",
-    "last_attempt": "CONFUCIUS4_REJECTED",
-    "rejection_class": [
-      "ARTISTIC_FAIL_REACTION"
+    "state": "P6_S15_PRODUCTION_HUMAN_CAPTURE_PENDING",
+    "human_gate": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "human_state": "PASS",
+    "casting_state": "CLOSED",
+    "stream2_state": "EXIT_CRITICAL_PATH",
+    "provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json",
+    "binding": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
+    "capture_contract": "series/odyssee/production/P6_S15_PRODUCTION_CAPTURE_V1.json",
+    "capture_surface": "web/reviews/odyssee-p6-human-performance.html",
+    "exact_segments": [
+      112,
+      114,
+      116,
+      118,
+      120,
+      133,
+      135,
+      140,
+      142,
+      151,
+      153,
+      158
     ],
-    "impact": 2,
-    "reaction": "FAIL",
-    "identity": "PASS",
-    "french": "PASS",
-    "melodrama": "NONE",
-    "staging": "PASS",
-    "next_attempt_requirement": "MATERIALLY_DISTINCT_ARCHITECTURE_WITH_DECOUPLED_IDENTITY_AND_EMOTION_CONDITIONING",
-    "penelope_side": "MATERIALIZED"
+    "capture_gate": "12/12_SELECTED_AND_CLEAN_CONFIRMED_BEFORE_ANY_BELTOUT",
+    "post_capture": "EXACTLY_ONE_BELTOUT_CONVERSION_PER_SELECTED_TAKE; NO_BEST_OF_N; NO_SECOND_PASS; CONSTANT_LEVEL_ALIGNMENT_ONLY",
+    "raw_human_audio_policy": "NEVER_COMMIT_TO_PUBLIC_REPOSITORY",
+    "penelope_side": "MATERIALIZED",
+    "block_d_state": "HOLD_ONLY_ON_P6_S15_PRODUCTION_HUMAN_CAPTURE_AND_SUBSEQUENT_MACHINE_QUALIFICATION"
   },
   "p5": {
     "status": "SCENE_MACHINE_READY",
@@ -406,7 +420,7 @@
     "final_master_publication": false,
     "status": "AVAILABLE_MANUAL_DISPATCH_NOT_TRIGGERED",
     "human_h2_state": "NOT_STARTED",
-    "batch_policy": "ONE_BATCH_NO_MICRO_GATES",
+    "batch_policy": "ONE_FINAL_SHARED_H2_BATCH_ONLY_AFTER_A+B+C+D_MACHINE_QUALIFIED",
     "stream1_planned_review_set": [
       "Block A",
       "S05",
@@ -415,8 +429,8 @@
       "S14",
       "Block B if qualified"
     ],
-    "current_batch_maturity": "WAITING_FOR_P4_S09_ISOLATED_BOOTSTRAP_AND_BLOCK_C_MACHINE_QUALIFICATION",
-    "rule": "Do not dispatch the human H2 review release merely because independent machine-ready audio exists."
+    "current_batch_maturity": "WAITING_FOR_C_AND_D_MACHINE_QUALIFICATION",
+    "rule": "Do not dispatch H2 before A+B+C+D MACHINE_QUALIFIED. Partial machine-ready assets are production evidence, not H2."
   },
   "program_materialization": {
     "state": "EXPLICIT_SIDECAR_ONLY",
