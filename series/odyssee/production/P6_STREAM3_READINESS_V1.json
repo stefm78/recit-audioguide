@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.p6.stream3_readiness.v1",
   "id": "odyssee-p6-stream3-readiness-v1",
-  "status": "READY_FOR_STREAM3_MATERIALIZATION",
+  "status": "P6_S15_PRODUCTION_HUMAN_CAPTURE_PENDING",
   "product_program": "series/odyssee/programs/S15.json",
   "program_sha256": "180b422c27f4cae2a91a0d8bcfc8a368d56e0556e10a1604b96b4124bc48f395",
   "product_binding": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
@@ -20,7 +20,7 @@
     "state": "READY_FOR_FINAL_S15_COMPOSITION"
   },
   "ulysses_emotional": {
-    "state": "READY_TO_MATERIALIZE",
+    "state": "P6_S15_PRODUCTION_HUMAN_CAPTURE_PENDING",
     "capability": "human_french_performance_to_beltout_to_henri_ulysse",
     "authority": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
     "human_gate": "ULYSSES_EMOTIONAL_HUMAN_PASS",
@@ -45,7 +45,27 @@
       "deterministic_codec_normalization_only_before_freeze_if_needed"
     ],
     "raw_human_audio_policy": "Do not commit raw human voice recordings to the public repository.",
-    "provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json"
+    "provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json",
+    "casting_state": "CLOSED",
+    "stream2_state": "EXIT_CRITICAL_PATH",
+    "capture_contract": "series/odyssee/production/P6_S15_PRODUCTION_CAPTURE_V1.json",
+    "capture_surface": "web/reviews/odyssee-p6-human-performance.html",
+    "exact_segments": [
+      112,
+      114,
+      116,
+      118,
+      120,
+      133,
+      135,
+      140,
+      142,
+      151,
+      153,
+      158
+    ],
+    "completeness_gate": "12/12_SELECTED_AND_CLEAN_CONFIRMED_BEFORE_CONVERSION",
+    "post_capture_rule": "EXACTLY_ONE_BELTOUT_CONVERSION_PER_SELECTED_TAKE; NO_BEST_OF_N; NO_SECOND_PASS; CONSTANT_LEVEL_ALIGNMENT_ONLY"
   },
   "staging": {
     "no_music": true,
@@ -53,6 +73,7 @@
     "placement": "simple-intimate / center",
     "frozen_text_preserved": true
   },
-  "master_effect": "S15 and Block D are no longer blocked by Stream 2. Stream 3 owns exact S15 performance capture, BeltOut materialization, production hygiene, QA and H2 integration.",
-  "ulysses_provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json"
+  "master_effect": "P6 casting is closed and Stream 2 has exited the critical path. S15 and Block D remain machine-HOLD only until exact 12-line Production human capture is completed, frozen and privately handed to Stream 3.",
+  "ulysses_provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json",
+  "capture_required": "P6_S15_PRODUCTION_HUMAN_CAPTURE_REQUIRED"
 }
