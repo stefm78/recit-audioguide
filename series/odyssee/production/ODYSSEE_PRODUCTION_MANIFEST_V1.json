@@ -123,13 +123,29 @@
     },
     {
       "id": "S09",
-      "state": "hold",
-      "provider": "edge+stream2-p4",
+      "state": "ready",
+      "provider": "edge+voxcpm2+chatterbox-multilingual-v3",
       "program": "series/odyssee/programs/S09.json",
-      "program_sha256": "3451b7099d42137c7cab7f1bfbc289f6260fc9800d1d06ac1b143b19390d629a",
+      "program_sha256": "9b039eee99d0846b1a397a963cc0d913cd183c9e9dca673e4e6872bd7cc14cc6",
       "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
       "voice_pack_sha256": "511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894",
-      "hold_reason": "P4_SIRENS_HUMAN_PASS package has not been delivered by Stream 2."
+      "providers": [
+        "edge",
+        "voxcpm2",
+        "chatterbox-multilingual-v3"
+      ],
+      "provider_packages": [
+        {
+          "provider": "voxcpm2",
+          "package": "series/odyssee/production/provider-packages/P4_SIRENS_VOXCPM2_PRODUCTION_V1.json",
+          "package_sha256": "b833c736f1d37a96b6ce3be4a214ef5ba1c5c174096aa4c7ba4c77e46170597a"
+        },
+        {
+          "provider": "chatterbox-multilingual-v3",
+          "package": "series/odyssee/production/provider-packages/P4_SIRENS_CHATTERBOX_BASELINE_V1.json",
+          "package_sha256": "70df211910ee2047f31d406e3d56ac0f402f89cd07124b51d4f4dd892a826190"
+        }
+      ]
     },
     {
       "id": "S10",

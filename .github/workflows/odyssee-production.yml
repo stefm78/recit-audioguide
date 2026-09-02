@@ -35,9 +35,6 @@ jobs:
       manifest_path: series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json
       artifact_prefix: odyssee-production-v1
       cache_namespace: odyssee-production-v1
-      legacy_scene_cache_engine_ref: e82559cbd60b1d29de208e7e36ccd7505dcfcdcc
-      legacy_scene_cache_voice_pack_sha256: 511cc106c6d4061e2f94ad453cd7ff530a624e3c52db138bf52a29eec115a894
-      legacy_scene_cache_force_units_json: '["S05","S06","S07","S10"]'
       max_parallel: 12
       publish_release: false
       publish_review_release: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_review_release }}

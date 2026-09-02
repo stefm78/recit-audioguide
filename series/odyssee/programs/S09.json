@@ -16,10 +16,8 @@
     "block": "C",
     "direction": "series/odyssee/production/blocks/BLOCK_C.md",
     "stage": "scene-foundation-v1",
-    "state": "HOLD",
-    "blockers": [
-      "P4_SIRENS_HUMAN_PASS"
-    ],
+    "state": "READY",
+    "blockers": [],
     "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
     "no_silent_fallback": true
   },
@@ -233,7 +231,17 @@
       "speaker": "SIRÈNE",
       "text": "Ulysse.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 640203,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.62,
+        "cfg_weight": 0.34,
+        "temperature": 0.82
+      },
+      "placement": "slight-right"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -248,7 +256,19 @@
       "speaker": "SIRÈNE",
       "text": "Ulysse d’Ithaque.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "voxcpm2",
+      "provider_seed": 2026090102,
+      "provider_parameters": {
+        "reference": "claire",
+        "control": "An intimate, intelligent invitation addressed personally to Ulysses. Warm recognition, quiet curiosity and genuine pleasure in understanding him. Compelling and close, but never sexualised, never mystical, never theatrical, never whispered and never sung. Natural adult French diction.",
+        "cfg_value": 2,
+        "inference_timesteps": 10,
+        "normalize_model_output": false,
+        "denoise": false,
+        "retry_badcase": false
+      },
+      "placement": "slight-left"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -263,7 +283,17 @@
       "speaker": "SIRÈNE",
       "text": "Nous savons d’où tu viens.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 640203,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.62,
+        "cfg_weight": 0.34,
+        "temperature": 0.82
+      },
+      "placement": "slight-right"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -271,7 +301,19 @@
       "speaker": "SIRÈNE",
       "text": "Nous savons ce que tu as fait devant Troie.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "voxcpm2",
+      "provider_seed": 2026090104,
+      "provider_parameters": {
+        "reference": "claire",
+        "control": "An intimate, intelligent invitation addressed personally to Ulysses. Warm recognition, quiet curiosity and genuine pleasure in understanding him. Compelling and close, but never sexualised, never mystical, never theatrical, never whispered and never sung. Natural adult French diction.",
+        "cfg_value": 2,
+        "inference_timesteps": 10,
+        "normalize_model_output": false,
+        "denoise": false,
+        "retry_badcase": false
+      },
+      "placement": "slight-left"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -279,7 +321,17 @@
       "speaker": "SIRÈNE",
       "text": "Nous savons ce que les hommes raconteront.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 640205,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.6,
+        "cfg_weight": 0.36,
+        "temperature": 0.8
+      },
+      "placement": "slight-right"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -308,7 +360,17 @@
       "speaker": "SIRÈNE",
       "text": "Viens.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 640207,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.6,
+        "cfg_weight": 0.34,
+        "temperature": 0.8
+      },
+      "placement": "slight-right"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -316,7 +378,19 @@
       "speaker": "SIRÈNE",
       "text": "Tu n’as pas besoin de rentrer pour être connu.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "voxcpm2",
+      "provider_seed": 2026090108,
+      "provider_parameters": {
+        "reference": "claire",
+        "control": "An intimate, intelligent invitation addressed personally to Ulysses. Warm recognition, quiet curiosity and genuine pleasure in understanding him. Compelling and close, but never sexualised, never mystical, never theatrical, never whispered and never sung. Natural adult French diction.",
+        "cfg_value": 2,
+        "inference_timesteps": 10,
+        "normalize_model_output": false,
+        "denoise": false,
+        "retry_badcase": false
+      },
+      "placement": "slight-left"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -324,7 +398,19 @@
       "speaker": "SIRÈNE",
       "text": "Ton nom est déjà arrivé plus loin que toi.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "voxcpm2",
+      "provider_seed": 2026090106,
+      "provider_parameters": {
+        "reference": "claire",
+        "control": "An intimate, intelligent invitation addressed personally to Ulysses. Warm recognition, quiet curiosity and genuine pleasure in understanding him. Compelling and close, but never sexualised, never mystical, never theatrical, never whispered and never sung. Natural adult French diction.",
+        "cfg_value": 2,
+        "inference_timesteps": 10,
+        "normalize_model_output": false,
+        "denoise": false,
+        "retry_badcase": false
+      },
+      "placement": "slight-left"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -388,7 +474,17 @@
       "speaker": "SIRÈNE",
       "text": "Ils t’oublieront chez toi.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 640207,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.6,
+        "cfg_weight": 0.34,
+        "temperature": 0.8
+      },
+      "placement": "slight-right"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -396,7 +492,19 @@
       "speaker": "SIRÈNE",
       "text": "Ici, nous savons tout.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "voxcpm2",
+      "provider_seed": 2026090112,
+      "provider_parameters": {
+        "reference": "claire",
+        "control": "An intimate, intelligent invitation addressed personally to Ulysses. Warm recognition, quiet curiosity and genuine pleasure in understanding him. Compelling and close, but never sexualised, never mystical, never theatrical, never whispered and never sung. Natural adult French diction.",
+        "cfg_value": 2,
+        "inference_timesteps": 10,
+        "normalize_model_output": false,
+        "denoise": false,
+        "retry_badcase": false
+      },
+      "placement": "slight-left"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -404,7 +512,17 @@
       "speaker": "SIRÈNE",
       "text": "Ici, rien de ce que tu as fait ne disparaît.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 640211,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.58,
+        "cfg_weight": 0.38,
+        "temperature": 0.78
+      },
+      "placement": "slight-right"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -468,7 +586,17 @@
       "speaker": "SIRÈNE",
       "text": "Ulysse.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 640211,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.58,
+        "cfg_weight": 0.38,
+        "temperature": 0.78
+      },
+      "placement": "slight-right"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
@@ -497,7 +625,17 @@
       "speaker": "SIRÈNE",
       "text": "Ulysse.",
       "preset": "odyssee-sirens-p4",
-      "external_voice_slot": "P4_SIRENS_HUMAN_PASS"
+      "external_voice_slot": "P4_SIRENS_HUMAN_PASS",
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 640211,
+      "provider_parameters": {
+        "language_id": "fr",
+        "reference": "synthetic-vivienne",
+        "exaggeration": 0.58,
+        "cfg_weight": 0.38,
+        "temperature": 0.78
+      },
+      "placement": "slight-right"
     },
     {
       "scene": "S09 — Ce qu’Ulysse veut entendre",
