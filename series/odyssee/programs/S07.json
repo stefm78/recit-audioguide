@@ -15,21 +15,11 @@
   "production": {
     "block": "B",
     "direction": "series/odyssee/production/blocks/BLOCK_B.md",
-    "stage": "sound-integrated-h2-v1",
-    "state": "HOLD",
-    "blockers": [
-      "MARIN_AUTHORIZED_VOICE_UNAVAILABLE_IN_CURRENT_EDGE_PROVIDER"
-    ],
-    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V2.json",
-    "no_silent_fallback": true,
-    "sound_materialization": {
-      "state": "INTEGRATED_FOR_H2",
-      "mode": "DELIBERATE_SILENCE_NO_REQUIRED_ASSET",
-      "authority": "series/odyssee/production/ASSET_PLAN.md",
-      "acquisition_result": "series/odyssee/production/H2_SOUND_ACQUISITION_RESULT_V1.json",
-      "new_assets": 0,
-      "rule": "Pre-H2 acquisition is exhausted; optional or no-selection material resolves to authored silence/omit-and-warn. Do not add decorative sound."
-    }
+    "stage": "scene-foundation-v1",
+    "state": "READY",
+    "blockers": [],
+    "voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json",
+    "no_silent_fallback": true
   },
   "segments": [
     {
