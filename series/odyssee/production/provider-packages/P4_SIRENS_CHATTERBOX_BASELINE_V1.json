@@ -156,7 +156,22 @@
         "probe_pan": 0.16
       }
     ],
-    "production_mapping": "HOLD_P4_FROZEN_S09_LINE_BINDING_REQUIRED",
-    "note": "Numeric probe pan is evidence only; semantic Production placement awaits exact Stream 1 S09 binding."
+    "production_mapping": {
+      "state": "RESOLVED_EXACT_FROZEN_BINDING",
+      "authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
+      "frozen_program_blob_sha1": "234c0138423478e7ea36b4f24a2075543a154983",
+      "lineage": "right",
+      "segments": [
+        30,
+        34,
+        36,
+        40,
+        51,
+        53,
+        62,
+        66
+      ]
+    },
+    "note": "Production placement is now governed only by the exact frozen S09 binding; probe order is not executable authority."
   }
 }
