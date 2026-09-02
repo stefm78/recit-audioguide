@@ -190,3 +190,49 @@ Seuls les outputs Production autorisés après conversion peuvent entrer dans le
 Les anciennes cinq lignes (`Non.`, `Ce lit ne sort pas de cette chambre.`, `Tu le savais.`, `Pénélope…`, `Notre lit.`) sont des artefacts de **qualification de capability** uniquement.
 
 Elles ne constituent pas le mapping Production S15 et ne doivent pas être utilisées comme substitutions des 12 segments gelés.
+
+## Intake Stream 3 — hors repository public
+
+Après export du ZIP, l'intake est effectué avec :
+
+```bash
+python tools/p6_s15_pipeline.py intake <ZIP> --private-out <DOSSIER_PRIVE_HORS_REPO>
+```
+
+Le dossier `--private-out` **doit être situé hors du checkout Git public**. L'outil refuse explicitement une destination sous le repository.
+
+Le gate vérifie avant toute conversion :
+
+- manifeste de capture Production attendu ;
+- exactement les 12 segments S15 gelés ;
+- texte exact de chaque segment ;
+- une seule prise sélectionnée par segment ;
+- confirmation de propreté 12/12 ;
+- SHA-256 de chaque audio ;
+- cohérence avec `SHA256SUMS.txt` ;
+- aucun fichier audio supplémentaire ou membre ZIP inattendu ;
+- intégrité du package BeltOut autoritaire.
+
+L'intake produit dans le dossier privé :
+
+- `frozen-intake.json` ;
+- `FREEZE.lock` ;
+- `conversion-plan.json` ;
+- les 12 prises brutes retenues sous `raw-selected/`.
+
+Le gel peut être revérifié avant conversion :
+
+```bash
+python tools/p6_s15_pipeline.py verify-frozen <DOSSIER_PRIVE>/frozen-intake.json
+```
+
+Toute dérive de hash après gel est bloquante.
+
+Le plan généré impose déjà :
+
+- seed `202609060000 + segment` ;
+- conversion ordinal `1` uniquement ;
+- aucun retry après existence d'une sortie audio ;
+- aucun best-of-N ;
+- aucun second pass ;
+- `constant_level_alignment_only` comme seul traitement post-conversion.
