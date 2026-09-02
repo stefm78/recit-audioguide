@@ -8,7 +8,7 @@
     "stream2_result": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
     "marin_hold": "series/odyssee/production/MARIN_CAPABILITY_HOLD_V1.json"
   },
-  "engine_ref": "a3af1565f7b6799bced8dbb318fafd5807bafafc",
+  "engine_ref": "601049702c92adf840724528e295ab76c9290a36",
   "latest_clean_control": {
     "production_run": 33597992496,
     "product_head": "2eedbe2ac93a298d7bac1ee9c2c32b932a3a5c61",
@@ -167,7 +167,7 @@
       }
     },
     "required_product_action": "Restore pre-edit Programs and manifest hashes so the previously qualified speech cache identity remains authoritative.",
-    "required_engine_action": "Provide safe content-addressed reuse of unchanged voice clips across Program-metadata SHA changes before encoding H2 status into executable Programs.",
+    "required_engine_action": "RESOLVED_GENERICALLY_BY_AUDIO_ENGINE_231_PENDING_PRODUCT_REPIN_QUALIFICATION",
     "h2_sound_authority": "Keep explicit no-selection/silence decisions in H2_STREAM3_MATERIALIZATION_V1.json and H2_SOUND_DIRECTION_BINDINGS_V1.json until the cache identity defect is resolved.",
     "rules": [
       "reuse_existing_speech_audio",
@@ -175,5 +175,31 @@
       "no_human_H2_on_drifted_metadata_edit_audio",
       "no_artistic_reinterpretation"
     ]
+  },
+  "engine_migration": {
+    "state": "PENDING_PRODUCT_QUALIFICATION",
+    "source_engine_ref": "a3af1565f7b6799bced8dbb318fafd5807bafafc",
+    "target_engine_ref": "601049702c92adf840724528e295ab76c9290a36",
+    "generic_fix_pr": 231,
+    "generic_fix_issue": 230,
+    "migration_mode": "FAIL_CLOSED_LEGACY_SCENE_CACHE",
+    "current_ready_units": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S08",
+      "S11",
+      "S12",
+      "S13",
+      "S14"
+    ],
+    "acceptance": [
+      "Production plan PASS",
+      "all current READY units automatic QA PASS",
+      "qualified baseline audio SHA-256 remains byte-identical where baseline digest is recorded",
+      "no previously qualified Edge speech is remotely resynthesized"
+    ],
+    "human_review": "NOT_TRIGGERED"
   }
 }
