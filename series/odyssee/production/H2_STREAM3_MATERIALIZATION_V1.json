@@ -8,7 +8,7 @@
     "stream2_result": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
     "marin_hold": "series/odyssee/production/MARIN_CAPABILITY_HOLD_V1.json"
   },
-  "engine_ref": "694dcf330accda33f0ab84a0630a5bebfb231e6f",
+  "engine_ref": "2409c14ab82e9cbdba8d37cfde714d8aa8f31d48",
   "latest_clean_control": {
     "production_run": 33614971059,
     "product_head": "ef8f2c329e94c96c0fec4270b000c1d80f184972",
@@ -248,7 +248,7 @@
     "generic_provider": "READY",
     "generic_provider_main": "fd1e2a97b44207e4dc6024257d15f4ce8e55bde9",
     "generic_provider_smoke_run": 33537558645,
-    "product_state": "MATERIALIZED_PENDING_ISOLATED_HYDRATION_QUALIFICATION",
+    "product_state": "MATERIALIZED_PENDING_ISOLATED_BOOTSTRAP_QUALIFICATION",
     "prepared_product_pr": 132,
     "rule": "Do not infer compact H1b probe slots onto frozen S09 by order, fuzzy text, semantics, or artistic intuition.",
     "binding_authority": "series/odyssee/production/P4_FROZEN_S09_BINDING_V1.json",
@@ -264,7 +264,7 @@
         0.16
       ]
     },
-    "target_engine_ref": "694dcf330accda33f0ab84a0630a5bebfb231e6f",
+    "target_engine_ref": "2409c14ab82e9cbdba8d37cfde714d8aa8f31d48",
     "s09_materialization": {
       "state": "READY_IN_MANIFEST_PENDING_PRODUCTION_RUN",
       "program_sha256": "9b039eee99d0846b1a397a963cc0d913cd183c9e9dca673e4e6872bd7cc14cc6",
@@ -303,7 +303,7 @@
       "legacy_cache_recovery": "DISABLED"
     },
     "runtime_isolation": {
-      "state": "RERUN_AFTER_HYDRATION_FIX_PENDING",
+      "state": "RERUN_AFTER_ENGINE_BOOTSTRAP_FIX_PENDING",
       "engine_issue": 251,
       "engine_pr": 252,
       "fresh_cache_issue": 253,
@@ -331,6 +331,18 @@
         ],
         "failed_reason": "BASE_ENV_HUGGINGFACE_HUB_HYDRATION",
         "policy": "HYDRATE_VALIDATE_PREWARM_INSIDE_EACH_EXACT_PROVIDER_VENV"
+      },
+      "engine_bootstrap_fix": {
+        "engine_issue": 257,
+        "engine_pr": 258,
+        "target_engine_ref": "2409c14ab82e9cbdba8d37cfde714d8aa8f31d48",
+        "failed_product_run": 33625303334,
+        "failed_units": [
+          "S08",
+          "S09"
+        ],
+        "failed_reason": "ISOLATED_VENV_MISSING_IMAGEIO_FFMPEG",
+        "artistic_or_binding_failure": false
       }
     }
   },
@@ -403,7 +415,7 @@
       "S14",
       "Block B if qualified"
     ],
-    "current_batch_maturity": "WAITING_FOR_P4_S09_ISOLATED_HYDRATION_AND_BLOCK_C_MACHINE_QUALIFICATION",
+    "current_batch_maturity": "WAITING_FOR_P4_S09_ISOLATED_BOOTSTRAP_AND_BLOCK_C_MACHINE_QUALIFICATION",
     "rule": "Do not dispatch the human H2 review release merely because independent machine-ready audio exists."
   },
   "program_materialization": {
