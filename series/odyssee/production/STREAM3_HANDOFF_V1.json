@@ -88,7 +88,7 @@
       ]
     },
     "p6_b_staging": {
-      "status": "PASS_STAGING_FROZEN_BINDING_RESOLVED_AWAITING_EXTERNAL_VOICE_PACKAGES",
+      "status": "PASS_STAGING_AND_ULYSSES_CAPABILITY_RESOLVED_READY_FOR_S15_MATERIALIZATION",
       "preserve": [
         "penelope_chatterbox_vivienne_conditioned",
         "pauses",
@@ -139,7 +139,23 @@
         131,
         132
       ],
-      "rule": "P6-B probe wording is not executable text authority; use exact frozen S15 segment binding only."
+      "rule": "P6-B probe wording is not executable text authority; use exact frozen S15 segment binding only.",
+      "ulysses_capability": {
+        "state": "ULYSSES_EMOTIONAL_HUMAN_PASS",
+        "architecture": "human French performance -> BeltOut -> Henri/Ulysse",
+        "authority_file": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
+        "readiness_file": "series/odyssee/production/P6_STREAM3_READINESS_V1.json",
+        "human": {
+          "impact": 4,
+          "reaction": "PASS",
+          "identity": "PASS",
+          "french": "PASS",
+          "melodrama_observation": "PRESENT",
+          "melodrama_appropriate": "PASS",
+          "staging": "PASS"
+        },
+        "production_capture_note": "Probe source had clicks/noise; this is capture hygiene, not a casting blocker. Exact S15 production recordings should be captured cleanly before freeze."
+      }
     },
     "p4_sirens": {
       "status": "P4_SIRENS_HUMAN_PASS",
@@ -184,9 +200,12 @@
         "impact_GTE_4_OF_5",
         "identity_continuity_PASS",
         "french_PASS",
-        "no_melodrama"
+        "dramatization_appropriate_PASS"
       ],
-      "provider_agnostic": true
+      "provider_agnostic": false,
+      "status": "RESOLVED",
+      "resolution_authority": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
+      "architecture": "human French performance -> BeltOut -> Henri/Ulysse"
     }
   ],
   "blocks": [
@@ -251,7 +270,7 @@
       "source": "series/odyssee/text/block-d.md",
       "source_blob": "a036ae79ba5102af871cb722e0cc5d6ef313236c",
       "spoken_words": 3760,
-      "state": "PARTIALLY_RENDERABLE",
+      "state": "READY_FOR_STREAM3_BLOCK_RENDER_AFTER_S15_EXACT_PERFORMANCE_MATERIALIZATION",
       "ready_now": [
         "S12",
         "S13",
@@ -259,16 +278,21 @@
         "S15_staging",
         "S15_frozen_line_binding",
         "S15_penelope_local_performance_mapping",
-        "S15_ulysse_explanatory_lines"
+        "S15_ulysse_explanatory_lines",
+        "S15_ulysse_emotional_capability"
       ],
-      "blocked_only": [
-        "S15_ulysse_high_emotion_segments"
-      ],
-      "external_dependencies": [
-        "ULYSSES_EMOTIONAL_HUMAN_PASS"
-      ],
+      "blocked_only": [],
+      "external_dependencies": [],
       "direction": "series/odyssee/production/blocks/BLOCK_D.md",
-      "binding_authority": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json"
+      "binding_authority": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
+      "stream3_work_remaining": [
+        "capture_exact_frozen_S15_Ulysse_emotional_human_performances",
+        "freeze_selected_takes_before_conversion",
+        "apply_one_BeltOut_conversion_per_selected_take",
+        "remove_capture_clicks_noise_by_clean_recording_not_artistic_DSP",
+        "machine_QA",
+        "H2_integration_review"
+      ]
     }
   ],
   "secondary_casting": {
@@ -440,5 +464,7 @@
   "engine_contract": {
     "change_requested": false,
     "policy": "NO_ENGINE_CHANGE unless a concrete scene proves an absent generic capability"
-  }
+  },
+  "external_stream2_state": "RESOLVED",
+  "stream2_exit": "P4_SIRENS_HUMAN_PASS + ULYSSES_EMOTIONAL_HUMAN_PASS"
 }
