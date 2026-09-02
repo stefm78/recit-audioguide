@@ -8,7 +8,7 @@
     "stream2_result": "series/odyssee/production/STREAM2_CRITICAL_CASTING_RESULT_V1.json",
     "marin_hold": "series/odyssee/production/MARIN_CAPABILITY_HOLD_V1.json"
   },
-  "engine_ref": "5a23a1a7858047a6eba9ddc092b98ad3b9743bd3",
+  "engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
   "latest_clean_control": {
     "production_run": 33603091550,
     "product_head": "82a41c335194ab06353d3b7480346cfd82fed99e",
@@ -51,7 +51,7 @@
   },
   "casting": {
     "correction": "MARIN_EURYLOQUE_EXACT_PRESET_COLLISION",
-    "status": "PRODUCTION_REQUALIFICATION_PENDING_SCENE_V4",
+    "status": "SCENE_SHARDS_QUALIFIED_BLOCK_B_MASTERING_PENDING",
     "historical_failed_voice": "fr-FR-AlainNeural",
     "authorized_voice_pack": "series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_H2_V3.json",
     "voice_pack_sha256": "81794bed6df8d7163d1cdccfaac2e84b91bdc726c8f79edb1e5da43d391edb1a",
@@ -187,6 +187,36 @@
       "quarantine_issue": 246,
       "quarantine_pr": 247,
       "human_h2_eligible": false
+    },
+    "scene_v4_qualification": {
+      "production_run": 33613126226,
+      "product_head": "04c790c13047ffbaa22b4104c59c6d98f4486f89",
+      "workflow_conclusion": "success",
+      "qualification": "SCENE_SHARDS_PASS_BLOCK_B_LEVELS_FAIL",
+      "marin_voice_cache_hits": {
+        "S05": 135,
+        "S06": 128,
+        "S07": 125,
+        "S10": 108
+      },
+      "control_byte_identity": {
+        "S02": "41f60d134caebdbd300fd14bb0ceb75c2fbb819d674af66c21fcf08b14ebe178",
+        "S04": "2088a76cd073f7f12c0dcd5132714155ec8258459cdf6c69356554aeac6def7b",
+        "S11": "3230e858791300dd3455dfb64bf1833335d190185a65c521f864ad34af4cd85e",
+        "S14": "5cc41897e9dad64a33b6adb981e108e69153422ac5400c572e45986131d76924"
+      },
+      "no_scene_v3_restore": true,
+      "all_ready_scene_jobs": "PASS",
+      "block_b": {
+        "state": "FAILED_QA_LEVELS_ONLY",
+        "integrated_lufs": -18.48,
+        "target_lufs": -16,
+        "loudness_delta_lu": 2.48,
+        "true_peak_dbtp": -2.41,
+        "target_true_peak_dbtp": -2.5,
+        "clipping": "PASS"
+      },
+      "human_h2_eligible": false
     }
   },
   "p4": {
@@ -215,17 +245,13 @@
   "p6_ulysse_emotional": {
     "state": "HOLD_STREAM2_ONLY",
     "required_package": "ULYSSES_EMOTIONAL_HUMAN_PASS",
-    "last_attempt": "CONFUCIUS4_REJECTED",
+    "last_attempt": "COSYVOICE3_BELTOUT_REJECTED_PRE_HUMAN",
     "rejection_class": [
-      "ARTISTIC_FAIL_REACTION"
+      "CAPABILITY_REJECT",
+      "STAGING_DURATION_FAIL",
+      "TIMBRE_DIRECTION_FAIL"
     ],
-    "impact": 2,
-    "reaction": "FAIL",
-    "identity": "PASS",
-    "french": "PASS",
-    "melodrama": "NONE",
-    "staging": "PASS",
-    "next_attempt_requirement": "MATERIALLY_DISTINCT_ARCHITECTURE_WITH_DECOUPLED_IDENTITY_AND_EMOTION_CONDITIONING",
+    "next_attempt_requirement": "HUMAN_FRENCH_PERFORMANCE_SOURCE_WITH_FIXED_TIMING_AND_RESTRAINT_THEN_SINGLE_BELTOUT_IDENTITY_CONVERSION",
     "penelope_side": "MATERIALIZED"
   },
   "p5": {
@@ -248,8 +274,14 @@
       "target_true_peak_dbtp": -2.5,
       "correction": "audio-engine #220 generic encoded true-peak guard"
     },
-    "current_block_b_state": "PENDING_MARIN_SCENE_V4_PRODUCT_QUALIFICATION",
-    "rule": "Do not reopen P5."
+    "current_block_b_state": "PENDING_GENERIC_MASTERING_REQUALIFICATION",
+    "rule": "Do not reopen P5.",
+    "block_b_mastering_fix": {
+      "engine_issue": 248,
+      "engine_pr": 249,
+      "target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f",
+      "policy": "KEEP_QA_THRESHOLDS; PRESERVE_LOUDNESS_TARGET; LIMIT_PEAKS_ONLY"
+    }
   },
   "review_release": {
     "engine_capability_at_current_pin": "AVAILABLE",
@@ -269,7 +301,7 @@
       "S14",
       "Block B if qualified"
     ],
-    "current_batch_maturity": "WAITING_FOR_SCENE_V4_MARIN_V3_AND_P4_MACHINE_QUALIFICATION",
+    "current_batch_maturity": "WAITING_FOR_BLOCK_B_MASTERING_AND_P4_MACHINE_QUALIFICATION",
     "rule": "Do not dispatch the human H2 review release merely because independent machine-ready audio exists."
   },
   "program_materialization": {
@@ -387,7 +419,7 @@
       "quarantined": true
     },
     "scene_v4_recovery": {
-      "state": "PENDING_PRODUCT_QUALIFICATION",
+      "state": "SCENE_CACHE_AND_UNIT_QUALIFIED_BLOCK_B_MASTERING_PENDING",
       "target_engine_ref": "5a23a1a7858047a6eba9ddc092b98ad3b9743bd3",
       "generic_issue": 246,
       "generic_pr": 247,
@@ -410,7 +442,20 @@
         "no scene-v3 restore",
         "Block B READY",
         "no human review triggered"
-      ]
+      ],
+      "qualified_product_run": 33613126226,
+      "unit_contract": {
+        "all_ready_unit_jobs": "PASS",
+        "marin_exact_cache_hits": "PASS",
+        "control_byte_identity": "PASS",
+        "scene_v3_restore": "NONE"
+      },
+      "block_b_mastering": {
+        "state": "FAILED_LEVELS_ONLY",
+        "issue": 248,
+        "pr": 249,
+        "target_engine_ref": "de3620a293092aa2931480d32561ba84b151203f"
+      }
     }
   }
 }
