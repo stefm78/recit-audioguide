@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.stream2.critical_casting_result.v1",
   "id": "odyssee-stream2-critical-casting-result-v1",
-  "reviewed_at": "2026-09-01",
+  "reviewed_at": "2026-09-02",
   "human_review_schema": "odyssee-stream2-human-review-v1",
   "cloud_policy": "CLOUD_TTS_FORBIDDEN_FOR_ODYSSEE_CRITICAL_CASTING",
   "p4_sirens": {
@@ -33,24 +33,23 @@
     "decision": "HOLD_STREAM2",
     "last_attempt": "REJECTED",
     "rejection_class": [
-      "ARTISTIC_FAIL",
-      "IDENTITY_FAIL"
+      "ARTISTIC_FAIL_REACTION"
     ],
     "human": {
-      "impact": 1,
+      "impact": 2,
       "reaction": "FAIL",
-      "identity": "FAIL",
+      "identity": "PASS",
       "french": "PASS",
-      "melodrama": "PRESENT",
+      "melodrama": "NONE",
       "staging": "PASS"
     },
     "authoritative_machine": {
       "repo": "stefm78/audio-engine",
-      "run_id": 33514546032,
-      "head_sha": "2120c3952f64eb2b5ab76c486a2961e9b26a0751",
-      "candidate_sha256": "4f4f6b352db9d981cef3db6a29c8c510b5396fa009163e07415388bde33ce033",
-      "artifact_name": "local-tts-p6-qwen3-hybrid",
-      "artifact_digest": "sha256:50fc48433363362adfe730ef54fdd83f88bf87a5231786eb3a0c11ccd80f9b40"
+      "run_id": 33598325723,
+      "head_sha": "72d4978145eb5c35a75781f1e2b472f7e42e679c",
+      "candidate_sha256": "55702f253cbfc9c758d02d7f9952a94dfb68d2877f402fc0a5e6215bec0b2b9d",
+      "artifact_name": "local-tts-p6-confucius4-one-shot",
+      "artifact_digest": "sha256:1b81e7c929feae23ba37d5b28d840a97b29bfe6bffb5eb34b1fdca451a460865"
     },
     "preserve": [
       "same_Ulysse_identity",
@@ -62,15 +61,70 @@
     ],
     "forbidden_retries": [
       "same_Qwen3_hybrid",
+      "same_Confucius4_single_prompt",
       "prompt_tuning",
       "seed_retry",
       "best_of_N",
       "DSP_rescue",
-      "donor_swap",
+      "donor_swap_without_new_architecture",
       "NUC_retry_for_capability_failure",
       "cloud_TTS"
     ],
-    "next_hypothesis_requirement": "materially_distinct_architecture_only",
-    "stream3_state": "BLOCKED_ONLY_ON_ULYSSES_EMOTIONAL_HUMAN_PASS"
+    "next_hypothesis_requirement": "materially_distinct_architecture_with_decoupled_identity_and_emotion_conditioning",
+    "stream3_state": "BLOCKED_ONLY_ON_ULYSSES_EMOTIONAL_HUMAN_PASS",
+    "attempt_history": [
+      {
+        "architecture": "Qwen3 hybrid x-vector-only + contained-sadness style transplant",
+        "decision": "REJECTED",
+        "rejection_class": [
+          "ARTISTIC_FAIL",
+          "IDENTITY_FAIL"
+        ],
+        "human": {
+          "impact": 1,
+          "reaction": "FAIL",
+          "identity": "FAIL",
+          "french": "PASS",
+          "melodrama": "PRESENT",
+          "staging": "PASS"
+        },
+        "machine": {
+          "repo": "stefm78/audio-engine",
+          "run_id": 33514546032,
+          "head_sha": "2120c3952f64eb2b5ab76c486a2961e9b26a0751",
+          "candidate_sha256": "4f4f6b352db9d981cef3db6a29c8c510b5396fa009163e07415388bde33ce033",
+          "artifact_digest": "sha256:50fc48433363362adfe730ef54fdd83f88bf87a5231786eb3a0c11ccd80f9b40"
+        }
+      },
+      {
+        "architecture": "Confucius4 zero-shot single Henri/Ulysse prompt",
+        "decision": "REJECTED",
+        "rejection_class": [
+          "ARTISTIC_FAIL_REACTION"
+        ],
+        "human": {
+          "impact": 2,
+          "reaction": "FAIL",
+          "identity": "PASS",
+          "french": "PASS",
+          "melodrama": "NONE",
+          "staging": "PASS"
+        },
+        "machine": {
+          "repo": "stefm78/audio-engine",
+          "run_id": 33598325723,
+          "head_sha": "72d4978145eb5c35a75781f1e2b472f7e42e679c",
+          "candidate_sha256": "55702f253cbfc9c758d02d7f9952a94dfb68d2877f402fc0a5e6215bec0b2b9d",
+          "artifact_digest": "sha256:1b81e7c929feae23ba37d5b28d840a97b29bfe6bffb5eb34b1fdca451a460865"
+        }
+      }
+    ],
+    "learning": {
+      "identity_preservation": "DEMONSTRATED_BY_CONFUCIUS4",
+      "french": "PASS_ON_LATEST",
+      "melodrama": "ABSENT_ON_LATEST",
+      "staging": "PASS_ON_LATEST",
+      "remaining_failure": "EMOTIONAL_REACTION_AND_IMPACT_ONLY"
+    }
   }
 }
