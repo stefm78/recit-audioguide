@@ -34,7 +34,7 @@ A production choice is not mislabeled as human accepted.
 | Polyphème | HUMAN_ACCEPTED P3 | Remy, rate -10%, pitch -24Hz, volume +3%; mass by cadence, no DSP |
 | Anticlée | HUMAN_ACCEPTED P5 H1b | Chatterbox Multilingual V3, exact `P5_UNDERWORLD_ACCEPTED_RECIPE.json` |
 | Pénélope — S15 climax | HUMAN_ACCEPTED_LOCAL H1b | preserve P6-B Chatterbox performance conditioned from synthetic Vivienne reference; no global recast implied |
-| Sirènes — S09 | HUMAN_ACCEPTED_LOCAL P4 | `P4_SIRENS_HUMAN_PASS`; VoxCPM2 one-shot package `provider-packages/P4_SIRENS_VOXCPM2_V1.json`; attraction/French/polyphony/address PASS, cliché LIGHT; no global provider promotion |
+| Sirènes — S09 | HUMAN_ACCEPTED_LOCAL P4 | `P4_SIRENS_HUMAN_PASS`; exact frozen-scene disposition in `P4_FROZEN_S09_BINDING_V1.json`; five left VoxCPM2 lines + eight right Chatterbox/Vivienne lines; attraction/French/polyphony/address PASS, cliché LIGHT |
 | Ulysse — S15 emotional lines | BLOCKED_STREAM2 | `ULYSSES_EMOTIONAL_HUMAN_PASS` still required; Qwen3 hybrid attempt rejected humanly (impact 1/5, reaction FAIL, identity FAIL, melodrama PRESENT); same identity remains mandatory |
 
 ## Secondary production choices
@@ -49,7 +49,7 @@ These choices exist to make block production possible. They are deliberately ver
 | Éole | Remy family, restrained older authority | practical host, not wizard | no Polyphème residue |
 | Circé | Eloise fr-FR, slower controlled authority | threat → comfort with same identity | no “mystical woman” cliché |
 | Tirésias | Remy family, low simple cadence | information without oracle theatre | distinct enough from Polyphème by rhythm/context |
-| Marin(s) | `fr-FR-AlainNeural`, rate +2%, pitch +0Hz, volume +2% | functional adult crew voice, never a new lead | natural French; distinct from Euryloque |
+| Marin(s) | `fr-FR-RemyMultilingualNeural`, rate +3%, pitch -4Hz, volume +2% | functional adult crew voice, brisk and secondary, never a new lead | natural French; distinct from Ulysse/Euryloque; shared H2 only |
 | Antinoos | Henri-family production performance, dominant and dry | confidence of an occupier, not villain caricature | direct collision with disguised Ulysse in S13/S14 is a priority H2 check |
 | Eurymaque | Remy-family production performance, more negotiator than bully | secondary pretender | direct collision with Télémaque is a priority H2 check |
 | Eumée | warm restrained adult male production performance | hospitality direct, no noble-retainer voice | distinguish from Ulysse/Télémaque in S12 |
@@ -71,7 +71,9 @@ This is a concrete production defect: two distinct scripted speakers can be synt
 Narrow correction:
 
 - preserve Euryloque exactly; he is HUMAN_ACCEPTED P3;
-- move `Marin(s)` only to `fr-FR-AlainNeural`, rate +2%, pitch +0Hz, volume +2%;
+- first attempted replacement `fr-FR-AlainNeural` was rejected by machine capability evidence because Edge no longer exposes that voice;
+- replacement V3 is `fr-FR-RemyMultilingualNeural`, rate +3%, pitch -4Hz, volume +2%;
+- deterministic adjacency audit shows zero direct MARIN ↔ Remy-family speaker turns across S05/S06/S07/S10, while MARIN has 63 direct turns with Euryloque and many with Ulysse, both Henri; this makes Remy the lowest-collision currently available male family;
 - keep MARIN a secondary `PRODUCTION_CHOICE_H2_WATCH`;
 - rerender only affected scenes S05, S06, S07 and S10;
 - H2 validates natural French and role distinction;
