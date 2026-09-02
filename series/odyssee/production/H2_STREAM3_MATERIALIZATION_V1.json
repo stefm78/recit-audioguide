@@ -133,40 +133,5 @@
     ],
     "current_batch_maturity": "WAITING_FOR_S05_MARIN_CAPABILITY",
     "rule": "Do not dispatch the human H2 review release merely because independent machine-ready audio exists."
-  },
-  "program_materialization": {
-    "state": "PREPARED_PENDING_MACHINE_REQUALIFICATION",
-    "stage": "sound-integrated-h2-v1",
-    "deliberate_silence_units": [
-      "S01",
-      "S03",
-      "S04",
-      "S07",
-      "S11",
-      "S13"
-    ],
-    "exact_bound_fallback_units": [
-      "S02",
-      "S05",
-      "S06",
-      "S14"
-    ],
-    "already_integrated_units": [
-      "S08"
-    ],
-    "marin_hold_units": [
-      "S05",
-      "S06",
-      "S07",
-      "S10"
-    ],
-    "p4_binding_hold_units": [
-      "S09"
-    ],
-    "spoken_text_changed": false,
-    "new_sound_assets": 0,
-    "manifest_program_hashes_rebound": true,
-    "rule": "Promote only already-authored silence/no-selection outcomes. No new sound, no artistic inference, no human H2 trigger.",
-    "next_gate": "ordinary Production plan/render/automatic QA"
   }
 }
