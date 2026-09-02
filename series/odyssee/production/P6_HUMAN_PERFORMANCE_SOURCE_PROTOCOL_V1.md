@@ -252,14 +252,22 @@ Si une prise échoue uniquement pour une incompatibilité technique du fichier, 
 
 ## Gate humain final
 
-Le candidat passe uniquement si :
+La revue distingue toujours :
+- ce qui est perçu ;
+- si ce qui est perçu est approprié à la scène.
 
+Le candidat passe uniquement si :
 - impact >= 4/5 ;
 - reaction PASS ;
 - identity PASS ;
 - french PASS ;
-- melodrama NONE ;
-- staging PASS.
+- staging PASS ;
+- le niveau de dramatisation observé est jugé approprié.
+
+Un champ descriptif comme `melodrama: PRESENT` ne vaut donc jamais FAIL à lui seul.
+
+Question recommandée :
+`Le niveau de dramatisation vous paraît-il approprié à cette scène ?`
 
 Un PASS émet `ULYSSES_EMOTIONAL_HUMAN_PASS` et permet à Stream 2 de sortir du chemin critique.
 
