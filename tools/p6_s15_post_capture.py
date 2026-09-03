@@ -11,9 +11,11 @@ import sys
 import tarfile
 from pathlib import Path
 
-from tools import p6_s15_pipeline as intake
-
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from tools import p6_s15_pipeline as intake
 HUMAN_PROVIDER_PACKAGE = ROOT / "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json"
 S15_PROGRAM = ROOT / "series/odyssee/programs/S15.json"
 PRODUCTION_MANIFEST = ROOT / "series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json"
