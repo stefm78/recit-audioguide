@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.h2_single_batch_review.v1",
   "id": "odyssee-h2-single-batch-review-v1",
-  "status": "H2_SINGLE_BATCH_REVIEW_READY_PENDING_AUDIO",
+  "status": "H2_SUSPENDED_P7_ULYSSE_PERFORMANCE_CONTINUITY",
   "authority_issue": 110,
   "downstream_issue": 112,
   "supersedes": "historical representative-scene H2 scope defined before P4/P6 closure",
@@ -30,8 +30,9 @@
       "scene-S15.mp3",
       "scene-S15.qa-report.json"
     ],
-    "unlock_rule": "The H2 page unlocks only when every required asset is present in the same immutable review Release and review-index.json reports machine-ready-review-assets.",
-    "partial_release_rule": "A partial machine-ready review Release is useful production evidence but is not H2."
+    "unlock_rule": "H2 may unlock only when P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS is promoted AND every required H2 asset is present in the same immutable review Release with A+B+C+D MACHINE_QUALIFIED.",
+    "partial_release_rule": "A partial machine-ready review Release is useful production evidence but is not H2.",
+    "additional_artistic_gate": "P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS"
   },
   "review_surface": {
     "page": "web/reviews/odyssee-h2.html",
@@ -279,5 +280,13 @@
     "no_casting_research",
     "no_script_change_without_concrete_downstream_comprehension_failure",
     "do_not_dispatch_before_A+B+C+D_MACHINE_QUALIFIED"
-  ]
+  ],
+  "suspension": {
+    "finding": "ULYSSE_HENRI_IDENTITY_PASS_PERFORMANCE_MECHANICAL_COLD_FAIL",
+    "authority_issue": 164,
+    "p7_contract": "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_V1.json",
+    "casting_reopened": false,
+    "text_reopened": false,
+    "stream2_escalation": "FORBIDDEN_UNLESS_BOUNDED_HENRI_EDGE_P7_FAILS"
+  }
 }
