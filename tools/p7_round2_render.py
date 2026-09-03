@@ -6,7 +6,10 @@ import shutil
 import sys
 from pathlib import Path
 
-from tools import p7_render as base
+try:
+    from tools import p7_render as base
+except ModuleNotFoundError:
+    import p7_render as base
 
 ROOT = base.ROOT
 CONTRACT = ROOT / "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_ROUND2_V1.json"
