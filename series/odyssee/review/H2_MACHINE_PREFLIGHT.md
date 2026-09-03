@@ -6,7 +6,28 @@ Product source used by run: `31030ac45c5343b23a2e7c858f49990e888c9a1a`
 Generic runtime used by run: `stefm78/audio-engine@52c933b6371103b977a2ccbcade291700bd0eb73`  
 Current product main when this preflight is recorded: `5de36966a3fb7ceb38c2108609776350c221894f`
 
-Status: **H2_SINGLE_BATCH_REVIEW_READY_PENDING_AUDIO**
+Status: **H2_SUSPENDED_P7_ULYSSE_PERFORMANCE_CONTINUITY**
+
+## Current P7 suspension — Ulysse performance continuity
+
+New Production human finding:
+- Henri/Ulysse identity PASS;
+- narrative performance FAIL;
+- observation: too mechanical and cold.
+
+Classification:
+`ULYSSE_PERFORMANCE_CONTINUITY_FAIL_NOT_CASTING`
+
+Action:
+- P7 #164, Henri/Edge only;
+- four exact real-state windows;
+- no recasting;
+- no text change;
+- one bounded failed-state Edge retune maximum;
+- Stream 2 escalation only if that bounded Edge budget still fails materially.
+
+H2 resume requires:
+`P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS + A+B+C+D MACHINE_QUALIFIED`.
 
 ## Current H2 authority — final shared batch
 
