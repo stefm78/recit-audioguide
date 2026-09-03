@@ -1,0 +1,134 @@
+name: Odyssée P7 Round 2 render
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/odyssee-p7-round2-render.yml'
+      - 'tools/p7_round2_render.py'
+      - 'tests/test_odyssee_p7_round2_render.py'
+      - 'series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_ROUND2_V1.json'
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: odyssee-p7-round2
+  cancel-in-progress: false
+
+env:
+  AUDIO_ENGINE_REF: f14a941d9218c2e9e632d7198557e7a3e48ff894
+  P7_R2_RELEASE_TAG: odyssee-p7-round2-line-microprosody-v1
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout product with history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Checkout exact Audio Engine
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: ${{ env.AUDIO_ENGINE_REF }}
+          path: .audio-engine
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install exact Audio Engine
+        run: python -m pip install --disable-pip-version-check ./.audio-engine
+
+      - name: Lock Round 2 invariants
+        run: python -m unittest tests.test_odyssee_p7_round2_render -v
+
+      - name: Materialize exact four C candidates
+        run: |
+          set -euo pipefail
+          mkdir -p generated
+          python tools/p7_round2_render.py materialize --out generated/p7-r2-inputs > generated/p7-r2-materialize.json
+          jq -e '.status == "READY_TO_RENDER_P7_ROUND2" and .entry_count == 4' generated/p7-r2-materialize.json >/dev/null
+
+      - name: Render and machine-QA four Round 2 candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p generated/p7-r2-renders
+          while IFS=$'\t' read -r program voices program_id; do
+            echo "P7_R2_RENDER $program_id"
+            audio-engine render "$program" --out generated/p7-r2-renders --voices "$voices" > "generated/p7-r2-renders/${program_id}.render.json"
+            audio-engine qa "generated/p7-r2-renders/${program_id}" > "generated/p7-r2-renders/${program_id}/qa-report.json"
+            jq -e '.status == "PASS"' "generated/p7-r2-renders/${program_id}/qa-report.json" >/dev/null
+          done < <(
+            jq -r '.entries[] | [.program_path,.voice_pack_path,.program_id] | @tsv' generated/p7-r2-inputs/plan.json
+          )
+
+      - name: Collect immutable Round 2 review payload
+        run: |
+          set -euo pipefail
+          python tools/p7_round2_render.py collect             --plan generated/p7-r2-inputs/plan.json             --render-root generated/p7-r2-renders             --release-out generated/p7-r2-release             --product-sha "$GITHUB_SHA"             > generated/p7-r2-collect.json
+          jq -e '.status == "machine-ready-p7-round2-review-assets" and .asset_count == 8' generated/p7-r2-collect.json >/dev/null
+          test "$(find generated/p7-r2-release -maxdepth 1 -type f | wc -l)" -eq 9
+          find generated/p7-r2-release -maxdepth 1 -type f -printf '%f\n' | sort
+
+      - name: Upload run evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: odyssee-p7-round2-review-assets
+          path: |
+            generated/p7-r2-release
+            generated/p7-r2-inputs/plan.json
+            generated/p7-r2-materialize.json
+            generated/p7-r2-collect.json
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0
+
+      - name: Publish immutable Round 2 Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$P7_R2_RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Refusing to mutate existing immutable Round 2 Release: $P7_R2_RELEASE_TAG" >&2
+            exit 2
+          fi
+          gh release create "$P7_R2_RELEASE_TAG"             generated/p7-r2-release/*             --repo "$GITHUB_REPOSITORY"             --target "$GITHUB_SHA"             --title "Odyssée P7 — Ulysse continuity — Round 2"             --notes "Final bounded Henri/Edge round. Four C candidates use line-level micro-prosody and explicit fr-FR locale. Round 1 B assets remain immutable comparators. No Production Program mutation, no recasting, no text change."             --prerelease
+
+      - name: Return machine evidence to product authority
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="STREAM 3 — P7 ROUND 2 MACHINE READY
+
+          Release: `$P7_R2_RELEASE_TAG`
+          render product: `$GITHUB_SHA`
+          audio-engine: `$AUDIO_ENGINE_REF`
+          run: `$GITHUB_RUN_ID`
+
+          4 states × C = 4 new clips.
+          Machine QA: 4/4 PASS.
+          Locale integrity: explicit fr-FR on all Edge segments.
+          Production Programs mutated: NO.
+          Recasting: NO.
+          Frozen text changed: NO.
+
+          Human surface:
+          `/reviews/odyssee-p7-round2.html?tag=$P7_R2_RELEASE_TAG`
+
+          This is the final bounded Edge round.
+          Human PASS -> P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS.
+          Human artistic FAIL after technically valid clips -> P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER.
+          H2 remains suspended."
+          gh issue comment 164 --repo "$GITHUB_REPOSITORY" --body "$body"
+          gh issue comment 110 --repo "$GITHUB_REPOSITORY" --body "$body"
