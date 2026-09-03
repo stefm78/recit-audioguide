@@ -31,6 +31,8 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - name: CLI import smoke
+        run: python tools/p6_s15_post_capture.py --help
       - name: Intake freeze contract
         run: python -m unittest tests.test_odyssee_p6_s15_intake_pipeline -v
       - name: Post-capture converted-only contract
