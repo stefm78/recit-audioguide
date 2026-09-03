@@ -91,6 +91,7 @@ function build(){
  var report={schema:"recit.odyssee.p7_human_review.v1",release_tag:document.getElementById("tag").value.trim(),states:Object.fromEntries(STATES.map(function(s){return [s.id,{observation:(answers[s.id]||{}).observation||"",artistic_verdict:answers[s.id].verdict}]})),global_continuity:{observation:document.getElementById("globalObs").value,artistic_verdict:global.value},decision:decision,failed_states:fails.map(function(s){return s.id}),identity_recasting_authorized:false};
  var out=document.getElementById("out");out.hidden=false;out.textContent=JSON.stringify(report,null,2);document.getElementById("copy").disabled=false;var rs=document.getElementById("result");rs.textContent=decision;rs.className="status "+(decision.indexOf("_PASS")>0?"good":"bad");
 }
+var initialTag=new URLSearchParams(window.location.search).get("tag");if(initialTag){document.getElementById("tag").value=initialTag;load()}
 document.getElementById("load").addEventListener("click",load);document.getElementById("build").addEventListener("click",build);document.getElementById("copy").addEventListener("click",async function(){await navigator.clipboard.writeText(document.getElementById("out").textContent);this.textContent="✓ Copié"});
 })();
 </script>
