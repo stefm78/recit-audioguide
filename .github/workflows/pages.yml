@@ -101,6 +101,10 @@ jobs:
         run: python -m unittest tests.test_odyssee_p6_human_performance_surface -v
       - name: Test Odyssée P7 render staging
         run: python -m unittest tests.test_odyssee_p7_render -v
+      - name: Test Odyssée P7 Round 2 render staging
+        run: python -m unittest tests.test_odyssee_p7_round2_render -v
+      - name: Test Odyssée P7 Round 2 review surface
+        run: python -m unittest tests.test_odyssee_p7_round2_review_surface -v
       - name: Test Odyssée full script contract
         run: python -m unittest tests.test_odyssee_script -v
 
