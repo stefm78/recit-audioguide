@@ -604,14 +604,64 @@
           "P7_ULYSSE_CONCLUSION",
           "ISSUE_179"
         ]
+      },
+      "stream2_lane": {
+        "issue": 179,
+        "state": "HOLD_SOURCE_INTAKE_TRANSPORT",
+        "selected_architecture": "human French performance -> BeltOut -> Henri/Ulysse",
+        "bounded_scope": {
+          "states": [
+            "storyteller",
+            "loss",
+            "authority"
+          ],
+          "exact_line_count": 9
+        },
+        "source_zip_received": true,
+        "source_zip_verified": false,
+        "beltout_conversion_count": 0,
+        "artistic_budget_consumed": false,
+        "runtime_transport_artifacts": {
+          "classification": "PREPARATORY_ONLY_NOT_P7_PROGRESS",
+          "latest_audio_engine_run": 33765206977,
+          "rule": "Do not create additional BeltOut runtime bundles/splits/engine variants solely to work around source ZIP accessibility."
+        },
+        "next_admissible_action": "Make the already-received private 9-take ZIP readable in a private local execution context; freeze 9 raw SHA-256 values before any BeltOut output; then exactly one conversion per frozen take.",
+        "privacy": "Raw human voice must remain private and must not be uploaded to GitHub.",
+        "fallback_if_current_chat_sandbox_cannot_access_zip": "Use an existing private local environment/NUC with the already qualified BeltOut runtime. This is execution transport, not new provider research.",
+        "forbidden": [
+          "new performance takes under same cell",
+          "BeltOut tuning",
+          "best_of_N",
+          "new runtime architecture research",
+          "upload_raw_human_voice_to_GitHub",
+          "Production Program mutation before human PASS"
+        ]
       }
     },
     "telemaque_language_integrity": {
-      "state": "OPEN_SEPARATE_PRODUCTION_DEFECT",
+      "state": "TELEMAQUE_CHATTERBOX_FR_REFERENCE_PROBE_AUTHORIZED",
       "issue": 178,
-      "classification": "TELEMAQUE_EDGE_MULTILINGUAL_LANGUAGE_INTEGRITY_DEFECT",
-      "voice": "fr-FR-RemyMultilingualNeural",
+      "diagnosis": "TELEMAQUE_REMY_MULTILINGUAL_EDGE_FRENCH_NOT_GUARANTEED",
+      "edge_path_closed": true,
+      "further_edge_retry_authorized": false,
+      "authority": "series/odyssee/review/TELEMAQUE_FRENCH_CLEAN_PATH_V1.json",
+      "chosen_probe": {
+        "provider": "chatterbox-multilingual-v3",
+        "language_id": "fr",
+        "conditioning_reference": "exact accepted P1 Télémaque segment extracted from odyssee-p1-review-v1",
+        "exact_s12_segments": [
+          137,
+          147,
+          153
+        ],
+        "one_parameter_set": true,
+        "no_best_of_n": true,
+        "no_seed_retry": true
+      },
+      "recast_at_entry": false,
       "frozen_text_change": false,
+      "cloud": false,
       "relation_to_p7_ulysse": "ORTHOGONAL",
       "blocks": [
         "S12_FINAL_PRODUCTION",
