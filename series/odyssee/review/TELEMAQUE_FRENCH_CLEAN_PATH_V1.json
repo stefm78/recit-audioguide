@@ -1,0 +1,84 @@
+{
+  "schema": "recit.odyssee.telemaque_french_clean_path.v1",
+  "id": "odyssee-telemaque-french-clean-path-v1",
+  "status": "TELEMAQUE_CHATTERBOX_FR_REFERENCE_PROBE_AUTHORIZED",
+  "authority_issue": 178,
+  "parent_stream1_issue": 110,
+  "diagnosis": {
+    "accepted": "TELEMAQUE_REMY_MULTILINGUAL_EDGE_FRENCH_NOT_GUARANTEED",
+    "current_voice": "fr-FR-RemyMultilingualNeural",
+    "current_provider": "edge",
+    "repeated_failed_controls": [
+      "root_locale_fr-FR",
+      "custom_lang_rejected_by_edge_endpoint",
+      "exact_context_prime_plus_word_boundary"
+    ],
+    "further_edge_retry_authorized": false
+  },
+  "product_decision": {
+    "objective": "Preserve Télémaque identity continuity as far as practical while moving the affected S12 lines onto a provider with explicit French language control.",
+    "provider": "chatterbox-multilingual-v3",
+    "language_id": "fr",
+    "local_only": true,
+    "cloud": false,
+    "recast_at_entry": false,
+    "frozen_text_change": false,
+    "reference_strategy": {
+      "source_release": "odyssee-p1-review-v1",
+      "source_asset": "p1.mp3",
+      "timing_asset": "timing.json",
+      "source_human_authority": "docs/evidence/odyssee-p1-human-pass-2026-08-30.md",
+      "source_fact": "P1 human review passed Ulysse vs Télémaque distinction and French sentinels with no defect reported.",
+      "extraction_rule": "Extract only the accepted P1 Télémaque segment using timing.json boundaries. Freeze extracted WAV SHA-256 before synthesis. Do not resynthesize the reference."
+    },
+    "provider_lineage": {
+      "existing_product_evidence": [
+        "P5 Underworld accepted Chatterbox Multilingual V3 with language_id=fr and no English words",
+        "P4 right Siren lineage uses promoted Chatterbox Multilingual V3"
+      ],
+      "rule": "This is a bounded product recipe probe using an already industrialized local provider, not provider research."
+    },
+    "probe": {
+      "scene": "S12",
+      "exact_segments": [
+        137,
+        147,
+        153
+      ],
+      "reason": {
+        "137": "short direct challenge",
+        "147": "long emotionally loaded sentence",
+        "153": "interrupted longer challenge"
+      },
+      "one_parameter_set": true,
+      "no_best_of_n": true,
+      "no_seed_retry": true,
+      "no_tuning_loop": true,
+      "dry": true
+    }
+  },
+  "human_gate": {
+    "dimensions": [
+      "French is fully natural with zero non-French passage",
+      "Télémaque remains recognisably continuous with the accepted P1 identity",
+      "young-adult role credibility",
+      "natural phrasing",
+      "clear distinction from Ulysse",
+      "no caricature"
+    ],
+    "pass": "TELEMAQUE_FRENCH_CLEAN_PATH_HUMAN_PASS",
+    "fail": "HOLD_TELEMAQUE_CHATTERBOX_IDENTITY_OR_NATURALNESS"
+  },
+  "post_pass": {
+    "scope": "Materialize only affected S12 Télémaque lines first using the exact passed recipe. Do not globally migrate earlier accepted Télémaque scenes without a concrete defect.",
+    "h2_watch": "Cross-scene Télémaque identity continuity remains an H2 dimension."
+  },
+  "stop_rules": [
+    "no_more_Remy_Edge_language_retries",
+    "no_cloud",
+    "no_frozen_text_change",
+    "no_provider_sweep",
+    "no_global_Telemaque_recast_at_entry",
+    "return_to_Stream1_if_single_bounded_Chatterbox_probe_fails"
+  ]
+}
