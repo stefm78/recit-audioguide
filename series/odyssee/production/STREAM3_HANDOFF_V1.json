@@ -387,7 +387,7 @@
         ],
         "current_scene_foundation_v1_is_human_h2_candidate": false,
         "reuse_existing_speech_audio": true,
-        "rule": "Dispatch exactly one H2 only after all four blocks are machine-qualified in the same immutable review Release. The page must remain fail-closed on missing assets.",
+        "rule": "Dispatch exactly one H2 only after P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS and all four blocks are machine-qualified in the same immutable review Release.",
         "machine_confirmation_exact": "A+B+C+D MACHINE_QUALIFIED",
         "dispatch_forbidden_before_confirmation": true,
         "required_review_release_assets": [
@@ -409,7 +409,8 @@
           "scene-S15.mp3",
           "scene-S15.qa-report.json"
         ],
-        "partial_review_release_is_h2": false
+        "partial_review_release_is_h2": false,
+        "additional_artistic_gate": "P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS"
       },
       "minimum_required_punctuations": {
         "S02": [
@@ -465,7 +466,7 @@
         "S14": "BOUND_PENDING_STREAM3_MATERIALIZATION"
       },
       "pre_h2_materialization_findings": [],
-      "current_state": "H2_SINGLE_BATCH_REVIEW_READY_PENDING_AUDIO",
+      "current_state": "H2_SUSPENDED_P7_ULYSSE_PERFORMANCE_CONTINUITY",
       "historical_representative_scope_superseded": true,
       "review_authority": "series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.json",
       "review_protocol": "series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.md",
@@ -503,7 +504,8 @@
         "no_new_asset_search_without_concrete_H2_defect",
         "no_decorative_embellishment",
         "no_casting_research",
-        "no_H2_dispatch_before_A+B+C+D_MACHINE_QUALIFIED"
+        "no_H2_dispatch_before_A+B+C+D_MACHINE_QUALIFIED",
+        "no_H2_dispatch_while_P7_open"
       ]
     },
     "h3": {
@@ -514,6 +516,50 @@
         "ULYSSES_EMOTIONAL_HUMAN_PASS",
         "H2_no_material_open_defect"
       ]
+    },
+    "p7_ulysse_performance_continuity": {
+      "state": "P7_READY_FOR_STREAM3_RENDER",
+      "authority_issue": 164,
+      "contract": "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_V1.json",
+      "protocol": "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_V1.md",
+      "review_page": "web/reviews/odyssee-p7.html",
+      "voice": "fr-FR-HenriNeural",
+      "provider": "edge",
+      "recasting": false,
+      "frozen_text_change": false,
+      "round_1_windows": [
+        {
+          "scene": "S05",
+          "range": "132-143",
+          "state": "storyteller_pride_to_regret"
+        },
+        {
+          "scene": "S06",
+          "range": "90-99",
+          "state": "shock_loss"
+        },
+        {
+          "scene": "S12",
+          "range": "136-154",
+          "state": "father_recognition"
+        },
+        {
+          "scene": "S14",
+          "range": "79-89",
+          "state": "controlled_authority"
+        }
+      ],
+      "variants": [
+        "A_current_baseline",
+        "B_state_directed_Henri_Edge"
+      ],
+      "bounded_retry": {
+        "max_additional_rounds": 1,
+        "scope": "failed_states_only"
+      },
+      "pass": "P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS",
+      "escalation": "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER_ONLY_AFTER_BOUNDED_EDGE_FAIL",
+      "production_rule": "Do not mutate Production Programs during P7; materialize temporary exact-window probes only."
     }
   },
   "engine_contract": {
