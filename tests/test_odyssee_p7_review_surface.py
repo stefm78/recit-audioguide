@@ -35,6 +35,12 @@ class P7Tests(unittest.TestCase):
         self.assertIn("P7_EDGE_BOUNDED_RETUNE_REQUIRED",text)
         self.assertIn("identité Henri préservée",text)
 
+    def test_page_autoloads_release_tag_from_query(self):
+        text=PAGE.read_text(encoding="utf-8")
+        self.assertIn('new URLSearchParams(window.location.search).get("tag")',text)
+        self.assertIn("if(initialTag)",text)
+        self.assertIn("load()",text)
+
     def test_build_publishes_page(self):
         subprocess.run([sys.executable,"site/build.py"],cwd=ROOT,check=True)
         self.assertTrue(DIST.is_file())
