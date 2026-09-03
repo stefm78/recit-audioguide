@@ -19,7 +19,7 @@ permissions:
   issues: write
 
 env:
-  AUDIO_ENGINE_REF: 1ea5c052d2212875c1f8290bc179908265387cf8
+  AUDIO_ENGINE_REF: ae03c9afc641459ef9287dc528e127d357cbc615
   REPAIR_RELEASE_TAG: odyssee-p7-r2-father-context-repair-v1
 
 jobs:
@@ -61,27 +61,30 @@ jobs:
       - name: Install exact Audio Engine
         run: python -m pip install --disable-pip-version-check ./.audio-engine
 
-      - name: Prove multilingual SSML language transport
+      - name: Prove supported Edge locale transport shape
         run: |
           python - <<'PY'
-          from types import SimpleNamespace
-          from audio_engine.providers.edge import _explicit_language_scoped_text
+          import edge_tts.communicate as edge_communicate
+          from audio_engine.providers.edge import EdgeProvider
 
-          remy = SimpleNamespace(
-              voice="fr-FR-RemyMultilingualNeural",
-              _audio_engine_language_locale="fr-FR",
+          provider = EdgeProvider()
+          communicate = edge_communicate.Communicate(
+              "Qui es-tu ?",
+              "fr-FR-RemyMultilingualNeural",
+              rate="+5%",
+              pitch="+8Hz",
+              volume="+2%",
           )
-          henri = SimpleNamespace(
-              voice="fr-FR-HenriNeural",
-              _audio_engine_language_locale="fr-FR",
+          communicate.tts_config._audio_engine_language_locale = "fr-FR"
+          ssml = edge_communicate.mkssml(
+              communicate.tts_config,
+              "Qui es-tu ?",
           )
-          assert (
-              _explicit_language_scoped_text(remy, "Qui es-tu ?")
-              == "<lang xml:lang='fr-FR'>Qui es-tu ?</lang>"
-          )
-          assert _explicit_language_scoped_text(henri, "Télémaque.") == "Télémaque."
-          print("TELEMAQUE_MULTILINGUAL_LANG_FR_FR_PASS")
-          print("ULYSSE_HENRI_NATIVE_SSML_PATH_UNCHANGED")
+          assert "xml:lang='fr-FR'" in ssml
+          assert "<voice " in ssml and "<prosody " in ssml
+          assert "<lang " not in ssml
+          print("EDGE_SUPPORTED_ROOT_LOCALE_FR_FR_PASS")
+          print("CUSTOM_SSML_DISABLED")
           PY
 
       - name: Materialize exact father repair probe
@@ -100,6 +103,25 @@ jobs:
             and .repair.round3_edge == false
           ' generated/p7-r2-context-repair-materialize.json >/dev/null
 
+      - name: Prime Télémaque cache from exact frozen father context
+        run: |
+          set -euo pipefail
+          mkdir -p generated/p7-r2-context-repair-render/.cache/voices
+          python tools/p7_round2_telemaque_context_repair.py prime-context-cache             --plan generated/p7-r2-context-repair-input/plan.json             --cache-root generated/p7-r2-context-repair-render/.cache/voices             --evidence generated/p7-r2-context-prime-evidence.json             > generated/p7-r2-context-prime.json
+          jq -e '
+            .status == "TELEMAQUE_FROZEN_FATHER_CONTEXT_CACHE_READY"
+            and .context_source == "EXACT_S12_136_154_FROZEN_TEXT_ONLY"
+            and .context_added_spoken_words == 0
+            and .custom_ssml == false
+            and .telemaque_segment_count == 8
+            and .ulysse_round2_parameters_changed == false
+            and .recasting == false
+            and .frozen_text_change == false
+            and .provider_change == false
+            and .new_edge_tuning == false
+            and .round3_edge == false
+          ' generated/p7-r2-context-prime-evidence.json >/dev/null
+
       - name: Render only father context and machine-QA
         run: |
           set -euo pipefail
@@ -114,7 +136,7 @@ jobs:
       - name: Collect immutable technical-repair payload
         run: |
           set -euo pipefail
-          python tools/p7_round2_telemaque_context_repair.py collect             --plan generated/p7-r2-context-repair-input/plan.json             --render-root generated/p7-r2-context-repair-render             --release-out generated/p7-r2-context-repair-release             --product-sha "$GITHUB_SHA"             > generated/p7-r2-context-repair-collect.json
+          python tools/p7_round2_telemaque_context_repair.py collect             --plan generated/p7-r2-context-repair-input/plan.json             --render-root generated/p7-r2-context-repair-render             --release-out generated/p7-r2-context-repair-release             --product-sha "$GITHUB_SHA"             --context-evidence generated/p7-r2-context-prime-evidence.json             > generated/p7-r2-context-repair-collect.json
           jq -e '
             .status == "machine-ready-p7-r2-father-context-repair"
             and .qa_status == "PASS"
@@ -136,6 +158,7 @@ jobs:
             generated/p7-r2-context-repair-input/plan.json
             generated/p7-r2-context-repair-materialize.json
             generated/p7-r2-context-repair-collect.json
+            generated/p7-r2-context-prime-evidence.json
           if-no-files-found: error
           retention-days: 14
           compression-level: 0
@@ -149,7 +172,7 @@ jobs:
             echo "Refusing to mutate existing repair Release: $REPAIR_RELEASE_TAG" >&2
             exit 2
           fi
-          gh release create "$REPAIR_RELEASE_TAG"             generated/p7-r2-context-repair-release/*             --repo "$GITHUB_REPOSITORY"             --target "$GITHUB_SHA"             --title "Odyssée P7 R2 — Télémaque father context technical repair"             --notes "Technical integrity repair only. Same frozen S12 136-154 text, same cast/provider, exact Round 2 Ulysse C parameters, no Round 3 tuning. Télémaque keeps fr-FR-RemyMultilingualNeural and now uses explicit multilingual SSML lang fr-FR transport."             --prerelease
+          gh release create "$REPAIR_RELEASE_TAG"             generated/p7-r2-context-repair-release/*             --repo "$GITHUB_REPOSITORY"             --target "$GITHUB_SHA"             --title "Odyssée P7 R2 — Télémaque father context technical repair"             --notes "Technical integrity repair only. Same frozen S12 136-154 text, same cast/provider, exact Round 2 Ulysse C parameters, no Round 3 tuning. Télémaque keeps fr-FR-RemyMultilingualNeural. Its Edge cache clips are primed from one synthesis context containing only the exact 19 frozen father-window lines; no added spoken words and no custom SSML."             --prerelease
 
       - name: Return evidence to Stream 1 and Stream 3
         env:
@@ -166,7 +189,7 @@ jobs:
 
           Scope rendered: S12 136–154 father context only.
           Télémaque: same `fr-FR-RemyMultilingualNeural`, same +5%/+8Hz/+2%, same provider Edge, same frozen text.
-          Technical repair: explicit multilingual SSML `<lang xml:lang='fr-FR'>`.
+          Technical repair: Télémaque Edge clips primed from the exact frozen S12 136–154 French context only; no added spoken words, no custom SSML.
           Ulysse: exact Round 2 C settings preserved for all 9 lines.
           Ulysse artistic parameter change: NO.
           Recast: NO.

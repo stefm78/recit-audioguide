@@ -16,12 +16,19 @@ class P7Round2TelemaqueContextRepairTests(unittest.TestCase):
                 plan["status"],
                 "READY_TO_RENDER_P7_R2_FATHER_CONTEXT_REPAIR",
             )
+            self.assertEqual(plan["engine_ref"], repair.ENGINE_REF)
             self.assertEqual(plan["range"], {"start_segment": 136, "end_segment": 154})
             self.assertEqual(
                 [item["segment"] for item in plan["telemaque_snapshot"]],
                 list(repair.TELEMAQUE_SEGMENTS),
             )
             self.assertEqual(len(plan["ulysse_round2_snapshot"]), 9)
+            self.assertEqual(
+                plan["repair"]["transport_method"],
+                "FROZEN_FATHER_CONTEXT_CACHE_PRIME",
+            )
+            self.assertEqual(plan["repair"]["added_spoken_words"], 0)
+            self.assertFalse(plan["repair"]["custom_ssml"])
             self.assertFalse(plan["repair"]["ulysse_artistic_parameter_change"])
             self.assertFalse(plan["repair"]["recasting"])
             self.assertFalse(plan["repair"]["frozen_text_change"])
@@ -59,6 +66,44 @@ class P7Round2TelemaqueContextRepairTests(unittest.TestCase):
             if out.exists():
                 shutil.rmtree(out)
 
+    def test_frozen_context_uses_only_exact_window_text(self):
+        out = repair.ROOT / "generated" / "p7-r2-telemaque-context-test"
+        try:
+            plan = repair.materialize(out)
+            program = json.loads(
+                (repair.ROOT / plan["program_path"]).read_text(encoding="utf-8")
+            )
+            context, spans = repair._context_text_and_spans(program, 136)
+            contract = json.loads(repair.CONTRACT.read_text(encoding="utf-8"))
+            window = repair.father_window(contract)
+            expected = "\n".join(item["text"] for item in window["exact_guards"])
+            self.assertEqual(context, expected)
+            self.assertEqual(len(spans), 19)
+            self.assertEqual(spans[0]["segment"], 136)
+            self.assertEqual(spans[-1]["segment"], 154)
+
+            fake_events = []
+            cursor = 0
+            for span in spans:
+                token = span["text"].split()[0]
+                found = context.find(token, cursor)
+                fake_events.append(
+                    {
+                        "text": token,
+                        "offset": len(fake_events) * 1_000_000,
+                        "duration": 500_000,
+                    }
+                )
+                cursor = found + len(token)
+            assigned = repair._assign_word_boundaries(context, spans, fake_events)
+            self.assertEqual(
+                sorted(number for number, events in assigned.items() if events),
+                list(range(136, 155)),
+            )
+        finally:
+            if out.exists():
+                shutil.rmtree(out)
+
     def _resolved_transcript(self, plan):
         program = json.loads(
             (repair.ROOT / plan["program_path"]).read_text(encoding="utf-8")
@@ -82,6 +127,36 @@ class P7Round2TelemaqueContextRepairTests(unittest.TestCase):
             resolved.append(item)
         return {"segments": resolved}
 
+    def _context_evidence(self, root):
+        entries = []
+        unique = {}
+        for number in repair.TELEMAQUE_SEGMENTS:
+            key = "non" if number in (143, 145) else str(number)
+            fingerprint = f"fp-{key}"
+            unique[fingerprint] = True
+            entries.append(
+                {
+                    "segment": number,
+                    "fingerprint": fingerprint,
+                }
+            )
+        data = {
+            "schema": "recit.odyssee.p7_r2_telemaque_frozen_context_prime.v1",
+            "status": "TELEMAQUE_FROZEN_FATHER_CONTEXT_CACHE_READY",
+            "engine_ref": repair.ENGINE_REF,
+            "context_source": "EXACT_S12_136_154_FROZEN_TEXT_ONLY",
+            "context_sha256": "c" * 64,
+            "context_segment_count": 19,
+            "context_added_spoken_words": 0,
+            "custom_ssml": False,
+            "word_boundary_count": 50,
+            "unique_cache_clip_count": len(unique),
+            "entries": entries,
+        }
+        path = Path(root) / "context-evidence.json"
+        path.write_text(json.dumps(data), encoding="utf-8")
+        return path, data
+
     def test_collect_accepts_exact_transport_and_rejects_ulysse_drift(self):
         materialized = (
             repair.ROOT / "generated" / "p7-r2-telemaque-repair-collect-test"
@@ -92,6 +167,8 @@ class P7Round2TelemaqueContextRepairTests(unittest.TestCase):
                 root = Path(tmp)
                 plan_path = root / "plan.json"
                 plan_path.write_text(json.dumps(plan), encoding="utf-8")
+                context_path, context = self._context_evidence(root)
+
                 render_root = root / "renders"
                 render_dir = render_root / plan["program_id"]
                 render_dir.mkdir(parents=True)
@@ -100,8 +177,19 @@ class P7Round2TelemaqueContextRepairTests(unittest.TestCase):
                     json.dumps({"status": "PASS"}),
                     encoding="utf-8",
                 )
+                fingerprints = [f"other-{index}" for index in range(19)]
+                for entry in context["entries"]:
+                    fingerprints[entry["segment"] - 136] = entry["fingerprint"]
                 (render_dir / "manifest.json").write_text(
-                    json.dumps({"status": "success"}),
+                    json.dumps(
+                        {
+                            "status": "success",
+                            "mix": {
+                                "voice_cache_hits": 8,
+                                "voice_fingerprints": fingerprints,
+                            },
+                        }
+                    ),
                     encoding="utf-8",
                 )
                 transcript = self._resolved_transcript(plan)
@@ -116,11 +204,21 @@ class P7Round2TelemaqueContextRepairTests(unittest.TestCase):
                     render_root,
                     release,
                     "a" * 40,
+                    context_path,
                 )
                 self.assertEqual(
                     index["status"],
                     "machine-ready-p7-r2-father-context-repair",
                 )
+                self.assertEqual(
+                    index["telemaque_transport"],
+                    "FROZEN_FATHER_CONTEXT_CACHE_PRIME",
+                )
+                self.assertEqual(
+                    index["context_prime"]["context_added_spoken_words"],
+                    0,
+                )
+                self.assertFalse(index["context_prime"]["custom_ssml"])
                 self.assertFalse(index["ulysse_artistic_parameter_change"])
                 self.assertFalse(index["recasting"])
                 self.assertFalse(index["frozen_text_change"])
@@ -153,6 +251,7 @@ class P7Round2TelemaqueContextRepairTests(unittest.TestCase):
                         render_root,
                         root / "bad-release",
                         "b" * 40,
+                        context_path,
                     )
         finally:
             if materialized.exists():
