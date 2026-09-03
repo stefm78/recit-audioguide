@@ -57,18 +57,46 @@ jobs:
           jq -e '.status == "READY_TO_RENDER_P7_ROUND2" and .entry_count == 4' generated/p7-r2-materialize.json >/dev/null
 
       - name: Render and machine-QA four Round 2 candidates
-        shell: bash
         run: |
           set -euo pipefail
           mkdir -p generated/p7-r2-renders
-          while IFS=$'\t' read -r program voices program_id; do
-            echo "P7_R2_RENDER $program_id"
-            audio-engine render "$program" --out generated/p7-r2-renders --voices "$voices" > "generated/p7-r2-renders/${program_id}.render.json"
-            audio-engine qa "generated/p7-r2-renders/${program_id}" > "generated/p7-r2-renders/${program_id}/qa-report.json"
-            jq -e '.status == "PASS"' "generated/p7-r2-renders/${program_id}/qa-report.json" >/dev/null
-          done < <(
-            jq -r '.entries[] | [.program_path,.voice_pack_path,.program_id] | @tsv' generated/p7-r2-inputs/plan.json
-          )
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          plan = json.load(open("generated/p7-r2-inputs/plan.json", encoding="utf-8"))
+          for entry in plan["entries"]:
+              program = entry["program_path"]
+              voices = entry["voice_pack_path"]
+              program_id = entry["program_id"]
+              print(f"P7_R2_RENDER {program_id} {program}", flush=True)
+
+              render_log = Path("generated/p7-r2-renders") / f"{program_id}.render.json"
+              with render_log.open("w", encoding="utf-8") as out:
+                  subprocess.run(
+                      [
+                          "audio-engine", "render", program,
+                          "--out", "generated/p7-r2-renders",
+                          "--voices", voices,
+                      ],
+                      stdout=out,
+                      check=True,
+                      text=True,
+                  )
+
+              qa_path = Path("generated/p7-r2-renders") / program_id / "qa-report.json"
+              with qa_path.open("w", encoding="utf-8") as out:
+                  subprocess.run(
+                      ["audio-engine", "qa", str(qa_path.parent)],
+                      stdout=out,
+                      check=True,
+                      text=True,
+                  )
+              qa = json.load(qa_path.open(encoding="utf-8"))
+              if qa.get("status") != "PASS":
+                  raise SystemExit(f"machine QA failed for {program_id}")
+          PY
 
       - name: Collect immutable Round 2 review payload
         run: |
