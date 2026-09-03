@@ -42,7 +42,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python -m pip install --disable-pip-version-check imageio-ffmpeg==0.6.0
+          python -m pip install --disable-pip-version-check imageio-ffmpeg==0.6.0 edge-tts==7.2.8
           python -m pip install --disable-pip-version-check --no-deps ./.audio-engine
 
       - name: Download existing post-render artifact only
