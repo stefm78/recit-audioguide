@@ -1,0 +1,129 @@
+name: Odyssée P7 Round 1 render
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/odyssee-p7-render.yml'
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: odyssee-p7-round1
+  cancel-in-progress: false
+
+env:
+  AUDIO_ENGINE_REF: f14a941d9218c2e9e632d7198557e7a3e48ff894
+  P7_AUTHORITY_SHA: 203a196941c48d80c7e238e3c8596d94d15b29ce
+  P7_RELEASE_TAG: odyssee-p7-round1-203a196-v1
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout product with history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Checkout exact Audio Engine
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: ${{ env.AUDIO_ENGINE_REF }}
+          path: .audio-engine
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install exact Audio Engine
+        run: python -m pip install --disable-pip-version-check ./.audio-engine
+
+      - name: Lock P7 render invariants
+        run: python -m unittest tests.test_odyssee_p7_render -v
+
+      - name: Materialize exact temporary A/B Programs
+        run: |
+          set -euo pipefail
+          python tools/p7_render.py materialize --out generated/p7-inputs             > generated/p7-materialize.json
+          jq -e '.status == "READY_TO_RENDER_P7_ROUND1" and .entry_count == 8'             generated/p7-materialize.json >/dev/null
+
+      - name: Render and machine-QA all eight clips
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p generated/p7-renders
+          while IFS=$'\t' read -r program voices program_id; do
+            echo "P7_RENDER $program_id"
+            audio-engine render "$program"               --out generated/p7-renders               --voices "$voices"               > "generated/p7-renders/${program_id}.render.json"
+            audio-engine qa "generated/p7-renders/${program_id}"               > "generated/p7-renders/${program_id}/qa-report.json"
+            jq -e '.status == "PASS"'               "generated/p7-renders/${program_id}/qa-report.json" >/dev/null
+          done < <(
+            jq -r '.entries[] | [.program_path,.voice_pack_path,.program_id] | @tsv'               generated/p7-inputs/plan.json
+          )
+
+      - name: Collect immutable review payload
+        run: |
+          set -euo pipefail
+          python tools/p7_render.py collect             --plan generated/p7-inputs/plan.json             --render-root generated/p7-renders             --release-out generated/p7-release             --product-sha "$GITHUB_SHA"             > generated/p7-collect.json
+          jq -e '.status == "machine-ready-p7-review-assets" and .asset_count == 16'             generated/p7-collect.json >/dev/null
+          test "$(find generated/p7-release -maxdepth 1 -type f | wc -l)" -eq 17
+          find generated/p7-release -maxdepth 1 -type f -printf '%f\n' | sort
+
+      - name: Upload run evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: odyssee-p7-round1-review-assets
+          path: |
+            generated/p7-release
+            generated/p7-inputs/plan.json
+            generated/p7-materialize.json
+            generated/p7-collect.json
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0
+
+      - name: Publish one immutable P7 review Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$P7_RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Refusing to mutate existing immutable P7 Release: $P7_RELEASE_TAG" >&2
+            exit 2
+          fi
+          gh release create "$P7_RELEASE_TAG"             generated/p7-release/*             --repo "$GITHUB_REPOSITORY"             --target "$GITHUB_SHA"             --title "Odyssée P7 — Ulysse continuity — Round 1"             --notes "Machine-ready P7 Round 1 A/B assets. Authority product SHA: $P7_AUTHORITY_SHA. Audio Engine: $AUDIO_ENGINE_REF. Temporary probe only; no Production Program mutation."             --prerelease
+
+      - name: Return machine evidence to product authority
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="STREAM 3 — P7 ROUND 1 MACHINE READY
+
+          Release: \`$P7_RELEASE_TAG\`
+          authority product: \`$P7_AUTHORITY_SHA\`
+          render product: \`$GITHUB_SHA\`
+          audio-engine: \`$AUDIO_ENGINE_REF\`
+          run: \`$GITHUB_RUN_ID\`
+
+          4 states × A/B = 8 clips.
+          Machine QA: 8/8 PASS.
+          Index status: \`machine-ready-p7-review-assets\`.
+          Production Programs mutated: NO.
+          Recasting: NO.
+          Decorative sound: NO.
+
+          Human surface:
+          \`/reviews/odyssee-p7.html?tag=$P7_RELEASE_TAG\`
+
+          H2 remains suspended pending human P7 verdict."
+          gh issue comment 164 --repo "$GITHUB_REPOSITORY" --body "$body"
+          gh issue comment 110 --repo "$GITHUB_REPOSITORY" --body "$body"
