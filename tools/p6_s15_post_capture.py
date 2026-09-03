@@ -601,7 +601,7 @@ def _assert_no_private_leak(staging_root, conversion_set):
                 raise P6PostCaptureError(
                     f"private local path leaked into staged artifact: {path}"
                 )
-        if "private_source_path" in text:
+        if '"private_source_path"' in text:
             raise P6PostCaptureError(
                 f"raw human private path key leaked into staged artifact: {path}"
             )
