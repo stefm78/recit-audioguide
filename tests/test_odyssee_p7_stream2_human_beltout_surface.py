@@ -54,8 +54,8 @@ class TestP7Stream2HumanBeltoutSurface(unittest.TestCase):
 
     def test_constraints_are_explicit(self):
         for phrase in (
-            "Aucun best-of-N",
-            "No Round 3 Edge",
+            "best_of_N",
+            "round3_edge",
             "materially_more_alive_and_less_mechanical_cold_than_C2",
             "dramatization_appropriate_and_restrained",
         ):
