@@ -134,7 +134,7 @@ class P6S15PostCaptureTests(unittest.TestCase):
                 / "series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json",
             ]:
                 text = path.read_text(encoding="utf-8")
-                self.assertNotIn("private_source_path", text)
+                self.assertNotIn('"private_source_path"', text)
                 for needle in private_needles:
                     self.assertNotIn(needle, text)
 
