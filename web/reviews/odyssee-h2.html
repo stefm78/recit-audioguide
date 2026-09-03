@@ -45,11 +45,11 @@ a{color:var(--accent)}
 <main>
 <p class="badge">H2 · SINGLE BATCH · intégration réelle</p>
 <h1>Odyssée — H2 final partagé</h1>
-<p class="muted">Une seule revue d’intégration. Aucun micro-gate, aucun nouveau casting, aucune recherche d’asset sans défaut concret.</p>
+<p class="muted">Une seule revue d’intégration. <strong>Actuellement suspendue par P7 Ulysse performance continuity.</strong> Aucun nouveau casting, aucune modification de texte.</p>
 
 <section class="card">
 <h2 style="margin-top:0">1. Charger l’unique Release H2</h2>
-<p>H2 reste verrouillé tant que Stream 3 n’a pas confirmé exactement <strong>A+B+C+D MACHINE_QUALIFIED</strong> et publié tous les assets dans une même Release immutable.</p>
+<p>H2 reste verrouillé tant que <strong>P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS</strong> n’est pas acquis et que Stream 3 n’a pas confirmé exactement <strong>A+B+C+D MACHINE_QUALIFIED</strong> et publié tous les assets dans une même Release immutable.</p>
 <div class="row">
 <input id="tagInput" type="text" placeholder="ex. odyssee-h2-review-<manifest>" aria-label="Tag de Release H2">
 <button id="loadButton" type="button">Charger la Release</button>
@@ -115,6 +115,7 @@ a{color:var(--accent)}
 (function(){
 "use strict";
 var REPO="stefm78/recit-audioguide";
+var P7_GATE="PENDING";
 var API="https://api.github.com/repos/"+REPO+"/releases/tags/";
 var REQUIRED=[
  "review-index.json",
@@ -275,6 +276,13 @@ function renderProgress(){
 
 async function loadTag(){
  stopBoundary();
+ if(P7_GATE!=="PASS"){
+  var status=document.getElementById("gateStatus"),details=document.getElementById("gateDetails");
+  status.textContent="H2 SUSPENDU — P7 ULYSSE";status.className="status bad";
+  details.innerHTML="<strong>H2 ne peut pas être déclenché.</strong> Ulysse/Henri identity PASS, mais performance continuity FAIL (trop mécanique/froid). Résoudre P7 #164 avant tout chargement H2.";
+  document.getElementById("reviewArea").classList.add("locked");
+  return;
+ }
  var tag=document.getElementById("tagInput").value.trim();
  if(!tag)return;
  state={tag:tag,release:null,index:null,assets:{},moduleDone:{},criteria:{}};
