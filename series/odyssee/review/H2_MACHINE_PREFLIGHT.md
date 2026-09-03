@@ -8,6 +8,37 @@ Current product main when this preflight is recorded: `5de36966a3fb7ceb38c210860
 
 Status: **H2_SUSPENDED_P7_ROUND2**
 
+## Frozen Round 2 human result — Edge artistic budget exhausted
+
+Authority:
+`series/odyssee/review/P7_ROUND2_HUMAN_REVIEW_V1.json`
+
+Human result:
+- context integrity FAIL because Télémaque still has audible non-French passages;
+- Ulysse/Henri identity PASS in all four states;
+- Ulysse French natural PASS in all four states;
+- storyteller / loss / father / authority all remain artistically FAIL because C2 is **not materially less mechanical/cold than B1**;
+- dramatic-state fit, living rhythm and restraint/no-caricature are otherwise acceptable.
+
+The review page returned:
+`P7_ROUND2_PROBE_INTEGRITY_FAIL`
+
+Its field:
+`edge_budget_exhausted:false`
+
+is a **non-authoritative page-logic artifact** caused by deriving that field from the final decision code. It does not reopen Edge.
+
+Stream 1 authoritative arbitration:
+- Round 2 is the final artistic Edge attempt;
+- Edge artistic budget = **EXHAUSTED**;
+- no Round 3 Edge is authorized;
+- no Ulysse parameter may be changed during the technical repair;
+- the only admissible next action is minimum Télémaque/context language-integrity repair;
+- technical repair does not replenish the artistic budget;
+- once technical integrity is restored, any remaining/confirmed artistic FAIL authorizes `P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER`.
+
+H2 remains suspended.
+
 ## Current P7 suspension — Round 2 final Henri/Edge budget
 
 Round 1 human result:

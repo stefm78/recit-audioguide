@@ -30,6 +30,8 @@ class P7Round2ReviewSurfaceTests(unittest.TestCase):
         self.assertIn("P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS",text)
         self.assertIn("P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",text)
         self.assertIn("Aucun Round 3 Edge",text)
+        self.assertIn("edge_budget_exhausted:true",text)
+        self.assertIn("technical integrity decision does not reopen",text)
 
     def test_static_build_publishes_round2_page(self):
         subprocess.run([sys.executable,"site/build.py"],cwd=ROOT,check=True)

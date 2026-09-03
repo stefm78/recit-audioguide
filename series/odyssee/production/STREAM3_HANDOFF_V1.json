@@ -518,7 +518,7 @@
       ]
     },
     "p7_ulysse_performance_continuity": {
-      "state": "P7_ROUND2_READY_FOR_STREAM3_RENDER",
+      "state": "P7_ROUND2_HUMAN_RESULT_FROZEN_TECHNICAL_CONTEXT_REPAIR_ONLY",
       "authority_issue": 164,
       "round1_contract": "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_V1.json",
       "round1_human_result": "series/odyssee/review/P7_ROUND1_HUMAN_REVIEW_V1.json",
@@ -554,7 +554,34 @@
       "artistic_fail": "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
       "no_round3_edge": true,
       "escalation_rule": "Only a technically valid Round 2 artistic FAIL exhausts Henri/Edge and authorizes Stream 2 performance-provider work. Identity remains Henri/Ulysse; no recasting.",
-      "production_rule": "Temporary exact-window probes only; do not mutate Production Programs."
+      "production_rule": "Temporary exact-window probes only; do not mutate Production Programs.",
+      "round2_human_result": "series/odyssee/review/P7_ROUND2_HUMAN_REVIEW_V1.json",
+      "round2_result": {
+        "page_decision": "P7_ROUND2_PROBE_INTEGRITY_FAIL",
+        "context_integrity": "FAIL_TELEMAQUE_NON_FRENCH",
+        "ulysse_identity": "PASS",
+        "ulysse_french": "PASS",
+        "artistic_fail_states": [
+          "storyteller",
+          "loss",
+          "father",
+          "authority"
+        ],
+        "material_less_mechanical_cold": "FAIL_ALL",
+        "edge_artistic_budget_exhausted": true,
+        "page_edge_budget_exhausted_false_is_ui_artifact": true
+      },
+      "next_admissible_action": "TECHNICAL_CONTEXT_INTEGRITY_REPAIR_ONLY",
+      "round3_edge_authorized": false,
+      "repair_constraints": [
+        "preserve_all_round2_ulysse_C_parameters_exactly",
+        "repair_only_minimum_telemaque_context_language_integrity",
+        "no_recasting",
+        "no_frozen_text_change",
+        "no_provider_change",
+        "no_new_edge_artistic_tuning"
+      ],
+      "post_repair_rule": "Technical repair does not replenish the Edge artistic budget. Frozen Round 2 artistic FAIL evidence remains authoritative. Any remaining/confirmed artistic FAIL after technical integrity is restored authorizes P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER."
     }
   },
   "engine_contract": {

@@ -96,7 +96,8 @@ function build(){
   global_continuity:{observation:document.getElementById("globalObs").value,artistic_verdict:global.value},
   decision:decision,
   failed_states:fails.map(function(s){return s.id}),
-  edge_budget_exhausted:decision==="P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
+  edge_budget_exhausted:true,
+  edge_budget_semantics:"Round 2 is the final artistic Edge attempt; a technical integrity decision does not reopen or extend the Edge artistic budget.",
   identity_recasting_authorized:false,
   frozen_text_change_authorized:false
  };
