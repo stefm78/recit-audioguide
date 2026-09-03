@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.h2_single_batch_review.v1",
   "id": "odyssee-h2-single-batch-review-v1",
-  "status": "H2_SUSPENDED_P7_ULYSSE_PERFORMANCE_CONTINUITY",
+  "status": "H2_SUSPENDED_ULYSSE_PROVIDER_AND_TELEMAQUE_INTEGRITY",
   "authority_issue": 110,
   "downstream_issue": 112,
   "supersedes": "historical representative-scene H2 scope defined before P4/P6 closure",
@@ -30,9 +30,10 @@
       "scene-S15.mp3",
       "scene-S15.qa-report.json"
     ],
-    "unlock_rule": "H2 may unlock only when P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS is promoted AND every required H2 asset is present in the same immutable review Release with A+B+C+D MACHINE_QUALIFIED.",
+    "unlock_rule": "H2 may unlock only when the #179 Ulysse performance-provider path is human-approved, #178 Télémaque French integrity is resolved, and every required H2 asset is present in the same immutable review Release with A+B+C+D MACHINE_QUALIFIED.",
     "partial_release_rule": "A partial machine-ready review Release is useful production evidence but is not H2.",
-    "additional_artistic_gate": "P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS"
+    "additional_artistic_gate": "ULYSSE_PERFORMANCE_PROVIDER_HUMAN_PASS_FROM_ISSUE_179",
+    "additional_technical_gate": "TELEMAQUE_FRENCH_LANGUAGE_INTEGRITY_RESOLVED_ISSUE_178"
   },
   "review_surface": {
     "page": "web/reviews/odyssee-h2.html",
@@ -282,11 +283,25 @@
     "do_not_dispatch_before_A+B+C+D_MACHINE_QUALIFIED"
   ],
   "suspension": {
-    "finding": "ULYSSE_HENRI_IDENTITY_PASS_PERFORMANCE_MECHANICAL_COLD_FAIL",
-    "authority_issue": 164,
-    "p7_contract": "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_V1.json",
-    "casting_reopened": false,
-    "text_reopened": false,
-    "stream2_escalation": "FORBIDDEN_UNLESS_BOUNDED_HENRI_EDGE_P7_FAILS"
+    "ulysses_performance": {
+      "status": "OPEN_STREAM2_PROVIDER_ESCALATION",
+      "issue": 179,
+      "p7_conclusion": "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
+      "identity_target": "Henri/Ulysse",
+      "recasting": false,
+      "round3_edge": false,
+      "text_change": false
+    },
+    "telemaque_language_integrity": {
+      "status": "OPEN_SEPARATE_PRODUCTION_DEFECT",
+      "issue": 178,
+      "classification": "TELEMAQUE_EDGE_MULTILINGUAL_LANGUAGE_INTEGRITY_DEFECT",
+      "blocks": [
+        "S12_FINAL_PRODUCTION",
+        "BLOCK_D_MACHINE_QUALIFICATION",
+        "H2_DISPATCH"
+      ],
+      "blocks_p7_ulysse_conclusion": false
+    }
   }
 }
