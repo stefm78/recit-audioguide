@@ -1,0 +1,185 @@
+name: Odyssée P7 R2 Télémaque context repair
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/odyssee-p7-r2-telemaque-context-repair.yml'
+      - 'tools/p7_round2_telemaque_context_repair.py'
+      - 'tests/test_odyssee_p7_round2_telemaque_context_repair.py'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/odyssee-p7-r2-telemaque-context-repair.yml'
+      - 'tools/p7_round2_telemaque_context_repair.py'
+      - 'tests/test_odyssee_p7_round2_telemaque_context_repair.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+env:
+  AUDIO_ENGINE_REF: 1ea5c052d2212875c1f8290bc179908265387cf8
+  REPAIR_RELEASE_TAG: odyssee-p7-r2-father-context-repair-v1
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Lock father-only technical repair invariants
+        run: python -m unittest tests.test_odyssee_p7_round2_telemaque_context_repair -v
+
+  render:
+    if: github.event_name != 'pull_request'
+    needs: contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout product with history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Checkout exact Audio Engine
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: ${{ env.AUDIO_ENGINE_REF }}
+          path: .audio-engine
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install exact Audio Engine
+        run: python -m pip install --disable-pip-version-check ./.audio-engine
+
+      - name: Prove multilingual SSML language transport
+        run: |
+          python - <<'PY'
+          from types import SimpleNamespace
+          from audio_engine.providers.edge import _explicit_language_scoped_text
+
+          remy = SimpleNamespace(
+              voice="fr-FR-RemyMultilingualNeural",
+              _audio_engine_language_locale="fr-FR",
+          )
+          henri = SimpleNamespace(
+              voice="fr-FR-HenriNeural",
+              _audio_engine_language_locale="fr-FR",
+          )
+          assert (
+              _explicit_language_scoped_text(remy, "Qui es-tu ?")
+              == "<lang xml:lang='fr-FR'>Qui es-tu ?</lang>"
+          )
+          assert _explicit_language_scoped_text(henri, "Télémaque.") == "Télémaque."
+          print("TELEMAQUE_MULTILINGUAL_LANG_FR_FR_PASS")
+          print("ULYSSE_HENRI_NATIVE_SSML_PATH_UNCHANGED")
+          PY
+
+      - name: Materialize exact father repair probe
+        run: |
+          set -euo pipefail
+          mkdir -p generated
+          python tools/p7_round2_telemaque_context_repair.py materialize             --out generated/p7-r2-context-repair-input             > generated/p7-r2-context-repair-materialize.json
+          jq -e '
+            .status == "READY_TO_RENDER_P7_R2_FATHER_CONTEXT_REPAIR"
+            and .repair.scope == "TELEMAQUE_CONTEXT_LANGUAGE_TRANSPORT_ONLY"
+            and .repair.ulysse_artistic_parameter_change == false
+            and .repair.recasting == false
+            and .repair.frozen_text_change == false
+            and .repair.provider_change == false
+            and .repair.new_edge_tuning == false
+            and .repair.round3_edge == false
+          ' generated/p7-r2-context-repair-materialize.json >/dev/null
+
+      - name: Render only father context and machine-QA
+        run: |
+          set -euo pipefail
+          program=$(jq -r '.program_path' generated/p7-r2-context-repair-input/plan.json)
+          voices=$(jq -r '.voice_pack_path' generated/p7-r2-context-repair-input/plan.json)
+          program_id=$(jq -r '.program_id' generated/p7-r2-context-repair-input/plan.json)
+          mkdir -p generated/p7-r2-context-repair-render
+          audio-engine render "$program"             --out generated/p7-r2-context-repair-render             --voices "$voices"             > generated/p7-r2-context-repair-render/render.json
+          audio-engine qa "generated/p7-r2-context-repair-render/$program_id"             > "generated/p7-r2-context-repair-render/$program_id/qa-report.json"
+          jq -e '.status == "PASS"'             "generated/p7-r2-context-repair-render/$program_id/qa-report.json" >/dev/null
+
+      - name: Collect immutable technical-repair payload
+        run: |
+          set -euo pipefail
+          python tools/p7_round2_telemaque_context_repair.py collect             --plan generated/p7-r2-context-repair-input/plan.json             --render-root generated/p7-r2-context-repair-render             --release-out generated/p7-r2-context-repair-release             --product-sha "$GITHUB_SHA"             > generated/p7-r2-context-repair-collect.json
+          jq -e '
+            .status == "machine-ready-p7-r2-father-context-repair"
+            and .qa_status == "PASS"
+            and .ulysse_artistic_parameter_change == false
+            and .recasting == false
+            and .frozen_text_change == false
+            and .provider_change == false
+            and .new_edge_tuning == false
+            and .round3_edge == false
+          ' generated/p7-r2-context-repair-collect.json >/dev/null
+          test "$(find generated/p7-r2-context-repair-release -maxdepth 1 -type f | wc -l)" -eq 3
+
+      - name: Upload run evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: odyssee-p7-r2-father-context-repair
+          path: |
+            generated/p7-r2-context-repair-release
+            generated/p7-r2-context-repair-input/plan.json
+            generated/p7-r2-context-repair-materialize.json
+            generated/p7-r2-context-repair-collect.json
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0
+
+      - name: Publish immutable technical repair Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh release view "$REPAIR_RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Refusing to mutate existing repair Release: $REPAIR_RELEASE_TAG" >&2
+            exit 2
+          fi
+          gh release create "$REPAIR_RELEASE_TAG"             generated/p7-r2-context-repair-release/*             --repo "$GITHUB_REPOSITORY"             --target "$GITHUB_SHA"             --title "Odyssée P7 R2 — Télémaque father context technical repair"             --notes "Technical integrity repair only. Same frozen S12 136-154 text, same cast/provider, exact Round 2 Ulysse C parameters, no Round 3 tuning. Télémaque keeps fr-FR-RemyMultilingualNeural and now uses explicit multilingual SSML lang fr-FR transport."             --prerelease
+
+      - name: Return evidence to Stream 1 and Stream 3
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import os
+          body = f"""STREAM 3 — P7 ROUND 2 FATHER CONTEXT TECHNICAL REPAIR MACHINE READY
+
+          Release: `{os.environ['REPAIR_RELEASE_TAG']}`
+          product: `{os.environ['GITHUB_SHA']}`
+          audio-engine: `{os.environ['AUDIO_ENGINE_REF']}`
+          run: `{os.environ['GITHUB_RUN_ID']}`
+
+          Scope rendered: S12 136–154 father context only.
+          Télémaque: same `fr-FR-RemyMultilingualNeural`, same +5%/+8Hz/+2%, same provider Edge, same frozen text.
+          Technical repair: explicit multilingual SSML `<lang xml:lang='fr-FR'>`.
+          Ulysse: exact Round 2 C settings preserved for all 9 lines.
+          Ulysse artistic parameter change: NO.
+          Recast: NO.
+          Frozen text change: NO.
+          Provider change: NO.
+          New Edge tuning / Round 3: NO.
+          Production Program mutation: NO.
+          Machine QA: PASS.
+
+          Human confirmation scope is technical father/context integrity only.
+          Frozen storyteller/loss/authority artistic FAIL evidence remains authoritative.
+          H2 remains suspended."""
+          open("generated/p7-r2-context-repair-comment.md", "w", encoding="utf-8").write(body)
+          PY
+          gh issue comment 112 --repo "$GITHUB_REPOSITORY"             --body-file generated/p7-r2-context-repair-comment.md
+          gh issue comment 164 --repo "$GITHUB_REPOSITORY"             --body-file generated/p7-r2-context-repair-comment.md
