@@ -1,0 +1,37 @@
+name: P6 S15 post-capture contract CI
+
+on:
+  pull_request:
+    paths:
+      - 'tools/p6_s15_pipeline.py'
+      - 'tools/p6_s15_post_capture.py'
+      - 'tests/test_odyssee_p6_s15_intake_pipeline.py'
+      - 'tests/test_odyssee_p6_s15_post_capture.py'
+      - 'series/odyssee/production/P6_STREAM3_READINESS_V1.json'
+      - 'series/odyssee/production/P6_S15_LOCAL_CONVERSION_RUNBOOK_V1.md'
+      - '.github/workflows/p6-s15-post-capture-ci.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/p6_s15_post_capture.py'
+      - 'tests/test_odyssee_p6_s15_post_capture.py'
+      - 'series/odyssee/production/P6_STREAM3_READINESS_V1.json'
+      - 'series/odyssee/production/P6_S15_LOCAL_CONVERSION_RUNBOOK_V1.md'
+      - '.github/workflows/p6-s15-post-capture-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Intake freeze contract
+        run: python -m unittest tests.test_odyssee_p6_s15_intake_pipeline -v
+      - name: Post-capture converted-only contract
+        run: python -m unittest tests.test_odyssee_p6_s15_post_capture -v
