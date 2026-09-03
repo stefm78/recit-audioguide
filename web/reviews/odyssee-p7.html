@@ -46,7 +46,7 @@ input[type=text],textarea{width:100%;background:#0c0e13;color:var(--text);border
 <script>
 (function(){
 "use strict";
-var REPO="stefm78/recit-audioguide",API="https://api.github.com/repos/"+REPO+"/releases/tags/";
+var DESCRIPTOR_BASE="data/";
 var STATES=[
 {id:"storyteller",title:"S05 — conteur / fierté → regret",goal:"B doit parler à des gens présents, avec davantage de vie; la fierté décroît vers le regret sans devenir théâtrale."},
 {id:"loss",title:"S06 — choc / perte",goal:"B doit faire sentir la perte d’Ithaque comme un événement vécu, sans plainte ni pathos."},
@@ -57,7 +57,7 @@ var required=["p7-review-index.json"];
 STATES.forEach(function(s){["a","b"].forEach(function(v){required.push("p7-"+s.id+"-"+v+".mp3");required.push("p7-"+s.id+"-"+v+".qa-report.json")})});
 var assets={},index=null,answers={};
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]})}
-function url(n){return assets[n]&&assets[n].browser_download_url||""}
+function url(n){return assets[n]&&assets[n].url||""}
 function render(){
  document.getElementById("states").innerHTML=STATES.map(function(s,i){
   return '<section class="card criterion" id="c-'+s.id+'"><div class="row"><span class="badge">'+(i+1)+'/4</span><h2 style="margin:0">'+esc(s.title)+'</h2></div>'+
@@ -74,12 +74,16 @@ async function load(){
  var tag=document.getElementById("tag").value.trim(),g=document.getElementById("gate"),d=document.getElementById("details");if(!tag)return;
  g.textContent="VÉRIFICATION";g.className="status warn";document.getElementById("review").classList.add("locked");
  try{
-  var r=await fetch(API+encodeURIComponent(tag));if(!r.ok)throw new Error("Release introuvable");
-  var rel=await r.json();assets={};(rel.assets||[]).forEach(function(a){assets[a.name]=a});
-  var miss=required.filter(function(n){return !assets[n]});if(miss.length)throw new Error("assets manquants: "+miss.join(", "));
-  var ir=await fetch(url("p7-review-index.json"));if(!ir.ok)throw new Error("index P7 illisible");index=await ir.json();
-  if(index.status!=="machine-ready-p7-review-assets")throw new Error("index status inattendu");
-  render();document.getElementById("review").classList.remove("locked");g.textContent="P7 MACHINE READY";g.className="status good";d.textContent="Release complète : "+tag;
+  if(!/^[A-Za-z0-9._-]+$/.test(tag))throw new Error("tag invalide");
+  var r=await fetch(DESCRIPTOR_BASE+encodeURIComponent(tag)+".json",{cache:"no-store"});
+  if(!r.ok)throw new Error("descripteur P7 non publié ("+r.status+")");
+  var descriptor=await r.json();
+  if(descriptor.tag!==tag)throw new Error("tag du descripteur incohérent");
+  if(descriptor.status!=="machine-ready-p7-review-assets")throw new Error("descripteur P7 non machine-ready");
+  assets=descriptor.assets||{};
+  var miss=required.filter(function(n){return !assets[n]||!assets[n].url});if(miss.length)throw new Error("assets manquants: "+miss.join(", "));
+  index={status:descriptor.status,tag:descriptor.tag,published_at:descriptor.published_at};
+  render();document.getElementById("review").classList.remove("locked");g.textContent="P7 MACHINE READY";g.className="status good";d.textContent="Release complète : "+tag+" · "+descriptor.asset_count+" assets.";
  }catch(e){g.textContent="P7 VERROUILLÉ";g.className="status bad";d.textContent=e.message}
 }
 function build(){

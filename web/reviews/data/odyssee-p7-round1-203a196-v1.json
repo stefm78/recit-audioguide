@@ -1,0 +1,78 @@
+{
+  "schema": "recit.odyssee.p7_review_release_descriptor.v1",
+  "tag": "odyssee-p7-round1-203a196-v1",
+  "status": "machine-ready-p7-review-assets",
+  "release_name": "Odyssée P7 — Ulysse continuity — Round 1",
+  "published_at": "2026-09-03T08:00:59Z",
+  "asset_count": 17,
+  "assets": {
+    "p7-authority-a.mp3": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-authority-a.mp3",
+      "size": 203564
+    },
+    "p7-authority-a.qa-report.json": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-authority-a.qa-report.json",
+      "size": 5411
+    },
+    "p7-authority-b.mp3": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-authority-b.mp3",
+      "size": 193244
+    },
+    "p7-authority-b.qa-report.json": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-authority-b.qa-report.json",
+      "size": 5409
+    },
+    "p7-father-a.mp3": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-father-a.mp3",
+      "size": 329084
+    },
+    "p7-father-a.qa-report.json": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-father-a.qa-report.json",
+      "size": 6673
+    },
+    "p7-father-b.mp3": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-father-b.mp3",
+      "size": 328844
+    },
+    "p7-father-b.qa-report.json": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-father-b.qa-report.json",
+      "size": 6670
+    },
+    "p7-loss-a.mp3": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-loss-a.mp3",
+      "size": 224684
+    },
+    "p7-loss-a.qa-report.json": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-loss-a.qa-report.json",
+      "size": 5555
+    },
+    "p7-loss-b.mp3": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-loss-b.mp3",
+      "size": 226124
+    },
+    "p7-loss-b.qa-report.json": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-loss-b.qa-report.json",
+      "size": 5558
+    },
+    "p7-review-index.json": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-review-index.json",
+      "size": 7168
+    },
+    "p7-storyteller-a.mp3": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-storyteller-a.mp3",
+      "size": 283964
+    },
+    "p7-storyteller-a.qa-report.json": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-storyteller-a.qa-report.json",
+      "size": 5902
+    },
+    "p7-storyteller-b.mp3": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-storyteller-b.mp3",
+      "size": 272444
+    },
+    "p7-storyteller-b.qa-report.json": {
+      "url": "https://github.com/stefm78/recit-audioguide/releases/download/odyssee-p7-round1-203a196-v1/p7-storyteller-b.qa-report.json",
+      "size": 5904
+    }
+  }
+}
