@@ -77,7 +77,7 @@
   "ulysses_provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json",
   "capture_required": "P6_S15_PRODUCTION_HUMAN_CAPTURE_REQUIRED",
   "machine_preparation": {
-    "state": "PRIVATE_INTAKE_FREEZE_GATE_READY",
+    "state": "PRIVATE_INTAKE_AND_POST_CAPTURE_STAGE_READY",
     "intake_tool": "tools/p6_s15_pipeline.py",
     "private_workspace_rule": "MUST_RESOLVE_OUTSIDE_PUBLIC_REPOSITORY_CHECKOUT",
     "intake_validates": [
@@ -105,6 +105,35 @@
         "constant_level_alignment_only"
       ]
     },
-    "raw_human_audio_publication": "FORBIDDEN"
+    "raw_human_audio_publication": "FORBIDDEN",
+    "post_capture_tool": "tools/p6_s15_post_capture.py",
+    "local_runbook": "series/odyssee/production/P6_S15_LOCAL_CONVERSION_RUNBOOK_V1.md",
+    "qualified_windows_runtime": {
+      "repository": "stefm78/audio-engine",
+      "run": 33670957570,
+      "artifact": "beltout-portable-runtime-windows-x86_64",
+      "artifact_digest": "sha256:ea9f387016a4452b9918a980214e26a2bcb513a31ad561cc91d0f8dc9072bcc1",
+      "engine_ref": "f14a941d9218c2e9e632d7198557e7a3e48ff894",
+      "windows_cpu_model_load": "PASS",
+      "contains_human_audio": false
+    },
+    "target_anchor": {
+      "repository": "stefm78/audio-engine",
+      "run": 33603995656,
+      "artifact": "local-tts-p6-beltout-r0",
+      "derived_anchor_sha256": "dc6266a224a3de4236c0eca8cbfb2364e97b16f558f514da48616451a3acad45"
+    },
+    "post_capture_pipeline": {
+      "resume_rule": "VALID_EXISTING_CONVERSION_IS_VERIFIED_AND_SKIPPED_NEVER_RECONVERTED",
+      "partial_existing_output": "FAIL_CLOSED_NO_RETRY",
+      "webm_opus_decode": "IN_MEMORY_ONLY_NO_PERSISTENT_NORMALIZED_RAW_FILE",
+      "publishable_content": "CONVERTED_BELTOUT_OUTPUTS_ONLY",
+      "future_performance_provider": "immutable-voice-clips-v1",
+      "identity_provider_preserved": "edge:fr-FR-HenriNeural",
+      "immutable_release_tag": "odyssee-p6-s15-ulysses-converted-v1",
+      "immutable_release_asset": "p6-s15-ulysses-converted-v1.tar.xz",
+      "staged_product_mutation": "GENERATED_OUTSIDE_REPOSITORY_AND_APPLIED_ONLY_AFTER_CONVERTED_RELEASE_PUBLICATION"
+    },
+    "h2_policy": "FORBIDDEN_WHILE_P7_OPEN"
   }
 }
