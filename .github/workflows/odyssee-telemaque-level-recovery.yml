@@ -1,0 +1,217 @@
+name: Odyssée Télémaque level-only recovery
+
+on:
+  push:
+    branches:
+      - prod/178-telemaque-level-recovery
+    paths:
+      - .github/workflows/odyssee-telemaque-level-recovery.yml
+
+permissions:
+  contents: write
+  issues: write
+  actions: read
+
+env:
+  SOURCE_RUN: "33771590501"
+  SOURCE_ARTIFACT_ID: "9900070422"
+  SOURCE_ARTIFACT_SHA256: "3910cdf1db56c18c9453e57498fa2bb921c4b7bd94545c283062158006989833"
+  SOURCE_AUDIO_SHA256: "6675080bb3b19e1a51c8feb6e6b98fdb1cdd7a6807d60ed0feaa69566c7b935f"
+  AUDIO_ENGINE_REF: "8b9d9d2f55e916695e28e56f67abd585c266434b"
+  RELEASE_TAG: "odyssee-telemaque-fr-clean-level-recovery-v1"
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Checkout exact Audio Engine QA/mastering code
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: ${{ env.AUDIO_ENGINE_REF }}
+          path: .audio-engine
+
+      - name: Install QA-only runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check imageio-ffmpeg==0.6.0
+          python -m pip install --disable-pip-version-check --no-deps ./.audio-engine
+
+      - name: Download existing post-render artifact only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p recovered/source
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$SOURCE_ARTIFACT_ID/zip" > recovered/source/post-render.zip
+          test "$(sha256sum recovered/source/post-render.zip | cut -d' ' -f1)" = "$SOURCE_ARTIFACT_SHA256"
+          python - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+          z=Path('recovered/source/post-render.zip')
+          with ZipFile(z) as f:
+              f.extractall('recovered/source/unpacked')
+          PY
+          find recovered/source/unpacked -type f -maxdepth 6 -print
+
+      - name: Verify exact saved candidate and provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC="recovered/source/unpacked/render/odyssee-telemaque-fr-clean-probe/audio.mp3"
+          test -s "$SRC"
+          test "$(sha256sum "$SRC" | cut -d' ' -f1)" = "$SOURCE_AUDIO_SHA256"
+          jq -e '.status=="FAIL" and .failed_checks==["levels"]' \
+            recovered/source/unpacked/render/odyssee-telemaque-fr-clean-probe/qa-report.json >/dev/null
+          jq -e '.provider.name=="chatterbox-multilingual-v3" and .mix.voice_clip_count==3 and .mix.voice_cache_hits==3' \
+            recovered/source/unpacked/render/odyssee-telemaque-fr-clean-probe/manifest.json >/dev/null
+
+      - name: Apply existing transparent level and peak guard only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p recovered/final/odyssee-telemaque-fr-clean-probe
+          cp recovered/source/unpacked/render/odyssee-telemaque-fr-clean-probe/manifest.json recovered/final/odyssee-telemaque-fr-clean-probe/
+          cp recovered/source/unpacked/render/odyssee-telemaque-fr-clean-probe/transcript.json recovered/final/odyssee-telemaque-fr-clean-probe/
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from audio_engine.audio import encode_concat
+          from audio_engine.profiles import get_profile
+          src=Path('recovered/source/unpacked/render/odyssee-telemaque-fr-clean-probe/audio.mp3')
+          out=Path('recovered/final/odyssee-telemaque-fr-clean-probe/audio.mp3')
+          guard=encode_concat([src], out, get_profile('speech'))
+          Path('recovered/final/encoding-peak-guard.json').write_text(json.dumps(guard,indent=2)+'\n')
+          print(json.dumps(guard,indent=2))
+          PY
+
+      - name: Replay exact Audio Engine QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          audio-engine qa recovered/final/odyssee-telemaque-fr-clean-probe > recovered/final/qa-stdout.json
+          jq -e '.status=="PASS" and (.failed_checks|length)==0' recovered/final/odyssee-telemaque-fr-clean-probe/qa-report.json >/dev/null
+          jq -e '.checks[] | select(.id=="levels") | .status=="PASS"' recovered/final/odyssee-telemaque-fr-clean-probe/qa-report.json >/dev/null
+          cat recovered/final/odyssee-telemaque-fr-clean-probe/qa-report.json
+
+      - name: Build recovery evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp recovered/final/odyssee-telemaque-fr-clean-probe/audio.mp3 recovered/final/telemaque-fr-clean-probe-level-recovered.mp3
+          cp recovered/final/odyssee-telemaque-fr-clean-probe/qa-report.json recovered/final/telemaque-fr-clean-probe-level-recovered.qa-report.json
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          def sha(p):
+              h=hashlib.sha256(); h.update(Path(p).read_bytes()); return h.hexdigest()
+          qa=json.loads(Path('recovered/final/odyssee-telemaque-fr-clean-probe/qa-report.json').read_text())
+          levels=next(x for x in qa['checks'] if x['id']=='levels')['evidence']
+          idx={
+            'schema':'recit.odyssee.telemaque_level_recovery.v1',
+            'status':'TELEMAQUE_CHATTERBOX_LEVEL_RECOVERY_MACHINE_PASS',
+            'source_run':33771590501,
+            'source_artifact_id':9900070422,
+            'source_artifact_sha256':'3910cdf1db56c18c9453e57498fa2bb921c4b7bd94545c283062158006989833',
+            'source_audio_sha256':'6675080bb3b19e1a51c8feb6e6b98fdb1cdd7a6807d60ed0feaa69566c7b935f',
+            'source_failed_check':'levels',
+            'processing':'existing audio-engine encode_concat level/peak guard only',
+            'audio_engine_ref':'8b9d9d2f55e916695e28e56f67abd585c266434b',
+            'provider_inference_run':False,
+            'resynthesis':False,
+            'provider_change':False,
+            'text_change':False,
+            'recovered_audio_sha256':sha('recovered/final/telemaque-fr-clean-probe-level-recovered.mp3'),
+            'qa_report_sha256':sha('recovered/final/telemaque-fr-clean-probe-level-recovered.qa-report.json'),
+            'levels':levels,
+            'machine_qa':'PASS',
+            'human_gate':'REQUIRED',
+            'h2':'SUSPENDED_PENDING_TELEMAQUE_HUMAN_GATE'
+          }
+          Path('recovered/final/telemaque-fr-clean-level-recovery-index.json').write_text(json.dumps(idx,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps(idx,ensure_ascii=False,indent=2))
+          PY
+
+      - name: Upload recovery artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: telemaque-178-level-recovery-pass
+          path: |
+            recovered/final/telemaque-fr-clean-probe-level-recovered.mp3
+            recovered/final/telemaque-fr-clean-probe-level-recovered.qa-report.json
+            recovered/final/telemaque-fr-clean-level-recovery-index.json
+            recovered/final/encoding-peak-guard.json
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0
+
+      - name: Publish immutable listening release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release already exists; refusing replacement" >&2
+            exit 2
+          fi
+          gh release create "$RELEASE_TAG" \
+            recovered/final/telemaque-fr-clean-probe-level-recovered.mp3 \
+            recovered/final/telemaque-fr-clean-probe-level-recovered.qa-report.json \
+            recovered/final/telemaque-fr-clean-level-recovery-index.json \
+            recovered/final/encoding-peak-guard.json \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --prerelease \
+            --title "Odyssée — Télémaque French-clean level recovery" \
+            --notes "#178 technical recovery only. Existing Chatterbox candidate from artifact 9900070422; no synthesis/provider inference. Existing audio-engine level/peak guard only, then exact QA replay. Human French/identity/naturalness gate remains required. H2 remains suspended."
+
+      - name: Return listening gate to issue 178
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          I=$(jq -r '.levels.integrated_lufs' recovered/final/telemaque-fr-clean-level-recovery-index.json)
+          TP=$(jq -r '.levels.true_peak_dbtp' recovered/final/telemaque-fr-clean-level-recovery-index.json)
+          SHA=$(jq -r '.recovered_audio_sha256' recovered/final/telemaque-fr-clean-level-recovery-index.json)
+          cat > recovered/final/comment.md <<EOF
+          STREAM 3 — #178 LEVEL-ONLY TECHNICAL RECOVERY PASS
+
+          Source candidate: run $SOURCE_RUN / artifact $SOURCE_ARTIFACT_ID.
+          Original audio SHA-256: $SOURCE_AUDIO_SHA256.
+          Resynthesis: NO.
+          Provider inference: NO.
+          Provider/text/seed/reference change: NO.
+
+          Processing: existing Audio Engine transparent level/peak guard only.
+          Audio Engine: $AUDIO_ENGINE_REF.
+
+          Exact QA replay: PASS.
+          Recovered levels: ${I} LUFS / ${TP} dBTP.
+          Recovered audio SHA-256: $SHA.
+
+          Listening release:
+          https://github.com/$GITHUB_REPOSITORY/releases/tag/$RELEASE_TAG
+
+          Human gate now required on the published excerpt:
+          - French fully clean / zero non-French passage;
+          - recognisable continuity with accepted P1 Télémaque;
+          - credible young adult;
+          - natural phrasing;
+          - clear distinction from Ulysse;
+          - no caricature.
+
+          Machine PASS is not the human language/identity verdict.
+          H2 remains suspended pending human PASS.
+          EOF
+          gh issue comment 178 --repo "$GITHUB_REPOSITORY" --body-file recovered/final/comment.md
