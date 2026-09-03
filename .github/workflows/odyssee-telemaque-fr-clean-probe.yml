@@ -15,6 +15,11 @@ env:
   AUDIO_ENGINE_REF: ae03c9afc641459ef9287dc528e127d357cbc615
   RELEASE_TAG: odyssee-telemaque-fr-clean-probe-v1
   SOURCE_RELEASE_TAG: odyssee-p1-review-v1
+  RECOVERY_SOURCE_RUN: '33770743540'
+  EXPECTED_REFERENCE_SHA256: 16e4067f6ab09ecb5a8b8afa9ef7b578ff16b80a01c9d5725d2eb0a2c606bc8f
+  EXPECTED_FINGERPRINT_1: b70f8b8fc753a078e9f947ba05cc50402f4d35bf55a5970fab07dac282157683
+  EXPECTED_FINGERPRINT_2: 6f81a258720cd3212d630827d6bd3284d698a7565b3445614d2bcddfda9af4f2
+  EXPECTED_FINGERPRINT_3: 59954baa87b98d4d7005a5811335df587923b3fcc166ceec5766ad324ef66296
 
 jobs:
   contract:
@@ -342,29 +347,105 @@ jobs:
           audio-engine provider-package hydrate-references "$package"             --workspace-root .             > generated/telemaque-fr-clean/reference-hydration.json
           audio-engine provider-package validate "$package"             --verify-files             --workspace-root .             --voice-pack series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json             > generated/telemaque-fr-clean/provider-validation.json
 
-      - name: Synthesize the 3 authorized lines exactly once
+      - name: Replay exact same 3 inputs once and prove equivalence
         shell: bash
         run: |
           set -euo pipefail
+          test "$(jq -r '.reference_lock.reference_sha256' generated/telemaque-fr-clean/input/plan.json)" = "$EXPECTED_REFERENCE_SHA256"
           mkdir -p generated/telemaque-fr-clean/render/.cache/voices
           audio-engine provider-cache prewarm             generated/telemaque-fr-clean/input/probe-program.json             --voices series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json             --provider-package generated/telemaque-fr-clean/input/provider-package.json             --cache-root generated/telemaque-fr-clean/render/.cache/voices             --provider-model-cache generated/provider-models             --workspace-root .             --report generated/telemaque-fr-clean/prewarm-report.json
-          jq -e '
+          jq -e             --arg f1 "$EXPECTED_FINGERPRINT_1"             --arg f2 "$EXPECTED_FINGERPRINT_2"             --arg f3 "$EXPECTED_FINGERPRINT_3"             '
             .status == "ready"
             and .provider == "chatterbox-multilingual-v3"
             and .segment_count == 3
             and .cache_hits == 0
             and .cache_misses == 3
+            and .fingerprints == [$f1,$f2,$f3]
           ' generated/telemaque-fr-clean/prewarm-report.json >/dev/null
 
+      - name: Persist exact replay cache before any QA
+        uses: actions/upload-artifact@v4
+        with:
+          name: telemaque-178-exact-replay-cache-${{ github.run_id }}
+          path: |
+            generated/telemaque-fr-clean/input
+            generated/telemaque-fr-clean/prewarm-report.json
+            generated/telemaque-fr-clean/render/.cache/voices
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0
+
       - name: Render cache-only and machine QA
+        id: machine_qa
         shell: bash
         run: |
           set -euo pipefail
           audio-engine render generated/telemaque-fr-clean/input/probe-program.json             --out generated/telemaque-fr-clean/render             --voices series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json             --workspace-root .             --provider-model-cache generated/provider-models             --provider-package generated/telemaque-fr-clean/input/provider-package.json             --cache-only-promoted-provider chatterbox-multilingual-v3             > generated/telemaque-fr-clean/render.json
+          set +e
           audio-engine qa generated/telemaque-fr-clean/render/odyssee-telemaque-fr-clean-probe             > generated/telemaque-fr-clean/render/odyssee-telemaque-fr-clean-probe/qa-report.json
-          jq -e '.status == "PASS"' generated/telemaque-fr-clean/render/odyssee-telemaque-fr-clean-probe/qa-report.json >/dev/null
+          qa_rc=$?
+          set -e
+          if [ "$qa_rc" -ne 0 ] && [ "$qa_rc" -ne 2 ]; then
+            exit "$qa_rc"
+          fi
+          qa_status=$(jq -r '.status' generated/telemaque-fr-clean/render/odyssee-telemaque-fr-clean-probe/qa-report.json)
+          if [ "$qa_status" != "PASS" ] && [ "$qa_status" != "FAIL" ]; then
+            echo "Unexpected QA status: $qa_status" >&2
+            exit 3
+          fi
+          echo "status=$qa_status" >> "$GITHUB_OUTPUT"
+          cat generated/telemaque-fr-clean/render/odyssee-telemaque-fr-clean-probe/qa-report.json
+
+      - name: Persist post-render technical evidence regardless of QA verdict
+        if: always() && steps.machine_qa.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: telemaque-178-post-render-evidence-${{ github.run_id }}
+          path: |
+            generated/telemaque-fr-clean/input
+            generated/telemaque-fr-clean/prewarm-report.json
+            generated/telemaque-fr-clean/render.json
+            generated/telemaque-fr-clean/render/odyssee-telemaque-fr-clean-probe
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0
+
+      - name: Report technical QA HOLD without human verdict
+        if: steps.machine_qa.outputs.status == 'FAIL'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          report=generated/telemaque-fr-clean/render/odyssee-telemaque-fr-clean-probe/qa-report.json
+          failed=$(jq -c '.failed_checks' "$report")
+          cat > generated/telemaque-fr-clean/qa-hold-comment.md <<EOF
+          STREAM 3 — #178 EXACT-REPLAY TECHNICAL QA HOLD
+
+          Recovery source run: $RECOVERY_SOURCE_RUN
+          recovery run: $GITHUB_RUN_ID
+          product: $GITHUB_SHA
+
+          Exact replay constraints:
+          - same P1 reference SHA-256: $EXPECTED_REFERENCE_SHA256
+          - same provider / language_id=fr / fixed seed / parameter set
+          - same three input fingerprints as run $RECOVERY_SOURCE_RUN
+          - 3 fresh syntheses, 0 cache hits
+          - cache persisted immediately after synthesis
+          - no best-of-N, seed change, tuning, provider sweep, text change, Remy/Edge, Ulysse change, or Round 3 Edge
+
+          Cache-only render completed.
+          Machine QA: FAIL
+          Failed checks: $failed
+
+          This is a TECHNICAL_QA_HOLD only.
+          No Télémaque human identity/language verdict is requested.
+          H2 remains suspended.
+          EOF
+          gh issue comment 178 --repo "$GITHUB_REPOSITORY" --body-file generated/telemaque-fr-clean/qa-hold-comment.md
 
       - name: Collect immutable machine-ready human gate
+        if: steps.machine_qa.outputs.status == 'PASS'
         shell: bash
         run: |
           set -euo pipefail
@@ -455,6 +536,7 @@ jobs:
           test "$(find generated/telemaque-fr-clean/release -maxdepth 1 -type f | wc -l)" -eq 4
 
       - name: Upload exact run evidence
+        if: steps.machine_qa.outputs.status == 'PASS'
         uses: actions/upload-artifact@v4
         with:
           name: odyssee-telemaque-fr-clean-probe-v1
@@ -471,6 +553,7 @@ jobs:
           compression-level: 0
 
       - name: Publish immutable bounded probe Release
+        if: steps.machine_qa.outputs.status == 'PASS'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -478,6 +561,7 @@ jobs:
           gh release create "$RELEASE_TAG"             generated/telemaque-fr-clean/release/*             --repo "$GITHUB_REPOSITORY"             --target "$GITHUB_SHA"             --prerelease             --title "Odyssée — Télémaque French-clean bounded Chatterbox probe"             --notes "#178 only. One local Chatterbox Multilingual V3 parameter set with language_id=fr, conditioned on the exact HUMAN-PASS P1 Télémaque reference. Exact frozen S12 segments 137/147/153. No best-of-N, no seed retry, no tuning loop, no cloud TTS, no text change, no Remy/Edge retry, no Ulysse change, no Round 3 Edge. HUMAN verdict still required; H2 remains suspended."
 
       - name: Return machine-ready human gate to issue 178 only
+        if: steps.machine_qa.outputs.status == 'PASS'
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
