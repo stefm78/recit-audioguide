@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/odyssee-p7-render.yml'
+      - 'tools/p7_render.py'
+      - 'tests/test_odyssee_p7_render.py'
 
 permissions:
   contents: write
