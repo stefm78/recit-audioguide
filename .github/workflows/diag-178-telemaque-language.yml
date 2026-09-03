@@ -24,7 +24,7 @@ jobs:
 
       - name: Install independent ASR diagnostic
         run: |
-          python -m pip install --disable-pip-version-check faster-whisper==1.2.0
+          python -m pip install --disable-pip-version-check faster-whisper==1.2.0 requests
 
       - name: Download immutable HUMAN FAIL father repair
         run: |
