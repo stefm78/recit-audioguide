@@ -1,3 +1,35 @@
+## Current frozen P7 conclusion — Ulysse escalated, Télémaque separated
+
+Stream 1 final P7 Ulysse conclusion:
+
+`P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER`
+
+The Edge artistic budget is exhausted.
+
+Hard rules:
+- no Round 3 Edge;
+- no Ulysse recast;
+- no frozen-text change;
+- preserve Henri/Ulysse identity target.
+
+New Ulysse lane:
+- issue #179 — Stream 2 performance-provider escalation preserving Henri/Ulysse identity.
+
+Separate production defect:
+- issue #178 — Télémaque French language-integrity defect on RemyMultilingual / Edge.
+
+Separation rule:
+- #178 does **not** block or qualify the P7 Ulysse conclusion;
+- #178 does block S12 final production, Block D machine qualification and H2 until French-clean Télémaque exists;
+- #179 owns the Ulysse performance path from this point forward.
+
+Therefore H2 remains suspended for two independent reasons:
+1. Ulysse performance-provider path #179 not yet accepted/materialized;
+2. Télémaque French integrity #178 not yet resolved.
+
+Do not use Télémaque to reopen Edge or defer the P7 Ulysse escalation conclusion.
+
+
 # Odyssée — H2 machine preflight
 
 Authority: #110  
@@ -6,7 +38,7 @@ Product source used by run: `31030ac45c5343b23a2e7c858f49990e888c9a1a`
 Generic runtime used by run: `stefm78/audio-engine@52c933b6371103b977a2ccbcade291700bd0eb73`  
 Current product main when this preflight is recorded: `5de36966a3fb7ceb38c2108609776350c221894f`
 
-Status: **H2_SUSPENDED_P7_ROUND2**
+Status: **H2_SUSPENDED_ULYSSE_PROVIDER_AND_TELEMAQUE_INTEGRITY**
 
 ## Frozen Round 2 human result — Edge artistic budget exhausted
 

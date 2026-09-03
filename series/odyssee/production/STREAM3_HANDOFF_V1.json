@@ -271,7 +271,7 @@
       "source": "series/odyssee/text/block-d.md",
       "source_blob": "a036ae79ba5102af871cb722e0cc5d6ef313236c",
       "spoken_words": 3760,
-      "state": "READY_FOR_STREAM3_BLOCK_RENDER_AFTER_S15_EXACT_PERFORMANCE_MATERIALIZATION",
+      "state": "BLOCKED_BY_TELEMAQUE_LANGUAGE_INTEGRITY_AND_ULYSSE_PROVIDER_MATERIALIZATION",
       "ready_now": [
         "S12",
         "S13",
@@ -282,8 +282,14 @@
         "S15_ulysse_explanatory_lines",
         "S15_ulysse_emotional_capability"
       ],
-      "blocked_only": [],
-      "external_dependencies": [],
+      "blocked_only": [
+        "TELEMAQUE_FRENCH_LANGUAGE_INTEGRITY_ISSUE_178",
+        "ULYSSE_PERFORMANCE_PROVIDER_PATH_ISSUE_179"
+      ],
+      "external_dependencies": [
+        "issue_178_telemaque_language_integrity",
+        "issue_179_ulysse_performance_provider"
+      ],
       "direction": "series/odyssee/production/blocks/BLOCK_D.md",
       "binding_authority": "series/odyssee/production/P6_FROZEN_S15_BINDING_V1.json",
       "stream3_work_remaining": [
@@ -387,7 +393,7 @@
         ],
         "current_scene_foundation_v1_is_human_h2_candidate": false,
         "reuse_existing_speech_audio": true,
-        "rule": "Dispatch exactly one H2 only after final P7 Round 2 yields P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS and all four blocks are machine-qualified in the same immutable review Release.",
+        "rule": "Dispatch exactly one H2 only after #179 yields an accepted Ulysse performance-provider production path, #178 Télémaque French integrity is resolved, and A+B+C+D are machine-qualified in the same immutable review Release.",
         "machine_confirmation_exact": "A+B+C+D MACHINE_QUALIFIED",
         "dispatch_forbidden_before_confirmation": true,
         "required_review_release_assets": [
@@ -410,7 +416,8 @@
           "scene-S15.qa-report.json"
         ],
         "partial_review_release_is_h2": false,
-        "additional_artistic_gate": "P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS"
+        "additional_artistic_gate": "ULYSSE_PERFORMANCE_PROVIDER_HUMAN_PASS_FROM_ISSUE_179",
+        "additional_technical_gate": "TELEMAQUE_FRENCH_LANGUAGE_INTEGRITY_RESOLVED_ISSUE_178"
       },
       "minimum_required_punctuations": {
         "S02": [
@@ -466,7 +473,7 @@
         "S14": "BOUND_PENDING_STREAM3_MATERIALIZATION"
       },
       "pre_h2_materialization_findings": [],
-      "current_state": "H2_SUSPENDED_P7_ROUND2",
+      "current_state": "H2_SUSPENDED_ULYSSE_PROVIDER_AND_TELEMAQUE_INTEGRITY",
       "historical_representative_scope_superseded": true,
       "review_authority": "series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.json",
       "review_protocol": "series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.md",
@@ -518,7 +525,7 @@
       ]
     },
     "p7_ulysse_performance_continuity": {
-      "state": "P7_ROUND2_HUMAN_RESULT_FROZEN_TECHNICAL_CONTEXT_REPAIR_ONLY",
+      "state": "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
       "authority_issue": 164,
       "round1_contract": "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_V1.json",
       "round1_human_result": "series/odyssee/review/P7_ROUND1_HUMAN_REVIEW_V1.json",
@@ -571,17 +578,50 @@
         "edge_artistic_budget_exhausted": true,
         "page_edge_budget_exhausted_false_is_ui_artifact": true
       },
-      "next_admissible_action": "TECHNICAL_CONTEXT_INTEGRITY_REPAIR_ONLY",
+      "next_admissible_action": "STREAM2_PERFORMANCE_PROVIDER_ESCALATION_ISSUE_179",
       "round3_edge_authorized": false,
       "repair_constraints": [
-        "preserve_all_round2_ulysse_C_parameters_exactly",
-        "repair_only_minimum_telemaque_context_language_integrity",
-        "no_recasting",
+        "no_round3_edge",
+        "no_ulysse_recast",
         "no_frozen_text_change",
-        "no_provider_change",
-        "no_new_edge_artistic_tuning"
+        "preserve_henri_ulysse_identity_target"
       ],
-      "post_repair_rule": "Technical repair does not replenish the Edge artistic budget. Frozen Round 2 artistic FAIL evidence remains authoritative. Any remaining/confirmed artistic FAIL after technical integrity is restored authorizes P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER."
+      "post_repair_rule": "Technical repair does not replenish the Edge artistic budget. Frozen Round 2 artistic FAIL evidence remains authoritative. Any remaining/confirmed artistic FAIL after technical integrity is restored authorizes P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER.",
+      "final_conclusion": "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
+      "new_ulysse_lane_issue": 179,
+      "telemaque_separate_defect_issue": 178,
+      "telemaque_blocks_p7_ulysse_conclusion": false,
+      "edge_artistic_budget_exhausted": true,
+      "telemaque_separation": {
+        "issue": 178,
+        "state": "SEPARATE_PRODUCTION_DEFECT",
+        "blocks": [
+          "S12_FINAL_PRODUCTION",
+          "BLOCK_D_MACHINE_QUALIFICATION",
+          "H2"
+        ],
+        "does_not_block": [
+          "P7_ULYSSE_CONCLUSION",
+          "ISSUE_179"
+        ]
+      }
+    },
+    "telemaque_language_integrity": {
+      "state": "OPEN_SEPARATE_PRODUCTION_DEFECT",
+      "issue": 178,
+      "classification": "TELEMAQUE_EDGE_MULTILINGUAL_LANGUAGE_INTEGRITY_DEFECT",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "frozen_text_change": false,
+      "relation_to_p7_ulysse": "ORTHOGONAL",
+      "blocks": [
+        "S12_FINAL_PRODUCTION",
+        "BLOCK_D_MACHINE_QUALIFICATION",
+        "H2_DISPATCH"
+      ],
+      "does_not_block": [
+        "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
+        "STREAM2_ISSUE_179"
+      ]
     }
   },
   "engine_contract": {
