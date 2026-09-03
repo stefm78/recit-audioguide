@@ -15,7 +15,7 @@ except ModuleNotFoundError:
 ROOT = r2.ROOT
 CONTRACT = r2.CONTRACT
 MANIFEST = r2.MANIFEST
-ENGINE_REF = "1ea5c052d2212875c1f8290bc179908265387cf8"
+ENGINE_REF = "ae03c9afc641459ef9287dc528e127d357cbc615"
 ROUND2_RELEASE_TAG = "odyssee-p7-round2-line-microprosody-v1"
 ROUND2_FATHER_ASSET = "p7-r2-father-c.mp3"
 ROUND2_FATHER_SHA256 = "cb72b83a5df08f4a8af958e0ddd6fc6b3af797253d08013a20c0101d6cd8484d"
@@ -249,7 +249,10 @@ def materialize(out_dir, root=ROOT):
         "repair": {
             "scope": "TELEMAQUE_CONTEXT_LANGUAGE_TRANSPORT_ONLY",
             "spoken_language": "fr-FR",
-            "ssml_requirement": "<lang xml:lang='fr-FR'>",
+            "transport_method": "FROZEN_FATHER_CONTEXT_CACHE_PRIME",
+            "context_source": "EXACT_S12_136_154_FROZEN_TEXT_ONLY",
+            "added_spoken_words": 0,
+            "custom_ssml": False,
             "multilingual_voice_only": True,
             "ulysse_artistic_parameter_change": False,
             "recasting": False,
@@ -315,7 +318,296 @@ def _assert_transcript(plan, transcript):
             )
 
 
-def collect(plan_path, render_root, release_out, product_sha):
+
+def _context_text_and_spans(program, start_segment):
+    texts = [str(item["text"]) for item in program.get("segments") or []]
+    context = "\n".join(texts)
+    spans = []
+    cursor = 0
+    for offset, text in enumerate(texts):
+        spans.append({
+            "segment": int(start_segment) + offset,
+            "start": cursor,
+            "end": cursor + len(text),
+            "text": text,
+        })
+        cursor += len(text) + 1
+    return context, spans
+
+
+def _assign_word_boundaries(context, spans, events):
+    assigned = {item["segment"]: [] for item in spans}
+    cursor = 0
+    for event_index, event in enumerate(events):
+        token = str(event.get("text") or "")
+        if not token:
+            raise RepairError("Edge WordBoundary without text")
+        found = context.find(token, cursor)
+        if found < 0:
+            raise RepairError(
+                f"cannot map Edge WordBoundary token {token!r} after character {cursor}"
+            )
+        owner = next(
+            (
+                item
+                for item in spans
+                if item["start"] <= found < item["end"]
+            ),
+            None,
+        )
+        if owner is None:
+            raise RepairError(
+                f"Edge WordBoundary token {token!r} mapped outside a frozen line"
+            )
+        normalized = {
+            "event_index": event_index,
+            "text": token,
+            "offset": int(event["offset"]),
+            "duration": int(event["duration"]),
+            "source_char": found,
+        }
+        assigned[owner["segment"]].append(normalized)
+        cursor = found + len(token)
+    return assigned
+
+
+def _clip_bounds(events, first_index, last_index):
+    first = events[first_index]
+    last = events[last_index]
+    first_start = int(first["offset"])
+    last_end = int(last["offset"]) + int(last["duration"])
+
+    start = first_start
+    if first_index > 0:
+        previous = events[first_index - 1]
+        previous_end = int(previous["offset"]) + int(previous["duration"])
+        if previous_end < first_start:
+            start = previous_end + (first_start - previous_end) // 2
+
+    end = last_end
+    if last_index + 1 < len(events):
+        following = events[last_index + 1]
+        following_start = int(following["offset"])
+        if last_end < following_start:
+            end = last_end + (following_start - last_end) // 2
+
+    if end <= start:
+        raise RepairError("invalid frozen-context audio cut bounds")
+    return start, end
+
+
+def prime_context_cache(plan_path, cache_root, evidence_path):
+    import asyncio
+    import edge_tts
+
+    from audio_engine.audio import run_ffmpeg
+    from audio_engine.providers.edge import EdgeProvider
+    from audio_engine.voice.render import (
+        _materialize_provider_audio,
+        voice_fingerprint,
+    )
+    from audio_engine.voices import resolve_segments
+
+    plan = load_json(plan_path)
+    if plan.get("status") != "READY_TO_RENDER_P7_R2_FATHER_CONTEXT_REPAIR":
+        raise RepairError("repair plan is not ready for cache priming")
+    if plan.get("engine_ref") != ENGINE_REF:
+        raise RepairError("repair plan engine ref drift")
+
+    program_path = ROOT / plan["program_path"]
+    voices_path = ROOT / plan["voice_pack_path"]
+    program = load_json(program_path)
+    voices = load_json(voices_path)
+    resolved = resolve_segments(program, voices)
+    start_segment = int(plan["range"]["start_segment"])
+    end_segment = int(plan["range"]["end_segment"])
+    if end_segment - start_segment + 1 != len(resolved):
+        raise RepairError("father context resolution length drift")
+
+    context, spans = _context_text_and_spans(program, start_segment)
+    expected_context = "\n".join(
+        item["text"]
+        for item in father_window(load_json(CONTRACT))["exact_guards"]
+    )
+    if context != expected_context:
+        raise RepairError("context prime is not exact frozen S12 136-154 text")
+
+    telemaque = []
+    for number in TELEMAQUE_SEGMENTS:
+        segment = resolved[number - start_segment]
+        observed = {
+            key: segment.get(key)
+            for key in (
+                "speaker",
+                "text",
+                "preset",
+                "voice",
+                "rate",
+                "pitch",
+                "volume",
+                "provider",
+                "language_locale",
+            )
+        }
+        expected = next(
+            item
+            for item in plan["telemaque_snapshot"]
+            if item["segment"] == number
+        )
+        expected_observed = {
+            key: expected.get(key)
+            for key in observed
+        }
+        if observed != expected_observed:
+            raise RepairError(
+                f"Télémaque resolved synthesis drift at segment {number}"
+            )
+        telemaque.append((number, segment))
+
+    provider = EdgeProvider()
+    context_audio = Path(cache_root).resolve().parent / "telemaque-frozen-context.raw.mp3"
+    context_audio.parent.mkdir(parents=True, exist_ok=True)
+    context_audio.unlink(missing_ok=True)
+    word_events = []
+
+    async def synthesize_context():
+        communicator = edge_tts.Communicate(
+            context,
+            EXPECTED_TELEMAQUE_PRESET["voice"],
+            rate=EXPECTED_TELEMAQUE_PRESET["rate"],
+            pitch=EXPECTED_TELEMAQUE_PRESET["pitch"],
+            volume=EXPECTED_TELEMAQUE_PRESET["volume"],
+            boundary="WordBoundary",
+        )
+        communicator._audio_engine_language_locale = "fr-FR"
+        communicator.tts_config._audio_engine_language_locale = "fr-FR"
+        with context_audio.open("wb") as handle:
+            async for message in communicator.stream():
+                if message["type"] == "audio":
+                    handle.write(message["data"])
+                elif message["type"] == "WordBoundary":
+                    word_events.append({
+                        "text": message["text"],
+                        "offset": int(message["offset"]),
+                        "duration": int(message["duration"]),
+                    })
+
+    asyncio.run(synthesize_context())
+    if not context_audio.is_file() or context_audio.stat().st_size <= 0:
+        raise RepairError("frozen father context synthesis produced no audio")
+    if not word_events:
+        raise RepairError("frozen father context synthesis produced no WordBoundary evidence")
+
+    assigned = _assign_word_boundaries(context, spans, word_events)
+    cache_root = Path(cache_root).resolve()
+    cache_root.mkdir(parents=True, exist_ok=True)
+    unique = {}
+    entries = []
+
+    try:
+        for number, segment in telemaque:
+            boundaries = assigned.get(number) or []
+            if not boundaries:
+                raise RepairError(
+                    f"no WordBoundary evidence for Télémaque segment {number}"
+                )
+            fingerprint = voice_fingerprint(segment, provider)
+            if fingerprint in unique:
+                prior = unique[fingerprint]
+                entries.append({
+                    "segment": number,
+                    "fingerprint": fingerprint,
+                    "cache_file": prior["cache_file"],
+                    "cache_sha256": prior["cache_sha256"],
+                    "alias_of_segment": prior["segment"],
+                    "context_cut_reused": True,
+                })
+                continue
+
+            first_index = boundaries[0]["event_index"]
+            last_index = boundaries[-1]["event_index"]
+            start_ticks, end_ticks = _clip_bounds(
+                word_events,
+                first_index,
+                last_index,
+            )
+            raw_clip = cache_root / f"{fingerprint}.context-cut.tmp.mp3"
+            final_clip = cache_root / f"{fingerprint}.mp3"
+            if final_clip.exists():
+                raise RepairError(
+                    f"refusing to overwrite pre-existing Télémaque cache clip {fingerprint}"
+                )
+            run_ffmpeg([
+                "-ss",
+                f"{start_ticks / 10_000_000:.7f}",
+                "-to",
+                f"{end_ticks / 10_000_000:.7f}",
+                "-i",
+                str(context_audio),
+                "-map_metadata",
+                "-1",
+                "-ac",
+                "1",
+                "-c:a",
+                "libmp3lame",
+                "-b:a",
+                "96k",
+                str(raw_clip),
+            ])
+            _materialize_provider_audio(raw_clip, final_clip, provider)
+            raw_clip.unlink(missing_ok=True)
+            entry = {
+                "segment": number,
+                "fingerprint": fingerprint,
+                "cache_file": str(final_clip),
+                "cache_sha256": sha256_file(final_clip),
+                "alias_of_segment": None,
+                "context_cut_reused": False,
+                "first_word": boundaries[0]["text"],
+                "last_word": boundaries[-1]["text"],
+                "start_ticks": start_ticks,
+                "end_ticks": end_ticks,
+            }
+            unique[fingerprint] = entry
+            entries.append(entry)
+    finally:
+        context_audio.unlink(missing_ok=True)
+
+    if tuple(item["segment"] for item in entries) != TELEMAQUE_SEGMENTS:
+        raise RepairError("context cache prime did not cover exact Télémaque scope")
+
+    evidence = {
+        "schema": "recit.odyssee.p7_r2_telemaque_frozen_context_prime.v1",
+        "status": "TELEMAQUE_FROZEN_FATHER_CONTEXT_CACHE_READY",
+        "engine_ref": ENGINE_REF,
+        "context_source": "EXACT_S12_136_154_FROZEN_TEXT_ONLY",
+        "context_sha256": hashlib.sha256(context.encode("utf-8")).hexdigest(),
+        "context_segment_count": len(spans),
+        "context_added_spoken_words": 0,
+        "custom_ssml": False,
+        "voice": EXPECTED_TELEMAQUE_PRESET["voice"],
+        "rate": EXPECTED_TELEMAQUE_PRESET["rate"],
+        "pitch": EXPECTED_TELEMAQUE_PRESET["pitch"],
+        "volume": EXPECTED_TELEMAQUE_PRESET["volume"],
+        "provider": EXPECTED_TELEMAQUE_PRESET["provider"],
+        "root_language_locale": "fr-FR",
+        "word_boundary_count": len(word_events),
+        "telemaque_segment_count": len(entries),
+        "unique_cache_clip_count": len(unique),
+        "entries": entries,
+        "ulysse_audio_synthesized_in_context_prime": False,
+        "ulysse_round2_parameters_changed": False,
+        "recasting": False,
+        "frozen_text_change": False,
+        "provider_change": False,
+        "new_edge_tuning": False,
+        "round3_edge": False,
+    }
+    write_json(evidence_path, evidence)
+    return evidence
+
+
+def collect(plan_path, render_root, release_out, product_sha, context_evidence_path):
     plan = load_json(plan_path)
     if plan.get("status") != "READY_TO_RENDER_P7_R2_FATHER_CONTEXT_REPAIR":
         raise RepairError("repair plan is not ready")
@@ -334,6 +626,18 @@ def collect(plan_path, render_root, release_out, product_sha):
     if any(repair.get(key) is not False for key in forbidden_true):
         raise RepairError("repair scope expanded beyond technical context")
 
+    context_evidence = load_json(context_evidence_path)
+    if context_evidence.get("status") != "TELEMAQUE_FROZEN_FATHER_CONTEXT_CACHE_READY":
+        raise RepairError("Télémaque frozen-context cache evidence is not ready")
+    if context_evidence.get("engine_ref") != ENGINE_REF:
+        raise RepairError("Télémaque context evidence engine ref drift")
+    if context_evidence.get("context_source") != "EXACT_S12_136_154_FROZEN_TEXT_ONLY":
+        raise RepairError("Télémaque context source expanded beyond frozen father")
+    if context_evidence.get("context_added_spoken_words") != 0:
+        raise RepairError("Télémaque context prime added spoken words")
+    if context_evidence.get("custom_ssml") is not False:
+        raise RepairError("custom SSML is forbidden by Edge transport")
+
     render_dir = Path(render_root).resolve() / plan["program_id"]
     audio = render_dir / "audio.mp3"
     qa = render_dir / "qa-report.json"
@@ -348,6 +652,21 @@ def collect(plan_path, render_root, release_out, product_sha):
 
     transcript = load_json(transcript_path)
     _assert_transcript(plan, transcript)
+    manifest_data = load_json(manifest)
+    fingerprints = (manifest_data.get("mix") or {}).get("voice_fingerprints") or []
+    if len(fingerprints) != 19:
+        raise RepairError("father repair manifest fingerprint count drift")
+    expected_prime = {
+        int(item["segment"]): item["fingerprint"]
+        for item in context_evidence.get("entries") or []
+    }
+    for number in TELEMAQUE_SEGMENTS:
+        if fingerprints[number - int(plan["range"]["start_segment"])] != expected_prime.get(number):
+            raise RepairError(
+                f"Télémaque segment {number} did not consume frozen-context cache"
+            )
+    if int((manifest_data.get("mix") or {}).get("voice_cache_hits") or 0) < len(TELEMAQUE_SEGMENTS):
+        raise RepairError("father repair did not reuse all eight primed Télémaque cache slots")
 
     release_out = Path(release_out).resolve()
     if release_out.exists():
@@ -386,7 +705,16 @@ def collect(plan_path, render_root, release_out, product_sha):
         "telemaque_segments": list(TELEMAQUE_SEGMENTS),
         "telemaque_voice": EXPECTED_TELEMAQUE_PRESET["voice"],
         "telemaque_spoken_language": "fr-FR",
-        "telemaque_transport": "SSML_LANG_FR_FR_MULTILINGUAL_ONLY",
+        "telemaque_transport": "FROZEN_FATHER_CONTEXT_CACHE_PRIME",
+        "context_prime_evidence_sha256": sha256_file(context_evidence_path),
+        "context_prime": {
+            "context_source": context_evidence["context_source"],
+            "context_sha256": context_evidence["context_sha256"],
+            "context_added_spoken_words": 0,
+            "custom_ssml": False,
+            "word_boundary_count": context_evidence["word_boundary_count"],
+            "unique_cache_clip_count": context_evidence["unique_cache_clip_count"],
+        },
         "ulysse_artistic_parameter_change": False,
         "recasting": False,
         "frozen_text_change": False,
@@ -408,22 +736,34 @@ def main(argv=None):
     sub = parser.add_subparsers(dest="command", required=True)
     prep = sub.add_parser("materialize")
     prep.add_argument("--out", required=True)
+    prime_cmd = sub.add_parser("prime-context-cache")
+    prime_cmd.add_argument("--plan", required=True)
+    prime_cmd.add_argument("--cache-root", required=True)
+    prime_cmd.add_argument("--evidence", required=True)
     collect_cmd = sub.add_parser("collect")
     collect_cmd.add_argument("--plan", required=True)
     collect_cmd.add_argument("--render-root", required=True)
     collect_cmd.add_argument("--release-out", required=True)
     collect_cmd.add_argument("--product-sha", required=True)
+    collect_cmd.add_argument("--context-evidence", required=True)
     args = parser.parse_args(argv)
 
     try:
         if args.command == "materialize":
             result = materialize(args.out)
+        elif args.command == "prime-context-cache":
+            result = prime_context_cache(
+                args.plan,
+                args.cache_root,
+                args.evidence,
+            )
         else:
             result = collect(
                 args.plan,
                 args.render_root,
                 args.release_out,
                 args.product_sha,
+                args.context_evidence,
             )
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
