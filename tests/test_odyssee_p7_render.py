@@ -55,8 +55,8 @@ class P7Round1RenderTests(unittest.TestCase):
             ]
         }
         validated = {
-            "start": 10,
-            "end": 12,
+            "start": 1,
+            "end": 3,
             "program": source,
             "voice_pack": voices,
         }
