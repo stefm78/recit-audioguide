@@ -387,7 +387,7 @@
         ],
         "current_scene_foundation_v1_is_human_h2_candidate": false,
         "reuse_existing_speech_audio": true,
-        "rule": "Dispatch exactly one H2 only after P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS and all four blocks are machine-qualified in the same immutable review Release.",
+        "rule": "Dispatch exactly one H2 only after final P7 Round 2 yields P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS and all four blocks are machine-qualified in the same immutable review Release.",
         "machine_confirmation_exact": "A+B+C+D MACHINE_QUALIFIED",
         "dispatch_forbidden_before_confirmation": true,
         "required_review_release_assets": [
@@ -466,7 +466,7 @@
         "S14": "BOUND_PENDING_STREAM3_MATERIALIZATION"
       },
       "pre_h2_materialization_findings": [],
-      "current_state": "H2_SUSPENDED_P7_ULYSSE_PERFORMANCE_CONTINUITY",
+      "current_state": "H2_SUSPENDED_P7_ROUND2",
       "historical_representative_scope_superseded": true,
       "review_authority": "series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.json",
       "review_protocol": "series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.md",
@@ -518,48 +518,43 @@
       ]
     },
     "p7_ulysse_performance_continuity": {
-      "state": "P7_READY_FOR_STREAM3_RENDER",
+      "state": "P7_ROUND2_READY_FOR_STREAM3_RENDER",
       "authority_issue": 164,
-      "contract": "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_V1.json",
-      "protocol": "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_V1.md",
-      "review_page": "web/reviews/odyssee-p7.html",
+      "round1_contract": "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_V1.json",
+      "round1_human_result": "series/odyssee/review/P7_ROUND1_HUMAN_REVIEW_V1.json",
+      "round1_release": "odyssee-p7-round1-203a196-v1",
+      "round1_result": {
+        "decision": "P7_EDGE_BOUNDED_RETUNE_REQUIRED",
+        "failed_states": [
+          "storyteller",
+          "loss",
+          "father",
+          "authority"
+        ],
+        "ulysse_identity": "PASS",
+        "ulysse_french": "PASS",
+        "less_mechanical_cold": "FAIL_ALL",
+        "dramatic_state": "FAIL_ALL",
+        "rhythm_alive": "FAIL_ALL",
+        "father_context_language": "FAIL_TECHNICAL_TELEMAQUE_ENGLISH"
+      },
+      "round2_contract": "series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_ROUND2_V1.json",
+      "round2_review_page": "web/reviews/odyssee-p7-round2.html",
+      "round2_release_tag": "odyssee-p7-round2-line-microprosody-v1",
       "voice": "fr-FR-HenriNeural",
       "provider": "edge",
       "recasting": false,
       "frozen_text_change": false,
-      "round_1_windows": [
-        {
-          "scene": "S05",
-          "range": "132-143",
-          "state": "storyteller_pride_to_regret"
-        },
-        {
-          "scene": "S06",
-          "range": "90-99",
-          "state": "shock_loss"
-        },
-        {
-          "scene": "S12",
-          "range": "136-154",
-          "state": "father_recognition"
-        },
-        {
-          "scene": "S14",
-          "range": "79-89",
-          "state": "controlled_authority"
-        }
-      ],
-      "variants": [
-        "A_current_baseline",
-        "B_state_directed_Henri_Edge"
-      ],
-      "bounded_retry": {
-        "max_additional_rounds": 1,
-        "scope": "failed_states_only"
-      },
+      "round2_method": "per-segment rate/pitch/volume/pause micro-prosody; explicit language_locale=fr-FR on every Edge segment",
+      "round2_new_clip_count": 4,
+      "comparator": "immutable Round 1 B clips",
+      "round2_is_final_edge_budget": true,
       "pass": "P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS",
-      "escalation": "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER_ONLY_AFTER_BOUNDED_EDGE_FAIL",
-      "production_rule": "Do not mutate Production Programs during P7; materialize temporary exact-window probes only."
+      "technical_fail": "P7_ROUND2_PROBE_INTEGRITY_FAIL",
+      "artistic_fail": "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
+      "no_round3_edge": true,
+      "escalation_rule": "Only a technically valid Round 2 artistic FAIL exhausts Henri/Edge and authorizes Stream 2 performance-provider work. Identity remains Henri/Ulysse; no recasting.",
+      "production_rule": "Temporary exact-window probes only; do not mutate Production Programs."
     }
   },
   "engine_contract": {

@@ -6,25 +6,42 @@ Product source used by run: `31030ac45c5343b23a2e7c858f49990e888c9a1a`
 Generic runtime used by run: `stefm78/audio-engine@52c933b6371103b977a2ccbcade291700bd0eb73`  
 Current product main when this preflight is recorded: `5de36966a3fb7ceb38c2108609776350c221894f`
 
-Status: **H2_SUSPENDED_P7_ULYSSE_PERFORMANCE_CONTINUITY**
+Status: **H2_SUSPENDED_P7_ROUND2**
 
-## Current P7 suspension — Ulysse performance continuity
+## Current P7 suspension — Round 2 final Henri/Edge budget
 
-New Production human finding:
+Round 1 human result:
 - Henri/Ulysse identity PASS;
-- narrative performance FAIL;
-- observation: too mechanical and cold.
+- Ulysse French PASS;
+- all four directed B states FAIL on less-mechanical/cold, dramatic-state fit and living rhythm;
+- no caricature finding;
+- father probe also exposed a separate technical context defect: Télémaque has audible English passages.
 
-Classification:
-`ULYSSE_PERFORMANCE_CONTINUITY_FAIL_NOT_CASTING`
+Round 1 decision:
+`P7_EDGE_BOUNDED_RETUNE_REQUIRED`
 
-Action:
-- P7 #164, Henri/Edge only;
-- four exact real-state windows;
+Round 2 is deliberately method-distinct within the same identity:
+- same `fr-FR-HenriNeural`;
 - no recasting;
-- no text change;
-- one bounded failed-state Edge retune maximum;
-- Stream 2 escalation only if that bounded Edge budget still fails materially.
+- no frozen-text change;
+- no provider change;
+- four C candidates only;
+- per-segment rate/pitch/volume/pause micro-prosody instead of one state-wide preset;
+- explicit `language_locale=fr-FR` on every Edge segment to remove the father probe context-language defect without changing voice/text.
+
+Authority:
+- `series/odyssee/review/P7_ROUND1_HUMAN_REVIEW_V1.json`;
+- `series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_ROUND2_V1.json`;
+- `web/reviews/odyssee-p7-round2.html`.
+
+This is the **final Edge round**.
+
+Decision after technically valid Round 2:
+- PASS -> `P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS`;
+- artistic FAIL -> `P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER`;
+- no Round 3 Edge.
+
+A remaining non-French context defect is `P7_ROUND2_PROBE_INTEGRITY_FAIL` and authorizes technical locale/transport repair only; it does not consume an artistic retry or imply Ulysse failure.
 
 H2 resume requires:
 `P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS + A+B+C+D MACHINE_QUALIFIED`.

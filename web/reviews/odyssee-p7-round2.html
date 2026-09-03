@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Odyssée — P7 Round 2 final Edge</title>
+<style>
+:root{color-scheme:dark;--bg:#101218;--panel:#181c24;--line:#343b49;--text:#f3f5f8;--muted:#aeb6c4;--good:#7ee787;--bad:#ff7b72;--warn:#f2cc60;--accent:#79c0ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:28px 18px 90px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.05}audio{width:100%;margin:8px 0}.muted{color:var(--muted)}.status,.badge{border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-weight:700}.good{color:var(--good)}.bad{color:var(--bad)}.warn{color:var(--warn)}
+input[type=text],textarea{width:100%;background:#0c0e13;color:var(--text);border:1px solid var(--line);border-radius:9px;padding:10px;font:inherit}textarea{min-height:80px}button{background:#222936;color:var(--text);border:1px solid var(--line);border-radius:9px;padding:9px 13px;font:inherit;cursor:pointer}.locked{opacity:.45;pointer-events:none}.criterion{border-left:4px solid var(--line)}.criterion.pass{border-left-color:var(--good)}.criterion.fail{border-left-color:var(--bad)}pre{white-space:pre-wrap;background:#0b0d12;border:1px solid var(--line);border-radius:10px;padding:14px}
+</style>
+</head><body><main>
+<p class="badge">P7 · Round 2 · dernier budget Henri/Edge</p>
+<h1>Ulysse : micro-prosodie ligne par ligne</h1>
+<p>Round 1 a conservé l’identité Henri et le français d’Ulysse, mais a échoué sur vie, état dramatique et rythme dans les quatre scènes. Round 2 teste la dernière capacité Edge non épuisée : variation par réplique.</p>
+<section class="card">
+<h2 style="margin-top:0">Release Round 2</h2>
+<div class="row"><input id="tag" type="text" placeholder="odyssee-p7-round2-line-microprosody-v1" style="max-width:620px"><button id="load">Charger</button><span id="gate" class="status warn">EN ATTENTE AUDIO</span></div>
+<p id="details" class="muted">La page ne contacte aucune API. Elle pointe directement vers les Releases immuables Round 1 et Round 2.</p>
+</section>
+<section class="card">
+<h2 style="margin-top:0">Règle</h2>
+<p><strong>B1</strong> = candidat Round 1 déjà rejeté. <strong>C2</strong> = nouveau candidat micro-prosodie. Jugez C2, pas la quantité de différence.</p>
+<p><strong>Observation</strong> et <strong>verdict artistique</strong> restent séparés.</p>
+</section>
+<div id="review" class="locked">
+<section class="card">
+<h2 style="margin-top:0">Intégrité technique du contexte</h2>
+<p>Le Round 1 father contenait des passages anglais de Télémaque. Round 2 force explicitement <code>fr-FR</code> sur tous les segments Edge sans changer voix ni texte.</p>
+<label>Observation<textarea id="techObs" placeholder="Ex. Télémaque reste entièrement français / passage anglais encore audible."></textarea></label>
+<div class="row"><strong>Contexte linguistique techniquement propre :</strong><label><input type="radio" name="tech" value="PASS"> PASS</label><label><input type="radio" name="tech" value="FAIL"> FAIL</label></div>
+</section>
+<div id="states"></div>
+<section class="card">
+<h2 style="margin-top:0">Continuité globale</h2>
+<p><strong>PASS si :</strong> les quatre C2 restent le même Ulysse/Henri tout en ayant des températures réellement distinctes.</p>
+<label>Observation<textarea id="globalObs"></textarea></label>
+<div class="row"><label><input type="radio" name="global" value="PASS"> PASS</label><label><input type="radio" name="global" value="FAIL"> FAIL</label></div>
+</section>
+<section class="card">
+<h2 style="margin-top:0">Décision finale P7</h2>
+<p>Si les clips sont techniquement propres : tout PASS = continuité Ulysse acquise. Tout FAIL artistique = budget Edge épuisé, escalade performance Stream 2. Aucun Round 3 Edge.</p>
+<div class="row"><button id="build">Construire le bilan</button><button id="copy" disabled>Copier</button><span id="result" class="status warn">INCOMPLET</span></div>
+<pre id="out" hidden></pre>
+</section>
+</div>
+<script>
+(function(){
+"use strict";
+var REPO="stefm78/recit-audioguide";
+var R1="odyssee-p7-round1-203a196-v1";
+var EXPECTED_R2="odyssee-p7-round2-line-microprosody-v1";
+var STATES=[
+{id:"storyteller",title:"S05 — conteur / fierté → regret",goal:"C2 doit avoir un arc interne : impulsion d’orgueil, justification, puis vrai refroidissement vers le regret."},
+{id:"loss",title:"S06 — choc / perte",goal:"C2 doit casser la cadence sur « Ithaque s’éloignait », retrouver brièvement l’urgence, puis retomber sans pathos."},
+{id:"father",title:"S12 — père / reconnaissance",goal:"C2 doit être réactif à Télémaque : fragile sur le nom, spontané sur les petites réponses, puis céder progressivement du terrain."},
+{id:"authority",title:"S14 — autorité contenue",goal:"C2 doit être dangereux par précision et variation d’appuis, sans froid uniforme, cri ni voix de bande-annonce."}
+];
+var answers={};
+function url(tag,name){return "https://github.com/"+REPO+"/releases/download/"+encodeURIComponent(tag)+"/"+encodeURIComponent(name)}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]})}
+function render(tag){
+ document.getElementById("states").innerHTML=STATES.map(function(s,i){
+  var b="p7-"+s.id+"-b.mp3",c="p7-r2-"+s.id+"-c.mp3";
+  return '<section class="card criterion" id="c-'+s.id+'"><div class="row"><span class="badge">'+(i+1)+'/4</span><h2 style="margin:0">'+esc(s.title)+'</h2></div>'+
+  '<p><strong>But C2 :</strong> '+esc(s.goal)+'</p><div class="grid"><div><h3>B1 — Round 1 rejeté</h3><audio controls preload="metadata" src="'+esc(url(R1,b))+'"></audio></div><div><h3>C2 — micro-prosodie</h3><audio controls preload="metadata" src="'+esc(url(tag,c))+'"></audio></div></div>'+
+  '<label><strong>Observation perceptive</strong><textarea data-obs="'+s.id+'" placeholder="Qu’entendez-vous réellement ?"></textarea></label>'+
+  '<p><strong>PASS C2 si :</strong> identité Henri préservée + français naturel + matériellement moins mécanique/froid que B1 + état juste + rythme vivant + pas de caricature.</p>'+
+  '<div class="row"><label><input type="radio" name="v-'+s.id+'" value="PASS"> PASS</label><label><input type="radio" name="v-'+s.id+'" value="FAIL"> FAIL</label></div></section>';
+ }).join("");
+ document.querySelectorAll("[data-obs]").forEach(function(x){x.addEventListener("input",function(){answers[x.dataset.obs]=answers[x.dataset.obs]||{};answers[x.dataset.obs].observation=x.value})});
+ STATES.forEach(function(s){document.querySelectorAll('input[name="v-'+s.id+'"]').forEach(function(x){x.addEventListener("change",function(){answers[s.id]=answers[s.id]||{};answers[s.id].verdict=x.value;style(s.id)})})});
+}
+function style(id){var c=document.getElementById("c-"+id),v=answers[id]&&answers[id].verdict;c.classList.remove("pass","fail");if(v==="PASS")c.classList.add("pass");if(v==="FAIL")c.classList.add("fail")}
+function load(){
+ var tag=document.getElementById("tag").value.trim(),g=document.getElementById("gate"),d=document.getElementById("details");
+ if(tag!==EXPECTED_R2){g.textContent="P7 R2 VERROUILLÉ";g.className="status bad";d.textContent="Tag attendu : "+EXPECTED_R2;document.getElementById("review").classList.add("locked");return}
+ render(tag);document.getElementById("review").classList.remove("locked");g.textContent="P7 ROUND 2";g.className="status good";d.textContent="Comparaison immutable B1 → C2 : "+tag;
+}
+function build(){
+ var tech=document.querySelector('input[name="tech"]:checked'),global=document.querySelector('input[name="global"]:checked');
+ var missing=STATES.filter(function(s){return !(answers[s.id]&&answers[s.id].verdict)});
+ if(!tech||!global||missing.length){alert("Tous les verdicts sont requis.");return}
+ var fails=STATES.filter(function(s){return answers[s.id].verdict==="FAIL"});
+ var decision;
+ if(tech.value==="FAIL") decision="P7_ROUND2_PROBE_INTEGRITY_FAIL";
+ else if(!fails.length&&global.value==="PASS") decision="P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS";
+ else decision="P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER";
+ var report={
+  schema:"recit.odyssee.p7_round2_human_review.v1",
+  round1_release_tag:R1,
+  round2_release_tag:document.getElementById("tag").value.trim(),
+  context_integrity:{observation:document.getElementById("techObs").value,verdict:tech.value},
+  states:Object.fromEntries(STATES.map(function(s){return [s.id,{observation:(answers[s.id]||{}).observation||"",artistic_verdict:answers[s.id].verdict}]})),
+  global_continuity:{observation:document.getElementById("globalObs").value,artistic_verdict:global.value},
+  decision:decision,
+  failed_states:fails.map(function(s){return s.id}),
+  edge_budget_exhausted:decision==="P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
+  identity_recasting_authorized:false,
+  frozen_text_change_authorized:false
+ };
+ var out=document.getElementById("out");out.hidden=false;out.textContent=JSON.stringify(report,null,2);document.getElementById("copy").disabled=false;var rs=document.getElementById("result");rs.textContent=decision;rs.className="status "+(decision==="P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS"?"good":"bad");
+}
+document.getElementById("load").addEventListener("click",load);
+document.getElementById("build").addEventListener("click",build);
+document.getElementById("copy").addEventListener("click",async function(){await navigator.clipboard.writeText(document.getElementById("out").textContent);this.textContent="✓ Copié"});
+var initial=new URLSearchParams(window.location.search).get("tag");if(initial){document.getElementById("tag").value=initial;load()}
+})();
+</script>
+</main></body></html>

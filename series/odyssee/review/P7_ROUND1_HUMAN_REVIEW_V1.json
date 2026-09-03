@@ -1,0 +1,42 @@
+{
+  "schema": "recit.odyssee.p7_human_review.v1",
+  "release_tag": "odyssee-p7-round1-203a196-v1",
+  "states": {
+    "storyteller": {
+      "observation": "identité Henri préservée=OK + français naturel=OK + moins mécanique/froid=KO + état juste=KO + rythme vivant=KO + pas de caricature=OK.",
+      "artistic_verdict": "FAIL"
+    },
+    "loss": {
+      "observation": "identité Henri préservée=OK + français naturel=OK + moins mécanique/froid=KO + état juste=KO + rythme vivant=KO + pas de caricature=OK.",
+      "artistic_verdict": "FAIL"
+    },
+    "father": {
+      "observation": "Télémaque a des passages en anglais. identité Henri préservée=OK + français naturel=OK + moins mécanique/froid=KO + état juste=KO + rythme vivant=KO + pas de caricature=OK.",
+      "artistic_verdict": "FAIL"
+    },
+    "authority": {
+      "observation": "identité Henri préservée=OK + français naturel=OK + moins mécanique/froid=KO + état juste=KO + rythme vivant=KO + pas de caricature=OK.",
+      "artistic_verdict": "FAIL"
+    }
+  },
+  "global_continuity": {
+    "observation": "",
+    "artistic_verdict": "FAIL"
+  },
+  "decision": "P7_EDGE_BOUNDED_RETUNE_REQUIRED",
+  "failed_states": [
+    "storyteller",
+    "loss",
+    "father",
+    "authority"
+  ],
+  "identity_recasting_authorized": false,
+  "stream1_classification": {
+    "ulysse_identity": "PASS",
+    "ulysse_french": "PASS",
+    "performance_continuity": "FAIL_ALL_FOUR_STATES",
+    "failure_mode": "MECHANICAL_COLD_STATE_FLAT_RHYTHM_FLAT",
+    "telemaque_context": "P7_PROBE_INTEGRITY_DEFECT_LANGUAGE",
+    "recasting": false
+  }
+}
