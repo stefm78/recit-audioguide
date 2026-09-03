@@ -24,8 +24,9 @@ REQUIRED_ASSETS = [
 class OdysseeH2ReviewSurfaceTests(unittest.TestCase):
     def test_contract_is_single_batch_and_fail_closed(self):
         data = json.loads(CONTRACT.read_text(encoding="utf-8"))
-        self.assertEqual(data["status"], "H2_SINGLE_BATCH_REVIEW_READY_PENDING_AUDIO")
+        self.assertEqual(data["status"], "H2_SUSPENDED_P7_ULYSSE_PERFORMANCE_CONTINUITY")
         self.assertEqual(data["entry_gate"]["exact_confirmation"], "A+B+C+D MACHINE_QUALIFIED")
+        self.assertEqual(data["entry_gate"]["additional_artistic_gate"], "P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS")
         self.assertTrue(data["entry_gate"]["fail_closed"])
         self.assertTrue(data["review_surface"]["one_batch"])
         self.assertTrue(data["review_surface"]["micro_reviews_forbidden"])
@@ -52,6 +53,8 @@ class OdysseeH2ReviewSurfaceTests(unittest.TestCase):
     def test_page_requires_complete_machine_qualified_release(self):
         text = PAGE.read_text(encoding="utf-8")
         self.assertIn("A+B+C+D MACHINE_QUALIFIED", text)
+        self.assertIn("P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS", text)
+        self.assertIn('var P7_GATE="PENDING"', text)
         self.assertIn("Release partielle — ce n’est pas H2.", text)
         for asset in REQUIRED_ASSETS:
             self.assertIn(asset, text)

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Odyssée — P7 Ulysse performance continuity</title>
+<style>
+:root{color-scheme:dark;--bg:#101218;--panel:#181c24;--line:#343b49;--text:#f3f5f8;--muted:#aeb6c4;--good:#7ee787;--bad:#ff7b72;--warn:#f2cc60;--accent:#79c0ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:28px 18px 90px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.05}h2{margin-top:34px}audio{width:100%;margin:8px 0}.muted{color:var(--muted)}.status,.badge{border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-weight:700}.good{color:var(--good)}.bad{color:var(--bad)}.warn{color:var(--warn)}
+input[type=text],textarea{width:100%;background:#0c0e13;color:var(--text);border:1px solid var(--line);border-radius:9px;padding:10px;font:inherit}textarea{min-height:80px}button{background:#222936;color:var(--text);border:1px solid var(--line);border-radius:9px;padding:9px 13px;font:inherit;cursor:pointer}.locked{opacity:.45;pointer-events:none}.criterion{border-left:4px solid var(--line)}.criterion.pass{border-left-color:var(--good)}.criterion.fail{border-left-color:var(--bad)}pre{white-space:pre-wrap;background:#0b0d12;border:1px solid var(--line);border-radius:10px;padding:14px}
+</style>
+</head><body><main>
+<p class="badge">P7 · performance continuity · Henri/Edge only</p>
+<h1>Ulysse : vivant sans changer de voix</h1>
+<p>Le finding est précis : <strong>identité Henri PASS</strong>, <strong>jeu narratif FAIL</strong> — trop mécanique et froid. P7 ne recaste pas Ulysse.</p>
+
+<section class="card">
+<h2 style="margin-top:0">Release P7</h2>
+<div class="row"><input id="tag" type="text" placeholder="Tag immutable P7" style="max-width:620px"><button id="load">Charger</button><span id="gate" class="status warn">EN ATTENTE AUDIO</span></div>
+<p id="details" class="muted">La page exige les 8 clips A/B et leurs QA dans une même Release.</p>
+</section>
+
+<section class="card">
+<h2 style="margin-top:0">Sémantique</h2>
+<p><strong>Observation</strong> = ce que vous entendez. <strong>Verdict</strong> = PASS/FAIL contre le but artistique.</p>
+<p class="muted">Exemple : « plus dramatique » n’est ni bon ni mauvais en soi. La question est : est-ce approprié, vivant et cohérent avec Ulysse ?</p>
+</section>
+
+<div id="review" class="locked">
+<div id="states"></div>
+<section class="card">
+<h2 style="margin-top:0">Continuité globale</h2>
+<p><strong>PASS si :</strong> les quatre états restent clairement le même Ulysse/Henri, tout en étant perceptiblement différents.</p>
+<label>Observation<textarea id="globalObs"></textarea></label>
+<div class="row"><label><input type="radio" name="global" value="PASS"> PASS</label><label><input type="radio" name="global" value="FAIL"> FAIL</label></div>
+</section>
+<section class="card">
+<h2 style="margin-top:0">Décision</h2>
+<p>PASS seulement si les 4 candidats B passent et si la continuité globale passe.</p>
+<div class="row"><button id="build">Construire le bilan</button><button id="copy" disabled>Copier</button><span id="result" class="status warn">INCOMPLET</span></div>
+<pre id="out" hidden></pre>
+</section>
+</div>
+
+<script>
+(function(){
+"use strict";
+var REPO="stefm78/recit-audioguide",API="https://api.github.com/repos/"+REPO+"/releases/tags/";
+var STATES=[
+{id:"storyteller",title:"S05 — conteur / fierté → regret",goal:"B doit parler à des gens présents, avec davantage de vie; la fierté décroît vers le regret sans devenir théâtrale."},
+{id:"loss",title:"S06 — choc / perte",goal:"B doit faire sentir la perte d’Ithaque comme un événement vécu, sans plainte ni pathos."},
+{id:"father",title:"S12 — père / reconnaissance",goal:"B doit écouter Télémaque, vouloir être reconnu sans exiger; chaleur retenue et réactivité."},
+{id:"authority",title:"S14 — autorité contenue",goal:"B doit être précis et dangereux sans crier, sans froideur uniforme ni voix de bande-annonce."}
+];
+var required=["p7-review-index.json"];
+STATES.forEach(function(s){["a","b"].forEach(function(v){required.push("p7-"+s.id+"-"+v+".mp3");required.push("p7-"+s.id+"-"+v+".qa-report.json")})});
+var assets={},index=null,answers={};
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]})}
+function url(n){return assets[n]&&assets[n].browser_download_url||""}
+function render(){
+ document.getElementById("states").innerHTML=STATES.map(function(s,i){
+  return '<section class="card criterion" id="c-'+s.id+'"><div class="row"><span class="badge">'+(i+1)+'/4</span><h2 style="margin:0">'+esc(s.title)+'</h2></div>'+
+  '<p><strong>But :</strong> '+esc(s.goal)+'</p><div class="grid"><div><h3>A — baseline Henri actuel</h3><audio controls src="'+esc(url("p7-"+s.id+"-a.mp3"))+'"></audio></div><div><h3>B — Henri dirigé par état</h3><audio controls src="'+esc(url("p7-"+s.id+"-b.mp3"))+'"></audio></div></div>'+
+  '<label><strong>Observation perceptive</strong><textarea data-obs="'+s.id+'" placeholder="Qu’entendez-vous réellement ?"></textarea></label>'+
+  '<p><strong>Verdict B :</strong> identité Henri préservée + français naturel + moins mécanique/froid + état juste + rythme vivant + pas de caricature.</p>'+
+  '<div class="row"><label><input type="radio" name="v-'+s.id+'" value="PASS"> PASS</label><label><input type="radio" name="v-'+s.id+'" value="FAIL"> FAIL</label></div></section>';
+ }).join("");
+ document.querySelectorAll("[data-obs]").forEach(function(x){x.addEventListener("input",function(){answers[x.dataset.obs]=answers[x.dataset.obs]||{};answers[x.dataset.obs].observation=x.value})});
+ STATES.forEach(function(s){document.querySelectorAll('input[name="v-'+s.id+'"]').forEach(function(x){x.addEventListener("change",function(){answers[s.id]=answers[s.id]||{};answers[s.id].verdict=x.value;style(s.id)})})});
+}
+function style(id){var c=document.getElementById("c-"+id),v=answers[id]&&answers[id].verdict;c.classList.remove("pass","fail");if(v==="PASS")c.classList.add("pass");if(v==="FAIL")c.classList.add("fail")}
+async function load(){
+ var tag=document.getElementById("tag").value.trim(),g=document.getElementById("gate"),d=document.getElementById("details");if(!tag)return;
+ g.textContent="VÉRIFICATION";g.className="status warn";document.getElementById("review").classList.add("locked");
+ try{
+  var r=await fetch(API+encodeURIComponent(tag));if(!r.ok)throw new Error("Release introuvable");
+  var rel=await r.json();assets={};(rel.assets||[]).forEach(function(a){assets[a.name]=a});
+  var miss=required.filter(function(n){return !assets[n]});if(miss.length)throw new Error("assets manquants: "+miss.join(", "));
+  var ir=await fetch(url("p7-review-index.json"));if(!ir.ok)throw new Error("index P7 illisible");index=await ir.json();
+  if(index.status!=="machine-ready-p7-review-assets")throw new Error("index status inattendu");
+  render();document.getElementById("review").classList.remove("locked");g.textContent="P7 MACHINE READY";g.className="status good";d.textContent="Release complète : "+tag;
+ }catch(e){g.textContent="P7 VERROUILLÉ";g.className="status bad";d.textContent=e.message}
+}
+function build(){
+ if(!index)return;
+ var global=document.querySelector('input[name="global"]:checked');
+ var missing=STATES.filter(function(s){return !(answers[s.id]&&answers[s.id].verdict)});if(missing.length||!global){alert("Tous les verdicts sont requis.");return}
+ var fails=STATES.filter(function(s){return answers[s.id].verdict==="FAIL"});
+ var decision=!fails.length&&global.value==="PASS"?"P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS":"P7_EDGE_BOUNDED_RETUNE_REQUIRED";
+ var report={schema:"recit.odyssee.p7_human_review.v1",release_tag:document.getElementById("tag").value.trim(),states:Object.fromEntries(STATES.map(function(s){return [s.id,{observation:(answers[s.id]||{}).observation||"",artistic_verdict:answers[s.id].verdict}]})),global_continuity:{observation:document.getElementById("globalObs").value,artistic_verdict:global.value},decision:decision,failed_states:fails.map(function(s){return s.id}),identity_recasting_authorized:false};
+ var out=document.getElementById("out");out.hidden=false;out.textContent=JSON.stringify(report,null,2);document.getElementById("copy").disabled=false;var rs=document.getElementById("result");rs.textContent=decision;rs.className="status "+(decision.indexOf("_PASS")>0?"good":"bad");
+}
+document.getElementById("load").addEventListener("click",load);document.getElementById("build").addEventListener("click",build);document.getElementById("copy").addEventListener("click",async function(){await navigator.clipboard.writeText(document.getElementById("out").textContent);this.textContent="✓ Copié"});
+})();
+</script>
+</main></body></html>

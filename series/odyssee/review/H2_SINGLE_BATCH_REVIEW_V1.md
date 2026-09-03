@@ -5,7 +5,27 @@ Downstream: #112
 Machine-readable contract: `series/odyssee/review/H2_SINGLE_BATCH_REVIEW_V1.json`  
 Review surface: `web/reviews/odyssee-h2.html`
 
-Status: **H2_SINGLE_BATCH_REVIEW_READY_PENDING_AUDIO**
+Status: **H2_SUSPENDED_P7_ULYSSE_PERFORMANCE_CONTINUITY**
+
+## Current suspension — P7 Ulysse performance continuity
+
+A new human Production finding supersedes H2 readiness for Ulysse only:
+
+- Ulysse / Henri identity: PASS;
+- narrative performance: FAIL;
+- observation: too mechanical and cold.
+
+This does not reopen casting or frozen text.
+
+Authority:
+- issue #164;
+- `series/odyssee/review/P7_ULYSSE_PERFORMANCE_CONTINUITY_V1.json`.
+
+H2 now requires both:
+- `P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS`;
+- `A+B+C+D MACHINE_QUALIFIED`.
+
+Do not dispatch H2 merely because the four blocks qualify while P7 remains open.
 
 ## Why the historical H2 scope is superseded
 
@@ -260,4 +280,4 @@ Once Stream 3 confirms the hard gate and publishes the immutable review Release,
 
 No additional artistic preparation should be necessary.
 
-**Target state: `H2_SINGLE_BATCH_REVIEW_READY_PENDING_AUDIO`.**
+**Current state: `H2_SUSPENDED_P7_ULYSSE_PERFORMANCE_CONTINUITY`.**
