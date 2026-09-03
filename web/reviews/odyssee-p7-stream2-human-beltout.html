@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Odyssée P7 — Studio Ulysse — généralisation BeltOut</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1016;--panel:#141c25;--panel2:#0f1720;--line:#2b3745;--text:#f5f7fa;--muted:#a8b4c2;--accent:#7dd3fc;--good:#86efac;--warn:#fde68a;--bad:#fca5a5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{width:min(1100px,calc(100% - 24px));margin:auto;padding:28px 0 80px}h1{font-size:clamp(2rem,6vw,3.6rem);line-height:1.03;margin:.2em 0 .3em}h2,h3{line-height:1.15}.kicker{color:var(--accent);font-size:.8rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase}.lead,.muted{color:var(--muted)}.lead{font-size:1.08rem;max-width:900px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:18px 0}.sub{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 9px;color:var(--muted);font-size:.84rem}.badge.good{color:var(--good);border-color:#356d4c}.badge.warn{color:var(--warn);border-color:#6d5e29}button{border:1px solid var(--line);background:#1d2936;color:var(--text);border-radius:11px;padding:10px 13px;font:inherit;font-weight:750;cursor:pointer}button.primary{background:#17364a;border-color:#2b6689}button.record{background:#4a1717;border-color:#873636}button.stop{background:#6f1d1d;border-color:#bd4d4d}button.good{background:#173c28;border-color:#2d7750}button.danger{background:#421a1a;border-color:#6f3333;color:#ffdede}button:disabled{opacity:.45;cursor:not-allowed}audio{width:100%;margin:7px 0}.privacy{border:1px solid #285c45;background:#102219;color:#bdf3d1;border-radius:12px;padding:12px}.notice{border:1px solid #6b5b24;background:#211e12;color:#f8eab0;border-radius:12px;padding:12px}.state{border-top:4px solid #2d536a}.target{font-size:clamp(1.35rem,4vw,2rem);font-weight:850;margin:.3rem 0}.direction{border-left:3px solid var(--accent);padding-left:12px}.dialogue{display:grid;gap:6px}.line{display:grid;grid-template-columns:115px 1fr;gap:10px;padding:7px 9px;border-radius:9px;background:#0c131b;border:1px solid transparent}.line .speaker{font-weight:800;color:var(--muted);font-size:.82rem;text-transform:uppercase}.line.targetline{border-color:#3c7798;background:#102332}.line.targetline .speaker{color:var(--accent)}.take{border:1px solid var(--line);border-radius:12px;padding:11px;margin:9px 0;background:#0e151d}.take.selected{border-color:#3c8558;background:#10231a}.take-head{display:flex;justify-content:space-between;gap:8px;align-items:center}.timer{font-variant-numeric:tabular-nums;font-weight:850;color:var(--warn)}.progress{display:grid;grid-template-columns:repeat(9,1fr);gap:5px;margin:12px 0}.progress a{border:1px solid var(--line);border-radius:9px;text-align:center;padding:7px 3px;text-decoration:none;color:var(--muted);font-size:.78rem}.progress a.done{color:var(--good);border-color:#356d4c;background:#102319}.status{font-weight:800}.status.good{color:var(--good)}.status.warn{color:var(--warn)}.status.bad{color:var(--bad)}.sticky{position:sticky;bottom:10px;z-index:5;background:rgba(11,16,22,.95);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:11px;margin-top:18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.line{grid-template-columns:90px 1fr}.progress{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<main>
+<div class="kicker">#179 · Stream 2 · P7</div>
+<h1>Ulysse — trois états ordinaires</h1>
+<p class="lead">Challenge borné de la capacité déjà validée <strong>performance humaine française → BeltOut → Henri/Ulysse</strong>. Tu fournis seulement le jeu ; BeltOut devra ensuite préserver l’identité Henri sans rendre la voix mécanique, mélodramatique ou caricaturale.</p>
+<div class="row"><span class="badge">9 lignes</span><span class="badge">3 états</span><span class="badge">comparateur C2 Edge final</span><span class="badge good">aucun upload automatique</span></div>
+
+<section class="card">
+<h2>Règle du test</h2>
+<div class="privacy"><strong>Local uniquement :</strong> les essais restent dans ce navigateur. Tu peux répéter et refaire autant de prises que nécessaire avant de retenir une prise. Le ZIP n’est créé qu’à ta demande.</div>
+<p>Le C2 Edge est là pour le <strong>contexte</strong> et comme futur comparateur. <strong>Ne l’imite pas</strong> : son défaut humain déjà établi est précisément d’être trop mécanique / froid.</p>
+<div class="notice"><strong>PASS futur :</strong> après BeltOut, chaque état devra être matériellement plus vivant que C2, conserver Henri, rester naturel en français, approprié à l’état, responsive dans le phrasé et avec une dramatisation appropriée et retenue. « Différent » ne suffira pas.</div>
+<div class="row"><button id="micButton" class="primary">Autoriser le microphone</button><span id="micStatus" class="status warn">Micro non initialisé</span></div>
+<p class="muted">Capture : pièce calme, pas de clic de manipulation, téléphone/micro stable à 15–30 cm, pas de reverb ajoutée, pas de traitement artistique. Laisse un peu de silence propre avant/après.</p>
+</section>
+
+<div class="progress" id="progress"></div>
+<div id="states"></div>
+
+<section class="card">
+<h2>Gel des 9 prises</h2>
+<div id="validation"></div>
+<p class="muted">L’export contient uniquement les prises explicitement retenues. Après cet export et réception par Stream 2, leurs SHA seront gelés avant toute conversion BeltOut.</p>
+<div class="row"><button id="exportButton" class="good">Télécharger le ZIP des 9 prises retenues</button><button id="clearButton" class="danger">Effacer toutes les prises locales</button></div>
+<p id="exportStatus" class="status"></p>
+</section>
+
+<div class="sticky"><div class="row"><strong>État :</strong><span id="globalStatus">0/9 prises retenues</span><span style="flex:1"></span><button id="stickyExport" class="good">Exporter</button></div></div>
+
+<script>
+(function(){
+"use strict";
+var TAG="odyssee-p7-round2-line-microprosody-v1";
+var BASE="https://github.com/stefm78/recit-audioguide/releases/download/"+TAG+"/";
+var STATES=[
+{
+ id:"storyteller",scene:"S05",title:"Storyteller — orgueil → justification → regret",
+ direction:"Parle à des gens réellement présents. L’orgueil existe mais ne devient jamais bravade. Le regret arrive comme une compréhension tardive, pas comme une scène tragique.",
+ avoid:"Récitation, solennité constante, surjeu du regret, voix de bande-annonce.",
+ audio:"p7-r2-storyteller-c.mp3",sha:"bf3708c59d29265454be527b99d1e7a00d68c0b494de34c1de7f0e19b4e15943",
+ script:[
+ [132,"ULYSSE","J’ai crié."],[133,"EURYLOQUE","Ulysse !"],[134,"ULYSSE","J’ai crié mon nom."],
+ [135,"ULYSSE","Je lui ai dit que ce n’était pas Personne. Que c’était Ulysse, roi d’Ithaque, qui lui avait pris son œil.",true],
+ [136,"EURYLOQUE","Nous étions vivants. Il fallait seulement partir."],[137,"ULYSSE","Je voulais qu’il sache."],[138,"EURYLOQUE","Pour quoi faire ?"],
+ [139,"ULYSSE","Pour que quelqu’un sache.",true],[140,"NARRATRICE","À la table des Phéaciens, Ulysse s’arrête."],[141,"ULYSSE","Polyphème était fils de Poséidon."],[142,"ULYSSE","Jusque-là, la mer avait été difficile."],[143,"ULYSSE","Après mon cri, elle est devenue personnelle.",true]
+ ],
+ lineDirection:{
+  135:"Une fierté impulsive racontée après coup. Vivant et adressé, mais pas triomphant.",
+  139:"Une justification presque nue. Moins d’effet, plus de vérité.",
+  143:"Le froid tombe. Constat lucide et personnel ; aucune plainte."
+ }
+},
+{
+ id:"loss",scene:"S06",title:"Loss — perception → choc → perte",
+ direction:"Le corps comprend d’abord. Le choc existe sans pathos. Les mots de perte doivent rester simples, presque trop concrets pour être confortables.",
+ avoid:"Plainte, cri, voix cassée fabriquée, ralenti théâtral, mélodrame.",
+ audio:"p7-r2-loss-c.mp3",sha:"4d3f737caa745db4339b12c40c780048579fb31cfa5f18d6d9f47aa988f09049",
+ script:[
+ [90,"ULYSSE","Je me suis réveillé quand le bateau a changé sous mon corps.",true],
+ [91,"ULYSSE","On sent le vent avant même de l’entendre. Le bois n’appuie plus au même endroit. La voile tire autrement."],
+ [92,"ULYSSE","J’ai ouvert les yeux."],[93,"ULYSSE","Ithaque s’éloignait.",true],
+ [94,"MARIN","Ferme-la !"],[95,"EURYLOQUE","On essaie !"],[96,"ULYSSE","Tous les vents sortaient à la fois."],
+ [97,"ULYSSE","Nous avions mis dix ans à gagner une guerre."],[98,"ULYSSE","Des années à traverser la mer."],[99,"ULYSSE","Nous avions notre île devant nous.",true]
+ ],
+ lineDirection:{
+  90:"Perception physique immédiate, pas narration documentaire. Tu revis le changement sous ton corps.",
+  93:"Le choc est dans la simplicité. Ne souligne pas artificiellement « Ithaque ».",
+  99:"La perte apparaît dans le fait brut. Pas de lamentation ; laisse le sens faire le travail."
+ }
+},
+{
+ id:"authority",scene:"S14",title:"Authority — ordre → morsure morale → conclusion",
+ direction:"Autorité calme et dangereuse. La colère vient de la précision morale et du contrôle. Tu n’as pas besoin de hausser le volume pour posséder la pièce.",
+ avoid:"Cri, vengeance jubilatoire, monotonie glacée, slogan, caricature autoritaire.",
+ audio:"p7-r2-authority-c.mp3",sha:"59930ee6802957e78b345131092a03b5e1bc4d79c3dc56c44f25e433b602003b",
+ script:[
+ [79,"ULYSSE","Pose ce que tu tiens.",true],[80,"EURYMAQUE","Antinoos est mort. C’était lui qui poussait les autres."],
+ [81,"ULYSSE","Vous avez tous mangé ici."],[82,"EURYMAQUE","Nous rendrons ce que nous avons pris."],[83,"ULYSSE","Vingt ans ?"],
+ [84,"EURYMAQUE","Les troupeaux. Le vin. Tout."],[85,"ULYSSE","Tu vas rendre les années à Pénélope ?",true],[86,"EURYMAQUE","Non."],
+ [87,"ULYSSE","À Télémaque ?"],[88,"EURYMAQUE","Non."],[89,"ULYSSE","Alors cesse de proposer des comptes que tu sais faux.",true]
+ ],
+ lineDirection:{
+  79:"Ordre court, calme, sans cri. Tu t’attends à être obéi.",
+  85:"Question morale qui mord, sans effet de tribunal ni slogan.",
+  89:"Conclusion ferme et sèche. Tu fermes la négociation, tu ne fais pas un discours."
+ }
+}
+];
+
+var TARGETS=[];
+STATES.forEach(function(s){s.script.forEach(function(x){if(x[3])TARGETS.push({state:s.id,scene:s.scene,segment:x[0],speaker:x[1],text:x[2],direction:s.lineDirection[x[0]]})})});
+var micButton=document.getElementById("micButton"),micStatus=document.getElementById("micStatus"),statesHost=document.getElementById("states"),progress=document.getElementById("progress"),validation=document.getElementById("validation"),globalStatus=document.getElementById("globalStatus"),exportStatus=document.getElementById("exportStatus");
+var stream=null,recorder=null,currentUid=null,currentChunks=[],started=0,timerHandle=null,takes={};
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]})}
+function key(t){return t.scene+"-"+String(t.segment).padStart(3,"0")}
+function fmt(sec){return sec.toFixed(2).replace(".",",")+" s"}
+function ext(m){if((m||"").includes("ogg"))return"ogg";if((m||"").includes("mp4"))return"m4a";if((m||"").includes("wav"))return"wav";return"webm"}
+function mime(){var l=["audio/webm;codecs=opus","audio/webm","audio/ogg;codecs=opus","audio/mp4"];for(var i=0;i<l.length;i++)if(!MediaRecorder.isTypeSupported||MediaRecorder.isTypeSupported(l[i]))return l[i];return""}
+
+function openDb(){return new Promise(function(resolve,reject){var r=indexedDB.open("odyssee-p7-stream2-human-beltout-v1",1);r.onupgradeneeded=function(){var db=r.result;if(!db.objectStoreNames.contains("takes"))db.createObjectStore("takes",{keyPath:"uid"})};r.onsuccess=function(){resolve(r.result)};r.onerror=function(){reject(r.error)}})}
+async function dbAll(){var db=await openDb();return new Promise(function(resolve,reject){var r=db.transaction("takes","readonly").objectStore("takes").getAll();r.onsuccess=function(){resolve(r.result||[])};r.onerror=function(){reject(r.error)}})}
+async function dbPut(v){var db=await openDb();return new Promise(function(resolve,reject){var r=db.transaction("takes","readwrite").objectStore("takes").put(v);r.onsuccess=function(){resolve()};r.onerror=function(){reject(r.error)}})}
+async function dbDelete(uid){var db=await openDb();return new Promise(function(resolve,reject){var r=db.transaction("takes","readwrite").objectStore("takes").delete(uid);r.onsuccess=function(){resolve()};r.onerror=function(){reject(r.error)}})}
+async function dbClear(){var db=await openDb();return new Promise(function(resolve,reject){var r=db.transaction("takes","readwrite").objectStore("takes").clear();r.onsuccess=function(){resolve()};r.onerror=function(){reject(r.error)}})}
+
+function renderStates(){
+ statesHost.innerHTML=STATES.map(function(s){
+  var dialogue=s.script.map(function(x){return '<div class="line '+(x[3]?'targetline':'')+'"><div class="speaker">'+esc(x[1])+' · '+x[0]+'</div><div>'+esc(x[2])+(x[3]?' <span class="badge">à enregistrer</span>':'')+'</div></div>'}).join("");
+  var targets=TARGETS.filter(function(t){return t.state===s.id}).map(function(t){
+   return '<div class="sub" id="target-'+key(t)+'"><div class="row"><span class="badge">'+key(t)+'</span><span id="status-'+key(t)+'" class="badge warn">aucune prise retenue</span></div><div class="target">'+esc(t.text)+'</div><p class="direction">'+esc(t.direction)+'</p><div class="row"><button class="record" data-record="'+key(t)+'">● Enregistrer un essai</button><span id="timer-'+key(t)+'" class="timer">00:00.0</span></div><div id="takes-'+key(t)+'"></div></div>';
+  }).join("");
+  return '<section class="card state"><div class="kicker">'+esc(s.scene)+' · '+esc(s.id)+'</div><h2>'+esc(s.title)+'</h2><div class="grid"><div><h3>C2 Edge final — contexte</h3><audio controls preload="metadata" src="'+BASE+s.audio+'"></audio><p class="muted">SHA-256 C2 : <code>'+s.sha+'</code></p><p><strong>Direction humaine :</strong> '+esc(s.direction)+'</p><p class="muted"><strong>À éviter :</strong> '+esc(s.avoid)+'</p></div><div><h3>Fenêtre exacte</h3><div class="dialogue">'+dialogue+'</div></div></div><h3>Prises humaines sélectionnées</h3>'+targets+'</section>';
+ }).join("");
+ document.querySelectorAll("[data-record]").forEach(function(b){b.addEventListener("click",function(){toggleRecord(b.getAttribute("data-record"),b)})});
+}
+async function ensureMic(){if(stream&&stream.active)return true;if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.MediaRecorder){micStatus.textContent="Enregistrement non supporté";micStatus.className="status bad";return false}try{stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:false,noiseSuppression:false,autoGainControl:false},video:false});micStatus.textContent="Micro prêt — local uniquement";micStatus.className="status good";micButton.textContent="Micro autorisé";return true}catch(e){micStatus.textContent="Accès micro refusé ou indisponible";micStatus.className="status bad";return false}}
+async function toggleRecord(uid,button){
+ if(recorder&&recorder.state==="recording"){if(currentUid!==uid)return;recorder.stop();button.textContent="● Enregistrer un essai";button.className="record";return}
+ if(!(await ensureMic()))return;
+ currentUid=uid;currentChunks=[];started=performance.now();var m=mime();recorder=m?new MediaRecorder(stream,{mimeType:m}):new MediaRecorder(stream);
+ recorder.ondataavailable=function(e){if(e.data&&e.data.size)currentChunks.push(e.data)};
+ recorder.onstop=async function(){clearInterval(timerHandle);var t=TARGETS.find(function(x){return key(x)===uid}),blob=new Blob(currentChunks,{type:recorder.mimeType||m||"audio/webm"}),list=takes[uid]||[];await dbPut({uid:uid+"-"+Date.now()+"-"+Math.random().toString(16).slice(2),target:uid,state:t.state,scene:t.scene,segment:t.segment,text:t.text,blob:blob,mime:blob.type||"audio/webm",duration:(performance.now()-started)/1000,createdAt:Date.now(),selected:false,number:list.length+1});await load();document.getElementById("timer-"+uid).textContent="00:00.0"};
+ recorder.start(100);button.textContent="■ Arrêter et conserver";button.className="stop";timerHandle=setInterval(function(){var s=(performance.now()-started)/1000;document.getElementById("timer-"+uid).textContent=String(Math.floor(s/60)).padStart(2,"0")+":"+String(Math.floor(s%60)).padStart(2,"0")+"."+Math.floor((s%1)*10)},100)
+}
+async function load(){var all=await dbAll();takes={};TARGETS.forEach(function(t){takes[key(t)]=[]});all.sort(function(a,b){return a.createdAt-b.createdAt}).forEach(function(x){if(takes[x.target])takes[x.target].push(x)});renderTakes();renderProgress()}
+function renderTakes(){TARGETS.forEach(function(t){var uid=key(t),host=document.getElementById("takes-"+uid),list=takes[uid]||[];host.innerHTML=list.length?list.map(function(x){var u=URL.createObjectURL(x.blob);return '<div class="take '+(x.selected?'selected':'')+'"><div class="take-head"><strong>Essai '+x.number+(x.selected?' — RETENU':'')+'</strong><span>'+fmt(x.duration)+'</span></div><audio controls src="'+u+'"></audio><div class="row"><button '+(x.selected?'class="good"':'')+' data-select="'+x.uid+'">'+(x.selected?'✓ Retenue':'Retenir cette prise')+'</button><button data-download="'+x.uid+'">Télécharger</button><button class="danger" data-delete="'+x.uid+'">Supprimer</button></div></div>'}).join(""):'<p class="muted">Aucun essai.</p>'});
+ document.querySelectorAll("[data-select]").forEach(function(b){b.onclick=function(){selectTake(b.getAttribute("data-select"))}});document.querySelectorAll("[data-delete]").forEach(function(b){b.onclick=function(){deleteTake(b.getAttribute("data-delete"))}});document.querySelectorAll("[data-download]").forEach(function(b){b.onclick=function(){downloadTake(b.getAttribute("data-download"))}})
+}
+function find(uid){for(var k in takes){var x=takes[k].find(function(v){return v.uid===uid});if(x)return x}return null}
+async function selectTake(uid){var x=find(uid);if(!x)return;for(const y of takes[x.target]){if(y.selected){y.selected=false;await dbPut(y)}}x.selected=true;await dbPut(x);await load()}
+async function deleteTake(uid){if(!confirm("Supprimer définitivement cet essai local ?"))return;await dbDelete(uid);await load()}
+function selected(uid){return (takes[uid]||[]).find(function(x){return x.selected})||null}
+function renderProgress(){var n=0;progress.innerHTML=TARGETS.map(function(t){var uid=key(t),s=selected(uid);if(s)n++;var st=document.getElementById("status-"+uid);if(st){st.textContent=s?"prise retenue · "+fmt(s.duration):"aucune prise retenue";st.className="badge "+(s?"good":"warn")}return '<a href="#target-'+uid+'" class="'+(s?'done':'')+'">'+uid+' '+(s?'✓':'—')+'</a>'}).join("");globalStatus.textContent=n+"/9 prises retenues";validation.innerHTML=n===9?'<p class="status good">✓ Les 9 prises sont retenues. Tu peux exporter le gel humain.</p>':'<p class="status warn">Il manque '+(9-n)+' prise(s) retenue(s).</p>'}
+function dl(blob,name){var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},800)}
+function downloadTake(uid){var x=find(uid);if(x)dl(x.blob,uid+"."+ext(x.mime))}
+async function sha(blob){var d=await crypto.subtle.digest("SHA-256",await blob.arrayBuffer());return Array.from(new Uint8Array(d)).map(function(b){return b.toString(16).padStart(2,"0")}).join("")}
+var crcTable=null;function crc32(bytes){if(!crcTable){crcTable=[];for(var n=0;n<256;n++){var c=n;for(var k=0;k<8;k++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;crcTable[n]=c>>>0}}var crc=0xffffffff;for(var i=0;i<bytes.length;i++)crc=crcTable[(crc^bytes[i])&255]^(crc>>>8);return (crc^0xffffffff)>>>0}
+function le16(n){return new Uint8Array([n&255,(n>>>8)&255])}function le32(n){return new Uint8Array([n&255,(n>>>8)&255,(n>>>16)&255,(n>>>24)&255])}
+function concat(a){var l=a.reduce(function(x,y){return x+y.length},0),o=new Uint8Array(l),p=0;a.forEach(function(x){o.set(x,p);p+=x.length});return o}
+async function zip(files){var enc=new TextEncoder(),locals=[],cent=[],off=0;for(const f of files){var name=enc.encode(f.name),data=new Uint8Array(await f.blob.arrayBuffer()),crc=crc32(data),local=concat([le32(0x04034b50),le16(20),le16(0),le16(0),le16(0),le16(0),le32(crc),le32(data.length),le32(data.length),le16(name.length),le16(0),name,data]);locals.push(local);cent.push(concat([le32(0x02014b50),le16(20),le16(20),le16(0),le16(0),le16(0),le16(0),le32(crc),le32(data.length),le32(data.length),le16(name.length),le16(0),le16(0),le16(0),le16(0),le32(0),le32(off),name]));off+=local.length}var cb=concat(cent),end=concat([le32(0x06054b50),le16(0),le16(0),le16(files.length),le16(files.length),le32(cb.length),le32(off),le16(0)]);return new Blob([concat(locals),cb,end],{type:"application/zip"})}
+async function exportZip(){var sel=TARGETS.map(function(t){return {t:t,x:selected(key(t))}});if(sel.some(function(v){return !v.x})){exportStatus.textContent="Sélectionne exactement une prise pour chacune des 9 lignes.";exportStatus.className="status bad";return}exportStatus.textContent="Calcul des SHA et création du ZIP…";exportStatus.className="status warn";var files=[],manifest={schema:"odyssee-p7-human-beltout-source-intake-v1",authority_issue:179,contract:"series/odyssee/review/P7_STREAM2_HUMAN_BELTOUT_GENERALIZATION_V1.json",created_at:new Date().toISOString(),selection_before_beltout:true,comparator_release:TAG,slots:[]};for(const v of sel){var e=ext(v.x.mime),name=key(v.t)+"."+e,digest=await sha(v.x.blob);files.push({name:name,blob:v.x.blob});manifest.slots.push({state:v.t.state,scene:v.t.scene,segment:v.t.segment,text:v.t.text,filename:name,mime:v.x.mime,duration_seconds:Number(v.x.duration.toFixed(3)),sha256:digest})}files.push({name:"recording-manifest.json",blob:new Blob([JSON.stringify(manifest,null,2)+"\n"],{type:"application/json"})});files.push({name:"README.txt",blob:new Blob(["P7 #179 — 9 human-selected takes frozen before any BeltOut conversion. Raw human audio must not be committed to the public repository.\n"],{type:"text/plain"})});dl(await zip(files),"odyssee-p7-stream2-human-beltout-source.zip");exportStatus.textContent="✓ ZIP prêt. Téléverse ce fichier dans la conversation.";exportStatus.className="status good"}
+async function clearAll(){if(!confirm("Effacer toutes les prises locales de cette page ?"))return;if(recorder&&recorder.state==="recording")recorder.stop();await dbClear();await load()}
+micButton.onclick=ensureMic;document.getElementById("exportButton").onclick=exportZip;document.getElementById("stickyExport").onclick=exportZip;document.getElementById("clearButton").onclick=clearAll;
+renderStates();load().catch(function(e){validation.innerHTML='<p class="status bad">Stockage local indisponible : '+esc(e.message)+'</p>'});
+})();
+</script>
+</main>
+</body>
+</html>
