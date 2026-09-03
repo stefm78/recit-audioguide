@@ -38,7 +38,7 @@
   ],
   "identity_recasting_authorized": false,
   "frozen_stream1_arbitration": {
-    "status": "P7_ROUND2_HUMAN_RESULT_FROZEN",
+    "status": "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
     "round2_is_final_edge_artistic_attempt": true,
     "edge_artistic_budget_exhausted": true,
     "page_edge_budget_exhausted_false_is_non_authoritative_ui_artifact": true,
@@ -49,14 +49,33 @@
     "ulysse_french": "PASS",
     "artistic_result": "FAIL_ALL_FOUR_STATES_ON_MATERIAL_LESS_MECHANICAL_COLD",
     "technical_context_result": "FAIL_TELEMAQUE_NON_FRENCH",
-    "next_admissible_action": "TECHNICAL_CONTEXT_INTEGRITY_REPAIR_ONLY",
+    "next_admissible_action": "STREAM2_PERFORMANCE_PROVIDER_ESCALATION_ISSUE_179",
     "next_action_constraints": [
-      "Preserve all Round 2 Ulysse C artistic parameters exactly.",
-      "Do not create or tune a Round 3 Edge candidate.",
-      "Do not recast Ulysse.",
-      "Do not change frozen text.",
-      "Repair only the minimum affected Télémaque/context language integrity."
+      "Preserve Henri/Ulysse identity target.",
+      "No Round 3 Edge.",
+      "No Ulysse recast.",
+      "No frozen-text change.",
+      "Treat #178 Télémaque language integrity as a separate production defect.",
+      "Do not make #178 a prerequisite for the P7 Ulysse escalation conclusion."
     ],
-    "post_repair_rule": "A technically clean repair cannot reopen the Edge artistic budget. Existing Round 2 artistic FAIL evidence remains frozen. Any remaining/confirmed artistic FAIL after technical integrity is restored authorizes P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER."
+    "post_repair_rule": "Télémaque repair is independent. It cannot reopen Edge artistic budget or alter the frozen P7 Ulysse escalation decision.",
+    "final_p7_ulysse_conclusion": "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
+    "ulysse_lane_issue": 179,
+    "telemaque_defect_issue": 178,
+    "telemaque_blocks_p7_ulysse_conclusion": false,
+    "telemaque_separation": {
+      "issue": 178,
+      "classification": "TELEMAQUE_EDGE_MULTILINGUAL_LANGUAGE_INTEGRITY_DEFECT",
+      "relation_to_p7_ulysse": "ORTHOGONAL_NOT_BLOCKING_P7_CONCLUSION",
+      "blocks": [
+        "S12_FINAL_PRODUCTION",
+        "BLOCK_D_MACHINE_QUALIFICATION",
+        "H2_DISPATCH"
+      ],
+      "does_not_block": [
+        "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
+        "ISSUE_179_ULYSSE_PERFORMANCE_LANE"
+      ]
+    }
   }
 }
