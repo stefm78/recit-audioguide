@@ -1,0 +1,722 @@
+{
+  "schema": "recit.odyssee.p7_round2_line_microprosody.v1",
+  "id": "odyssee-p7-round2-line-microprosody-v1",
+  "status": "P7_ROUND2_READY_FOR_STREAM3_RENDER",
+  "authority_issue": 164,
+  "parent_authority_issue": 110,
+  "downstream_issue": 112,
+  "round1_human_authority": "series/odyssee/review/P7_ROUND1_HUMAN_REVIEW_V1.json",
+  "round1_release_tag": "odyssee-p7-round1-203a196-v1",
+  "rationale": {
+    "round1_result": "FAIL_ALL_FOUR_STATES",
+    "identity": "PASS",
+    "french_ulysse": "PASS",
+    "repeated_failures": [
+      "less_mechanical_cold",
+      "dramatic_state",
+      "rhythm_alive"
+    ],
+    "conclusion": "State-wide Edge presets were insufficient. Per-segment Edge prosody remains materially untested, so Edge capability is not exhausted.",
+    "stream2_escalation": "FORBIDDEN_BEFORE_ROUND2_HUMAN_RESULT"
+  },
+  "constraints": {
+    "voice": "fr-FR-HenriNeural",
+    "provider": "edge",
+    "recasting": false,
+    "frozen_text_change": false,
+    "production_program_mutation": false,
+    "new_provider": false,
+    "decorative_sound": false,
+    "dry_probe": true,
+    "max_edge_rounds_after_round1": 1
+  },
+  "technical_integrity": {
+    "father_round1_finding": "Télémaque has audible English passages.",
+    "classification": "P7_PROBE_CONTEXT_LANGUAGE_DEFECT",
+    "round2_fix": "Set language_locale=fr-FR on every Edge segment in all Round 2 temporary Programs. Do not change any non-Ulysse voice, rate, pitch, volume, text or preset.",
+    "artistic_budget_consumed_by_technical_rerender": false,
+    "rule": "If non-French context remains audible, classify probe integrity FAIL and repair transport/locale only; do not infer Ulysse artistic failure from that defect."
+  },
+  "comparison": {
+    "reference": "Round 1 B failed candidate",
+    "candidate": "Round 2 C line-microprosody",
+    "rule": "Human listens B1 versus C2 per state; baseline A need not be re-reviewed."
+  },
+  "windows": [
+    {
+      "id": "storyteller",
+      "dramatic_state": "conteur / fierté qui devient regret",
+      "source_program": "series/odyssee/programs/S05.json",
+      "source_program_git_blob_sha1": "f5ef701ecba8c2bb8e20d58e30915e16d8853477",
+      "range": {
+        "start_segment": 132,
+        "end_segment": 143
+      },
+      "exact_guards": [
+        {
+          "segment": 132,
+          "speaker": "ULYSSE",
+          "text": "J’ai crié.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 133,
+          "speaker": "EURYLOQUE",
+          "text": "Ulysse !",
+          "preset": "odyssee-euryloque"
+        },
+        {
+          "segment": 134,
+          "speaker": "ULYSSE",
+          "text": "J’ai crié mon nom.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 135,
+          "speaker": "ULYSSE",
+          "text": "Je lui ai dit que ce n’était pas Personne. Que c’était Ulysse, roi d’Ithaque, qui lui avait pris son œil.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 136,
+          "speaker": "EURYLOQUE",
+          "text": "Nous étions vivants. Il fallait seulement partir.",
+          "preset": "odyssee-euryloque"
+        },
+        {
+          "segment": 137,
+          "speaker": "ULYSSE",
+          "text": "Je voulais qu’il sache.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 138,
+          "speaker": "EURYLOQUE",
+          "text": "Pour quoi faire ?",
+          "preset": "odyssee-euryloque"
+        },
+        {
+          "segment": 139,
+          "speaker": "ULYSSE",
+          "text": "Pour que quelqu’un sache.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 140,
+          "speaker": "NARRATRICE",
+          "text": "À la table des Phéaciens, Ulysse s’arrête.",
+          "preset": "odyssee-narratrice"
+        },
+        {
+          "segment": 141,
+          "speaker": "ULYSSE",
+          "text": "Polyphème était fils de Poséidon.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 142,
+          "speaker": "ULYSSE",
+          "text": "Jusque-là, la mer avait été difficile.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 143,
+          "speaker": "ULYSSE",
+          "text": "Après mon cri, elle est devenue personnelle.",
+          "preset": "odyssee-ulysse"
+        }
+      ],
+      "ulysse_segments": [
+        132,
+        134,
+        135,
+        137,
+        139,
+        141,
+        142,
+        143
+      ],
+      "round1_reference_asset": "p7-storyteller-b.mp3",
+      "C": {
+        "identity": {
+          "voice": "fr-FR-HenriNeural",
+          "provider": "edge"
+        },
+        "segment_overrides": {
+          "132": {
+            "rate": "-2%",
+            "pitch": "-8Hz",
+            "volume": "+2%",
+            "pause_after_ms": 170
+          },
+          "134": {
+            "rate": "+1%",
+            "pitch": "-6Hz",
+            "volume": "+2%",
+            "pause_after_ms": 150
+          },
+          "135": {
+            "rate": "+2%",
+            "pitch": "-6Hz",
+            "volume": "+2%",
+            "pause_after_ms": 230
+          },
+          "137": {
+            "rate": "-1%",
+            "pitch": "-8Hz",
+            "volume": "+1%",
+            "pause_after_ms": 190
+          },
+          "139": {
+            "rate": "-3%",
+            "pitch": "-9Hz",
+            "volume": "+1%",
+            "pause_after_ms": 300
+          },
+          "141": {
+            "rate": "-4%",
+            "pitch": "-10Hz",
+            "volume": "+1%",
+            "pause_after_ms": 240
+          },
+          "142": {
+            "rate": "-5%",
+            "pitch": "-11Hz",
+            "volume": "+1%",
+            "pause_after_ms": 170
+          },
+          "143": {
+            "rate": "-7%",
+            "pitch": "-12Hz",
+            "volume": "+1%",
+            "pause_after_ms": 430
+          }
+        },
+        "direction": "Créer un arc audible à l’intérieur du même souvenir : impulsion d’orgueil au début, justification plus courte au milieu, puis refroidissement réel après l’arrêt des Phéaciens. Ne jamais garder une même cadence deux répliques de suite."
+      },
+      "output_assets": {
+        "C": "p7-r2-storyteller-c.mp3",
+        "qa_C": "p7-r2-storyteller-c.qa-report.json"
+      }
+    },
+    {
+      "id": "loss",
+      "dramatic_state": "choc / perte / Ithaque qui s’éloigne",
+      "source_program": "series/odyssee/programs/S06.json",
+      "source_program_git_blob_sha1": "9d19925b5c8fcd01bb5db557f391e2e5498a355c",
+      "range": {
+        "start_segment": 90,
+        "end_segment": 99
+      },
+      "exact_guards": [
+        {
+          "segment": 90,
+          "speaker": "ULYSSE",
+          "text": "Je me suis réveillé quand le bateau a changé sous mon corps.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 91,
+          "speaker": "ULYSSE",
+          "text": "On sent le vent avant même de l’entendre. Le bois n’appuie plus au même endroit. La voile tire autrement.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 92,
+          "speaker": "ULYSSE",
+          "text": "J’ai ouvert les yeux.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 93,
+          "speaker": "ULYSSE",
+          "text": "Ithaque s’éloignait.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 94,
+          "speaker": "MARIN",
+          "text": "Ferme-la !",
+          "preset": "odyssee-marin-h2"
+        },
+        {
+          "segment": 95,
+          "speaker": "EURYLOQUE",
+          "text": "On essaie !",
+          "preset": "odyssee-euryloque"
+        },
+        {
+          "segment": 96,
+          "speaker": "ULYSSE",
+          "text": "Tous les vents sortaient à la fois.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 97,
+          "speaker": "ULYSSE",
+          "text": "Nous avions mis dix ans à gagner une guerre.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 98,
+          "speaker": "ULYSSE",
+          "text": "Des années à traverser la mer.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 99,
+          "speaker": "ULYSSE",
+          "text": "Nous avions notre île devant nous.",
+          "preset": "odyssee-ulysse"
+        }
+      ],
+      "ulysse_segments": [
+        90,
+        91,
+        92,
+        93,
+        96,
+        97,
+        98,
+        99
+      ],
+      "round1_reference_asset": "p7-loss-b.mp3",
+      "C": {
+        "identity": {
+          "voice": "fr-FR-HenriNeural",
+          "provider": "edge"
+        },
+        "segment_overrides": {
+          "90": {
+            "rate": "-1%",
+            "pitch": "-8Hz",
+            "volume": "+2%",
+            "pause_after_ms": 160
+          },
+          "91": {
+            "rate": "+1%",
+            "pitch": "-7Hz",
+            "volume": "+2%",
+            "pause_after_ms": 190
+          },
+          "92": {
+            "rate": "-2%",
+            "pitch": "-8Hz",
+            "volume": "+1%",
+            "pause_after_ms": 210
+          },
+          "93": {
+            "rate": "-10%",
+            "pitch": "-12Hz",
+            "volume": "+0%",
+            "pause_after_ms": 540
+          },
+          "96": {
+            "rate": "+3%",
+            "pitch": "-8Hz",
+            "volume": "+2%",
+            "pause_after_ms": 140
+          },
+          "97": {
+            "rate": "-4%",
+            "pitch": "-10Hz",
+            "volume": "+1%",
+            "pause_after_ms": 220
+          },
+          "98": {
+            "rate": "-6%",
+            "pitch": "-11Hz",
+            "volume": "+1%",
+            "pause_after_ms": 180
+          },
+          "99": {
+            "rate": "-8%",
+            "pitch": "-12Hz",
+            "volume": "+0%",
+            "pause_after_ms": 430
+          }
+        },
+        "direction": "Contraste net entre perception physique, choc sur « Ithaque s’éloignait », sursaut d’urgence, puis retombée. Le choc doit casser la cadence sans devenir pathétique."
+      },
+      "output_assets": {
+        "C": "p7-r2-loss-c.mp3",
+        "qa_C": "p7-r2-loss-c.qa-report.json"
+      }
+    },
+    {
+      "id": "father",
+      "dramatic_state": "père / reconnaissance sous incrédulité",
+      "source_program": "series/odyssee/programs/S12.json",
+      "source_program_git_blob_sha1": "31cc5cae0183d09b6ff60defa94b6744bc6610e2",
+      "range": {
+        "start_segment": 136,
+        "end_segment": 154
+      },
+      "exact_guards": [
+        {
+          "segment": 136,
+          "speaker": "ULYSSE",
+          "text": "Télémaque.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 137,
+          "speaker": "TÉLÉMAQUE",
+          "text": "Qui es-tu ?",
+          "preset": "odyssee-telemaque"
+        },
+        {
+          "segment": 138,
+          "speaker": "ULYSSE",
+          "text": "Regarde-moi.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 139,
+          "speaker": "TÉLÉMAQUE",
+          "text": "Je te regarde.",
+          "preset": "odyssee-telemaque"
+        },
+        {
+          "segment": 140,
+          "speaker": "ULYSSE",
+          "text": "Je suis Ulysse.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 141,
+          "speaker": "NARRATRICE",
+          "text": "Télémaque rit une fois.",
+          "preset": "odyssee-narratrice"
+        },
+        {
+          "segment": 142,
+          "speaker": "NARRATRICE",
+          "text": "Un son bref, sans joie.",
+          "preset": "odyssee-narratrice"
+        },
+        {
+          "segment": 143,
+          "speaker": "TÉLÉMAQUE",
+          "text": "Non.",
+          "preset": "odyssee-telemaque"
+        },
+        {
+          "segment": 144,
+          "speaker": "ULYSSE",
+          "text": "Si.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 145,
+          "speaker": "TÉLÉMAQUE",
+          "text": "Non.",
+          "preset": "odyssee-telemaque"
+        },
+        {
+          "segment": 146,
+          "speaker": "ULYSSE",
+          "text": "Athéna—",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 147,
+          "speaker": "TÉLÉMAQUE",
+          "text": "Tous les hommes qui arrivent à Ithaque ont vu mon père. Certains ont bu avec lui. D’autres lui ont parlé hier. Et maintenant toi, tu es lui ?",
+          "preset": "odyssee-telemaque"
+        },
+        {
+          "segment": 148,
+          "speaker": "ULYSSE",
+          "text": "Je comprends.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 149,
+          "speaker": "TÉLÉMAQUE",
+          "text": "Non, tu ne comprends pas.",
+          "preset": "odyssee-telemaque"
+        },
+        {
+          "segment": 150,
+          "speaker": "ULYSSE",
+          "text": "Tu as raison.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 151,
+          "speaker": "TÉLÉMAQUE",
+          "text": "Mon père est parti quand j’étais enfant.",
+          "preset": "odyssee-telemaque"
+        },
+        {
+          "segment": 152,
+          "speaker": "ULYSSE",
+          "text": "Oui.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 153,
+          "speaker": "TÉLÉMAQUE",
+          "text": "Tu ne peux pas entrer dans une pièce et dire ce mot comme si—",
+          "preset": "odyssee-telemaque"
+        },
+        {
+          "segment": 154,
+          "speaker": "ULYSSE",
+          "text": "Je ne sais pas comment le dire autrement.",
+          "preset": "odyssee-ulysse"
+        }
+      ],
+      "ulysse_segments": [
+        136,
+        138,
+        140,
+        144,
+        146,
+        148,
+        150,
+        152,
+        154
+      ],
+      "round1_reference_asset": "p7-father-b.mp3",
+      "C": {
+        "identity": {
+          "voice": "fr-FR-HenriNeural",
+          "provider": "edge"
+        },
+        "segment_overrides": {
+          "136": {
+            "rate": "-8%",
+            "pitch": "-8Hz",
+            "volume": "+0%",
+            "pause_after_ms": 390
+          },
+          "138": {
+            "rate": "-4%",
+            "pitch": "-7Hz",
+            "volume": "+1%",
+            "pause_after_ms": 230
+          },
+          "140": {
+            "rate": "-6%",
+            "pitch": "-8Hz",
+            "volume": "+1%",
+            "pause_after_ms": 390
+          },
+          "144": {
+            "rate": "-1%",
+            "pitch": "-7Hz",
+            "volume": "+1%",
+            "pause_after_ms": 170
+          },
+          "146": {
+            "rate": "+1%",
+            "pitch": "-6Hz",
+            "volume": "+1%",
+            "pause_after_ms": 140
+          },
+          "148": {
+            "rate": "-4%",
+            "pitch": "-8Hz",
+            "volume": "+0%",
+            "pause_after_ms": 230
+          },
+          "150": {
+            "rate": "-6%",
+            "pitch": "-9Hz",
+            "volume": "+0%",
+            "pause_after_ms": 290
+          },
+          "152": {
+            "rate": "-4%",
+            "pitch": "-9Hz",
+            "volume": "+0%",
+            "pause_after_ms": 210
+          },
+          "154": {
+            "rate": "-7%",
+            "pitch": "-10Hz",
+            "volume": "+0%",
+            "pause_after_ms": 430
+          }
+        },
+        "direction": "Répliques réellement responsives : le nom est fragile, « Si. » et « Athéna— » plus spontanés, puis Ulysse cède progressivement du terrain à Télémaque. Chaleur contenue, aucune proclamation."
+      },
+      "output_assets": {
+        "C": "p7-r2-father-c.mp3",
+        "qa_C": "p7-r2-father-c.qa-report.json"
+      }
+    },
+    {
+      "id": "authority",
+      "dramatic_state": "autorité contenue / colère morale",
+      "source_program": "series/odyssee/programs/S14.json",
+      "source_program_git_blob_sha1": "37eb6fe9316811494d28659b4a5060ec977d7761",
+      "range": {
+        "start_segment": 79,
+        "end_segment": 89
+      },
+      "exact_guards": [
+        {
+          "segment": 79,
+          "speaker": "ULYSSE",
+          "text": "Pose ce que tu tiens.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 80,
+          "speaker": "EURYMAQUE",
+          "text": "Antinoos est mort. C’était lui qui poussait les autres.",
+          "preset": "odyssee-eurymaque-h2"
+        },
+        {
+          "segment": 81,
+          "speaker": "ULYSSE",
+          "text": "Vous avez tous mangé ici.",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 82,
+          "speaker": "EURYMAQUE",
+          "text": "Nous rendrons ce que nous avons pris.",
+          "preset": "odyssee-eurymaque-h2"
+        },
+        {
+          "segment": 83,
+          "speaker": "ULYSSE",
+          "text": "Vingt ans ?",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 84,
+          "speaker": "EURYMAQUE",
+          "text": "Les troupeaux. Le vin. Tout.",
+          "preset": "odyssee-eurymaque-h2"
+        },
+        {
+          "segment": 85,
+          "speaker": "ULYSSE",
+          "text": "Tu vas rendre les années à Pénélope ?",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 86,
+          "speaker": "EURYMAQUE",
+          "text": "Non.",
+          "preset": "odyssee-eurymaque-h2"
+        },
+        {
+          "segment": 87,
+          "speaker": "ULYSSE",
+          "text": "À Télémaque ?",
+          "preset": "odyssee-ulysse"
+        },
+        {
+          "segment": 88,
+          "speaker": "EURYMAQUE",
+          "text": "Non.",
+          "preset": "odyssee-eurymaque-h2"
+        },
+        {
+          "segment": 89,
+          "speaker": "ULYSSE",
+          "text": "Alors cesse de proposer des comptes que tu sais faux.",
+          "preset": "odyssee-ulysse"
+        }
+      ],
+      "ulysse_segments": [
+        79,
+        81,
+        83,
+        85,
+        87,
+        89
+      ],
+      "round1_reference_asset": "p7-authority-b.mp3",
+      "C": {
+        "identity": {
+          "voice": "fr-FR-HenriNeural",
+          "provider": "edge"
+        },
+        "segment_overrides": {
+          "79": {
+            "rate": "-3%",
+            "pitch": "-11Hz",
+            "volume": "+2%",
+            "pause_after_ms": 150
+          },
+          "81": {
+            "rate": "-1%",
+            "pitch": "-10Hz",
+            "volume": "+2%",
+            "pause_after_ms": 150
+          },
+          "83": {
+            "rate": "-6%",
+            "pitch": "-12Hz",
+            "volume": "+2%",
+            "pause_after_ms": 300
+          },
+          "85": {
+            "rate": "-2%",
+            "pitch": "-10Hz",
+            "volume": "+2%",
+            "pause_after_ms": 180
+          },
+          "87": {
+            "rate": "-4%",
+            "pitch": "-11Hz",
+            "volume": "+2%",
+            "pause_after_ms": 180
+          },
+          "89": {
+            "rate": "-1%",
+            "pitch": "-10Hz",
+            "volume": "+3%",
+            "pause_after_ms": 320
+          }
+        },
+        "direction": "La tension vient des changements de longueur et d’appui : ordre court, constat sec, questions plus basses et plus lentes, conclusion ferme. Pas de hausse continue d’intensité."
+      },
+      "output_assets": {
+        "C": "p7-r2-authority-c.mp3",
+        "qa_C": "p7-r2-authority-c.qa-report.json"
+      }
+    }
+  ],
+  "human_review": {
+    "page": "web/reviews/odyssee-p7-round2.html",
+    "round1_descriptor": "web/reviews/data/odyssee-p7-round1-203a196-v1.json",
+    "release_policy": "one immutable Round 2 Release plus immutable Round 1 comparator",
+    "per_state_dimensions": [
+      "henri_identity_preserved",
+      "natural_french",
+      "C_materially_less_mechanical_and_less_cold_than_round1_B",
+      "dramatic_temperature_appropriate",
+      "rhythm_and_phrasing_alive",
+      "restraint_no_caricature"
+    ],
+    "global_dimensions": [
+      "one_recognisable_ulysse_across_four_states",
+      "states_distinct_without_four_different_characters"
+    ],
+    "semantics": "Observation perceptive separate from artistic verdict."
+  },
+  "decision": {
+    "pass": "P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS",
+    "fail": "P7_ESCALATE_STREAM2_PERFORMANCE_PROVIDER",
+    "technical_fail": "P7_ROUND2_PROBE_INTEGRITY_FAIL",
+    "pass_rule": "All four C states pass all artistic dimensions and global Henri/Ulysse continuity passes.",
+    "fail_rule": "Any material mechanical/cold or state/rhythm failure after a technically valid Round 2 exhausts the bounded Henri/Edge budget.",
+    "no_round3_edge": true,
+    "escalation_rule": "If technically valid Round 2 fails artistically, request Stream 2 performance-provider architecture while preserving Henri/Ulysse identity; no recasting and no text change."
+  },
+  "h2": {
+    "state": "SUSPENDED_P7_ROUND2",
+    "resume_requires": [
+      "P7_ULYSSE_PERFORMANCE_CONTINUITY_PASS",
+      "A+B+C+D MACHINE_QUALIFIED"
+    ]
+  }
+}
