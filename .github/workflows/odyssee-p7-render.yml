@@ -50,6 +50,7 @@ jobs:
       - name: Materialize exact temporary A/B Programs
         run: |
           set -euo pipefail
+          mkdir -p generated
           python tools/p7_render.py materialize --out generated/p7-inputs             > generated/p7-materialize.json
           jq -e '.status == "READY_TO_RENDER_P7_ROUND1" and .entry_count == 8'             generated/p7-materialize.json >/dev/null
 
