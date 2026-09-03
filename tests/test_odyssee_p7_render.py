@@ -80,6 +80,23 @@ class P7Round1RenderTests(unittest.TestCase):
         self.assertEqual(b_program["segments"][2]["pause_after_ms"], 320)
         self.assertEqual(b_program["acoustic_space"], "dry")
 
+    def test_materialize_plan_paths_are_repository_relative(self):
+        contract = json.loads(p7.CONTRACT.read_text(encoding="utf-8"))
+        manifest = json.loads(p7.MANIFEST.read_text(encoding="utf-8"))
+        with tempfile.TemporaryDirectory(dir=p7.ROOT.parent) as tmp:
+            out = p7.ROOT / "generated" / "p7-test-relative-plan"
+            try:
+                plan = p7.materialize(out)
+                for entry in plan["entries"]:
+                    self.assertFalse(Path(entry["program_path"]).is_absolute())
+                    self.assertFalse(Path(entry["voice_pack_path"]).is_absolute())
+                    self.assertTrue(entry["program_path"].startswith("generated/"))
+                    self.assertTrue(entry["voice_pack_path"].startswith("generated/"))
+            finally:
+                if out.exists():
+                    import shutil
+                    shutil.rmtree(out)
+
     def test_collect_emits_only_machine_ready_review_assets(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
