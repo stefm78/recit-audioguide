@@ -10,7 +10,7 @@ class P7Round1RenderTests(unittest.TestCase):
     def test_b_variant_changes_only_ulysse_profile_and_explicit_pauses(self):
         window = {
             "id": "state",
-            "ulysse_segments": [10, 12],
+            "ulysse_segments": [1, 3],
             "B": {
                 "ulysse": {
                     "voice": "fr-FR-HenriNeural",
@@ -18,7 +18,7 @@ class P7Round1RenderTests(unittest.TestCase):
                     "pitch": "-8Hz",
                     "volume": "+3%",
                 },
-                "ulysse_pause_after_ms": {"10": 180, "12": 320},
+                "ulysse_pause_after_ms": {"1": 180, "3": 320},
             },
         }
         source = {
