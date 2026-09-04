@@ -1,0 +1,191 @@
+name: Persist Télémaque #178 accepted S12 consumable
+
+on:
+  push:
+    branches:
+      - prod/178-telemaque-accepted-consumable-5af5e36d
+    paths:
+      - .github/workflows/persist-telemaque-178-accepted-consumable.yml
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  persist:
+    runs-on: ubuntu-latest
+    env:
+      SOURCE_ARTIFACT_ID: "9900067012"
+      SOURCE_ARTIFACT_SHA256: "9dcc9cff9b8c81f8720f4eedc2ff91375db8356b2e739c7a491b5907b8fc43cc"
+      SOURCE_RUN_ID: "33771590501"
+      SOURCE_HEAD_SHA: "7bcd754b00e25f366706ce082227e07a33a58b31"
+      CONTENT_ADDRESS: "5af5e36d2ff6525c71fb1eff992264ac2e9f98c82a40a1e6b5bafe5bcce3dd9e"
+      RELEASE_TAG: "odyssee-telemaque-s12-accepted-5af5e36d"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Recover only the accepted exact-replay artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/${SOURCE_ARTIFACT_ID}/zip" \
+            -o /tmp/telemaque-source.zip
+          echo "${SOURCE_ARTIFACT_SHA256}  /tmp/telemaque-source.zip" | sha256sum --check --strict
+          mkdir -p /tmp/telemaque-source
+          unzip -q /tmp/telemaque-source.zip -d /tmp/telemaque-source
+
+      - name: Materialize byte-exact content-addressed consumable
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="series/odyssee/production/consumables/telemaque-s12/sha256/${CONTENT_ADDRESS}"
+          mkdir -p "${ROOT}/clips" "${ROOT}/provenance"
+
+          cp /tmp/telemaque-source/render/.cache/voices/b70f8b8fc753a078e9f947ba05cc50402f4d35bf55a5970fab07dac282157683.mp3 "${ROOT}/clips/137.mp3"
+          cp /tmp/telemaque-source/render/.cache/voices/b70f8b8fc753a078e9f947ba05cc50402f4d35bf55a5970fab07dac282157683.json "${ROOT}/clips/137.cache.json"
+          cp /tmp/telemaque-source/render/.cache/voices/6f81a258720cd3212d630827d6bd3284d698a7565b3445614d2bcddfda9af4f2.mp3 "${ROOT}/clips/147.mp3"
+          cp /tmp/telemaque-source/render/.cache/voices/6f81a258720cd3212d630827d6bd3284d698a7565b3445614d2bcddfda9af4f2.json "${ROOT}/clips/147.cache.json"
+          cp /tmp/telemaque-source/render/.cache/voices/59954baa87b98d4d7005a5811335df587923b3fcc166ceec5766ad324ef66296.mp3 "${ROOT}/clips/153.mp3"
+          cp /tmp/telemaque-source/render/.cache/voices/59954baa87b98d4d7005a5811335df587923b3fcc166ceec5766ad324ef66296.json "${ROOT}/clips/153.cache.json"
+
+          cp /tmp/telemaque-source/input/plan.json "${ROOT}/provenance/plan.json"
+          cp /tmp/telemaque-source/input/provider-package.json "${ROOT}/provenance/provider-package.json"
+          cp /tmp/telemaque-source/input/probe-program.json "${ROOT}/provenance/probe-program.json"
+          cp /tmp/telemaque-source/input/reference-lock.json "${ROOT}/provenance/reference-lock.json"
+          cp /tmp/telemaque-source/prewarm-report.json "${ROOT}/provenance/prewarm-report.json"
+
+          echo "469bada0e1c0778c260b3a3c0cb09543db5e1f21f3b2272d7b4f26cef95f40e8  ${ROOT}/clips/137.mp3" | sha256sum --check --strict
+          echo "58f3634efd84d270c091fb4624032d3596cfd223437f61a5ec5a893e41b86fd2  ${ROOT}/clips/147.mp3" | sha256sum --check --strict
+          echo "f55e8c62e3c4dd63ad25ea9628bccda34b38ee92a43ecf5fd6e7fcba27115375  ${ROOT}/clips/153.mp3" | sha256sum --check --strict
+          echo "1d99619aa7a6335fd8489d15d639e0e788638fe7a8d14df268949457d230ce43  ${ROOT}/clips/137.cache.json" | sha256sum --check --strict
+          echo "1f44145713d866de820135f9f463f69d39f3b0cf97d39d28484cb26ee63f5d5c  ${ROOT}/clips/147.cache.json" | sha256sum --check --strict
+          echo "344b5fc0f14bcaaff65d6c8a072219e1f25ceed0957514ca50aace143562145b  ${ROOT}/clips/153.cache.json" | sha256sum --check --strict
+
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+
+          addr = os.environ["CONTENT_ADDRESS"]
+          root = Path("series/odyssee/production/consumables/telemaque-s12/sha256") / addr
+          identity = {
+              "artifact_digest": "sha256:9dcc9cff9b8c81f8720f4eedc2ff91375db8356b2e739c7a491b5907b8fc43cc",
+              "artifact_id": 9900067012,
+              "run_id": 33771590501,
+              "segments": {
+                  "137": "469bada0e1c0778c260b3a3c0cb09543db5e1f21f3b2272d7b4f26cef95f40e8",
+                  "147": "58f3634efd84d270c091fb4624032d3596cfd223437f61a5ec5a893e41b86fd2",
+                  "153": "f55e8c62e3c4dd63ad25ea9628bccda34b38ee92a43ecf5fd6e7fcba27115375",
+              },
+          }
+          canonical = json.dumps(identity, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+          computed = hashlib.sha256(canonical.encode()).hexdigest()
+          assert computed == addr, (computed, addr)
+          (root / "CONTENT_ADDRESS_INPUT.json").write_text(canonical + "\n", encoding="utf-8")
+
+          def sha(path):
+              return hashlib.sha256(path.read_bytes()).hexdigest()
+
+          clips = {
+              "137": ("b70f8b8fc753a078e9f947ba05cc50402f4d35bf55a5970fab07dac282157683", "469bada0e1c0778c260b3a3c0cb09543db5e1f21f3b2272d7b4f26cef95f40e8", "1d99619aa7a6335fd8489d15d639e0e788638fe7a8d14df268949457d230ce43"),
+              "147": ("6f81a258720cd3212d630827d6bd3284d698a7565b3445614d2bcddfda9af4f2", "58f3634efd84d270c091fb4624032d3596cfd223437f61a5ec5a893e41b86fd2", "1f44145713d866de820135f9f463f69d39f3b0cf97d39d28484cb26ee63f5d5c"),
+              "153": ("59954baa87b98d4d7005a5811335df587923b3fcc166ceec5766ad324ef66296", "f55e8c62e3c4dd63ad25ea9628bccda34b38ee92a43ecf5fd6e7fcba27115375", "344b5fc0f14bcaaff65d6c8a072219e1f25ceed0957514ca50aace143562145b"),
+          }
+          manifest_clips = []
+          for seg, (fingerprint, audio_sha, sidecar_sha) in clips.items():
+              audio = root / "clips" / f"{seg}.mp3"
+              sidecar = root / "clips" / f"{seg}.cache.json"
+              assert sha(audio) == audio_sha
+              assert sha(sidecar) == sidecar_sha
+              manifest_clips.append({
+                  "segment": int(seg),
+                  "cache_fingerprint": fingerprint,
+                  "audio_path": f"clips/{seg}.mp3",
+                  "audio_bytes": audio.stat().st_size,
+                  "audio_sha256": audio_sha,
+                  "sidecar_path": f"clips/{seg}.cache.json",
+                  "sidecar_bytes": sidecar.stat().st_size,
+                  "sidecar_sha256": sidecar_sha,
+              })
+
+          provenance_names = ["plan.json", "provider-package.json", "probe-program.json", "reference-lock.json", "prewarm-report.json"]
+          provenance = [{"path": f"provenance/{n}", "bytes": (root / "provenance" / n).stat().st_size, "sha256": sha(root / "provenance" / n)} for n in provenance_names]
+          manifest = {
+              "schema": "recit.odyssee.telemaque_s12_accepted_consumable.v1",
+              "status": "TELEMAQUE_ACCEPTED_CONSUMABLE_PERSISTED_READY_FOR_FINAL_S12_MATERIALIZATION",
+              "authority_issue": 178,
+              "human_verdict": "TELEMAQUE_FRENCH_CLEAN_PATH_HUMAN_PASS",
+              "content_address_algorithm": "sha256",
+              "content_address": addr,
+              "content_address_input_path": "CONTENT_ADDRESS_INPUT.json",
+              "segments": [137, 147, 153],
+              "source": {
+                  "run_id": 33771590501,
+                  "artifact_id": 9900067012,
+                  "artifact_name": "telemaque-178-exact-replay-cache-33771590501",
+                  "artifact_digest": "sha256:9dcc9cff9b8c81f8720f4eedc2ff91375db8356b2e739c7a491b5907b8fc43cc",
+                  "head_sha": "7bcd754b00e25f366706ce082227e07a33a58b31",
+                  "provider": "chatterbox-multilingual-v3",
+                  "provider_cache_identity": "67b9725ff5748da433f8150cec9e0b11665ab925636131a9cfe59d482d428344",
+                  "reference_sha256": "16e4067f6ab09ecb5a8b8afa9ef7b578ff16b80a01c9d5725d2eb0a2c606bc8f",
+                  "fixed_provider_seed": 650100,
+              },
+              "clips": manifest_clips,
+              "provenance": provenance,
+              "constraints": {
+                  "resynthesis": False,
+                  "audio_processing": False,
+                  "full_s12_render": False,
+                  "full_historical_s12_cache_recovery": False,
+                  "master_mix_reconstruction": False,
+                  "byte_preservation": "clips and original cache sidecars copied byte-for-byte from source artifact",
+              },
+          }
+          (root / "SHA256_MANIFEST.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+          PY
+
+          (
+            cd "${ROOT}"
+            find clips provenance -type f -print0 | sort -z | xargs -0 sha256sum
+            sha256sum CONTENT_ADDRESS_INPUT.json
+          ) > "${ROOT}/PAYLOAD_SHA256SUMS.txt"
+
+      - name: Commit exact consumable and publish immutable release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="series/odyssee/production/consumables/telemaque-s12/sha256/${CONTENT_ADDRESS}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${ROOT}"
+          git commit -m "prod: persist byte-exact accepted Telemaque S12 consumable (#178)"
+          COMMIT_SHA="$(git rev-parse HEAD)"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          git tag -a "${RELEASE_TAG}" "${COMMIT_SHA}" -m "Télémaque S12 accepted consumable ${CONTENT_ADDRESS}"
+          git push origin "refs/tags/${RELEASE_TAG}"
+
+          ARCHIVE="/tmp/telemaque-s12-accepted-consumable-sha256-${CONTENT_ADDRESS}.zip"
+          (cd "$(dirname "${ROOT}")" && zip -X -q -r "${ARCHIVE}" "$(basename "${ROOT}")")
+          ARCHIVE_SHA256="$(sha256sum "${ARCHIVE}" | awk '{print $1}')"
+          printf '%s  %s\n' "${ARCHIVE_SHA256}" "$(basename "${ARCHIVE}")" > /tmp/ARCHIVE_SHA256.txt
+
+          gh release create "${RELEASE_TAG}" \
+            "${ARCHIVE}#Télémaque S12 accepted content-addressed consumable" \
+            "/tmp/ARCHIVE_SHA256.txt#Archive SHA-256" \
+            --target "${COMMIT_SHA}" \
+            --title "Télémaque S12 accepted consumable ${CONTENT_ADDRESS}" \
+            --notes "#178 HUMAN PASS. Exact accepted clips 137/147/153 persisted byte-for-byte from artifact 9900067012. No resynthesis, no audio processing, no full S12 render, no master-mix reconstruction."
+
+          echo "PERSISTED_COMMIT=${COMMIT_SHA}"
+          echo "CONTENT_ADDRESS=${CONTENT_ADDRESS}"
+          echo "ARCHIVE_SHA256=${ARCHIVE_SHA256}"
+          echo "TELEMAQUE_ACCEPTED_CONSUMABLE_PERSISTED_READY_FOR_FINAL_S12_MATERIALIZATION"
