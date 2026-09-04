@@ -1,4 +1,4 @@
-name: Odyssée #178 Télémaque S12 cache-only integration
+name: "Odyssée Télémaque S12 cache-only qualification"
 
 on:
   push:
@@ -9,19 +9,13 @@ on:
 
 permissions:
   actions: read
-  contents: write
-  issues: write
-  pull-requests: write
+  contents: read
 
 env:
-  PROD_ENGINE_REF: d79bbe2d5aa47d7073186510a9b6d07f834a43ca
   SOURCE_ARTIFACT_ID: '9900070422'
   CACHE_ARTIFACT_ID: '9900067012'
-  SOURCE_RUN: '33771590501'
-  RECOVERY_RUN: '33811580901'
-  EXPECTED_PACKAGE_SHA256: 918b0acc9eae83b2bce8722504180d1a2841321602e0d11aee5d9076c11154e8
-  EXPECTED_REFERENCE_SHA256: 16e4067f6ab09ecb5a8b8afa9ef7b578ff16b80a01c9d5725d2eb0a2c606bc8f
-  EXPECTED_ACCEPTED_AUDIO_SHA256: 491ef48a0eed6f891f8226c7b4e6855fa4de3631ae9647794b6554852f0e7fae
+  EXPECTED_PACKAGE_SHA256: '918b0acc9eae83b2bce8722504180d1a2841321602e0d11aee5d9076c11154e8'
+  EXPECTED_REFERENCE_SHA256: '16e4067f6ab09ecb5a8b8afa9ef7b578ff16b80a01c9d5725d2eb0a2c606bc8f'
   TELEMAQUE_SOURCE_ROOT: generated/telemaque-artifacts/source
   TELEMAQUE_CACHE_ROOT: generated/telemaque-artifacts/cache
   PRODUCT_PACKAGE: series/odyssee/production/provider-packages/TELEMAQUE_CHATTERBOX_FR_REFERENCE_V1.json
@@ -33,25 +27,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - name: Checkout exact PR branch
+      - name: Checkout PR branch
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
-      - name: Record live main without coupling #179
+      - name: Record exact baseline
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
           mkdir -p generated/telemaque-s12
-          printf '%s\n' "$(git rev-parse origin/main)" > generated/telemaque-s12/main-at-start.txt
-          printf '%s\n' "$(git rev-parse HEAD)" > generated/telemaque-s12/qualification-head.txt
+          git rev-parse origin/main > generated/telemaque-s12/main-at-start.txt
+          git rev-parse HEAD > generated/telemaque-s12/qualification-head.txt
 
       - name: Checkout exact Production Audio Engine
         uses: actions/checkout@v6
         with:
           repository: stefm78/audio-engine
-          ref: ${{ env.PROD_ENGINE_REF }}
+          ref: d79bbe2d5aa47d7073186510a9b6d07f834a43ca
           path: .audio-engine
 
       - uses: actions/setup-python@v6
@@ -60,6 +54,41 @@ jobs:
           cache: pip
           cache-dependency-path: .audio-engine/requirements/chatterbox-mtl-v3-h1b-runtime.txt
 
+      - name: Restore a pre-existing qualified S12 cache
+        uses: actions/cache/restore@v4
+        with:
+          path: generated/work/S12/.cache
+          key: telemaque-178-s12-cache-only-${{ github.run_id }}
+          restore-keys: |
+            odyssee-production-v1-${{ runner.os }}-${{ github.repository }}-scene-v4-S12-
+            odyssee-production-v1-${{ runner.os }}-${{ github.repository }}-scene-v2-S12-
+
+      - name: Fail closed unless S12 speech cache already exists
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p generated/work/S12/.cache/voices
+          find generated/work/S12/.cache/voices -maxdepth 1 -type f -name '*.mp3' -print | sort > generated/telemaque-s12/restored-cache-files.txt
+          if [[ ! -s generated/telemaque-s12/restored-cache-files.txt ]]; then
+            echo 'FAIL CLOSED: no historical S12 voice cache; no synthesis is authorized.' >&2
+            exit 2
+          fi
+
+      - name: Download exact existing source and replay-cache artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$TELEMAQUE_SOURCE_ROOT" "$TELEMAQUE_CACHE_ROOT" generated/telemaque-artifacts/zips
+          gh api -H 'Accept: application/vnd.github+json' "/repos/$GITHUB_REPOSITORY/actions/artifacts/$SOURCE_ARTIFACT_ID/zip" > generated/telemaque-artifacts/zips/source.zip
+          gh api -H 'Accept: application/vnd.github+json' "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ARTIFACT_ID/zip" > generated/telemaque-artifacts/zips/cache.zip
+          unzip -q generated/telemaque-artifacts/zips/source.zip -d "$TELEMAQUE_SOURCE_ROOT"
+          unzip -q generated/telemaque-artifacts/zips/cache.zip -d "$TELEMAQUE_CACHE_ROOT"
+          test -s "$TELEMAQUE_SOURCE_ROOT/input/provider-package.json"
+          test -s "$TELEMAQUE_SOURCE_ROOT/input/reference/telemaque-p1-human-pass.wav"
+          test -d "$TELEMAQUE_CACHE_ROOT/render/.cache/voices"
+
       - name: Install exact promoted runtime without inference
         shell: bash
         run: |
@@ -67,67 +96,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg unzip
           bash .audio-engine/scripts/install_chatterbox_mtl_v3_h1b.sh
-          python -m pip install --disable-pip-version-check --no-deps \
-            "imageio-ffmpeg==0.6.0" "edge-tts==7.2.8"
+          python -m pip install --disable-pip-version-check --no-deps 'imageio-ffmpeg==0.6.0' 'edge-tts==7.2.8'
           python -m pip install --disable-pip-version-check --no-deps ./.audio-engine
 
-      - id: scene-v4
-        name: Restore qualified S12 scene-v4 voice cache
-        uses: actions/cache/restore@v4
-        with:
-          path: generated/work/S12/.cache
-          key: telemaque-178-s12-cache-only-${{ github.run_id }}
-          restore-keys: |
-            odyssee-production-v1-${{ runner.os }}-${{ github.repository }}-scene-v4-S12-
-            odyssee-production-v1-${{ runner.os }}-${{ github.repository }}- scene-v4-S12-
-
-      - id: scene-v2
-        name: Restore qualified S12 scene-v2 migration cache if v4 unavailable
-        if: steps.scene-v4.outputs.cache-matched-key == ''
-        uses: actions/cache/restore@v4
-        with:
-          path: generated/work/S12/.cache
-          key: telemaque-178-s12-cache-only-v2-${{ github.run_id }}
-          restore-keys: |
-            odyssee-production-v1-${{ runner.os }}-${{ github.repository }}-scene-v2-S12-
-            odyssee-production-v1-${{ runner.os }}-${{ github.repository }}- scene-v2-S12-
-
-      - name: Require a pre-existing S12 cache before any product render
-        shell: bash
-        env:
-          V4_KEY: ${{ steps.scene-v4.outputs.cache-matched-key }}
-          V2_KEY: ${{ steps.scene-v2.outputs.cache-matched-key }}
-        run: |
-          set -euo pipefail
-          if [[ -z "$V4_KEY" && -z "$V2_KEY" ]]; then
-            echo "FAIL CLOSED: no qualified historical S12 cache is available; refusing any Edge/provider synthesis." >&2
-            exit 2
-          fi
-          mkdir -p generated/work/S12/.cache/voices
-          find generated/work/S12/.cache/voices -maxdepth 1 -type f -name '*.mp3' -print | sort \
-            > generated/telemaque-s12/restored-cache-files.txt
-          test -s generated/telemaque-s12/restored-cache-files.txt
-
-      - name: Download exact existing #178 source and cache artifacts
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p "$TELEMAQUE_SOURCE_ROOT" "$TELEMAQUE_CACHE_ROOT" generated/telemaque-artifacts/zips
-          gh api -H 'Accept: application/vnd.github+json' \
-            "/repos/$GITHUB_REPOSITORY/actions/artifacts/$SOURCE_ARTIFACT_ID/zip" \
-            > generated/telemaque-artifacts/zips/source.zip
-          gh api -H 'Accept: application/vnd.github+json' \
-            "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ARTIFACT_ID/zip" \
-            > generated/telemaque-artifacts/zips/cache.zip
-          unzip -q generated/telemaque-artifacts/zips/source.zip -d "$TELEMAQUE_SOURCE_ROOT"
-          unzip -q generated/telemaque-artifacts/zips/cache.zip -d "$TELEMAQUE_CACHE_ROOT"
-          test -s "$TELEMAQUE_SOURCE_ROOT/input/provider-package.json"
-          test -s "$TELEMAQUE_SOURCE_ROOT/input/reference/telemaque-p1-human-pass.wav"
-          test -d "$TELEMAQUE_CACHE_ROOT/render/.cache/voices"
-
-      - name: Materialize exact bounded Production binding in workspace
+      - name: Materialize bounded binding in workspace only
         shell: bash
         run: |
           set -euo pipefail
@@ -137,214 +109,67 @@ jobs:
           python -m unittest tests.test_odyssee_telemaque_s12_cache_only_binding -v
           python -m unittest tests.test_odyssee_production_graph tests.test_odyssee_script tests.test_engine_pin_coherence -v
 
-      - name: Hydrate and validate exact accepted Chatterbox package without synthesizing
+      - name: Hydrate and validate exact accepted provider package
         shell: bash
         run: |
           set -euo pipefail
-          audio-engine provider-package hydrate-model "$PRODUCT_PACKAGE" \
-            --cache-root generated/provider-models
-          audio-engine provider-package validate "$PRODUCT_PACKAGE" \
-            --verify-files --workspace-root . --voice-pack "$VOICE_PACK"
+          audio-engine provider-package hydrate-model "$PRODUCT_PACKAGE" --cache-root generated/provider-models
+          audio-engine provider-package validate "$PRODUCT_PACKAGE" --verify-files --workspace-root . --voice-pack "$VOICE_PACK"
 
-      - name: Preseed exact accepted cached clips under current Production fingerprints
+      - name: Preseed exact accepted cached clip bytes
         shell: bash
         run: |
           set -euo pipefail
           python tools/telemaque_s12_cache_only_integration.py preseed
-          jq -e '
-            .status == "TELEMAQUE_EXACT_ACCEPTED_CLIPS_PRESEEDED"
-            and .resynthesis == false
-            and .audio_processing == false
-            and (.records | length) == 3
-            and all(.records[]; .byte_identity_preserved == true)
-          ' generated/telemaque-s12/preseed.json >/dev/null
+          jq -e '.status == "TELEMAQUE_EXACT_ACCEPTED_CLIPS_PRESEEDED" and .resynthesis == false and .audio_processing == false and (.records | length) == 3 and all(.records[]; .byte_identity_preserved == true)' generated/telemaque-s12/preseed.json >/dev/null
 
-      - name: Mandatory canonical provider prewarm gate — exactly 3 hits / 0 miss
+      - name: Enforce canonical 3-hit zero-miss provider gate
         shell: bash
         run: |
           set -euo pipefail
-          audio-engine provider-cache prewarm "$PROGRAM" \
-            --voices "$VOICE_PACK" \
-            --provider-package "$PRODUCT_PACKAGE" \
-            --cache-root generated/work/S12/.cache/voices \
-            --provider-model-cache generated/provider-models \
-            --workspace-root . \
-            --report generated/telemaque-s12/prewarm.json
-          jq -e '
-            .status == "ready"
-            and .provider == "chatterbox-multilingual-v3"
-            and .segment_count == 3
-            and .cache_hits == 3
-            and .cache_misses == 0
-          ' generated/telemaque-s12/prewarm.json >/dev/null
+          audio-engine provider-cache prewarm "$PROGRAM" --voices "$VOICE_PACK" --provider-package "$PRODUCT_PACKAGE" --cache-root generated/work/S12/.cache/voices --provider-model-cache generated/provider-models --workspace-root . --report generated/telemaque-s12/prewarm.json
+          jq -e '.status == "ready" and .provider == "chatterbox-multilingual-v3" and .segment_count == 3 and .cache_hits == 3 and .cache_misses == 0' generated/telemaque-s12/prewarm.json >/dev/null
 
-      - name: Fail-closed audit every S12 voice clip with synthesize neutralized
+      - name: Audit every S12 voice cache with synthesis neutralized
         shell: bash
         run: |
           set -euo pipefail
           python tools/telemaque_s12_cache_only_integration.py audit-cache
-          jq -e '
-            .status == "S12_ALL_VOICE_CACHE_FAIL_CLOSED_PASS"
-            and .cache_misses == 0
-            and .cache_satisfied == .segment_count
-            and .provider_inference_possible_during_audit == false
-          ' generated/telemaque-s12/all-voice-cache-audit.json >/dev/null
+          jq -e '.status == "S12_ALL_VOICE_CACHE_FAIL_CLOSED_PASS" and .cache_misses == 0 and .cache_satisfied == .segment_count and .provider_inference_possible_during_audit == false' generated/telemaque-s12/all-voice-cache-audit.json >/dev/null
 
-      - name: Render S12 from verified caches only and run exact machine QA
+      - name: Render S12 from verified caches and run machine QA
         shell: bash
         run: |
           set -euo pipefail
-          audio-engine render "$PROGRAM" \
-            --out generated/work/S12 \
-            --voices "$VOICE_PACK" \
-            --provider-package "$PRODUCT_PACKAGE" \
-            --provider-model-cache generated/provider-models \
-            --cache-only-promoted-provider chatterbox-multilingual-v3 \
-            --workspace-root . \
-            > generated/telemaque-s12/render.json
-          audio-engine qa generated/work/S12/odyssee-s12 \
-            > generated/work/S12/odyssee-s12/qa-report.json
+          audio-engine render "$PROGRAM" --out generated/work/S12 --voices "$VOICE_PACK" --provider-package "$PRODUCT_PACKAGE" --provider-model-cache generated/provider-models --cache-only-promoted-provider chatterbox-multilingual-v3 --workspace-root . > generated/telemaque-s12/render.json
+          audio-engine qa generated/work/S12/odyssee-s12 > generated/work/S12/odyssee-s12/qa-report.json
           jq -e '.status == "PASS"' generated/work/S12/odyssee-s12/qa-report.json >/dev/null
-          jq -e '
-            .status == "success"
-            and .mix.voice_cache_hits == .mix.voice_clip_count
-          ' generated/work/S12/odyssee-s12/manifest.json >/dev/null
+          jq -e '.status == "success" and .mix.voice_cache_hits == .mix.voice_clip_count' generated/work/S12/odyssee-s12/manifest.json >/dev/null
 
-      - name: Finalize canonical evidence
+      - name: Finalize exact qualification evidence
         shell: bash
         run: |
           set -euo pipefail
           python tools/telemaque_s12_cache_only_integration.py finalize
-          jq -e '
-            .status == "TELEMAQUE_S12_CACHE_ONLY_MACHINE_QUALIFIED"
-            and .prewarm.cache_hits == 3
-            and .prewarm.cache_misses == 0
-            and .all_s12_voice_cache.cache_misses == 0
-          ' generated/telemaque-s12/final.json >/dev/null
+          jq -e '.status == "TELEMAQUE_S12_CACHE_ONLY_MACHINE_QUALIFIED" and .prewarm.cache_hits == 3 and .prewarm.cache_misses == 0 and .all_s12_voice_cache.cache_misses == 0' generated/telemaque-s12/final.json >/dev/null
           python -m unittest tests.test_odyssee_telemaque_s12_cache_only_binding -v
-          python -m unittest tests.test_odyssee_production_graph tests.test_odyssee_script tests.test_engine_pin_coherence -v
 
-      - name: Upload exact machine-qualification evidence
+      - name: Upload qualification evidence and candidate product files
         uses: actions/upload-artifact@v4
         with:
-          name: telemaque-178-s12-cache-only-machine-qualified-${{ github.run_id }}
+          name: telemaque-178-s12-cache-only-qualified-${{ github.run_id }}
           path: |
-            generated/telemaque-s12/materialize.json
-            generated/telemaque-s12/preseed.json
-            generated/telemaque-s12/prewarm.json
-            generated/telemaque-s12/all-voice-cache-audit.json
-            generated/telemaque-s12/render.json
-            generated/telemaque-s12/final.json
-            generated/telemaque-s12/main-at-start.txt
-            generated/telemaque-s12/qualification-head.txt
+            generated/telemaque-s12/*.json
+            generated/telemaque-s12/*.txt
             generated/work/S12/odyssee-s12/manifest.json
             generated/work/S12/odyssee-s12/qa-report.json
             generated/work/S12/odyssee-s12/audio.mp3
+            series/odyssee/review/TELEMAQUE_FRENCH_CLEAN_PATH_V1.json
+            series/odyssee/programs/S12.json
+            series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json
+            series/odyssee/production/provider-packages/TELEMAQUE_CHATTERBOX_FR_REFERENCE_V1.json
             series/odyssee/production/TELEMAQUE_S12_CACHE_ONLY_BINDING_V1.json
+            tests/test_odyssee_telemaque_s12_cache_only_binding.py
           if-no-files-found: error
           retention-days: 14
           compression-level: 0
-
-      - name: Commit only qualified product binding; remove one-shot probe machinery
-        id: commit
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git rm --ignore-unmatch .github/workflows/odyssee-telemaque-fr-clean-probe.yml
-          git rm --ignore-unmatch .github/workflows/odyssee-telemaque-s12-cache-only-integration.yml
-          git rm --ignore-unmatch tools/telemaque_s12_cache_only_integration.py
-          git add \
-            series/odyssee/review/TELEMAQUE_FRENCH_CLEAN_PATH_V1.json \
-            series/odyssee/programs/S12.json \
-            series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json \
-            series/odyssee/production/provider-packages/TELEMAQUE_CHATTERBOX_FR_REFERENCE_V1.json \
-            series/odyssee/production/TELEMAQUE_S12_CACHE_ONLY_BINDING_V1.json \
-            tests/test_odyssee_telemaque_s12_cache_only_binding.py
-          git diff --cached --check
-          git commit -m "prod: bind HUMAN-PASS Telemaque cache-only into S12 (#178)"
-          product_sha="$(git rev-parse HEAD)"
-          echo "product_sha=$product_sha" >> "$GITHUB_OUTPUT"
-          git push origin HEAD:prod/178-telemaque-chatterbox-fr-probe
-
-      - name: Return machine-qualified proof to #178 and update PR #184
-        env:
-          GH_TOKEN: ${{ github.token }}
-          PRODUCT_SHA: ${{ steps.commit.outputs.product_sha }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          python - <<'PY'
-          import json, os
-          from pathlib import Path
-          final=json.load(open('generated/telemaque-s12/final.json', encoding='utf-8'))
-          preseed=json.load(open('generated/telemaque-s12/preseed.json', encoding='utf-8'))
-          main=Path('generated/telemaque-s12/main-at-start.txt').read_text().strip()
-          records='\n'.join(
-              f"- S12:{r['sequence']} source `{r['source_fingerprint']}` -> Production `{r['production_fingerprint']}` / clip SHA `{r['clip_sha256']}`"
-              for r in preseed['records']
-          )
-          body=f"""STREAM 3 — #178 TELEMAQUE_S12_CACHE_ONLY_MACHINE_QUALIFIED
-
-Base main observed at qualification start: `{main}`
-PR: #184
-Qualified product commit: `{os.environ['PRODUCT_SHA']}`
-Qualification run: `{os.environ['GITHUB_RUN_ID']}`
-Production Audio Engine: `{os.environ['PROD_ENGINE_REF']}`
-
-Human authority: `TELEMAQUE_FRENCH_CLEAN_PATH_HUMAN_PASS`
-Accepted listening audio SHA-256: `{os.environ['EXPECTED_ACCEPTED_AUDIO_SHA256']}`
-Exact provider-package SHA-256: `{os.environ['EXPECTED_PACKAGE_SHA256']}`
-Exact P1 reference SHA-256: `{os.environ['EXPECTED_REFERENCE_SHA256']}`
-
-Mandatory provider gate: **3/3 cache hits, 0 misses**.
-Full S12 voice-cache fail-closed audit: **{final['all_s12_voice_cache']['cache_satisfied']}/{final['all_s12_voice_cache']['segment_count']} satisfied, 0 misses** with both provider `synthesize()` paths neutralized before render.
-Actual S12 render: all voice clips cache hits; provider inference = **NO**; resynthesis = **NO**.
-S12 machine QA: **PASS**.
-S12 audio SHA-256: `{final['s12_audio_sha256']}`
-S12 QA SHA-256: `{final['qa_sha256']}`
-
-Exact accepted cached clips rebound without audio processing:
-{records}
-
-Scope changed: S12 Télémaque 137 / 147 / 153 + S12 manifest/provider binding only.
-Text/speaker/character_id/preset preserved.
-No global Télémaque migration.
-No Remy/Edge retry.
-No Ulysse change.
-No S15 change.
-No provider sweep.
-
-Packaging gate remains separate: the future H2-compatible immutable Production release is still required before H2/final fan-in. It does not invalidate this S12 machine qualification.
-
-Rollback is limited to the three S12 performance-provider fields, the S12 manifest provider binding, and the Télémaque provider-package/evidence files.
-
-#178 remains independent of #179."""
-          Path('generated/telemaque-s12/issue-comment.md').write_text(body, encoding='utf-8')
-          pr=f"""Authority: #178
-
-This PR now contains the post-HUMAN-PASS S12 integration only.
-
-Machine qualification: `TELEMAQUE_S12_CACHE_ONLY_MACHINE_QUALIFIED`
-Run: {os.environ['GITHUB_RUN_ID']}
-Qualified product commit: {os.environ['PRODUCT_SHA']}
-
-Hard proof:
-- exact HUMAN-PASS Chatterbox package/reference/seed/parameters preserved;
-- only S12 Télémaque 137/147/153 routed;
-- exact accepted cached clip bytes reused;
-- canonical prewarm 3 hits / 0 misses;
-- full S12 cache audit completed with synthesize paths neutralized;
-- actual render 100% voice-cache hits;
-- S12 QA PASS;
-- no Ulysse/S15/global Télémaque change.
-
-DO NOT merge into main until the separate immutable Production packaging gate required by #178 for H2/final fan-in is satisfied or Stream 1 explicitly authorizes the merge state. #179 remains independent."""
-          Path('generated/telemaque-s12/pr-body.md').write_text(pr, encoding='utf-8')
-          PY
-          gh issue comment 178 --repo "$GITHUB_REPOSITORY" \
-            --body-file generated/telemaque-s12/issue-comment.md
-          gh pr edit 184 --repo "$GITHUB_REPOSITORY" \
-            --title "prod: integrate HUMAN-PASS Télémaque cache-only into S12" \
-            --body-file generated/telemaque-s12/pr-body.md
