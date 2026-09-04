@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "fingerprint": "6f81a258720cd3212d630827d6bd3284d698a7565b3445614d2bcddfda9af4f2",
+  "provider": "chatterbox-multilingual-v3",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+5%",
+  "pitch": "+8Hz",
+  "volume": "+2%",
+  "language_locale": null,
+  "text_chars": 141,
+  "text_words": 28,
+  "edge_silence_normalized": false,
+  "measured_duration_ms": 7250.0
+}

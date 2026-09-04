@@ -1,0 +1,92 @@
+{
+  "schema": "recit.odyssee.telemaque_s12_accepted_consumable.v1",
+  "status": "TELEMAQUE_ACCEPTED_CONSUMABLE_PERSISTED_READY_FOR_FINAL_S12_MATERIALIZATION",
+  "authority_issue": 178,
+  "human_verdict": "TELEMAQUE_FRENCH_CLEAN_PATH_HUMAN_PASS",
+  "content_address_algorithm": "sha256",
+  "content_address": "5af5e36d2ff6525c71fb1eff992264ac2e9f98c82a40a1e6b5bafe5bcce3dd9e",
+  "content_address_input_path": "CONTENT_ADDRESS_INPUT.json",
+  "segments": [
+    137,
+    147,
+    153
+  ],
+  "source": {
+    "run_id": 33771590501,
+    "artifact_id": 9900067012,
+    "artifact_name": "telemaque-178-exact-replay-cache-33771590501",
+    "artifact_digest": "sha256:9dcc9cff9b8c81f8720f4eedc2ff91375db8356b2e739c7a491b5907b8fc43cc",
+    "head_sha": "7bcd754b00e25f366706ce082227e07a33a58b31",
+    "provider": "chatterbox-multilingual-v3",
+    "provider_cache_identity": "67b9725ff5748da433f8150cec9e0b11665ab925636131a9cfe59d482d428344",
+    "reference_sha256": "16e4067f6ab09ecb5a8b8afa9ef7b578ff16b80a01c9d5725d2eb0a2c606bc8f",
+    "fixed_provider_seed": 650100
+  },
+  "clips": [
+    {
+      "segment": 137,
+      "cache_fingerprint": "b70f8b8fc753a078e9f947ba05cc50402f4d35bf55a5970fab07dac282157683",
+      "audio_path": "clips/137.mp3",
+      "audio_bytes": 10988,
+      "audio_sha256": "469bada0e1c0778c260b3a3c0cb09543db5e1f21f3b2272d7b4f26cef95f40e8",
+      "sidecar_path": "clips/137.cache.json",
+      "sidecar_bytes": 380,
+      "sidecar_sha256": "1d99619aa7a6335fd8489d15d639e0e788638fe7a8d14df268949457d230ce43"
+    },
+    {
+      "segment": 147,
+      "cache_fingerprint": "6f81a258720cd3212d630827d6bd3284d698a7565b3445614d2bcddfda9af4f2",
+      "audio_path": "clips/147.mp3",
+      "audio_bytes": 87308,
+      "audio_sha256": "58f3634efd84d270c091fb4624032d3596cfd223437f61a5ec5a893e41b86fd2",
+      "sidecar_path": "clips/147.cache.json",
+      "sidecar_bytes": 383,
+      "sidecar_sha256": "1f44145713d866de820135f9f463f69d39f3b0cf97d39d28484cb26ee63f5d5c"
+    },
+    {
+      "segment": 153,
+      "cache_fingerprint": "59954baa87b98d4d7005a5811335df587923b3fcc166ceec5766ad324ef66296",
+      "audio_path": "clips/153.mp3",
+      "audio_bytes": 37484,
+      "audio_sha256": "f55e8c62e3c4dd63ad25ea9628bccda34b38ee92a43ecf5fd6e7fcba27115375",
+      "sidecar_path": "clips/153.cache.json",
+      "sidecar_bytes": 382,
+      "sidecar_sha256": "344b5fc0f14bcaaff65d6c8a072219e1f25ceed0957514ca50aace143562145b"
+    }
+  ],
+  "provenance": [
+    {
+      "path": "provenance/plan.json",
+      "bytes": 2268,
+      "sha256": "e3260d2d3b83189502c534afc6de04acc31de79951cbab96a93e3777b1751e86"
+    },
+    {
+      "path": "provenance/provider-package.json",
+      "bytes": 2797,
+      "sha256": "918b0acc9eae83b2bce8722504180d1a2841321602e0d11aee5d9076c11154e8"
+    },
+    {
+      "path": "provenance/probe-program.json",
+      "bytes": 1461,
+      "sha256": "d3987d523a60a7182feb181da86866c6903988af591ceaf719ae83c7025c0cfd"
+    },
+    {
+      "path": "provenance/reference-lock.json",
+      "bytes": 937,
+      "sha256": "fb8f220e8fe3ff3c970bdc73a6427859aa117c872b501a762351a7916aaa3212"
+    },
+    {
+      "path": "provenance/prewarm-report.json",
+      "bytes": 542,
+      "sha256": "25b922a4c8e7550459126c72be5b4ff50079e5088625a8f0f9fc52fbb6e719cb"
+    }
+  ],
+  "constraints": {
+    "resynthesis": false,
+    "audio_processing": false,
+    "full_s12_render": false,
+    "full_historical_s12_cache_recovery": false,
+    "master_mix_reconstruction": false,
+    "byte_preservation": "clips and original cache sidecars copied byte-for-byte from source artifact"
+  }
+}

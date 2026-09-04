@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "program_id": "odyssee-telemaque-fr-clean-probe",
+  "provider": "chatterbox-multilingual-v3",
+  "provider_cache_identity": "67b9725ff5748da433f8150cec9e0b11665ab925636131a9cfe59d482d428344",
+  "segment_count": 3,
+  "cache_hits": 0,
+  "cache_misses": 3,
+  "fingerprints": [
+    "b70f8b8fc753a078e9f947ba05cc50402f4d35bf55a5970fab07dac282157683",
+    "6f81a258720cd3212d630827d6bd3284d698a7565b3445614d2bcddfda9af4f2",
+    "59954baa87b98d4d7005a5811335df587923b3fcc166ceec5766ad324ef66296"
+  ]
+}

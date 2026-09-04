@@ -1,0 +1,45 @@
+{
+  "schema_version": 6,
+  "id": "odyssee-telemaque-fr-clean-probe",
+  "title": "L’Odyssée — Télémaque French-clean bounded Chatterbox probe",
+  "language": "fr-FR",
+  "profile": "speech",
+  "acoustic_space": "dry",
+  "actors": {
+    "telemaque": {
+      "placement": "center"
+    }
+  },
+  "segments": [
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Qui es-tu ?",
+      "preset": "odyssee-telemaque",
+      "source_sequence": 137,
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 650100
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tous les hommes qui arrivent à Ithaque ont vu mon père. Certains ont bu avec lui. D’autres lui ont parlé hier. Et maintenant toi, tu es lui ?",
+      "preset": "odyssee-telemaque",
+      "source_sequence": 147,
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 650100
+    },
+    {
+      "scene": "S12 — Personne, une seconde fois",
+      "character_id": "telemaque",
+      "speaker": "TÉLÉMAQUE",
+      "text": "Tu ne peux pas entrer dans une pièce et dire ce mot comme si—",
+      "preset": "odyssee-telemaque",
+      "source_sequence": 153,
+      "performance_provider": "chatterbox-multilingual-v3",
+      "provider_seed": 650100
+    }
+  ]
+}

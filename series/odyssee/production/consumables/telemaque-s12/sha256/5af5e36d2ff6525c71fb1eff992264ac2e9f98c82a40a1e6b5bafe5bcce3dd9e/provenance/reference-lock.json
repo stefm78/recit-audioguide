@@ -1,0 +1,16 @@
+{
+  "source_release": "odyssee-p1-review-v1",
+  "source_audio": "p1.mp3",
+  "source_audio_sha256": "b3c9629b920e31033c6aab7b6625d30d29d5c219d3458dfbb3f6a92e4949a5ea",
+  "source_timing": "timing.json",
+  "source_timing_sha256": "85308098d37ce522e2192606d7bf2cabebefc33334e0224df8716b193469a912",
+  "source_program": "series/odyssee/audio/odyssee-probe-p1.json",
+  "source_program_sha256": "b55b97817d8e2c062d6e95eec77799f2f05d776cf7856a58f5b13bc5dc162c15",
+  "source_segment": 3,
+  "source_text": "Courez si vous voulez prévenir les prétendants. Moi, je reste. J’ai passé assez d’années à attendre qu’un autre homme décide ce que je devais faire dans ma propre maison.",
+  "start_ms": 21320.0,
+  "end_ms": 30300.0,
+  "duration_ms": 8980.0,
+  "reference_wav": "generated/telemaque-fr-clean/input/reference/telemaque-p1-human-pass.wav",
+  "reference_sha256": "16e4067f6ab09ecb5a8b8afa9ef7b578ff16b80a01c9d5725d2eb0a2c606bc8f"
+}
