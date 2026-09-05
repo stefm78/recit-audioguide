@@ -3,7 +3,7 @@
   "id": "odyssee-p7-stream2-human-beltout-generalization-v1",
   "authority_issue": 179,
   "parent_authority_issue": 164,
-  "status": "AWAITING_HUMAN_SOURCE_INTAKE",
+  "status": "EXECUTION_INFRA_HOLD_AFTER_SOURCE_FREEZE",
   "product_main_at_preregistration": "44dc588dc88f6c1c90899d065f09a08cb3ba0af7",
   "comparator": {
     "release_tag": "odyssee-p7-round2-line-microprosody-v1",
@@ -18,7 +18,9 @@
   "accepted_architecture_source": {
     "provider_package": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json",
     "capability": "human French performance -> BeltOut -> Henri/Ulysse",
-    "preserve_identity": "fr-FR-HenriNeural / Henri timbre"
+    "preserve_identity": "fr-FR-HenriNeural / Henri timbre",
+    "beltout_revision": "f71295e33cc9c0092083089ed0f9c1a532e77e6b",
+    "henri_anchor_sha256": "dc6266a224a3de4236c0eca8cbfb2364e97b16f558f514da48616451a3acad45"
   },
   "states": [
     {
@@ -126,11 +128,30 @@
       "no_added_reverb",
       "no_aggressive_denoise",
       "no_artistic_DSP"
-    ]
+    ],
+    "received_privately": true,
+    "verified": true,
+    "frozen_before_any_beltout_output": true,
+    "raw_sha256": {
+      "S05-135.webm": "a7acb1ce12d85d64e373689a7799dd747b583b2c55f98ec5fecc652db41b6392",
+      "S05-139.webm": "fbf36362726ef1788b8503bc223aeb2683f8a681cae4a9bddb571ff1a3eea43f",
+      "S05-143.webm": "50b6e7f2ec9906f0b4de21ce98b52830f2266e7efe95f70cfa525d895121777e",
+      "S06-090.webm": "725f80ffe6632baf6ccf5ea8ca723f9530d1b356983cf67a73b1a4e7bfdff577",
+      "S06-093.webm": "49d60bdbccc509980f50d68e02b78944c9f8894d893a2fd648f41aba7b6a427d",
+      "S06-099.webm": "0083e7c3418d6171043a14bcbb6d39dde6dd0950c316bd45f4ba338346919851",
+      "S14-079.webm": "9f2a9239ad952a8d255006933603216829ba878d683c8ac9f53bb9652bbbdef4",
+      "S14-085.webm": "2188b5403c0a35998c0b43e378856de500797fbf67daf18278a7f611545ac834",
+      "S14-089.webm": "0b9cb6f0da04deef1d0166c418d2f7d67c748698aa124b5d3a675f3816c28d6d"
+    },
+    "decode_basic_gate": "PASS",
+    "take_substitution": false,
+    "artistic_dsp": false
   },
   "beltout": {
     "inherit_exactly_from": "series/odyssee/production/provider-packages/P6_ULYSSES_HUMAN_BELTOUT_PRODUCTION_V1.json",
     "one_conversion_per_frozen_take": true,
+    "conversions_consumed": 0,
+    "retry_budget_consumed": 0,
     "forbidden": [
       "seed_retry",
       "best_of_N",
@@ -139,7 +160,19 @@
       "time_stretch",
       "pitch_shift",
       "emotion_DSP",
-      "second_BeltOut_pass"
+      "second_BeltOut_pass",
+      "new_runtime_variant_for_this_cell"
+    ]
+  },
+  "execution": {
+    "state": "EXECUTION_INFRA_HOLD",
+    "meaning": "The artistic/provider experiment has not failed. Frozen inputs are ready but the active chat execution layer could not start the already-qualified private/local BeltOut runtime.",
+    "next_admissible_operation": [
+      "use_existing_qualified_private_or_local_beltout_runtime",
+      "perform_exactly_one_conversion_per_frozen_take",
+      "run_machine_validity_duration_timbre_direction_gates",
+      "publish_small_immutable_C2_vs_BeltOut_comparison_bundle",
+      "request_human_verdict"
     ]
   },
   "human_review": {
@@ -156,7 +189,8 @@
       "one_recognisable_Ulysse_across_three_states"
     ],
     "semantics": "Observation and artistic acceptance are separate. PASS wording must be unambiguous.",
-    "pass_rule": "All three states must materially outperform C2 on life/mechanical-cold while preserving Henri identity, French, restraint, state fit and one-Ulysse continuity."
+    "pass_rule": "All three states must materially outperform C2 on life/mechanical-cold while preserving Henri identity, French, restraint, state fit and one-Ulysse continuity.",
+    "current_verdict": "NOT_YET_TAKEN"
   },
   "constraints": {
     "recast": false,
