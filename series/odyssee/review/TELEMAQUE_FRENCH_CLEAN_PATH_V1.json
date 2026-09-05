@@ -1,7 +1,7 @@
 {
   "schema": "recit.odyssee.telemaque_french_clean_path.v1",
   "id": "odyssee-telemaque-french-clean-path-v1",
-  "status": "TELEMAQUE_CHATTERBOX_FR_REFERENCE_PROBE_AUTHORIZED",
+  "status": "TELEMAQUE_FRENCH_CLEAN_PATH_HUMAN_PASS",
   "authority_issue": 178,
   "parent_stream1_issue": 110,
   "diagnosis": {
@@ -40,16 +40,7 @@
     },
     "probe": {
       "scene": "S12",
-      "exact_segments": [
-        137,
-        147,
-        153
-      ],
-      "reason": {
-        "137": "short direct challenge",
-        "147": "long emotionally loaded sentence",
-        "153": "interrupted longer challenge"
-      },
+      "exact_segments": [137, 147, 153],
       "one_parameter_set": true,
       "no_best_of_n": true,
       "no_seed_retry": true,
@@ -69,9 +60,46 @@
     "pass": "TELEMAQUE_FRENCH_CLEAN_PATH_HUMAN_PASS",
     "fail": "HOLD_TELEMAQUE_CHATTERBOX_IDENTITY_OR_NATURALNESS"
   },
+  "human_result": {
+    "verdict": "TELEMAQUE_FRENCH_CLEAN_PATH_HUMAN_PASS",
+    "release": "odyssee-telemaque-fr-clean-level-recovery-v1",
+    "audio": "telemaque-fr-clean-probe-level-recovered.mp3",
+    "audio_sha256": "491ef48a0eed6f891f8226c7b4e6855fa4de3631ae9647794b6554852f0e7fae",
+    "source_run": 33771590501,
+    "source_artifact": 9900070422,
+    "cache_artifact": 9900067012,
+    "level_only_recovery_run": 33811580901,
+    "resynthesis_during_recovery": false,
+    "machine_qa": "PASS",
+    "dimensions": {
+      "french_fully_clean": "PASS",
+      "p1_identity_continuity": "PASS",
+      "credible_young_adult": "PASS",
+      "natural_phrasing": "PASS",
+      "distinct_from_ulysse": "PASS",
+      "no_caricature": "PASS"
+    }
+  },
   "post_pass": {
     "scope": "Materialize only affected S12 Télémaque lines first using the exact passed recipe. Do not globally migrate earlier accepted Télémaque scenes without a concrete defect.",
-    "h2_watch": "Cross-scene Télémaque identity continuity remains an H2 dimension."
+    "h2_watch": "Cross-scene Télémaque identity continuity remains an H2 dimension.",
+    "integration": {
+      "status": "S12_CACHE_ONLY_AUTHORIZED_PENDING_MACHINE_QA",
+      "scene": "S12",
+      "segments": [137, 147, 153],
+      "provider": "chatterbox-multilingual-v3",
+      "provider_package_sha256": "918b0acc9eae83b2bce8722504180d1a2841321602e0d11aee5d9076c11154e8",
+      "reference_sha256": "16e4067f6ab09ecb5a8b8afa9ef7b578ff16b80a01c9d5725d2eb0a2c606bc8f",
+      "seed": 650100,
+      "resynthesis_forbidden": true,
+      "cache_gate": {
+        "target": 3,
+        "required_hits": 3,
+        "required_misses": 0
+      },
+      "completion_token": "TELEMAQUE_S12_CACHE_ONLY_MACHINE_QUALIFIED",
+      "immutable_h2_production_packaging": "PENDING_BEFORE_H2_FAN_IN"
+    }
   },
   "stop_rules": [
     "no_more_Remy_Edge_language_retries",
@@ -79,6 +107,6 @@
     "no_frozen_text_change",
     "no_provider_sweep",
     "no_global_Telemaque_recast_at_entry",
-    "return_to_Stream1_if_single_bounded_Chatterbox_probe_fails"
+    "no_resynthesis_after_human_pass"
   ]
 }
