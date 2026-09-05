@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Odyssée P7 #179 — récupération locale des 9 prises</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1016;--panel:#141c25;--line:#2b3745;--text:#f5f7fa;--muted:#a8b4c2;--good:#86efac;--warn:#fde68a;--bad:#fca5a5;--accent:#7dd3fc}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}main{width:min(980px,calc(100% - 24px));margin:auto;padding:28px 0 70px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;margin:16px 0}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.good{color:var(--good)}.warn{color:var(--warn)}.bad{color:var(--bad)}.muted{color:var(--muted)}code{overflow-wrap:anywhere}.status{font-weight:800}.grid{display:grid;grid-template-columns:120px 1fr 95px;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}button{border:1px solid var(--line);background:#1d2936;color:var(--text);border-radius:10px;padding:10px 13px;font:inherit;font-weight:750;cursor:pointer}button.good{background:#173c28;border-color:#2d7750}button:disabled{opacity:.45;cursor:not-allowed}.privacy{border:1px solid #285c45;background:#102219;color:#bdf3d1;border-radius:12px;padding:12px}.notice{border:1px solid #6b5b24;background:#211e12;color:#f8eab0;border-radius:12px;padding:12px}@media(max-width:650px){.grid{grid-template-columns:90px 1fr}.grid .sha{grid-column:1/-1}}
+</style>
+</head>
+<body><main>
+<div class="muted">#179 · Stream 2 · P7 · récupération locale</div>
+<h1>Récupérer les 9 prises gelées</h1>
+<p>Cette page inspecte uniquement la base historique de #179 sur <code>https://stefm78.github.io</code> : <code>odyssee-p7-stream2-human-beltout-v1</code>, store <code>takes</code>.</p>
+<div class="privacy"><strong>Lecture seule.</strong> Aucun enregistrement, aucune modification IndexedDB, aucun upload. L’export n’est activé que si les neuf octets retrouvés correspondent exactement aux SHA-256 gelés de #179.</div>
+<section class="card"><h2>Diagnostic</h2><div id="d-js">JavaScript : …</div><div id="d-origin">Origine : …</div><div id="d-db">IndexedDB #179 : …</div><div id="d-crypto">SHA-256 : …</div><div id="d-enum">Bases de l’origine : …</div><p><button id="scan">Scanner la base #179</button></p><p id="scan-status" class="status warn">Scan non lancé</p></section>
+<section class="card"><h2>Correspondances exactes</h2><div id="results"></div></section>
+<section class="card"><h2>Export scientifique</h2><p class="notice">Le ZIP n’est valide pour la cellule #179 que si le résultat est <strong>9/9 MATCH</strong>. Aucune substitution ni reconstruction n’est autorisée.</p><button id="export" class="good" disabled>Télécharger le ZIP exact des 9 prises</button><p id="export-status" class="status"></p></section>
+<script>
+(()=>{'use strict';
+const ORIGIN='https://stefm78.github.io';
+const DB='odyssee-p7-stream2-human-beltout-v1';
+const STORE='takes';
+const EXPECTED={
+ 'S05-135':{file:'S05-135.webm',sha:'a7acb1ce12d85d64e373689a7799dd747b583b2c55f98ec5fecc652db41b6392'},
+ 'S05-139':{file:'S05-139.webm',sha:'fbf36362726ef1788b8503bc223aeb2683f8a681cae4a9bddb571ff1a3eea43f'},
+ 'S05-143':{file:'S05-143.webm',sha:'50b6e7f2ec9906f0b4de21ce98b52830f2266e7efe95f70cfa525d895121777e'},
+ 'S06-090':{file:'S06-090.webm',sha:'725f80ffe6632baf6ccf5ea8ca723f9530d1b356983cf67a73b1a4e7bfdff577'},
+ 'S06-093':{file:'S06-093.webm',sha:'49d60bdbccc509980f50d68e02b78944c9f8894d893a2fd648f41aba7b6a427d'},
+ 'S06-099':{file:'S06-099.webm',sha:'0083e7c3418d6171043a14bcbb6d39dde6dd0950c316bd45f4ba338346919851'},
+ 'S14-079':{file:'S14-079.webm',sha:'9f2a9239ad952a8d255006933603216829ba878d683c8ac9f53bb9652bbbdef4'},
+ 'S14-085':{file:'S14-085.webm',sha:'2188b5403c0a35998c0b43e378856de500797fbf67daf18278a7f611545ac834'},
+ 'S14-089':{file:'S14-089.webm',sha:'0b9cb6f0da04deef1d0166c418d2f7d67c748698aa124b5d3a675f3816c28d6d'}
+};
+const $=id=>document.getElementById(id);let recovered={};
+function set(id,state,text){const e=$(id);e.textContent=text;e.className=state}
+set('d-js','good','JavaScript : OK');
+set('d-origin',location.origin===ORIGIN?'good':'bad','Origine : '+location.origin+(location.origin===ORIGIN?' · same-origin #179':' · MAUVAISE ORIGINE'));
+set('d-crypto',globalThis.crypto&&crypto.subtle?'good':'bad','SHA-256 : '+(globalThis.crypto&&crypto.subtle?'disponible':'indisponible'));
+set('d-db',globalThis.indexedDB?'good':'bad','IndexedDB #179 : '+(globalThis.indexedDB?'disponible':'indisponible'));
+async function listDatabases(){if(typeof indexedDB.databases!=='function'){set('d-enum','warn','Bases de l’origine : énumération non supportée par ce navigateur');return null}const list=await indexedDB.databases();const names=list.map(x=>x.name).filter(Boolean);set('d-enum',names.includes(DB)?'good':'warn','Bases de l’origine : '+(names.length?names.join(', '):'aucune')+(names.includes(DB)?' · base #179 présente':' · base #179 absente'));return names}
+function openExisting(){return new Promise((resolve,reject)=>{let created=false;const r=indexedDB.open(DB);r.onupgradeneeded=()=>{created=true;try{r.transaction.abort()}catch(_){ } };r.onsuccess=()=>{if(created){try{r.result.close()}catch(_){ }reject(new Error('BASE_179_ABSENTE'));return}resolve(r.result)};r.onerror=()=>reject(r.error||new Error(created?'BASE_179_ABSENTE':'OPEN_FAILED'))})}
+function readAll(db){return new Promise((resolve,reject)=>{if(!db.objectStoreNames.contains(STORE)){reject(new Error('STORE_TAKES_ABSENT'));return}const tx=db.transaction(STORE,'readonly');const r=tx.objectStore(STORE).getAll();r.onsuccess=()=>resolve(r.result||[]);r.onerror=()=>reject(r.error)})}
+async function sha256(blob){const b=await blob.arrayBuffer();const h=await crypto.subtle.digest('SHA-256',b);return [...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+function canonicalTarget(x){if(x&&typeof x.target==='string'&&EXPECTED[x.target])return x.target;if(x&&typeof x.scene==='string'&&Number.isFinite(Number(x.segment))){const k=x.scene+'-'+String(Number(x.segment)).padStart(3,'0');if(EXPECTED[k])return k}return null}
+function render(){const keys=Object.keys(EXPECTED);$('results').innerHTML=keys.map(k=>{const r=recovered[k],e=EXPECTED[k];return '<div class="grid"><strong>'+k+'</strong><span class="sha"><code>'+e.sha+'</code></span><span class="'+(r?'good':'bad')+'">'+(r?'MATCH':'MISSING')+'</span></div>'}).join('');const n=keys.filter(k=>recovered[k]).length;$('export').disabled=n!==keys.length;set('scan-status',n===keys.length?'good':(n?'warn':'bad'),n+'/'+keys.length+(n===keys.length?' MATCH — bytes exacts récupérables':' correspondance(s) exacte(s)'));}
+async function scan(){recovered={};$('export').disabled=true;set('scan-status','warn','Scan en cours…');$('export-status').textContent='';try{if(location.origin!==ORIGIN)throw new Error('WRONG_ORIGIN');if(!(globalThis.crypto&&crypto.subtle))throw new Error('SHA256_UNAVAILABLE');await listDatabases();const db=await openExisting();const rows=await readAll(db);db.close();let hashed=0;for(const row of rows){if(!(row&&row.blob instanceof Blob))continue;const target=canonicalTarget(row);const digest=await sha256(row.blob);hashed++;if(target&&digest===EXPECTED[target].sha&&!recovered[target])recovered[target]={blob:row.blob,sha:digest,uid:row.uid||null};else{for(const [k,e] of Object.entries(EXPECTED)){if(digest===e.sha&&!recovered[k]){recovered[k]={blob:row.blob,sha:digest,uid:row.uid||null};break}}}}render();const n=Object.keys(recovered).length;if(n!==9)$('scan-status').textContent=n+'/9 MATCH · '+rows.length+' enregistrement(s) lu(s), '+hashed+' blob(s) haché(s)';}catch(err){render();set('scan-status','bad','HOLD causal : '+(err&&err.message?err.message:String(err)))}}
+function u16(n){return new Uint8Array([n&255,(n>>>8)&255])}function u32(n){return new Uint8Array([n&255,(n>>>8)&255,(n>>>16)&255,(n>>>24)&255])}function cat(parts){let n=parts.reduce((s,p)=>s+p.length,0),o=new Uint8Array(n),at=0;for(const p of parts){o.set(p,at);at+=p.length}return o}let crcTable=null;function crc32(bytes){if(!crcTable){crcTable=new Uint32Array(256);for(let i=0;i<256;i++){let c=i;for(let j=0;j<8;j++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;crcTable[i]=c>>>0}}let c=0xffffffff;for(const b of bytes)c=crcTable[(c^b)&255]^(c>>>8);return(c^0xffffffff)>>>0}async function makeZip(files){const enc=new TextEncoder(),locals=[],centrals=[];let offset=0;for(const f of files){const name=enc.encode(f.name),data=new Uint8Array(await f.blob.arrayBuffer()),crc=crc32(data);const local=cat([u32(0x04034b50),u16(20),u16(0),u16(0),u16(0),u16(0),u32(crc),u32(data.length),u32(data.length),u16(name.length),u16(0),name,data]);locals.push(local);const central=cat([u32(0x02014b50),u16(20),u16(20),u16(0),u16(0),u16(0),u16(0),u32(crc),u32(data.length),u32(data.length),u16(name.length),u16(0),u16(0),u16(0),u16(0),u32(0),u32(offset),name]);centrals.push(central);offset+=local.length}const central=cat(centrals),end=cat([u32(0x06054b50),u16(0),u16(0),u16(files.length),u16(files.length),u32(central.length),u32(offset),u16(0)]);return new Blob([cat([...locals,central,end])],{type:'application/zip'})}
+async function exportExact(){const keys=Object.keys(EXPECTED);if(keys.some(k=>!recovered[k]))return;const files=keys.map(k=>({name:EXPECTED[k].file,blob:recovered[k].blob}));const zip=await makeZip(files);const a=document.createElement('a');a.href=URL.createObjectURL(zip);a.download='odyssee-p7-stream2-human-beltout-source-recovered-exact.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);set('export-status','good','ZIP créé localement : 9/9 blobs exacts, aucun upload.')}
+$('scan').onclick=scan;$('export').onclick=exportExact;render();listDatabases().catch(()=>set('d-enum','warn','Bases de l’origine : énumération impossible'));
+})();
+</script></main></body></html>
