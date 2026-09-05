@@ -27,25 +27,108 @@
       "id": "storyteller",
       "scene": "S05",
       "dramatic_state": "conteur / fierté -> justification -> regret",
-      "selected_segments": [135, 139, 143]
+      "full_window": {
+        "start_segment": 132,
+        "end_segment": 143
+      },
+      "selected_lines": [
+        {
+          "segment": 135,
+          "text": "Je lui ai dit que ce n’était pas Personne. Que c’était Ulysse, roi d’Ithaque, qui lui avait pris son œil."
+        },
+        {
+          "segment": 139,
+          "text": "Pour que quelqu’un sache."
+        },
+        {
+          "segment": 143,
+          "text": "Après mon cri, elle est devenue personnelle."
+        }
+      ],
+      "direction": "Adresse réelle aux Phéaciens. La première ligne est une impulsion d’orgueil, la seconde une justification presque nue, la dernière un regret constaté après coup. Rester conversationnel, jamais récité.",
+      "avoid": [
+        "récitation",
+        "solennité constante",
+        "bravade",
+        "surjeu du regret",
+        "voix de bande-annonce"
+      ]
     },
     {
       "id": "loss",
       "scene": "S06",
       "dramatic_state": "perception physique -> choc -> perte",
-      "selected_segments": [90, 93, 99]
+      "full_window": {
+        "start_segment": 90,
+        "end_segment": 99
+      },
+      "selected_lines": [
+        {
+          "segment": 90,
+          "text": "Je me suis réveillé quand le bateau a changé sous mon corps."
+        },
+        {
+          "segment": 93,
+          "text": "Ithaque s’éloignait."
+        },
+        {
+          "segment": 99,
+          "text": "Nous avions notre île devant nous."
+        }
+      ],
+      "direction": "Le corps comprend avant l’analyse. Le choc doit être vrai mais retenu. La dernière ligne constate ce qui vient d’être perdu sans plainte ni pathos.",
+      "avoid": [
+        "plainte",
+        "ralenti théâtral",
+        "voix cassée fabriquée",
+        "cri",
+        "pathos"
+      ]
     },
     {
       "id": "authority",
       "scene": "S14",
       "dramatic_state": "ordre -> morsure morale -> conclusion ferme",
-      "selected_segments": [79, 85, 89]
+      "full_window": {
+        "start_segment": 79,
+        "end_segment": 89
+      },
+      "selected_lines": [
+        {
+          "segment": 79,
+          "text": "Pose ce que tu tiens."
+        },
+        {
+          "segment": 85,
+          "text": "Tu vas rendre les années à Pénélope ?"
+        },
+        {
+          "segment": 89,
+          "text": "Alors cesse de proposer des comptes que tu sais faux."
+        }
+      ],
+      "direction": "Autorité calme. La menace vient de la précision et du contrôle, jamais du volume. La question mord sans devenir slogan; la conclusion ferme la négociation.",
+      "avoid": [
+        "cri",
+        "vengeance jubilatoire",
+        "monotonie glacée",
+        "suraccentuation",
+        "caricature autoritaire"
+      ]
     }
   ],
   "source_intake": {
     "selected_take_count": 9,
     "selection_before_conversion": true,
     "raw_human_audio_public_repo_forbidden": true,
+    "capture_hygiene": [
+      "quiet_room",
+      "avoid_clicks_and_handling_noise",
+      "leave_clean_room_tone",
+      "no_added_reverb",
+      "no_aggressive_denoise",
+      "no_artistic_DSP"
+    ],
     "received_privately": true,
     "verified": true,
     "frozen_before_any_beltout_output": true,
@@ -105,6 +188,7 @@
     "global": [
       "one_recognisable_Ulysse_across_three_states"
     ],
+    "semantics": "Observation and artistic acceptance are separate. PASS wording must be unambiguous.",
     "pass_rule": "All three states must materially outperform C2 on life/mechanical-cold while preserving Henri identity, French, restraint, state fit and one-Ulysse continuity.",
     "current_verdict": "NOT_YET_TAKEN"
   },
