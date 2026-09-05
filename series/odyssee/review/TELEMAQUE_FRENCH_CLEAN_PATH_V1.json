@@ -41,6 +41,11 @@
     "probe": {
       "scene": "S12",
       "exact_segments": [137, 147, 153],
+      "reason": {
+        "137": "short direct challenge",
+        "147": "long emotionally loaded sentence",
+        "153": "interrupted longer challenge"
+      },
       "one_parameter_set": true,
       "no_best_of_n": true,
       "no_seed_retry": true,
@@ -107,6 +112,7 @@
     "no_frozen_text_change",
     "no_provider_sweep",
     "no_global_Telemaque_recast_at_entry",
+    "return_to_Stream1_if_single_bounded_Chatterbox_probe_fails",
     "no_resynthesis_after_human_pass"
   ]
 }
