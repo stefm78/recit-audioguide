@@ -1,0 +1,160 @@
+name: "Odyssée Télémaque S12 cache-only qualification"
+
+on:
+  push:
+    branches:
+      - prod/178-telemaque-chatterbox-fr-probe
+    paths:
+      - '.github/workflows/odyssee-telemaque-s12-cache-only-integration.yml'
+      - 'tools/telemaque_s12_cache_only_integration.py'
+
+permissions:
+  actions: read
+  contents: read
+
+env:
+  SOURCE_ARTIFACT_ID: '9900070422'
+  CACHE_ARTIFACT_ID: '9900067012'
+  EXPECTED_PACKAGE_SHA256: '918b0acc9eae83b2bce8722504180d1a2841321602e0d11aee5d9076c11154e8'
+  EXPECTED_REFERENCE_SHA256: '16e4067f6ab09ecb5a8b8afa9ef7b578ff16b80a01c9d5725d2eb0a2c606bc8f'
+  TELEMAQUE_SOURCE_ROOT: generated/telemaque-artifacts/source
+  TELEMAQUE_CACHE_ROOT: generated/telemaque-artifacts/cache
+  PRODUCT_PACKAGE: series/odyssee/production/provider-packages/TELEMAQUE_CHATTERBOX_FR_REFERENCE_V1.json
+  VOICE_PACK: series/odyssee/production/voice-packs/ODYSSEE_PRODUCTION_V1.json
+  PROGRAM: series/odyssee/programs/S12.json
+
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout qualification branch
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Record exact baselines
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          mkdir -p generated/telemaque-s12
+          git rev-parse origin/main > generated/telemaque-s12/main-at-start.txt
+          git rev-parse HEAD > generated/telemaque-s12/qualification-head.txt
+          sha256sum "$PROGRAM" "$VOICE_PACK" > generated/telemaque-s12/product-input-sha256.txt
+
+      - name: Checkout exact qualified Production Audio Engine
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: d79bbe2d5aa47d7073186510a9b6d07f834a43ca
+          path: .audio-engine
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11.16'
+          cache: pip
+          cache-dependency-path: .audio-engine/requirements/chatterbox-mtl-v3-h1b-runtime.txt
+
+      - name: Download exact accepted source and replay-cache artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$TELEMAQUE_SOURCE_ROOT" "$TELEMAQUE_CACHE_ROOT" generated/telemaque-artifacts/zips
+          gh api -H 'Accept: application/vnd.github+json' "/repos/$GITHUB_REPOSITORY/actions/artifacts/$SOURCE_ARTIFACT_ID/zip" > generated/telemaque-artifacts/zips/source.zip
+          gh api -H 'Accept: application/vnd.github+json' "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ARTIFACT_ID/zip" > generated/telemaque-artifacts/zips/cache.zip
+          unzip -q generated/telemaque-artifacts/zips/source.zip -d "$TELEMAQUE_SOURCE_ROOT"
+          unzip -q generated/telemaque-artifacts/zips/cache.zip -d "$TELEMAQUE_CACHE_ROOT"
+          test -s "$TELEMAQUE_SOURCE_ROOT/input/provider-package.json"
+          test -s "$TELEMAQUE_SOURCE_ROOT/input/reference/telemaque-p1-human-pass.wav"
+          test -d "$TELEMAQUE_CACHE_ROOT/render/.cache/voices"
+
+      - name: Install exact promoted runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg unzip
+          bash .audio-engine/scripts/install_chatterbox_mtl_v3_h1b.sh
+          python -m pip install --disable-pip-version-check --no-deps 'imageio-ffmpeg==0.6.0' 'edge-tts==7.2.8'
+          python -m pip install --disable-pip-version-check --no-deps ./.audio-engine
+
+      - name: Materialize bounded S12 binding in workspace
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/telemaque_s12_cache_only_integration.py materialize
+          test "$(sha256sum "$PRODUCT_PACKAGE" | awk '{print $1}')" = "$EXPECTED_PACKAGE_SHA256"
+          test "$(sha256sum generated/telemaque-fr-clean/input/reference/telemaque-p1-human-pass.wav | awk '{print $1}')" = "$EXPECTED_REFERENCE_SHA256"
+          python -m unittest tests.test_odyssee_telemaque_s12_cache_only_binding -v
+          python -m unittest tests.test_odyssee_production_graph tests.test_odyssee_script tests.test_engine_pin_coherence -v
+
+      - name: Hydrate and validate exact accepted provider package
+        shell: bash
+        run: |
+          set -euo pipefail
+          audio-engine provider-package hydrate-model "$PRODUCT_PACKAGE" --cache-root generated/provider-models
+          audio-engine provider-package validate "$PRODUCT_PACKAGE" --verify-files --workspace-root . --voice-pack "$VOICE_PACK"
+
+      - name: Preseed exact accepted three clip bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/telemaque_s12_cache_only_integration.py preseed
+          jq -e '.status == "TELEMAQUE_EXACT_ACCEPTED_CLIPS_PRESEEDED" and .resynthesis == false and .audio_processing == false and (.records | length) == 3 and all(.records[]; .byte_identity_preserved == true)' generated/telemaque-s12/preseed.json >/dev/null
+
+      - name: Enforce exact target gate 3 hits 0 misses
+        shell: bash
+        run: |
+          set -euo pipefail
+          audio-engine provider-cache prewarm "$PROGRAM" --voices "$VOICE_PACK" --provider-package "$PRODUCT_PACKAGE" --cache-root generated/work/S12/.cache/voices --provider-model-cache generated/provider-models --workspace-root . --report generated/telemaque-s12/prewarm.json
+          jq -e '.status == "ready" and .provider == "chatterbox-multilingual-v3" and .segment_count == 3 and .cache_hits == 3 and .cache_misses == 0' generated/telemaque-s12/prewarm.json >/dev/null
+
+      - name: Render S12 with Chatterbox inference fail-closed and run machine QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          audio-engine render "$PROGRAM" --out generated/work/S12 --voices "$VOICE_PACK" --provider-package "$PRODUCT_PACKAGE" --provider-model-cache generated/provider-models --cache-only-promoted-provider chatterbox-multilingual-v3 --workspace-root . > generated/telemaque-s12/render.json
+          audio-engine qa generated/work/S12/odyssee-s12 > generated/work/S12/odyssee-s12/qa-report.json
+          jq -e '.status == "PASS"' generated/work/S12/odyssee-s12/qa-report.json >/dev/null
+          jq -e '.status == "success"' generated/work/S12/odyssee-s12/manifest.json >/dev/null
+
+      - name: Freeze machine qualification evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          AUDIO=generated/work/S12/odyssee-s12/audio.mp3
+          QA=generated/work/S12/odyssee-s12/qa-report.json
+          test -s "$AUDIO"
+          jq -n \
+            --arg status 'TELEMAQUE_S12_CACHE_ONLY_MACHINE_QUALIFIED' \
+            --argjson run "$GITHUB_RUN_ID" \
+            --arg head "$GITHUB_SHA" \
+            --arg main "$(cat generated/telemaque-s12/main-at-start.txt)" \
+            --arg audio_sha "$(sha256sum "$AUDIO" | awk '{print $1}')" \
+            --arg qa_sha "$(sha256sum "$QA" | awk '{print $1}')" \
+            --arg program_sha "$(sha256sum "$PROGRAM" | awk '{print $1}')" \
+            --arg voice_pack_sha "$(sha256sum "$VOICE_PACK" | awk '{print $1}')" \
+            '{status:$status,run:$run,qualification_head:$head,main_at_start:$main,scope:{scene:"S12",segments:[137,147,153]},accepted_bytes:{resynthesis:false,audio_processing:false},cache_gate:{target:3,cache_hits:3,cache_misses:0,chatterbox_inference:false},machine_qa:"PASS",s12_audio_sha256:$audio_sha,qa_sha256:$qa_sha,program_sha256:$program_sha,voice_pack_sha256:$voice_pack_sha}' \
+            > generated/telemaque-s12/final.json
+          jq -e '.status == "TELEMAQUE_S12_CACHE_ONLY_MACHINE_QUALIFIED" and .cache_gate.cache_hits == 3 and .cache_gate.cache_misses == 0 and .cache_gate.chatterbox_inference == false and .machine_qa == "PASS"' generated/telemaque-s12/final.json >/dev/null
+
+      - name: Upload exact qualification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: telemaque-178-s12-cache-only-qualified-${{ github.run_id }}
+          path: |
+            generated/telemaque-s12/*.json
+            generated/telemaque-s12/*.txt
+            generated/work/S12/odyssee-s12/manifest.json
+            generated/work/S12/odyssee-s12/qa-report.json
+            generated/work/S12/odyssee-s12/audio.mp3
+            series/odyssee/programs/S12.json
+            series/odyssee/production/ODYSSEE_PRODUCTION_MANIFEST_V1.json
+            series/odyssee/production/provider-packages/TELEMAQUE_CHATTERBOX_FR_REFERENCE_V1.json
+            tests/test_odyssee_telemaque_s12_cache_only_binding.py
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0
