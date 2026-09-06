@@ -20,7 +20,12 @@
 
     <section class="layout">
       <div class="map-panel">
-        <div id="map" aria-label="Carte de l'itinéraire"></div>
+        <div id="map" role="img" aria-label="Carte de l'itinéraire"></div>
+        <div id="map-fallback" class="map-fallback" hidden>
+          <strong>Carte indisponible</strong>
+          <p>Le parcours reste validable ci-contre grâce aux étapes ordonnées, adresses, coordonnées et métriques. La carte interactive nécessite l'accès réseau au fournisseur cartographique.</p>
+        </div>
+        <p id="map-status" class="map-status" role="status" aria-live="polite"></p>
         <p class="map-note">La ligne relie les points pour visualiser l'ordre. Elle ne constitue pas un guidage piéton détaillé tant qu'un moteur de routage n'a pas fourni une mesure gelée.</p>
       </div>
       <div>
