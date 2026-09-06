@@ -33,3 +33,25 @@ def test_downstream_must_remain_blocked_before_gate():
     proposal["downstream"]["scripts"] = "READY"
     errors = MODULE.validate(proposal)
     assert any("downstream.scripts" in error for error in errors)
+
+
+def test_human_gate_requires_map_coordinates():
+    proposal = load_proposal()
+    del proposal["route"][0]["coordinates"]
+    errors = MODULE.validate(proposal)
+    assert any("coordinates is required for map review" in error for error in errors)
+
+
+def test_human_gate_requires_distance_and_time_summary():
+    proposal = load_proposal()
+    del proposal["review_summary"]["walking_distance_km"]
+    errors = MODULE.validate(proposal)
+    assert any("review_summary.walking_distance_km" in error for error in errors)
+
+
+def test_non_routed_metrics_are_explicitly_indicative():
+    proposal = load_proposal()
+    proposal["review_summary"]["walking_metrics_status"] = "ROUTED_FROZEN"
+    proposal["route_verification"]["exact_distance"] = "2.46 km"
+    errors = MODULE.validate(proposal)
+    assert any("exact_distance cannot be asserted" in error for error in errors)
