@@ -18,6 +18,7 @@ REQUIRED_DOWNSTREAM = (
     "audio_engine_render",
     "site_publication",
 )
+VALID_METRIC_STATUS = {"ROUTED_FROZEN", "INDICATIVE_NOT_ROUTED"}
 
 
 def _https(url: str) -> bool:
@@ -39,6 +40,22 @@ def validate(data: dict) -> list[str]:
         for key in ("city", "duration_budget", "mobility", "audience"):
             if not request.get(key):
                 errors.append(f"request.{key} is required")
+
+    summary = data.get("review_summary")
+    if not isinstance(summary, dict):
+        errors.append("review_summary must be an object")
+    else:
+        for key in ("visit_budget_minutes", "stop_count", "walking_distance_km", "walking_time_minutes"):
+            value = summary.get(key)
+            if not isinstance(value, (int, float)) or value < 0:
+                errors.append(f"review_summary.{key} must be a non-negative number")
+        metric_status = summary.get("walking_metrics_status")
+        if metric_status not in VALID_METRIC_STATUS:
+            errors.append(f"review_summary.walking_metrics_status must be one of {sorted(VALID_METRIC_STATUS)}")
+        if not summary.get("walking_metrics_method"):
+            errors.append("review_summary.walking_metrics_method is required")
+        if metric_status != "ROUTED_FROZEN" and "indicative" not in str(summary.get("walking_metrics_status", "")).lower() + str(summary.get("walking_metrics_method", "")).lower():
+            errors.append("non-routed walking metrics must be explicitly identified as indicative")
 
     evidence = data.get("evidence")
     evidence_ids: set[str] = set()
@@ -76,6 +93,25 @@ def validate(data: dict) -> list[str]:
             for key in ("name", "address", "launch", "editorial_reason"):
                 if not stop.get(key):
                     errors.append(f"route stop {sid!r}.{key} is required")
+            coords = stop.get("coordinates")
+            if not isinstance(coords, dict):
+                errors.append(f"route stop {sid!r}.coordinates is required for map review")
+            else:
+                for key in ("lat", "lon"):
+                    if not isinstance(coords.get(key), (int, float)):
+                        errors.append(f"route stop {sid!r}.coordinates.{key} must be numeric")
+                if not coords.get("source"):
+                    errors.append(f"route stop {sid!r}.coordinates.source is required")
+            if index > 1:
+                leg = stop.get("incoming_leg")
+                if not isinstance(leg, dict):
+                    errors.append(f"route stop {sid!r}.incoming_leg is required after the first stop")
+                else:
+                    for key in ("distance_km", "walk_minutes"):
+                        if not isinstance(leg.get(key), (int, float)) or leg.get(key) < 0:
+                            errors.append(f"route stop {sid!r}.incoming_leg.{key} must be non-negative")
+                    if leg.get("status") not in VALID_METRIC_STATUS:
+                        errors.append(f"route stop {sid!r}.incoming_leg.status must be one of {sorted(VALID_METRIC_STATUS)}")
             refs = stop.get("evidence_refs")
             if not isinstance(refs, list) or not refs:
                 errors.append(f"route stop {sid!r} needs evidence_refs")
@@ -111,6 +147,8 @@ def validate(data: dict) -> list[str]:
     gate = data.get("human_gate")
     if not isinstance(gate, dict) or not gate.get("question"):
         errors.append("human_gate.question is required")
+    elif not gate.get("review_surface"):
+        errors.append("human_gate.review_surface is required")
 
     return errors
 
