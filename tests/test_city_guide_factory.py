@@ -55,3 +55,14 @@ def test_non_routed_metrics_are_explicitly_indicative():
     proposal["route_verification"]["exact_distance"] = "2.46 km"
     errors = MODULE.validate(proposal)
     assert any("exact_distance cannot be asserted" in error for error in errors)
+
+
+def test_review_surface_is_generic_and_network_fail_soft():
+    html = (ROOT / "web" / "reviews" / "route.html").read_text(encoding="utf-8")
+    js = (ROOT / "web" / "reviews" / "route-review.js").read_text(encoding="utf-8")
+    assert "Bordeaux" not in html
+    assert "Bordeaux" not in js
+    assert "map-fallback" in html
+    assert "if (!window.L)" in js
+    assert "liste ordonnée reste utilisable" in js
+    assert "textContent = `${p[2]}. ${p[3]}`" in js
