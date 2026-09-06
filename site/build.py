@@ -123,6 +123,26 @@ def series_state(episode_states):
     return 'ready'
 
 
+def publish_route_reviews():
+    target=DIST/'reviews'/'data'
+    target.mkdir(parents=True,exist_ok=True)
+    count=0
+    for proposal in sorted(SERIES.glob('*/proposal.json')):
+        try:
+            data=json.loads(proposal.read_text(encoding='utf-8'))
+        except Exception as e:
+            BLOCK.append(f'{proposal}: JSON invalide ({e})')
+            continue
+        if data.get('schema') != 'recit.city-guide-factory.proposal.v1':
+            continue
+        slug=data.get('slug') or proposal.parent.name
+        if data.get('status') != 'HUMAN_ROUTE_GATE':
+            continue
+        shutil.copy2(proposal,target/f'{slug}.json')
+        count += 1
+    return count
+
+
 def main():
     manifests=[]
     for p in sorted(SERIES.glob('*/series.json')):
@@ -143,6 +163,12 @@ def main():
     for name in ('styles.css','home.js','app.js'): shutil.copy2(WEB/name,DIST/'assets'/name)
     reviews=WEB/'reviews'
     if reviews.exists(): shutil.copytree(reviews,DIST/'reviews',dirs_exist_ok=True)
+    route_review_count=publish_route_reviews()
+    if BLOCK:
+        report={'status':'blocked','blocking':BLOCK,'warnings':WARN}
+        (ROOT/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+        print('\n'.join('BLOCK: '+x for x in BLOCK),file=sys.stderr)
+        return 2
     tpl=(WEB/'series.html').read_text(encoding='utf-8')
     catalog=[]
     series_reports=[]
@@ -179,13 +205,14 @@ def main():
     report={
         'status':overall,
         'series_count':len(manifests),
+        'route_review_count':route_review_count,
         'blocking':[],
         'warnings':WARN,
         'production_status':render_report.get('status') if render_report else None,
         'series':series_reports,
     }
     (DIST/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
-    print(f'Built {len(manifests)} series; state={overall}; warnings={len(WARN)}')
+    print(f'Built {len(manifests)} series and {route_review_count} route reviews; state={overall}; warnings={len(WARN)}')
     return 0
 
 if __name__=='__main__': raise SystemExit(main())
