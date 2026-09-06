@@ -1,0 +1,58 @@
+name: City Guide Factory gate
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'series/**/proposal.json'
+      - 'tools/city_guide_factory.py'
+      - 'tools/ci_changes.py'
+      - 'tests/test_city_guide_factory.py'
+      - 'tests/test_ci_changes.py'
+      - 'site/build.py'
+      - 'web/reviews/**'
+      - '.github/workflows/city-guide-factory.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'series/**/proposal.json'
+      - 'tools/city_guide_factory.py'
+      - 'tools/ci_changes.py'
+      - 'tests/test_city_guide_factory.py'
+      - 'tests/test_ci_changes.py'
+      - 'site/build.py'
+      - 'web/reviews/**'
+      - '.github/workflows/city-guide-factory.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate all City Guide proposals
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          proposals=(series/*/proposal.json)
+          if (( ${#proposals[@]} == 0 )); then
+            echo 'No City Guide proposals found.'
+            exit 0
+          fi
+          for proposal in "${proposals[@]}"; do
+            python tools/city_guide_factory.py "$proposal"
+          done
+      - name: Test City Guide gate and change routing
+        run: python -m unittest tests.test_city_guide_factory tests.test_ci_changes -v
+      - name: Build static review surface
+        run: python site/build.py
+      - name: Verify review artifact exists
+        run: test -f dist/reviews/route.html && test -f dist/reviews/data/bordeaux-discovery.json
