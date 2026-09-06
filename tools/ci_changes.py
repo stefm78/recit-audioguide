@@ -58,7 +58,7 @@ def classify(paths):
             build = True
         elif path.startswith("series/"):
             parts = path.split("/")
-            if len(parts) == 3 and parts[2] == "series.json":
+            if len(parts) == 3 and parts[2] in {"series.json", "proposal.json"}:
                 build = True
             elif len(parts) >= 4 and parts[2] in {"episodes", "assets"}:
                 build = True
