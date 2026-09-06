@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Validation d'itinéraire — City Guide Factory</title>
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="route-review.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">City Guide Factory · HUMAN_ROUTE_GATE</p>
+      <h1 id="title">Chargement de la proposition…</h1>
+      <p id="request" class="lede"></p>
+    </header>
+
+    <section id="summary" class="summary" aria-label="Résumé du parcours"></section>
+
+    <section class="layout">
+      <div class="map-panel">
+        <div id="map" aria-label="Carte de l'itinéraire"></div>
+        <p class="map-note">La ligne relie les points pour visualiser l'ordre. Elle ne constitue pas un guidage piéton détaillé tant qu'un moteur de routage n'a pas fourni une mesure gelée.</p>
+      </div>
+      <div>
+        <h2>Étapes proposées</h2>
+        <ol id="stops" class="stops"></ol>
+      </div>
+    </section>
+
+    <section class="decision">
+      <h2>Décision</h2>
+      <p id="question"></p>
+      <div class="decision-grid" aria-label="Choix de validation">
+        <div><strong>ACCEPT_ROUTE</strong><span>Le parcours est validé ; scripts et audio peuvent démarrer.</span></div>
+        <div><strong>ADJUST_ROUTE</strong><span>Le parcours doit être modifié avant production.</span></div>
+        <div><strong>REJECT_ROUTE</strong><span>La proposition est à reconstruire.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="route-review.js"></script>
+</body>
+</html>
