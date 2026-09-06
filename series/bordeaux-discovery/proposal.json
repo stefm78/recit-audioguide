@@ -1,0 +1,112 @@
+{
+  "schema": "recit.city-guide-factory.proposal.v1",
+  "status": "HUMAN_ROUTE_GATE",
+  "slug": "bordeaux-discovery",
+  "title": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "request": {
+    "city": "Bordeaux, France",
+    "duration_budget": "about 2h30",
+    "mobility": "walk",
+    "audience": "general public including children around 10 years old",
+    "preferences": ["history", "architecture", "memorable anecdotes", "understand how the city changed"]
+  },
+  "route": [
+    {
+      "id": "bordeaux-cgf-01",
+      "name": "Miroir d'eau et place de la Bourse",
+      "address": "Place de la Bourse, 33000 Bordeaux, France",
+      "launch": "Face à la place de la Bourse, côté Garonne, avec le Miroir d'eau au premier plan.",
+      "editorial_reason": "Excellent départ visuel pour expliquer le basculement de la ville médiévale vers le Bordeaux classique du XVIIIe siècle, puis introduire le rôle du port et la provenance complexe de la prospérité bordelaise.",
+      "evidence_refs": ["E1", "E2", "E3"]
+    },
+    {
+      "id": "bordeaux-cgf-02",
+      "name": "Porte Cailhau",
+      "address": "Place du Palais, 33000 Bordeaux, France",
+      "launch": "Devant la Porte Cailhau, avant une éventuelle visite intérieure.",
+      "editorial_reason": "La porte permet de matérialiser le Bordeaux encore fortifié et de faire sentir la transition entre ville médiévale, fleuve et ville ouverte.",
+      "evidence_refs": ["E4", "E5"]
+    },
+    {
+      "id": "bordeaux-cgf-03",
+      "name": "Grosse Cloche",
+      "address": "45 Rue Saint-James, 33000 Bordeaux, France",
+      "launch": "Dans la rue Saint-James, avec le beffroi en vue.",
+      "editorial_reason": "Ancien beffroi et porte défensive, également utilisée comme prison : un lieu compact pour raconter pouvoir municipal, couvre-feu et vie quotidienne dans la ville ancienne.",
+      "evidence_refs": ["E5", "E6"]
+    },
+    {
+      "id": "bordeaux-cgf-04",
+      "name": "Cathédrale Saint-André et tour Pey-Berland",
+      "address": "Place Pey Berland, 33000 Bordeaux, France",
+      "launch": "Sur la place Pey-Berland, de façon à voir simultanément la cathédrale et la tour.",
+      "editorial_reason": "Le couple cathédrale-tour apporte une rupture de rythme et ouvre le récit sur le Bordeaux religieux, monumental et vertical, sans nécessiter d'entrée dans un monument pour que l'étape fonctionne.",
+      "evidence_refs": ["E5"]
+    },
+    {
+      "id": "bordeaux-cgf-05",
+      "name": "Grand Théâtre",
+      "address": "Place de la Comédie, 33000 Bordeaux, France",
+      "launch": "Place de la Comédie, face à la façade du Grand Théâtre.",
+      "editorial_reason": "Finir sur le Bordeaux classique permet de refermer la boucle intellectuelle commencée place de la Bourse : une ville remodelée par la prospérité, l'urbanisme et les ambitions du siècle des Lumières.",
+      "evidence_refs": ["E5", "E7"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "url": "https://www.bordeaux-tourisme.com/sites-monuments/miroir-eau-place-bourse",
+      "proves": "Official tourism identity/address of Place de la Bourse and Miroir d'eau; 18th-century transformation context."
+    },
+    {
+      "id": "E2",
+      "url": "https://whc.unesco.org/fr/list/1256",
+      "proves": "Bordeaux Port de la Lune UNESCO significance; more than 2,000 years of exchanges and exceptional classical/neoclassical urban ensemble."
+    },
+    {
+      "id": "E3",
+      "url": "https://www.musee-aquitaine-bordeaux.fr/visiter/expositions/400-000-ans-dhistoires-de-la-prehistoire-au-21e-siecle/bordeaux-au-18e-siecle-le-commerce-atlantique-et-lesclavage",
+      "proves": "Authoritative local museum evidence on Atlantic commerce, slavery and the origins of part of Bordeaux's 18th-century prosperity."
+    },
+    {
+      "id": "E4",
+      "url": "https://www.bordeaux-tourisme.com/sites-monuments/porte-cailhau",
+      "proves": "Official identity and defensive-city role of Porte Cailhau."
+    },
+    {
+      "id": "E5",
+      "url": "https://www.bordeaux-tourisme.com/ville-patrimoine/sites-monuments",
+      "proves": "Official tourism inventory identifying Porte Cailhau, Grosse Cloche, Cathédrale Saint-André/Tour Pey-Berland, Grand Théâtre and Place de la Bourse as major Bordeaux monuments."
+    },
+    {
+      "id": "E6",
+      "url": "https://www.bordeaux-tourisme.com/sites-monuments/grosse-cloche",
+      "proves": "Official address and historical functions of the Grosse Cloche as former town-hall belfry, defensive gate and prison."
+    },
+    {
+      "id": "E7",
+      "url": "https://whc.unesco.org/en/list/1256",
+      "proves": "Independent international corroboration of Bordeaux's classical/neoclassical urban unity and Enlightenment-era transformation."
+    }
+  ],
+  "route_verification": {
+    "result": "PASS_WITH_EXPLICIT_PRECISION_LIMIT",
+    "method": "Stop identities/addresses checked against official Bordeaux tourism pages; macro-order checked against the compact historic-centre pattern used by Bordeaux Tourisme, including a 2h30 pedestrian discovery product starting at Place de la Bourse and traversing the old quarters with Grosse Cloche and Porte Cailhau.",
+    "corroborating_url": "https://www.bordeaux-tourisme.com/patrimoine-culturel/chasse-au-tresor-bordeaux.html",
+    "exact_distance": "not_asserted",
+    "exact_walk_time": "not_asserted",
+    "reason_for_limit": "No routing-provider measurement is frozen in this pre-gate artifact; precision is intentionally not fabricated.",
+    "gate_safe": true
+  },
+  "downstream": {
+    "scripts": "BLOCKED_PENDING_HUMAN_ROUTE_GATE",
+    "production_plan": "BLOCKED_PENDING_HUMAN_ROUTE_GATE",
+    "sound_direction": "BLOCKED_PENDING_HUMAN_ROUTE_GATE",
+    "audio_engine_render": "BLOCKED_PENDING_HUMAN_ROUTE_GATE",
+    "site_publication": "BLOCKED_PENDING_HUMAN_ROUTE_GATE"
+  },
+  "human_gate": {
+    "decision": "ACCEPT_ROUTE | ADJUST_ROUTE | REJECT_ROUTE",
+    "question": "Valides-tu ce parcours Bordeaux en 5 étapes comme vertical slice, ou souhaites-tu modifier une étape avant génération des scripts et des audios ?"
+  }
+}
