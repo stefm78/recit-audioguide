@@ -44,6 +44,12 @@ class ChangeRoutingTests(unittest.TestCase):
         result = classify(["web/app.js", "series/orleans-cathedral/series.json"])
         self.assertFalse(result["audio_needed"])
         self.assertTrue(result["build_needed"])
+
+    def test_city_guide_proposal_rebuilds_review_without_audio(self):
+        result = classify(["series/example-city/proposal.json"])
+        self.assertFalse(result["audio_needed"])
+        self.assertTrue(result["build_needed"])
+
     def test_deploy_condition_survives_skipped_audio_chain(self):
         workflow = open(".github/workflows/pages.yml", encoding="utf-8").read()
         self.assertIn(
