@@ -10,7 +10,8 @@
     "start_label": "5 étapes · environ 2 h 30",
     "navigation": "geographic",
     "transport_mode": "walking",
-    "routing_provider": "external_link_only"
+    "routing_provider": "external_link_only",
+    "overview_maps_url": "https://www.google.com/maps/dir/?api=1&origin=Place%20de%20la%20Bourse%2C%20Bordeaux&destination=Grand%20Th%C3%A9%C3%A2tre%20de%20Bordeaux&waypoints=Porte%20Cailhau%2C%20Bordeaux%7CGrosse%20Cloche%2C%20Bordeaux%7CTour%20Pey-Berland%2C%20Bordeaux&travelmode=walking"
   },
   "episodes": [
     {
