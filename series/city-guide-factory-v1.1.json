@@ -1,0 +1,62 @@
+{
+  "schema": "recit.city-guide-factory.v1_1",
+  "version": "1.1",
+  "status": "CANDIDATE",
+  "purpose": "Qualify visit intent before content generation while keeping visitor choice explicit, bounded and portable across cities.",
+  "invariants": {
+    "accepted_route_is_immutable_without_material_defect": true,
+    "default_experience_remains_playable_without_optional_content": true,
+    "visitor_choice_is_explicit_not_algorithmically_forced": true,
+    "no_new_backend_required": true,
+    "routing_provider_remains_external_link_only_by_default": true
+  },
+  "preproduction_brief": {
+    "required_before_new_audio_generation": [
+      "audience",
+      "visit_intent",
+      "primary_axis",
+      "default_depth",
+      "target_episode_minutes",
+      "sound_policy"
+    ],
+    "optional": [
+      "secondary_axes",
+      "optional_depth",
+      "cross_city_thread",
+      "overview_navigation"
+    ],
+    "constraints": {
+      "primary_axis_count": 1,
+      "secondary_axes_max": 2,
+      "default_depth": "accessible_first_visit",
+      "optional_depth_mode": "visitor_pull",
+      "sound_policy_default": "real_environment_first"
+    }
+  },
+  "content_model": {
+    "base_episode": "One clear, complete episode per accepted stop.",
+    "optional_extensions": "Use existing episode.extras for deeper or alternate readings when materially useful.",
+    "bridges": "Optional extensions may invite another axis, but must never be required to understand the base visit.",
+    "duration": "Target episode duration is a design input and QA signal, not a hard runtime truncation rule."
+  },
+  "navigation_model": {
+    "step_navigation": "Keep per-step external maps deep links.",
+    "overview_navigation": "A visit may expose one overview_maps_url for the full accepted route.",
+    "embedded_routing": "OUT_OF_SCOPE_UNTIL_PROVEN_NECESSARY"
+  },
+  "sound_model": {
+    "default": "real_environment_first",
+    "immersive_sound": "OPTIONAL_ONLY_WHEN_ARTISTICALLY_JUSTIFIED",
+    "automatic_soundscape": false
+  },
+  "human_gate": {
+    "required_when": "Two or more materially different artistic intentions remain legitimate after research and challenge.",
+    "shape": "Present 2-4 concrete discriminating briefs; human selects one or requests adjustment.",
+    "not_required_for": [
+      "reversible technical implementation",
+      "external map-link formatting",
+      "schema validation",
+      "test coverage"
+    ]
+  }
+}
