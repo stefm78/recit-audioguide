@@ -12,7 +12,6 @@
   "launch": "Place de la Comédie, face au portique du Grand Théâtre.",
   "look": "Comptez les douze colonnes puis les douze statues au-dessus.",
   "summary": "Inauguré en 1780, le Grand Théâtre de Victor Louis clôt le récit sur le Bordeaux classique et sa volonté de transformer richesse en prestige urbain.",
-  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
   "lead_in_ms": 350,
   "sources": [
     "https://www.opera-bordeaux.com/histoire-2299",
