@@ -34,7 +34,7 @@ def test_every_episode_program_has_sources_and_no_sound_design_dependency():
         assert program["language"] == "fr-FR"
         assert len(program["sources"]) >= 2
         assert len(program["segments"]) >= 5
-        assert program["soundscape"]["events"] == []
+        assert "soundscape" not in program
         assert all(segment["character_id"] == "narrateur" for segment in program["segments"])
 
 
