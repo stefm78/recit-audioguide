@@ -12,12 +12,8 @@
   "launch": "Dans la rue Saint-James, avec le beffroi en vue.",
   "look": "Regardez le beffroi, la cloche et le lion de la girouette du dôme central.",
   "summary": "Comprendre la cloche comme infrastructure civique, la porte comme instrument de contrôle et l'humour bordelais autour de sa prison.",
-  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
   "lead_in_ms": 400,
-  "sources": [
-    "https://www.bordeaux-tourisme.com/sites-monuments/grosse-cloche",
-    "https://www.bordeaux-tourisme.com/patrimoine-culturel/grosse-cloche.html"
-  ],
+  "sources": ["https://www.bordeaux-tourisme.com/sites-monuments/grosse-cloche","https://www.bordeaux-tourisme.com/patrimoine-culturel/grosse-cloche.html"],
   "segments": [
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Placez-vous dans la rue Saint-James avec la Grosse Cloche bien visible au-dessus de vous. Avant les téléphones, les sirènes et les notifications, comment une ville parlait-elle à ses habitants ? Elle avait ses cloches."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La Grosse Cloche est l'un des plus anciens beffrois de France et un vestige des anciennes fortifications de Bordeaux. Pendant des siècles, son rôle est civique autant que défensif. La cloche marque le temps, signale des événements, peut appeler la population et rappelle que la ville possède sa propre organisation."},
