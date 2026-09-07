@@ -1,0 +1,32 @@
+{
+  "schema": "recit.city-guide-factory.fact-check.v1",
+  "slug": "bordeaux-discovery",
+  "status": "PASS_FOR_SCRIPTING",
+  "checked_at": "2026-09-07",
+  "policy": "Only claims with attributable institutional or primary-source support are promoted into narration. Route distance/time remains non-routed and is not narrated as exact.",
+  "sources": [
+    {"id":"S1","url":"https://www.bordeaux-tourisme.com/sites-monuments/miroir-eau-place-bourse","authority":"Bordeaux Tourisme","use":"Place de la Bourse, opening of medieval walls, Gabriel, 1735-1755"},
+    {"id":"S2","url":"https://www.bordeaux-tourisme.com/patrimoine-culturel/place-bourse.html","authority":"Bordeaux Tourisme","use":"20-year transformation, Intendant Boucher, Jacques Gabriel"},
+    {"id":"S3","url":"https://www.musee-aquitaine-bordeaux.fr/visiter/expositions/400-000-ans-dhistoires-de-la-prehistoire-au-21e-siecle/bordeaux-au-18e-siecle-le-commerce-atlantique-et-lesclavage","authority":"Musée d'Aquitaine","use":"Atlantic commerce, colonial goods, slavery and Bordeaux prosperity"},
+    {"id":"S4","url":"https://www.bordeaux-tourisme.com/sites-monuments/porte-cailhau","authority":"Bordeaux Tourisme","use":"1493-1496, Charles VIII, Fornoue, defensive and early-Renaissance features"},
+    {"id":"S5","url":"https://www.bordeaux-tourisme.com/sites-monuments/grosse-cloche","authority":"Bordeaux Tourisme","use":"belfry, prison, bell of 1775, 7,750 kg, Lion d'Or anecdote"},
+    {"id":"S6","url":"https://www.bordeaux-tourisme.com/sites-monuments/tour-pey-berland-cathedrale-saint-andre","authority":"Bordeaux Tourisme","use":"royal marriages, detached tower, revolutionary reuse"},
+    {"id":"S7","url":"https://www.bordeaux-tourisme.com/patrimoine-culturel/cathedrale-saint-andre.html","authority":"Bordeaux Tourisme","use":"12th-14th century cathedral, revolutionary uses, UNESCO Camino listing"},
+    {"id":"S8","url":"https://www.monuments-nationaux.fr/magazine/dossiers-thematiques/vacances-et-week-ends-en-france-toutes-nos-idees-de-visites/4-idees-de-sorties-dans-le-sud-ouest","authority":"Centre des monuments nationaux","use":"Pey-Berland tower begun 1440; bells installed only in 19th century"},
+    {"id":"S9","url":"https://www.opera-bordeaux.com/histoire-2299","authority":"Opéra National de Bordeaux","use":"Grand Théâtre inauguration 7 April 1780, Victor Louis, seven-year works, façade statues"},
+    {"id":"S10","url":"https://www.bordeaux-tourisme.com/sites-monuments/grand-theatre-bordeaux","authority":"Bordeaux Tourisme","use":"12 Corinthian columns, 9 muses + 3 goddesses, Victor Louis structural anecdote"},
+    {"id":"S11","url":"https://www.bordeaux-tourisme.com/evenements/visite-guidee-explorez-dessous-du-miroir-deau.html","authority":"Bordeaux Tourisme","use":"Miroir d'eau inaugurated 2006, 3,450 m², Jean-Max Llorca, Michel Corajoud"}
+  ],
+  "claims": [
+    {"id":"C01","status":"PASS","claim":"Place de la Bourse marks Bordeaux's 18th-century opening from a walled medieval city toward a classical riverfront.","sources":["S1","S2"]},
+    {"id":"C02","status":"PASS","claim":"Part of Bordeaux's 18th-century prosperity came from colonial goods produced through enslaved labor, with slave-trading profits also contributing.","sources":["S3"]},
+    {"id":"C03","status":"PASS","claim":"The Miroir d'eau is a modern 2006 intervention, not an 18th-century feature.","sources":["S11"]},
+    {"id":"C04","status":"PASS","claim":"Porte Cailhau was built 1493-1496, combines defensive functions with commemorative and early-Renaissance architecture, and recalls Charles VIII's Italian campaign.","sources":["S4"]},
+    {"id":"C05","status":"PASS","claim":"Grosse Cloche was a civic belfry and defensive gate, also used as a prison; its current bell dates from 1775 and weighs about 7.75 tonnes.","sources":["S5"]},
+    {"id":"C06","status":"PASS","claim":"Saint-André is a multi-century cathedral; the detached Pey-Berland tower began in 1440 and only received bells centuries later.","sources":["S6","S7","S8"]},
+    {"id":"C07","status":"PASS","claim":"Aliénor d'Aquitaine married the future Louis VII at Saint-André in 1137; Anne of Austria and Louis XIII married there centuries later.","sources":["S6"]},
+    {"id":"C08","status":"PASS","claim":"Grand Théâtre was inaugurated on 7 April 1780, designed by Victor Louis, after nearly seven years of work.","sources":["S9"]},
+    {"id":"C09","status":"PASS","claim":"Its façade has 12 Corinthian columns topped by 9 muses and 3 goddesses.","sources":["S9","S10"]},
+    {"id":"C10","status":"HELD_OUT_OF_NARRATION","claim":"Any exact walking distance or route time between stops.","reason":"No frozen routing-provider evidence; proposal remains INDICATIVE_NOT_ROUTED."}
+  ]
+}
