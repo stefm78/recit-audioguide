@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "id": "bordeaux-discovery-ep01",
+  "title": "La façade qui raconte une ville devenue riche",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "episode": 1,
+  "stop": "Miroir d'eau et place de la Bourse",
+  "location": "Place de la Bourse, 33000 Bordeaux, France",
+  "launch": "Face à la place de la Bourse, côté Garonne, avec le Miroir d'eau au premier plan.",
+  "look": "Regardez la symétrie des façades, puis tournez-vous vers le fleuve.",
+  "summary": "La place de la Bourse ouvre Bordeaux sur le fleuve au XVIIIe siècle et permet de comprendre la prospérité commerciale, y compris ses liens avec le système colonial et esclavagiste.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://www.bordeaux-tourisme.com/sites-monuments/miroir-eau-place-bourse",
+    "https://whc.unesco.org/fr/list/1256",
+    "https://www.musee-aquitaine-bordeaux.fr/bordeaux-et-les-echanges-commerciaux-au-18e-siecle",
+    "https://www.musee-aquitaine-bordeaux.fr/propos-de-nous/un-musee-pour-lhistoire-la-memoire-le-patrimoine-et-le-matrimoine/la-mission-politique-memorielle-de-la-ville-de-bordeaux"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Placez-vous face à la place de la Bourse, avec la Garonne derrière vous. Le premier réflexe est de regarder le Miroir d'eau. C'est normal : avec sa fine couche d'eau et ses effets de brume, il est devenu l'une des images les plus célèbres de Bordeaux. Mais pour comprendre la ville, regardez surtout ce qu'il reflète : une immense façade du dix-huitième siècle. Avant elle, Bordeaux était encore beaucoup plus enfermée dans ses murs. Ici commence une transformation spectaculaire : la ville veut enfin montrer son visage au fleuve."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"À partir des années 1720, le projet d'une place royale ouvre progressivement la vieille ville-forteresse. Les architectes Jacques Gabriel puis son fils Ange-Jacques Gabriel donnent à l'ensemble cette régularité presque parfaite. Regardez les façades : elles ne racontent pas seulement le goût du beau. Elles disent aussi le pouvoir d'une ville portuaire qui échange avec une grande partie du monde. L'UNESCO a d'ailleurs inscrit le Port de la Lune pour cette histoire longue des échanges et pour la qualité exceptionnelle de son ensemble classique et néoclassique."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Mais il faut résister à une histoire trop confortable. La prospérité bordelaise du dix-huitième siècle vient du commerce maritime, des vins, des productions de l'arrière-pays, mais aussi d'un système colonial dans lequel des centaines de milliers de personnes vivent en esclavage. Le Musée d'Aquitaine rappelle que Bordeaux fut l'un des grands ports négriers français et que la ville bénéficia largement du commerce des denrées produites dans les plantations esclavagistes. Autrement dit, la beauté de cette pierre appartient aussi à une histoire dont il faut regarder la part sombre en face."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Au centre de la place, la fontaine des Trois Grâces date du dix-neuvième siècle. Avant elle, il y eut notamment une statue de Louis XV. Les grilles qui séparaient autrefois la place du fleuve ont disparu à la Révolution. La place que nous voyons aujourd'hui est donc elle-même le résultat de plusieurs couches d'histoire. Et le Miroir d'eau, lui, a moins de vingt ans : c'est une création contemporaine placée devant un décor vieux de près de trois siècles. Bordeaux aime superposer les époques sans toujours les annoncer."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Retenez une idée avant de repartir : ici, Bordeaux décide de s'ouvrir et de se mettre en scène. Nous allons maintenant faire exactement le chemin inverse. En quelques minutes, rejoignez la Porte Cailhau. Nous quitterons la grande façade classique pour retrouver une ville beaucoup plus serrée, protégée par ses portes et ses murailles. Le changement de décor est presque brutal, et c'est précisément ce qui rend cette promenade intéressante."}
+  ]
+}

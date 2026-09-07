@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "id": "bordeaux-discovery-ep05",
+  "title": "Le théâtre où Bordeaux se met en scène",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "episode": 5,
+  "stop": "Grand Théâtre",
+  "location": "Place de la Comédie, 33000 Bordeaux, France",
+  "launch": "Place de la Comédie, face au portique du Grand Théâtre.",
+  "look": "Comptez les douze colonnes puis les douze statues au-dessus.",
+  "summary": "Inauguré en 1780, le Grand Théâtre de Victor Louis clôt le récit sur le Bordeaux classique et sa volonté de transformer richesse en prestige urbain.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://www.opera-bordeaux.com/histoire-2299",
+    "https://whc.unesco.org/fr/list/1256"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Nous terminons devant le Grand Théâtre. Regardez sa façade : douze colonnes corinthiennes, puis douze statues au-dessus. Neuf représentent les muses, trois des déesses. Tout est conçu pour donner l'impression d'un véritable temple des arts. Le bâtiment est inauguré le 7 avril 1780, après près de sept années de travaux. Son architecte, Victor Louis, donne à Bordeaux l'un des chefs-d'œuvre du néoclassicisme français."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Le soir de l'inauguration, on joue Athalie de Racine et Le Jugement d'Apollon. Mais l'Opéra de Bordeaux raconte que la foule vient presque autant admirer le bâtiment que le spectacle. C'est révélateur : le théâtre n'est pas seulement un lieu où l'on regarde une scène. Il est lui-même une scène pour la ville. Bordeaux montre qu'elle est riche, cultivée, ambitieuse et capable de rivaliser avec les grandes capitales européennes."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Un détail amusant se trouve justement au-dessus de vous. Les douze statues représentent Euterpe, Uranie, Vénus, Calliope, Terpsichore, Melpomène, Thalie, Polymnie, Junon, Minerve, Erato et Clio. Autrement dit, musique, astronomie, amour, poésie, danse, tragédie, comédie, éloquence, puissance et histoire observent la place depuis le toit. C'est presque le programme culturel d'une ville entière résumé en pierre."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Et maintenant, repensez au début de notre parcours. Place de la Bourse, Bordeaux ouvrait ses murailles pour présenter une nouvelle façade au fleuve. Ici, quelques décennies plus tard, la ville construit un théâtre monumental. Entre les deux, nous avons retrouvé une porte médiévale, une cloche municipale et une cathédrale. Ce trajet très court résume plusieurs manières de fabriquer une ville : se défendre, gouverner, croire, commercer, puis se représenter."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Il reste enfin une idée à emporter. La beauté de Bordeaux n'est pas un décor tombé du ciel. Elle vient de décisions politiques, d'échanges, de fortunes, de contraintes techniques et aussi d'une histoire coloniale et esclavagiste qu'il faut connaître pour comprendre complètement cette richesse. Si cette promenade a fonctionné, vous ne voyez plus seulement cinq beaux monuments. Vous voyez cinq traces d'une ville qui n'a cessé de se transformer et de raconter ce qu'elle voulait devenir."}
+  ]
+}

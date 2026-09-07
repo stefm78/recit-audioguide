@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "id": "bordeaux-discovery-ep03",
+  "title": "Quand une cloche gouvernait la ville",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "episode": 3,
+  "stop": "Grosse Cloche",
+  "location": "45 Rue Saint-James, 33000 Bordeaux, France",
+  "launch": "Dans la rue Saint-James, avec le beffroi en vue.",
+  "look": "Cherchez la girouette au lion et la masse du beffroi au-dessus de la rue.",
+  "summary": "Beffroi, porte défensive et prison : la Grosse Cloche raconte l'autorité municipale dans la vie quotidienne.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://www.bordeaux-tourisme.com/patrimoine-culturel/grosse-cloche.html",
+    "https://www.bordeaux-tourisme.com/sites-monuments/grosse-cloche"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Levez les yeux : la Grosse Cloche n'est pas un simple décor pittoresque. C'est l'un des plus vieux beffrois de France et l'un des derniers grands vestiges des anciens remparts de Bordeaux. Pendant des siècles, ses cloches ont rythmé la vie de la ville. Aujourd'hui, nous regardons une rue animée. Autrefois, une cloche pouvait annoncer une alerte, une cérémonie ou rappeler que l'autorité municipale veillait sur les habitants."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La cloche actuelle a même un nom : Armande-Louise. Elle a été fondue en 1775 et pèse environ sept tonnes et demie. Ce poids donne une idée de la puissance sonore recherchée. À une époque sans téléphone, sans haut-parleurs et sans notifications, faire entendre une information à toute une partie de la ville demandait une véritable infrastructure de bronze, de bois et de pierre."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Mais le lieu pouvait être beaucoup moins sympathique. La porte servit aussi de prison. Bordeaux Tourisme rappelle que des jeunes gens accusés de troubler l'ordre ou de ne pas respecter le couvre-feu pouvaient être enfermés dans les geôles. Une plaisanterie locale disait qu'ils séjournaient à l'hôtel du Lion d'Or, en référence au lion de la girouette. L'humour n'empêchait évidemment pas les cellules d'être bien réelles."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Ce détail change notre regard sur le monument. La ville médiévale et moderne n'est pas seulement faite de murailles : elle est faite de règles, d'horaires, de sanctions, de signaux que tout le monde comprend. La Grosse Cloche est donc presque un média public avant l'heure. Elle transforme un événement municipal en son audible dans les rues."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Nous allons maintenant quitter le pouvoir de la ville pour un autre pouvoir : celui de l'Église. Rejoignez la place Pey-Berland. Et lorsque vous arriverez, ne regardez pas seulement la cathédrale : cherchez surtout pourquoi son grand clocher se tient à distance. Cet espace vide entre les deux bâtiments va nous raconter une décision étonnamment pratique."}
+  ]
+}
