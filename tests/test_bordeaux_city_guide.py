@@ -43,7 +43,7 @@ def test_audio_programs_match_series_and_remain_narration_only():
         program = load(f"audio/bordeaux-discovery-ep0{index}.json")
         assert program["id"] == episode["id"]
         assert program["segments"]
-        assert program["soundscape"]["events"] == []
+        assert "soundscape" not in program
         assert all(seg["character_id"] == "narrateur" for seg in program["segments"])
 
 
