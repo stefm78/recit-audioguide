@@ -12,12 +12,8 @@
   "launch": "Devant la Porte Cailhau, avant une éventuelle visite intérieure.",
   "look": "Regardez de bas en haut les tours, les mâchicoulis, les fenêtres et les décors sculptés.",
   "summary": "Lire une porte qui est à la fois défense médiévale, monument politique et signe d'une Renaissance qui arrive.",
-  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
   "lead_in_ms": 400,
-  "sources": [
-    "https://www.bordeaux-tourisme.com/sites-monuments/porte-cailhau",
-    "https://www.bordeaux-tourisme.com/patrimoine-culturel/visite-porte-cailhau-secrets-du-bordeaux-medieval.html"
-  ],
+  "sources": ["https://www.bordeaux-tourisme.com/sites-monuments/porte-cailhau","https://www.bordeaux-tourisme.com/patrimoine-culturel/visite-porte-cailhau-secrets-du-bordeaux-medieval.html"],
   "segments": [
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Arrêtez-vous devant la Porte Cailhau et prenez quelques secondes pour la regarder de bas en haut. Elle a quelque chose d'un château miniature : tours, mâchicoulis, toiture pointue, fenêtres sculptées. Et c'est justement ce qui la rend intéressante. Elle se trouve à un moment de bascule entre deux mondes."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La porte actuelle est construite entre 1493 et 1496, à l'emplacement d'une porte plus ancienne. Elle appartient encore à une ville fortifiée. On y trouve une herse et des éléments clairement défensifs. Mais regardez les fenêtres et les décors sculptés : la Renaissance approche, et l'architecture commence déjà à changer de langage."},
