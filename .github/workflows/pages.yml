@@ -219,7 +219,7 @@ jobs:
     needs: [changes, sounds]
     if: needs.changes.outputs.audio_needed == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - name: Checkout caller
         uses: actions/checkout@v6
