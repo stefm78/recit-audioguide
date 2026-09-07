@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "slug": "bordeaux-discovery",
+  "type": "visit",
+  "title": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "subtitle": "Cinq étapes pour lire une ville médiévale, portuaire et classique sans séparer beauté, commerce et mémoire.",
+  "note": "Parcours à pied accepté humainement le 7 septembre 2026. Les distances et temps affichés entre étapes restent indicatifs et non routés.",
+  "visit": {
+    "start": "Miroir d'eau et place de la Bourse",
+    "start_label": "5 étapes · parcours à pied",
+    "navigation": "geographic",
+    "transport_mode": "walking",
+    "routing_provider": "external-link-only"
+  },
+  "episodes": [
+    {
+      "id": "bordeaux-discovery-ep01",
+      "title": "Place de la Bourse : ouvrir la ville sur le monde",
+      "stop": "Miroir d'eau et place de la Bourse",
+      "location": "Place de la Bourse, 33000 Bordeaux, France",
+      "launch": "Face à la place de la Bourse, côté Garonne, avec le Miroir d'eau au premier plan.",
+      "look": "Regardez les façades classiques, puis baissez les yeux vers le Miroir d'eau.",
+      "summary": "Comprendre comment Bordeaux s'ouvre au XVIIIe siècle, tout en reliant cette transformation à l'économie atlantique et à l'esclavage.",
+      "next_navigation": {
+        "label": "Rejoindre la Porte Cailhau",
+        "mode": "walking",
+        "url": "https://www.google.com/maps/dir/?api=1&destination=44.838794,-0.568481&travelmode=walking",
+        "estimate": "~0,40 km · ~5 min",
+        "precision": "INDICATIVE_NOT_ROUTED"
+      }
+    },
+    {
+      "id": "bordeaux-discovery-ep02",
+      "title": "Porte Cailhau : une porte entre Moyen Âge et Renaissance",
+      "stop": "Porte Cailhau",
+      "location": "Place du Palais, 33000 Bordeaux, France",
+      "launch": "Devant la Porte Cailhau, avant une éventuelle visite intérieure.",
+      "look": "Regardez de bas en haut les tours, les mâchicoulis, les fenêtres et les décors sculptés.",
+      "summary": "Lire une porte qui est à la fois défense médiévale, monument politique et signe d'une Renaissance qui arrive.",
+      "next_navigation": {
+        "label": "Rejoindre la Grosse Cloche",
+        "mode": "walking",
+        "url": "https://www.google.com/maps/dir/?api=1&destination=44.835300,-0.571389&travelmode=walking",
+        "estimate": "~0,56 km · ~8 min",
+        "precision": "INDICATIVE_NOT_ROUTED"
+      }
+    },
+    {
+      "id": "bordeaux-discovery-ep03",
+      "title": "Grosse Cloche : quand la ville avait une voix",
+      "stop": "Grosse Cloche",
+      "location": "45 Rue Saint-James, 33000 Bordeaux, France",
+      "launch": "Dans la rue Saint-James, avec le beffroi en vue.",
+      "look": "Regardez le beffroi, la cloche et le lion de la girouette du dôme central.",
+      "summary": "Comprendre la cloche comme infrastructure civique, la porte comme instrument de contrôle et l'humour bordelais autour de sa prison.",
+      "next_navigation": {
+        "label": "Rejoindre Pey-Berland",
+        "mode": "walking",
+        "url": "https://www.google.com/maps/dir/?api=1&destination=44.837780,-0.577780&travelmode=walking",
+        "estimate": "~0,72 km · ~10 min",
+        "precision": "INDICATIVE_NOT_ROUTED"
+      }
+    },
+    {
+      "id": "bordeaux-discovery-ep04",
+      "title": "Saint-André et Pey-Berland : le temps empilé",
+      "stop": "Cathédrale Saint-André et tour Pey-Berland",
+      "location": "Place Pey Berland, 33000 Bordeaux, France",
+      "launch": "Sur la place Pey-Berland, de façon à voir simultanément la cathédrale et la tour.",
+      "look": "Regardez d'abord l'écart entre la cathédrale et son clocher séparé.",
+      "summary": "Lire Saint-André comme un monument de plusieurs siècles et relier histoire religieuse, monarchie et Révolution.",
+      "next_navigation": {
+        "label": "Rejoindre le Grand Théâtre",
+        "mode": "walking",
+        "url": "https://www.google.com/maps/dir/?api=1&destination=44.842600,-0.573700&travelmode=walking",
+        "estimate": "~0,78 km · ~10 min",
+        "precision": "INDICATIVE_NOT_ROUTED"
+      }
+    },
+    {
+      "id": "bordeaux-discovery-ep05",
+      "title": "Grand Théâtre : la ville se met en scène",
+      "stop": "Grand Théâtre",
+      "location": "Place de la Comédie, 33000 Bordeaux, France",
+      "launch": "Place de la Comédie, face à la façade du Grand Théâtre.",
+      "look": "Regardez les douze colonnes corinthiennes puis les statues au-dessus du péristyle.",
+      "summary": "Refermer la visite sur le Bordeaux classique et comprendre comment culture, architecture, commerce et mémoire s'entremêlent."
+    }
+  ]
+}

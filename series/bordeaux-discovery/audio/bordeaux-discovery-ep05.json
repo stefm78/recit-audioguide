@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "id": "bordeaux-discovery-ep05",
+  "title": "Grand Théâtre : la ville se met en scène",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "episode": 5,
+  "stop": "Grand Théâtre",
+  "location": "Place de la Comédie, 33000 Bordeaux, France",
+  "launch": "Place de la Comédie, face à la façade du Grand Théâtre.",
+  "look": "Regardez les douze colonnes corinthiennes puis les statues au-dessus du péristyle.",
+  "summary": "Refermer la visite sur le Bordeaux classique et comprendre comment culture, architecture, commerce et mémoire s'entremêlent.",
+  "lead_in_ms": 400,
+  "sources": ["https://www.opera-bordeaux.com/histoire-2299","https://www.bordeaux-tourisme.com/sites-monuments/grand-theatre-bordeaux","https://www.musee-aquitaine-bordeaux.fr/visiter/expositions/400-000-ans-dhistoires-de-la-prehistoire-au-21e-siecle/bordeaux-au-18e-siecle-le-commerce-atlantique-et-lesclavage"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Placez-vous face au Grand Théâtre et regardez d'abord la façade sans chercher à tout compter. Ce bâtiment est inauguré le 7 avril 1780, après près de sept années de travaux. Son architecte, Victor Louis, conçoit un édifice qui doit être à la fois salle de spectacle et monument urbain. Ici, Bordeaux ne cherche plus seulement à se protéger ou à commercer : elle cherche à se montrer."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Maintenant, comptez les colonnes si vous le souhaitez. Il y en a douze, de style corinthien. Au-dessus, douze statues représentent les neuf muses et trois déesses de la mythologie antique. Le message est clair : les arts, la culture et l'Antiquité deviennent le vocabulaire du prestige moderne."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Le bâtiment possède aussi une dimension très concrète d'ingénierie. Sa grande salle est enveloppée par une importante structure de bois qui contribue à son acoustique. Victor Louis conçoit également des solutions structurelles particulières pour stabiliser les angles du péristyle. L'architecture spectaculaire ne tient donc pas seulement à ce que l'on voit : elle dépend de techniques cachées."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Cette étape permet de refermer la boucle commencée place de la Bourse. Les deux lieux appartiennent au Bordeaux classique du XVIIIe siècle, celui qui veut ouvrir la ville, organiser l'espace et afficher sa puissance. Mais après avoir traversé Porte Cailhau, Grosse Cloche et Saint-André, nous savons maintenant que cette façade classique n'efface pas les couches précédentes. Elle les recouvre sans les faire disparaître."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Et nous savons aussi que le mot prospérité doit être utilisé avec précision. Le Bordeaux du XVIIIe siècle est brillant, commerçant, architecturalement ambitieux ; il est aussi intégré à une économie coloniale fondée en partie sur l'exploitation et l'esclavage. Comprendre la ville, ce n'est pas choisir entre admiration et critique. C'est être capable de tenir les deux ensemble. La visite se termine ici : autour de vous, plusieurs siècles d'histoire restent visibles à quelques minutes les uns des autres."}
+  ]
+}

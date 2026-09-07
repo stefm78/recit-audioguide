@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "id": "bordeaux-discovery-ep01",
+  "title": "Place de la Bourse : ouvrir la ville sur le monde",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "episode": 1,
+  "stop": "Miroir d'eau et place de la Bourse",
+  "location": "Place de la Bourse, 33000 Bordeaux, France",
+  "launch": "Face à la place de la Bourse, côté Garonne, avec le Miroir d'eau au premier plan.",
+  "look": "Regardez les façades classiques, puis baissez les yeux vers le Miroir d'eau.",
+  "summary": "Comprendre comment Bordeaux s'ouvre au XVIIIe siècle, tout en reliant cette transformation à l'économie atlantique et à l'esclavage.",
+  "lead_in_ms": 400,
+  "sources": ["https://www.bordeaux-tourisme.com/sites-monuments/miroir-eau-place-bourse","https://www.bordeaux-tourisme.com/patrimoine-culturel/place-bourse.html","https://www.musee-aquitaine-bordeaux.fr/visiter/expositions/400-000-ans-dhistoires-de-la-prehistoire-au-21e-siecle/bordeaux-au-18e-siecle-le-commerce-atlantique-et-lesclavage","https://www.bordeaux-tourisme.com/evenements/visite-guidee-explorez-dessous-du-miroir-deau.html"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Placez-vous face à la place de la Bourse, avec la Garonne derrière vous et le Miroir d'eau au premier plan. Ce décor paraît ancien. Pourtant, la première chose à comprendre est qu'il raconte surtout une transformation. Pendant des siècles, Bordeaux est une ville serrée derrière ses murailles. Au XVIIIe siècle, les autorités veulent l'ouvrir, l'ordonner et lui donner une façade digne de sa puissance commerciale. À partir des années 1730, la vieille logique défensive recule. Jacques Gabriel puis son fils construisent ici un ensemble monumental tourné vers le fleuve. La ville médiévale commence littéralement à s'ouvrir."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Regardez les façades. Elles donnent une impression d'équilibre presque parfaite. C'est volontaire : le pouvoir veut produire une image de maîtrise, de richesse et d'élégance. Mais un audioguide intelligent doit aussi demander d'où vient cette richesse. Au XVIIIe siècle, Bordeaux devient l'un des grands ports du commerce atlantique. Une part importante de sa prospérité est liée aux denrées coloniales — sucre, café, coton, indigo, cacao — produites dans les plantations par des personnes réduites en esclavage. Des armateurs bordelais participent aussi directement à la traite négrière."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Le Musée d'Aquitaine documente environ quatre cent quatre-vingts expéditions négrières organisées par des armateurs bordelais, responsables de la déportation de dizaines de milliers de personnes africaines. Il faut donc regarder cette place avec deux idées à la fois. Oui, c'est un chef-d'œuvre d'urbanisme classique. Et oui, la prospérité qui permet cette transformation appartient aussi à une économie atlantique profondément violente. Les deux faits sont vrais en même temps."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Maintenant baissez les yeux vers le Miroir d'eau. Lui, en revanche, est très récent : il est inauguré en 2006. Ce dispositif moderne reflète des façades du XVIIIe siècle et résume presque toute la visite : Bordeaux adore faire dialoguer ses différentes couches de temps."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Pour la suite, quittez la place vers le sud en direction de la Porte Cailhau. Vous allez passer en quelques minutes du Bordeaux classique au Bordeaux médiéval."}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "id": "bordeaux-discovery-ep03",
+  "title": "Grosse Cloche : quand la ville avait une voix",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "episode": 3,
+  "stop": "Grosse Cloche",
+  "location": "45 Rue Saint-James, 33000 Bordeaux, France",
+  "launch": "Dans la rue Saint-James, avec le beffroi en vue.",
+  "look": "Regardez le beffroi, la cloche et le lion de la girouette du dôme central.",
+  "summary": "Comprendre la cloche comme infrastructure civique, la porte comme instrument de contrôle et l'humour bordelais autour de sa prison.",
+  "lead_in_ms": 400,
+  "sources": ["https://www.bordeaux-tourisme.com/sites-monuments/grosse-cloche","https://www.bordeaux-tourisme.com/patrimoine-culturel/grosse-cloche.html"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Placez-vous dans la rue Saint-James avec la Grosse Cloche bien visible au-dessus de vous. Avant les téléphones, les sirènes et les notifications, comment une ville parlait-elle à ses habitants ? Elle avait ses cloches."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La Grosse Cloche est l'un des plus anciens beffrois de France et un vestige des anciennes fortifications de Bordeaux. Pendant des siècles, son rôle est civique autant que défensif. La cloche marque le temps, signale des événements, peut appeler la population et rappelle que la ville possède sa propre organisation."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La cloche actuelle date de 1775. Elle porte le nom d'Armande-Louise et pèse environ 7,75 tonnes. Ce chiffre est impressionnant, mais ce qui compte surtout est sa fonction : quand elle sonnait, tout le monde l'entendait. Dans une ville sans haut-parleurs, le son était une infrastructure publique."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La porte n'était pourtant pas seulement un symbole prestigieux. Elle a aussi servi de prison. Des personnes qui avaient enfreint le couvre-feu ou l'ordre public pouvaient être enfermées dans ses geôles. Les Bordelais avaient même une plaisanterie : ils disaient que certains détenus logeaient à l'hôtel du Lion d'Or, allusion au lion visible sur la girouette du dôme central."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Cette anecdote montre quelque chose de sérieux : la ville régule très concrètement la vie quotidienne. Le pouvoir est dans l'heure à laquelle on peut circuler, dans la porte qu'on ferme, dans la cloche qui sonne et dans la prison située juste au-dessus de la rue. La prochaine étape change encore de dimension. Rejoignez la place Pey-Berland : nous allons passer du pouvoir municipal au pouvoir religieux, royal et monumental."}
+  ]
+}

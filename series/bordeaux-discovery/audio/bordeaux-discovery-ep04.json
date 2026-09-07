@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "id": "bordeaux-discovery-ep04",
+  "title": "Saint-André et Pey-Berland : le temps empilé",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "episode": 4,
+  "stop": "Cathédrale Saint-André et tour Pey-Berland",
+  "location": "Place Pey Berland, 33000 Bordeaux, France",
+  "launch": "Sur la place Pey-Berland, de façon à voir simultanément la cathédrale et la tour.",
+  "look": "Regardez d'abord l'écart entre la cathédrale et son clocher séparé.",
+  "summary": "Lire Saint-André comme un monument de plusieurs siècles et relier histoire religieuse, monarchie et Révolution.",
+  "lead_in_ms": 400,
+  "sources": ["https://www.bordeaux-tourisme.com/sites-monuments/tour-pey-berland-cathedrale-saint-andre","https://www.bordeaux-tourisme.com/patrimoine-culturel/cathedrale-saint-andre.html","https://www.monuments-nationaux.fr/magazine/dossiers-thematiques/vacances-et-week-ends-en-france-toutes-nos-idees-de-visites/4-idees-de-sorties-dans-le-sud-ouest"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Placez-vous de façon à voir ensemble la cathédrale Saint-André et la tour Pey-Berland. Le premier détail important est évident : le clocher est séparé de la cathédrale. Ce n'est pas un accident récent. La tour est construite à partir de 1440 parce qu'on ne peut pas intégrer correctement les cloches au bâtiment existant. Et ironie de l'histoire, cette tour conçue comme clocher devra attendre des siècles avant de recevoir réellement ses cloches."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La cathédrale elle-même est un monument composé de plusieurs époques. Ses grandes phases de construction s'étendent du XIIe au XIVe siècle, mais son histoire ne se résume pas à un chantier. Elle est aussi un théâtre politique."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"En 1137, Aliénor d'Aquitaine y épouse le futur Louis VII, roi de France. Plusieurs siècles plus tard, en 1615, Anne d'Autriche et Louis XIII y célèbrent à leur tour leur mariage. Ces unions rappellent que Bordeaux n'est jamais isolée : l'histoire locale croise sans cesse celle du royaume et de l'Europe."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Puis vient la Révolution. Les biens de l'Église sont nationalisés, et Saint-André change brutalement de fonction. Le bâtiment sert selon les moments de magasin à fourrage, de temple de la Raison ou de lieu de fêtes patriotiques. Une cathédrale peut donc être sacrée pendant des siècles puis devenir, presque du jour au lendemain, un espace utilitaire et politique."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Regardez de nouveau la tour séparée. Elle constitue un bon résumé de cette visite : les villes sont rarement cohérentes parce qu'elles auraient été dessinées d'un seul coup. Elles le deviennent parce que des générations successives réutilisent, corrigent et réinterprètent ce qui existait avant elles. Rejoignez maintenant la place de la Comédie. Nous allons terminer devant le bâtiment qui met en scène une nouvelle idée du prestige urbain : le Grand Théâtre."}
+  ]
+}

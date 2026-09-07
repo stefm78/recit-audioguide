@@ -54,13 +54,20 @@
     return `<section class="safety card"><strong>En voiture</strong><p>${esc(s.route?.safety || 'Le GPS et les conditions réelles priment. Les détails visuels sont destinés aux passagers ou aux arrêts.')}</p>${s.route?.maps_url ? `<a class="secondary" target="_blank" rel="noopener" href="${escAttr(s.route.maps_url)}">Ouvrir l’itinéraire</a>`:''}</section>`;
   }
 
+  function nextNavigation(e){
+    const n=e.next_navigation;
+    if(!n || !n.url) return '';
+    const estimate=n.estimate ? `<span class="quiet">${esc(n.estimate)}${n.precision && n.precision!=='ROUTED_FROZEN' ? ' · estimation indicative':''}</span>` : '';
+    return `<div class="next-navigation"><strong>Étape suivante</strong><a class="secondary" href="${escAttr(n.url)}" target="_blank" rel="noopener">${esc(n.label||'Rejoindre l’étape suivante')}</a>${estimate}</div>`;
+  }
+
   function episodeCard(e, index){
     const look = e.look ? `<p class="look"><strong>Regardez :</strong> ${esc(e.look)}</p>`:'';
     const maps = e.maps_url ? `<a class="secondary" href="${escAttr(e.maps_url)}" target="_blank" rel="noopener">Y aller</a>`:'';
     const transcript = e.transcript_url ? `<button class="secondary" data-transcript="${escAttr(e.id)}">Transcription et sources</button>`:'';
     const extras = (e.extras||[]).map(x=>`<details class="extra"><summary>${esc(x.title)}</summary><p>${esc(x.summary||'')}</p>${x.audio_url?`<button class="secondary" data-external-play="${escAttr(x.audio_url)}" data-title="${escAttr(x.title)}">▶ Écouter</button>`:''}</details>`).join('');
     const play = isPlayable(e) ? `<button class="primary" data-play="${escAttr(e.id)}">▶ Écouter</button>` : '<p class="quiet">Audio momentanément indisponible.</p>';
-    return `<article id="${escAttr(e.id)}" class="episode card" data-episode="${escAttr(e.id)}"><div class="episode-top"><span class="number">${index+1}</span><div><small>${esc(e.stop||'')}</small><h2>${esc(e.title)}</h2></div></div>${e.launch?`<p class="launch">${esc(e.launch)}</p>`:''}<p>${esc(e.summary||'')}</p>${look}${play}<div class="actions">${maps}${transcript}</div><div class="transcript" data-transcript-box="${escAttr(e.id)}" hidden></div>${extras}</article>`;
+    return `<article id="${escAttr(e.id)}" class="episode card" data-episode="${escAttr(e.id)}"><div class="episode-top"><span class="number">${index+1}</span><div><small>${esc(e.stop||'')}</small><h2>${esc(e.title)}</h2></div></div>${e.launch?`<p class="launch">${esc(e.launch)}</p>`:''}<p>${esc(e.summary||'')}</p>${look}${play}<div class="actions">${maps}${transcript}</div>${nextNavigation(e)}<div class="transcript" data-transcript-box="${escAttr(e.id)}" hidden></div>${extras}</article>`;
   }
 
   function onClick(ev){
