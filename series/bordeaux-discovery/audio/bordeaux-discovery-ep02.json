@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "bordeaux-discovery-ep02",
+  "title": "Porte Cailhau : une porte entre Moyen Âge et Renaissance",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "episode": 2,
+  "stop": "Porte Cailhau",
+  "location": "Place du Palais, 33000 Bordeaux, France",
+  "launch": "Devant la Porte Cailhau, avant une éventuelle visite intérieure.",
+  "look": "Regardez de bas en haut les tours, les mâchicoulis, les fenêtres et les décors sculptés.",
+  "summary": "Lire une porte qui est à la fois défense médiévale, monument politique et signe d'une Renaissance qui arrive.",
+  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
+  "lead_in_ms": 400,
+  "sources": [
+    "https://www.bordeaux-tourisme.com/sites-monuments/porte-cailhau",
+    "https://www.bordeaux-tourisme.com/patrimoine-culturel/visite-porte-cailhau-secrets-du-bordeaux-medieval.html"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Arrêtez-vous devant la Porte Cailhau et prenez quelques secondes pour la regarder de bas en haut. Elle a quelque chose d'un château miniature : tours, mâchicoulis, toiture pointue, fenêtres sculptées. Et c'est justement ce qui la rend intéressante. Elle se trouve à un moment de bascule entre deux mondes."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La porte actuelle est construite entre 1493 et 1496, à l'emplacement d'une porte plus ancienne. Elle appartient encore à une ville fortifiée. On y trouve une herse et des éléments clairement défensifs. Mais regardez les fenêtres et les décors sculptés : la Renaissance approche, et l'architecture commence déjà à changer de langage."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La porte sert aussi de monument politique. Elle célèbre Charles VIII et sa campagne d'Italie. Une niche tournée vers les quais rappelle notamment sa victoire de Fornoue en 1495. C'est une idée assez moderne : une porte de ville n'est plus seulement faite pour empêcher quelqu'un d'entrer ; elle sert aussi à raconter ce que le pouvoir veut que l'on retienne."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Imaginez maintenant la Garonne beaucoup plus proche de la vie quotidienne qu'aujourd'hui. Par cette zone passent marchandises, voyageurs, nouvelles, taxes et dangers. Bordeaux est alors une ville dont le fleuve constitue à la fois une richesse et une frontière. La Porte Cailhau aide à matérialiser ce rapport : elle protège la ville, mais elle l'ouvre aussi sur le port."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"À la place de la Bourse, nous avons vu une ville qui abattait symboliquement ses murs pour devenir classique et ouverte. Ici, nous retrouvons la ville qui vivait encore avec ces murs. Pour rejoindre la prochaine étape, gagnez la rue Saint-James et la Grosse Cloche. Observez comment les rues deviennent plus étroites : ce changement d'échelle est déjà une partie de l'histoire."}
+  ]
+}
