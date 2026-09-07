@@ -2,40 +2,33 @@
   "schema": "recit.city-guide-factory.creative-discovery-gate.v1",
   "series": "bordeaux-discovery",
   "status": "ADJUST_ACCEPTED",
+  "system_contract": "series/city-guide-factory-v1.1.json",
+  "role": "VERTICAL_PROOF_FIXTURE_ONLY",
   "baseline": {
     "version": "V1",
     "human_review": "PASS",
     "preserve": true,
     "route_change_allowed": false
   },
-  "human_direction": "Do not freeze the experience into predefined thematic axes. Prefer an interactive discovery model that leaves room for visitor creativity, free-form intent and system suggestions, including reuse or connection of already-generated guides when relevant.",
-  "experiment": {
-    "entry": "Ask the visitor what they feel like discovering, understanding or following, in their own words.",
-    "suggestion_behavior": "Offer up to three contextual suggestions derived from the current place, route and available qualified content. Suggestions are examples, never categories the visitor must adopt.",
-    "freedom": "The visitor may ignore suggestions, combine them, reformulate the request, change direction later, or ask an entirely new question.",
-    "reuse": "Prefer compatible already-qualified episodes, extras or cross-city material when they answer the request; identify when new generation would be required.",
-    "generation": "Any newly generated material must pass the normal research, factual, artistic and audio-production gates before becoming a qualified reusable guide asset.",
-    "depth": "The visitor can ask for a quick explanation, more detail, anecdotes, another perspective or a deeper thread without choosing a persistent profile.",
-    "sound": "Immersive sound remains optional and must be artistically justified, never inferred automatically from a topic suggestion."
+  "human_direction": "Do not encode this behavior as a Bordeaux-specific feature. Free-form creative discovery, contextual suggestions, reuse of existing qualified guides and freedom to reshape the intent belong to the generic creation lifecycle of every guide module.",
+  "proof_scope": {
+    "purpose": "Use Bordeaux only to demonstrate that the generic module-creation contract works on a real qualified guide baseline.",
+    "must_prove": [
+      "creation begins from requester free-form intent rather than a fixed theme catalog",
+      "the creative-director role can suggest a few contextual possibilities without turning them into permanent axes",
+      "existing qualified Bordeaux or cross-guide material is considered before unnecessary new generation",
+      "the requester can combine, reject or reformulate suggestions",
+      "the process converges to a concise module proposal before research or production",
+      "runtime conversational interaction is not required for the finished guide"
+    ],
+    "must_not_prove_by": [
+      "adding Bordeaux-specific workflow logic",
+      "hard-coding a Bordeaux theme taxonomy",
+      "requiring a persistent visitor persona",
+      "changing the accepted Bordeaux V1 route",
+      "regenerating Bordeaux audio merely to exercise the creation contract"
+    ]
   },
-  "example_interactions": [
-    {
-      "visitor": "Je veux surtout comprendre pourquoi cette ville est devenue importante.",
-      "system_suggestions": [
-        "Suivre le rôle du fleuve et du commerce",
-        "Regarder comment le pouvoir s'inscrit dans les bâtiments",
-        "Partir d'une anecdote locale et voir où elle nous mène"
-      ]
-    },
-    {
-      "visitor": "J'ai déjà fait un guide sur La Rochelle ; est-ce qu'il y a un lien intéressant ici ?",
-      "system_behavior": "Search compatible qualified material and propose a connection only if a meaningful and supportable thread exists."
-    },
-    {
-      "visitor": "Aucune de ces idées. Raconte-moi plutôt quelque chose de surprenant sur ce que j'ai devant moi.",
-      "system_behavior": "Accept the free-form redirection without forcing the visitor back into previous suggestions."
-    }
-  ],
-  "next_gate": "PROVE_INTERACTIVE_DISCOVERY_WITH_ONE_BORDEAUX_STOP",
+  "next_gate": "PROVE_GENERIC_MODULE_CREATION_DISCOVERY_USING_BORDEAUX_FIXTURE",
   "decision_values": ["PROCEED", "ADJUST"]
 }
