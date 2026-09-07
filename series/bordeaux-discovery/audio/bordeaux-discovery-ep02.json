@@ -12,7 +12,6 @@
   "launch": "Devant la Porte Cailhau, côté place du Palais.",
   "look": "Repérez les mâchicoulis, les ouvertures sculptées et la silhouette très verticale.",
   "summary": "Construite à la fin du XVe siècle, la Porte Cailhau est à la fois défensive et commémorative.",
-  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
   "lead_in_ms": 350,
   "sources": [
     "https://www.bordeaux-tourisme.com/sites-monuments/porte-cailhau",
