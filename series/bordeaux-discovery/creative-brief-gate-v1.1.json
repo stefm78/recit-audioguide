@@ -1,54 +1,41 @@
 {
-  "schema": "recit.city-guide-factory.creative-brief-gate.v1",
+  "schema": "recit.city-guide-factory.creative-discovery-gate.v1",
   "series": "bordeaux-discovery",
-  "status": "PENDING_HUMAN",
+  "status": "ADJUST_ACCEPTED",
   "baseline": {
     "version": "V1",
     "human_review": "PASS",
     "preserve": true,
     "route_change_allowed": false
   },
-  "decision": "Select the editorial architecture for the first V1.1 experiment. The choice must preserve the accepted route and keep the base visit complete without optional content.",
-  "proposals": [
+  "human_direction": "Do not freeze the experience into predefined thematic axes. Prefer an interactive discovery model that leaves room for visitor creativity, free-form intent and system suggestions, including reuse or connection of already-generated guides when relevant.",
+  "experiment": {
+    "entry": "Ask the visitor what they feel like discovering, understanding or following, in their own words.",
+    "suggestion_behavior": "Offer up to three contextual suggestions derived from the current place, route and available qualified content. Suggestions are examples, never categories the visitor must adopt.",
+    "freedom": "The visitor may ignore suggestions, combine them, reformulate the request, change direction later, or ask an entirely new question.",
+    "reuse": "Prefer compatible already-qualified episodes, extras or cross-city material when they answer the request; identify when new generation would be required.",
+    "generation": "Any newly generated material must pass the normal research, factual, artistic and audio-production gates before becoming a qualified reusable guide asset.",
+    "depth": "The visitor can ask for a quick explanation, more detail, anecdotes, another perspective or a deeper thread without choosing a persistent profile.",
+    "sound": "Immersive sound remains optional and must be artistically justified, never inferred automatically from a topic suggestion."
+  },
+  "example_interactions": [
     {
-      "id": "A",
-      "label": "Socle + approfondissements",
-      "experience_model": "One complete accessible base episode per stop, with optional deeper content only where it adds clear value.",
-      "narrative_spine": "city_transformation",
-      "visitor_lenses": ["history", "architecture", "human_anecdotes"],
-      "lens_behavior": "Optional extras are proposed per stop, without asking the visitor to choose a persistent profile.",
-      "default_depth": "accessible_first_visit",
-      "target_episode_minutes": 3,
-      "cross_city_thread": "optional_later",
-      "sound_policy": "real_environment_first",
-      "why_discriminating": "Lowest-complexity V1.1: preserves the current experience and proves optional depth before introducing a stronger multi-lens model."
+      "visitor": "Je veux surtout comprendre pourquoi cette ville est devenue importante.",
+      "system_suggestions": [
+        "Suivre le rôle du fleuve et du commerce",
+        "Regarder comment le pouvoir s'inscrit dans les bâtiments",
+        "Partir d'une anecdote locale et voir où elle nous mène"
+      ]
     },
     {
-      "id": "B",
-      "label": "Socle + lentilles transversales",
-      "experience_model": "One complete base episode per stop plus a small stable set of named lenses that can be followed across several stops.",
-      "narrative_spine": "city_transformation",
-      "visitor_lenses": ["history_and_power", "architecture_and_arts", "people_and_daily_life"],
-      "lens_behavior": "The visitor explicitly pulls a lens when desired; a lens may recur across the route and may bridge to another lens, but is never required.",
-      "default_depth": "accessible_first_visit",
-      "target_episode_minutes": 3,
-      "cross_city_thread": "compatible",
-      "sound_policy": "real_environment_first_unless_lens_specific",
-      "why_discriminating": "Directly tests the review's idea that the same place can support several coherent readings without creating a recommendation engine."
+      "visitor": "J'ai déjà fait un guide sur La Rochelle ; est-ce qu'il y a un lien intéressant ici ?",
+      "system_behavior": "Search compatible qualified material and propose a connection only if a meaningful and supportable thread exists."
     },
     {
-      "id": "C",
-      "label": "Socle + lentilles + épopée inter-villes",
-      "experience_model": "The same layered local visit as B, enriched by an optional narrative thread that can continue from Bordeaux to other cities and routes.",
-      "narrative_spine": "city_transformation",
-      "visitor_lenses": ["history_and_power", "architecture_and_arts", "people_and_daily_life"],
-      "lens_behavior": "Visitor-pulled lenses remain local; a separate optional saga thread connects selected episodes across cities.",
-      "default_depth": "accessible_first_visit",
-      "target_episode_minutes": 3,
-      "cross_city_thread": "enabled_for_experiment",
-      "sound_policy": "selective_immersion_only_when_artistically_justified",
-      "why_discriminating": "Tests the strongest product idea from the review: a city visit that is complete alone but can also belong to a wider journey such as Bordeaux → La Rochelle → Vendée → Orléans."
+      "visitor": "Aucune de ces idées. Raconte-moi plutôt quelque chose de surprenant sur ce que j'ai devant moi.",
+      "system_behavior": "Accept the free-form redirection without forcing the visitor back into previous suggestions."
     }
   ],
-  "decision_values": ["A", "B", "C", "ADJUST"]
+  "next_gate": "PROVE_INTERACTIVE_DISCOVERY_WITH_ONE_BORDEAUX_STOP",
+  "decision_values": ["PROCEED", "ADJUST"]
 }
