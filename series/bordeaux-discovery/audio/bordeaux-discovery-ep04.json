@@ -12,7 +12,6 @@
   "launch": "Sur la place Pey-Berland, avec la cathédrale et la tour visibles ensemble.",
   "look": "Observez surtout l'espace entre la cathédrale et la tour.",
   "summary": "Le clocher du XVe siècle est séparé de la cathédrale afin que de lourdes cloches ne menacent pas sa structure.",
-  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
   "lead_in_ms": 350,
   "sources": [
     "https://www.culture.gouv.fr/rechercher-une-publication-du-ministere-de-la-culture/repertoire-des-informations-publiques/Monuments-nationaux/tour-pey-berland-a-bordeaux",
