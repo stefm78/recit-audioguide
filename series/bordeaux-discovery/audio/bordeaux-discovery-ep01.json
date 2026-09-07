@@ -12,7 +12,6 @@
   "launch": "Face à la place de la Bourse, côté Garonne, avec le Miroir d'eau au premier plan.",
   "look": "Regardez la symétrie des façades, puis tournez-vous vers le fleuve.",
   "summary": "La place de la Bourse ouvre Bordeaux sur le fleuve au XVIIIe siècle et permet de comprendre la prospérité commerciale, y compris ses liens avec le système colonial et esclavagiste.",
-  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
   "lead_in_ms": 350,
   "sources": [
     "https://www.bordeaux-tourisme.com/sites-monuments/miroir-eau-place-bourse",
