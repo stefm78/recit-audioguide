@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "bordeaux-discovery-ep02",
+  "title": "Une porte entre Moyen Âge et Renaissance",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "episode": 2,
+  "stop": "Porte Cailhau",
+  "location": "Place du Palais, 33000 Bordeaux, France",
+  "launch": "Devant la Porte Cailhau, côté place du Palais.",
+  "look": "Repérez les mâchicoulis, les ouvertures sculptées et la silhouette très verticale.",
+  "summary": "Construite à la fin du XVe siècle, la Porte Cailhau est à la fois défensive et commémorative.",
+  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
+  "lead_in_ms": 350,
+  "sources": [
+    "https://www.bordeaux-tourisme.com/sites-monuments/porte-cailhau",
+    "https://www.bordeaux-tourisme.com/patrimoine-culturel/visite-porte-cailhau-secrets-du-bordeaux-medieval.html"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Regardez maintenant la Porte Cailhau. Nous avons parcouru seulement quelques centaines de mètres, mais nous avons reculé de presque trois siècles. Ici, Bordeaux redevient une ville protégée par des murailles. La porte actuelle est construite entre 1493 et 1496, à l'emplacement d'une porte plus ancienne. Elle mesure environ trente-cinq mètres et appartenait au système défensif de la ville."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Ce qui la rend passionnante, c'est qu'elle hésite entre deux mondes. Regardez les mâchicoulis et imaginez la herse : nous sommes encore dans le vocabulaire militaire du Moyen Âge. Mais observez les fenêtres à meneaux et le décor sculpté : la Renaissance approche. Une seule façade suffit donc à montrer une transition historique, presque comme si le bâtiment n'avait pas encore décidé à quelle époque il voulait appartenir."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La porte n'est pas seulement défensive. Elle célèbre aussi Charles VIII. Une niche côté quais porte son effigie et rappelle sa campagne d'Italie et la bataille de Fornoue de 1495. Voilà un détail étrange : une porte militaire peut donc aussi fonctionner comme un arc de triomphe. Elle protège la ville, mais elle diffuse en même temps un message politique à ceux qui la franchissent."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Essayez maintenant d'imaginer les quais sans les grandes façades du dix-huitième siècle. La ville que vous avez devant vous était plus compacte, plus sombre, plus contrainte par ses portes. La Garonne restait essentielle, mais entrer et sortir de Bordeaux passait encore par des points de contrôle. La Porte Cailhau est l'un des rares endroits où cette ancienne frontière urbaine devient encore visible."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Notre prochaine étape va rendre cette idée encore plus concrète. Rejoignez la Grosse Cloche. Là-bas, une porte ne servait pas seulement à défendre : elle faisait aussi entendre l'autorité de la ville. Une cloche pouvait annoncer, prévenir, célébrer et rappeler les règles. En moins de dix minutes, nous allons passer de la frontière militaire au quotidien des Bordelais."}
+  ]
+}
