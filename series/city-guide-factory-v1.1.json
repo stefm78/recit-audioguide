@@ -2,7 +2,7 @@
   "schema": "recit.city-guide-factory.v1_1",
   "version": "1.1",
   "status": "CANDIDATE",
-  "purpose": "Qualify visit intent before content generation while keeping visitor choice explicit, bounded and portable across cities.",
+  "purpose": "Qualify visit intent and editorial architecture before content generation while keeping visitor choice explicit, bounded and portable across cities.",
   "invariants": {
     "accepted_route_is_immutable_without_material_defect": true,
     "default_experience_remains_playable_without_optional_content": true,
@@ -14,29 +14,31 @@
     "required_before_new_audio_generation": [
       "audience",
       "visit_intent",
-      "primary_axis",
+      "narrative_spine",
       "default_depth",
       "target_episode_minutes",
       "sound_policy"
     ],
     "optional": [
-      "secondary_axes",
+      "visitor_lenses",
       "optional_depth",
       "cross_city_thread",
       "overview_navigation"
     ],
     "constraints": {
-      "primary_axis_count": 1,
-      "secondary_axes_max": 2,
+      "narrative_spine_count": 1,
+      "visitor_lenses_max": 3,
       "default_depth": "accessible_first_visit",
       "optional_depth_mode": "visitor_pull",
       "sound_policy_default": "real_environment_first"
     }
   },
   "content_model": {
-    "base_episode": "One clear, complete episode per accepted stop.",
+    "base_episode": "One clear, complete episode per accepted stop, following the shared narrative spine.",
     "optional_extensions": "Use existing episode.extras for deeper or alternate readings when materially useful.",
-    "bridges": "Optional extensions may invite another axis, but must never be required to understand the base visit.",
+    "visitor_lenses": "A small stable set of named lenses may recur across stops. Lenses are explicitly chosen by the visitor and never required to understand the base visit.",
+    "bridges": "Optional extensions may invite another lens or a cross-city thread, but must never be required to understand the base visit.",
+    "cross_city_thread": "Optional narrative continuity may connect selected episodes across multiple city guides while every city guide remains independently complete.",
     "duration": "Target episode duration is a design input and QA signal, not a hard runtime truncation rule."
   },
   "navigation_model": {
@@ -50,8 +52,8 @@
     "automatic_soundscape": false
   },
   "human_gate": {
-    "required_when": "Two or more materially different artistic intentions remain legitimate after research and challenge.",
-    "shape": "Present 2-4 concrete discriminating briefs; human selects one or requests adjustment.",
+    "required_when": "Two or more materially different editorial architectures or artistic intentions remain legitimate after research and challenge.",
+    "shape": "Present 2-4 concrete discriminating architectures or briefs; human selects one or requests adjustment.",
     "not_required_for": [
       "reversible technical implementation",
       "external map-link formatting",
