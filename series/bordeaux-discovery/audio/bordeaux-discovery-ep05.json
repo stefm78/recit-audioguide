@@ -12,13 +12,8 @@
   "launch": "Place de la Comédie, face à la façade du Grand Théâtre.",
   "look": "Regardez les douze colonnes corinthiennes puis les statues au-dessus du péristyle.",
   "summary": "Refermer la visite sur le Bordeaux classique et comprendre comment culture, architecture, commerce et mémoire s'entremêlent.",
-  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
   "lead_in_ms": 400,
-  "sources": [
-    "https://www.opera-bordeaux.com/histoire-2299",
-    "https://www.bordeaux-tourisme.com/sites-monuments/grand-theatre-bordeaux",
-    "https://www.musee-aquitaine-bordeaux.fr/visiter/expositions/400-000-ans-dhistoires-de-la-prehistoire-au-21e-siecle/bordeaux-au-18e-siecle-le-commerce-atlantique-et-lesclavage"
-  ],
+  "sources": ["https://www.opera-bordeaux.com/histoire-2299","https://www.bordeaux-tourisme.com/sites-monuments/grand-theatre-bordeaux","https://www.musee-aquitaine-bordeaux.fr/visiter/expositions/400-000-ans-dhistoires-de-la-prehistoire-au-21e-siecle/bordeaux-au-18e-siecle-le-commerce-atlantique-et-lesclavage"],
   "segments": [
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Placez-vous face au Grand Théâtre et regardez d'abord la façade sans chercher à tout compter. Ce bâtiment est inauguré le 7 avril 1780, après près de sept années de travaux. Son architecte, Victor Louis, conçoit un édifice qui doit être à la fois salle de spectacle et monument urbain. Ici, Bordeaux ne cherche plus seulement à se protéger ou à commercer : elle cherche à se montrer."},
     {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Maintenant, comptez les colonnes si vous le souhaitez. Il y en a douze, de style corinthien. Au-dessus, douze statues représentent les neuf muses et trois déesses de la mythologie antique. Le message est clair : les arts, la culture et l'Antiquité deviennent le vocabulaire du prestige moderne."},
