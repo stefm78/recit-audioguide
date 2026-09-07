@@ -1,0 +1,18 @@
+{
+  "schema": "recit.city-guide-factory.route-acceptance.v1",
+  "status": "ACCEPTED",
+  "slug": "bordeaux-discovery",
+  "decision": "ACCEPT_ROUTE",
+  "decision_source": "human",
+  "accepted_proposal_blob_sha": "c00ddcd4f6b706f3e354567481cee1f11a2c5e46",
+  "accepted_proposal_path": "series/bordeaux-discovery/proposal.json",
+  "accepted_main_commit": "dfe66e3f6baa56820066bf0ae958a20231faadfb",
+  "route_order": [
+    "bordeaux-cgf-01",
+    "bordeaux-cgf-02",
+    "bordeaux-cgf-03",
+    "bordeaux-cgf-04",
+    "bordeaux-cgf-05"
+  ],
+  "authority_note": "Human ACCEPT_ROUTE received after review of the published map surface. Route-dependent production is authorized; factual, audio and publication QA remain mandatory."
+}
