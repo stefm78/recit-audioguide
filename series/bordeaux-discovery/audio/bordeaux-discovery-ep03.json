@@ -12,7 +12,6 @@
   "launch": "Dans la rue Saint-James, avec le beffroi en vue.",
   "look": "Cherchez la girouette au lion et la masse du beffroi au-dessus de la rue.",
   "summary": "Beffroi, porte défensive et prison : la Grosse Cloche raconte l'autorité municipale dans la vie quotidienne.",
-  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
   "lead_in_ms": 350,
   "sources": [
     "https://www.bordeaux-tourisme.com/patrimoine-culturel/grosse-cloche.html",
