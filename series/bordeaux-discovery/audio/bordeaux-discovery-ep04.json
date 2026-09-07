@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "id": "bordeaux-discovery-ep04",
+  "title": "Pourquoi le clocher est séparé de la cathédrale",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Bordeaux — du Port de la Lune à la ville des Lumières",
+  "episode": 4,
+  "stop": "Cathédrale Saint-André et tour Pey-Berland",
+  "location": "Place Pey Berland, 33000 Bordeaux, France",
+  "launch": "Sur la place Pey-Berland, avec la cathédrale et la tour visibles ensemble.",
+  "look": "Observez surtout l'espace entre la cathédrale et la tour.",
+  "summary": "Le clocher du XVe siècle est séparé de la cathédrale afin que de lourdes cloches ne menacent pas sa structure.",
+  "soundscape": {"layers": [], "events": [], "ducking": "speech"},
+  "lead_in_ms": 350,
+  "sources": [
+    "https://www.culture.gouv.fr/rechercher-une-publication-du-ministere-de-la-culture/repertoire-des-informations-publiques/Monuments-nationaux/tour-pey-berland-a-bordeaux",
+    "https://www.monuments-nationaux.fr/editions-du-patrimoine/les-ouvrages/la-cathedrale-saint-andre-de-bordeaux",
+    "https://www.bordeaux-tourisme.com/parcours/flanerie-bordeaux-unesco.html"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Nous voici place Pey-Berland. Regardez la cathédrale Saint-André, puis la tour. Le détail le plus important est peut-être ce qu'il n'y a pas : les deux bâtiments ne se touchent pas. Ce grand clocher a été construit à part au quinzième siècle. Pourquoi ? Parce que de grosses cloches produisent des vibrations considérables et que l'on craignait qu'elles ne fragilisent la structure de la cathédrale. L'architecture commence ici par une précaution très concrète."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La cathédrale elle-même est un empilement de siècles. Les parties que nous voyons aujourd'hui ont été élevées entre le douzième et le seizième siècle, puis largement restaurées au dix-neuvième. Là encore, il faut éviter l'illusion d'un monument figé depuis le Moyen Âge. Une cathédrale est presque toujours un chantier historique : chaque époque répare, agrandit, transforme et parfois réinvente ce qu'elle a reçu."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Le lieu est aussi lié à de grands événements dynastiques. La tradition historique de la cathédrale rappelle notamment le mariage d'Aliénor d'Aquitaine avec le futur Louis VII au douzième siècle, puis celui de Louis XIII et d'Anne d'Autriche au dix-septième. Cela ne signifie pas que la cathédrale visible aujourd'hui était identique à ces dates. Mais le site est bien un point où l'histoire locale rencontre l'histoire de France et de l'Europe."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La tour porte le nom de l'archevêque Pey Berland, qui lance sa construction au quinzième siècle. Aujourd'hui elle culmine à environ soixante-six mètres. Si vous la visitez, il faut gravir plus de deux cents marches. Mais notre parcours fonctionne sans entrer : il suffit de regarder cette séparation entre les deux bâtiments pour comprendre comment une contrainte technique peut produire une silhouette urbaine devenue emblématique."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Pour notre dernière étape, rejoignez maintenant le Grand Théâtre. Nous allons quitter le Bordeaux religieux pour revenir au Bordeaux du dix-huitième siècle. Le parcours va se refermer comme une boucle : nous avons commencé place de la Bourse avec une ville qui s'ouvre et s'embellit ; nous terminerons avec un bâtiment où cette même ville choisit littéralement de se mettre en scène."}
+  ]
+}
