@@ -1,0 +1,25 @@
+{
+  "schema_version": 3,
+  "id": "seville-discovery-ep01",
+  "title": "Avant les monuments : apprendre à lire Séville",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Séville — des ruelles au fleuve, comprendre une ville-monde",
+  "episode": 1,
+  "stop": "Pasaje de Vila → Plaza de Santa Cruz",
+  "location": "Plaza de Santa Cruz, 41004 Sevilla, Espagne",
+  "launch": "Depuis Pje. de Vila 11, avancez dans Santa Cruz en observant la forme des rues plutôt qu'en cherchant immédiatement un monument.",
+  "look": "Regardez l'ombre, les murs blancs, les détours, les patios entrevus et la succession de petites places.",
+  "summary": "Une entrée par le tissu urbain de Santa Cruz pour apprendre à lire les couches de Séville avant ses grands monuments.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://visitasevilla.es/en/barrio-de-santa-cruz/"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Nous allons commencer Séville sans monument. Depuis le Pasaje de Vila, avancez simplement dans Santa Cruz. Ne cherchez pas la ligne la plus droite. Regardez plutôt ce que la rue vous oblige à faire : tourner, ralentir, passer de l'ombre à la lumière, découvrir une petite place presque au dernier moment. Cette manière de circuler est déjà une première information sur la ville."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Santa Cruz est l'ancien quartier juif médiéval de Séville. Une importante communauté séfarade y a vécu avant l'expulsion des Juifs d'Espagne en 1492. Mais évitons le raccourci qui consisterait à figer le quartier dans une seule époque. Ses rues, ses églises, ses patios, ses maisons et ses récits ont été transformés pendant des siècles. C'est précisément ce que nous chercherons aujourd'hui : une ville faite de couches, pas une ville-musée arrêtée à une date."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"En approchant de la Plaza de Santa Cruz, observez un détail très simple : l'échelle reste humaine. Nous ne sommes pas encore dans la représentation monumentale du pouvoir. Nous sommes dans la ville vécue, dans des rues où l'ombre, l'intimité et les petites ouvertures comptent. Gardez cette sensation en mémoire. Dans quelques minutes, l'Alcázar nous fera changer brutalement d'échelle."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Le fil de la visite est maintenant posé. Nous n'allons pas collectionner des bâtiments célèbres. Nous allons essayer de comprendre comment Séville absorbe, transforme et réutilise ce qui lui arrive. Rejoignez maintenant le Real Alcázar. Là, cette idée prendra une forme presque spectaculaire."}
+  ]
+}
