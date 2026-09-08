@@ -43,11 +43,13 @@
     section.dataset.visitMap = '1';
     section.className = 'visit-map-shell card';
     section.innerHTML = `
-      <div class="visit-map-head"><div><p class="eyebrow">Carte de la visite</p><h2>Déambulations à pied</h2></div><p>Les traits suivent des <strong>waypoints éditoriaux</strong> et des rues ou passages nommés. Pour la navigation réelle, Google Maps et les conditions de rue priment.</p></div>
-      <div class="visit-day-tabs" role="tablist"></div>
-      <div id="visit-map-canvas" class="visit-map-canvas" aria-label="Carte du parcours"></div>
-      <div class="visit-map-fallback" hidden></div>
-      <div class="visit-leg-list"></div>`;
+      <div class="visit-map-head"><div><p class="eyebrow">Carte de la visite</p><h2>Déambulations à pied</h2></div><div class="visit-map-tools"><p>Hébergement, zones et rues servent de repères. Google Maps reste l’autorité de navigation réelle.</p><button type="button" class="secondary visit-map-toggle" aria-expanded="true">Réduire la carte</button></div></div>
+      <div class="visit-map-body">
+        <div class="visit-day-tabs" role="tablist"></div>
+        <div id="visit-map-canvas" class="visit-map-canvas" aria-label="Carte du parcours"></div>
+        <div class="visit-map-fallback" hidden></div>
+        <div class="visit-leg-list"></div>
+      </div>`;
     strip.after(section);
     const tabs = section.querySelector('.visit-day-tabs');
     routeMap.days.forEach((d,i)=>{
@@ -55,14 +57,30 @@
       b.type='button'; b.className=i===0?'active':''; b.textContent=d.label;
       b.addEventListener('click',()=>showDay(d,section,b)); tabs.appendChild(b);
     });
+    const toggle=section.querySelector('.visit-map-toggle');
+    const key=`recit:visit-map-collapsed:${slug}`;
+    let saved=null; try{ saved=localStorage.getItem(key); }catch(_){ }
+    const defaultCollapsed=saved===null ? window.matchMedia('(max-width: 719px)').matches : saved==='1';
+    setCollapsed(section,toggle,defaultCollapsed,false,key);
+    toggle.addEventListener('click',()=>setCollapsed(section,toggle,!section.classList.contains('collapsed'),true,key));
     showDay(routeMap.days[0],section,tabs.querySelector('button'));
+  }
+
+  function setCollapsed(section,toggle,collapsed,persist,key){
+    section.classList.toggle('collapsed',collapsed);
+    const body=section.querySelector('.visit-map-body');
+    body.hidden=collapsed;
+    toggle.textContent=collapsed?'Afficher la carte':'Réduire la carte';
+    toggle.setAttribute('aria-expanded',String(!collapsed));
+    if(persist){ try{localStorage.setItem(key,collapsed?'1':'0');}catch(_){ } }
+    if(!collapsed && map) setTimeout(()=>map.invalidateSize(),0);
   }
 
   let map, layers=[];
   function showDay(day, section, activeButton){
     section.querySelectorAll('.visit-day-tabs button').forEach(b=>b.classList.toggle('active', b===activeButton));
     section.querySelector('.visit-leg-list').innerHTML = `<div class="visit-day-summary"><strong>${esc(day.theme||day.label)}</strong><span>${esc(day.summary||'')}</span></div>` +
-      (day.legs||[]).map((leg,i)=>`<article class="visit-leg"><div class="visit-leg-number">${i+1}</div><div><strong>${esc(leg.label)}</strong><small>${esc(leg.time||'')}</small><p>${esc(leg.instructions||'')}</p><a class="secondary" target="_blank" rel="noopener" href="${esc(leg.maps_url||'#')}">Navigation piétonne</a></div></article>`).join('');
+      (day.legs||[]).map((leg,i)=>`<article class="visit-leg"><div class="visit-leg-number">${i+1}</div><div><strong>${esc(leg.label)}</strong><small>${esc(leg.time||'')}</small><p>${esc(leg.instructions||'')}</p>${leg.audio_episode_id?`<a class="secondary" href="#${esc(leg.audio_episode_id)}">Voir l’audio associé</a> `:''}<a class="secondary" target="_blank" rel="noopener" href="${esc(leg.maps_url||'#')}">Navigation piétonne</a></div></article>`).join('');
 
     const canvas=section.querySelector('#visit-map-canvas');
     const fallback=section.querySelector('.visit-map-fallback');

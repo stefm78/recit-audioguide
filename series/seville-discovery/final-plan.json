@@ -1,14 +1,13 @@
 {
-  "schema":"recit.city-guide.final-plan.v1",
+  "schema":"recit.seville.final-plan.v1",
   "status":"HUMAN_TRAJECTORY_APPROVED",
-  "slug":"seville-discovery",
-  "approved_at":"2026-09-08",
   "dates":["2026-09-18","2026-09-19"],
   "hub":"Pje. de Vila, 11, Casco Antiguo, 41004 Sevilla, Espagne",
-  "approved_direction":"Vendredi: Plaza de España tôt, Santa Cruz, Cathédrale/Giralda 11:55, déjeuner + repos au hub, Alcázar 17:00. Samedi: Archivo de Indias, Arenal/Torre del Oro, Guadalquivir, Triana, déjeuner puis après-midi libre.",
-  "walking_design":"EDITORIAL_WAYPOINTS_AND_NAMED_STREETS",
-  "navigation_authority":"External Google Maps links plus on-page OpenStreetMap visualization; real GPS and street conditions prevail.",
-  "editorial_model":{"main_audio_episodes":7,"optional_perspectives":"after-listen contextual extras attached to each chapter","persistent_theme_taxonomy":false},
-  "publication_target":"GitHub Pages",
-  "volatile_rechecks":["ticket inventory before purchase","weather and heat at J-2/J-1","access restrictions and works at J-2/J-1"]
+  "route_change":false,
+  "v1_1_enrichment":{
+    "status":"IMPLEMENTATION_AUTHORIZED_BY_USER",
+    "principles":["begin narrative at the lodging exit","treat selected walking legs as content-bearing audio spaces","expand main chapters to roughly double prior listening depth","materialize optional perspectives as playable gourmandise audio","pitch relevant gourmandises from the main narrative","make the generic visit map collapsible so audio remains visually primary"],
+    "accepted_route_preserved":true
+  },
+  "volatile_rechecks":["ticket inventory before purchase","weather at J-2/J-1","works and access at J-2/J-1"]
 }

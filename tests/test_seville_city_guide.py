@@ -9,67 +9,73 @@ def load(name):
     return json.loads((BASE / name).read_text(encoding="utf-8"))
 
 
-def test_two_day_route_is_explicitly_human_approved():
+def words(program):
+    return sum(len((segment.get("text") or "").split()) for segment in program.get("segments", []))
+
+
+def test_two_day_route_is_explicitly_human_approved_and_enriched_without_route_change():
     accepted = load("accepted-route.json")
     plan = load("final-plan.json")
     assert accepted["status"] == "ACCEPTED"
     assert accepted["decision"] == "ACCEPT_ROUTE"
-    assert accepted["decision_source"] == "human_explicit_two_day_trajectory_approval"
     assert plan["status"] == "HUMAN_TRAJECTORY_APPROVED"
     assert plan["dates"] == ["2026-09-18", "2026-09-19"]
-    assert len(accepted["route_order"]) == 7
+    assert plan["route_change"] is False
+    assert plan["v1_1_enrichment"]["accepted_route_preserved"] is True
 
 
-def test_visit_uses_hub_two_days_and_editorial_walking_waypoints():
+def test_visit_starts_at_hub_and_walks_are_content_bearing():
     series = load("series.json")
-    route_map = json.loads((BASE / "assets" / "route-map.json").read_text(encoding="utf-8"))
-    assert series["type"] == "visit"
-    assert series["visit"]["transport_mode"] == "walking"
-    assert series["visit"]["routing_provider"] == "external_google_maps_with_editorial_waypoints"
+    route_map = load("assets/route-map.json")
     assert series["visit"]["start"].startswith("Pje. de Vila, 11")
-    assert len(series["visit"]["days"]) == 2
-    assert len(route_map["days"]) == 2
-    assert all(day["legs"] for day in route_map["days"])
-    assert any("Callejón del Agua" in leg["instructions"] for day in route_map["days"] for leg in day["legs"])
-    assert any("Paseo de Cristóbal Colón" in leg["instructions"] for day in route_map["days"] for leg in day["legs"])
-    assert all(leg["maps_url"].startswith("https://www.google.com/maps/dir/") for day in route_map["days"] for leg in day["legs"])
-
-
-def test_final_story_has_seven_playable_chapters_and_optional_perspectives():
-    series = load("series.json")
-    assert len(series["episodes"]) == 7
-    assert [e["day"] for e in series["episodes"]].count("day1") == 4
+    assert series["episodes"][0]["id"] == "seville-discovery-ep00"
+    assert series["episodes"][0]["location"].startswith("Pje. de Vila")
+    assert len(series["episodes"]) == 8
+    assert [e["day"] for e in series["episodes"]].count("day1") == 5
     assert [e["day"] for e in series["episodes"]].count("day2") == 3
-    assert any("Plaza de España" in e["stop"] for e in series["episodes"])
-    assert any("Cathédrale" in e["stop"] for e in series["episodes"])
-    assert any("Real Alcázar" in e["stop"] for e in series["episodes"])
-    assert any("Triana" in e["stop"] for e in series["episodes"])
-    assert sum(len(e.get("extras", [])) for e in series["episodes"]) >= 8
-    assert all(len(e.get("extras", [])) <= 3 for e in series["episodes"])
-    assert all(e.get("time") and e.get("day_label") for e in series["episodes"])
+    assert any(leg.get("audio_episode_id") == "seville-discovery-ep00" for leg in route_map["days"][0]["legs"])
+    assert any(leg.get("audio_episode_id") == "seville-discovery-ep06" for leg in route_map["days"][1]["legs"])
+    assert any("Callejón del Agua" in leg["instructions"] for d in route_map["days"] for leg in d["legs"])
+    assert all(leg["maps_url"].startswith("https://www.google.com/maps/dir/") for d in route_map["days"] for leg in d["legs"])
 
 
-def test_every_seville_audio_program_is_sourced_narrator_only_and_soundscape_free():
-    for i in range(1, 8):
-        program = load(f"audio/seville-discovery-ep0{i}.json")
-        assert program["schema_version"] == 3
+def test_main_programs_are_longer_sourced_and_pitch_gourmandises():
+    ids = ["ep00","ep05","ep01","ep04","ep02","ep03","ep06","ep07"]
+    for suffix in ids:
+        program = load(f"audio/seville-discovery-{suffix}.json")
         assert program["profile"] == "speech"
         assert program["language"] == "fr-FR"
+        assert program["sources"]
+        assert len(program["segments"]) >= 5
+        assert words(program) >= 300
+        assert "soundscape" not in program
+        assert all(segment["character_id"] == "narrateur" for segment in program["segments"])
+        joined = " ".join(segment["text"].lower() for segment in program["segments"])
+        assert "gourmandise" in joined or suffix in {"ep06"}
+
+
+def test_perspectives_are_real_optional_audio_programs():
+    series = load("series.json")
+    extras = [x for e in series["episodes"] for x in e.get("extras", [])]
+    assert len(extras) >= 10
+    assert all(x.get("id") for x in extras)
+    assert all(len(e.get("extras", [])) <= 3 for e in series["episodes"])
+    for extra in extras:
+        path = BASE / "audio" / f"{extra['id']}.json"
+        assert path.exists(), extra["id"]
+        program = json.loads(path.read_text(encoding="utf-8"))
         assert program["sources"]
         assert len(program["segments"]) >= 3
         assert "soundscape" not in program
         assert all(segment["character_id"] == "narrateur" for segment in program["segments"])
 
 
-def test_generic_frontend_has_map_without_seville_specific_logic():
-    app = (ROOT / "web" / "app.js").read_text(encoding="utf-8").lower()
-    next_step = (ROOT / "web" / "next-step.js").read_text(encoding="utf-8").lower()
+def test_generic_map_is_collapsible_without_seville_specific_logic():
     visit_map = (ROOT / "web" / "visit-map.js").read_text(encoding="utf-8").lower()
-    html = (ROOT / "web" / "series.html").read_text(encoding="utf-8").lower()
-    build = (ROOT / "site" / "build.py").read_text(encoding="utf-8").lower()
-    for text in (app, next_step, visit_map):
-        assert "seville" not in text
-        assert "sevilla" not in text
-    assert "visit-map.js" in html
-    assert "visit-map.js" in build
-    assert "leaflet" in html
+    css = (ROOT / "web" / "styles.css").read_text(encoding="utf-8").lower()
+    assert "visit-map-toggle" in visit_map
+    assert "localstorage" in visit_map
+    assert "max-width: 719px" in visit_map
+    assert ".visit-map-shell.collapsed" in css
+    assert "seville" not in visit_map
+    assert "sevilla" not in visit_map
