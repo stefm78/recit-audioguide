@@ -1,0 +1,14 @@
+{
+  "schema":"recit.city-guide.final-plan.v1",
+  "status":"HUMAN_TRAJECTORY_APPROVED",
+  "slug":"seville-discovery",
+  "approved_at":"2026-09-08",
+  "dates":["2026-09-18","2026-09-19"],
+  "hub":"Pje. de Vila, 11, Casco Antiguo, 41004 Sevilla, Espagne",
+  "approved_direction":"Vendredi: Plaza de España tôt, Santa Cruz, Cathédrale/Giralda 11:55, déjeuner + repos au hub, Alcázar 17:00. Samedi: Archivo de Indias, Arenal/Torre del Oro, Guadalquivir, Triana, déjeuner puis après-midi libre.",
+  "walking_design":"EDITORIAL_WAYPOINTS_AND_NAMED_STREETS",
+  "navigation_authority":"External Google Maps links plus on-page OpenStreetMap visualization; real GPS and street conditions prevail.",
+  "editorial_model":{"main_audio_episodes":8,"optional_perspectives":"after-listen extras; audio on selected key stops","persistent_theme_taxonomy":false},
+  "publication_target":"GitHub Pages",
+  "volatile_rechecks":["ticket inventory before purchase","weather and heat at J-2/J-1","access restrictions and works at J-2/J-1"]
+}
