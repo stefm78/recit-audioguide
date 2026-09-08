@@ -1,0 +1,21 @@
+{
+  "schema": "recit.city-guide-factory.route-acceptance.v1",
+  "status": "ACCEPTED",
+  "slug": "seville-discovery",
+  "decision": "ACCEPT_ROUTE",
+  "decision_source": "kernel_autonomous_A3",
+  "accepted_proposal_blob_sha": "9de329fa03420c173c5f756b143439221361da8c",
+  "accepted_proposal_path": "series/seville-discovery/proposal.json",
+  "accepted_main_commit": null,
+  "route_order": [
+    "seville-cgf-01",
+    "seville-cgf-02",
+    "seville-cgf-03",
+    "seville-cgf-04",
+    "seville-cgf-05",
+    "seville-cgf-06",
+    "seville-cgf-07"
+  ],
+  "authority_note": "A3 mission explicitly authorized autonomous continuation and required a human route gate only if materially distinct candidates remained equivalent. The proposal records three challenged alternatives and a materially superior leader. Route-dependent production is therefore authorized without an additional route-choice interruption; final human experiential review remains mandatory.",
+  "reversibility": "Branch-scoped candidate; no main promotion implied by this acceptance artifact."
+}
