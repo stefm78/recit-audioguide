@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "seville-discovery-ep02",
+  "title": "Un palais où les pouvoirs se réécrivent",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Séville — des ruelles au fleuve, comprendre une ville-monde",
+  "episode": 2,
+  "stop": "Real Alcázar de Sevilla",
+  "location": "Patio de Banderas, s/n, 41004 Sevilla, Espagne",
+  "launch": "Entrez par la Puerta del León et gardez une question en tête : que fait un nouveau pouvoir de l'architecture du pouvoir précédent ?",
+  "look": "Suivez les changements d'espaces, de décors, d'eau et de jardins plutôt que d'essayer de tout voir.",
+  "summary": "Un mini-parcours intérieur sur la continuité du lieu de pouvoir et la réappropriation des formes andalouses par les souverains chrétiens.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://alcazarsevilla.org/historia/",
+    "https://whc.unesco.org/en/list/383/"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Voici le seul grand intérieur que nous allons vraiment approfondir aujourd'hui. L'Alcázar n'est pas intéressant seulement parce qu'il est magnifique. Il l'est parce que le même lieu sert de siège au pouvoir pendant des siècles, alors même que les régimes, les religions dominantes, les goûts et les usages changent."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"L'histoire officielle du palais fait remonter un nouveau complexe gouvernemental à l'année 913, lorsque le calife de Cordoue Abd al-Rahman III ordonne ici la construction d'une Dar al-Imara, une résidence du pouvoir. Le site évolue ensuite avec la ville islamique. Retenez moins les dates que la permanence de l'emplacement : gouverner Séville signifie longtemps gouverner depuis ce secteur, tout près de l'activité portuaire."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Après la conquête chrétienne de 1248, le palais ne disparaît pas. Il continue d'être utilisé et transformé. Au milieu du quatorzième siècle, Pierre Ier de Castille fait construire son palais en recourant délibérément à un langage architectural nourri de traditions d'al-Andalus. C'est ici que le mot mudéjar devient utile, à condition de ne pas le comprendre comme une simple étiquette ethnique ou religieuse. Des commanditaires chrétiens, des artisans, des techniques et des formes héritées de mondes différents produisent quelque chose de nouveau."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"À mesure que vous avancez, cherchez donc les continuités et les réécritures. Les arcs, les inscriptions, les plafonds, les décors géométriques ou végétaux ne sont pas seulement de beaux objets. Ils sont aussi un langage politique : le souverain choisit comment il veut être vu, dans quels héritages il s'inscrit et lesquels il transforme."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Puis laissez les jardins changer le rythme. L'eau, l'ombre, les perspectives et la végétation ne sont pas une décoration ajoutée après coup à l'idée de pouvoir. Ils organisent aussi l'expérience du palais. La fraîcheur, le contrôle des vues et la succession des espaces participent à la mise en scène de celui qui habite et reçoit ici."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Avant de sortir, retenez surtout ceci : à Séville, un changement de pouvoir n'efface pas nécessairement le décor précédent. Il peut le reprendre, le modifier et même le transformer en signe de sa propre autorité. Cette logique va réapparaître immédiatement avec la Giralda, ancien minaret devenu clocher. Mais avant cela, nous allons regarder comment la ville passe du pouvoir royal au gouvernement d'un empire lointain."}
+  ]
+}
