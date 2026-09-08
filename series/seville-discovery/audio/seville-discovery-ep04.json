@@ -1,28 +1,25 @@
 {
-  "schema_version": 3,
-  "id": "seville-discovery-ep04",
-  "title": "La Giralda : transformer sans effacer",
-  "language": "fr-FR",
-  "profile": "speech",
-  "production_version": 3,
-  "series": "Séville — des ruelles au fleuve, comprendre une ville-monde",
-  "episode": 4,
-  "stop": "Catedral de Sevilla et Giralda — lecture extérieure",
-  "location": "Avenida de la Constitución, s/n, 41001 Sevilla, Espagne",
-  "launch": "Restez à l'extérieur et cherchez d'abord la Giralda avant de regarder la masse gothique de la cathédrale.",
-  "look": "Distinguez le corps almohade de la tour, ses ouvertures et ses rampes intérieures, puis son couronnement Renaissance.",
-  "summary": "Un ancien minaret devenu clocher, à côté d'une immense cathédrale gothique construite sur la grande mosquée : la superposition culturelle de Séville devient visible.",
-  "lead_in_ms": 350,
-  "sources": [
-    "https://www.catedraldesevilla.es/en/the-cathedral/world-heritage-site/",
+  "schema_version":3,
+  "id":"seville-discovery-ep04",
+  "title":"Giralda et Cathédrale : transformer sans tout effacer",
+  "language":"fr-FR",
+  "profile":"speech",
+  "production_version":3,
+  "series":"Séville — deux jours pour comprendre la ville",
+  "episode":4,
+  "stop":"Cathédrale de Séville + Giralda",
+  "lead_in_ms":350,
+  "sources":[
+    "https://www.catedraldesevilla.es/visita-cultural/horarios-y-tarifas/",
     "https://www.catedraldesevilla.es/en/the-cathedral/building/the-giralda/",
     "https://www.catedraldesevilla.es/en/the-cathedral/its-history/"
   ],
-  "segments": [
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Regardez d'abord la Giralda seule. Avant d'être le clocher de la cathédrale, cette tour était le minaret de la grande mosquée almohade de Séville, construit à la fin du douzième siècle. Lorsque la ville est conquise par Ferdinand III en 1248, la tour n'est pas détruite : elle change de fonction."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Le corps principal que vous voyez reste almohade. À l'intérieur, la montée se fait en grande partie par des rampes, assez larges pour que l'on ait historiquement pu les parcourir à cheval. Au seizième siècle, un couronnement Renaissance remplace la partie supérieure ancienne. Tout en haut, le Giraldillo, une grande figure de bronze représentant la foi victorieuse, transforme encore la lecture de la tour."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Maintenant, élargissez le regard à la cathédrale. Après 1248, la grande mosquée avait été transformée en église. À partir du début du quinzième siècle, l'essentiel est remplacé par une immense cathédrale gothique. La Giralda et le Patio de los Naranjos conservent pourtant une partie visible de l'édifice antérieur. Le monument chrétien affirme donc une rupture spectaculaire, tout en incorporant physiquement des éléments de ce qu'il remplace."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"C'est exactement la question rencontrée à l'Alcázar, mais avec une réponse différente. Là-bas, le pouvoir chrétien avait adopté et réinventé des langages architecturaux d'al-Andalus. Ici, une cathédrale gothique gigantesque affirme clairement une nouvelle domination, mais son symbole le plus reconnaissable reste l'ancien minaret transformé."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Nous n'entrons pas aujourd'hui. La visite complète de la cathédrale et de la Giralda demande environ une heure et quart. Elle mérite une autre séquence, plutôt que d'être comprimée. Pour cette première lecture de Séville, nous allons maintenant quitter la monumentalité et prendre une pause dans une institution beaucoup plus quotidienne : une taberna du dix-neuvième siècle."}
+  "segments":[
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Avant d'entrer, regardez d'abord la Giralda. Son corps inférieur vient du minaret de la grande mosquée almohade ; sa fonction et sa silhouette ont ensuite été transformées dans la ville chrétienne. En un seul monument, vous avez déjà plusieurs Séville superposées."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La visite commence normalement par la tour. Les rampes intérieures donnent une expérience très différente d'un escalier de clocher classique. Pendant la montée, ne pensez pas seulement à la hauteur. Imaginez la tour comme un point d'appel dans la ville almohade, puis comme le grand repère chrétien qui continue de structurer l'horizon."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Une fois redescendus, cherchez le Patio de los Naranjos. C'est l'un des indices les plus immédiats de la mosquée antérieure. La cathédrale gothique qui s'élève ensuite à une échelle gigantesque ne raconte donc pas une naissance sur terrain vierge : elle raconte une substitution, une appropriation et une ambition nouvelle installées sur un site déjà sacré et monumental."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La taille de la nef doit être ressentie physiquement. Elle exprime une puissance religieuse, mais aussi celle d'une ville dont les ressources et les ambitions augmentent. Séville va bientôt se trouver au cœur des relations avec les Amériques. Le tombeau de Christophe Colomb fonctionne aujourd'hui comme un rappel spectaculaire de cette ouverture atlantique que nous poursuivrons demain à l'Archivo de Indias."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Gardez deux idées. Premièrement : la ville chrétienne conserve certains éléments de la ville islamique parce qu'ils sont utiles, prestigieux ou devenus indissociables du lieu. Deuxièmement : transformer un monument est aussi une manière d'affirmer qui détient désormais le pouvoir."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":800,"text":"À la sortie, regardez ensemble la Giralda, la cathédrale et la direction de l'Alcázar. Après déjeuner et une vraie pause au logement, nous reviendrons précisément sur la question que cette superposition pose : pourquoi un roi chrétien fait-il construire un palais dans un langage esthétique si profondément lié à Al-Andalus ?"}
   ]
 }
