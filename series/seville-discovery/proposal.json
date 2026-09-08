@@ -1,0 +1,165 @@
+{
+  "schema": "recit.city-guide-factory.proposal.v1",
+  "status": "HUMAN_ROUTE_GATE",
+  "slug": "seville-discovery",
+  "title": "Séville — des ruelles au fleuve, comprendre une ville-monde",
+  "request": {
+    "city": "Sevilla, Spain",
+    "duration_budget": "about 5 hours",
+    "mobility": "primarily walking; short transport only if materially useful",
+    "audience": "first-time adult visitors seeking understanding rather than checklist tourism",
+    "preferences": [
+      "understand Seville in its historical and cultural ecosystem",
+      "comfortable walking with interesting transitions",
+      "one or two worthwhile interiors",
+      "living narrative with observation, history and anecdotes",
+      "complete base layer plus optional deeper extensions",
+      "cosy or locally meaningful lunch stop"
+    ],
+    "start": "Pje. de Vila, 11, Casco Antiguo, 41004 Sevilla, Spain",
+    "visit_dates": ["2026-09-18", "2026-09-19"],
+    "human_intent_source": "offline-interview result supplied by requester"
+  },
+  "review_summary": {
+    "visit_budget_minutes": 300,
+    "stop_count": 7,
+    "walking_distance_km": 2.55,
+    "walking_time_minutes": 34,
+    "walking_metrics_status": "INDICATIVE_NOT_ROUTED",
+    "walking_metrics_method": "Straight-line geometry between corroborated stop coordinates multiplied by a conservative 1.25 urban-network factor; walking speed 4.5 km/h. The departure walk from Pje. de Vila 11 into the first Santa Cruz observation is included qualitatively, not asserted as exact routing.",
+    "on_site_and_listening_budget_minutes": 205,
+    "lunch_budget_minutes": 50,
+    "buffer_minutes": 11,
+    "effort": "moderate_but_compact",
+    "accessibility_note": "Mostly flat historic-centre walking. Surfaces, queues, interior accessibility and heat/rain conditions must be rechecked shortly before the visit."
+  },
+  "route": [
+    {
+      "id": "seville-cgf-01",
+      "name": "Pasaje de Vila → Plaza de Santa Cruz",
+      "address": "Plaza de Santa Cruz, 41004 Sevilla, Spain",
+      "coordinates": {"lat": 37.385214, "lon": -5.988442, "source": "Wikidata Q6080089; departure anchored at Pje. de Vila 11"},
+      "launch": "Depuis Pje. de Vila 11, avancez dans Santa Cruz jusqu'à la Plaza de Santa Cruz en observant la largeur des rues, les ombres, les patios et les changements de perspective.",
+      "editorial_reason": "Commencer dans le tissu urbain plutôt que devant un monument permet d'installer la méthode du guide : comprendre Séville par ce qui est visible, puis seulement entrer dans ses grands symboles. Santa Cruz apporte les couches médiévales, la judería et la ville vécue.",
+      "evidence_refs": ["E1", "E2"]
+    },
+    {
+      "id": "seville-cgf-02",
+      "name": "Real Alcázar de Sevilla",
+      "address": "Patio de Banderas, s/n, 41004 Sevilla, Spain",
+      "coordinates": {"lat": 37.38325, "lon": -5.99025, "source": "UNESCO/official Alcázar identity corroborated by Wikidata/OSM"},
+      "incoming_leg": {"distance_km": 0.34, "walk_minutes": 5, "status": "INDICATIVE_NOT_ROUTED"},
+      "launch": "Entrée Puerta del León. Le mini-parcours intérieur suit les transformations du palais, de l'héritage islamique au pouvoir chrétien qui choisit aussi d'en reprendre les formes.",
+      "editorial_reason": "C'est l'intérieur le plus rentable intellectuellement pour l'intention exprimée : il matérialise plusieurs siècles de pouvoir, de transferts culturels et de réinterprétations architecturales dans un même ensemble.",
+      "evidence_refs": ["E3", "E4"]
+    },
+    {
+      "id": "seville-cgf-03",
+      "name": "Plaza del Triunfo et Archivo General de Indias",
+      "address": "Avenida de la Constitución, s/n, 41004 Sevilla, Spain",
+      "coordinates": {"lat": 37.38464, "lon": -5.99326, "source": "Ministerio de Cultura Censo-Guía ES.41091.AGI"},
+      "incoming_leg": {"distance_km": 0.38, "walk_minutes": 5, "status": "INDICATIVE_NOT_ROUTED"},
+      "launch": "Sur la Plaza del Triunfo, placez ensemble dans votre champ de vision l'Alcázar, la Cathédrale et la Lonja devenue Archivo de Indias, puis entrez brièvement dans l'Archivo si l'affluence le permet.",
+      "editorial_reason": "Cette articulation rend visible le passage d'une capitale de pouvoir ibérique à une ville branchée sur l'empire américain. L'Archivo est gratuit et sans réservation individuelle, donc il offre une forte valeur narrative avec un faible coût de temps et d'argent.",
+      "evidence_refs": ["E4", "E5", "E6"]
+    },
+    {
+      "id": "seville-cgf-04",
+      "name": "Catedral de Sevilla et Giralda — lecture extérieure",
+      "address": "Avenida de la Constitución, s/n, 41001 Sevilla, Spain",
+      "coordinates": {"lat": 37.38581, "lon": -5.99293, "source": "Wikidata Q231606 / UNESCO property coordinates"},
+      "incoming_leg": {"distance_km": 0.17, "walk_minutes": 2, "status": "INDICATIVE_NOT_ROUTED"},
+      "launch": "Placez-vous de façon à lire ensemble la masse gothique de la cathédrale et la Giralda, ancien minaret devenu clocher.",
+      "editorial_reason": "La transformation minaret-clocher condense le principe de superposition culturelle de Séville. L'intérieur complet, estimé à environ 75 minutes, est volontairement rejeté de cette session pour préserver le fleuve, le port et Triana ; il devient une continuation naturelle pour une autre session.",
+      "evidence_refs": ["E4", "E7", "E8"]
+    },
+    {
+      "id": "seville-cgf-05",
+      "name": "Pause déjeuner — Casa Morales",
+      "address": "Calle García de Vinuesa, 11, 41001 Sevilla, Spain",
+      "coordinates": {"lat": 37.386499, "lon": -5.994619, "source": "Casa Morales official address; coordinate corroboration from local listing"},
+      "incoming_leg": {"distance_km": 0.21, "walk_minutes": 3, "status": "INDICATIVE_NOT_ROUTED"},
+      "launch": "Entrez dans l'une des deux salles et regardez les grandes tinajas : la pause fait partie du récit, sans devenir une visite guidée du restaurant.",
+      "editorial_reason": "Fondée en 1850, cette taberna traditionnelle est sur l'axe naturel de la visite, ouvre le vendredi et le samedi à midi, sert une cuisine sévillane/andalouse et donne une pause de caractère sans détour ni inflation de budget.",
+      "evidence_refs": ["E9", "E10"]
+    },
+    {
+      "id": "seville-cgf-06",
+      "name": "El Arenal et Torre del Oro",
+      "address": "Paseo de Cristóbal Colón, s/n, 41001 Sevilla, Spain",
+      "coordinates": {"lat": 37.38246, "lon": -5.99633, "source": "Digital Guide to the Cultural Heritage of Andalusia / Wikidata Q943873"},
+      "incoming_leg": {"distance_km": 0.59, "walk_minutes": 8, "status": "INDICATIVE_NOT_ROUTED"},
+      "launch": "Rejoignez le fleuve par l'Arenal, en passant si possible par le Postigo del Aceite et l'ancienne zone portuaire, puis arrêtez-vous face à la Torre del Oro.",
+      "editorial_reason": "Le fleuve est indispensable pour comprendre l'écosystème historique de Séville : défense almohade, port, voyages, commerce et ouverture au monde. Le trajet lui-même devient une séquence commentée.",
+      "evidence_refs": ["E11", "E12"]
+    },
+    {
+      "id": "seville-cgf-07",
+      "name": "Puente de Triana et entrée dans Triana",
+      "address": "Puente de Isabel II, 41010 Sevilla, Spain",
+      "coordinates": {"lat": 37.38633, "lon": -6.00237, "source": "Wikidata Q1862973 / Digital Guide to the Cultural Heritage of Andalusia"},
+      "incoming_leg": {"distance_km": 0.86, "walk_minutes": 11, "status": "INDICATIVE_NOT_ROUTED"},
+      "launch": "Remontez le Guadalquivir jusqu'au Puente de Isabel II et traversez vers Triana ; utilisez le pont comme balcon pour relire le centre historique depuis l'autre rive.",
+      "editorial_reason": "Finir à Triana apporte la dimension populaire, artisanale, maritime et flamenca qui manque à un parcours limité au triangle monumental. Cela transforme la visite en compréhension d'une ville à plusieurs rives et plusieurs identités.",
+      "evidence_refs": ["E13", "E14"]
+    }
+  ],
+  "evidence": [
+    {"id":"E1","url":"https://visitasevilla.es/en/barrio-de-santa-cruz/","proves":"Official tourism description of Santa Cruz, its medieval Jewish-quarter history, streets, plazas and preserved urban character."},
+    {"id":"E2","url":"https://www.wikidata.org/wiki/Q6080089","proves":"Coordinate identity for Plaza de Santa Cruz."},
+    {"id":"E3","url":"https://alcazarsevilla.org/prepara-la-visita/","proves":"Official Alcázar opening hours for September, current general ticket price, access and visit preparation information."},
+    {"id":"E4","url":"https://whc.unesco.org/en/list/383/maps/","proves":"UNESCO identity and coordinates for Cathedral, Alcázar and Archivo de Indias as one World Heritage ensemble."},
+    {"id":"E5","url":"https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/agi/visitas.html","proves":"Archivo de Indias cultural visit is free, normally needs no reservation for individuals, and is open Friday/Saturday 09:30-17:00."},
+    {"id":"E6","url":"https://censoarchivos.cultura.gob.es/CensoGuia/archivodetail.htm?id=10","proves":"Authoritative address and coordinates for Archivo General de Indias."},
+    {"id":"E7","url":"https://www.catedraldesevilla.es/en/cultural-visit/schedules-and-rates/","proves":"Cathedral/Giralda estimated full visit duration about 75 minutes and 2026 admission rates."},
+    {"id":"E8","url":"https://www.catedraldesevilla.es/nuevos-horarios-de-la-visita-cultural-de-la-catedral-de-sevilla-a-partir-del-1-de-septiembre/","proves":"September 2026 Monday-Friday cultural-visit access starts at 11:00 and runs through the afternoon; advance purchase recommended."},
+    {"id":"E9","url":"https://www.casamoralessevilla.es/Sobre-Casa-Morales/","proves":"Casa Morales was founded in 1850 and remains a traditional Sevillian tavern with two spaces."},
+    {"id":"E10","url":"https://www.casamoralessevilla.es/Localizacion-y-Horarios/","proves":"Official address and lunch opening hours, including Friday and Saturday noon service."},
+    {"id":"E11","url":"https://visitasevilla.es/en/barrio-de-el-arenal/","proves":"Official tourism evidence for Arenal as historic port district and its relationship with trade, defensive remains and local life."},
+    {"id":"E12","url":"https://visitasevilla.es/en/torre-del-oro/","proves":"Official tourism evidence for Torre del Oro's Almohad defensive role and the city's relationship with river travel and trade."},
+    {"id":"E13","url":"https://visitasevilla.es/en/barrio-de-triana-y-los-remedios/","proves":"Official tourism evidence for Triana's historic, artisanal, maritime, flamenco and popular identity."},
+    {"id":"E14","url":"https://www.wikidata.org/wiki/Q1862973","proves":"Heritage identity and coordinates for Puente de Isabel II / Puente de Triana."},
+    {"id":"E15","url":"https://www.aemet.es/en/eltiempo/prediccion/municipios/sevilla-id41091","proves":"AEMET official forecast horizon is currently insufficient to freeze weather for 18-19 September; near-date revalidation is required."}
+  ],
+  "candidate_comparison": {
+    "alternatives_challenged": [
+      {
+        "name": "Monumental southbound route ending Plaza de España",
+        "reason_rejected": "Strong visually but weaker for the requested ecosystem understanding: it sacrifices the river-port-Triana chain and risks duplicating monumental architecture after the Alcázar/Cathedral ensemble."
+      },
+      {
+        "name": "Two-major-interiors route: Alcázar + Cathedral/Giralda",
+        "reason_rejected": "Consumes roughly another 75 minutes plus access friction, pushing the route toward checklist tourism and crowd/queue risk while displacing Arenal and Triana."
+      },
+      {
+        "name": "Northern historic-centre route via Salvador/Setas/Macarena",
+        "reason_rejected": "Interesting for a second session but less coherent with the first-session objective because it does not close the historical arc from court/empire to river/port/popular Seville."
+      }
+    ],
+    "leader": "Santa Cruz → Alcázar → Indias/Cathedral → Arenal → Guadalquivir → Triana",
+    "verdict": "MATERIALLY_SUPERIOR_FOR_STATED_INTENT",
+    "human_gate_needed": false,
+    "reason": "The leader uniquely covers medieval urban fabric, royal power, cultural superposition, Atlantic administration, port/river dynamics and popular/artisanal Seville within one compact mostly-walking five-hour session."
+  },
+  "route_verification": {
+    "result": "PASS_WITH_EXPLICIT_PRECISION_LIMIT",
+    "method": "Stop identities, schedules and key access conditions checked against official institution/tourism sources; coordinates corroborated with authoritative or structured geographic sources. Distance/time values are explicit decision-support estimates, not turn-by-turn routing-provider measurements.",
+    "corroborating_url": "https://visitasevilla.es/en/a-monumental-river/",
+    "exact_distance": "not_asserted",
+    "exact_walk_time": "not_asserted",
+    "reason_for_limit": "No frozen routing-provider measurement is used; street-level route should be rechecked shortly before travel for works, closures and weather.",
+    "gate_safe": true
+  },
+  "downstream": {
+    "scripts": "BLOCKED_PENDING_HUMAN_ROUTE_GATE",
+    "production_plan": "BLOCKED_PENDING_HUMAN_ROUTE_GATE",
+    "sound_direction": "BLOCKED_PENDING_HUMAN_ROUTE_GATE",
+    "audio_engine_render": "BLOCKED_PENDING_HUMAN_ROUTE_GATE",
+    "site_publication": "BLOCKED_PENDING_HUMAN_ROUTE_GATE"
+  },
+  "human_gate": {
+    "decision": "ACCEPT_ROUTE | ADJUST_ROUTE | REJECT_ROUTE",
+    "review_surface": "reviews/route.html?slug=seville-discovery",
+    "question": "A3 autonomous decision: candidate comparison found one materially superior route, so no additional human route choice is requested unless review later reveals a material defect."
+  }
+}
