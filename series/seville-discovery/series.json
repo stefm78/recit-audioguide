@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "slug": "seville-discovery",
+  "type": "visit",
+  "title": "Séville — des ruelles au fleuve, comprendre une ville-monde",
+  "subtitle": "De Santa Cruz à Triana, sept étapes pour lire les couches de pouvoir, de cultures, de commerce et de vie populaire qui ont façonné Séville.",
+  "note": "Parcours retenu sous autonomie A3 après comparaison de trois alternatives. Les temps et distances restent indicatifs sans routage gelé. Horaires, travaux et météo des 18–19 septembre 2026 doivent être revalidés à J-2/J-1.",
+  "visit": {
+    "start": "Pje. de Vila, 11, Casco Antiguo, 41004 Sevilla, Espagne",
+    "start_label": "7 étapes · environ 5 h · pause déjeuner comprise",
+    "navigation": "geographic",
+    "transport_mode": "walking",
+    "routing_provider": "external_link_only",
+    "overview_maps_url": "https://www.google.com/maps/dir/?api=1&origin=Pje.%20de%20Vila%2C%2011%2C%20Sevilla&destination=Puente%20de%20Isabel%20II%2C%20Sevilla&waypoints=Real%20Alc%C3%A1zar%20de%20Sevilla%7CArchivo%20General%20de%20Indias%7CCatedral%20de%20Sevilla%7CCasa%20Morales%2C%20Sevilla%7CTorre%20del%20Oro%2C%20Sevilla&travelmode=walking"
+  },
+  "episodes": [
+    {
+      "id": "seville-discovery-ep01",
+      "title": "Avant les monuments : apprendre à lire Séville",
+      "stop": "Pasaje de Vila → Plaza de Santa Cruz",
+      "location": "Plaza de Santa Cruz, 41004 Sevilla, Espagne",
+      "launch": "Depuis Pje. de Vila 11, avancez dans Santa Cruz sans chercher la ligne la plus droite : observez l'ombre, les détours, les murs blancs, les patios et les changements de perspective.",
+      "look": "Regardez surtout la forme de la rue et la manière dont la ville ménage ombre, intimité et petites places avant même de regarder les monuments.",
+      "summary": "Le parcours commence dans l'ancien quartier juif médiéval : non pour enfermer Santa Cruz dans une seule identité, mais pour apprendre à lire les couches de la ville avant d'entrer dans les grands lieux de pouvoir.",
+      "extras": [
+        {"title":"Gourmandise — Pourquoi les détours comptent","summary":"Une courte lecture urbaine sur les ruelles, les patios et la façon dont un tissu ancien fabrique une expérience différente de celle d'une avenue monumentale."}
+      ],
+      "maps_url": "https://www.google.com/maps/dir/?api=1&destination=Real%20Alc%C3%A1zar%20de%20Sevilla&travelmode=walking",
+      "next_step": {"label":"Real Alcázar de Sevilla","distance_km":0.34,"walk_minutes":5,"precision":"indicative"}
+    },
+    {
+      "id": "seville-discovery-ep02",
+      "title": "Un palais où les pouvoirs se réécrivent",
+      "stop": "Real Alcázar de Sevilla",
+      "location": "Patio de Banderas, s/n, 41004 Sevilla, Espagne",
+      "launch": "Entrez par la Puerta del León. Le fil conducteur n'est pas de tout voir : cherchez comment chaque pouvoir réutilise, transforme ou réinvente ce qu'il a reçu.",
+      "look": "Passez des enceintes et patios aux espaces du palais de Pierre Ier, puis aux jardins : observez ce qui paraît islamique, chrétien, mudéjar ou plus tardif sans supposer que les catégories sont étanches.",
+      "summary": "L'Alcázar concentre plus d'un millénaire de pouvoir et de transformations. Le mini-parcours intérieur suit la continuité du lieu, la réappropriation de formes andalouses par la monarchie chrétienne et le rôle de l'eau et des jardins.",
+      "extras": [
+        {"title":"Gourmandise — Mudéjar : éviter le faux raccourci","summary":"Pourquoi le mudéjar ne se résume ni à « musulman » ni à « chrétien », mais révèle des circulations de techniques, de commanditaires et de langages visuels."},
+        {"title":"Gourmandise — Gouverner par l'eau et le jardin","summary":"Observer comment eau, fraîcheur, parcours et végétation participent à la représentation du pouvoir autant qu'au confort."}
+      ],
+      "maps_url": "https://www.google.com/maps/dir/?api=1&destination=Archivo%20General%20de%20Indias%2C%20Sevilla&travelmode=walking",
+      "next_step": {"label":"Plaza del Triunfo et Archivo General de Indias","distance_km":0.38,"walk_minutes":5,"precision":"indicative"}
+    },
+    {
+      "id": "seville-discovery-ep03",
+      "title": "Quand Séville administre un monde lointain",
+      "stop": "Plaza del Triunfo et Archivo General de Indias",
+      "location": "Avenida de la Constitución, s/n, 41004 Sevilla, Espagne",
+      "launch": "Sur la Plaza del Triunfo, regardez successivement l'Alcázar, la Cathédrale et l'ancienne Lonja devenue Archivo de Indias. Entrez brièvement dans l'Archivo si l'accès est fluide.",
+      "look": "Cherchez le contraste entre les trois pouvoirs réunis autour de la même place : monarchie, religion et administration du commerce et des territoires d'outre-mer.",
+      "summary": "Créé en 1785 dans l'ancienne Casa Lonja, l'Archivo réunit les archives des institutions qui administraient les territoires espagnols d'outre-mer. Cette étape fait basculer le récit de Séville vers l'Atlantique.",
+      "extras": [
+        {"title":"Gourmandise — Que conserve réellement l'Archivo ?","summary":"Des dizaines de millions de pages permettent d'étudier trois siècles d'administration, de commerce, de navigation, de sociétés et de conflits dans les Amériques et au-delà."}
+      ],
+      "maps_url": "https://www.google.com/maps/dir/?api=1&destination=Catedral%20de%20Sevilla&travelmode=walking",
+      "next_step": {"label":"Catedral de Sevilla et Giralda","distance_km":0.17,"walk_minutes":2,"precision":"indicative"}
+    },
+    {
+      "id": "seville-discovery-ep04",
+      "title": "La Giralda : transformer sans effacer",
+      "stop": "Catedral de Sevilla et Giralda — lecture extérieure",
+      "location": "Avenida de la Constitución, s/n, 41001 Sevilla, Espagne",
+      "launch": "Restez à l'extérieur et cherchez d'abord la Giralda avant de regarder la masse gothique de la cathédrale.",
+      "look": "Distinguez le corps almohade du minaret et son couronnement Renaissance : une même tour raconte plusieurs régimes de la ville.",
+      "summary": "Ancien minaret de la grande mosquée almohade, la Giralda devient clocher après 1248 ; la cathédrale gothique remplace ensuite l'essentiel de la mosquée. La superposition est ici visible à l'échelle monumentale.",
+      "extras": [
+        {"title":"Gourmandise — Pourquoi l'intérieur attendra","summary":"La visite complète Cathédrale + Giralda demande environ 75 minutes. Elle est proposée comme continuation d'une autre session afin de préserver aujourd'hui le fil du fleuve, du port et de Triana."},
+        {"title":"Gourmandise — Monter sans escalier classique","summary":"La Giralda possède des rampes intérieures : un dispositif lié à son architecture de minaret et à son exceptionnelle dimension."}
+      ],
+      "maps_url": "https://www.google.com/maps/dir/?api=1&destination=Casa%20Morales%2C%20Sevilla&travelmode=walking",
+      "next_step": {"label":"Pause déjeuner — Casa Morales","distance_km":0.21,"walk_minutes":3,"precision":"indicative"}
+    },
+    {
+      "id": "seville-discovery-ep05",
+      "title": "Une pause qui appartient encore à la ville",
+      "stop": "Pause déjeuner — Casa Morales",
+      "location": "Calle García de Vinuesa, 11, 41001 Sevilla, Espagne",
+      "launch": "Avant de commander, regardez simplement le lieu et ses grandes tinajas. Ici, la pause n'interrompt pas la visite : elle change son rythme.",
+      "look": "Observez les deux espaces de cette ancienne maison de vins et la continuité entre commerce, sociabilité et cuisine locale.",
+      "summary": "Casa Morales est une taberna fondée en 1850. Elle a été retenue pour son caractère, son emplacement naturel sur le parcours et sa capacité à faire découvrir une forme de sociabilité sévillane sans transformer le déjeuner en destination de prestige.",
+      "extras": [],
+      "maps_url": "https://www.google.com/maps/dir/?api=1&destination=Torre%20del%20Oro%2C%20Sevilla&travelmode=walking",
+      "next_step": {"label":"El Arenal et Torre del Oro","distance_km":0.59,"walk_minutes":8,"precision":"indicative"}
+    },
+    {
+      "id": "seville-discovery-ep06",
+      "title": "Le fleuve qui a changé l'échelle de Séville",
+      "stop": "El Arenal et Torre del Oro",
+      "location": "Paseo de Cristóbal Colón, s/n, 41001 Sevilla, Espagne",
+      "launch": "Rejoignez le Guadalquivir par l'Arenal. Si le chemin le permet, faites du Postigo del Aceite et des traces de fortification des indices avant d'arriver à la Torre del Oro.",
+      "look": "Face à la tour, regardez moins sa couleur que sa position : elle contrôle un accès fluvial. Puis élargissez le regard au quai et au fleuve.",
+      "summary": "L'Arenal fut un espace portuaire majeur. La Torre del Oro, construite au XIIIe siècle dans le système défensif almohade, permet de relier défense, navigation, commerce et ouverture transatlantique.",
+      "extras": [
+        {"title":"Gourmandise — Le port n'est pas seulement un quai","summary":"Lire l'Arenal comme un système : murs, portes, métiers, entrepôts, embarquements, contrôles et circulation de marchandises et de personnes."},
+        {"title":"Gourmandise — Une ville ouverte, donc transformée","summary":"Les échanges avec les Amériques n'apportent pas seulement des richesses : ils reconfigurent institutions, goûts, alimentation, populations et imaginaire de la ville."}
+      ],
+      "maps_url": "https://www.google.com/maps/dir/?api=1&destination=Puente%20de%20Isabel%20II%2C%20Sevilla&travelmode=walking",
+      "next_step": {"label":"Puente de Triana et Triana","distance_km":0.86,"walk_minutes":11,"precision":"indicative"}
+    },
+    {
+      "id": "seville-discovery-ep07",
+      "title": "Changer de rive pour comprendre une autre Séville",
+      "stop": "Puente de Triana et entrée dans Triana",
+      "location": "Puente de Isabel II, 41010 Sevilla, Espagne",
+      "launch": "Traversez le Puente de Isabel II et retournez-vous à mi-pont vers le centre historique : la dernière étape commence par ce changement de point de vue.",
+      "look": "Depuis l'autre rive, reliez mentalement Giralda, Torre del Oro, quais et quartier de Triana. La ville monumentale devient un paysage parmi d'autres.",
+      "summary": "Triana s'est développée comme un faubourg de l'autre côté du Guadalquivir. Potiers, marins et artistes ont contribué à une identité populaire forte ; finir ici évite de confondre Séville avec son seul centre monumental.",
+      "extras": [
+        {"title":"Gourmandise — Pourquoi tant de céramique ici ?","summary":"Le quartier conserve une tradition céramique ancienne, nourrie par les matériaux du Guadalquivir et par des techniques développées et transformées depuis la période islamique."},
+        {"title":"Gourmandise — Une identité de l'autre rive","summary":"Triana nourrit des signes majeurs de l'identité sévillane, notamment la céramique et le flamenco, tout en conservant le sentiment d'être un quartier à part entière."}
+      ],
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Puente%20de%20Isabel%20II%2C%20Sevilla"
+    }
+  ]
+}
