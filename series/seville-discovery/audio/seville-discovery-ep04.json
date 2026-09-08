@@ -1,0 +1,25 @@
+{
+  "schema_version":3,
+  "id":"seville-discovery-ep04",
+  "title":"Giralda et Cathédrale : transformer sans tout effacer",
+  "language":"fr-FR",
+  "profile":"speech",
+  "production_version":3,
+  "series":"Séville — deux jours pour comprendre la ville",
+  "episode":4,
+  "stop":"Cathédrale de Séville + Giralda",
+  "lead_in_ms":350,
+  "sources":[
+    "https://www.catedraldesevilla.es/visita-cultural/horarios-y-tarifas/",
+    "https://www.catedraldesevilla.es/en/the-cathedral/building/the-giralda/",
+    "https://www.catedraldesevilla.es/en/the-cathedral/its-history/"
+  ],
+  "segments":[
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Avant d'entrer, regardez d'abord la Giralda. Son corps inférieur vient du minaret de la grande mosquée almohade ; sa fonction et sa silhouette ont ensuite été transformées dans la ville chrétienne. En un seul monument, vous avez déjà plusieurs Séville superposées."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La visite commence normalement par la tour. Les rampes intérieures donnent une expérience très différente d'un escalier de clocher classique. Pendant la montée, ne pensez pas seulement à la hauteur. Imaginez la tour comme un point d'appel dans la ville almohade, puis comme le grand repère chrétien qui continue de structurer l'horizon."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Une fois redescendus, cherchez le Patio de los Naranjos. C'est l'un des indices les plus immédiats de la mosquée antérieure. La cathédrale gothique qui s'élève ensuite à une échelle gigantesque ne raconte donc pas une naissance sur terrain vierge : elle raconte une substitution, une appropriation et une ambition nouvelle installées sur un site déjà sacré et monumental."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La taille de la nef doit être ressentie physiquement. Elle exprime une puissance religieuse, mais aussi celle d'une ville dont les ressources et les ambitions augmentent. Séville va bientôt se trouver au cœur des relations avec les Amériques. Le tombeau de Christophe Colomb fonctionne aujourd'hui comme un rappel spectaculaire de cette ouverture atlantique que nous poursuivrons demain à l'Archivo de Indias."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Gardez deux idées. Premièrement : la ville chrétienne conserve certains éléments de la ville islamique parce qu'ils sont utiles, prestigieux ou devenus indissociables du lieu. Deuxièmement : transformer un monument est aussi une manière d'affirmer qui détient désormais le pouvoir."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":800,"text":"À la sortie, regardez ensemble la Giralda, la cathédrale et la direction de l'Alcázar. Après déjeuner et une vraie pause au logement, nous reviendrons précisément sur la question que cette superposition pose : pourquoi un roi chrétien fait-il construire un palais dans un langage esthétique si profondément lié à Al-Andalus ?"}
+  ]
+}

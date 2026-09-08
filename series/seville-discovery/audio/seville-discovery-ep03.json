@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "id": "seville-discovery-ep03",
+  "title": "Quand Séville administre un monde lointain",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Séville — des ruelles au fleuve, comprendre une ville-monde",
+  "episode": 3,
+  "stop": "Plaza del Triunfo et Archivo General de Indias",
+  "location": "Avenida de la Constitución, s/n, 41004 Sevilla, Espagne",
+  "launch": "Sur la Plaza del Triunfo, regardez Alcázar, Cathédrale et Archivo comme trois expressions de pouvoir réunies dans quelques dizaines de mètres.",
+  "look": "Dans l'Archivo, si l'accès est fluide, observez surtout le bâtiment et la logique d'accumulation documentaire plutôt que de chercher un objet vedette.",
+  "summary": "Le passage du pouvoir royal à l'administration de l'empire espagnol d'outre-mer, depuis l'ancienne Casa Lonja devenue Archivo de Indias.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/agi/presentacion/historia.html",
+    "https://whc.unesco.org/en/list/383/"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Arrêtez-vous sur la Plaza del Triunfo. En quelques dizaines de mètres, vous avez l'Alcázar, la Cathédrale et la Casa Lonja devenue Archivo General de Indias. C'est presque une maquette de la puissance sévillane : le roi, l'Église et l'administration d'un monde qui s'est soudain agrandi jusqu'aux Amériques et au Pacifique."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"L'Archivo est créé en 1785 par Charles III pour rassembler à Séville des documents jusque-là dispersés dans plusieurs villes. Le bâtiment, lui, est plus ancien : c'est l'ancienne Casa Lonja de Mercaderes, construite à l'époque de Philippe II. Le lieu du commerce devient donc le lieu de la mémoire administrative du commerce et de l'empire."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Aujourd'hui, l'Archivo conserve plus de quarante-trois mille liasses, environ huit kilomètres linéaires de rayonnages et des dizaines de millions de pages. Derrière ces chiffres se trouvent des décisions, des voyages, des échanges, des conflits, des vies et des dominations. C'est une manière très concrète de comprendre qu'un empire n'est pas seulement une carte : c'est aussi une gigantesque machine à écrire, enregistrer, autoriser, taxer et contrôler."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Si l'entrée est fluide, entrez quelques minutes. La visite individuelle est gratuite et ne demande normalement pas de réservation. Ne cherchez pas forcément le document le plus spectaculaire. Regardez plutôt l'échelle du bâtiment et imaginez la masse d'informations qu'une monarchie devait produire pour administrer des territoires séparés par des océans."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"En ressortant, tournez-vous vers la Giralda. Nous allons maintenant revenir à une transformation beaucoup plus ancienne : celle d'un minaret almohade devenu le symbole d'une cathédrale chrétienne. Même ville, autre changement d'échelle, autre réécriture."}
+  ]
+}

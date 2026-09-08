@@ -1,0 +1,14 @@
+{
+  "schema":"recit.city-guide-factory.route-acceptance.v1",
+  "status":"ACCEPTED",
+  "slug":"seville-discovery",
+  "decision":"ACCEPT_ROUTE",
+  "decision_source":"human_explicit_two_day_trajectory_approval",
+  "accepted_plan_path":"series/seville-discovery/final-plan.json",
+  "route_order":["seville-discovery-ep05","seville-discovery-ep01","seville-discovery-ep04","seville-discovery-ep02","seville-discovery-ep03","seville-discovery-ep06","seville-discovery-ep07"],
+  "day1":["Plaza de España","Santa Cruz","Cathédrale + Giralda","Real Alcázar"],
+  "day2":["Archivo General de Indias","Arenal + Torre del Oro + Guadalquivir","Triana"],
+  "hub":"Pje. de Vila, 11, Casco Antiguo, 41004 Sevilla, Espagne",
+  "authority_note":"The user explicitly approved the two-day trajectory and asked for autonomous final construction, audio generation and GitHub Pages publication.",
+  "reversibility":"The published module can still be revised; ticket inventory, weather, works and street access remain volatile operational inputs."
+}

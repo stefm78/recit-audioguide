@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "id": "seville-discovery-ep06",
+  "title": "Le fleuve qui a changé l'échelle de Séville",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Séville — des ruelles au fleuve, comprendre une ville-monde",
+  "episode": 6,
+  "stop": "El Arenal et Torre del Oro",
+  "location": "Paseo de Cristóbal Colón, s/n, 41001 Sevilla, Espagne",
+  "launch": "Rejoignez le fleuve par l'Arenal et utilisez le trajet comme une séquence : cherchez les traces de portes, de murs et d'activités liées au port avant la Torre del Oro.",
+  "look": "Face à la tour, regardez surtout sa position par rapport au fleuve, puis élargissez le regard aux quais et à l'autre rive.",
+  "summary": "L'ancien espace portuaire et la Torre del Oro relient la Séville almohade à la ville des voyages, du commerce et des transformations atlantiques.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://visitasevilla.es/en/barrio-de-el-arenal/",
+    "https://visitasevilla.es/en/torre-del-oro/",
+    "https://visitasevilla.es/en/a-monumental-river/",
+    "https://editorial.us.es/es/detalle-libro/720370/trata-atlantica-y-esclavitud-en-sevilla-ca-1500-1650"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"En quittant Casa Morales, ne considérez pas les quelques minutes de marche comme un simple transfert. Nous entrons dans l'Arenal. Au Moyen Âge, cet espace au bord du Guadalquivir devient le principal port de Séville. Autour de la navigation se concentrent des métiers, des circulations, des marchandises et des dispositifs de contrôle. Le quartier garde encore des traces de son passé défensif, notamment le Postigo del Aceite et des éléments des anciennes murailles."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Arrivés devant la Torre del Oro, oubliez un instant la question de son nom. Regardez sa position. Construite au début du treizième siècle dans le système défensif almohade, elle contrôle l'accès fluvial à la ville. Elle nous rappelle qu'avant d'être une promenade agréable, le Guadalquivir est une voie stratégique : qui contrôle le fleuve contrôle une partie des échanges et de la sécurité de Séville."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Puis l'échelle change encore. Avec l'expansion espagnole outre-Atlantique, Séville devient un nœud majeur du commerce avec les Amériques. Il serait faux de réduire cela à une histoire de richesse heureuse. Les circulations impliquent aussi conquête, domination, exploitation, esclavage, migrations forcées et transformations profondes des sociétés des deux côtés de l'Atlantique. Comprendre la puissance de Séville exige de garder ensemble ces dimensions."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Regardez maintenant le fleuve plutôt que la tour. C'est lui qui relie les histoires que nous venons d'entendre : le palais proche du port, l'administration des Indes, les marchandises de l'Arenal, les départs et les arrivées. Séville ne devient pas une ville-monde malgré sa géographie ; elle le devient en grande partie grâce à elle."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Nous allons finir en changeant de rive. Remontez tranquillement vers le Puente de Isabel II. La marche fait un peu plus de dix minutes, mais elle est volontaire : gardez le Guadalquivir à portée de regard et observez le centre historique se recomposer à mesure que vous avancez vers Triana."}
+  ]
+}

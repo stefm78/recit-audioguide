@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#183d49">
   <title>Récit audioguide</title>
   <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body>
   <main id="app" class="series-shell" aria-live="polite"><p class="loading">Chargement…</p></main>
@@ -24,7 +25,9 @@
     <audio id="player-audio" preload="metadata"></audio>
   </div>
   <script>window.RECIT_SERIES_SLUG="__SERIES_SLUG__";</script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="../../assets/app.js" defer></script>
   <script src="../../assets/next-step.js" defer></script>
+  <script src="../../assets/visit-map.js" defer></script>
 </body>
 </html>
