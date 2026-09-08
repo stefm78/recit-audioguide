@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "seville-discovery-ep07",
+  "title": "Changer de rive pour comprendre une autre Séville",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 3,
+  "series": "Séville — des ruelles au fleuve, comprendre une ville-monde",
+  "episode": 7,
+  "stop": "Puente de Triana et entrée dans Triana",
+  "location": "Puente de Isabel II, 41010 Sevilla, Espagne",
+  "launch": "Traversez le Puente de Isabel II et retournez-vous à mi-pont vers le centre historique.",
+  "look": "Reliez Giralda, Torre del Oro, quais et Triana dans un même paysage : la ville monumentale devient une rive parmi d'autres.",
+  "summary": "Triana clôt la première session par une autre identité de Séville : faubourg de l'autre rive, potiers, marins, traditions populaires et flamenco.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://visitasevilla.es/en/barrio-de-triana-y-los-remedios/",
+    "https://visitasevilla.es/en/triana-el-encanto-de-lo-singular/",
+    "https://visitasevilla.es/en/ceramics/"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Arrêtez-vous au milieu du Puente de Isabel II et retournez-vous. Pendant plusieurs heures, nous avons regardé Séville de l'intérieur : ses ruelles, son palais, sa cathédrale, ses archives et son ancien port. D'ici, tout cela devient un paysage sur l'autre rive. Ce simple changement de point de vue est une bonne manière de terminer."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Triana s'est développée comme un faubourg en dehors du centre fortifié, séparé par le Guadalquivir. Le quartier a accueilli des potiers, des marins, des artisans, des toreros et de nombreux artistes du flamenco. Cette histoire nourrit une identité si forte que le discours local sur Triana insiste encore sur son caractère à part, même après sa connexion durable au reste de la ville par le pont du dix-neuvième siècle."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"La céramique est un bon exemple de ce que nous avons cherché toute la journée. Sa tradition locale plonge notamment dans la période islamique, puis les techniques sont reprises, modifiées et combinées au fil des siècles. Les azulejos que l'on associe spontanément à Séville ne sont donc pas un décor figé : ils portent eux aussi des circulations de savoir-faire et des transformations."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Même chose pour le flamenco. Triana en est l'un des territoires majeurs, mais il serait réducteur de transformer le quartier en décor folklorique. Ce qui compte ici, c'est la longue présence de communautés, de métiers, de sociabilités et d'artistes qui ont donné au quartier une voix distincte et, en retour, ont profondément influencé l'image de Séville tout entière."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Si vous deviez rentrer maintenant et expliquer Séville en une phrase, peut-être pourriez-vous dire ceci : c'est une ville qui ne cesse de transformer ce qu'elle reçoit. Des mondes islamiques et chrétiens, du pouvoir royal aux routes atlantiques, des palais aux quais, de la rive monumentale à Triana, elle accumule des couches sans jamais devenir parfaitement homogène. Et c'est une bonne nouvelle : cela signifie qu'il reste beaucoup à découvrir demain."}
+  ]
+}
