@@ -1,25 +1,21 @@
 {
-  "schema_version": 3,
-  "id": "seville-discovery-ep05",
-  "title": "Une pause qui appartient encore à la ville",
-  "language": "fr-FR",
-  "profile": "speech",
-  "production_version": 3,
-  "series": "Séville — des ruelles au fleuve, comprendre une ville-monde",
-  "episode": 5,
-  "stop": "Pause déjeuner — Casa Morales",
-  "location": "Calle García de Vinuesa, 11, 41001 Sevilla, Espagne",
-  "launch": "Avant de commander, regardez les grandes tinajas et laissez simplement le rythme de la visite ralentir.",
-  "look": "Observez les deux espaces de cette ancienne maison de vins et la continuité entre commerce, sociabilité et cuisine locale.",
-  "summary": "Une taberna fondée en 1850, choisie comme pause de caractère située naturellement entre le quartier monumental et l'Arenal.",
-  "lead_in_ms": 350,
-  "sources": [
-    "https://www.casamoralessevilla.es/Sobre-Casa-Morales/",
-    "https://www.casamoralessevilla.es/Localizacion-y-Horarios/"
-  ],
-  "segments": [
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Ici, nous faisons quelque chose d'important pour comprendre une ville : nous arrêtons de visiter pendant quelques minutes. Casa Morales est installée ici depuis 1850. Elle a commencé comme boutique et bodega vendant notamment des vins de Valdepeñas, et elle conserve de grandes jarres qui donnent immédiatement au lieu sa personnalité."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Cette pause a été choisie parce qu'elle ne demande presque aucun détour. Elle appartient au trajet. Elle permet aussi de passer du patrimoine monumental à une autre forme de continuité : celle des commerces, des habitudes de quartier, des tapas et de la sociabilité quotidienne. Il ne s'agit pas de prétendre qu'un déjeuner résume la gastronomie sévillane, simplement de laisser la ville se découvrir aussi par ce que l'on mange et par la manière dont on partage le lieu."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Profitez donc de la pause sans écoute supplémentaire. Quand vous repartirez, nous changerons encore de Séville. Nous quitterons les palais, les archives et la cathédrale pour rejoindre l'ancien espace portuaire de l'Arenal et le Guadalquivir. C'est là que la ville prendra véritablement une dimension mondiale."}
+  "schema_version":3,
+  "id":"seville-discovery-ep05",
+  "title":"1929 : commencer par la ville qui se met en scène",
+  "language":"fr-FR",
+  "profile":"speech",
+  "production_version":3,
+  "series":"Séville — deux jours pour comprendre la ville",
+  "episode":5,
+  "stop":"Plaza de España",
+  "location":"Plaza de España, Sevilla",
+  "lead_in_ms":350,
+  "sources":["https://visitasevilla.es/plaza-de-espana-2/","https://tic.visitasevilla.es/vsev/web_php/imatges/guias/471266d03c433b25e311873506.pdf"],
+  "segments":[
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Nous commençons Séville par un détour dans le temps. Devant vous, la Plaza de España n'est pas médiévale : elle appartient au grand projet de l'Exposition ibéro-américaine de 1929. C'est précisément pour cela qu'elle constitue une excellente première étape. Avant de regarder comment Séville s'est formée, regardons comment l'Espagne du vingtième siècle a choisi de mettre son histoire en scène."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Placez-vous de façon à embrasser le demi-cercle. L'architecture régionaliste assemble briques, céramiques, arcades, tours et références historiques dans une composition volontairement spectaculaire. Les bancs consacrés aux provinces fabriquent une Espagne lisible comme une galerie. Ici, l'histoire devient décor, pédagogie et représentation politique en même temps."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Le thème américain n'est pas anecdotique. L'exposition de 1929 voulait renouer symboliquement avec l'espace ibéro-américain. Cette place nous donne donc, dès le départ, une question à garder pendant deux jours : qui raconte Séville, et avec quels morceaux de son passé ? Nous allons bientôt retrouver l'Amérique, mais cette fois dans les lieux où les décisions, les départs, les richesses et les violences de l'empire se sont réellement organisés."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Avant de partir, regardez les matériaux plutôt que l'ensemble. La céramique, les couleurs et les motifs que vous voyez ici ne viennent pas de nulle part. Demain, à Triana, nous retrouverons une tradition de production céramique profondément liée à la ville. Le parcours est déjà en train de se refermer sur lui-même."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":800,"text":"Repartez maintenant par l'avenue de Isabel la Católica, puis gagnez les Jardines de Murillo. Nous allons quitter une place faite pour être vue de loin et entrer dans une ville qui se comprend au contraire à quelques mètres, par ses ombres, ses angles et ses détours."}
   ]
 }
