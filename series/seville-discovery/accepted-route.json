@@ -3,12 +3,14 @@
   "status":"ACCEPTED",
   "slug":"seville-discovery",
   "decision":"ACCEPT_ROUTE",
-  "decision_source":"human_explicit_two_day_trajectory_approval",
+  "decision_source":"human_explicit_three_day_logistics_mission",
   "accepted_plan_path":"series/seville-discovery/final-plan.json",
-  "route_order":["seville-discovery-ep05","seville-discovery-ep01","seville-discovery-ep04","seville-discovery-ep02","seville-discovery-ep03","seville-discovery-ep06","seville-discovery-ep07"],
-  "day1":["Plaza de España","Santa Cruz","Cathédrale + Giralda","Real Alcázar"],
-  "day2":["Archivo General de Indias","Arenal + Torre del Oro + Guadalquivir","Triana"],
-  "hub":"Pje. de Vila, 11, Casco Antiguo, 41004 Sevilla, Espagne",
-  "authority_note":"The user explicitly approved the two-day trajectory and asked for autonomous final construction, audio generation and GitHub Pages publication.",
-  "reversibility":"The published module can still be revised; ticket inventory, weather, works and street access remain volatile operational inputs."
+  "route_order":["seville-discovery-ep06","seville-discovery-ep07","seville-discovery-ep04","seville-discovery-ep02","seville-discovery-ep00","seville-discovery-ep05","seville-discovery-ep01","seville-discovery-ep03","seville-discovery-g02","seville-discovery-g13"],
+  "day1":["NH Plaza de Armas → Triana → Arenal → NH","transfert bagages NH → Pje. de Vila","Cathédrale + Giralda","Real Alcázar"],
+  "day2":["Pje. de Vila → Plaza de España","Santa Cruz / Callejón del Agua","Archivo General de Indias","retour Pje. de Vila"],
+  "day3":["Casa de Pilatos avant checkout","consigne bagages à partir de 11 h","Museo de Bellas Artes","récupération bagages → aéroport"],
+  "hub_day1":"NH Sevilla Plaza de Armas, C. Marqués de Paradas, 13, 41001 Sevilla",
+  "hub_day2_day3":"Pje. de Vila, 11, Casco Antiguo, 41004 Sevilla",
+  "authority_note":"The user explicitly instructed the system to replan and publish the city guide around the two hotels, the Friday luggage transfer, the Saturday closed loop, the Sunday 11:00 luggage constraint and airport arrival no later than 18:30.",
+  "reversibility":"The route can still be revised. Ticket inventory, weather, exact Sunday luggage-store address and street access remain volatile operational inputs."
 }

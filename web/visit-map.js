@@ -43,7 +43,7 @@
     section.dataset.visitMap = '1';
     section.className = 'visit-map-shell card';
     section.innerHTML = `
-      <div class="visit-map-head"><div><p class="eyebrow">Carte de la visite</p><h2>Déambulations à pied</h2></div><div class="visit-map-tools"><p>Hébergement, zones et rues servent de repères. Google Maps reste l’autorité de navigation réelle.</p><button type="button" class="secondary visit-map-toggle" aria-expanded="true">Réduire la carte</button></div></div>
+      <div class="visit-map-head"><div><p class="eyebrow">Carte de la visite</p><h2>Parcours et logistique</h2></div><div class="visit-map-tools"><p>Hébergements, zones, rues, pauses et transferts servent de repères. Google Maps reste l’autorité de navigation réelle.</p><button type="button" class="secondary visit-map-toggle" aria-expanded="true">Réduire la carte</button></div></div>
       <div class="visit-map-body">
         <div class="visit-day-tabs" role="tablist"></div>
         <div id="visit-map-canvas" class="visit-map-canvas" aria-label="Carte du parcours"></div>
@@ -76,11 +76,16 @@
     if(!collapsed && map) setTimeout(()=>map.invalidateSize(),0);
   }
 
+  function modeLabel(mode){
+    return ({walking:'À pied',taxi:'Taxi / VTC',pause:'Pause',luggage:'Bagages'})[mode] || 'Parcours';
+  }
+  function navLabel(mode){ return mode==='taxi' ? 'Ouvrir le trajet voiture' : mode==='walking' ? 'Navigation piétonne' : 'Ouvrir dans Google Maps'; }
+
   let map, layers=[];
   function showDay(day, section, activeButton){
     section.querySelectorAll('.visit-day-tabs button').forEach(b=>b.classList.toggle('active', b===activeButton));
     section.querySelector('.visit-leg-list').innerHTML = `<div class="visit-day-summary"><strong>${esc(day.theme||day.label)}</strong><span>${esc(day.summary||'')}</span></div>` +
-      (day.legs||[]).map((leg,i)=>`<article class="visit-leg"><div class="visit-leg-number">${i+1}</div><div><strong>${esc(leg.label)}</strong><small>${esc(leg.time||'')}</small><p>${esc(leg.instructions||'')}</p>${leg.audio_episode_id?`<a class="secondary" href="#${esc(leg.audio_episode_id)}">Voir l’audio associé</a> `:''}<a class="secondary" target="_blank" rel="noopener" href="${esc(leg.maps_url||'#')}">Navigation piétonne</a></div></article>`).join('');
+      (day.legs||[]).map((leg,i)=>`<article class="visit-leg"><div class="visit-leg-number">${i+1}</div><div><strong>${esc(leg.label)}</strong><small>${esc([modeLabel(leg.mode),leg.time].filter(Boolean).join(' · '))}</small><p>${esc(leg.instructions||'')}</p>${leg.audio_episode_id?`<a class="secondary" href="#${esc(leg.audio_episode_id)}">Voir l’audio associé</a> `:''}${leg.maps_url?`<a class="secondary" target="_blank" rel="noopener" href="${esc(leg.maps_url)}">${navLabel(leg.mode)}</a>`:''}</div></article>`).join('');
 
     const canvas=section.querySelector('#visit-map-canvas');
     const fallback=section.querySelector('.visit-map-fallback');
@@ -90,8 +95,14 @@
     layers.forEach(x=>map.removeLayer(x)); layers=[];
     const all=[];
     (day.legs||[]).forEach(leg=>{
-      const pts=(leg.points||[]).map(p=>[p[0],p[1]]); if(pts.length>1){const line=L.polyline(pts,{weight:5,opacity:.76}).addTo(map);layers.push(line);all.push(...pts);}
-      (leg.points||[]).forEach((p,i)=>{ if(i!==0 && i!==leg.points.length-1 && p[3]==='passage') return; const m=L.marker([p[0],p[1]]).addTo(map).bindPopup(`<strong>${esc(p[2])}</strong><br>${esc(leg.label)}`); layers.push(m); });
+      const pts=(leg.points||[]).map(p=>[p[0],p[1]]);
+      if(pts.length>1){
+        const opts={weight:5,opacity:.76};
+        if(leg.mode==='taxi') opts.dashArray='10,8';
+        if(leg.mode==='pause' || leg.mode==='luggage') opts.dashArray='4,8';
+        const line=L.polyline(pts,opts).addTo(map);layers.push(line);all.push(...pts);
+      }
+      (leg.points||[]).forEach((p,i)=>{ if(i!==0 && i!==leg.points.length-1 && p[3]==='passage') return; const m=L.marker([p[0],p[1]]).addTo(map).bindPopup(`<strong>${esc(p[2])}</strong><br>${esc(modeLabel(leg.mode))} · ${esc(leg.label)}`); layers.push(m); });
     });
     if(all.length) map.fitBounds(all,{padding:[24,24]}); setTimeout(()=>map.invalidateSize(),0);
   }
