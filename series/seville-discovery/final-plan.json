@@ -9,8 +9,12 @@
     "status":"IMPLEMENTATION_AUTHORIZED_BY_USER",
     "principles":["exploit NH Plaza de Armas location with a compact Triana/Arenal loop","preserve Cathedral 11:55 and Alcazar 17:00 unless ticket inventory disproves them","move Plaza de España/Santa Cruz/Archivo to a coherent Saturday loop","use Sunday as a low-stress cultural epilogue","show walking, taxi, luggage and pause legs distinctly on the map","reuse qualified audio IDs where possible instead of regenerating unchanged material"],
     "friday_luggage_transfer":"NH Plaza de Armas around 10:00 → taxi/VTC → Pje. de Vila 11 → deposit/reorganize before Cathedral",
-    "sunday_luggage":"Existing store at 11:00 remains primary; exact address unresolved. Verified backup: Radical Storage Barrio Santa Cruz, C/ Ximénez de Enciso 11, 24h, online reservation required.",
-    "airport":"Recover luggage about 17:00, taxi/VTC about 17:15, target airport 17:45–18:00, hard latest 18:30."
+    "sunday_luggage":{
+      "primary":{"address":"C. Agua, 7, Casco Antiguo, 41004 Sevilla, Espagne","source":"human_supplied_existing_storage","opens_at":"11:00","operator_public_identity":"TO_CONFIRM","assessment":"GEOGRAPHICALLY_STRONG_OPERATIONALLY_CONFIRM_PROVIDER"},
+      "adjacent_verified_fallback":{"name":"Storage luggage - Lockers Agua","address":"C. Agua, 5, Casco Antiguo, 41004 Sevilla, Espagne","sunday_hours":"11:00-19:00","assessment":"VERIFIED_DEDICATED_LUGGAGE_STORAGE"},
+      "pickup_note":"Calle Agua/Callejón del Agua is in the pedestrian fabric of Santa Cruz. After recovering luggage, walk to a nearby vehicle-accessible edge and request taxi/VTC there rather than assuming pickup at the locker door."
+    },
+    "airport":"Recover luggage about 17:00, walk to a vehicle-accessible pickup edge, taxi/VTC about 17:15, target airport 17:45–18:00, hard latest 18:30."
   },
-  "volatile_rechecks":["ticket inventory before purchase","exact Sunday luggage-store address","weather at J-2/J-1","works and street access at J-2/J-1","taxi/VTC pickup feasibility at exact lodging and luggage-store frontages"]
+  "volatile_rechecks":["confirm the exact operator/reservation attached to C. Agua 7 before travel","weather at J-2/J-1","works and street access at J-2/J-1","confirm taxi/VTC pickup point on the accessible edge of Santa Cruz on travel day"]
 }
