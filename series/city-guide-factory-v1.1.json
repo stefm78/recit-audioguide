@@ -1,0 +1,121 @@
+{
+  "schema": "recit.city-guide-factory.v1_1",
+  "version": "1.1",
+  "status": "CANDIDATE",
+  "purpose": "Create guide modules through an interactive creative-discovery process that understands the requester's intent, reuses what already exists when useful, and preserves room for unexpected relevant directions without forcing a fixed taxonomy.",
+  "invariants": {
+    "creative_discovery_is_part_of_every_module_creation": true,
+    "fixed_theme_catalog_not_required": true,
+    "requester_free_text_always_available": true,
+    "suggestions_are_open_ended_not_a_closed_taxonomy": true,
+    "existing_qualified_guides_must_be_considered_for_reuse_or_connection": true,
+    "accepted_route_is_immutable_without_material_defect": true,
+    "default_experience_remains_playable_without_optional_content": true,
+    "no_new_backend_required_for_the_factory_contract": true,
+    "routing_provider_remains_external_link_only_by_default": true
+  },
+  "module_creation_lifecycle": {
+    "ordered_stages": [
+      "REQUEST_CAPTURE",
+      "CREATIVE_DISCOVERY",
+      "EXISTING_MATERIAL_RESOLUTION",
+      "MODULE_PROPOSAL",
+      "HUMAN_INTENT_GATE_IF_MATERIAL",
+      "RESEARCH_AND_FACT_CHECK",
+      "ROUTE_OR_STRUCTURE_GATE_IF_APPLICABLE",
+      "EDITORIAL_AND_ARTISTIC_DESIGN",
+      "CONTENT_AND_AUDIO_PRODUCTION",
+      "TECHNICAL_QA",
+      "HUMAN_REVIEW",
+      "QUALIFIED_REUSABLE_MODULE"
+    ],
+    "rule": "CREATIVE_DISCOVERY is mandatory for a new guide module or a material reinterpretation. It is not a Bordeaux-specific gate and must happen before the system freezes a route, theme, narrative architecture or production plan.",
+    "fast_path": "If the requester has already expressed a sufficiently precise intent and the system can prove that no material ambiguity remains, CREATIVE_DISCOVERY may be brief but cannot be silently replaced by a predefined template.",
+    "reuse_path": "A request may resolve partly or entirely to existing qualified modules, episodes, extras or cross-guide threads when they materially satisfy the intent. Reuse must preserve provenance and must not masquerade as newly researched material."
+  },
+  "creation_discovery": {
+    "participants": ["requester", "creative_director_role"],
+    "input_mode": "free_form_first",
+    "goal": "Discover what kind of experience should be created before deciding what the guide is about or how it is structured.",
+    "requester_can": [
+      "describe a place, trip, duration, audience, mood, curiosity or constraint in natural language",
+      "express an imprecise desire and ask the system to help shape it",
+      "accept, ignore, combine or reformulate suggestions",
+      "change direction during discovery",
+      "ask to connect the new guide to guides or stories that already exist"
+    ],
+    "creative_director_should": [
+      "identify what is already established and what remains open",
+      "inspect relevant qualified guide material before proposing unnecessary new generation",
+      "propose a small number of context-sensitive creative possibilities when they help the requester think",
+      "include at least one unexpected but defensible direction when it materially broadens the creative space",
+      "explain important consequences such as duration, depth, production complexity or cross-guide continuity",
+      "converge only when the requester's intent is sufficiently clear for research and design to proceed"
+    ],
+    "suggestion_policy": {
+      "max_visible_suggestions_default": 3,
+      "closed_vocabulary_forbidden": true,
+      "persistent_persona_required": false,
+      "suggestions_are_optional": true,
+      "requester_free_text_always_available": true,
+      "suggestions_may_be_generated_from_context": true,
+      "suggestions_do_not_become_product_ontology": true
+    },
+    "exit_condition": "A concise creative intent exists that captures audience/context, desired experience, meaningful constraints and any desired continuity with existing guides, while explicitly preserving unresolved choices that can safely remain open."
+  },
+  "existing_material_resolution": {
+    "candidate_sources": [
+      "existing_qualified_guide_module",
+      "existing_qualified_episode",
+      "existing_optional_extra",
+      "existing_cross_guide_thread",
+      "validated_source_material",
+      "new_content_candidate"
+    ],
+    "preference": "Reuse or connect qualified material when it genuinely serves the discovered intent; create new material when reuse would distort the experience or leave a material gap.",
+    "composition": "A new module may compose material from several compatible qualified guides or narrative threads when context and provenance remain intelligible.",
+    "no_lock_in": "Past guides, prior suggestions and previous user choices are context, never a mandatory thematic profile."
+  },
+  "module_proposal": {
+    "must_describe": [
+      "creative_intent",
+      "audience_and_context",
+      "proposed_experience_shape",
+      "known_reusable_material",
+      "new_material_needed",
+      "important_open_choices",
+      "estimated_scope_and_duration",
+      "artistic_or_sound_opportunities_if_material"
+    ],
+    "must_not": [
+      "freeze arbitrary thematic axes merely because they are present in a template",
+      "invent a user persona to justify decisions",
+      "hide whether material is reused or newly generated"
+    ]
+  },
+  "runtime_experience": {
+    "interactive_discovery": "OPTIONAL_PRODUCT_CAPABILITY",
+    "rule": "A finished guide may itself offer free-form visitor exploration and contextual suggestions, but this is separate from the mandatory creation-discovery process and must be justified by the product design.",
+    "default": "A qualified guide must remain useful without runtime conversational interaction."
+  },
+  "navigation_model": {
+    "step_navigation": "Keep per-step external maps deep links when appropriate.",
+    "overview_navigation": "A visit may expose one overview_maps_url for the full accepted route.",
+    "embedded_routing": "OUT_OF_SCOPE_UNTIL_PROVEN_NECESSARY"
+  },
+  "sound_model": {
+    "default": "real_environment_first",
+    "immersive_sound": "OPTIONAL_ONLY_WHEN_ARTISTICALLY_JUSTIFIED",
+    "automatic_soundscape": false
+  },
+  "human_gate": {
+    "required_when": "Two or more materially different creative directions remain legitimate after discovery and their consequences cannot be safely treated as reversible implementation choices.",
+    "shape": "Return a small number of concrete, context-specific alternatives or prototypes. Never substitute a permanent catalog of themes for the requester's free-form intent.",
+    "not_required_for": [
+      "reversible technical implementation",
+      "schema validation",
+      "test coverage",
+      "reuse of clearly compatible qualified material"
+    ]
+  }
+}

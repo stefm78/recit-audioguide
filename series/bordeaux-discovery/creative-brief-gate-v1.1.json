@@ -1,0 +1,34 @@
+{
+  "schema": "recit.city-guide-factory.creative-discovery-gate.v1",
+  "series": "bordeaux-discovery",
+  "status": "ADJUST_ACCEPTED",
+  "system_contract": "series/city-guide-factory-v1.1.json",
+  "role": "VERTICAL_PROOF_FIXTURE_ONLY",
+  "baseline": {
+    "version": "V1",
+    "human_review": "PASS",
+    "preserve": true,
+    "route_change_allowed": false
+  },
+  "human_direction": "Do not encode this behavior as a Bordeaux-specific feature. Free-form creative discovery, contextual suggestions, reuse of existing qualified guides and freedom to reshape the intent belong to the generic creation lifecycle of every guide module.",
+  "proof_scope": {
+    "purpose": "Use Bordeaux only to demonstrate that the generic module-creation contract works on a real qualified guide baseline.",
+    "must_prove": [
+      "creation begins from requester free-form intent rather than a fixed theme catalog",
+      "the creative-director role can suggest a few contextual possibilities without turning them into permanent axes",
+      "existing qualified Bordeaux or cross-guide material is considered before unnecessary new generation",
+      "the requester can combine, reject or reformulate suggestions",
+      "the process converges to a concise module proposal before research or production",
+      "runtime conversational interaction is not required for the finished guide"
+    ],
+    "must_not_prove_by": [
+      "adding Bordeaux-specific workflow logic",
+      "hard-coding a Bordeaux theme taxonomy",
+      "requiring a persistent visitor persona",
+      "changing the accepted Bordeaux V1 route",
+      "regenerating Bordeaux audio merely to exercise the creation contract"
+    ]
+  },
+  "next_gate": "PROVE_GENERIC_MODULE_CREATION_DISCOVERY_USING_BORDEAUX_FIXTURE",
+  "decision_values": ["PROCEED", "ADJUST"]
+}

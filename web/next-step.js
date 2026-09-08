@@ -10,6 +10,22 @@
 
     function enhance() {
       let pending = false;
+
+      if (series.type === 'visit' && series.visit?.overview_maps_url) {
+        const strip = document.querySelector('.visit-strip');
+        if (!strip) pending = true;
+        else if (!strip.querySelector('[data-route-overview]')) {
+          const overview = document.createElement('a');
+          overview.dataset.routeOverview = '1';
+          overview.className = 'secondary';
+          overview.target = '_blank';
+          overview.rel = 'noopener';
+          overview.href = series.visit.overview_maps_url;
+          overview.textContent = 'Voir le parcours complet';
+          strip.appendChild(overview);
+        }
+      }
+
       episodes.forEach((episode, index) => {
         if (!episode.next_step || index >= episodes.length - 1) return;
         const card = document.getElementById(episode.id);
