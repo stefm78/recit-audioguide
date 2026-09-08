@@ -14,6 +14,12 @@
       "goal": "Laisser Bordeaux réel — rue, fleuve, place et monument — constituer l'ambiance. Pour ce premier vertical City Guide, la narration doit rester autonome, claire et reproductible sans sound design ajouté.",
       "avoid": ["fake city ambience","decorative historical effects","continuous music","sound that competes with orientation while walking"]
     },
+    "seville-discovery": {
+      "mode": "visit",
+      "default_density": "none",
+      "goal": "Laisser Séville réelle — ruelles, patios, monument, taberna, quais, fleuve et Triana — fournir l'ambiance. La narration doit soutenir l'observation sans fabriquer une ville sonore artificielle.",
+      "avoid": ["fake street ambience","decorative flamenco cues","pseudo-historical effects","continuous music","sound that masks orientation or the real place"]
+    },
     "jeanne-vers-le-roi": {
       "mode": "story",
       "default_density": "scene-rich",
