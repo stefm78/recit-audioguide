@@ -46,6 +46,27 @@ def test_visit_has_two_hubs_three_days_and_mixed_logistics():
     assert any("18 h 30" in leg["instructions"] for leg in route_map["days"][2]["legs"])
 
 
+def test_sunday_luggage_storage_is_resolved_without_inventing_operator_identity():
+    series = load("series.json")
+    plan = load("final-plan.json")
+    route_map = load("assets/route-map.json")
+    primary = plan["three_day_enrichment"]["sunday_luggage"]["primary"]
+    fallback = plan["three_day_enrichment"]["sunday_luggage"]["adjacent_verified_fallback"]
+    assert primary["address"].startswith("C. Agua, 7")
+    assert primary["source"] == "human_supplied_existing_storage"
+    assert primary["operator_public_identity"] == "TO_CONFIRM"
+    assert fallback["address"].startswith("C. Agua, 5")
+    assert fallback["sunday_hours"] == "11:00-19:00"
+    assert "C. Agua, 7" in series["visit"]["luggage"]["sunday_primary"]
+    assert "C. Agua 5" in series["visit"]["luggage"]["sunday_verified_backup"]
+    day3 = route_map["days"][2]
+    deposit = next(leg for leg in day3["legs"] if leg["mode"] == "luggage")
+    airport = day3["legs"][-1]
+    assert "C.%20Agua%2C%207" in deposit["maps_url"]
+    assert "ne pas compter sur une prise en charge au pied" in airport["instructions"]
+    assert "Paseo%20de%20Catalina%20de%20Ribera" in airport["maps_url"]
+
+
 def test_main_programs_are_long_sourced_and_contextual():
     ids = ["ep06","ep07","ep04","ep02","ep00","ep05","ep01","ep03","g02","g13"]
     for suffix in ids:
