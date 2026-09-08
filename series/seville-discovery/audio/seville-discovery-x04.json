@@ -1,0 +1,18 @@
+{
+  "schema_version":3,
+  "id":"seville-discovery-x04",
+  "title":"Perspective — Conquérir sans tout effacer",
+  "language":"fr-FR",
+  "profile":"speech",
+  "production_version":3,
+  "series":"Séville — deux jours pour comprendre la ville",
+  "episode":4,
+  "stop":"Cathédrale de Séville + Giralda",
+  "lead_in_ms":250,
+  "sources":["https://www.catedraldesevilla.es/en/the-cathedral/building/the-giralda/","https://alcazarsevilla.org/historia/"],
+  "segments":[
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":600,"text":"Perspective supplémentaire : la Giralda est un excellent antidote aux récits trop simples de rupture. Son ancien minaret n'est ni invisible ni conservé comme un objet de musée séparé. Il est incorporé dans une nouvelle fonction et un nouveau système symbolique."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":600,"text":"Ce type de réemploi oblige à distinguer la domination politique de l'effacement culturel. Les pouvoirs peuvent imposer une nouvelle religion et pourtant conserver des techniques, des formes ou des structures parce qu'elles sont utiles, admirées ou devenues indispensables au paysage urbain."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Cette tension prépare directement l'Alcázar : là-bas, elle ne se lit plus seulement dans une tour, mais dans le langage même d'un palais chrétien."}
+  ]
+}
