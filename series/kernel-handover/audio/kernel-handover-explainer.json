@@ -9,7 +9,7 @@
       "character_id": "narrateur",
       "speaker": "Narrateur",
       "preset": "narrateur-vif",
-      "pause_after_ms": 650,
+      "pause_after_ms": 700,
       "text": "La mise à jour récente a ajouté quelque chose d’important : le kernel ne sait plus seulement continuer une tâche. Il sait maintenant évaluer si continuer dans la conversation courante reste la meilleure stratégie, ou s’il devient préférable de fabriquer un handover propre pour repartir dans une nouvelle conversation."
     },
     {
