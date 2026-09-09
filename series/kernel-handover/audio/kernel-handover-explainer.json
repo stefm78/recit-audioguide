@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "kernel-handover-explainer",
+  "title": "Comment le kernel décide d’un handover",
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 650,
+      "text": "La mise à jour récente a ajouté quelque chose d’important : le kernel ne sait plus seulement continuer une tâche. Il sait maintenant évaluer si continuer dans la conversation courante reste la meilleure stratégie, ou s’il devient préférable de fabriquer un handover propre pour repartir dans une nouvelle conversation."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 650,
+      "text": "Imagine le kernel comme un chef de mission. Pendant qu’on travaille ensemble, il ne se dit pas : la conversation devient longue, il faudrait changer de chat. Il n’y a pas de seuil de nombre de messages, de tokens ou de longueur de conversation. La vraie question est plutôt : si je dois poursuivre cette mission, est-ce que je peux encore la poursuivre ici de manière fiable et économique, ou est-ce qu’une reconstruction propre dans un nouveau worker serait maintenant préférable ? C’est donc une décision sémantique et économique, pas une décision technique basée sur la taille du chat."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 650,
+      "text": "Il existe d’abord un cas extrêmement simple. Si tu me dis : fais-moi un handover, ou : je veux continuer cette mission dans une autre discussion, alors il n’y a pas d’heuristique à appliquer. La demande humaine a priorité et je dois fabriquer le minimum de handover nécessaire."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Mais la nouveauté intéressante est que le kernel peut également le détecter sans que tu le demandes. Il regarde notamment trois familles de situations. La première, c’est lorsqu’une continuation nécessite déjà un checkpoint, mais qu’une partie importante du contexte n’existe que dans la conversation et serait pénible à reconstruire. La deuxième, c’est lorsque la mission a accumulé suffisamment de structure : plusieurs décisions gelées, plusieurs repositories, plusieurs streams, plusieurs gates, ou des éléments à ne pas rouvrir. À ce moment-là, repartir sans contrat de reprise devient dangereux."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "La troisième situation est probablement la règle la plus élégante : est-ce que le coût d’un handover suivi d’une reprise est inférieur au coût de continuer dans la conversation actuelle ? Autrement dit, si emballer proprement l’état, ouvrir une nouvelle conversation et reprendre coûte moins cher, en risque, en ambiguïté et en reconstruction, que de poursuivre ici, le handover devient préférable."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "C’est exactement le genre de situation qu’on peut rencontrer sur un projet comme le City Guide Séville. On avait déjà accumulé des horaires disponibles, des contraintes météorologiques, une adresse de départ, des arbitrages éditoriaux et des décisions qui ne devaient pas être rouvertes. Là, un handover devient beaucoup plus rationnel qu’un simple résumé de la conversation."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Mais il y a un deuxième filtre : ne pas fabriquer des handovers pour rien. Avant de créer quelque chose, le kernel doit se demander si un simple refresh, ou une reconstruction depuis les sources durables, suffit. Si oui, pas de handover supplémentaire. Cela évite de transformer le système en machine à produire des snapshots de conversations. Le handover n’est pas une nouvelle base de données de projet, et ne doit surtout pas devenir une deuxième source de vérité. C’est un vecteur de reconstruction, rien de plus."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Supposons maintenant que la décision soit : handover. À ce moment-là, le kernel ne fait pas simplement un résumé. Il cherche à répondre à une autre question : qu’est-ce qu’une instance de ChatGPT totalement neuve devrait connaître pour continuer correctement la mission sans avoir accès à notre conversation ?"
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Il cherche alors le minimum suffisant pour la reprise : la mission et le périmètre, la baseline actuellement autoritative, les décisions déjà gelées, ce qui a réellement été vérifié et terminé, les findings, risques et gates encore ouverts, ce qu’il ne faut surtout pas rouvrir, les entrées encore nécessaires, la prochaine action sûre, les vérifications à effectuer avant de reprendre, et les pointeurs vers les preuves ou sources durables. Mais il ne doit mettre dans le handover que les éléments réellement discriminants pour la reprise. On ne cherche pas à transmettre toute la conversation. On cherche à transmettre l’état causal nécessaire à la continuation."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Ensuite, le kernel choisit la taille du handover. Le premier niveau est le plus léger. Si presque tout est déjà dans GitHub ou dans des sources durables, le handover peut essentiellement dire : voici les objets exacts à charger, voici ce qui reste ouvert, et voici la prochaine action. Il transporte donc surtout des pointeurs."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Ensuite vient le handover opérationnel. C’est celui qu’on utilise lorsque le prochain ChatGPT a besoin d’un petit paquet autonome lui permettant de comprendre immédiatement la mission : objectif, contraintes, décisions gelées, choses terminées, état ouvert et prochaine action. Enfin, il y a le handover de type package. Celui-là est réservé aux situations où la reprise exige réellement plusieurs fichiers locaux, fixtures, paquets de preuves ou artefacts qui ne peuvent pas simplement être retrouvés ailleurs. La règle est de ne jamais grossir le handover si le niveau supplémentaire n’améliore pas matériellement la qualité de la reprise."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 750,
+      "text": "Et maintenant, la partie la plus importante : ce qui se passe dans le nouveau chat. C’est là qu’on évite un piège classique. Le nouveau ChatGPT ne doit jamais considérer le handover comme la vérité. Le handover dit : voilà ce que le précédent worker pensait être vrai lorsqu’il s’est arrêté. Il ne dit pas : voilà l’état actuel autoritatif du monde."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Le worker qui reçoit le handover doit donc rebâtir normalement son autorité, relire les sources durables pertinentes, revalider les identités et l’état externe avant toute mutation, conserver le travail déjà vérifié, et résoudre les éventuelles opérations ambiguës avant de les rejouer. Il doit également conserver les décisions gelées, sauf si une nouvelle preuve les invalide matériellement. C’est la raison d’être du preflight de reprise."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "On peut résumer la mécanique comme ceci : handover, nouvelle conversation, bootstrap, revalidation, réconciliation, preflight, puis prochaine action sûre. Et non : handover, recopier, continuer aveuglément."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Pourquoi cette différence est-elle fondamentale ? Prenons un exemple concret. Supposons que le handover dise : HEAD Git égale X, visite de l’Alcázar le 18 septembre à 9 heures 30, réservation encore à effectuer. Entre le moment où le handover est généré et celui où le nouveau chat démarre, quelqu’un pourrait avoir modifié HEAD, effectué la réservation, changé le programme ou fermé un gate. Le handover n’a pas le droit d’écraser cette réalité plus récente. Donc le handover transporte de la continuité, jamais de l’autorité."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Et la version la plus récente ajoute encore une couche. Elle ne change pas le handover lui-même. Elle ajoute un contrôle longitudinal de trajectoire. À certains moments, le kernel doit maintenant se demander : est-ce qu’on est encore en train d’implémenter une solution suffisamment prouvée, ou est-ce qu’on est en train d’expérimenter sans nous en rendre compte directement dans le produit ?"
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Cela s’active notamment quand apparaissent des phénomènes de réparation de réparations, des changements architecturaux répétés autour du même problème, une augmentation du footprint technique alors que le mécanisme reste incertain, ou lorsque de la complexité sert surtout à réparer les réparations précédentes. À ce moment-là, trois orientations existent : continuer dans le produit, isoler une expérience, ou arrêter et reformuler le problème. Et cela se combine avec les mécanismes de continuation et de handover existants."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 800,
+      "text": "Donc, en langage très simple, avant ces mécanismes, un ChatGPT avait essentiellement tendance à faire : je continue tant que je peux. Le kernel actuel cherche davantage à faire : je continue tant que c’est la manière la plus sûre et la moins coûteuse de préserver la trajectoire de la mission. Puis : si changer de conversation est préférable, je fabrique exactement le minimum nécessaire pour que mon successeur puisse reconstruire correctement mon état. Et enfin : mon successeur ne me croit pas sur parole ; il vérifie ce qui est encore vrai avant de continuer."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 800,
+      "text": "C’est la vraie avancée du mécanisme : le handover n’est plus une opération documentaire déclenchée manuellement ; c’est devenu une stratégie de continuité gouvernée. Et surtout, il n’est pas basé sur l’idée que le contexte devient gros. Il est basé sur le coût et le risque de continuation, la reconstructibilité du contexte, l’existence d’un checkpoint naturel et la quantité d’état non durable qu’il faudrait sinon reconstruire."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 400,
+      "text": "Si on le représente en une seule chaîne, le kernel actuel fonctionne à peu près ainsi : mission, continuation, checkpoint naturel, évaluation de continuation, puis choix entre continuer ici, isoler une expérience, faire un handover, ou reformuler et arrêter ; ensuite, matérialisation minimale, preflight du nouveau worker, et reprise sûre. C’est beaucoup plus proche d’un runtime de workflow interruption-safe que d’un simple mécanisme de résumé de conversation."
+    }
+  ],
+  "sources": []
+}
