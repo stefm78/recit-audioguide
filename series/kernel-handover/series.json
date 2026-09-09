@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "kernel-handover",
+  "type": "story",
+  "title": "Comment le kernel décide d’un handover",
+  "subtitle": "Une explication orale des mécanismes de détection, de décision, de matérialisation et de reprise sûre.",
+  "note": "Version conçue pour l’écoute : narration continue, sans habillage sonore inutile, avec transcription disponible depuis la page.",
+  "episodes": [
+    {
+      "id": "kernel-handover-explainer",
+      "title": "Détection, décision et reprise d’un handover",
+      "summary": "Le kernel n’attend pas qu’une conversation soit simplement longue : il compare le coût et le risque de continuer ici avec ceux d’un handover, choisit la plus petite forme suffisante, puis impose au nouveau worker de revalider l’état avant de reprendre.",
+      "launch": "À écouter comme une présentation orale continue."
+    }
+  ]
+}
