@@ -1,0 +1,21 @@
+{
+  "schema":"recit.seville.travel-readiness.v1",
+  "status":"TICKETED_AWAITING_FINAL_RECHECKS",
+  "qualified_at":"2026-09-10",
+  "party_size":2,
+  "confirmed":{
+    "cathedral":{"date":"2026-09-18","time":"12:10","status":"BOOKED_CONFIRMED"},
+    "alcazar":{"date":"2026-09-18","time":"17:00","status":"BOOKED_CONFIRMED"},
+    "friday_rest_window":{"status":"PRESERVED","approx":"13:35-16:40"},
+    "sunday_airport_buffer":{"status":"PRESERVED","target_arrival":"17:45-18:00","hard_latest":"18:30","flight":"20:20"}
+  },
+  "privacy":"Public operational projection only. Voucher files, names, identity-document numbers, QR codes and purchase references are not stored in this repository.",
+  "remaining_volatile":[
+    {"id":"luggage_calle_agua_7","when":"before travel","action":"Confirm exact operator/reservation, real Sunday hours and withdrawal procedure; retain C. Agua 5 as verified adjacent fallback."},
+    {"id":"weather","when":"2026-09-16 and 2026-09-17","action":"Recheck AEMET and only adjust micro-timing, outdoor exposure, pauses or a short taxi if materially justified."},
+    {"id":"access_and_events","when":"2026-09-16 and 2026-09-17","action":"Check street works, closures, demonstrations, religious events and monument access."},
+    {"id":"airport_pickup","when":"travel day","action":"Select the most practical vehicle-accessible edge around Santa Cruz/Catalina de Ribera in the taxi/VTC app; never assume pickup at Calle Agua."}
+  ],
+  "next_gate":"FINAL_J2_J1_TRAVEL_READINESS_RECHECK",
+  "invariant":"Do not reconstruct the qualified itinerary unless a material fresh fact invalidates it."
+}
