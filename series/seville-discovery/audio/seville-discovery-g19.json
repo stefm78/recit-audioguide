@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "seville-discovery-g19",
+  "production_version": 1,
+  "title": "Tauromachie : patrimoine, violence et désaccord contemporain",
+  "series": "Séville — trois jours pour comprendre la ville",
+  "episode": null,
+  "after_episode": 9,
+  "location": "Plaza de Toros de la Real Maestranza de Caballería de Sevilla",
+  "summary": "Une gourmandise contradictoire pour comprendre pourquoi la tauromachie peut être à la fois patrimoine protégé, pratique culturelle vécue et objet d’opposition liée au traitement animal.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://www.boe.es/eli/es/l/2013/11/12/18/con",
+    "https://www.boe.es/buscar/pdf/1996/BOE-A-1996-4945-consolidado.pdf",
+    "https://www.realmaestranza.com/real-plaza-de-toros/la-temporada/"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":800,"text":"Cette gourmandise ne cherche pas à décider à votre place. Elle part d’un paradoxe réel. Depuis 2013, la loi espagnole définit la tauromachie comme un patrimoine culturel digne de protection. Dans le même texte, le législateur reconnaît qu’une partie de la société exprime une préoccupation forte concernant le traitement des animaux pendant les spectacles taurins."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":850,"text":"Le désaccord ne porte donc pas simplement sur le fait de savoir si la corrida a une histoire. Elle en a une, et elle a produit des institutions, des métiers, des élevages, des images, des récits et des lieux comme celui-ci. Le conflit porte surtout sur une autre question : le fait qu’une pratique soit ancienne, identitaire ou artistique suffit-il à justifier qu’elle continue lorsqu’elle implique une violence volontaire envers l’animal ?"},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":850,"text":"Le règlement de la corrida ne laisse pas cette violence dans l’abstraction. Il décrit la lidia, le dernier tercio, l’estocade, le descabello et l’éventuel indulto. Cela permet de parler précisément : les objections contemporaines ne visent pas seulement une image symbolique de la corrida, mais les actes mêmes qui composent le spectacle."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":900,"text":"Inversement, réduire toute personne attachée à la tauromachie à une fascination pour la souffrance ne permet pas davantage de comprendre le phénomène. Pour ses défenseurs, il peut s’agir de transmission familiale, d’esthétique, de courage, d’élevage, de mémoire locale ou d’un langage artistique très codifié. Comprendre ces raisons n’oblige pas à les partager."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":950,"text":"Mettez l’audio en pause. Demandez-vous ce qui, pour vous, a le plus de poids : la valeur patrimoniale du lieu, la continuité culturelle, la réalité de la souffrance animale, ou la possibilité qu’une tradition change de forme. Il n’y a rien à répondre au guide. Ce désaccord fait désormais partie de la visite."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Vous pouvez revenir au parcours principal. L’idée à garder est simple : un patrimoine vivant n’est pas seulement ce qu’une société conserve. C’est aussi ce qu’elle discute, transforme, défend ou remet en cause."}
+  ]
+}

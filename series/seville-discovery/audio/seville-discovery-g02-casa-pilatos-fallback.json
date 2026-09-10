@@ -1,0 +1,21 @@
+{
+  "schema_version":3,
+  "language":"fr-FR",
+  "profile":"speech",
+  "id":"seville-discovery-g02-casa-pilatos-fallback",
+  "production_version":1,
+  "title":"Fallback — Casa de Pilatos : le pouvoir entre dans la maison",
+  "series":"Séville — trois jours pour comprendre la ville",
+  "episode":null,
+  "location":"Casa de Pilatos, Sevilla",
+  "summary":"Fallback du dimanche matin à utiliser uniquement si la visite de la Maestranza à 9 h 30 n’est pas réservée ou devient inaccessible.",
+  "lead_in_ms":350,
+  "sources":["https://visitasevilla.es/wp-content/uploads/2026/05/Monumentos_ENG.pdf"],
+  "segments":[
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Plan B du dimanche matin. Si la Maestranza n’est finalement pas accessible, partez de Pje. de Vila vers Casa de Pilatos. Cette séquence reste volontairement courte afin de protéger checkout et bagages."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Le palais naît à la fin du quinzième siècle et se transforme profondément au seizième. Regardez le patio principal, les colonnes, les marbres et les surfaces de céramique : formes gothico-mudéjares et apports de la Renaissance italienne y cohabitent."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":800,"text":"Mettez l’audio en pause. Faites un tour du patio et choisissez un détail qui vous attire. Reprenez quand vous avez terminé votre propre observation."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Après l’Alcázar, la question change : comment les langages artistiques des grands pouvoirs se diffusent-ils dans une résidence aristocratique privée ? Les styles circulent avec les personnes, voyages, matériaux, artisans et ambitions sociales."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Sortez assez tôt pour revenir au logement. Casa de Pilatos n’est ici ni une consolation ni une visite à accumuler : c’est un fallback de qualité qui maintient le récit et la robustesse du dimanche."}
+  ]
+}

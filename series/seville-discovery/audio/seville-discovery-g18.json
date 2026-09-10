@@ -1,0 +1,25 @@
+{
+  "schema_version": 3,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "seville-discovery-g18",
+  "production_version": 1,
+  "title": "Lire une arène : architecture, regards et rituel",
+  "series": "Séville — trois jours pour comprendre la ville",
+  "episode": null,
+  "after_episode": 9,
+  "location": "Plaza de Toros de la Real Maestranza de Caballería de Sevilla",
+  "summary": "Une gourmandise à lancer face au ruedo pour comprendre comment l’architecture organise le spectacle, les circulations et les regards.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://www.realmaestranza.com/real-plaza-de-toros/la-plaza/",
+    "https://www.boe.es/buscar/pdf/1996/BOE-A-1996-4945-consolidado.pdf"
+  ],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Lancez cette gourmandise face au ruedo. Ne regardez pas seulement le sable : cherchez les frontières. Où finit l’espace du public ? Où commencent les circulations des professionnels ? Où se trouvent les portes, les barrières, la présidence ? Une arène fonctionne parce qu’elle distribue très précisément les corps et les regards."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":800,"text":"Le règlement taurin donne une structure à ce que l’architecture accueille : accès du public, présidence, cuadrillas, trois tercio de la lidia, puis dernier tercio. Même sans assister à une corrida, l’espace devient plus lisible lorsque l’on comprend qu’il n’est pas un simple cercle, mais le support d’une séquence réglée."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":850,"text":"Regardez aussi les gradins. Un spectacle n’existe pas seulement sur le ruedo : il existe dans les réactions du public, dans la distance ou la proximité, dans les zones de soleil et d’ombre, dans les regards tournés vers le centre. L’architecture transforme une foule en audience organisée."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":900,"text":"Mettez l’audio en pause et choisissez un point précis du bâtiment. Imaginez le trajet d’une personne depuis son entrée jusqu’à ce point : spectateur, torero, personnel de l’arène. Puis imaginez le trajet inverse. Reprenez lorsque vous avez réussi à voir le monument comme un système de circulation plutôt que comme une façade."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Gardez cette idée : les grands lieux de spectacle sont des machines à organiser l’attention. Ici, cette machine s’est construite lentement, s’est adaptée à la ville et continue à donner une forme physique à un rituel dont le sens social, lui, reste disputé."}
+  ]
+}
