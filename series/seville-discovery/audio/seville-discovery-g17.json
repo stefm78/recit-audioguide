@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "seville-discovery-g17",
+  "production_version": 1,
+  "title": "Les Baños de Doña María de Padilla : pierre, eau et légende",
+  "series": "Séville — trois jours pour comprendre la ville",
+  "episode": null,
+  "after_episode": 4,
+  "location": "Baños de Doña María de Padilla, Real Alcázar de Sevilla",
+  "summary": "Distinguer l’espace architectural visible des récits romantiques attachés à María de Padilla.",
+  "lead_in_ms": 350,
+  "sources": ["https://www.alcazarsevilla.org/wp-content/uploads/triptico_alcazar_sevilla.pdf","https://alcazarsevilla.org/wp-content/uploads/2024/11/02-Itinerarios-y-Actividades.pdf"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Lancez cette gourmandise aux Baños de Doña María de Padilla. Avant toute histoire, regardez l’espace tel qu’il est : long, voûté, presque souterrain, traversé par une eau sombre qui reflète les arcs. Commencez par la pierre et l’eau, pas par le roman."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Le plan officiel du Real Alcázar identifie cet espace sous le Palacio Gótico, près du Patio del Crucero. Le nom de María de Padilla s’est attaché à ces citernes au fil du temps. Il faut distinguer l’existence matérielle de l’espace et les histoires sentimentales qui l’ont ensuite enveloppé."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"María de Padilla fut la compagne de Pierre Ier et une figure centrale de sa vie dynastique. Une tradition populaire raconte que le roi aurait fait aménager ces bains pour elle. Le matériel pédagogique du Real Alcázar reprend cette histoire comme récit de médiation ; cela ne suffit pas à la transformer en preuve architecturale. Gardons donc la bonne étiquette : légende documentée, pas fait certain."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Cette distinction montre comment un monument continue à produire des histoires longtemps après sa construction. Les lieux spectaculaires attirent des personnages, des romances et des explications faciles. Un bon audioguide peut raconter ces récits sans vous obliger à les croire au premier degré."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":800,"text":"Mettez l’audio en pause. Regardez les reflets, les voûtes et la profondeur de l’espace. Oubliez María pendant quelques instants. Puis, quand vous reprendrez, demandez-vous ce que la légende ajoute à ce que l’architecture faisait déjà ressentir."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Revenez au parcours principal avec une méthode : à l’Alcázar, les légendes font partie de l’histoire du regard porté sur le monument. Elles méritent d’être entendues, à condition de savoir quand on quitte le fait pour entrer dans le récit."}
+  ]
+}

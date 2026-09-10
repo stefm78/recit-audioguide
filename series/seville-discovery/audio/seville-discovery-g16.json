@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "seville-discovery-g16",
+  "production_version": 1,
+  "title": "Les murs parlent : inscriptions, souveraineté et mise en scène",
+  "series": "Séville — trois jours pour comprendre la ville",
+  "episode": null,
+  "after_episode": 4,
+  "location": "Façade du Palacio del Rey Don Pedro et Salón de Embajadores, Real Alcázar de Sevilla",
+  "summary": "Lire les inscriptions non comme un décor abstrait, mais comme une parole politique inscrite dans l’architecture.",
+  "lead_in_ms": 350,
+  "sources": ["https://www.alcazarsevilla.org/wp-content/uploads/2014/01/Apuntes-14.pdf","https://alcazarsevilla.org/historia/"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Lancez cette gourmandise devant la façade de Pierre Ier ou dans le Salón de Embajadores. Regardez une ligne d’écriture. Même si vous ne la lisez pas, ne la traitez pas comme un simple motif. Ici, l’écriture fait partie de l’architecture du pouvoir."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Les études publiées par le Real Alcázar montrent que plusieurs inscriptions du palais célèbrent explicitement Pierre Ier. Sur les portes menant au Salón de Embajadores depuis le Patio de las Doncellas, un long texte de fondation nomme le roi de Castille et León, célèbre la construction et mentionne des artisans de Tolède. La surface décorée devient donc aussi un document."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Ce qui est fascinant, c’est le choix du registre. Un souverain chrétien peut être célébré dans une langue et des formes associées à la culture de cour arabe. Cela ne signifie pas que les identités politiques se confondent. Cela signifie qu’un langage de prestige peut être adopté, réinterprété et mis au service d’un autre pouvoir."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Regardez maintenant les murs autrement : texte, géométrie, végétal, héraldique et architecture ne sont pas cinq couches indépendantes. Ensemble, ils fabriquent une atmosphère où le visiteur est continuellement rappelé à l’autorité du commanditaire, même lorsqu’il ne comprend pas chaque mot."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":800,"text":"Mettez l’audio en pause quelques instants. Choisissez une inscription ou un emblème et suivez-le du regard jusqu’à ce qu’il se perde dans l’ensemble du décor. Reprenez quand vous avez senti cette tension entre détail lisible et enveloppe totale."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Revenez au parcours principal avec une idée : dans ce palais, le pouvoir parle aussi sur les murs, dans un vocabulaire culturel plus complexe que l’opposition simple entre chrétien et musulman."}
+  ]
+}

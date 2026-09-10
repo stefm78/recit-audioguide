@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "seville-discovery-g15",
+  "production_version": 1,
+  "title": "Casa de la Contratación : le palais regarde vers l’Atlantique",
+  "series": "Séville — trois jours pour comprendre la ville",
+  "episode": null,
+  "after_episode": 4,
+  "location": "Casa de la Contratación, Real Alcázar de Sevilla",
+  "summary": "Le moment où le complexe royal devient aussi un centre administratif du monde atlantique.",
+  "lead_in_ms": 350,
+  "sources": ["https://alcazarsevilla.org/historia/","https://www.alcazarsevilla.org/wp-content/uploads/2014/01/Apuntes-14.pdf"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Lancez cette gourmandise dans la Casa de la Contratación. Après les patios et les salles de représentation, changeons d’échelle : ici, l’enjeu devient aussi d’administrer des routes, des marchandises, des hommes et des informations à l’échelle de l’Atlantique."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"La Casa de la Contratación est créée à Séville en 1503 pour centraliser les affaires liées aux terres atteintes de l’autre côté de l’Atlantique. Les publications du Real Alcázar décrivent ce moment comme un changement de direction majeur pour le complexe."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Regardez le lieu comme une machine administrative. Derrière les expéditions spectaculaires, il faut enregistrer, contrôler, autoriser, cartographier, taxer, transmettre des ordres et accumuler des informations. Un empire ne tient pas seulement par des navires : il tient aussi par des bureaux et des procédures."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Cette idée prépare directement votre visite de demain à l’Archivo de Indias. Là-bas, vous verrez ce que devient cette logique lorsqu’elle s’accumule sur plusieurs siècles : correspondances, cartes, dossiers et traces matérielles d’un système impérial."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Avant de repartir, regardez une porte, une salle, un passage. Demandez-vous combien de décisions invisibles ont pu traverser ce type d’espace avant de produire des effets à des milliers de kilomètres. C’est une autre manière de lire le pouvoir : non plus seulement par le décor, mais par l’organisation."}
+  ]
+}
