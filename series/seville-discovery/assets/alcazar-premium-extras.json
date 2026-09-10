@@ -1,0 +1,16 @@
+{
+  "schema": "recit.alcazar-premium-extras.v1",
+  "status": "CANDIDATE",
+  "episode_id": "seville-discovery-ep02",
+  "principle": "Le récit principal reste fluide; les gourmandises ne s'ouvrent que lorsque le lieu crée une vraie curiosité.",
+  "selection_rule": "OPTIONAL_NOT_REQUIRED",
+  "extras": [
+    {"id":"seville-discovery-g07","trigger":"Façade du palais de Pierre Ier ou Patio de las Doncellas","question":"Que signifie vraiment mudéjar ici ?","role":"style_politics_artisans"},
+    {"id":"seville-discovery-g14","trigger":"Façade du palais de Pierre Ier ou Patio de las Doncellas","question":"Pourquoi Castille et Grenade semblent-elles se répondre dans ce palais ?","role":"pedro_i_muhammad_v_court_circulation"},
+    {"id":"seville-discovery-g16","trigger":"Façade du palais ou Salón de Embajadores","question":"Que disent réellement les inscriptions et pourquoi sont-elles ici ?","role":"inscriptions_sovereignty"},
+    {"id":"seville-discovery-g15","trigger":"Casa de la Contratación","question":"Comment un palais devient-il aussi une machine administrative de l'Atlantique ?","role":"atlantic_administration"},
+    {"id":"seville-discovery-g17","trigger":"Baños de Doña María de Padilla","question":"Que savons-nous, et que raconte seulement la légende ?","role":"fact_vs_legend"},
+    {"id":"seville-discovery-g08","trigger":"Estanque de Mercurio ou jardins","question":"Comment l'eau devient-elle confort, infrastructure et pouvoir ?","role":"water_gardens_infrastructure"}
+  ],
+  "human_use": "Ne pas tout écouter. Choisir selon ce qui attire l'attention sur place; revenir au récit principal à tout moment."
+}
