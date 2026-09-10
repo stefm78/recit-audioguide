@@ -4,7 +4,7 @@
   "title": "Alcázar — visite approfondie : lire mille ans de pouvoir dans les espaces",
   "language": "fr-FR",
   "profile": "speech",
-  "production_version": 7,
+  "production_version": 8,
   "series": "Séville — trois jours pour comprendre la ville",
   "episode": 4,
   "stop": "Real Alcázar de Sevilla",
@@ -40,7 +40,7 @@
       "speaker": "Narrateur",
       "preset": "narrateur-vif",
       "pause_after_ms": 950,
-      "text": "Au Patio de la Montería, arrêtez-vous avant d’entrer dans le palais de Pierre Ier. Regardez sa façade de face. Elle est une déclaration. Le roi chrétien de Castille, au quatorzième siècle, commande un palais qui mobilise des artisans, des techniques et un vocabulaire décoratif profondément liés aux traditions d’Al-Andalus. C’est le paradoxe central de notre visite : victoire politique ne signifie pas disparition culturelle. Les formes circulent parce qu’elles restent prestigieuses, efficaces et désirables. Regardez maintenant la façade comme une scène diplomatique : elle ne dit pas seulement qui règne ; elle dit dans quel langage le souverain choisit d’être admiré."
+      "text": "Au Patio de la Montería, arrêtez-vous avant d’entrer dans le palais de Pierre Ier. Regardez sa façade de face. Elle est une déclaration. Le roi chrétien de Castille, au quatorzième siècle, commande un palais qui mobilise des artisans, des techniques et un vocabulaire décoratif profondément liés aux traditions d’Al-Andalus. C’est le paradoxe central de notre visite : victoire politique ne signifie pas disparition culturelle. Les formes circulent parce qu’elles restent prestigieuses, efficaces et désirables. Regardez maintenant la façade comme une scène diplomatique : elle ne dit pas seulement qui règne ; elle dit dans quel langage le souverain choisit d’être admiré. Si cette question vous accroche, c’est ici le meilleur moment pour ouvrir la gourmandise « Mudéjar sans raccourci : qui parle sur les murs ? ». Revenez ensuite à ce parcours principal."
     },
     {
       "character_id": "narrateur",
@@ -96,7 +96,7 @@
       "speaker": "Narrateur",
       "preset": "narrateur-vif",
       "pause_after_ms": 900,
-      "text": "En entrant dans les jardins, cherchez d’abord l’Estanque de Mercurio puis la Galería del Grutesco si votre parcours les rend accessibles. Ici encore, vous ne regardez pas un jardin figé d’époque médiévale. Les jardins ont été transformés, agrandis et mis en scène au fil des siècles. La galerie aménagée sur l’ancienne muraille montre parfaitement ce mécanisme : un élément défensif devient support de promenade et de spectacle. Regardez depuis là les niveaux, l’eau, les masses végétales et les perspectives. Le patrimoine n’est pas seulement conservé ; il est continuellement réinterprété."
+      "text": "En entrant dans les jardins, cherchez d’abord l’Estanque de Mercurio puis la Galería del Grutesco si votre parcours les rend accessibles. Ici encore, vous ne regardez pas un jardin figé d’époque médiévale. Les jardins ont été transformés, agrandis et mis en scène au fil des siècles. La galerie aménagée sur l’ancienne muraille montre parfaitement ce mécanisme : un élément défensif devient support de promenade et de spectacle. Regardez depuis là les niveaux, l’eau, les masses végétales et les perspectives. Si vous voulez comprendre ce qui rend toute cette eau possible, ouvrez ici la gourmandise « Gouverner par l’eau : le jardin visible et son infrastructure cachée ». Puis revenez au parcours principal pour la fin de visite."
     },
     {
       "character_id": "narrateur",
