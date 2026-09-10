@@ -1,9 +1,15 @@
 {
-  "schema": "recit.visit-experience.v1",
+  "schema": "recit.visit-experience.v2",
   "status": "CANDIDATE",
   "series": "seville-discovery",
-  "principle": "voir → comprendre → ressentir → continuer",
+  "principle": "voir → écouter → comprendre → rendre le lieu au visiteur → reprendre",
   "navigation_authority": "external_real_conditions",
+  "pause_model": {
+    "default": "HYBRID_MICRO_SILENCE_AND_USER_PAUSE",
+    "USER_PAUSE": "Le narrateur invite explicitement le visiteur à mettre lui-même l'audio en pause. La durée appartient au visiteur; la reprise se fait volontairement avec Play.",
+    "MICRO_SILENCE": "Respiration courte intégrée au flux audio; aucune action utilisateur requise.",
+    "rule": "USER_PAUSE uniquement quand la durée optimale d'observation appartient au visiteur, jamais comme ponctuation systématique."
+  },
   "episodes": {
     "seville-discovery-ep06": {
       "why": "Commencer par le Guadalquivir permet de comprendre Séville comme un système de circulation avant de la réduire à ses monuments.",
@@ -13,7 +19,7 @@
         {"type":"ARRIVAL","text":"Gagnez le Puente de Isabel II sans chercher encore les grands monuments."},
         {"type":"LOOK","text":"Sur le pont, arrêtez-vous un instant : fleuve, quais, silhouette du centre, puis Triana devant vous."},
         {"type":"REVEAL","text":"La ville monumentale devient une partie d’un réseau de quais, métiers, marchandises et passages."},
-        {"type":"SILENCE","text":"Gardez quelques secondes sans commentaire au milieu du pont."},
+        {"type":"USER_PAUSE","text":"Au milieu du pont, mettez l’audio en pause. Regardez le fleuve, la ville et Triana aussi longtemps que vous le souhaitez. Relancez la lecture quand vous êtes prêt à traverser jusqu’à Altozano."},
         {"type":"EXIT","text":"À Altozano, entrez vers le marché : le récit passe des flux à la vie de quartier."}
       ]
     },
@@ -36,7 +42,7 @@
         {"type":"REVEAL","text":"La rampe intérieure entre le noyau central et les murs externes fait partie de la logique constructive du minaret."},
         {"type":"LOOK","text":"Au Patio de los Naranjos, cherchez les canaux reliant les pieds des arbres et les vestiges de l’ancien sahn."},
         {"type":"COMPARE","text":"Dans la nef gothique, comparez brutalement votre échelle corporelle avec celle ressentie dans la tour et le patio."},
-        {"type":"SILENCE","text":"Accordez-vous un moment sans audio dans la nef : la rupture d’échelle doit d’abord se ressentir."},
+        {"type":"USER_PAUSE","text":"Dans la nef, mettez l’audio en pause. Marchez, levez les yeux et laissez l’échelle du lieu agir sans commentaire. Reprenez quand vous aurez pris la mesure de l’espace."},
         {"type":"OPTIONAL_DEPTH","extra_ids":["seville-discovery-g05","seville-discovery-g06"]},
         {"type":"EXIT","text":"Sortez avec une question en tête : conserver un ancien minaret est une chose ; commander ensuite un palais mudéjar en est une autre."}
       ],
@@ -54,7 +60,7 @@
         {"type":"LOOK","text":"Patio de las Doncellas : observez comment l’eau et la symétrie organisent votre regard."},
         {"type":"REVEAL","text":"Ici, le nouveau pouvoir ne se contente pas de conserver : il commande et recompose un langage associé à des traditions d’Al-Andalus."},
         {"type":"LOOK","text":"Dans le Salón de Embajadores, levez les yeux puis regardez les murs : le décor agit comme une enveloppe totale."},
-        {"type":"SILENCE","text":"Dans les jardins, laissez l’eau et les perspectives prendre la place de la narration pendant un moment."},
+        {"type":"USER_PAUSE","text":"Dans les jardins, mettez l’audio en pause. Suivez l’eau, les ombres et les perspectives sans durée imposée. Relancez quand vous aurez envie de poursuivre le récit."},
         {"type":"OPTIONAL_DEPTH","extra_ids":["seville-discovery-g07","seville-discovery-g08"]},
         {"type":"EXIT","text":"Retenez moins une liste de salles qu’une idée : gouverner, c’est aussi choisir les formes dans lesquelles le pouvoir veut être vu."}
       ],
@@ -78,7 +84,7 @@
         {"type":"LOOK","text":"Regardez l’ensemble avant les bancs provinciaux : la première information est la mise en scène."},
         {"type":"REVEAL","text":"Les détails régionaux prennent sens parce qu’ils sont intégrés à une composition nationale très contrôlée."},
         {"type":"COMPARE","text":"Gardez en mémoire les céramiques : vous les retrouverez autrement à Triana."},
-        {"type":"SILENCE","text":"Traversez un pont sans commentaire et observez les reflets, les courbes et les matériaux."},
+        {"type":"USER_PAUSE","text":"Sur l’un des ponts, mettez l’audio en pause. Regardez les reflets, les courbes, les matériaux et l’ensemble de la place. Reprenez quand vous avez fini de regarder, pas quand un chronomètre vous l’impose."},
         {"type":"OPTIONAL_DEPTH","extra_ids":["seville-discovery-g03"]}
       ]
     },
@@ -90,7 +96,7 @@
         {"type":"COMPARE","text":"Comparez l’espace monumental que vous quittez avec la ville qui se resserre devant vous."},
         {"type":"LOOK","text":"Au Callejón del Agua, regardez simultanément le mur, la largeur du passage et la végétation."},
         {"type":"REVEAL","text":"Le nom du passage renvoie à une histoire d’acheminement de l’eau vers le secteur de l’Alcázar : une ruelle devient infrastructure."},
-        {"type":"SILENCE","text":"À Plaza de Doña Elvira, arrêtez le commentaire quelques secondes et écoutez la différence sonore avec un axe ouvert."},
+        {"type":"USER_PAUSE","text":"À Plaza de Doña Elvira, mettez l’audio en pause quelques instants ou plus longtemps si vous en avez envie. Écoutez la place, regardez l’ombre et les façades, puis reprenez quand vous êtes prêt."},
         {"type":"OPTIONAL_DEPTH","extra_ids":["seville-discovery-g04"]},
         {"type":"EXIT","text":"Au Patio de Banderas, trois pouvoirs se rapprochent physiquement : palais, cathédrale, administration impériale."}
       ]
@@ -114,7 +120,7 @@
       "cues": [
         {"type":"COMPARE","text":"Rappelez-vous l’Alcázar : ici les mêmes familles de formes changent d’échelle et de commanditaire."},
         {"type":"LOOK","text":"Cherchez les raccords et superpositions plutôt qu’une prétendue pureté stylistique."},
-        {"type":"SILENCE","text":"Gardez un moment sans narration dans le patio."},
+        {"type":"USER_PAUSE","text":"Dans le patio, mettez l’audio en pause. Prenez le temps de faire un tour, de regarder les raccords entre matériaux et de choisir votre propre détail. Reprenez ensuite à votre rythme."},
         {"type":"EXIT","text":"Retournez au logement : l’étape suivante du dimanche n’est pas un monument mais une opération de bagages à protéger."}
       ]
     },
@@ -126,7 +132,7 @@
         {"type":"ARRIVAL","text":"Entrez sans objectif de tout voir : choisissez quelques œuvres et laissez leur échelle agir."},
         {"type":"LOOK","text":"Pour chaque grand tableau, regardez d’abord composition, gestes, lumière et place du spectateur avant le cartel."},
         {"type":"COMPARE","text":"Comparez cette Séville peinte à la ville de pierre, d’eau, de commerce et d’administration parcourue depuis vendredi."},
-        {"type":"SILENCE","text":"Choisissez une œuvre et restez devant elle une minute sans audio."},
+        {"type":"USER_PAUSE","text":"Choisissez une œuvre. Mettez l’audio en pause et restez devant elle aussi longtemps que cela vous semble juste. Relancez quand vous avez envie de retrouver le fil du voyage."},
         {"type":"EXIT","text":"Le récit principal est terminé : la suite doit rester légère afin de protéger le départ vers l’aéroport."}
       ]
     }

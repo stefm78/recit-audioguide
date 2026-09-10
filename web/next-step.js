@@ -3,7 +3,7 @@
   if (!slug) return;
 
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const cueLabels = {ARRIVAL:'Arriver',LOOK:'Regarder',STORY:'Comprendre',REVEAL:'Découvrir',MOVE:'Marcher',SILENCE:'Regarder sans audio',COMPARE:'Comparer',HUMAN_STORY:'Histoire humaine',OPTIONAL_DEPTH:'Approfondir',EXIT:'Continuer'};
+  const cueLabels = {ARRIVAL:'Arriver',LOOK:'Regarder',STORY:'Comprendre',REVEAL:'Découvrir',MOVE:'Marcher',SILENCE:'Regarder sans audio',MICRO_SILENCE:'Respiration',USER_PAUSE:'Pause libre · reprenez quand vous voulez',COMPARE:'Comparer',HUMAN_STORY:'Histoire humaine',OPTIONAL_DEPTH:'Approfondir',EXIT:'Continuer'};
 
   async function load() {
     const r = await fetch(`../../data/${encodeURIComponent(slug)}/series.json`, {cache:'no-store'});
@@ -126,7 +126,7 @@
       .visit-now-actions{display:flex;gap:.5rem;flex-wrap:wrap}.field-experience{margin-top:.8rem;border-top:1px solid #d9e2e2;padding-top:.7rem}
       .field-why,.field-look{margin:.45rem 0}.field-program{margin-top:.6rem}.field-program summary{font-weight:750;cursor:pointer}
       .field-program ol{list-style:none;padding:0;margin:.7rem 0 0;display:grid;gap:.55rem}.cue{display:grid;grid-template-columns:minmax(6.8rem,auto) 1fr;gap:.6rem;align-items:start;padding:.55rem .65rem;border-left:3px solid #9bb7b1;background:#f8faf9;border-radius:.25rem}
-      .cue strong{font-size:.82rem;color:#183d49}.cue-silence{border-left-color:#b58a5d;background:#fbf7f1}.cue-reveal{border-left-color:#6d82a8}.cue-look{border-left-color:#678f76}
+      .cue strong{font-size:.82rem;color:#183d49}.cue-silence,.cue-micro_silence{border-left-color:#b58a5d;background:#fbf7f1}.cue-user_pause{border-left-color:#8a5a2b;background:#fff8ed}.cue-user_pause strong{font-weight:900}.cue-reveal{border-left-color:#6d82a8}.cue-look{border-left-color:#678f76}
       @media (max-width:640px){.visit-now{margin-left:-.15rem;margin-right:-.15rem}.visit-now-actions>*{flex:1 1 8rem;text-align:center}.cue{grid-template-columns:1fr;gap:.15rem}}
     `;
     document.head.appendChild(style);
