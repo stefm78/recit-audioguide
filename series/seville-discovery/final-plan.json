@@ -7,7 +7,13 @@
   "change_reason":"Human supplied material logistics constraints: Friday closed morning loop from NH, luggage transfer NH→Pje. de Vila, Saturday closed loop from Pje. de Vila, Sunday luggage storage not before 11:00 and airport hard latest 18:30 for 20:20 flight.",
   "three_day_enrichment":{
     "status":"IMPLEMENTATION_AUTHORIZED_BY_USER",
-    "principles":["exploit NH Plaza de Armas location with a compact Triana/Arenal loop","preserve Cathedral 11:55 and Alcazar 17:00 unless ticket inventory disproves them","move Plaza de España/Santa Cruz/Archivo to a coherent Saturday loop","use Sunday as a low-stress cultural epilogue","show walking, taxi, luggage and pause legs distinctly on the map","reuse qualified audio IDs where possible instead of regenerating unchanged material"],
+    "principles":["exploit NH Plaza de Armas location with a compact Triana/Arenal loop","honor confirmed Cathedral 12:10 and Alcazar 17:00 bookings for two visitors","move Plaza de España/Santa Cruz/Archivo to a coherent Saturday loop","use Sunday as a low-stress cultural epilogue","show walking, taxi, luggage and pause legs distinctly on the map","reuse qualified audio IDs where possible instead of regenerating unchanged material"],
+    "confirmed_bookings":{
+      "party_size":2,
+      "cathedral":{"date":"2026-09-18","time":"12:10","status":"BOOKED_CONFIRMED","evidence":"human_provided_official_voucher_2026-09-10"},
+      "alcazar":{"date":"2026-09-18","time":"17:00","status":"BOOKED_CONFIRMED","evidence":"human_provided_official_voucher_2026-09-10"},
+      "privacy":"No names, identity-document numbers, QR codes or purchase references are persisted in the public repository."
+    },
     "friday_luggage_transfer":"NH Plaza de Armas around 10:00 → taxi/VTC → Pje. de Vila 11 → deposit/reorganize before Cathedral",
     "sunday_luggage":{
       "primary":{"address":"C. Agua, 7, Casco Antiguo, 41004 Sevilla, Espagne","source":"human_supplied_existing_storage","opens_at":"11:00","operator_public_identity":"TO_CONFIRM","assessment":"GEOGRAPHICALLY_STRONG_OPERATIONALLY_CONFIRM_PROVIDER"},
