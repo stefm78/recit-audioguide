@@ -1,1 +1,63 @@
-{"schema_version":1,"language":"fr-FR","profile":"speech","id":"seville-discovery-g07","production_version":1,"title":"Mudéjar sans raccourci","series":"Séville — deux jours pour comprendre la ville","episode":null,"after_episode":4,"location":"Real Alcázar de Sevilla","summary":"Une étiquette utile à condition de ne pas figer les identités et les circulations.","lead_in_ms":350,"sources":["https://alcazarsevilla.org/historia/"],"segments":[{"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Le mot “mudéjar” est pratique, mais il devient trompeur si on l’entend comme “un style musulman dans un bâtiment chrétien”. L’histoire est plus dynamique. Des techniques, des motifs et des savoir-faire issus d’Al-Andalus continuent à circuler dans des sociétés politiquement chrétiennes. Les commanditaires, eux, peuvent choisir ce langage parce qu’il exprime prestige, raffinement et continuité avec une culture de cour péninsulaire."},{"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Le palais de Pierre Ier est un cas particulièrement puissant. Le site officiel de l’Alcázar souligne cette réapparition de conceptions méditerranéennes en version arabe alors même qu’Al-Andalus est politiquement dominé par la Couronne de Castille. Le pouvoir et la culture ne changent donc pas au même rythme."},{"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Gardez cette nuance : le mudéjar ne prouve pas une harmonie sociale idéale, mais il interdit les récits trop simples de rupture totale. Il rend visibles des circulations qui survivent à la conquête et obligent à penser la péninsule comme un espace de transformations entremêlées."}]}
+{
+  "schema_version": 3,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "seville-discovery-g07",
+  "production_version": 2,
+  "title": "Mudéjar sans raccourci : qui parle sur les murs ?",
+  "series": "Séville — trois jours pour comprendre la ville",
+  "episode": null,
+  "after_episode": 4,
+  "location": "Palais de Pierre Ier, Real Alcázar de Sevilla",
+  "summary": "Une gourmandise à lancer devant la façade de Pierre Ier ou dans le Patio de las Doncellas pour lire commanditaire, artisans, langues et symboles sans réduire le mudéjar à une étiquette.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://alcazarsevilla.org/historia/",
+    "https://alcazarsevilla.org/wp-content/uploads/2024/11/ALCAZAR_Cuaderno_del_profesor-compressed.pdf",
+    "https://www.alcazarsevilla.org/wp-content/uploads/2016/05/articulo_origen_palacio_don_pedro.pdf"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Si vous êtes encore devant la façade du palais de Pierre Ier, restez-y. Sinon, gardez en mémoire le Patio de las Doncellas. Cette gourmandise part d’une question très simple : quand un roi chrétien commande ici un palais rempli de formes, de techniques et d’inscriptions liées à la culture artistique d’Al-Andalus, qui parle exactement ? Le roi ? Les artisans ? Une tradition de cour ? En réalité, toutes ces voix se superposent."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 750,
+      "text": "Regardez la façade comme un document politique. Le matériel pédagogique officiel de l’Alcázar invite précisément à y identifier des textes arabes et castillans, des symboles de la monarchie et plusieurs techniques décoratives. Ce mélange n’est donc pas un accident. Le commanditaire se fait reconnaître comme roi de Castille tout en adoptant un langage artistique prestigieux qui circule dans la péninsule. La façade ne choisit pas entre deux mondes : elle met leur coexistence au service d’un pouvoir précis."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 750,
+      "text": "C’est ici que le mot mudéjar devient utile, puis dangereux. Utile, parce qu’il aide à parler d’architectures et de décors produits sous domination chrétienne avec des savoir-faire et des formes hérités de traditions islamiques. Dangereux, si on imagine aussitôt une identité homogène, un seul groupe d’artisans ou une harmonie sociale parfaite. Les chantiers sont des lieux de circulation, mais aussi de hiérarchies, de commandes et de rapports de force."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 750,
+      "text": "Le palais lui-même complique encore le récit. Les recherches publiées par le Real Alcázar montrent que certaines parties intégrées à ce que nous appelons aujourd’hui le palais de Pierre Ier sont antérieures à sa grande campagne de construction. Autrement dit, même ce palais que nous associons à un souverain n’est pas une création sortie d’un seul dessin. Il absorbe du bâti précédent, le recompose et lui donne une nouvelle lecture. C’est exactement la logique que nous suivons depuis le début du voyage."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 800,
+      "text": "Maintenant, regardez un détail au choix : un blason, une ligne d’écriture, une frise géométrique, un entrelacs végétal. Ne cherchez pas seulement à savoir de quel style il relève. Demandez-vous plutôt ce qu’il fait ici. Est-ce qu’il identifie le souverain ? Est-ce qu’il impressionne ? Est-ce qu’il montre une compétence technique ? Est-ce qu’il inscrit le palais dans une culture de cour plus vaste ? Une bonne visite commence souvent quand on remplace la question « qu’est-ce que c’est ? » par « pourquoi est-ce ici ? »."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Vous pouvez maintenant revenir au parcours principal. Gardez une seule idée : la conquête change le détenteur du pouvoir plus vite qu’elle ne fait disparaître les techniques, les goûts et les langages. À l’Alcázar, le pouvoir chrétien ne se contente pas d’hériter de formes venues d’Al-Andalus : il les commande, les combine et les utilise pour parler de lui-même."
+    }
+  ]
+}
