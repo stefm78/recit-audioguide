@@ -1,25 +1,123 @@
 {
-  "schema_version":3,
-  "id":"seville-discovery-ep02",
-  "title":"Alcázar : quand le pouvoir adopte le langage de l’autre",
-  "language":"fr-FR",
-  "profile":"speech",
-  "production_version":6,
-  "series":"Séville — trois jours pour comprendre la ville",
-  "episode":4,
-  "stop":"Real Alcázar de Sevilla",
-  "location":"Real Alcázar de Sevilla",
-  "launch":"Commencez à la Puerta del León puis gardez l’audio disponible par séquences : l’Alcázar doit aussi se regarder sans commentaire.",
-  "look":"Patio de las Doncellas, Salón de Embajadores, inscriptions, plafonds, eau, passages vers les jardins.",
-  "summary":"Le cœur intellectuel du vendredi : voir comment le pouvoir chrétien de Pierre Ier commande et recompose un langage artistique profondément lié aux traditions d’Al-Andalus.",
-  "lead_in_ms":350,
-  "sources":["https://alcazarsevilla.org/historia/","https://alcazarsevilla.org/prepara-la-visita/"],
-  "segments":[
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":950,"text":"À la Puerta del León, gardez une seule question. Ce matin, nous avons vu un ancien minaret conservé puis transformé. Ici, le phénomène est plus troublant : pourquoi Pierre Ier, roi chrétien de Castille au quatorzième siècle, fait-il construire un palais qui mobilise délibérément des formes et des savoir-faire associés aux traditions artistiques d’Al-Andalus ? N’essayez pas encore de répondre. Entrez d’abord."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":1000,"text":"Quand vous atteignez le Patio de las Doncellas, regardez avant d’écouter la suite. Cherchez l’axe central, l’eau, les surfaces décorées, les ouvertures et la manière dont votre regard est guidé. Ici, pas besoin d’un long arrêt : laissez simplement vos yeux travailler pendant quelques secondes. Ce que vous voyez n’est pas une survivance passive : le pouvoir dominant commande lui-même cette architecture. C’est la différence essentielle avec la Giralda."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":950,"text":"Le mot mudéjar aide à nommer ce monde de formes, de techniques, d’artisans et de commanditaires, mais ne le laissez pas devenir une étiquette qui explique tout. Le site officiel de l’Alcázar présente le palais de Pierre Ier comme un palais mudéjar. Pour nous, l’intérêt est ailleurs : la conquête politique n’arrête pas les circulations culturelles. Des techniques et des formes continuent à être désirées, commandées et transformées."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":1000,"text":"Dans le Salón de Embajadores, levez d’abord les yeux. Puis regardez les murs. Enfin, regardez les portes et les passages. Le décor ne s’ajoute pas à l’espace comme une décoration secondaire : il enveloppe le visiteur. Le pouvoir agit ici par la maîtrise des matières, de la lumière, des inscriptions et de la mise en scène. Demandez-vous non pas seulement qui a construit cette salle, mais quel effet elle devait produire sur quelqu’un qui y entrait."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":1100,"text":"En gagnant les jardins, changez complètement de rythme. Ici, je vais vous laisser le lieu. Mettez l’audio en pause. Suivez l’eau, les ombres, les ouvertures et les perspectives. Marchez où votre attention vous conduit et ne pensez pas à la durée. Quand vous aurez envie de retrouver le récit, relancez simplement la lecture."},
-    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":850,"text":"Vous êtes revenu quand vous l’avez décidé. C’est exactement le bon rythme pour ces jardins. Un jardin palatial n’est pas simplement un endroit agréable : il organise parcours, fraîcheur, vues, surprises et maîtrise symbolique de la nature. La gourmandise sur l’eau et le jardin développe cette idée si vous voulez aller plus loin. À la sortie, ne retenez pas une liste de salles. Retenez une transformation de votre regard. Ce matin, le pouvoir chrétien conservait et transformait un monument almohade. Ici, il choisit lui-même des formes héritées d’un autre monde politique pour se représenter. C’est pourquoi l’Alcázar est le cœur intellectuel du voyage : il rend les frontières entre avant et après, eux et nous, beaucoup moins nettes que les récits de conquête ne le laissent croire."}
+  "schema_version": 3,
+  "id": "seville-discovery-ep02",
+  "title": "Alcázar — visite approfondie : lire mille ans de pouvoir dans les espaces",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 8,
+  "series": "Séville — trois jours pour comprendre la ville",
+  "episode": 4,
+  "stop": "Real Alcázar de Sevilla",
+  "location": "Real Alcázar de Sevilla",
+  "launch": "Commencez à la Puerta del León à 17 h. Cette version est conçue comme un véritable guide intérieur : écoutez une séquence, regardez, puis mettez l’audio en pause lorsque le récit vous rend le lieu. Si le sens de circulation ou une fermeture vous détourne d’un espace, passez simplement à la séquence suivante lorsque vous retrouvez le lieu nommé.",
+  "look": "Puerta del León, Patio del León, Sala de la Justicia et Patio del Yeso, Patio de la Montería, Casa de la Contratación, façade du palais de Pierre Ier, Patio de las Doncellas, Salón de Embajadores, Patio de las Muñecas, Palacio Gótico, Baños de Doña María de Padilla, Estanque de Mercurio, Galería del Grutesco et jardins.",
+  "summary": "Une visite intérieure détaillée du Real Alcázar, centrée sur ce qui est réellement visible avec l’entrée générale : couches islamiques, palais chrétien, mudéjar de Pierre Ier, administration atlantique, palais gothique, eau et jardins. Le fil directeur reste le même : comprendre comment chaque pouvoir hérite, transforme et met en scène les formes du précédent.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://alcazarsevilla.org/prepara-la-visita/",
+    "https://alcazarsevilla.org/historia/",
+    "https://www.alcazarsevilla.org/wp-content/uploads/folleto_fra.pdf",
+    "https://alcazarsevilla.org/noticia/pasaje-patio-de-las-munecas/",
+    "https://www.alcazarsevilla.org/wp-content/uploads/2014/01/Apuntes-14.pdf"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 900,
+      "text": "Vous entrez par la Puerta del León. Avant les palais, retenez ceci : l’Alcázar n’est pas un bâtiment construit d’un seul geste. C’est un territoire de pouvoir remanié pendant près de mille ans. Des gouvernants musulmans l’installent et l’agrandissent ; après la conquête castillane, la monarchie chrétienne ne l’abandonne pas. Elle s’y installe, transforme, ajoute, réemploie. Votre visite va donc moins consister à reconnaître des styles qu’à suivre des décisions politiques inscrites dans la pierre, le plâtre, le bois, l’eau et les parcours. Avancez vers le Patio del León et laissez d’abord l’échelle du lieu vous faire comprendre que vous franchissez une enceinte de pouvoir, pas la porte d’une maison isolée."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 850,
+      "text": "Si la circulation vous conduit par la Sala de la Justicia puis le Patio del Yeso, ralentissez ici. Regardez les arcs, les proportions et surtout l’impression de retrait. Ces espaces conservent des traces des phases islamiques antérieures aux grands palais chrétiens que vous allez voir ensuite. Ne cherchez pas à tout dater. Ce qui compte est de sentir que le nouveau pouvoir n’a pas reçu une page blanche : il hérite d’un ensemble déjà prestigieux, déjà organisé, déjà chargé de mémoire. Cette contrainte va devenir une ressource. Quand vous êtes prêt, poursuivez vers le Patio de la Montería."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 950,
+      "text": "Au Patio de la Montería, arrêtez-vous avant d’entrer dans le palais de Pierre Ier. Regardez sa façade de face. Elle est une déclaration. Le roi chrétien de Castille, au quatorzième siècle, commande un palais qui mobilise des artisans, des techniques et un vocabulaire décoratif profondément liés aux traditions d’Al-Andalus. C’est le paradoxe central de notre visite : victoire politique ne signifie pas disparition culturelle. Les formes circulent parce qu’elles restent prestigieuses, efficaces et désirables. Regardez maintenant la façade comme une scène diplomatique : elle ne dit pas seulement qui règne ; elle dit dans quel langage le souverain choisit d’être admiré. Si cette question vous accroche, c’est ici le meilleur moment pour ouvrir la gourmandise « Mudéjar sans raccourci : qui parle sur les murs ? ». Revenez ensuite à ce parcours principal."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 900,
+      "text": "Avant le palais de Pierre Ier, si la Casa de la Contratación est ouverte dans votre chemin, entrez-y. Après 1503, cette institution devient l’un des organes essentiels de l’administration des relations avec les Indes. Regardez le Cuarto del Almirante et, si elle est accessible, la chapelle de la Virgen de los Navegantes. Le contraste est précieux : dans quelques mètres, vous passez d’un palais qui met en scène une monarchie médiévale à un espace associé à la gestion d’un monde atlantique en expansion. L’Alcázar n’est donc pas seulement le décor d’une dynastie ; il devient aussi une pièce de la machine administrative qui relie Séville à l’Amérique."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 850,
+      "text": "Entrez maintenant dans le palais de Pierre Ier et attendez le Patio de las Doncellas. Quand il s’ouvre devant vous, ne cherchez pas tout de suite une explication. Regardez l’axe central, l’eau, les galeries et la répétition des arcs. Faites ensuite le tour lentement avec les yeux : bas des murs, colonnes, plâtres sculptés, portes, puis étage supérieur. Le patio a été transformé au fil des siècles ; les recherches archéologiques ont notamment permis de restituer son jardin médiéval central. Cela suffit à rappeler une chose essentielle : ce que vous voyez aujourd’hui est déjà le résultat d’une longue histoire de modifications, de restaurations et de choix de présentation."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 950,
+      "text": "Dans le Patio de las Doncellas, cherchez maintenant comment le décor produit du pouvoir sans utiliser la monumentalité massive d’une forteresse. Ici, l’effet vient de la précision, de la répétition, de la lumière et de la maîtrise du détail. Le mot mudéjar est utile pour décrire cette culture artistique produite sous domination chrétienne avec des formes, techniques et artisans héritiers de traditions islamiques, mais ne le transformez pas en réponse automatique. Demandez plutôt : qui commande, qui sait faire, quels modèles circulent, et pourquoi le souverain veut-il précisément cet effet ? Cette question est plus féconde que l’étiquette."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 1000,
+      "text": "Quand vous entrez dans le Salón de Embajadores, levez les yeux avant toute chose. Puis descendez lentement le regard vers les murs, les arcs et les ouvertures. C’est une salle d’audience : elle est faite pour produire un effet sur celui qui entre. Le décor enveloppe, multiplie les surfaces, brouille la frontière entre structure et ornement. Imaginez un visiteur diplomatique qui attend ici face au souverain. Ce qu’il perçoit n’est pas seulement la richesse ; c’est la capacité du pouvoir à ordonner des artisans, des matières, des inscriptions et un espace entier autour de lui. Le message politique est spatial avant d’être verbal."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 1000,
+      "text": "Si vous passez par le Patio de las Muñecas, changez d’échelle. C’est un espace plus intime. Son nom est traditionnellement associé à de petites têtes visibles dans les plâtres des arcs. Ne faites pas de leur recherche un jeu obligatoire : regardez surtout comment la proximité des parois, la finesse du décor et les circulations donnent une sensation très différente de celle du Patio de las Doncellas. Un palais n’est pas une suite de salles spectaculaires ; c’est une organisation de degrés d’accès, du public au plus privé. Le pouvoir se lit aussi dans la possibilité de contrôler qui voit quoi, et jusqu’où chacun peut avancer."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 900,
+      "text": "Lorsque vous gagnez le Palacio Gótico, laissez le contraste vous surprendre. Après les surfaces extraordinairement travaillées du palais mudéjar, l’espace change de logique. Ce palais est lié aux transformations chrétiennes engagées après la conquête, notamment sous Alphonse X. Ne cherchez pas lequel serait le plus authentiquement sévillan : ils sont tous les deux Séville. Le point intéressant est justement leur coexistence. En quelques minutes, vous traversez des conceptions différentes de la représentation royale sans quitter la même enceinte. C’est une histoire de succession, mais aussi d’addition."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 850,
+      "text": "Si l’accès aux Baños de Doña María de Padilla est ouvert, descendez ou approchez-vous de cet espace voûté et regardez d’abord l’eau avant de penser à la légende attachée au nom. Ces citernes occupent la partie inférieure du Patio del Crucero. L’atmosphère est presque l’inverse des patios lumineux : répétition des voûtes, fraîcheur, reflets et profondeur. C’est un bon endroit pour corriger une idée simple : dans l’Alcázar, l’eau n’est pas un décor ajouté aux jardins. Elle appartient à une infrastructure de confort, d’approvisionnement, de fraîcheur et de mise en scène qui traverse tout le complexe."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 900,
+      "text": "En entrant dans les jardins, cherchez d’abord l’Estanque de Mercurio puis la Galería del Grutesco si votre parcours les rend accessibles. Ici encore, vous ne regardez pas un jardin figé d’époque médiévale. Les jardins ont été transformés, agrandis et mis en scène au fil des siècles. La galerie aménagée sur l’ancienne muraille montre parfaitement ce mécanisme : un élément défensif devient support de promenade et de spectacle. Regardez depuis là les niveaux, l’eau, les masses végétales et les perspectives. Si vous voulez comprendre ce qui rend toute cette eau possible, ouvrez ici la gourmandise « Gouverner par l’eau : le jardin visible et son infrastructure cachée ». Puis revenez au parcours principal pour la fin de visite."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 1000,
+      "text": "Maintenant, je vais vous rendre complètement les jardins. Mettez l’audio en pause. Ne cherchez plus aucun point obligatoire. Choisissez une allée, un bassin, une ombre, une perspective. Écoutez aussi le lieu réel autour de vous. Restez deux minutes ou vingt minutes : cette durée vous appartient. Quand vous aurez envie de reprendre le fil historique, revenez simplement ici et relancez la lecture."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 900,
+      "text": "Vous revoilà. Avant de repartir, reconstruisons la visite sans faire une liste. Vous êtes entré dans une enceinte née du pouvoir islamique. Vous avez vu la monarchie chrétienne y rester et y construire. Vous avez vu Pierre Ier commander un palais utilisant consciemment des formes et savoir-faire hérités d’Al-Andalus. Vous avez croisé la Casa de la Contratación, où le pouvoir se projette désormais vers l’Atlantique. Vous avez traversé un palais gothique puis des jardins continuellement transformés. Le fil commun est simple : aucun pouvoir ne repart de zéro. Chacun hérite d’espaces, de techniques, d’images et de contraintes qu’il réemploie pour raconter sa propre légitimité."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Dernier conseil pratique : ne sacrifiez pas les jardins pour cocher une salle de plus. Votre billet de 17 heures vous laisse une longue fin d’après-midi, mais le site est en horaire d’été et le déplacement de sortie commence plus tard dans la soirée. Si un espace est fermé pour maintenance ou nécessité de service, acceptez le détour : le Real Alcázar lui-même rappelle que certaines zones peuvent fermer occasionnellement. À la sortie, retenez une question pour demain : si le pouvoir royal transforme aussi librement les formes qu’il reçoit, que fera la ville ordinaire de ces mêmes héritages ? Santa Cruz et l’Archivo prolongeront cette réponse."
+    }
   ]
 }

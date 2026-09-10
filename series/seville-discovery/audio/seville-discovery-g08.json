@@ -1,1 +1,70 @@
-{"schema_version":1,"language":"fr-FR","profile":"speech","id":"seville-discovery-g08","production_version":1,"title":"Gouverner par l’eau et le jardin","series":"Séville — deux jours pour comprendre la ville","episode":null,"after_episode":4,"location":"Jardins du Real Alcázar","summary":"Fraîcheur et beauté, mais aussi technique, parcours et représentation.","lead_in_ms":350,"sources":["https://alcazarsevilla.org/historia/"],"segments":[{"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Dans les jardins de l’Alcázar, l’eau produit d’abord un plaisir immédiat : fraîcheur, mouvement, reflet, son. Mais un jardin palatial est aussi une démonstration de capacité technique. Faire venir l’eau, la distribuer, la canaliser et l’utiliser dans une composition suppose des infrastructures et des compétences."},{"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":650,"text":"Le jardin organise également le regard. Il vous fait passer d’un espace clos à une perspective, d’une zone d’ombre à une lumière plus forte, d’un bassin à une allée. Cette chorégraphie transforme la promenade en expérience de pouvoir : la nature paraît maîtrisée, ordonnée et rendue disponible au plaisir de la cour."},{"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Quand vous reviendrez au Callejón del Agua ou penserez aux Caños de Carmona, vous pourrez relier la poésie du jardin à son envers technique. L’eau est à la fois sensation, infrastructure et signe social. C’est une bonne définition de beaucoup de choses à Séville : elles fonctionnent sur plusieurs niveaux à la fois."}]}
+{
+  "schema_version": 3,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "seville-discovery-g08",
+  "production_version": 2,
+  "title": "Gouverner par l’eau : le jardin visible et son infrastructure cachée",
+  "series": "Séville — trois jours pour comprendre la ville",
+  "episode": null,
+  "after_episode": 4,
+  "location": "Estanque de Mercurio et jardins du Real Alcázar",
+  "summary": "Une gourmandise à lancer près de l’Estanque de Mercurio ou dans les jardins pour relier plaisir, hydraulique, irrigation, fraîcheur et mise en scène du pouvoir.",
+  "lead_in_ms": 350,
+  "sources": [
+    "https://alcazarsevilla.org/historia/",
+    "https://www.alcazarsevilla.org/wp-content/uploads/2019/04/real-alc%C3%A1zar-para-web.pdf",
+    "https://www.alcazarsevilla.org/wp-content/uploads/2014/01/Apuntes-14.pdf"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Lancez cette gourmandise si vous êtes près de l’Estanque de Mercurio ou si vous avez déjà commencé à marcher dans les jardins. Le premier piège serait de regarder l’eau uniquement comme un décor. Ici, chaque reflet agréable cache une question technique : d’où vient cette eau, comment arrive-t-elle jusqu’au palais, comment est-elle stockée, distribuée puis utilisée pour les fontaines, les bassins et l’irrigation ?"
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 750,
+      "text": "Les études publiées par le Real Alcázar permettent de suivre cette infrastructure. L’eau historique arrivait vers la ville par les Caños de Carmona, puis gagnait l’Alcázar par la muraille du secteur que nous appelons aujourd’hui Callejón del Agua. Elle aboutissait vers la Torre del Agua, puis vers un bassin devenu l’Estanque de Mercurio. À partir de là, le réseau distribuait l’eau vers fontaines, jardins, vergers et bassins. Vous avez donc sous les yeux la partie spectaculaire d’un système beaucoup plus vaste."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 750,
+      "text": "Regardez maintenant le jardin avec cette information. Une allée fraîche, un bassin, des orangers irrigués ou une fontaine deviennent les extrémités visibles d’une chaîne de captage, de conduite, de stockage et de répartition. La maîtrise de l’eau améliore évidemment le confort dans un climat chaud. Mais dans un palais, cette capacité technique devient aussi représentation : faire circuler l’eau là où on le souhaite, créer du frais, du son et du reflet, c’est montrer qu’on sait ordonner un environnement."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 800,
+      "text": "Le jardin, lui aussi, vous dirige. Il alterne ouvertures et retraits, soleil et ombre, plans d’eau et masses végétales. Même lorsque vous avez l’impression de vous promener librement, l’espace propose des cadrages, des perspectives et des surprises. C’est une forme douce de mise en scène. Le pouvoir n’a pas besoin d’un mur massif pour se faire sentir : il peut aussi se manifester par la capacité à fabriquer une expérience agréable et parfaitement organisée."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 750,
+      "text": "Il existe même ici une rencontre étonnante entre eau, mécanique et musique. Dans le Jardín de las Damas, la Fuente de la Fama possède un orgue hydraulique dont le mécanisme moderne a été restauré en s’inspirant des dispositifs historiques européens. L’eau ne sert donc pas seulement à irriguer ou rafraîchir : elle peut devenir énergie, mouvement et son. Ce détail résume bien l’Alcázar, où l’infrastructure et la mise en scène se confondent souvent."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 850,
+      "text": "Avant de reprendre le parcours principal, faites un petit test. Regardez autour de vous et choisissez un seul élément d’eau. Suivez mentalement le chemin inverse : bassin, conduite, stockage, arrivée dans le complexe, alimentation depuis l’extérieur. Vous venez de transformer une jolie image en système urbain. Demain, au Callejón del Agua, vous verrez justement l’un des endroits où cette infrastructure rejoint la ville."
+    },
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 700,
+      "text": "Retournez maintenant au guide principal ou gardez simplement le téléphone en pause. Cette gourmandise n’a qu’un objectif : lorsque vous entendrez de l’eau dans les jardins, ne plus entendre seulement une fontaine. Entendez aussi la technique, le climat, le travail et le pouvoir qui rendent cette fraîcheur possible."
+    }
+  ]
+}
