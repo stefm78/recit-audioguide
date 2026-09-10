@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "language": "fr-FR",
+  "profile": "speech",
+  "id": "seville-discovery-g14",
+  "production_version": 1,
+  "title": "Pierre Ier et Muhammad V : deux cours qui se regardent",
+  "series": "Séville — trois jours pour comprendre la ville",
+  "episode": null,
+  "after_episode": 4,
+  "location": "Façade du Palacio del Rey Don Pedro ou Patio de las Doncellas, Real Alcázar de Sevilla",
+  "summary": "Pourquoi l’Alcázar de Pierre Ier ne se comprend pas comme un art chrétien isolé : diplomatie, rivalités et circulations entre les cours de Castille et de Grenade.",
+  "lead_in_ms": 350,
+  "sources": ["https://alcazarsevilla.org/historia/","https://www.alcazarsevilla.org/wp-content/uploads/2014/01/Apuntes-14.pdf"],
+  "segments": [
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Lancez cette gourmandise devant la façade de Pierre Ier ou dans le Patio de las Doncellas. Et si ce palais n’était pas seulement le produit de Séville, mais celui d’un dialogue politique à l’échelle de toute la péninsule ?"},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Au milieu du quatorzième siècle, Pierre Ier règne sur la Castille. Au sud, le royaume nasride de Grenade subsiste. Les publications du Real Alcázar rappellent notamment le rôle de Pierre Ier dans le retour au pouvoir du sultan Muhammad V. Les deux cours ne vivent donc pas dans des mondes étanches."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Regardez autour de vous. Les formes ne sont pas la copie passive d’un passé musulman. Elles appartiennent à un monde vivant de cours royales, d’artisans, de techniques et de signes de prestige qui circulent encore."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Cette proximité n’efface ni la guerre, ni la domination, ni les rapports de force. C’est justement ce qui rend le lieu intéressant : on peut coopérer, admirer les mêmes formes et partager des savoir-faire tout en restant des rivaux politiques."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":750,"text":"Cherchez maintenant un détail qui pourrait évoquer Grenade, puis un signe qui affirme la monarchie de Castille. L’Alcázar devient passionnant quand les deux sont visibles dans le même champ."},
+    {"character_id":"narrateur","speaker":"Narrateur","preset":"narrateur-vif","pause_after_ms":700,"text":"Revenez au parcours principal avec une idée : après une conquête, les frontières politiques peuvent changer plus vite que les goûts, les techniques et les langages du prestige."}
+  ]
+}
