@@ -23,8 +23,8 @@
       "why": "La Maestranza apporte au voyage un registre absent jusque-là : spectacle public, institution nobiliaire, architecture du regard, patrimoine vivant et controverse contemporaine.",
       "look_first": "Avant les figures et les anecdotes, regardez la forme irrégulière de la plaza, puis le ruedo, les barrières, les portes et la manière dont les gradins concentrent les regards.",
       "field_minutes": 105,
-      "booking_state": "AVAILABLE_NOT_BOOKED",
-      "fallback": "Casa de Pilatos si le créneau de 9 h 30 n’est pas réservé ou devient inaccessible.",
+      "booking_state": "BOOKED_CONFIRMED",
+      "fallback": "Casa de Pilatos seulement si la Maestranza devient exceptionnellement inaccessible malgré la réservation.",
       "cues": [
         {"type":"ARRIVAL","text":"En approchant, regardez d’abord la relation entre la plaza, l’Arenal et le Guadalquivir. Vendredi vous l’avez vue de l’extérieur ; aujourd’hui le changement de point de vue est l’objet de la visite."},
         {"type":"LOOK","text":"Cherchez l’irrégularité du bâtiment : la Real Maestranza explique que la plaza s’est construite sur environ cent vingt ans et forme un polygone irrégulier de trente côtés."},
