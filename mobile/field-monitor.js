@@ -54,6 +54,7 @@
   function render(){
     const root = document.getElementById('app');
     if(!root || document.documentElement.dataset.recitSeriesReady === '1') return;
+    if(root.querySelector('[data-episode]')) return;
     const elapsed = (nowMs()/1000).toFixed(1);
     const recent = events.slice(-6).map(e => `<li><strong>${Math.round(e.t_ms)} ms</strong> — ${escapeHtml(e.stage)}</li>`).join('');
     root.innerHTML = `<section class="card" id="recit-field-status"><p class="eyebrow">Initialisation du guide</p><h1>${failed ? 'Le guide ne démarre pas' : escapeHtml(currentStage)}</h1><p>${failed ? 'Une étape a échoué. Le diagnostic ci-dessous permet d’identifier précisément où.' : `Temps écoulé : ${elapsed} s`}</p><ol>${recent}</ol><details ${failed ? 'open' : ''}><summary>Diagnostic technique</summary><pre style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:.75rem">${escapeHtml(JSON.stringify(snapshot(), null, 2))}</pre></details><button type="button" id="recit-copy-diagnostic">Copier le diagnostic</button>${failed ? '<p><button type="button" onclick="location.reload()">Réessayer</button></p>' : ''}</section>`;
@@ -67,7 +68,7 @@
     step(stage, data){ push('info', stage, data); },
     warn(stage, data){ push('warn', stage, data); },
     fail(stage, data){ failed = true; push('error', stage, data); },
-    ready(data){ push('info', 'Guide prêt', data); document.documentElement.dataset.recitSeriesReady = '1'; },
+    ready(data){ document.documentElement.dataset.recitSeriesReady = '1'; push('info', 'Guide prêt', data); },
     snapshot,
     copy: copyDiagnostic
   };
