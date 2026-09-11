@@ -23,8 +23,8 @@ for(const file of await walk(target)){
   if(!file.endsWith('.html')) continue;
   let html=await readFile(file,'utf8');
   html=html
-    .replace(/\s*<link[^>]+href=["']https:\/\/unpkg\.com\/leaflet[^>]*>\s*/gi,'\n')
-    .replace(/\s*<script[^>]+src=["']https:\/\/unpkg\.com\/leaflet[^>]*><\/script>\s*/gi,'\n')
+    .replace(/\s*<link\b[^>]*href=["']https?:\/\/[^>]*>\s*/gi,'\n')
+    .replace(/\s*<script\b[^>]*src=["']https?:\/\/[^>]*><\/script>\s*/gi,'\n')
     .replace('</head>','  <meta name="recit-mobile-shell" content="offline-first">\n</head>');
   await writeFile(file,html);
 }
