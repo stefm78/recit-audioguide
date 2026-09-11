@@ -1,7 +1,7 @@
 {
   "name": "recit-audioguide-mobile-spike",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Shared-shell offline-first MVP for Récit audioguide",
   "engines": {
     "node": ">=22"
@@ -9,8 +9,10 @@
   "scripts": {
     "prepare:web": "node prepare-web.mjs",
     "freeze:seville": "node freeze-series.mjs seville-discovery",
+    "finalize:runtime": "node finalize-runtime.mjs seville-discovery",
     "verify:offline": "node verify-offline.mjs seville-discovery",
-    "prepare:offline-seville": "npm run prepare:web && npm run freeze:seville && npm run verify:offline",
+    "verify:runtime": "node verify-runtime.mjs seville-discovery",
+    "prepare:offline-seville": "npm run prepare:web && npm run freeze:seville && npm run finalize:runtime && npm run verify:offline && npm run verify:runtime",
     "cap:sync:android": "npx cap sync android",
     "cap:sync:ios": "npx cap sync ios"
   },
