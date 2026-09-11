@@ -1,0 +1,86 @@
+name: Mobile shared-shell spike
+
+on:
+  pull_request:
+    paths:
+      - 'mobile/**'
+      - 'web/**'
+      - 'site/**'
+      - 'series/**'
+      - '.github/workflows/mobile-shared-shell-spike.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  android-spike:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build existing Web product
+        run: python site/build.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: mobile/package.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install Capacitor spike dependencies
+        working-directory: mobile
+        run: npm install --no-audit --no-fund
+      - name: Prepare exact Web payload
+        working-directory: mobile
+        run: npm run prepare:web
+      - name: Generate Android shell
+        working-directory: mobile
+        run: npx cap add android
+      - name: Sync Android shell
+        working-directory: mobile
+        run: npx cap sync android
+      - name: Compile debug APK
+        working-directory: mobile/android
+        run: ./gradlew assembleDebug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: recit-shared-shell-android-debug
+          path: mobile/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+  ios-spike:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build existing Web product
+        run: python site/build.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: mobile/package.json
+      - name: Install Capacitor spike dependencies
+        working-directory: mobile
+        run: npm install --no-audit --no-fund
+      - name: Prepare exact Web payload
+        working-directory: mobile
+        run: npm run prepare:web
+      - name: Generate iOS shell
+        working-directory: mobile
+        run: npx cap add ios
+      - name: Sync iOS shell
+        working-directory: mobile
+        run: npx cap sync ios
+      - name: Compile unsigned simulator build
+        working-directory: mobile
+        run: xcodebuild -workspace ios/App/App.xcworkspace -scheme App -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build CODE_SIGNING_ALLOWED=NO build
