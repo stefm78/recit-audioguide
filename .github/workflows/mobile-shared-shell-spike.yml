@@ -8,10 +8,18 @@ on:
       - 'site/**'
       - 'series/**'
       - '.github/workflows/mobile-shared-shell-spike.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'mobile/**'
+      - 'web/**'
+      - 'site/**'
+      - 'series/**'
+      - '.github/workflows/mobile-shared-shell-spike.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   android-spike:
@@ -39,25 +47,87 @@ jobs:
       - name: Freeze and verify production Seville for offline use
         working-directory: mobile
         run: npm run prepare:offline-seville
+      - name: Install stable field-test signing key
+        shell: bash
+        run: |
+          mkdir -p "$HOME/.android"
+          base64 --decode mobile/android-field-debug.keystore.b64 > "$HOME/.android/debug.keystore"
+          chmod 600 "$HOME/.android/debug.keystore"
+          keytool -list -v -keystore "$HOME/.android/debug.keystore" -storepass android -alias androiddebugkey | grep -E 'Owner:|SHA256:'
       - name: Generate Android shell
         working-directory: mobile
         run: npx cap add android
       - name: Sync Android shell
         working-directory: mobile
         run: npx cap sync android
+      - name: Stamp monotonically increasing field version
+        shell: bash
+        run: |
+          sed -i -E "s/versionCode [0-9]+/versionCode ${GITHUB_RUN_NUMBER}/" mobile/android/app/build.gradle
+          sed -i -E "s/versionName \"[^\"]+\"/versionName \"0.3.${GITHUB_RUN_NUMBER}\"/" mobile/android/app/build.gradle
+          grep -E 'applicationId|versionCode|versionName|minSdkVersion|targetSdkVersion' mobile/android/app/build.gradle
       - name: Compile field-test APK
         working-directory: mobile/android
         run: ./gradlew assembleDebug
+      - name: Verify APK installability metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          APK="mobile/android/app/build/outputs/apk/debug/app-debug.apk"
+          OUT="mobile/android/install-metadata.txt"
+          BUILD_TOOLS="$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -n 1)"
+          AAPT="$BUILD_TOOLS/aapt"
+          APKSIGNER="$BUILD_TOOLS/apksigner"
+          ZIPALIGN="$BUILD_TOOLS/zipalign"
+          "$ZIPALIGN" -c -v 4 "$APK"
+          {
+            echo "schema=recit.android.field-installability.v1"
+            echo "build_sha=$GITHUB_SHA"
+            echo "run_number=$GITHUB_RUN_NUMBER"
+            echo "apk_sha256=$(sha256sum "$APK" | awk '{print $1}')"
+            echo "expected_package=com.stefm78.recitaudioguide.field"
+            echo "expected_signer_sha256=2F:54:42:78:62:74:40:0A:5C:C6:52:B4:86:AC:21:2D:FE:76:00:F3:C8:FB:B1:35:34:9B:10:F8:16:9A:B2:AB"
+            echo
+            echo "--- BADGING ---"
+            "$AAPT" dump badging "$APK"
+            echo
+            echo "--- SIGNATURE ---"
+            "$APKSIGNER" verify --verbose --print-certs "$APK"
+          } | tee "$OUT"
+          grep -q "package: name='com.stefm78.recitaudioguide.field'" "$OUT"
+          grep -q '2F:54:42:78:62:74:40:0A:5C:C6:52:B4:86:AC:21:2D:FE:76:00:F3:C8:FB:B1:35:34:9B:10:F8:16:9A:B2:AB' "$OUT"
+          cp "$APK" mobile/android/recit-seville-field.apk
       - uses: actions/upload-artifact@v4
         with:
-          name: recit-offline-seville-android-debug
-          path: mobile/android/app/build/outputs/apk/debug/app-debug.apk
+          name: recit-seville-field-android
+          path: |
+            mobile/android/recit-seville-field.apk
+            mobile/android/install-metadata.txt
           if-no-files-found: error
       - uses: actions/upload-artifact@v4
         with:
           name: recit-offline-seville-manifest
           path: mobile/www/offline/seville-discovery/package-manifest.json
           if-no-files-found: error
+      - name: Publish stable field-test download release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="android-field-latest"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release delete "$TAG" --yes --cleanup-tag
+          fi
+          gh release create "$TAG" \
+            mobile/android/recit-seville-field.apk \
+            mobile/android/install-metadata.txt \
+            mobile/www/offline/seville-discovery/package-manifest.json \
+            --target "$GITHUB_SHA" \
+            --title "Récit Séville — Android Field Test" \
+            --notes "APK de test Android offline. Package com.stefm78.recitaudioguide.field. Signature field-test stable, non-production. URL stable pour installation et mises à jour de qualification." \
+            --prerelease
 
   ios-spike:
     runs-on: macos-latest
