@@ -12,8 +12,21 @@ const app = await readFile(join(www, 'assets', 'app.js'), 'utf8');
 const series = JSON.parse(await readFile(join(www, 'data', slug, 'series.json'), 'utf8'));
 
 function assert(cond, msg){ if(!cond) throw new Error(msg); }
-assert(home.includes('id="recit-mobile-bootstrap"'), 'home bootstrap missing');
-assert(home.includes(`\"slug\":\"${slug}\"`), 'field catalog does not contain Seville');
+
+assert(home.includes('id="recit-field-build"'), 'visible FIELD build identity missing on home');
+assert(home.includes('id="recit-field-build-data"'), 'machine-readable FIELD build identity missing on home');
+assert(home.includes('FIELD BUILD 0.4.'), 'FIELD build version not visibly stamped on home');
+assert(home.includes('com.stefm78.recitaudioguide.field'), 'FIELD package identity not visibly stamped on home');
+assert(home.includes('id="recit-field-seville-launch"'), 'static Seville launcher missing');
+assert(home.includes(`href="./s/${slug}/"`), 'static Seville launcher points to wrong target');
+assert(!home.includes('<p>Chargement…</p>'), 'home still contains a loading-only state');
+assert(!home.includes('src="./assets/home.js"'), 'FIELD home must not depend on home.js');
+assert(home.includes('id="recit-mobile-bootstrap"'), 'home embedded bootstrap missing');
+assert(home.includes(`\"slug\":\"${slug}\"`), 'embedded field data does not contain Seville');
+
+assert(page.includes('id="recit-field-build"'), 'visible FIELD build identity missing on series page');
+assert(page.includes('id="recit-field-build-data"'), 'machine-readable FIELD build identity missing on series page');
+assert(page.includes('id="recit-field-monitor"'), 'series field monitor missing');
 assert(page.includes('id="recit-mobile-bootstrap"'), 'series bootstrap missing');
 assert(page.includes('window.RECIT_SERIES_DATA'), 'inline series data missing');
 const bootstrapPos = page.indexOf('id="recit-mobile-bootstrap"');
@@ -36,4 +49,4 @@ for(const e of playable){
 }
 
 await access(pagePath);
-console.log(`Runtime PASS: embedded catalog -> ${slug} -> ${playable.length} playable local episodes; series bootstrap is fetch-independent`);
+console.log(`Runtime PASS: static FIELD launcher -> ${slug} -> ${playable.length} playable local episodes; no home JS/fetch dependency; build identity visible`);
