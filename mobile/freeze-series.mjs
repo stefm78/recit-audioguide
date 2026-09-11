@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -43,10 +43,13 @@ async function saveUrl(url){
   return item;
 }
 
+function looksLikeReference(value){
+  return /^(https?:|\.\.?\/|\/)/i.test(value);
+}
 function collectInternalUrls(value, originUrl, out = new Set()){
   if(Array.isArray(value)) value.forEach(v => collectInternalUrls(v, originUrl, out));
   else if(value && typeof value === 'object') Object.values(value).forEach(v => collectInternalUrls(v, originUrl, out));
-  else if(typeof value === 'string'){
+  else if(typeof value === 'string' && looksLikeReference(value)){
     try {
       const u = new URL(value, originUrl);
       if(u.origin === base.origin && u.pathname.startsWith(base.pathname)) out.add(String(u));
