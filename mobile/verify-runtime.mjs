@@ -18,7 +18,9 @@ assert(home.includes('id="recit-field-build-data"'), 'machine-readable FIELD bui
 assert(home.includes('FIELD BUILD 0.4.'), 'FIELD build version not visibly stamped on home');
 assert(home.includes('com.stefm78.recitaudioguide.field'), 'FIELD package identity not visibly stamped on home');
 assert(home.includes('id="recit-field-seville-launch"'), 'static Seville launcher missing');
-assert(home.includes(`href="./s/${slug}/"`), 'static Seville launcher points to wrong target');
+assert(home.includes(`href="./s/${slug}/index.html"`), 'static Seville launcher must target explicit packaged index.html');
+const launchUrl = new URL(`./s/${slug}/index.html`, 'https://localhost/');
+assert(launchUrl.pathname === `/s/${slug}/index.html`, `unexpected field launch URL: ${launchUrl.href}`);
 assert(!home.includes('<p>Chargement…</p>'), 'home still contains a loading-only state');
 assert(!home.includes('src="./assets/home.js"'), 'FIELD home must not depend on home.js');
 assert(home.includes('id="recit-mobile-bootstrap"'), 'home embedded bootstrap missing');
@@ -49,4 +51,4 @@ for(const e of playable){
 }
 
 await access(pagePath);
-console.log(`Runtime PASS: static FIELD launcher -> ${slug} -> ${playable.length} playable local episodes; no home JS/fetch dependency; build identity visible`);
+console.log(`Runtime PASS: explicit static FIELD launcher -> ${slug}/index.html -> ${playable.length} playable local episodes; no home JS/fetch dependency; build identity visible`);
