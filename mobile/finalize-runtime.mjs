@@ -71,7 +71,7 @@ async function hardenHome(){
   const item = fieldCatalog[0];
   const loading = '<div id="catalog" class="catalog" aria-live="polite"><p>Chargement…</p></div>';
   if(!html.includes(loading)) throw new Error('Field home loading marker not found');
-  const staticCard = `<div id="catalog" class="catalog" aria-live="polite"><a id="recit-field-seville-launch" class="catalog-card" href="./s/${slug}/"><span class="mode">VISITE TERRAIN</span><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.subtitle || '')}</span><small>${item.episode_count} épisodes · contenu embarqué hors ligne</small></a></div>`;
+  const staticCard = `<div id="catalog" class="catalog" aria-live="polite"><a id="recit-field-seville-launch" class="catalog-card" href="./s/${slug}/index.html"><span class="mode">VISITE TERRAIN</span><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.subtitle || '')}</span><small>${item.episode_count} épisodes · contenu embarqué hors ligne</small></a></div>`;
   html = html.replace(loading, staticCard);
   html = html.replace('  <script src="./assets/home.js" defer></script>\n', '');
   html = html.replace('<body>', `<body>\n  ${identityHtml()}\n  ${bootstrapScript()}`);
