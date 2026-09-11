@@ -23,10 +23,10 @@ assert(app.includes('const embedded = window.RECIT_SERIES_DATA'), 'app.js does n
 assert(app.includes('embedded.slug === slug'), 'embedded series data is not slug-qualified');
 assert(app.includes("document.documentElement.dataset.recitSeriesReady = '1'"), 'series-ready runtime marker missing');
 assert(app.includes('Récit series bootstrap timeout'), 'visible bootstrap watchdog missing');
-assert(series.episodes?.length > 0, 'series has no episodes');
+assert(series.episodes?.length >= 10, `Seville field series incomplete: ${series.episodes?.length || 0} top-level episodes`);
 
 const playable = series.episodes.filter(e => e.audio_url && e.state !== 'failed');
-assert(playable.length > 0, 'no playable Seville episode');
+assert(playable.length >= 10, `Seville field audio incomplete: ${playable.length}/10 top-level episodes playable`);
 for(const e of playable){
   const u = new URL(e.audio_url, `https://localhost/s/${slug}/`);
   assert(u.origin === 'https://localhost', `non-local audio URL for ${e.id}: ${e.audio_url}`);
