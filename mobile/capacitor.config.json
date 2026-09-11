@@ -1,6 +1,6 @@
 {
-  "appId": "com.stefm78.recitaudioguide",
-  "appName": "Récit audioguide",
+  "appId": "com.stefm78.recitaudioguide.field",
+  "appName": "Récit Séville Field",
   "webDir": "www",
   "bundledWebRuntime": false,
   "server": {
