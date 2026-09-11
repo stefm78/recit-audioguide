@@ -33,25 +33,30 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-      - name: Install Capacitor spike dependencies
+      - name: Install Capacitor dependencies
         working-directory: mobile
         run: npm install --no-audit --no-fund
-      - name: Prepare exact Web payload
+      - name: Freeze and verify production Seville for offline use
         working-directory: mobile
-        run: npm run prepare:web
+        run: npm run prepare:offline-seville
       - name: Generate Android shell
         working-directory: mobile
         run: npx cap add android
       - name: Sync Android shell
         working-directory: mobile
         run: npx cap sync android
-      - name: Compile debug APK
+      - name: Compile field-test APK
         working-directory: mobile/android
         run: ./gradlew assembleDebug
       - uses: actions/upload-artifact@v4
         with:
-          name: recit-shared-shell-android-debug
+          name: recit-offline-seville-android-debug
           path: mobile/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: recit-offline-seville-manifest
+          path: mobile/www/offline/seville-discovery/package-manifest.json
           if-no-files-found: error
 
   ios-spike:
@@ -69,18 +74,18 @@ jobs:
           node-version: '22'
           cache: npm
           cache-dependency-path: mobile/package.json
-      - name: Install Capacitor spike dependencies
+      - name: Install Capacitor dependencies
         working-directory: mobile
         run: npm install --no-audit --no-fund
-      - name: Prepare exact Web payload
+      - name: Freeze and verify production Seville for offline use
         working-directory: mobile
-        run: npm run prepare:web
+        run: npm run prepare:offline-seville
       - name: Generate iOS shell
         working-directory: mobile
         run: npx cap add ios
       - name: Sync iOS shell
         working-directory: mobile
         run: npx cap sync ios
-      - name: Compile unsigned simulator build
+      - name: Compile unsigned offline simulator build
         working-directory: mobile
         run: xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build CODE_SIGNING_ALLOWED=NO build
