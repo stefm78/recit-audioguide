@@ -13,19 +13,38 @@
   const playerSubtitle = document.getElementById('player-subtitle');
   let series, currentEpisode;
   let lastSavedSecond = -5;
+  let bootComplete = false;
+
+  const bootWatchdog = setTimeout(() => {
+    if (bootComplete) return;
+    console.error('Récit series bootstrap timeout', {slug, href: location.href, embedded: Boolean(window.RECIT_SERIES_DATA)});
+    root.innerHTML = '<section class="card"><h1>Le guide ne démarre pas</h1><p>Le contenu local est présent mais son initialisation a échoué.</p><p><button type="button" onclick="location.reload()">Réessayer</button></p><p><a href="../../">Retour aux voyages</a></p></section>';
+  }, 5000);
 
   boot();
 
   async function boot(){
     try {
-      const r = await fetch(`../../data/${encodeURIComponent(slug)}/series.json`, {cache:'no-store'});
-      if(!r.ok) throw new Error(`HTTP ${r.status}`);
-      series = await r.json();
+      const embedded = window.RECIT_SERIES_DATA;
+      if (embedded && embedded.slug === slug && Array.isArray(embedded.episodes)) {
+        series = embedded;
+      } else {
+        const r = await fetch(`../../data/${encodeURIComponent(slug)}/series.json`, {cache:'no-store'});
+        if(!r.ok) throw new Error(`HTTP ${r.status}`);
+        series = await r.json();
+      }
+      if(!series || !Array.isArray(series.episodes)) throw new Error('series payload invalid');
       document.title = `${series.title} — Récit audioguide`;
       render(series);
       restore(series);
+      bootComplete = true;
+      clearTimeout(bootWatchdog);
+      document.documentElement.dataset.recitSeriesReady = '1';
     } catch(e) {
-      root.innerHTML = '<section class="card"><h1>Récit indisponible</h1><p>Cette série ne peut pas être chargée pour le moment.</p><p><a href="../../">Retour aux voyages</a></p></section>';
+      bootComplete = true;
+      clearTimeout(bootWatchdog);
+      console.error('Récit series bootstrap failed', e);
+      root.innerHTML = '<section class="card"><h1>Récit indisponible</h1><p>Cette série ne peut pas être chargée pour le moment.</p><p><button type="button" onclick="location.reload()">Réessayer</button></p><p><a href="../../">Retour aux voyages</a></p></section>';
     }
   }
 
@@ -83,12 +102,12 @@
     currentEpisode=e;
     lastSavedSecond=-5;
     resetPlayerTime();
-    audio.play().catch(()=>{});
+    audio.play().catch(err=>console.warn('Audio playback did not start automatically', err));
     if('mediaSession' in navigator){
-      navigator.mediaSession.metadata = new MediaMetadata({title:e.title,artist:'Récit audioguide',album:series.title});
-      navigator.mediaSession.setActionHandler('play',()=>audio.play());
-      navigator.mediaSession.setActionHandler('pause',()=>audio.pause());
-      try{
+      try {
+        if(typeof MediaMetadata === 'function') navigator.mediaSession.metadata = new MediaMetadata({title:e.title,artist:'Récit audioguide',album:series.title});
+        navigator.mediaSession.setActionHandler('play',()=>audio.play());
+        navigator.mediaSession.setActionHandler('pause',()=>audio.pause());
         navigator.mediaSession.setActionHandler('seekbackward',details=>seekBy(-(Number(details?.seekOffset)||15)));
         navigator.mediaSession.setActionHandler('seekforward',details=>seekBy(Number(details?.seekOffset)||15));
         navigator.mediaSession.setActionHandler('seekto',details=>{
