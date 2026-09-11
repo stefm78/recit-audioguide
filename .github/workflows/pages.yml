@@ -301,6 +301,26 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
+      - name: Restore generated audio for non-audio changes
+        if: needs.changes.outputs.audio_needed != 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: generated/audio
+          key: audio-engine-v4-${{ runner.os }}-${{ github.repository }}-${{ github.sha }}
+          restore-keys: |
+            audio-engine-v4-${{ runner.os }}-${{ github.repository }}-
+            audio-engine-v3-${{ runner.os }}-${{ github.repository }}-
+            audio-engine-v2-${{ runner.os }}-${{ github.repository }}-
+            audio-engine-v1-${{ runner.os }}-${{ github.repository }}-
+      - name: Guard production audio continuity
+        if: needs.changes.outputs.audio_needed != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if find series -path '*/audio/*.json' -type f -print -quit | grep -q .; then
+            test -d generated/audio || { echo 'Production audio cache missing: refusing to publish an audio-less site.' >&2; exit 1; }
+            find generated/audio -name 'audio.mp3' -type f -print -quit | grep -q . || { echo 'Production audio cache contains no rendered audio: refusing deployment.' >&2; exit 1; }
+          fi
       - name: Download generated audio
         if: needs.changes.outputs.audio_needed == 'true'
         uses: actions/download-artifact@v4
