@@ -60,6 +60,21 @@ jobs:
       - name: Sync Android shell
         working-directory: mobile
         run: npx cap sync android
+      - name: Qualify Android native media-session wiring
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -R -q 'capacitor-media-session' mobile/android/capacitor.settings.gradle mobile/android/app/capacitor.build.gradle
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('mobile/android/app/src/main/AndroidManifest.xml')
+          text = p.read_text(encoding='utf-8')
+          perm = '    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />\n'
+          if 'android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK' not in text:
+              text = text.replace('    <application', perm + '\n    <application', 1)
+              p.write_text(text, encoding='utf-8')
+          PY
+          grep -q 'FOREGROUND_SERVICE_MEDIA_PLAYBACK' mobile/android/app/src/main/AndroidManifest.xml
       - name: Stamp unmistakable field identity
         shell: bash
         run: |
@@ -73,6 +88,18 @@ jobs:
       - name: Compile field-test APK
         working-directory: mobile/android
         run: ./gradlew assembleDebug
+      - name: Verify merged Android media service
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -R -q 'com.capgo.mediasession.MediaSessionService' mobile/android/app/build/intermediates || {
+            echo 'MediaSessionService missing from merged Android build' >&2
+            exit 1
+          }
+          grep -R -q 'android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK' mobile/android/app/build/intermediates || {
+            echo 'mediaPlayback foreground-service permission missing from merged Android build' >&2
+            exit 1
+          }
       - name: Verify APK installability metadata
         shell: bash
         run: |
@@ -134,7 +161,7 @@ jobs:
             mobile/www/offline/seville-discovery/package-manifest.json \
             --target "$GITHUB_SHA" \
             --title "Récit Séville — Android Field Test B${GITHUB_RUN_NUMBER}" \
-            --notes "Field v0.4.${GITHUB_RUN_NUMBER}. Le nom Android DOIT être '00 Récit FIELD B${GITHUB_RUN_NUMBER}' et l'écran DOIT afficher FIELD BUILD 0.4.${GITHUB_RUN_NUMBER} avec le SHA ${GITHUB_SHA}. Accueil volontairement réduit à un lanceur Séville statique, sans dépendance JS/fetch." \
+            --notes "Field v0.4.${GITHUB_RUN_NUMBER}. Le nom Android DOIT être '00 Récit FIELD B${GITHUB_RUN_NUMBER}' et l'écran DOIT afficher FIELD BUILD 0.4.${GITHUB_RUN_NUMBER} avec le SHA ${GITHUB_SHA}. Qualification terrain ciblée : commandes média Android natives (play/pause et ±15 s), reprise explicite après interruption, point de reprise persistant et tiroir de navigation par geste de bord. Les preuves device restent souveraines." \
             --prerelease
 
   ios-spike:
