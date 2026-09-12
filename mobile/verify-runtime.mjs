@@ -10,6 +10,7 @@ const pagePath = join(www, 's', slug, 'index.html');
 const page = await readFile(pagePath, 'utf8');
 const app = await readFile(join(www, 'assets', 'app.js'), 'utf8');
 const styles = await readFile(join(www, 'assets', 'styles.css'), 'utf8');
+const homeLibrary = await readFile(join(here, 'home-library.js'), 'utf8');
 const catalog = JSON.parse(await readFile(join(www, 'catalog.json'), 'utf8'));
 const series = JSON.parse(await readFile(join(www, 'data', slug, 'series.json'), 'utf8'));
 const pkg = JSON.parse(await readFile(join(here, 'package.json'), 'utf8'));
@@ -26,6 +27,7 @@ const launchUrl = new URL(`./s/${slug}/index.html`, 'https://localhost/');
 assert(launchUrl.pathname === `/s/${slug}/index.html`, `unexpected field launch URL: ${launchUrl.href}`);
 assert(!home.includes('<p>Chargement…</p>'), 'home still contains a loading-only state');
 assert(!home.includes('src="./assets/home.js"'), 'FIELD home must not depend on home.js');
+assert(home.includes('id="recit-home-library"'), 'FIELD home library runtime missing');
 assert(home.includes('id="recit-mobile-bootstrap"'), 'home embedded bootstrap missing');
 assert(home.includes('window.RECIT_CATALOG_DATA = catalog'), 'FIELD home catalog bootstrap missing');
 assert(home.includes('class="catalog-groups"'), 'FIELD home must expose grouped catalog navigation');
@@ -44,6 +46,20 @@ const hiddenCatalog = fieldCatalog.filter(item => !item.visible);
 assert(visibleCatalog.length > 1, `FIELD visible catalog unexpectedly contains only ${visibleCatalog.length} guide`);
 assert(hiddenCatalog.some(item => item.slug === 'kernel-handover'), 'internal technical explainer should remain packaged but hidden from traveler catalog');
 assert(fieldCatalog.filter(item => item.field_qualified).map(item => item.slug).join(',') === slug, 'only the physically qualified Seville guide may carry field_qualified=true');
+
+assert(homeLibrary.includes("const STORAGE_KEY = 'recit:library:hidden:v1'"), 'persistent FIELD home-library preference key missing');
+assert(homeLibrary.includes('item && item.visible !== false'), 'user library must remain subordinate to editorial visibility');
+assert(homeLibrary.includes("['all','Tous les parcours'"), 'home library All navigation missing');
+assert(homeLibrary.includes("['resume','À reprendre'"), 'home library resume navigation missing');
+assert(homeLibrary.includes("['visit','Visites'"), 'home library visits navigation missing');
+assert(homeLibrary.includes("['route','Routes'"), 'home library routes navigation missing');
+assert(homeLibrary.includes("['story','Histoires'"), 'home library stories navigation missing');
+assert(homeLibrary.includes('Gérer ma bibliothèque'), 'home library management surface missing');
+assert(homeLibrary.includes('data-library-toggle'), 'home library hide/show controls missing');
+assert(homeLibrary.includes('t.clientX <= edge'), 'home library must open from the left edge only');
+assert(!homeLibrary.includes('innerWidth - edge') && !homeLibrary.includes("side:'right'") && !homeLibrary.includes('from-right'), 'home library must not expose right-edge opening');
+assert(pkg.scripts?.['verify:home-browser'] === 'node verify-home-browser.mjs', 'home browser verification script missing');
+assert(pkg.scripts?.['prepare:offline-seville']?.includes('npm run verify:home-browser'), 'offline FIELD pipeline must run the home browser gate');
 
 for(const item of fieldCatalog){
   const href = `href="./s/${item.slug}/index.html"`;
@@ -108,4 +124,4 @@ for(const e of playable){
 }
 
 await access(pagePath);
-console.log(`Runtime PASS: ${fieldCatalog.length} packaged / ${visibleCatalog.length} visible / ${hiddenCatalog.length} hidden guides + grouped traveler catalog + safe-area topbar + ${playable.length} qualified local Seville episodes + thin left-only drawer hint + interruption guard + Android media-session contract`);
+console.log(`Runtime PASS: ${fieldCatalog.length} packaged / ${visibleCatalog.length} editorially visible / ${hiddenCatalog.length} hidden guides + personal home library + grouped traveler catalog + safe-area topbar + ${playable.length} qualified local Seville episodes + thin left-only drawer hint + interruption guard + Android media-session contract`);

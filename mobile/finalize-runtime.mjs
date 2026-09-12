@@ -23,6 +23,7 @@ const visibleCatalog = catalog.filter(item => item.visible !== false);
 const hiddenCatalog = catalog.filter(item => item.visible === false);
 const series = JSON.parse(await readFile(join(www, 'data', slug, 'series.json'), 'utf8'));
 const fieldMonitor = await readFile(join(here, 'field-monitor.js'), 'utf8');
+const homeLibrary = await readFile(join(here, 'home-library.js'), 'utf8');
 const qualifiedItem = catalog.find(item => item.slug === slug);
 if(!qualifiedItem) throw new Error(`Qualified field guide missing from catalog: ${slug}`);
 if(!qualifiedItem.visible) throw new Error(`Qualified field guide cannot be hidden from FIELD catalog: ${slug}`);
@@ -74,6 +75,10 @@ function fieldShellStyle(){
 
 function buildIdentityScript(){
   return `<script id="recit-field-build-data">window.RECIT_FIELD_BUILD=${safeJson(build)};</script>`;
+}
+
+function homeLibraryScript(){
+  return `<script id="recit-home-library">\n${homeLibrary.replaceAll('</script>', '<\\/script>')}\n</script>`;
 }
 
 function bootstrapScript({seriesPage=false, embedQualifiedSeries=false}={}){
@@ -158,7 +163,7 @@ async function hardenHome(){
   if(!visibleCatalog.length) throw new Error('FIELD catalog has no visible guide');
   const staticCatalog = `<div id="catalog" class="catalog-groups" aria-live="polite">${catalogHtml(visibleCatalog)}</div>`;
   html = html.replace(loading, staticCatalog);
-  html = html.replace('  <script src="./assets/home.js" defer></script>\n', '');
+  html = html.replace('  <script src="./assets/home.js" defer></script>\n', `  ${homeLibraryScript()}\n`);
   html = html.replace('<body>', `<body>\n  ${identityHtml()}\n  ${fieldShellStyle()}\n  ${bootstrapScript()}`);
   await writeFile(path, html);
 }

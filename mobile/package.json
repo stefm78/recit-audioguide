@@ -12,8 +12,9 @@
     "finalize:runtime": "node finalize-runtime.mjs seville-discovery",
     "verify:offline": "node verify-offline.mjs seville-discovery",
     "verify:runtime": "node verify-runtime.mjs seville-discovery",
+    "verify:home-browser": "node verify-home-browser.mjs",
     "verify:runtime-browser": "node verify-runtime-browser.mjs seville-discovery",
-    "prepare:offline-seville": "npm run prepare:web && npm run freeze:seville && npm run finalize:runtime && npm run verify:offline && npm run verify:runtime && npm run verify:runtime-browser",
+    "prepare:offline-seville": "npm run prepare:web && npm run freeze:seville && npm run finalize:runtime && npm run verify:offline && npm run verify:runtime && npm run verify:home-browser && npm run verify:runtime-browser",
     "cap:sync:android": "npx cap sync android",
     "cap:sync:ios": "npx cap sync ios"
   },
