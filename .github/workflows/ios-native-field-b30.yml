@@ -1,0 +1,301 @@
+name: iOS native FIELD B30 gate
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/ios-native-field-b30.yml'
+      - 'docs/IOS_NATIVE_FIELD_B30.md'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Qualification action'
+        required: true
+        default: 'unsigned-preflight'
+        type: choice
+        options:
+          - unsigned-preflight
+          - testflight
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-native-field-b30-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  B30_SHA: 243d3556292258e137b3b709a0b9d3efbd7283e5
+  B30_SHORT_SHA: 243d3556
+  B30_VERSION: 0.4.30
+  B30_BUILD_NUMBER: '30'
+  B30_APK_SHA256: 857278af9c71b57933bf182900cf254d2ada150fed1c6c5d523c62dc8c9e0f48
+  B30_FROZEN_RELEASE: android-field-b30-frozen
+  IOS_BUNDLE_ID: com.stefm78.recitaudioguide.field
+
+jobs:
+  frozen-b30-device-preflight:
+    name: Frozen B30 iOS device preflight
+    runs-on: macos-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout qualification control files
+        uses: actions/checkout@v4
+        with:
+          path: control
+
+      - name: Checkout exact B30 baseline
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.B30_SHA }}
+          path: baseline
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: baseline/mobile/package.json
+
+      - name: Verify frozen B30 release identity
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          release_json="$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${B30_FROZEN_RELEASE}")"
+          target="$(jq -r '.target_commitish' <<<"$release_json")"
+          test "$target" = "$B30_SHA" || { echo "Frozen B30 release target drift: $target" >&2; exit 1; }
+          asset_url="$(jq -r '.assets[] | select(.name=="recit-seville-field.apk") | .url' <<<"$release_json")"
+          test -n "$asset_url" && test "$asset_url" != "null" || { echo 'Frozen B30 APK missing' >&2; exit 1; }
+          gh api -H 'Accept: application/octet-stream' "$asset_url" > /tmp/recit-field-b30.apk
+          actual="$(shasum -a 256 /tmp/recit-field-b30.apk | awk '{print $1}')"
+          test "$actual" = "$B30_APK_SHA256" || { echo "Frozen B30 APK SHA drift: $actual" >&2; exit 1; }
+          echo "Frozen B30 source verified: $B30_SHA / $actual"
+
+      - name: Build exact B30 FIELD Web runtime
+        working-directory: baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          python site/build.py
+          cd mobile
+          npm install --no-audit --no-fund
+          GITHUB_RUN_NUMBER="$B30_BUILD_NUMBER" GITHUB_SHA="$B30_SHA" npm run prepare:offline-seville
+
+      - name: Prove runtime is byte-identical to frozen B30 APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, pathlib, tempfile, zipfile
+
+          baseline = pathlib.Path('baseline/mobile/www')
+          apk = pathlib.Path('/tmp/recit-field-b30.apk')
+
+          def tree(root):
+              result = {}
+              for p in sorted(x for x in root.rglob('*') if x.is_file()):
+                  rel = p.relative_to(root).as_posix()
+                  result[rel] = hashlib.sha256(p.read_bytes()).hexdigest()
+              return result
+
+          with tempfile.TemporaryDirectory() as tmp:
+              extracted = pathlib.Path(tmp)
+              with zipfile.ZipFile(apk) as z:
+                  prefix = 'assets/public/'
+                  for name in z.namelist():
+                      if name.startswith(prefix) and not name.endswith('/'):
+                          rel = pathlib.Path(name[len(prefix):])
+                          if '..' in rel.parts:
+                              raise SystemExit(f'unsafe APK path: {name}')
+                          out = extracted / rel
+                          out.parent.mkdir(parents=True, exist_ok=True)
+                          out.write_bytes(z.read(name))
+              expected = tree(extracted)
+              actual = tree(baseline)
+              if expected != actual:
+                  missing = sorted(set(expected) - set(actual))[:20]
+                  extra = sorted(set(actual) - set(expected))[:20]
+                  changed = sorted(k for k in set(expected) & set(actual) if expected[k] != actual[k])[:20]
+                  raise SystemExit(f'B30 runtime drift: missing={missing} extra={extra} changed={changed}')
+              digest = hashlib.sha256()
+              for rel, sha in sorted(actual.items()):
+                  digest.update(rel.encode()); digest.update(b'\0'); digest.update(bytes.fromhex(sha))
+              print(f'B30_RUNTIME_BYTE_IDENTITY=PASS files={len(actual)} tree={digest.hexdigest()}')
+          PY
+
+      - name: Generate and sync Capacitor iOS shell from exact B30
+        working-directory: baseline/mobile
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx cap add ios
+          npx cap sync ios
+          /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName 00 Récit FIELD B30" ios/App/App/Info.plist 2>/dev/null || \
+            /usr/libexec/PlistBuddy -c "Add :CFBundleDisplayName string '00 Récit FIELD B30'" ios/App/App/Info.plist
+          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $B30_VERSION" ios/App/App/Info.plist 2>/dev/null || true
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $B30_BUILD_NUMBER" ios/App/App/Info.plist 2>/dev/null || true
+
+      - name: Compile unsigned physical-device archive
+        working-directory: baseline/mobile
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project ios/App/App.xcodeproj \
+            -scheme App \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath ios/build/RecitFieldB30-unsigned.xcarchive \
+            PRODUCT_BUNDLE_IDENTIFIER="$IOS_BUNDLE_ID" \
+            MARKETING_VERSION="$B30_VERSION" \
+            CURRENT_PROJECT_VERSION="$B30_BUILD_NUMBER" \
+            CODE_SIGNING_ALLOWED=NO \
+            archive
+
+      - name: Verify device archive identity and embedded runtime
+        working-directory: baseline/mobile
+        shell: bash
+        run: |
+          set -euo pipefail
+          APP="$(find ios/build/RecitFieldB30-unsigned.xcarchive/Products/Applications -maxdepth 1 -name '*.app' -print -quit)"
+          test -n "$APP" || { echo 'Archived .app missing' >&2; exit 1; }
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$APP/Info.plist")" = "$IOS_BUNDLE_ID"
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$APP/Info.plist")" = "$B30_VERSION"
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$APP/Info.plist")" = "$B30_BUILD_NUMBER"
+          grep -R -q 'FIELD BUILD 0.4.30 · 243d3556' "$APP/public"
+          grep -R -q 'recit-home-library' "$APP/public"
+          grep -R -q 'Bibliothèque' "$APP/public"
+          {
+            echo 'schema=recit.ios.native-field-b30-preflight.v1'
+            echo 'status=READY_FOR_SIGNING_GATE'
+            echo "baseline_sha=$B30_SHA"
+            echo "baseline_version=$B30_VERSION"
+            echo "bundle_id=$IOS_BUNDLE_ID"
+            echo 'display_name=00 Récit FIELD B30'
+            echo "source_apk_sha256=$B30_APK_SHA256"
+            echo 'runtime_identity=BYTE_IDENTICAL_TO_FROZEN_B30_APK'
+            echo 'archive_signing=UNSIGNED_NOT_INSTALLABLE'
+            echo 'physical_gate=IOS_NATIVE_FIELD_B30'
+          } > ios/build/ios-native-field-b30-preflight.txt
+          cat ios/build/ios-native-field-b30-preflight.txt
+
+      - name: Upload unsigned native preflight archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-native-field-b30-unsigned-preflight
+          path: |
+            baseline/mobile/ios/build/RecitFieldB30-unsigned.xcarchive
+            baseline/mobile/ios/build/ios-native-field-b30-preflight.txt
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Classify TestFlight credentials
+        id: signing
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'testflight'
+        shell: bash
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          ASC_PRIVATE_KEY_B64: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY_BASE64 }}
+        run: |
+          set -euo pipefail
+          missing=()
+          for name in APPLE_TEAM_ID ASC_KEY_ID ASC_ISSUER_ID ASC_PRIVATE_KEY_B64; do
+            test -n "${!name:-}" || missing+=("$name")
+          done
+          if ((${#missing[@]})); then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Missing Apple distribution credentials: ${missing[*]}" >&2
+            echo 'Native install remains BLOCKED. Do not weaken signing or use an untrusted third-party certificate.' >&2
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fail closed when TestFlight was requested without credentials
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'testflight' && steps.signing.outputs.ready != 'true'
+        shell: bash
+        run: |
+          echo 'IOS_NATIVE_FIELD_B30 signing gate is blocked until Apple Developer Program credentials are configured.' >&2
+          exit 2
+
+      - name: Prepare App Store Connect API key
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'testflight' && steps.signing.outputs.ready == 'true'
+        shell: bash
+        env:
+          ASC_PRIVATE_KEY_B64: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY_BASE64 }}
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p /tmp/recit-asc
+          printf '%s' "$ASC_PRIVATE_KEY_B64" | base64 --decode > "/tmp/recit-asc/AuthKey_${ASC_KEY_ID}.p8"
+
+      - name: Archive signed B30 with Apple automatic provisioning
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'testflight' && steps.signing.outputs.ready == 'true'
+        working-directory: baseline/mobile
+        shell: bash
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project ios/App/App.xcodeproj \
+            -scheme App \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath ios/build/RecitFieldB30-signed.xcarchive \
+            PRODUCT_BUNDLE_IDENTIFIER="$IOS_BUNDLE_ID" \
+            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
+            CODE_SIGN_STYLE=Automatic \
+            MARKETING_VERSION="$B30_VERSION" \
+            CURRENT_PROJECT_VERSION="$B30_BUILD_NUMBER" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "/tmp/recit-asc/AuthKey_${ASC_KEY_ID}.p8" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            archive
+
+      - name: Upload exact B30 to TestFlight
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'testflight' && steps.signing.outputs.ready == 'true'
+        working-directory: baseline/mobile
+        shell: bash
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          cat > ios/build/ExportOptions.plist <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>teamID</key><string>${APPLE_TEAM_ID}</string>
+            <key>manageAppVersionAndBuildNumber</key><false/>
+            <key>uploadSymbols</key><true/>
+          </dict></plist>
+          PLIST
+          xcodebuild \
+            -exportArchive \
+            -archivePath ios/build/RecitFieldB30-signed.xcarchive \
+            -exportPath ios/build/TestFlight \
+            -exportOptionsPlist ios/build/ExportOptions.plist \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "/tmp/recit-asc/AuthKey_${ASC_KEY_ID}.p8" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID"
+          echo 'TestFlight upload submitted. Apple processing and tester assignment remain external gates.'
+
+      - name: Destroy temporary Apple key
+        if: always()
+        shell: bash
+        run: rm -rf /tmp/recit-asc
