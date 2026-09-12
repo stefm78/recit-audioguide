@@ -1,0 +1,68 @@
+name: Seville French-lock candidate
+
+on:
+  push:
+    branches:
+      - audit/seville-french-lock-20260913
+    paths:
+      - '.github/workflows/seville-french-lock-candidate.yml'
+      - 'tools/seville_french_lock_probe.py'
+      - 'tests/test_seville_french_lock_probe.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seville-french-lock-candidate-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  bounded-listening-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout candidate branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout exact frozen audio engine
+        uses: actions/checkout@v4
+        with:
+          repository: stefm78/audio-engine
+          ref: 3392d4f22f0a9b054a05b5c05a7856985c0ab030
+          path: .audio-engine
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify bounded probe invariants
+        run: python -m unittest tests.test_seville_french_lock_probe -v
+
+      - name: Install exact frozen audio engine
+        run: python -m pip install --disable-pip-version-check ./.audio-engine
+
+      - name: Render only two A/B probe cases
+        run: python tools/seville_french_lock_probe.py --out review/seville-french-lock-candidate
+
+      - name: Upload listening candidate artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: seville-french-lock-candidate
+          path: review/seville-french-lock-candidate
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Persist candidate evidence on isolated branch
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add review/seville-french-lock-candidate
+          if git diff --cached --quiet; then
+            echo 'No candidate evidence changes to persist.'
+            exit 0
+          fi
+          git commit -m 'candidate: add Seville French-lock A/B evidence [skip ci]'
+          git push origin HEAD:${GITHUB_REF_NAME}
