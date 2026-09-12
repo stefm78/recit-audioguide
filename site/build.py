@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, shutil, sys
+import json, os, shutil, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -120,6 +120,13 @@ def publish_route_reviews():
     return count
 
 
+def publish_safari_field_b30_if_pages():
+    if os.environ.get('GITHUB_WORKFLOW') != 'Build and deploy Récit audioguide':
+        return
+    from publish_ios_safari_field_b30 import publish
+    publish(DIST)
+
+
 def main():
     manifests=[]
     for p in sorted(SERIES.glob('*/series.json')):
@@ -158,6 +165,7 @@ def main():
     overall='ready' if all(item['state']=='ready' for item in series_reports) and not WARN else 'degraded'
     report={'status':overall,'series_count':len(manifests),'route_review_count':route_review_count,'blocking':[],'warnings':WARN,'production_status':render_report.get('status') if render_report else None,'series':series_reports}
     (DIST/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+    publish_safari_field_b30_if_pages()
     print(f'Built {len(manifests)} series and {route_review_count} route reviews; state={overall}; warnings={len(WARN)}')
     return 0
 
