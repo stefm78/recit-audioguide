@@ -1,0 +1,10 @@
+{
+  "schema": "recit.catalog-presentation.v1",
+  "default_editorially_visible": true,
+  "items": {
+    "kernel-handover": {
+      "editorially_visible": false,
+      "reason": "internal-technical-explainer"
+    }
+  }
+}
