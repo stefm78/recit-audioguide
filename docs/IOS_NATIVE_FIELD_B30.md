@@ -21,13 +21,14 @@ No product behavior is reopened by this gate.
 
 1. checks out the exact B30 commit independently of current `main`;
 2. verifies the frozen B30 release and APK SHA-256;
-3. rebuilds the B30 FIELD runtime with the B30 run/build identity forced to `30` / `243d3556`;
-4. proves that the rebuilt `mobile/www` tree is byte-identical to the Web runtime physically present in the frozen B30 APK;
-5. creates and syncs the Capacitor iOS shell;
-6. applies native-only identity metadata (`00 Récit FIELD B30`, version `0.4.30`, build `30`);
-7. compiles an unsigned archive for `generic/platform=iOS`;
-8. verifies bundle ID, version/build, B30 identity and Library markers in the archived app;
-9. publishes the unsigned `.xcarchive` as CI evidence.
+3. extracts the already-qualified B30 Web/product runtime directly from the frozen APK instead of rebuilding it from current source state;
+4. removes only the Android-generated bridge files (`cordova.js`, `cordova_plugins.js`), then lets Capacitor regenerate the platform bridge for iOS;
+5. proves that every frozen B30 product/runtime file survives the iOS sync byte-for-byte unchanged;
+6. creates and syncs the Capacitor iOS shell;
+7. applies native-only identity metadata (`00 Récit FIELD B30`, version `0.4.30`, build `30`);
+8. compiles an unsigned archive for `generic/platform=iOS`;
+9. verifies bundle ID, version/build, B30 identity and Library markers in the archived app;
+10. publishes the unsigned `.xcarchive` plus provenance evidence as CI artifacts.
 
 The unsigned archive is **not installable on an iPhone**. It is intentionally not presented as a physical-test artifact.
 
@@ -65,7 +66,7 @@ The Apple account must also have:
 
 Once those prerequisites exist, run workflow `iOS native FIELD B30 gate` with input `mode=testflight`.
 
-The workflow uses the exact frozen B30 checkout, Apple automatic provisioning and App Store Connect key authentication. It then submits build `0.4.30 (30)` to TestFlight. Apple processing and assigning the build to a tester/group remain external Apple gates.
+The workflow uses the exact frozen B30 checkout/runtime, Apple automatic provisioning and App Store Connect key authentication. It then submits build `0.4.30 (30)` to TestFlight. Apple processing and assigning the build to a tester/group remain external Apple gates.
 
 ## Physical gate
 
