@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SERIES = ROOT / 'series'
 WEB = ROOT / 'web'
 DIST = ROOT / 'dist'
+CATALOG_PRESENTATION = ROOT / 'catalog-presentation.json'
 
 BLOCK = []
 WARN = []
@@ -34,6 +35,45 @@ def load_manifest(path: Path):
                 if extra_id in ids: BLOCK.append(f'{path}: id audio dupliqué {extra_id}')
                 ids.add(extra_id)
     return data
+
+
+def load_catalog_visibility(manifests):
+    if not CATALOG_PRESENTATION.exists():
+        BLOCK.append(f'{CATALOG_PRESENTATION}: politique de visibilité éditoriale absente')
+        return {}
+    try:
+        data=json.loads(CATALOG_PRESENTATION.read_text(encoding='utf-8'))
+    except Exception as e:
+        BLOCK.append(f'{CATALOG_PRESENTATION}: JSON invalide ({e})')
+        return {}
+    if data.get('schema') != 'recit.catalog-presentation.v1':
+        BLOCK.append(f'{CATALOG_PRESENTATION}: schema invalide: {data.get("schema")}')
+        return {}
+    default=data.get('default_editorially_visible', True)
+    if not isinstance(default, bool):
+        BLOCK.append(f'{CATALOG_PRESENTATION}: default_editorially_visible doit être booléen')
+        return {}
+    items=data.get('items') or {}
+    if not isinstance(items, dict):
+        BLOCK.append(f'{CATALOG_PRESENTATION}: items doit être un objet')
+        return {}
+    known={m['slug'] for m in manifests}
+    unknown=sorted(set(items)-known)
+    for slug in unknown:
+        BLOCK.append(f'{CATALOG_PRESENTATION}: visibilité configurée pour un parcours non packagé: {slug}')
+    visibility={}
+    for manifest in manifests:
+        slug=manifest['slug']
+        cfg=items.get(slug) or {}
+        if not isinstance(cfg, dict):
+            BLOCK.append(f'{CATALOG_PRESENTATION}: configuration invalide pour {slug}')
+            continue
+        value=cfg.get('editorially_visible', default)
+        if not isinstance(value, bool):
+            BLOCK.append(f'{CATALOG_PRESENTATION}: editorially_visible doit être booléen pour {slug}')
+            continue
+        visibility[slug]=value
+    return visibility
 
 
 def load_render_failures():
@@ -132,6 +172,7 @@ def main():
     for p in sorted(SERIES.glob('*/series.json')):
         m=load_manifest(p)
         if m: manifests.append(m)
+    visibility=load_catalog_visibility(manifests)
     if BLOCK:
         report={'status':'blocked','blocking':BLOCK,'warnings':WARN}
         (ROOT/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
@@ -159,7 +200,15 @@ def main():
         (data_dir/'series.json').write_text(json.dumps(published,ensure_ascii=False,indent=2),encoding='utf-8')
         assets=SERIES/slug/'assets'
         if assets.exists(): shutil.copytree(assets,data_dir/'assets',dirs_exist_ok=True)
-        catalog.append({'slug':slug,'type':m['type'],'title':m['title'],'subtitle':m.get('subtitle',''),'episode_count':len(m['episodes']),'state':published['state']})
+        catalog.append({
+            'slug':slug,
+            'type':m['type'],
+            'title':m['title'],
+            'subtitle':m.get('subtitle',''),
+            'episode_count':len(m['episodes']),
+            'state':published['state'],
+            'editorially_visible':visibility[slug],
+        })
         series_reports.append({'slug':slug,'state':published['state'],'episodes':[{'id':e.get('id'),'state':e.get('state')} for e in published.get('episodes',[])]})
     (DIST/'catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2),encoding='utf-8')
     overall='ready' if all(item['state']=='ready' for item in series_reports) and not WARN else 'degraded'
