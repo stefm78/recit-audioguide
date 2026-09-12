@@ -82,12 +82,22 @@ if(window.document.querySelector('.loading')) throw new Error('permanent loading
 
 const drawer = window.document.getElementById('journey-drawer');
 if(!drawer) throw new Error('journey drawer was not rendered');
+if(drawer.classList.contains('from-right')) throw new Error('journey drawer unexpectedly exposes a right-side variant');
 const journeyItems = [...drawer.querySelectorAll('[data-journey-episode]')];
 if(journeyItems.length !== cards.length) throw new Error(`journey drawer mismatch: ${journeyItems.length}/${cards.length}`);
 const drawerButton = window.document.querySelector('[data-journey-open]');
 if(!drawerButton) throw new Error('journey drawer fallback button missing');
+const edgeHint = window.document.querySelector('.journey-edge-hint');
+if(!edgeHint) throw new Error('left-edge journey affordance missing');
+if(edgeHint.getAttribute('aria-label') !== 'Ouvrir le parcours depuis le bord gauche') throw new Error('left-edge affordance is not self-describing');
+edgeHint.click();
+if(drawer.getAttribute('aria-hidden') !== 'false') throw new Error('left-edge affordance did not open journey drawer');
+if(!edgeHint.hidden) throw new Error('left-edge affordance should hide while drawer is open');
+drawer.querySelector('.journey-close')?.click();
+if(drawer.getAttribute('aria-hidden') !== 'true') throw new Error('journey drawer did not close');
+if(edgeHint.hidden) throw new Error('left-edge affordance did not return after drawer close');
 drawerButton.click();
-if(drawer.getAttribute('aria-hidden') !== 'false') throw new Error('journey drawer did not open');
+if(drawer.getAttribute('aria-hidden') !== 'false') throw new Error('journey drawer fallback button did not open drawer');
 drawer.querySelector('.journey-close')?.click();
 
 const native = window.__nativeMedia;
@@ -135,5 +145,5 @@ if(!audio.paused) throw new Error('unsolicited post-interruption auto-resume was
 const snap = window.RECIT_DIAG?.snapshot?.();
 if(!snap?.ready) throw new Error('field diagnostics did not observe ready state');
 if(errors.some(e => /resource:|console\.error:|jsdom:Could not load script/i.test(e))) throw new Error(`runtime errors: ${errors.join(' | ')}`);
-console.log(`Browser runtime PASS: ${cards.length} episodes + ${journeyItems.length} drawer items; Android media play/pause/±15 PASS; interruption latch PASS; audio local ${audioUrl.pathname}`);
+console.log(`Browser runtime PASS: ${cards.length} episodes + ${journeyItems.length} left-only drawer items + discoverable edge handle; Android media play/pause/±15 PASS; interruption latch PASS; audio local ${audioUrl.pathname}`);
 dom.window.close();

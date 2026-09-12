@@ -9,6 +9,7 @@ const home = await readFile(join(www, 'index.html'), 'utf8');
 const pagePath = join(www, 's', slug, 'index.html');
 const page = await readFile(pagePath, 'utf8');
 const app = await readFile(join(www, 'assets', 'app.js'), 'utf8');
+const styles = await readFile(join(www, 'assets', 'styles.css'), 'utf8');
 const series = JSON.parse(await readFile(join(www, 'data', slug, 'series.json'), 'utf8'));
 const pkg = JSON.parse(await readFile(join(here, 'package.json'), 'utf8'));
 
@@ -46,8 +47,14 @@ assert(app.includes("bind('seekbackward',()=>seekBy(-15))"), 'native/media seek 
 assert(app.includes("bind('seekforward',()=>seekBy(15))"), 'native/media seek forward must remain 15 seconds');
 assert(app.includes('userResumeRequired'), 'interruption manual-resume latch missing');
 assert(app.includes('Reprise automatique bloquée après interruption'), 'interruption auto-resume guard missing');
-assert(app.includes('id=\'journey-drawer\'') || app.includes("id='journey-drawer'") || app.includes("journeyDrawer.id='journey-drawer'"), 'journey drawer missing');
-assert(app.includes('touchstart') && app.includes("side:'left'") && app.includes("side:'right'"), 'edge-swipe journey navigation missing');
+assert(app.includes("journeyDrawer.id='journey-drawer'"), 'journey drawer missing');
+assert(app.includes("journeyEdgeHint.className='journey-edge-hint'"), 'left-edge journey affordance missing');
+assert(styles.includes('.journey-edge-hint'), 'left-edge journey affordance styling missing');
+assert(app.includes('start=t.clientX<=edge?'), 'left-edge swipe start contract missing');
+assert(app.includes('if(dx>58&&Math.abs(dx)>Math.abs(dy)*1.25){openJourneyDrawer()'), 'left-to-right drawer swipe contract missing');
+assert(!app.includes("side:'right'"), 'right-edge drawer opening must be forbidden');
+assert(!app.includes('from-right'), 'right-side drawer variant must be removed');
+assert(!styles.includes('.journey-drawer.from-right'), 'right-side drawer CSS variant must be removed');
 assert(app.includes('Continuer · étape'), 'visible restart/resume state missing');
 
 assert(series.episodes?.length >= 10, `Seville field series incomplete: ${series.episodes?.length || 0} top-level episodes`);
@@ -62,4 +69,4 @@ for(const e of playable){
 }
 
 await access(pagePath);
-console.log(`Runtime PASS: explicit FIELD launch -> ${playable.length} local episodes + progress drawer + interruption guard + Android media-session contract`);
+console.log(`Runtime PASS: explicit FIELD launch -> ${playable.length} local episodes + left-only discoverable progress drawer + interruption guard + Android media-session contract`);
