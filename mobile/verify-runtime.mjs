@@ -10,6 +10,7 @@ const pagePath = join(www, 's', slug, 'index.html');
 const page = await readFile(pagePath, 'utf8');
 const app = await readFile(join(www, 'assets', 'app.js'), 'utf8');
 const styles = await readFile(join(www, 'assets', 'styles.css'), 'utf8');
+const catalog = JSON.parse(await readFile(join(www, 'catalog.json'), 'utf8'));
 const series = JSON.parse(await readFile(join(www, 'data', slug, 'series.json'), 'utf8'));
 const pkg = JSON.parse(await readFile(join(here, 'package.json'), 'utf8'));
 
@@ -26,13 +27,26 @@ assert(launchUrl.pathname === `/s/${slug}/index.html`, `unexpected field launch 
 assert(!home.includes('<p>Chargement…</p>'), 'home still contains a loading-only state');
 assert(!home.includes('src="./assets/home.js"'), 'FIELD home must not depend on home.js');
 assert(home.includes('id="recit-mobile-bootstrap"'), 'home embedded bootstrap missing');
-assert(home.includes(`\"slug\":\"${slug}\"`), 'embedded field data does not contain Seville');
+assert(home.includes('window.RECIT_CATALOG_DATA = catalog'), 'FIELD home catalog bootstrap missing');
+assert(catalog.length > 1, `FIELD packaged catalog unexpectedly contains only ${catalog.length} guide`);
+for(const item of catalog){
+  assert(home.includes(`href="./s/${item.slug}/index.html"`), `FIELD home missing packaged guide link: ${item.slug}`);
+  const packagedPage = join(www, 's', item.slug, 'index.html');
+  const packagedData = join(www, 'data', item.slug, 'series.json');
+  await access(packagedPage);
+  await access(packagedData);
+  const packagedHtml = await readFile(packagedPage, 'utf8');
+  assert(packagedHtml.includes('id="recit-field-build"'), `FIELD identity missing from packaged guide: ${item.slug}`);
+  assert(packagedHtml.includes('class="series-topbar"'), `top navigation missing from packaged guide: ${item.slug}`);
+  assert(packagedHtml.includes('class="series-home-link" href="../../"'), `catalog return link missing from packaged guide: ${item.slug}`);
+  assert(packagedHtml.includes('class="series-parcours-button"'), `visible Parcours action missing from packaged guide: ${item.slug}`);
+}
 
-assert(page.includes('id="recit-field-build"'), 'visible FIELD build identity missing on series page');
+assert(page.includes('id="recit-field-build"'), 'visible FIELD build identity missing on qualified series page');
 assert(page.includes('id="recit-field-build-data"'), 'machine-readable FIELD build identity missing on series page');
-assert(page.includes('id="recit-field-monitor"'), 'series field monitor missing');
+assert(page.includes('id="recit-field-monitor"'), 'qualified series field monitor missing');
 assert(page.includes('id="recit-mobile-bootstrap"'), 'series bootstrap missing');
-assert(page.includes('window.RECIT_SERIES_DATA'), 'inline series data missing');
+assert(page.includes('window.RECIT_SERIES_DATA = qualifiedSeries'), 'qualified inline series data missing');
 const bootstrapPos = page.indexOf('id="recit-mobile-bootstrap"');
 const appPos = page.indexOf('src="../../assets/app.js"');
 assert(bootstrapPos >= 0 && appPos > bootstrapPos, 'series bootstrap must execute before app.js');
@@ -50,6 +64,9 @@ assert(app.includes('Reprise automatique bloquée après interruption'), 'interr
 assert(app.includes("journeyDrawer.id='journey-drawer'"), 'journey drawer missing');
 assert(app.includes("journeyEdgeHint.className='journey-edge-hint'"), 'left-edge journey affordance missing');
 assert(styles.includes('.journey-edge-hint'), 'left-edge journey affordance styling missing');
+assert(styles.includes('width:6px;height:44px'), 'left-edge hint must stay visually thin');
+assert(styles.includes('.journey-menu-button{display:none}'), 'legacy in-hero Parcours control should not duplicate the top navigation');
+assert(styles.includes('.series-topbar{'), 'series top navigation styling missing');
 assert(app.includes('start=t.clientX<=edge?'), 'left-edge swipe start contract missing');
 assert(app.includes('if(dx>58&&Math.abs(dx)>Math.abs(dy)*1.25){openJourneyDrawer()'), 'left-to-right drawer swipe contract missing');
 assert(!app.includes("side:'right'"), 'right-edge drawer opening must be forbidden');
@@ -69,4 +86,4 @@ for(const e of playable){
 }
 
 await access(pagePath);
-console.log(`Runtime PASS: explicit FIELD launch -> ${playable.length} local episodes + left-only discoverable progress drawer + interruption guard + Android media-session contract`);
+console.log(`Runtime PASS: ${catalog.length} packaged guides + visible home/Parcours navigation + ${playable.length} qualified local Seville episodes + thin left-only drawer hint + interruption guard + Android media-session contract`);
