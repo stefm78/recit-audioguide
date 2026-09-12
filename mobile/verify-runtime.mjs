@@ -28,15 +28,34 @@ assert(!home.includes('<p>Chargement…</p>'), 'home still contains a loading-on
 assert(!home.includes('src="./assets/home.js"'), 'FIELD home must not depend on home.js');
 assert(home.includes('id="recit-mobile-bootstrap"'), 'home embedded bootstrap missing');
 assert(home.includes('window.RECIT_CATALOG_DATA = catalog'), 'FIELD home catalog bootstrap missing');
+assert(home.includes('class="catalog-groups"'), 'FIELD home must expose grouped catalog navigation');
+assert(home.includes('class="catalog-group"'), 'FIELD home catalog grouping is missing');
+assert(home.includes('id="recit-field-shell-style"'), 'FIELD shell style missing from home');
 assert(catalog.length > 1, `FIELD packaged catalog unexpectedly contains only ${catalog.length} guide`);
-for(const item of catalog){
-  assert(home.includes(`href="./s/${item.slug}/index.html"`), `FIELD home missing packaged guide link: ${item.slug}`);
+
+const bootstrapMatch = home.match(/const catalog = (\[[\s\S]*?\]);\n  window\.RECIT_CATALOG_DATA/);
+assert(bootstrapMatch, 'embedded FIELD catalog payload missing');
+const fieldCatalog = JSON.parse(bootstrapMatch[1]);
+assert(fieldCatalog.length === catalog.length, `embedded FIELD catalog mismatch: ${fieldCatalog.length}/${catalog.length}`);
+assert(fieldCatalog.every(item => typeof item.visible === 'boolean'), 'FIELD catalog visibility must be explicit for every packaged guide');
+assert(fieldCatalog.every(item => typeof item.field_qualified === 'boolean'), 'FIELD qualification marker must be explicit for every packaged guide');
+const visibleCatalog = fieldCatalog.filter(item => item.visible);
+const hiddenCatalog = fieldCatalog.filter(item => !item.visible);
+assert(visibleCatalog.length > 1, `FIELD visible catalog unexpectedly contains only ${visibleCatalog.length} guide`);
+assert(hiddenCatalog.some(item => item.slug === 'kernel-handover'), 'internal technical explainer should remain packaged but hidden from traveler catalog');
+assert(fieldCatalog.filter(item => item.field_qualified).map(item => item.slug).join(',') === slug, 'only the physically qualified Seville guide may carry field_qualified=true');
+
+for(const item of fieldCatalog){
+  const href = `href="./s/${item.slug}/index.html"`;
+  if(item.visible) assert(home.includes(href), `FIELD home missing visible guide link: ${item.slug}`);
+  else assert(!home.includes(href), `FIELD home exposes hidden guide: ${item.slug}`);
   const packagedPage = join(www, 's', item.slug, 'index.html');
   const packagedData = join(www, 'data', item.slug, 'series.json');
   await access(packagedPage);
   await access(packagedData);
   const packagedHtml = await readFile(packagedPage, 'utf8');
   assert(packagedHtml.includes('id="recit-field-build"'), `FIELD identity missing from packaged guide: ${item.slug}`);
+  assert(packagedHtml.includes('id="recit-field-shell-style"'), `FIELD shell style missing from packaged guide: ${item.slug}`);
   assert(packagedHtml.includes('class="series-topbar"'), `top navigation missing from packaged guide: ${item.slug}`);
   assert(packagedHtml.includes('class="series-home-link" href="../../"'), `catalog return link missing from packaged guide: ${item.slug}`);
   assert(packagedHtml.includes('class="series-parcours-button"'), `visible Parcours action missing from packaged guide: ${item.slug}`);
@@ -47,6 +66,9 @@ assert(page.includes('id="recit-field-build-data"'), 'machine-readable FIELD bui
 assert(page.includes('id="recit-field-monitor"'), 'qualified series field monitor missing');
 assert(page.includes('id="recit-mobile-bootstrap"'), 'series bootstrap missing');
 assert(page.includes('window.RECIT_SERIES_DATA = qualifiedSeries'), 'qualified inline series data missing');
+assert(page.includes('--recit-system-safe-top:env(safe-area-inset-top,0px)'), 'system safe-area top variable missing from FIELD shell');
+assert(page.includes('.series-topbar{top:var(--recit-system-safe-top)!important}'), 'series topbar must stick below the system safe-area inset');
+assert(page.includes('padding:calc(9px + env(safe-area-inset-top,0px))'), 'FIELD identity must also respect the top system safe area');
 const bootstrapPos = page.indexOf('id="recit-mobile-bootstrap"');
 const appPos = page.indexOf('src="../../assets/app.js"');
 assert(bootstrapPos >= 0 && appPos > bootstrapPos, 'series bootstrap must execute before app.js');
@@ -86,4 +108,4 @@ for(const e of playable){
 }
 
 await access(pagePath);
-console.log(`Runtime PASS: ${catalog.length} packaged guides + visible home/Parcours navigation + ${playable.length} qualified local Seville episodes + thin left-only drawer hint + interruption guard + Android media-session contract`);
+console.log(`Runtime PASS: ${fieldCatalog.length} packaged / ${visibleCatalog.length} visible / ${hiddenCatalog.length} hidden guides + grouped traveler catalog + safe-area topbar + ${playable.length} qualified local Seville episodes + thin left-only drawer hint + interruption guard + Android media-session contract`);
