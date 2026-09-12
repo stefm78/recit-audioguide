@@ -1,0 +1,1313 @@
+{
+  "schema": "seville.french-lock.source-inventory.v1",
+  "baseline_commit": "00764713073ed754f713fc5c86b82f1b1537abbe",
+  "series": "seville-discovery",
+  "program_count": 28,
+  "segment_count": 146,
+  "programs": [
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-ep00.json",
+      "id": "seville-discovery-ep00",
+      "title": "Depuis Pje. de Vila : laisser la ville s’ouvrir vers Plaza de España",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 5,
+      "source_sha256": "73105fd05defa02649d0f2ae638bfbe086acbcf83e1834890610b3c3f46faa7a",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Deuxième matin, nouveau point de départ. Hier, nous avons commencé Séville depuis le fleuve et l’autre rive. Aujourd’hui, nous repartons de Pje. de Vila 11, au cœur du Casco Antiguo. Sortez tranquillement et oubliez quelques minutes les monuments. Regardez l’échelle de la rue, la lumière, les façades et la façon dont votre propre corps choisit spontanément l’ombre. Le récit du jour commence par cette ville vécue avant de rejoindre l’une de ses plus grandes mises en scène.",
+          "text_sha256": "c7d266a09bfdba77c09a2c8431bc72f6ec3c84da604573368c6ba21ddec87b1c",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Prenez Santa María la Blanca puis les Jardines de Murillo. À Séville, la marche n’est jamais seulement une question de kilomètres. En septembre, la chaleur donne une valeur très concrète aux arbres, aux rues étroites, aux patios et à l’eau. Observez comment le parcours alterne espaces resserrés et respirations. Cette relation entre confort et forme urbaine reviendra au retour, quand nous passerons par le Callejón del Agua.",
+          "text_sha256": "2ad9859142cc513b1cd5da06d66645343cb4eb773bf5f4118f036ef141499246",
+          "proper_name_surface_markers": [
+            "Jardines"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "En gagnant le Prado de San Sebastián, le tissu urbain s’ouvre. Continuez vers l’Avenida de Isabel la Católica. Le contraste est volontaire : nous quittons progressivement une ville de plis, d’ombre et de petites échelles pour aller vers un espace presque théâtral. La Plaza de España n’appartient pas aux mêmes siècles que la Giralda ou l’Alcázar, mais elle nous aide à poser une question essentielle : comment une ville choisit-elle de raconter son propre passé ?",
+          "text_sha256": "c2942652253d243a9c7b0837d391b4d991ad22c4a3b7f112d2d973cc429c79d0",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 4,
+          "text": "Hier, Triana et l’Arenal nous ont montré une ville façonnée par les flux et les métiers. Aujourd’hui, Plaza de España va nous montrer une image beaucoup plus construite, presque officielle. Ce décalage est utile. Il empêche de confondre histoire et mémoire. Une ville peut avoir vécu une chose, puis des siècles plus tard choisir de la célébrer, de la simplifier ou de l’oublier.",
+          "text_sha256": "5ca9a2fc8eab7363254639a9e3d1fec5d4d1026200233eca7c6e0d65abf04f28",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 5,
+          "text": "Si vous voulez approfondir la relation entre climat et itinéraire, la gourmandise sur l’ombre est toujours disponible sous cet épisode. Sinon, laissez la place apparaître. Prenez d’abord quelques secondes sans commentaire. Regardez l’ensemble avant les détails : le prochain chapitre commence précisément par cette image fabriquée de l’Espagne.",
+          "text_sha256": "6acbcca14ebc70f884a79ca760685e91f90aaf414a8a647c5665194502458506",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-ep01.json",
+      "id": "seville-discovery-ep01",
+      "title": "Santa Cruz : marcher dans une ville qui négocie avec la chaleur et la mémoire",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 6,
+      "source_sha256": "1f2545cf1c959c590bbce79bfa67f1184939b70d865a96c834b354dcff1df8e7",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "En quittant Plaza de España, regardez d’abord ce qui disparaît. Le grand demi-cercle, les longues perspectives et la composition monumentale cèdent progressivement la place aux arbres, aux murs et aux rues plus étroites. Ne cherchez pas encore un monument. Le sujet de cette marche, c’est précisément la façon dont la ville change d’échelle autour de votre corps.",
+          "text_sha256": "842127deabf2771d251bda59022bbe5eb1b8f0bb877c79fa68e6e22d5e0016d2",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "Dans les Jardines de Murillo, marchez quelques instants sans vous concentrer sur ma voix. Remarquez seulement l’ombre, la température ressentie et la façon dont la végétation rend le mouvement plus confortable. À Séville, le climat n’est pas un décor. Il influence les formes urbaines, les horaires et notre propre façon de visiter. La longue pause prévue vendredi après la Cathédrale répond exactement à cette logique.",
+          "text_sha256": "bc8b359c795959056b87e166e665d1a150417a300cc9f262bfa718d03f2fad29",
+          "proper_name_surface_markers": [
+            "Jardines"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "Quand vous entrez dans le Callejón del Agua, regardez simultanément trois choses : le mur, l’étroitesse du passage et la végétation. Le nom du lieu renvoie à une histoire d’acheminement de l’eau vers le secteur de l’Alcázar. Une ruelle pittoresque cesse alors d’être un simple décor photographique : elle devient la trace d’une infrastructure reliant défense, eau et pouvoir palatial.",
+          "text_sha256": "48c5c7188580dc13d62a3bf6e5b25e9c7ca643e5b3da4faa5c531632cbcd7831",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Santa Cruz est aujourd’hui associé aux façades blanches, aux patios et à une image très séduisante de Séville. Mais le quartier est le produit de transformations longues et parfois violentes. Une partie importante de la judería médiévale se trouvait dans ce secteur. Plutôt que chercher une supposée authenticité intacte, regardez les continuités, les ruptures et les récits successifs qui ont fabriqué le paysage actuel.",
+          "text_sha256": "618abe1c3371174ed5abb9014311eea13dbe1822c6f7aca3c221b6263f2bdec0",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "À Plaza de Doña Elvira, arrêtez-vous. C’est un bon moment pour que je me taise vraiment. Mettez l’audio en pause. Écoutez la petite place, regardez où tombe l’ombre, les façades, les arbres et les gens qui passent. Restez quelques instants ou davantage si vous en avez envie. Quand vous serez prêt à repartir, relancez la lecture.",
+          "text_sha256": "9945bcfa7ab83e7bd1bad20622293cecea4a25cb8db4cefbd85e788993e4ae5e",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 6,
+          "text": "Vous avez peut-être remarqué autre chose que ce que j’aurais choisi pour vous, et c’est très bien. En arrivant au Patio de Banderas, l’échelle change encore. Vous êtes presque au contact de l’Alcázar, de la Cathédrale et de l’Archivo de Indias. Palais, religion et administration se concentrent dans quelques centaines de mètres. Gardez cette proximité en mémoire : elle donnera du sens aux visites qui suivent. La gourmandise sur le Callejón del Agua reste disponible si vous voulez approfondir l’histoire hydraulique avant de continuer.",
+          "text_sha256": "4028f84df7ce6974122c03dbbc598e284e02fe2b2c98afa9d1da5227cbe04566",
+          "proper_name_surface_markers": [
+            "Patio",
+            "Archivo"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-ep02.json",
+      "id": "seville-discovery-ep02",
+      "title": "Alcázar — visite approfondie : lire mille ans de pouvoir dans les espaces",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 14,
+      "source_sha256": "752c0b900bc64c98e37517d8773cceb933e3536447bf6fdb734ce19ba6700cfc",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Vous entrez par la Puerta del León. Avant les palais, retenez ceci : l’Alcázar n’est pas un bâtiment construit d’un seul geste. C’est un territoire de pouvoir remanié pendant près de mille ans. Des gouvernants musulmans l’installent et l’agrandissent ; après la conquête castillane, la monarchie chrétienne ne l’abandonne pas. Elle s’y installe, transforme, ajoute, réemploie. Votre visite va donc moins consister à reconnaître des styles qu’à suivre des décisions politiques inscrites dans la pierre, le plâtre, le bois, l’eau et les parcours. Avancez vers le Patio del León et laissez d’abord l’échelle du lieu vous faire comprendre que vous franchissez une enceinte de pouvoir, pas la porte d’une maison isolée.",
+          "text_sha256": "ef14377105acf8b985e6b6e8c197b21cfe8e2686a29084e2e4ec565fe3522fb5",
+          "proper_name_surface_markers": [
+            "Puerta",
+            "Patio"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "Si la circulation vous conduit par la Sala de la Justicia puis le Patio del Yeso, ralentissez ici. Regardez les arcs, les proportions et surtout l’impression de retrait. Ces espaces conservent des traces des phases islamiques antérieures aux grands palais chrétiens que vous allez voir ensuite. Ne cherchez pas à tout dater. Ce qui compte est de sentir que le nouveau pouvoir n’a pas reçu une page blanche : il hérite d’un ensemble déjà prestigieux, déjà organisé, déjà chargé de mémoire. Cette contrainte va devenir une ressource. Quand vous êtes prêt, poursuivez vers le Patio de la Montería.",
+          "text_sha256": "f37f81b2c2d127b524b765489fd46e1be27463e8f3b4a761dd722ba41b150cfd",
+          "proper_name_surface_markers": [
+            "Patio"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "Au Patio de la Montería, arrêtez-vous avant d’entrer dans le palais de Pierre Ier. Regardez sa façade de face. Elle est une déclaration. Le roi chrétien de Castille, au quatorzième siècle, commande un palais qui mobilise des artisans, des techniques et un vocabulaire décoratif profondément liés aux traditions d’Al-Andalus. C’est le paradoxe central de notre visite : victoire politique ne signifie pas disparition culturelle. Les formes circulent parce qu’elles restent prestigieuses, efficaces et désirables. Regardez maintenant la façade comme une scène diplomatique : elle ne dit pas seulement qui règne ; elle dit dans quel langage le souverain choisit d’être admiré. Si cette question vous accroche, c’est ici le meilleur moment pour ouvrir la gourmandise « Mudéjar sans raccourci : qui parle sur les murs ? ». Revenez ensuite à ce parcours principal.",
+          "text_sha256": "87929858fdf48a8382cfa831ec161748b8a2ab752b617c67d86210767a33e7b0",
+          "proper_name_surface_markers": [
+            "Patio"
+          ]
+        },
+        {
+          "sequence": 4,
+          "text": "Avant le palais de Pierre Ier, si la Casa de la Contratación est ouverte dans votre chemin, entrez-y. Après 1503, cette institution devient l’un des organes essentiels de l’administration des relations avec les Indes. Regardez le Cuarto del Almirante et, si elle est accessible, la chapelle de la Virgen de los Navegantes. Le contraste est précieux : dans quelques mètres, vous passez d’un palais qui met en scène une monarchie médiévale à un espace associé à la gestion d’un monde atlantique en expansion. L’Alcázar n’est donc pas seulement le décor d’une dynastie ; il devient aussi une pièce de la machine administrative qui relie Séville à l’Amérique.",
+          "text_sha256": "885686790c7b722ba9cd88db71fa6f2313f06386cb02bab373cf9f08c3bd2545",
+          "proper_name_surface_markers": [
+            "Casa"
+          ]
+        },
+        {
+          "sequence": 5,
+          "text": "Entrez maintenant dans le palais de Pierre Ier et attendez le Patio de las Doncellas. Quand il s’ouvre devant vous, ne cherchez pas tout de suite une explication. Regardez l’axe central, l’eau, les galeries et la répétition des arcs. Faites ensuite le tour lentement avec les yeux : bas des murs, colonnes, plâtres sculptés, portes, puis étage supérieur. Le patio a été transformé au fil des siècles ; les recherches archéologiques ont notamment permis de restituer son jardin médiéval central. Cela suffit à rappeler une chose essentielle : ce que vous voyez aujourd’hui est déjà le résultat d’une longue histoire de modifications, de restaurations et de choix de présentation.",
+          "text_sha256": "47f5ab71019767046e648647454afbc4f78146c47d133d08820e9d297afd7249",
+          "proper_name_surface_markers": [
+            "Patio"
+          ]
+        },
+        {
+          "sequence": 6,
+          "text": "Dans le Patio de las Doncellas, cherchez maintenant comment le décor produit du pouvoir sans utiliser la monumentalité massive d’une forteresse. Ici, l’effet vient de la précision, de la répétition, de la lumière et de la maîtrise du détail. Le mot mudéjar est utile pour décrire cette culture artistique produite sous domination chrétienne avec des formes, techniques et artisans héritiers de traditions islamiques, mais ne le transformez pas en réponse automatique. Demandez plutôt : qui commande, qui sait faire, quels modèles circulent, et pourquoi le souverain veut-il précisément cet effet ? Cette question est plus féconde que l’étiquette.",
+          "text_sha256": "96bc116a48f47258d4e5bf499851e6b89956bff060c48407a9ed987a3e2e6a5e",
+          "proper_name_surface_markers": [
+            "Patio"
+          ]
+        },
+        {
+          "sequence": 7,
+          "text": "Quand vous entrez dans le Salón de Embajadores, levez les yeux avant toute chose. Puis descendez lentement le regard vers les murs, les arcs et les ouvertures. C’est une salle d’audience : elle est faite pour produire un effet sur celui qui entre. Le décor enveloppe, multiplie les surfaces, brouille la frontière entre structure et ornement. Imaginez un visiteur diplomatique qui attend ici face au souverain. Ce qu’il perçoit n’est pas seulement la richesse ; c’est la capacité du pouvoir à ordonner des artisans, des matières, des inscriptions et un espace entier autour de lui. Le message politique est spatial avant d’être verbal.",
+          "text_sha256": "436f41bb60359f99d42772f9cd8b5aaa90391d51bab56a1119606024075eaf00",
+          "proper_name_surface_markers": [
+            "Salón"
+          ]
+        },
+        {
+          "sequence": 8,
+          "text": "Si vous passez par le Patio de las Muñecas, changez d’échelle. C’est un espace plus intime. Son nom est traditionnellement associé à de petites têtes visibles dans les plâtres des arcs. Ne faites pas de leur recherche un jeu obligatoire : regardez surtout comment la proximité des parois, la finesse du décor et les circulations donnent une sensation très différente de celle du Patio de las Doncellas. Un palais n’est pas une suite de salles spectaculaires ; c’est une organisation de degrés d’accès, du public au plus privé. Le pouvoir se lit aussi dans la possibilité de contrôler qui voit quoi, et jusqu’où chacun peut avancer.",
+          "text_sha256": "571493ecf13bd20f0030a6b580741cb6cd26003fc1a65aaaa99f23ff597b1fd3",
+          "proper_name_surface_markers": [
+            "Patio"
+          ]
+        },
+        {
+          "sequence": 9,
+          "text": "Lorsque vous gagnez le Palacio Gótico, laissez le contraste vous surprendre. Après les surfaces extraordinairement travaillées du palais mudéjar, l’espace change de logique. Ce palais est lié aux transformations chrétiennes engagées après la conquête, notamment sous Alphonse X. Ne cherchez pas lequel serait le plus authentiquement sévillan : ils sont tous les deux Séville. Le point intéressant est justement leur coexistence. En quelques minutes, vous traversez des conceptions différentes de la représentation royale sans quitter la même enceinte. C’est une histoire de succession, mais aussi d’addition.",
+          "text_sha256": "b9dbcfba9a0648d5693d8b68d503c2997904897fabd3ee6e507d1f127c3ec038",
+          "proper_name_surface_markers": [
+            "Palacio"
+          ]
+        },
+        {
+          "sequence": 10,
+          "text": "Si l’accès aux Baños de Doña María de Padilla est ouvert, descendez ou approchez-vous de cet espace voûté et regardez d’abord l’eau avant de penser à la légende attachée au nom. Ces citernes occupent la partie inférieure du Patio del Crucero. L’atmosphère est presque l’inverse des patios lumineux : répétition des voûtes, fraîcheur, reflets et profondeur. C’est un bon endroit pour corriger une idée simple : dans l’Alcázar, l’eau n’est pas un décor ajouté aux jardins. Elle appartient à une infrastructure de confort, d’approvisionnement, de fraîcheur et de mise en scène qui traverse tout le complexe.",
+          "text_sha256": "494797a8fe967a620336fbb024f58e39647a88441a6ef0b5d42a54881a31dc63",
+          "proper_name_surface_markers": [
+            "Patio",
+            "Baños"
+          ]
+        },
+        {
+          "sequence": 11,
+          "text": "En entrant dans les jardins, cherchez d’abord l’Estanque de Mercurio puis la Galería del Grutesco si votre parcours les rend accessibles. Ici encore, vous ne regardez pas un jardin figé d’époque médiévale. Les jardins ont été transformés, agrandis et mis en scène au fil des siècles. La galerie aménagée sur l’ancienne muraille montre parfaitement ce mécanisme : un élément défensif devient support de promenade et de spectacle. Regardez depuis là les niveaux, l’eau, les masses végétales et les perspectives. Si vous voulez comprendre ce qui rend toute cette eau possible, ouvrez ici la gourmandise « Gouverner par l’eau : le jardin visible et son infrastructure cachée ». Puis revenez au parcours principal pour la fin de visite.",
+          "text_sha256": "24e086cf8f8ede04e2a661e5715aaa3269ca335860f2ec160a7ff3b54ae98b99",
+          "proper_name_surface_markers": [
+            "Galería"
+          ]
+        },
+        {
+          "sequence": 12,
+          "text": "Maintenant, je vais vous rendre complètement les jardins. Mettez l’audio en pause. Ne cherchez plus aucun point obligatoire. Choisissez une allée, un bassin, une ombre, une perspective. Écoutez aussi le lieu réel autour de vous. Restez deux minutes ou vingt minutes : cette durée vous appartient. Quand vous aurez envie de reprendre le fil historique, revenez simplement ici et relancez la lecture.",
+          "text_sha256": "d14ba89139493b1bdd6634692853156f20e5f75308c26c69e27864056ff75fad",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 13,
+          "text": "Vous revoilà. Avant de repartir, reconstruisons la visite sans faire une liste. Vous êtes entré dans une enceinte née du pouvoir islamique. Vous avez vu la monarchie chrétienne y rester et y construire. Vous avez vu Pierre Ier commander un palais utilisant consciemment des formes et savoir-faire hérités d’Al-Andalus. Vous avez croisé la Casa de la Contratación, où le pouvoir se projette désormais vers l’Atlantique. Vous avez traversé un palais gothique puis des jardins continuellement transformés. Le fil commun est simple : aucun pouvoir ne repart de zéro. Chacun hérite d’espaces, de techniques, d’images et de contraintes qu’il réemploie pour raconter sa propre légitimité.",
+          "text_sha256": "2f6008f04d47210a54e25e3d08b54c8072f4e871a9487ddb8951fbd5a7efb069",
+          "proper_name_surface_markers": [
+            "Casa"
+          ]
+        },
+        {
+          "sequence": 14,
+          "text": "Dernier conseil pratique : ne sacrifiez pas les jardins pour cocher une salle de plus. Votre billet de 17 heures vous laisse une longue fin d’après-midi, mais le site est en horaire d’été et le déplacement de sortie commence plus tard dans la soirée. Si un espace est fermé pour maintenance ou nécessité de service, acceptez le détour : le Real Alcázar lui-même rappelle que certaines zones peuvent fermer occasionnellement. À la sortie, retenez une question pour demain : si le pouvoir royal transforme aussi librement les formes qu’il reçoit, que fera la ville ordinaire de ces mêmes héritages ? Santa Cruz et l’Archivo prolongeront cette réponse.",
+          "text_sha256": "69139cbf140dac406425c0b2dbb4e37afde751e76fc4ec63d3e1052867e9e236",
+          "proper_name_surface_markers": [
+            "Real Alcázar",
+            "Archivo"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-ep03.json",
+      "id": "seville-discovery-ep03",
+      "title": "Archivo : gouverner un monde avec du papier",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 5,
+      "source_sha256": "8b15623de5a63f168c9a0b20c59242c584738e508ed37fe0f52e2c98368ff281",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "En quittant le Patio de Banderas, gagnez la Plaza del Triunfo. Après Plaza de España et les ruelles de Santa Cruz, le changement est frappant : en quelques centaines de mètres se concentrent le palais royal, la grande cathédrale et l’ancienne Lonja qui abrite aujourd’hui l’Archivo General de Indias. Ce voisinage donne presque une carte politique de Séville : pouvoir royal, pouvoir religieux, commerce et administration se regardent.",
+          "text_sha256": "06942bb80c46bdb12240621a03c46dc7596f982bcb802ac24f3dc0d7705d787d",
+          "proper_name_surface_markers": [
+            "Patio",
+            "Plaza",
+            "Archivo"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "L’Archivo est créé comme institution en 1785 sous Charles III afin de rassembler les documents relatifs aux possessions espagnoles d’outre-mer. Mais le bâtiment est plus ancien. La Lonja avait été construite pour les marchands, qui avaient besoin d’un lieu propre pour leurs affaires. L’édifice matérialise donc d’abord une nécessité commerciale, puis devient la mémoire administrative d’un empire.",
+          "text_sha256": "b788cc4a4a2cbe8a8890c372e1654fd28491fdcc07dace22ba198f86308cac25",
+          "proper_name_surface_markers": [
+            "Archivo"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "À l’intérieur, ne cherchez pas seulement des documents célèbres. Cherchez plutôt l’idée d’une machine. Gouverner un espace immense exige autorisations, cartes, correspondances, comptes, règlements et décisions. L’histoire atlantique n’est donc pas seulement faite d’explorateurs ou de batailles. Elle dépend d’une infrastructure bureaucratique capable de rendre les flux lisibles et contrôlables.",
+          "text_sha256": "f32fa848ba96d8cfc2169c4bb9f80c1961f74f0a90b9512a4fc64c185acac131",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Cette infrastructure a aussi une face sombre. Commerce, conquêtes, travail forcé, déplacements contraints et esclavage appartiennent au même système. Deux gourmandises permettent d’approfondir ce point : “Les archives comme envers de l’épopée” et “Séville, esclavage et économie atlantique”. Elles évitent qu’un récit de puissance se transforme en célébration automatique.",
+          "text_sha256": "951ba569b4b62d1cbc3f8f6c44399bf470eedfbd0977738c9c392d3a41e0526d",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "En ressortant, le samedi peut ralentir. Nous ne partons plus vers le fleuve : cette partie de Séville a déjà été vécue vendredi matin. Revenez plutôt vers Mateos Gago et Pje. de Vila, avec un déjeuner en chemin. Cette fermeture est volontaire : elle donne une vraie boucle à la journée et laisse la seconde moitié de l’après-midi libre. Demain, le récit changera encore d’échelle avec un palais privé puis la peinture sévillane.",
+          "text_sha256": "d25a36dd9cade8efd11fde26cfdea660982b36932e39826fde239214cdb07df1",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-ep04.json",
+      "id": "seville-discovery-ep04",
+      "title": "Giralda et Cathédrale : transformer sans tout effacer",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 6,
+      "source_sha256": "fbdd55a5ee770cb83751def44b2502918141b75c8efb78d5b2a37f50c6c6ac36",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Avant de monter, regardez la Giralda de bas en haut. Essayez de distinguer deux bâtiments dans une seule tour : en dessous, l’ancien minaret almohade de la grande mosquée ; au-dessus, le couronnement Renaissance et le Giraldillo. Voilà notre première clé de lecture. Ici, un changement de pouvoir n’a pas produit un effacement total. Il a produit une transformation visible.",
+          "text_sha256": "5aaa369967e8b200cdfb3d999fd842ea5a9eb8fdc8337819160b868b1e42f04d",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Pendant la montée, oubliez un instant la vue qui vous attend. Regardez la rampe sous vos pieds et l’épaisseur des murs. Le site officiel décrit un noyau central entouré par les murs extérieurs, avec les rampes entre les deux. Cette organisation est assez ample pour avoir permis autrefois une montée à cheval. Continuez maintenant quelques minutes sans audio. Laissez l’architecture vous expliquer elle-même le mouvement qu’elle impose au corps.",
+          "text_sha256": "add93260ddebdddc45f4cbe9a2b18af9f74f01b0d8fdaa10b4feb93bdd81ac90",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "En haut, ne commencez pas par la photo. Repérez trois choses : l’Alcázar, le Guadalquivir et les quartiers que nous parcourons. La tour devient alors une carte en relief. Le fleuve du matin, le palais de cet après-midi et la ville dense de Santa Cruz se replacent autour de vous. Ce panorama est moins un bonus qu’un moment où le trajet des trois jours devient enfin une géographie.",
+          "text_sha256": "8f827d2a6cd04c2a92ef00b52e2f52d6d4607d1f810f2028662994ac955d4e54",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Quand vous arrivez au Patio de los Naranjos, cherchez d’abord les canaux qui relient les pieds des arbres. Le patio actuel conserve la mémoire du sahn de l’ancienne mosquée, même s’il a été profondément remanié. Le site de la Cathédrale indique encore la structure héritée, l’ancienne fonction d’ablutions et ce réseau de circulation de l’eau. Une cour agréable devient soudain un fragment d’infrastructure et de rituel conservé dans un autre édifice.",
+          "text_sha256": "b1620e45ff7083128b6477aca2e393108c822a3b521f106e69ce4ca98e81fd83",
+          "proper_name_surface_markers": [
+            "Patio"
+          ]
+        },
+        {
+          "sequence": 5,
+          "text": "Puis entrez dans la nef gothique. Avant que je vous dise quoi que ce soit de plus, mettez l’audio en pause. Marchez un peu si vous en avez envie, levez les yeux, regardez les piliers, la lumière et les personnes autour de vous. Prenez le temps qu’il vous faut. Quand vous aurez vraiment pris la mesure du lieu, relancez la lecture.",
+          "text_sha256": "14263d839a167970c43855a03ad37f4e84a2c389a1cb6d293a85313a2e6cbd62",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 6,
+          "text": "Vous avez maintenant ressenti le contraste avant de l’expliquer. La Cathédrale a été construite aux quinzième et début du seizième siècles à côté et sur l’emprise de l’ancienne grande mosquée, tout en conservant la Giralda et le patio. Vous avez donc sous les yeux non pas une succession propre de styles, mais une superposition politique, religieuse et matérielle. Si vous passez près du tombeau de Christophe Colomb, utilisez-le comme une porte, pas comme un résumé. La Séville atlantique que nous aborderons à l’Archivo est une histoire d’institutions, de commerce, de conquêtes, de circulations humaines et de violences. Les gourmandises permettent d’aller plus loin. Pour l’instant, sortez avec une seule question : conserver un ancien minaret est déjà significatif ; pourquoi, quelques heures plus tard, verrons-nous un roi chrétien faire construire un palais en réemployant délibérément un langage artistique lié à Al-Andalus ?",
+          "text_sha256": "979259e85c01cec909537322f00d2ce8e5ebbf6be439fbfcd4f071bf47cd8aab",
+          "proper_name_surface_markers": [
+            "Archivo"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-ep05.json",
+      "id": "seville-discovery-ep05",
+      "title": "1929 : commencer par la ville qui se met en scène",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 6,
+      "source_sha256": "39026066de19ba476221e66b1e53e099f3f6b62f8e10e0d987777d1e0fa9411e",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Vous êtes maintenant dans un décor qui semble ancien et qui, pourtant, est beaucoup plus récent que presque tout ce que nous allons voir ensuite. La Plaza de España est construite pour l’Exposition ibéro-américaine de 1929. Regardez son ampleur avant de chercher les détails : le demi-cercle, les deux tours, les ponts, le canal, les galeries. Tout ici est conçu pour produire une impression de synthèse, comme si l’Espagne pouvait rassembler son histoire et son territoire dans une seule grande image harmonieuse.",
+          "text_sha256": "9484254973eac5b2545786adcd1f0f33f8dbbcab863c9dc132a0c24780448770",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "Approchez maintenant des bancs recouverts de céramique. Chaque province est représentée, et la matière elle-même devient un langage politique. Les azulejos donnent de la couleur, de la narration et une apparence de tradition à un projet très moderne dans son intention : montrer une nation capable de se mettre en scène. Nous retrouverons la céramique demain à Triana, mais sous une autre forme. Ici elle construit un récit national ; là-bas, elle renverra davantage aux métiers, aux ateliers et à la vie d’un quartier.",
+          "text_sha256": "75674aaf4cbb7a8d52809bec119eaa63cd6645b8ca7f49e56be19f60f9859f58",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Il y a quelque chose de très utile à commencer notre visite ici plutôt qu’au Moyen Âge. Cette place nous prévient : une ville ne nous livre jamais son passé brut. Elle le sélectionne, le restaure, le célèbre, parfois le simplifie. Au cours des trois jours, nous allons donc essayer de distinguer trois choses : ce qui s’est passé, ce que les générations suivantes ont conservé ou transformé, et ce qu’elles ont choisi de raconter de ce passé. La Plaza de España est presque un mode d’emploi pour cette méthode.",
+          "text_sha256": "9208fa51486a85c2b5b5562eb1f88f756d73d2f501173cdffa23e932bb854c5e",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 4,
+          "text": "Avant de poursuivre, choisissez l’un des ponts et mettez l’audio en pause. Regardez les reflets, la courbe du canal, la céramique, les balustrades et l’ensemble du demi-cercle. Prenez le temps qui vous paraît juste. Quand vous aurez fini de regarder, relancez simplement la lecture.",
+          "text_sha256": "cc6803c40188dee52a3d589705c689e38efc76aeb7978e8a5a605c4d2fb6d356",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "Vous revoilà. Regardez aussi la relation entre architecture et paysage. Le parc voisin, l’eau du canal et l’espace immense donnent une impression de respiration. Profitez-en maintenant, tôt dans la journée. Plus tard, les contraintes de chaleur nous feront préférer d’autres types d’espaces : rues étroites, intérieurs monumentaux, patios, puis jardins à la fin de l’après-midi. Deux gourmandises prolongent ce chapitre si vous voulez approfondir 1929 ou suivre le fil de la céramique.",
+          "text_sha256": "edbbd33e1b2ba7a02107fd97c2816c16b6ad4ec9e4c7006c6761bb39d927a1d7",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 6,
+          "text": "Nous allons maintenant quitter la monumentalité et revenir vers Santa Cruz. Prenez l’Avenida de Isabel la Católica puis les Jardines de Murillo. Ne cherchez surtout pas à gagner quelques minutes par un axe plus banal : la prochaine séquence se construit en marchant. Nous allons passer d’une ville qui se montre à une ville qui se protège du soleil, se replie derrière des murs et nous oblige à comprendre ses détours.",
+          "text_sha256": "1d039861cf57ac2ba2a0f74efa0cb4e7f866eb0adc04c9efd7f687b1d4db5c37",
+          "proper_name_surface_markers": [
+            "Jardines"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-ep06.json",
+      "id": "seville-discovery-ep06",
+      "title": "Depuis Plaza de Armas : rejoindre l’autre rive avant la ville monumentale",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 5,
+      "source_sha256": "9131a989498ed49de1a3fed6ef0b6ef5415cdd5daff2dd4cf5dc2c5fef58df68",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Nous partons aujourd’hui d’un endroit différent : le NH Sevilla Plaza de Armas, à l’ouest du centre monumental. C’est une contrainte logistique, mais elle nous offre un meilleur début. Au lieu de courir immédiatement vers la Giralda, prenez Marqués de Paradas puis Reyes Católicos. Le fleuve va apparaître avant les palais. Gardez cette idée : une ville ne se comprend pas seulement depuis ses monuments, mais aussi depuis les voies qui ont permis aux personnes, aux marchandises et aux pouvoirs de circuler.",
+          "text_sha256": "39b94173686bb9401e4961b550c050e5a74940866c65f4f2998c7625eee4e7fa",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "En approchant du Puente de Isabel II, ralentissez. Regardez d’abord le Guadalquivir dans les deux directions. Le centre historique reste derrière et à gauche ; Triana est devant vous. Cette position est précieuse parce qu’elle inverse la hiérarchie touristique. La cathédrale et l’Alcázar ne sont plus le centre absolu du paysage : ils deviennent une partie d’un système plus large, relié à un fleuve, à des quais et à une autre rive qui possède sa propre histoire. Au milieu du pont, mettez l’audio en pause. Prenez le temps de regarder le fleuve, la ville et Triana sans durée imposée. Quand vous aurez envie de poursuivre, relancez simplement la lecture.",
+          "text_sha256": "85da1d649093b3e02399ed488b9698400d0cc588c81bb0ac8580d8bb25815c1b",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Vous revoilà. Traversez maintenant jusqu’à l’Altozano. Les arches métalliques du XIXe siècle remplacent un passage plus ancien, mais la fonction demeure : connecter deux Séville. Sur l’Altozano, retournez-vous un instant vers la Giralda. Vous voyez déjà le bénéfice de ce détour : la ville monumentale est mieux comprise quand on la regarde depuis l’extérieur. Puis entrez vers le Mercado de Triana et la Calle San Jorge. Ici, l’histoire devient plus matérielle : marché, métiers, céramique, sociabilité de quartier.",
+          "text_sha256": "1220ab681fd9a7e975dc630cf902e9bd6b7c31af972fe97e4a07ee59d9303722",
+          "proper_name_surface_markers": [
+            "Calle",
+            "Mercado"
+          ]
+        },
+        {
+          "sequence": 4,
+          "text": "Ne cherchez pas à résumer Triana au flamenco. Le quartier est aussi lié au fleuve, aux artisans, aux fours de céramique et à une longue relation parfois difficile avec le reste de la ville. Notre matinée est courte parce que nous devons revenir au NH récupérer les bagages. Cela impose une discipline utile : regarder quelques choses avec attention plutôt que vouloir tout absorber. La visite complète de Triana n’est pas l’objectif ; comprendre ce que change le passage sur l’autre rive, oui.",
+          "text_sha256": "8d4e25750f1b14e12fe6da756f9ef1efe09d28097fa2acfedc8970f00a3c3187",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "Une gourmandise, “Le port comme système urbain”, permet d’aller plus loin si vous voulez comprendre quais, métiers, contrôles et flux plutôt qu’un monument isolé. Pour le récit principal, retenez seulement ceci : nous avons commencé Séville depuis le bord. Maintenant, nous allons refermer la boucle vers le NH par l’Arenal. Ce retour n’est pas une marche de liaison ; c’est la deuxième moitié du prologue.",
+          "text_sha256": "9a6ade35e23b29c6f7bcd4fe1c369872dd3fe0afad02754672b858589599e521",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-ep07.json",
+      "id": "seville-discovery-ep07",
+      "title": "Triana et l’Arenal : revenir au point de départ en comprenant le fleuve",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 5,
+      "source_sha256": "3c53644a84169c22eddb62ee74bf7a6767245630ecd2b5e1c75189875cc59cfc",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Avant de retraverser le Puente de Isabel II, regardez une dernière fois Triana depuis l’Altozano. Les façades, les azulejos et le marché racontent une ville par la matière et les usages plutôt que par les grands programmes de pouvoir. C’est précisément pour cela que nous avons commencé ici. Plus tard, la Cathédrale et l’Alcázar parleront d’institutions puissantes. Ce matin, le fleuve nous oblige d’abord à regarder les relations entre quartiers.",
+          "text_sha256": "6f258f84a63f915e164be0ad4090814a9de6db5e2736e0d17a3afccead7d7cb0",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Retraversez maintenant le pont et tournez vers le sud sur le Paseo de Cristóbal Colón. Gardez le Guadalquivir visible. Laissez le commentaire respirer : quelques dizaines de secondes de marche silencieuse sont utiles ici. Sur la droite, le fleuve ; sur la gauche, l’Arenal. Essayez d’imaginer moins une promenade actuelle qu’une infrastructure urbaine faite de quais, entrepôts, métiers, déplacements, contrôles et attentes.",
+          "text_sha256": "68046347935b375112cf5440cd1f104c3f74a8b0417b44ebd65996abf9f7fae2",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "En approchant de la Maestranza, le quartier change encore de registre. Le fleuve a produit du commerce, de la richesse et du mouvement, mais aussi de fortes hiérarchies sociales. Une ville portuaire concentre les opportunités et les violences d’un système économique. Nous reviendrons plus tard sur cette dimension à l’Archivo. Pour l’instant, gardez simplement la logique spatiale : l’empire ne flotte pas dans les idées ; il a besoin d’un sol, de quais et de routes.",
+          "text_sha256": "1c8a5c01322b85b1991e7b29454de7c9a829ede2dc324627b7c71cff3393be53",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Puis remontez progressivement vers Reyes Católicos et Plaza de Armas. Le retour au NH est volontaire. Il faut récupérer les bagages avant de changer d’hébergement, et cette obligation nous évite une erreur fréquente : transformer la matinée en marche infinie simplement parce que nous sommes déjà dehors. Une bonne visite sait se refermer. Ici, la boucle possède un début, un contraste et une conclusion.",
+          "text_sha256": "ba99f1cb73dd2b567328fead9ade5c5ce61db37d69580eddc4d521905a318f40",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 5,
+          "text": "Lorsque vous retrouvez le NH, la première séquence est terminée. Récupérez les bagages sans précipitation. Le prochain déplacement sera en taxi ou VTC vers Pje. de Vila 11. Ce changement d’hôtel marque aussi un changement de focale : nous quittons la Séville du bord pour entrer dans la concentration monumentale. Après le dépôt des valises, la Giralda deviendra notre prochain grand repère.",
+          "text_sha256": "4e1910385d73b0cd646c75e17e6ea36e3e668112978ba1313ba308e8859b529e",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g01.json",
+      "id": "seville-discovery-g01",
+      "title": "L’ombre décide-t-elle de notre itinéraire ?",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 3,
+      "source_sha256": "8af0e478bdeba65bdaf68cd71587dcec82f9f4f640b7f3a6457c4189a74fba88",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Petite expérience : pendant quelques minutes, oubliez Google Maps et observez seulement les choix de votre corps. Quand le soleil frappe une façade, vous changez de côté. Quand une rangée d’arbres apparaît, vous ralentissez. Quand une rue étroite crée un courant d’air ou une ombre continue, elle devient plus attractive qu’un axe plus direct. À Séville, ce comportement n’est pas anecdotique : septembre affiche historiquement une moyenne de maximales proche de trente-deux degrés.",
+          "text_sha256": "0cc8282fe680aa058e1df25413da30247a94f676e4983bb05f69d6129bf65f11",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Cela permet de lire autrement patios, végétation, eau et tracé urbain. Ils n’ont évidemment pas tous été conçus pour une seule fonction climatique, mais ensemble ils modifient profondément la façon d’habiter et de parcourir la ville. Le visiteur moderne redécouvre avec son corps une évidence ancienne : le confort dépend de la manière dont on organise la relation entre intérieur et extérieur, soleil et ombre, pierre et végétation.",
+          "text_sha256": "b370f5acbac25f403d344910943a5394c0562050b11b7a4d85f7f8edff068645",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Gardez cette clé pour le reste du séjour. Elle explique notre départ matinal vers Plaza de España, la longue coupure au milieu du vendredi et les jardins de l’Alcázar en fin de journée. Le planning n’est pas seulement une optimisation touristique ; il essaie de laisser la ville et son climat dicter une partie du rythme.",
+          "text_sha256": "2cbf2de1071d5999b405d565e7000ac285af86a0cedb7ff7fd66d02c86d9b77c",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g02-casa-pilatos-fallback.json",
+      "id": "seville-discovery-g02-casa-pilatos-fallback",
+      "title": "Fallback — Casa de Pilatos : le pouvoir entre dans la maison",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 5,
+      "source_sha256": "2b45fccf20aa31520b69ecad3d0eb7c955ab4048b0cbfb4f4715cedb2b3bf798",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Plan B du dimanche matin. Si la Maestranza n’est finalement pas accessible, partez de Pje. de Vila vers Casa de Pilatos. Cette séquence reste volontairement courte afin de protéger checkout et bagages.",
+          "text_sha256": "59a6e18b28c264be6e6d68739fc9bde01c3c9abaf48ca41649c616b24bce322f",
+          "proper_name_surface_markers": [
+            "Casa"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "Le palais naît à la fin du quinzième siècle et se transforme profondément au seizième. Regardez le patio principal, les colonnes, les marbres et les surfaces de céramique : formes gothico-mudéjares et apports de la Renaissance italienne y cohabitent.",
+          "text_sha256": "5bda73d231c31e1b06ac1b07ad3ddc44c999885a3e30c8e7ac728930b3f13766",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Mettez l’audio en pause. Faites un tour du patio et choisissez un détail qui vous attire. Reprenez quand vous avez terminé votre propre observation.",
+          "text_sha256": "333e1d7421300b6a0601e04dd403ea3ff89d093b6795ae734e832477131809c0",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Après l’Alcázar, la question change : comment les langages artistiques des grands pouvoirs se diffusent-ils dans une résidence aristocratique privée ? Les styles circulent avec les personnes, voyages, matériaux, artisans et ambitions sociales.",
+          "text_sha256": "be8f4702ecacef0e61f80961629b1a553d73e3c1a7e4abca1ef6e2268869ee4e",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "Sortez assez tôt pour revenir au logement. Casa de Pilatos n’est ici ni une consolation ni une visite à accumuler : c’est un fallback de qualité qui maintient le récit et la robustesse du dimanche.",
+          "text_sha256": "00741805a36662709fb0c995ebcd96b17a0d53cbf19c2bb8e376d6ffbd283d93",
+          "proper_name_surface_markers": [
+            "Casa"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g02.json",
+      "id": "seville-discovery-g02",
+      "title": "Maestranza : entrer dans l’arène pour comprendre Séville",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 8,
+      "source_sha256": "5b08eb095fd1f02e9314a497f004a9c3c4deeb9578dc1d5893d2c2bbcf06bbaf",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Dimanche matin. Aujourd’hui, nous ne visitons pas un troisième palais. Nous changeons complètement de registre. En approchant de la Maestranza, regardez d’abord où elle se trouve : presque au bord du Guadalquivir, dans l’ancien secteur du Baratillo et de l’Arenal. Vendredi, nous l’avons frôlée comme un élément du paysage portuaire. Cette fois, nous entrons.",
+          "text_sha256": "5addc65b4dc3654028ae6d9d5cd39f3ceb03c362817e85e201e56b6307c15434",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Avant même le ruedo, observez la forme du bâtiment. La Real Maestranza explique que la plaza s’est construite pendant environ cent vingt ans. C’est pourquoi elle n’est pas un cercle géométrique parfait : l’ensemble forme un polygone irrégulier de trente côtés. Ce détail est une excellente entrée dans le monument. Ce que nous voyons n’est pas un objet dessiné d’un seul geste, mais une architecture qui s’est installée progressivement dans la ville.",
+          "text_sha256": "93544082a230f61ca248c9eb49f114899cbd62853c1fb0f00dd5548afb8d6245",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Quand le ruedo apparaît, ne cherchez pas encore les grands noms de la tauromachie. Regardez l’espace comme une machine de spectacle : sable central, barrières, gradins, accès, présidence, portes. Tout est conçu pour organiser simultanément ce qui se passe dans l’arène et la manière dont des milliers de regards s’y concentrent. La place fabrique un centre, une hiérarchie et une attente.",
+          "text_sha256": "6adefb7af5e80918cb92f0df6a660834fb33ca7e1afeecf2f2587338a38543ce",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "La Real Maestranza elle-même est plus ancienne que cette plaza. Corporation nobiliaire liée historiquement à la cavalerie, elle rappelle que ses activités ont longtemps concerné le cheval, l’entraînement équestre et l’élevage. Ce passé aide à comprendre pourquoi l’histoire du lieu ne se réduit pas au taureau : cheval, noblesse, représentation sociale et spectacle public se croisent ici.",
+          "text_sha256": "5443df76a123ddba93f91c6e87fc13d83ddd12d9e6d7f5e0867e61d11cdad225",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "La tauromachie possède aujourd’hui en Espagne un statut juridique de patrimoine culturel. Mais ce statut ne supprime pas la controverse. La loi qui la protège reconnaît elle-même qu’une partie importante de la société exprime des préoccupations sur le traitement des animaux. Et le règlement de la corrida décrit explicitement une lidia qui comprend blessures et mise à mort du taureau, sauf cas particuliers comme l’indulto. Comprendre ce lieu exige donc de tenir ensemble deux réalités : un patrimoine historique et culturel très enraciné, et un spectacle dont la violence envers l’animal est au cœur des objections contemporaines.",
+          "text_sha256": "69c141969dfd0e07033471d72ca3800e97d0268244ed554295bf26e0aebad7c8",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 6,
+          "text": "Mettez maintenant l’audio en pause. Regardez simplement l’arène. Essayez de distinguer ce que l’architecture vous fait ressentir de ce que vous pensez de la pratique qu’elle accueille. Vous pouvez admirer un espace, comprendre une tradition et rester en désaccord avec certains de ses gestes. Reprenez quand vous avez votre propre réponse.",
+          "text_sha256": "9d79c751a5080fc3573b3b48a0642cdd5935954da8e9c49e21d7cac1a5aa98d6",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 7,
+          "text": "Avant de sortir, retenez une idée : la Maestranza n’est intéressante ni parce qu’il faudrait célébrer la corrida, ni parce qu’il suffirait de la condamner en passant. Elle est intéressante parce qu’elle oblige à regarder comment une société transforme un rituel en architecture, en institution, en mémoire et en débat. Si vous voulez aller plus loin, deux gourmandises sont disponibles : l’une sur la façon de lire une arène, l’autre sur la controverse patrimoniale et animale.",
+          "text_sha256": "b7d3b117e3b147e0f55bbadcebc27fbdb81782d70f889ff09b8fe0ab04487be2",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 8,
+          "text": "En sortant, retournez directement vers Pje. de Vila. Le créneau du matin reste volontairement protégé : checkout, bagages puis consigne à partir de onze heures. Ensuite, le Museo de Bellas Artes changera encore de registre et terminera le séjour par les images que Séville a produites d’elle-même.",
+          "text_sha256": "41a26961687577af99f0e4343ad8cae0f22326b3daa9357801605683d5c74158",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g03.json",
+      "id": "seville-discovery-g03",
+      "title": "La céramique, de la nation à Triana",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 3,
+      "source_sha256": "cec04c37938630b7756947e27320f966e5f6ddcb2cc4132e7b102ebd59a688dc",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Regardez les azulejos autour de vous. Ici, la céramique sert une immense composition politique : provinces, scènes, couleurs et ornements participent à une image nationale. La matière paraît traditionnelle, mais elle travaille dans un projet du vingtième siècle. Cela suffit à casser une première idée simple : un matériau ancien n’appartient pas à une seule époque.",
+          "text_sha256": "e2478cffb6f85349c0d4cc6a99f0b8668d824b0d25f4525347d3826a8d89470a",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Demain, à Triana, le même fil nous conduira vers une autre échelle : celle des ateliers, des savoir-faire et d’un quartier historiquement associé à la production céramique. Entre-temps, dans l’Alcázar, vous verrez encore des surfaces où géométrie, couleur et technique participent à la représentation du pouvoir.",
+          "text_sha256": "dd8f567fe76f732a7c17e4a2f9c7b553a177ef9cff9fdcd186c84cfcf729493a",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Suivre une matière est une autre façon de visiter une ville. Au lieu de classer les monuments par époque, on suit ce qui circule : techniques, gestes, motifs et usages. La céramique devient alors un petit fil continu entre la cour royale, la grande mise en scène de 1929 et la vie productive de Triana.",
+          "text_sha256": "8da29c3d2e0e32a6910003fc83ff643539d83d1642cd0352b419d850059173eb",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g04.json",
+      "id": "seville-discovery-g04",
+      "title": "Le Callejón del Agua : une rue qui était aussi une infrastructure",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 3,
+      "source_sha256": "f31aa65b319c8f4ee802240be9ebbf6e62f2ac006f4547c827e62612534523ff",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Le Callejón del Agua fait environ cent quarante mètres et longe la muraille. Son charme actuel peut faire oublier sa fonction historique. Le nom vient de conduites installées dans ce tronçon de mur pour acheminer l’eau des Caños de Carmona vers les jardins des Reales Alcázares. La rue était donc liée à une infrastructure hydraulique qui alimentait un espace de pouvoir.",
+          "text_sha256": "a2b6210cf2b34ef98e39a84d5ff3f8527df7a8ab1fad53cbb2e9f2e9fd3eb823",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Ce détail est précieux parce qu’il relie des catégories que les guides séparent souvent : l’urbanisme, la défense, l’eau et le palais. La muraille protège, mais elle peut aussi porter des conduites. Le jardin est beau, mais sa beauté dépend d’un système technique. Le passage est pittoresque, mais son nom conserve la mémoire de cette infrastructure.",
+          "text_sha256": "6f6e31ca40a98e98bca6cb099a7ca8e3fb84ff989741acac45228e4201536ce6",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Quand vous déboucherez vers les petites places de Santa Cruz, gardez cette habitude : devant un détail séduisant, cherchez la fonction qui l’a rendu possible. C’est souvent là que la ville cesse d’être un décor et devient un système compréhensible.",
+          "text_sha256": "dd86d255fd2c86d1aeac0a149f6d2969a92c82dcc289f2d84ac259108521e147",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g05.json",
+      "id": "seville-discovery-g05",
+      "title": "Conquérir sans tout effacer",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 3,
+      "source_sha256": "0e1b4b1b3da56bddad7fac2479304e9496184e42d7b70a98b62f283551a7eb04",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "La Giralda permet de remplacer une formule vague — “mélange des cultures” — par une question plus précise : que fait un nouveau pouvoir d’un monument prestigieux laissé par le précédent ? L’ancien minaret almohade est conservé, puis transformé en clocher chrétien. Il change de fonction et de signification sans perdre toute son identité architecturale.",
+          "text_sha256": "346b14930b2aa70e58df66dbd7ed3a3f57bcbbfae04ba7980c1c75bc9c21d209",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Ce type de réemploi n’implique pas une coexistence pacifique ou égalitaire. Une conquête reste une conquête. Mais il montre que domination politique et continuité matérielle peuvent aller ensemble. Le vainqueur peut s’approprier un bâtiment précisément parce qu’il est impressionnant et déjà chargé de prestige.",
+          "text_sha256": "f049871c37b38d952481b3b1cfaee56f20f9700795e0b0afe950e0a7c959e10a",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Demain ou ce soir à l’Alcázar, nous irons encore plus loin : il ne s’agira plus seulement de conserver une architecture héritée, mais de voir un souverain chrétien commander un palais utilisant un vocabulaire artistique lié à Al-Andalus. La Giralda prépare cette difficulté.",
+          "text_sha256": "7031853a0764a65e9d4a3700ff102dca733b67818442b2eb969d7d69f034a5e5",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g06.json",
+      "id": "seville-discovery-g06",
+      "title": "Colomb : le raccourci et le piège",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 3,
+      "source_sha256": "ba3429aa5bd7d010fc71973cd44760a422977a4a2b804923a9b652f49043ac8b",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Le tombeau de Christophe Colomb attire naturellement l’attention. Un nom célèbre fournit un point d’accroche simple dans une cathédrale immense. Le piège commence quand ce personnage devient le résumé de la relation entre Séville et les Amériques. Un empire ne fonctionne pas grâce à un homme, ni même grâce à une série d’explorateurs.",
+          "text_sha256": "5b5ff40f9034091a743e1838d4182be357e7930938609e525cb49d0673c2c0c3",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Demain, l’Archivo de Indias fera apparaître tout ce qui manque au récit héroïque : institutions, autorisations, comptabilité, correspondances, cartes, tribunaux, commerce et conflits. Puis le fleuve montrera les infrastructures physiques nécessaires à la circulation. Le personnage reste important, mais il cesse d’occuper tout l’écran.",
+          "text_sha256": "799729c9638ca68cba2ed875bf16e3d55b24a62c73f983ee65cd58c0e58ebdc3",
+          "proper_name_surface_markers": [
+            "Archivo"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "La bonne question n’est donc pas “Colomb est-il important ?” Bien sûr qu’il l’est. La question est : que devient notre compréhension si nous passons du héros au système ? C’est ce déplacement de focale qui structure tout le deuxième jour.",
+          "text_sha256": "6b6a5fb0ce282b9da0f31e8ef1d75bd4e24abaea0fde2f77b27d92a1d0c59e4d",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g07.json",
+      "id": "seville-discovery-g07",
+      "title": "Mudéjar sans raccourci : qui parle sur les murs ?",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 6,
+      "source_sha256": "17bdc7a83d854b8c901ea94cf6d324e09db3c0d231c8c2d61880a846a83d9b43",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Si vous êtes encore devant la façade du palais de Pierre Ier, restez-y. Sinon, gardez en mémoire le Patio de las Doncellas. Cette gourmandise part d’une question très simple : quand un roi chrétien commande ici un palais rempli de formes, de techniques et d’inscriptions liées à la culture artistique d’Al-Andalus, qui parle exactement ? Le roi ? Les artisans ? Une tradition de cour ? En réalité, toutes ces voix se superposent.",
+          "text_sha256": "f1909e3012dbee01532f7e0c14028506460b27e44abe9c19b9b4d017ca55784f",
+          "proper_name_surface_markers": [
+            "Patio"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "Regardez la façade comme un document politique. Le matériel pédagogique officiel de l’Alcázar invite précisément à y identifier des textes arabes et castillans, des symboles de la monarchie et plusieurs techniques décoratives. Ce mélange n’est donc pas un accident. Le commanditaire se fait reconnaître comme roi de Castille tout en adoptant un langage artistique prestigieux qui circule dans la péninsule. La façade ne choisit pas entre deux mondes : elle met leur coexistence au service d’un pouvoir précis.",
+          "text_sha256": "0f4298bdd35d69493204b8cee82e5ad9242405ca4ef04844872082e97bf7ccb7",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "C’est ici que le mot mudéjar devient utile, puis dangereux. Utile, parce qu’il aide à parler d’architectures et de décors produits sous domination chrétienne avec des savoir-faire et des formes hérités de traditions islamiques. Dangereux, si on imagine aussitôt une identité homogène, un seul groupe d’artisans ou une harmonie sociale parfaite. Les chantiers sont des lieux de circulation, mais aussi de hiérarchies, de commandes et de rapports de force.",
+          "text_sha256": "05905045b590dfc84d3b735bec55dad066dcd022ca0246ca5f34841d55d36bc3",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Le palais lui-même complique encore le récit. Les recherches publiées par le Real Alcázar montrent que certaines parties intégrées à ce que nous appelons aujourd’hui le palais de Pierre Ier sont antérieures à sa grande campagne de construction. Autrement dit, même ce palais que nous associons à un souverain n’est pas une création sortie d’un seul dessin. Il absorbe du bâti précédent, le recompose et lui donne une nouvelle lecture. C’est exactement la logique que nous suivons depuis le début du voyage.",
+          "text_sha256": "91d48c51d34cfe548da07cfee746f14ae095b3c7f4cc458ab58dcce4ed0edb94",
+          "proper_name_surface_markers": [
+            "Real Alcázar"
+          ]
+        },
+        {
+          "sequence": 5,
+          "text": "Maintenant, regardez un détail au choix : un blason, une ligne d’écriture, une frise géométrique, un entrelacs végétal. Ne cherchez pas seulement à savoir de quel style il relève. Demandez-vous plutôt ce qu’il fait ici. Est-ce qu’il identifie le souverain ? Est-ce qu’il impressionne ? Est-ce qu’il montre une compétence technique ? Est-ce qu’il inscrit le palais dans une culture de cour plus vaste ? Une bonne visite commence souvent quand on remplace la question « qu’est-ce que c’est ? » par « pourquoi est-ce ici ? ».",
+          "text_sha256": "379fb05dc940a11042d8d69169331b8a25ded1cac8bd5b3e3f4b04238367d3b8",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 6,
+          "text": "Vous pouvez maintenant revenir au parcours principal. Gardez une seule idée : la conquête change le détenteur du pouvoir plus vite qu’elle ne fait disparaître les techniques, les goûts et les langages. À l’Alcázar, le pouvoir chrétien ne se contente pas d’hériter de formes venues d’Al-Andalus : il les commande, les combine et les utilise pour parler de lui-même.",
+          "text_sha256": "6a247219b969ece4dc19e5a919ded65e1e18e2fc0136a7ae35440a13d35515ae",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g08.json",
+      "id": "seville-discovery-g08",
+      "title": "Gouverner par l’eau : le jardin visible et son infrastructure cachée",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 7,
+      "source_sha256": "7b64c1aca6b873cb43c3ce8f73b30e4f784bacdd991ff7dd2a90950d3bb74523",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Lancez cette gourmandise si vous êtes près de l’Estanque de Mercurio ou si vous avez déjà commencé à marcher dans les jardins. Le premier piège serait de regarder l’eau uniquement comme un décor. Ici, chaque reflet agréable cache une question technique : d’où vient cette eau, comment arrive-t-elle jusqu’au palais, comment est-elle stockée, distribuée puis utilisée pour les fontaines, les bassins et l’irrigation ?",
+          "text_sha256": "a1b0038b159196dd152e73f6fc6b78670cf2cff70aef82a31d0cb6d8ab378e85",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Les études publiées par le Real Alcázar permettent de suivre cette infrastructure. L’eau historique arrivait vers la ville par les Caños de Carmona, puis gagnait l’Alcázar par la muraille du secteur que nous appelons aujourd’hui Callejón del Agua. Elle aboutissait vers la Torre del Agua, puis vers un bassin devenu l’Estanque de Mercurio. À partir de là, le réseau distribuait l’eau vers fontaines, jardins, vergers et bassins. Vous avez donc sous les yeux la partie spectaculaire d’un système beaucoup plus vaste.",
+          "text_sha256": "2fb2a8c77b656da2e2f2c59df2b1f67e444ccd5ac2e3ce9bef4f2e54fa26545f",
+          "proper_name_surface_markers": [
+            "Real Alcázar",
+            "Torre"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "Regardez maintenant le jardin avec cette information. Une allée fraîche, un bassin, des orangers irrigués ou une fontaine deviennent les extrémités visibles d’une chaîne de captage, de conduite, de stockage et de répartition. La maîtrise de l’eau améliore évidemment le confort dans un climat chaud. Mais dans un palais, cette capacité technique devient aussi représentation : faire circuler l’eau là où on le souhaite, créer du frais, du son et du reflet, c’est montrer qu’on sait ordonner un environnement.",
+          "text_sha256": "c46b8fb0c60963c0c96deb6f16527e6f41ac0df84d5b837a3988bfff1be42483",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Le jardin, lui aussi, vous dirige. Il alterne ouvertures et retraits, soleil et ombre, plans d’eau et masses végétales. Même lorsque vous avez l’impression de vous promener librement, l’espace propose des cadrages, des perspectives et des surprises. C’est une forme douce de mise en scène. Le pouvoir n’a pas besoin d’un mur massif pour se faire sentir : il peut aussi se manifester par la capacité à fabriquer une expérience agréable et parfaitement organisée.",
+          "text_sha256": "b5ef6dfc818de8bfe20c69af325b8f4883430f1afca2eaa8e4c1207a5d228fb6",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "Il existe même ici une rencontre étonnante entre eau, mécanique et musique. Dans le Jardín de las Damas, la Fuente de la Fama possède un orgue hydraulique dont le mécanisme moderne a été restauré en s’inspirant des dispositifs historiques européens. L’eau ne sert donc pas seulement à irriguer ou rafraîchir : elle peut devenir énergie, mouvement et son. Ce détail résume bien l’Alcázar, où l’infrastructure et la mise en scène se confondent souvent.",
+          "text_sha256": "4e41d764a1d63122b4a20e49c109d485da9bd37d4b39fdb159cbdf3d8a26af60",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 6,
+          "text": "Avant de reprendre le parcours principal, faites un petit test. Regardez autour de vous et choisissez un seul élément d’eau. Suivez mentalement le chemin inverse : bassin, conduite, stockage, arrivée dans le complexe, alimentation depuis l’extérieur. Vous venez de transformer une jolie image en système urbain. Demain, au Callejón del Agua, vous verrez justement l’un des endroits où cette infrastructure rejoint la ville.",
+          "text_sha256": "aed1f1ede3ad8f25857ce6479770d0eacfa2b7cd97eb30c1d965d425fe4c0426",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 7,
+          "text": "Retournez maintenant au guide principal ou gardez simplement le téléphone en pause. Cette gourmandise n’a qu’un objectif : lorsque vous entendrez de l’eau dans les jardins, ne plus entendre seulement une fontaine. Entendez aussi la technique, le climat, le travail et le pouvoir qui rendent cette fraîcheur possible.",
+          "text_sha256": "18b314de278757e70ae9be81d047c8e2ef1e4f565bd5b2b907215664586e66af",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g09.json",
+      "id": "seville-discovery-g09",
+      "title": "Les archives comme envers de l’épopée",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 3,
+      "source_sha256": "e2863f5d34e398cdccef08350fd4aec232a7aa254298d0e635f722ce5385e7b9",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Les récits d’expédition aiment les moments où quelqu’un part, traverse, découvre ou conquiert. Les archives enregistrent tout ce que l’aventure laisse hors champ : autorisations, ordres, plaintes, procès, comptes, nominations, cartes et correspondances. Ce monde documentaire paraît moins spectaculaire, mais il est indispensable pour comprendre comment le pouvoir se prolonge à distance.",
+          "text_sha256": "edf6a02b76f5c49b1756089e21b48f142a7fcad4bc5be9a87f186bbcc51e0d81",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Le fonds de l’Archivo réunit notamment les traces du Conseil des Indes, de la Casa de la Contratación et des consulats. Ces institutions transforment un espace immense en dossiers administrables. Elles créent des catégories, des procédures et des circuits d’information. L’empire devient partiellement une technologie de papier.",
+          "text_sha256": "90b3794ae9ff154997fccb33d7106df5829127d77bd84ac63b5e3921efec9834",
+          "proper_name_surface_markers": [
+            "Casa",
+            "Archivo"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "Regarder les archives ne rend pas l’histoire plus froide. Au contraire : chaque document correspond à des décisions qui affectent des personnes réelles. L’envers de l’épopée n’est donc pas une montagne abstraite de papiers ; c’est la trace des mécanismes qui rendent possibles commerce, domination, migration et conflit.",
+          "text_sha256": "5cd3deb4658789325bbbfb5dfcf077b14787dc0dfb7e0b41aba011f189b9e7cb",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g10.json",
+      "id": "seville-discovery-g10",
+      "title": "Séville, esclavage et économie atlantique",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 3,
+      "source_sha256": "07dbadf5152d425268de2482290e8f5b915503e2641ebc5b511365fdb0ed729c",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Il faut ralentir ici, parce que le sujet est facile à mentionner en une phrase et difficile à intégrer réellement au récit. Les travaux publiés par l’Université de Séville montrent qu’au seizième siècle et dans la première moitié du dix-septième, la ville compte l’une des plus importantes populations esclaves de la péninsule Ibérique. Séville est aussi un centre fondamental de l’organisation mercantile et financière de la traite des Africains réduits en esclavage vers les Indes.",
+          "text_sha256": "7c92e652c8bb4ed7a3d90d43716064bde2aa2d814631320413508ac3d43d9b68",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Cela oblige à modifier l’image de la “richesse atlantique”. Les mêmes structures commerciales et financières qui permettent l’expansion des échanges participent à une économie de coercition. Des êtres humains sont vendus, transportés, exploités et intégrés de force à des systèmes productifs et domestiques. Cette histoire concerne les Amériques, mais elle concerne aussi la société sévillane elle-même.",
+          "text_sha256": "a3e43a9e6c5a53d37dc80b6242aec81c94fa5895875c57c26a1722dfb45dd2e1",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Le but n’est pas de réduire toute l’histoire de Séville à l’esclavage, pas plus qu’il ne faut l’effacer derrière le mot “commerce”. Il faut tenir ensemble les dimensions du système : innovation nautique, circulation de savoirs, croissance économique, conquête, exploitation et violence. Une ville-monde se construit dans des relations asymétriques, et les comprendre rend le récit plus exact, pas moins fascinant.",
+          "text_sha256": "c38a6b98030326cd8cd929c552794b27c1b960d8da09f2fc57e21f3126cc044d",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g11.json",
+      "id": "seville-discovery-g11",
+      "title": "Le port comme système urbain",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 3,
+      "source_sha256": "1f66cecaf4d9c889432f0ba607afcbbae5a64fae37fd41eaa458dae4e3447b93",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Un port n’est pas un quai avec des bateaux. Pour fonctionner, il faut des zones de chargement, des lieux de stockage, des métiers spécialisés, des règles, des contrôles, des courtiers, des marins, des artisans, des transporteurs et des circuits financiers. L’Arenal peut être lu comme la trace d’un organisme plutôt que comme un simple quartier entre monument et fleuve.",
+          "text_sha256": "e493a4317e5d1ce9474c97f0277324316afb560b89662d2c2d907c94ba50a68b",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Essayez de regarder le paysage actuel en couches. Le paseo moderne recouvre des usages différents ; les bâtiments ont changé ; le fleuve lui-même a été aménagé. Mais la relation fondamentale reste visible : le centre politique et commercial est très proche d’une voie d’eau capable de connecter Séville à un espace beaucoup plus large.",
+          "text_sha256": "5107636a140b850bf2a4339c009b305ffb8cf0909ddd49220ec58ea827a568bb",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Cette lecture par fonctions aide à comprendre pourquoi la géographie est si importante. La réussite de Séville ne sort pas d’un monument exceptionnel. Elle vient d’une combinaison : pouvoir, institutions, capital, savoir-faire, fleuve et réseaux. Le port est le point où ces éléments deviennent mouvement.",
+          "text_sha256": "2f3f3dca95c39e6e008de5c6110c1b5c89e06f64cf928afb4cc04d0b1c118682",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g12.json",
+      "id": "seville-discovery-g12",
+      "title": "Une ville racontée par la matière",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 3,
+      "source_sha256": "301989a00ae131f3ab82bfdd94decb37464c46daf1bae47a2c3baee1c66763f1",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Nous pouvons maintenant reprendre le fil commencé vendredi matin. À Plaza de España, la céramique habillait une immense représentation de la nation. Dans les palais, carreaux et compositions géométriques participaient à une esthétique de cour. À Triana, la matière renvoie aussi aux ateliers et à une histoire productive locale.",
+          "text_sha256": "c7ab71a21917f3efd9503f31ccd858db8e5574e0cab387733adc58d791b26fc7",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "Ce déplacement est intéressant : le même matériau traverse des univers sociaux différents. Il peut être un objet de prestige, un revêtement, un support narratif, une marchandise ou le produit d’un savoir-faire artisanal transmis et transformé. La matière ne possède pas un sens unique ; elle enregistre les usages que les sociétés lui donnent.",
+          "text_sha256": "f98c182751aa7f8db445979e0c813db1cc1595a49234381bf2f132aab557d263",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Si vous ramenez une seule image de ce fil, qu’elle soit celle-ci : une ville peut se comprendre non seulement par les dates et les personnages, mais en suivant une substance concrète. L’argile cuite relie ici des pouvoirs, des architectures, une exposition internationale et un quartier vivant.",
+          "text_sha256": "3afa24ba07df23839a52329aa2f8dea7d1a46163ee6ce940d6bbc8177cc8ccf8",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g13.json",
+      "id": "seville-discovery-g13",
+      "title": "Museo de Bellas Artes : terminer Séville par ce qu’elle a peint d’elle-même",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 7,
+      "source_sha256": "2d59ecc84f20b3ba10e9293d041d39628d57c6b994f664d35d403462e717196b",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Les bagages sont déposés. Le dernier grand chapitre peut commencer. Gagnez Plaza del Museo et entrez au Museo de Bellas Artes. Le choix d’un musée pour finir est volontaire : depuis deux jours, nous avons surtout lu Séville dans ses rues, ses palais, ses quais et ses institutions. Ici, la ville va nous parler par les images qu’elle a produites et conservées.",
+          "text_sha256": "51f2ba738bd9b08624b5ff9f6140788817b7103736900d07d3b659c86c1c1270",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "Le musée occupe l’ancien couvent de la Merced Calzada. Avant même les tableaux, regardez donc l’architecture : patios, circulations, lumière et volumes. Puis laissez les grands formats religieux vous rappeler le poids de l’Église dans la société sévillane. La Cathédrale nous a montré ce pouvoir par la pierre ; la peinture montre comment il entre dans les émotions, les récits et les gestes.",
+          "text_sha256": "1a84a8870b27b54f9c199855f52691da33416f1591ee82fba3c316a4aee014b4",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Murillo est évidemment une figure centrale, mais ne transformez pas la visite en chasse au nom célèbre. Choisissez maintenant une œuvre qui vous retient, pas nécessairement la plus connue. Mettez l’audio en pause et restez devant elle aussi longtemps que cela vous semble juste. Regardez d’abord composition, gestes, lumière et place du spectateur avant le cartel. Quand vous aurez envie de retrouver le fil, relancez la lecture.",
+          "text_sha256": "4edc91949a0c36c5f4876e8d0d45a5181991b5ab5807cfb11474caf3407e0725",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Vous avez choisi votre propre point d’entrée. Maintenant seulement, demandez-vous ce que cette œuvre dit de la ville qui l’a produite : commande religieuse, richesse, dévotion, hiérarchies sociales, idéalisation des corps et attention aux expressions humaines. Zurbarán apporte une autre intensité, plus austère. Entre ces œuvres, Séville apparaît comme une société qui sait produire des images très puissantes d’elle-même.",
+          "text_sha256": "61797e2d5d712487bba1fe6325cc14c1c3ee717ed90671f2df1d264fb50f695b",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "Ce musée complète aussi Plaza de España. Samedi matin, nous avons vu une ville mettre son passé en scène dans l’espace public au vingtième siècle. Ici, plusieurs siècles plus tôt, la peinture fabrique déjà des représentations, des valeurs et des mémoires. La question est la même : que choisit-on de montrer ? Qui commande l’image ? Qui la regarde ? Et qu’est-ce qui reste hors cadre ?",
+          "text_sha256": "b3889fb0fa3be27e3e4a1496186131a68c870df21b81ec919e4263dee27e2bfb",
+          "proper_name_surface_markers": [
+            "Plaza"
+          ]
+        },
+        {
+          "sequence": 6,
+          "text": "Le dimanche, le musée ferme à quinze heures. Cette limite est utile : elle protège la fin du séjour. Sortez vers treize heures, déjeunez tranquillement dans le centre, puis gardez l’après-midi léger. Aucun nouveau billet majeur. Aucun détour lointain. Vers dix-sept heures, récupérez les bagages ; vers dix-sept heures quinze, partez en taxi ou VTC. L’objectif n’est pas de remplir les dernières heures, mais de quitter Séville avec une carte mentale cohérente et sans transformer le départ en course.",
+          "text_sha256": "502b4fcdeeb0eecf96488c44aeddb9dd5f116e09232cdeb50df377994d6579a4",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 7,
+          "text": "Au terme de ces trois jours, la ville aura été regardée depuis plusieurs positions : l’autre rive, le port, la grande scène nationale, les rues de l’ombre, les pouvoirs religieux et royaux, l’administration impériale, un palais privé et enfin la peinture. Aucune de ces lectures ne suffit seule. Ensemble, elles produisent quelque chose de plus intéressant qu’une liste de monuments : une ville faite de transformations, de flux, de mémoires et de choix humains.",
+          "text_sha256": "e626199033e5dcc77ccf0710f645d906a6b2d38bd1f7fb94e2a4e8e961aa685a",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g14.json",
+      "id": "seville-discovery-g14",
+      "title": "Pierre Ier et Muhammad V : deux cours qui se regardent",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 6,
+      "source_sha256": "7d51320ad577f92f14b89b6f2eb4d923994329c7cbc35259776ff24827687d3f",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Lancez cette gourmandise devant la façade de Pierre Ier ou dans le Patio de las Doncellas. Et si ce palais n’était pas seulement le produit de Séville, mais celui d’un dialogue politique à l’échelle de toute la péninsule ?",
+          "text_sha256": "f8d26a27a49485f30cba38ee43ccf62fa0b1b10181d71f38908fb72f8af0a63b",
+          "proper_name_surface_markers": [
+            "Patio"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "Au milieu du quatorzième siècle, Pierre Ier règne sur la Castille. Au sud, le royaume nasride de Grenade subsiste. Les publications du Real Alcázar rappellent notamment le rôle de Pierre Ier dans le retour au pouvoir du sultan Muhammad V. Les deux cours ne vivent donc pas dans des mondes étanches.",
+          "text_sha256": "b733ec6544398d5c6a3f4bcb87786a704b8544174df1b07b45c682877ca0b20d",
+          "proper_name_surface_markers": [
+            "Real Alcázar"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "Regardez autour de vous. Les formes ne sont pas la copie passive d’un passé musulman. Elles appartiennent à un monde vivant de cours royales, d’artisans, de techniques et de signes de prestige qui circulent encore.",
+          "text_sha256": "4f80019786c08ddcd0ef7bf82656b76630d6c4ab2fb11cb9494c53c07afd1761",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Cette proximité n’efface ni la guerre, ni la domination, ni les rapports de force. C’est justement ce qui rend le lieu intéressant : on peut coopérer, admirer les mêmes formes et partager des savoir-faire tout en restant des rivaux politiques.",
+          "text_sha256": "22b3547530d2c07e949b1ff8c1474c70c2815e1e23357898ae0ac281dc1697ba",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "Cherchez maintenant un détail qui pourrait évoquer Grenade, puis un signe qui affirme la monarchie de Castille. L’Alcázar devient passionnant quand les deux sont visibles dans le même champ.",
+          "text_sha256": "178728b3458b7d9d0cccfcfcac6eda5a7d9a09b7e0ac9e70ab95b8386b859b9d",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 6,
+          "text": "Revenez au parcours principal avec une idée : après une conquête, les frontières politiques peuvent changer plus vite que les goûts, les techniques et les langages du prestige.",
+          "text_sha256": "189c76ebfff452b297029cc768f74357647985e689a9728eb039336e2985684a",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g15.json",
+      "id": "seville-discovery-g15",
+      "title": "Casa de la Contratación : le palais regarde vers l’Atlantique",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 5,
+      "source_sha256": "1353f15bb11caa1b4d332c95f35023b45b4d1eb25f557229108598570017e507",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Lancez cette gourmandise dans la Casa de la Contratación. Après les patios et les salles de représentation, changeons d’échelle : ici, l’enjeu devient aussi d’administrer des routes, des marchandises, des hommes et des informations à l’échelle de l’Atlantique.",
+          "text_sha256": "59c9e5fb29a760bf069a6ab57f80b216c3b3fbeabe3b2dc962b36101a714edeb",
+          "proper_name_surface_markers": [
+            "Casa"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "La Casa de la Contratación est créée à Séville en 1503 pour centraliser les affaires liées aux terres atteintes de l’autre côté de l’Atlantique. Les publications du Real Alcázar décrivent ce moment comme un changement de direction majeur pour le complexe.",
+          "text_sha256": "e97f2fa02f8d303611c29dce0592a934c6036f0b9ebd5aef501ad2ec7749d21a",
+          "proper_name_surface_markers": [
+            "Casa",
+            "Real Alcázar"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "Regardez le lieu comme une machine administrative. Derrière les expéditions spectaculaires, il faut enregistrer, contrôler, autoriser, cartographier, taxer, transmettre des ordres et accumuler des informations. Un empire ne tient pas seulement par des navires : il tient aussi par des bureaux et des procédures.",
+          "text_sha256": "856ec33034444854402a15664c2672d493d225d255b0b5434333c5bfa5c4be6f",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Cette idée prépare directement votre visite de demain à l’Archivo de Indias. Là-bas, vous verrez ce que devient cette logique lorsqu’elle s’accumule sur plusieurs siècles : correspondances, cartes, dossiers et traces matérielles d’un système impérial.",
+          "text_sha256": "5d6df2dd2e587ec944b97a7b20495d896a2be78f38aaf37bc8a1444b4b75f02b",
+          "proper_name_surface_markers": [
+            "Archivo"
+          ]
+        },
+        {
+          "sequence": 5,
+          "text": "Avant de repartir, regardez une porte, une salle, un passage. Demandez-vous combien de décisions invisibles ont pu traverser ce type d’espace avant de produire des effets à des milliers de kilomètres. C’est une autre manière de lire le pouvoir : non plus seulement par le décor, mais par l’organisation.",
+          "text_sha256": "86cd0f0a0a2c632b4756b1ade0d03ad71d503096659821eb4829c0079b382340",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g16.json",
+      "id": "seville-discovery-g16",
+      "title": "Les murs parlent : inscriptions, souveraineté et mise en scène",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 6,
+      "source_sha256": "16ad2343a541276d4e96d9949d2d642b967fce2004f6aa6b253187bfd2993704",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Lancez cette gourmandise devant la façade de Pierre Ier ou dans le Salón de Embajadores. Regardez une ligne d’écriture. Même si vous ne la lisez pas, ne la traitez pas comme un simple motif. Ici, l’écriture fait partie de l’architecture du pouvoir.",
+          "text_sha256": "391a177b3993b1abcea40afebc5ca684ae6576e6cac31ad49d2eb0bbc94c0a83",
+          "proper_name_surface_markers": [
+            "Salón"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "Les études publiées par le Real Alcázar montrent que plusieurs inscriptions du palais célèbrent explicitement Pierre Ier. Sur les portes menant au Salón de Embajadores depuis le Patio de las Doncellas, un long texte de fondation nomme le roi de Castille et León, célèbre la construction et mentionne des artisans de Tolède. La surface décorée devient donc aussi un document.",
+          "text_sha256": "3eae91fe88259bd8ea9c3cfd62a75a160aa170cba1ab0eb56eb4c41836651646",
+          "proper_name_surface_markers": [
+            "Patio",
+            "Real Alcázar",
+            "Salón"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "Ce qui est fascinant, c’est le choix du registre. Un souverain chrétien peut être célébré dans une langue et des formes associées à la culture de cour arabe. Cela ne signifie pas que les identités politiques se confondent. Cela signifie qu’un langage de prestige peut être adopté, réinterprété et mis au service d’un autre pouvoir.",
+          "text_sha256": "20b0fe1d0b6f70a5f953fb1685f481b304e27a9339aa4f3c3d59578286078efa",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Regardez maintenant les murs autrement : texte, géométrie, végétal, héraldique et architecture ne sont pas cinq couches indépendantes. Ensemble, ils fabriquent une atmosphère où le visiteur est continuellement rappelé à l’autorité du commanditaire, même lorsqu’il ne comprend pas chaque mot.",
+          "text_sha256": "dbe2dbcb5a79f02548aa8bd0d08163444a4b2cc6ce718befd3a836c659e005a2",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "Mettez l’audio en pause quelques instants. Choisissez une inscription ou un emblème et suivez-le du regard jusqu’à ce qu’il se perde dans l’ensemble du décor. Reprenez quand vous avez senti cette tension entre détail lisible et enveloppe totale.",
+          "text_sha256": "fc376a352149792194e8fb7f712d3920fc7a827dac480dc29aeb1619db3efa15",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 6,
+          "text": "Revenez au parcours principal avec une idée : dans ce palais, le pouvoir parle aussi sur les murs, dans un vocabulaire culturel plus complexe que l’opposition simple entre chrétien et musulman.",
+          "text_sha256": "49102634bf99e2a57fb916880f3063370d33cf7d18f8b93a8207d0eafe00b1c7",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g17.json",
+      "id": "seville-discovery-g17",
+      "title": "Les Baños de Doña María de Padilla : pierre, eau et légende",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 6,
+      "source_sha256": "95628f0b3ab3f9e4ea8b30b33b7ae0570c502adcdd2e3e37ae84a242af8d75f7",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Lancez cette gourmandise aux Baños de Doña María de Padilla. Avant toute histoire, regardez l’espace tel qu’il est : long, voûté, presque souterrain, traversé par une eau sombre qui reflète les arcs. Commencez par la pierre et l’eau, pas par le roman.",
+          "text_sha256": "422b75df419c0723453f23ce52ddfdbe3ba69a185739620e9b1457947e3a6090",
+          "proper_name_surface_markers": [
+            "Baños"
+          ]
+        },
+        {
+          "sequence": 2,
+          "text": "Le plan officiel du Real Alcázar identifie cet espace sous le Palacio Gótico, près du Patio del Crucero. Le nom de María de Padilla s’est attaché à ces citernes au fil du temps. Il faut distinguer l’existence matérielle de l’espace et les histoires sentimentales qui l’ont ensuite enveloppé.",
+          "text_sha256": "7d40af0175179a7e6b288ea4256677064f05e3b969a42adf6fc78a0dcf496e8d",
+          "proper_name_surface_markers": [
+            "Patio",
+            "Real Alcázar",
+            "Palacio"
+          ]
+        },
+        {
+          "sequence": 3,
+          "text": "María de Padilla fut la compagne de Pierre Ier et une figure centrale de sa vie dynastique. Une tradition populaire raconte que le roi aurait fait aménager ces bains pour elle. Le matériel pédagogique du Real Alcázar reprend cette histoire comme récit de médiation ; cela ne suffit pas à la transformer en preuve architecturale. Gardons donc la bonne étiquette : légende documentée, pas fait certain.",
+          "text_sha256": "8026d849db8a6af414e3c94033a646a586bfbd185f12124b40a5e78e7b2ba4d5",
+          "proper_name_surface_markers": [
+            "Real Alcázar"
+          ]
+        },
+        {
+          "sequence": 4,
+          "text": "Cette distinction montre comment un monument continue à produire des histoires longtemps après sa construction. Les lieux spectaculaires attirent des personnages, des romances et des explications faciles. Un bon audioguide peut raconter ces récits sans vous obliger à les croire au premier degré.",
+          "text_sha256": "95ab8208be0bd901045a66d08b8e3b5346e3bad4eeb1dc8a44f00d2221265f9d",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "Mettez l’audio en pause. Regardez les reflets, les voûtes et la profondeur de l’espace. Oubliez María pendant quelques instants. Puis, quand vous reprendrez, demandez-vous ce que la légende ajoute à ce que l’architecture faisait déjà ressentir.",
+          "text_sha256": "60677ad88dbcbf304487caa29885911cc5374767d013620c2ab40b4affa19251",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 6,
+          "text": "Revenez au parcours principal avec une méthode : à l’Alcázar, les légendes font partie de l’histoire du regard porté sur le monument. Elles méritent d’être entendues, à condition de savoir quand on quitte le fait pour entrer dans le récit.",
+          "text_sha256": "5c83da3573b028cf5ac8eac76eb45cacd831be8d6d190777e0e4bddcfff63c11",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g18.json",
+      "id": "seville-discovery-g18",
+      "title": "Lire une arène : architecture, regards et rituel",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 5,
+      "source_sha256": "97a6aef1146ded700a1d28cc95f9b52eea6701e7249d6a9d8474a0ab569e9ba0",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Lancez cette gourmandise face au ruedo. Ne regardez pas seulement le sable : cherchez les frontières. Où finit l’espace du public ? Où commencent les circulations des professionnels ? Où se trouvent les portes, les barrières, la présidence ? Une arène fonctionne parce qu’elle distribue très précisément les corps et les regards.",
+          "text_sha256": "9a8bb5ccd42d25ceebb5f972b0ebda9c6414834dd9eee079f4c7f9b29babb2b4",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Le règlement taurin donne une structure à ce que l’architecture accueille : accès du public, présidence, cuadrillas, trois tercio de la lidia, puis dernier tercio. Même sans assister à une corrida, l’espace devient plus lisible lorsque l’on comprend qu’il n’est pas un simple cercle, mais le support d’une séquence réglée.",
+          "text_sha256": "3e64dbec4a8ca548300970f6fa5918ac42a839cd9dc5d447d9ec0f139db1ea10",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Regardez aussi les gradins. Un spectacle n’existe pas seulement sur le ruedo : il existe dans les réactions du public, dans la distance ou la proximité, dans les zones de soleil et d’ombre, dans les regards tournés vers le centre. L’architecture transforme une foule en audience organisée.",
+          "text_sha256": "d9bca1eabddfab5c17cd9d72dde527dc4eb388381e50cba82dfb86e2ed9ccae3",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Mettez l’audio en pause et choisissez un point précis du bâtiment. Imaginez le trajet d’une personne depuis son entrée jusqu’à ce point : spectateur, torero, personnel de l’arène. Puis imaginez le trajet inverse. Reprenez lorsque vous avez réussi à voir le monument comme un système de circulation plutôt que comme une façade.",
+          "text_sha256": "caada65aa9d83f420dc3fc71d5dbf053cedd636b7d58e8032a783e11ba041c51",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "Gardez cette idée : les grands lieux de spectacle sont des machines à organiser l’attention. Ici, cette machine s’est construite lentement, s’est adaptée à la ville et continue à donner une forme physique à un rituel dont le sens social, lui, reste disputé.",
+          "text_sha256": "28ecb1c69abc00c0ef4df8b34fdee08cf9fa28573a126bf2b730393c34c893f6",
+          "proper_name_surface_markers": []
+        }
+      ]
+    },
+    {
+      "path": "series/seville-discovery/audio/seville-discovery-g19.json",
+      "id": "seville-discovery-g19",
+      "title": "Tauromachie : patrimoine, violence et désaccord contemporain",
+      "language": "fr-FR",
+      "profile": "speech",
+      "segment_count": 6,
+      "source_sha256": "cc71e7143e6de07925acdd8737565ea0b1f4a1b0a366a38dbbdeef978e0e4330",
+      "segments": [
+        {
+          "sequence": 1,
+          "text": "Cette gourmandise ne cherche pas à décider à votre place. Elle part d’un paradoxe réel. Depuis 2013, la loi espagnole définit la tauromachie comme un patrimoine culturel digne de protection. Dans le même texte, le législateur reconnaît qu’une partie de la société exprime une préoccupation forte concernant le traitement des animaux pendant les spectacles taurins.",
+          "text_sha256": "0f1293e1fb3fa9a939e4148edda805ea7d58007b332cb1bdaa1aee435109498e",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 2,
+          "text": "Le désaccord ne porte donc pas simplement sur le fait de savoir si la corrida a une histoire. Elle en a une, et elle a produit des institutions, des métiers, des élevages, des images, des récits et des lieux comme celui-ci. Le conflit porte surtout sur une autre question : le fait qu’une pratique soit ancienne, identitaire ou artistique suffit-il à justifier qu’elle continue lorsqu’elle implique une violence volontaire envers l’animal ?",
+          "text_sha256": "189af629c7208fbf454bfb435fa91896a174c037cd1acec2f9f8eb609d1b408f",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 3,
+          "text": "Le règlement de la corrida ne laisse pas cette violence dans l’abstraction. Il décrit la lidia, le dernier tercio, l’estocade, le descabello et l’éventuel indulto. Cela permet de parler précisément : les objections contemporaines ne visent pas seulement une image symbolique de la corrida, mais les actes mêmes qui composent le spectacle.",
+          "text_sha256": "f9200fbbc38be73b5ebfe44a110d0ca5589f7eeaab1084cd9903f751996a2033",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 4,
+          "text": "Inversement, réduire toute personne attachée à la tauromachie à une fascination pour la souffrance ne permet pas davantage de comprendre le phénomène. Pour ses défenseurs, il peut s’agir de transmission familiale, d’esthétique, de courage, d’élevage, de mémoire locale ou d’un langage artistique très codifié. Comprendre ces raisons n’oblige pas à les partager.",
+          "text_sha256": "546156722127cb318ff8bd2f94da2ae68c0e84e947e8c77e17caa53fc8a02788",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 5,
+          "text": "Mettez l’audio en pause. Demandez-vous ce qui, pour vous, a le plus de poids : la valeur patrimoniale du lieu, la continuité culturelle, la réalité de la souffrance animale, ou la possibilité qu’une tradition change de forme. Il n’y a rien à répondre au guide. Ce désaccord fait désormais partie de la visite.",
+          "text_sha256": "42135ff4c7c009de56aa8c3b3df6019e43a91e38644778fd92d064306e3b5a04",
+          "proper_name_surface_markers": []
+        },
+        {
+          "sequence": 6,
+          "text": "Vous pouvez revenir au parcours principal. L’idée à garder est simple : un patrimoine vivant n’est pas seulement ce qu’une société conserve. C’est aussi ce qu’elle discute, transforme, défend ou remet en cause.",
+          "text_sha256": "9eacaed0ee517478346ba81bacdc1baa1534399b23c3609e2d3d87dfc190082f",
+          "proper_name_surface_markers": []
+        }
+      ]
+    }
+  ],
+  "interpretation": {
+    "proper_name_surface_markers": "Inventory aid only. These markers identify Spanish-looking proper-name surfaces; they do not classify spoken language and are not audio evidence.",
+    "audio_language_proof": "HUMAN_LISTENING_REQUIRED"
+  }
+}

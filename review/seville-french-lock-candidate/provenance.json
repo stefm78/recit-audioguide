@@ -1,0 +1,175 @@
+{
+  "schema": "seville.french-lock.listening-candidate.v1",
+  "status": "HUMAN_LISTENING_GATE",
+  "published_replacement": false,
+  "field_build_published": false,
+  "android_field_latest_modified": false,
+  "baseline_commit": "00764713073ed754f713fc5c86b82f1b1537abbe",
+  "engine_ref": "3392d4f22f0a9b054a05b5c05a7856985c0ab030",
+  "series": "seville-discovery",
+  "hypothesis": "The current narrator voice is multilingual and may auto-detect Spanish around Spanish proper names. The Edge consumer endpoint in use cannot carry the provider-documented nested <lang> lock.",
+  "candidate_strategy": "Bounded Seville-only causal probe: preserve source text and expressive controls but replace the multilingual narrator with an existing native French Edge voice to remove multilingual auto-detection.",
+  "baseline_synthesis": {
+    "voice": "fr-FR-RemyMultilingualNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz",
+    "volume": "+5%"
+  },
+  "french_lock_synthesis": {
+    "voice": "fr-FR-HenriNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz",
+    "volume": "+5%"
+  },
+  "automatic_oracle_scope": "CI verifies exact text identity, declared fr-FR sources, selected voice class, render success and provenance. It does NOT prove the spoken language of audio.",
+  "human_acceptance": [
+    "French narration remains continuous and natural.",
+    "Spanish proper names may retain natural Spanish pronunciation.",
+    "No narrative phrase switches into Spanish.",
+    "No unacceptable degradation of voice, rhythm or intelligibility."
+  ],
+  "cases": {
+    "name-heavy": {
+      "source_path": "series/seville-discovery/audio/seville-discovery-ep02.json",
+      "source_sha256": "752c0b900bc64c98e37517d8773cceb933e3536447bf6fdb734ce19ba6700cfc",
+      "source_sequences": [
+        1,
+        5
+      ],
+      "text_sha256": [
+        "ef14377105acf8b985e6b6e8c197b21cfe8e2686a29084e2e4ec565fe3522fb5",
+        "47f5ab71019767046e648647454afbc4f78146c47d133d08820e9d297afd7249"
+      ],
+      "text_identical_between_variants": true,
+      "old": {
+        "program_id": "seville-french-lock-name-heavy-old",
+        "program_sha256": "e1b4f5b4622aaeead8e85b7794e0336e23cab34427ae96a83645f45fce317e3a",
+        "audio_file": "name-heavy-old.mp3",
+        "audio_sha256": "bb7fa710fe74841117657a324df38a30f6e7aea52a37fd8400ac5b79567a78de",
+        "audio_bytes": 712124,
+        "duration_seconds": 71.18,
+        "engine_version": "0.9.2",
+        "engine_code_sha256": "9aa43a15153395e44a8c9c62b70824ae61a1a79878a831cceef7dd80b6ade207",
+        "provider": {
+          "name": "edge",
+          "processing": "remote"
+        },
+        "resolved_synthesis": [
+          {
+            "sequence": 1,
+            "voice": "fr-FR-RemyMultilingualNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "ef14377105acf8b985e6b6e8c197b21cfe8e2686a29084e2e4ec565fe3522fb5"
+          },
+          {
+            "sequence": 2,
+            "voice": "fr-FR-RemyMultilingualNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "47f5ab71019767046e648647454afbc4f78146c47d133d08820e9d297afd7249"
+          }
+        ]
+      },
+      "french_lock": {
+        "program_id": "seville-french-lock-name-heavy-french-lock",
+        "program_sha256": "3de476c72a6c12dade57805844397ddcf2fee15717430f18050bc97a3d59ec65",
+        "audio_file": "name-heavy-french-lock.mp3",
+        "audio_sha256": "ad26184eb4a53fd89a90d5da0def3c891575b96782c7722645de98ef4dcf28bb",
+        "audio_bytes": 742124,
+        "duration_seconds": 74.18,
+        "engine_version": "0.9.2",
+        "engine_code_sha256": "9aa43a15153395e44a8c9c62b70824ae61a1a79878a831cceef7dd80b6ade207",
+        "provider": {
+          "name": "edge",
+          "processing": "remote"
+        },
+        "resolved_synthesis": [
+          {
+            "sequence": 1,
+            "voice": "fr-FR-HenriNeural",
+            "resolved_preset": null,
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "ef14377105acf8b985e6b6e8c197b21cfe8e2686a29084e2e4ec565fe3522fb5"
+          },
+          {
+            "sequence": 2,
+            "voice": "fr-FR-HenriNeural",
+            "resolved_preset": null,
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "47f5ab71019767046e648647454afbc4f78146c47d133d08820e9d297afd7249"
+          }
+        ]
+      }
+    },
+    "control": {
+      "source_path": "series/seville-discovery/audio/seville-discovery-g03.json",
+      "source_sha256": "cec04c37938630b7756947e27320f966e5f6ddcb2cc4132e7b102ebd59a688dc",
+      "source_sequences": [
+        1
+      ],
+      "text_sha256": [
+        "e2478cffb6f85349c0d4cc6a99f0b8668d824b0d25f4525347d3826a8d89470a"
+      ],
+      "text_identical_between_variants": true,
+      "old": {
+        "program_id": "seville-french-lock-control-old",
+        "program_sha256": "a82ad37b4ff4c423944eeb20a79b60ee89dc993678c62bced3ad8c97db4e8e7a",
+        "audio_file": "control-old.mp3",
+        "audio_sha256": "828e7b15be95e2295584ff62313326db5ad407c0f4c9c06b0cfdd7d63aef4d84",
+        "audio_bytes": 200204,
+        "duration_seconds": 19.99,
+        "engine_version": "0.9.2",
+        "engine_code_sha256": "9aa43a15153395e44a8c9c62b70824ae61a1a79878a831cceef7dd80b6ade207",
+        "provider": {
+          "name": "edge",
+          "processing": "remote"
+        },
+        "resolved_synthesis": [
+          {
+            "sequence": 1,
+            "voice": "fr-FR-RemyMultilingualNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "e2478cffb6f85349c0d4cc6a99f0b8668d824b0d25f4525347d3826a8d89470a"
+          }
+        ]
+      },
+      "french_lock": {
+        "program_id": "seville-french-lock-control-french-lock",
+        "program_sha256": "ff20a93d3733f9e4901d64d228bb77ac853086f707274ff0a89c5a7ecb8e9932",
+        "audio_file": "control-french-lock.mp3",
+        "audio_sha256": "4c4bebab56f9e09104eac6f8049f85a0deaf79b247d82625d34118be053dbfb3",
+        "audio_bytes": 209804,
+        "duration_seconds": 20.95,
+        "engine_version": "0.9.2",
+        "engine_code_sha256": "9aa43a15153395e44a8c9c62b70824ae61a1a79878a831cceef7dd80b6ade207",
+        "provider": {
+          "name": "edge",
+          "processing": "remote"
+        },
+        "resolved_synthesis": [
+          {
+            "sequence": 1,
+            "voice": "fr-FR-HenriNeural",
+            "resolved_preset": null,
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "e2478cffb6f85349c0d4cc6a99f0b8668d824b0d25f4525347d3826a8d89470a"
+          }
+        ]
+      }
+    }
+  }
+}
