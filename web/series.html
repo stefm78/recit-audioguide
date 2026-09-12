@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body>
+  <nav class="series-topbar" aria-label="Navigation du guide">
+    <a class="series-home-link" href="../../" aria-label="Retour à tous les parcours">← Tous les parcours</a>
+    <button class="series-parcours-button" type="button" aria-label="Ouvrir le parcours" onclick="document.querySelector('[data-journey-open]')?.click()">☰ Parcours</button>
+  </nav>
   <main id="app" class="series-shell" aria-live="polite"><p class="loading">Chargement…</p></main>
   <div id="player" class="player" hidden>
     <div class="player-text"><strong id="player-title"></strong><span id="player-subtitle"></span></div>
