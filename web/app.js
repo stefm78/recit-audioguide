@@ -20,7 +20,7 @@
   let nativeMediaConfigured = false;
   let journeyDrawer = null;
   let journeyBackdrop = null;
-  let journeyDrawerSide = 'left';
+  let journeyEdgeHint = null;
 
   const bootWatchdog = setTimeout(() => {
     if (bootComplete) return;
@@ -94,7 +94,7 @@
 
   function onClick(ev){
     const drawerOpen = ev.target.closest('[data-journey-open]');
-    if(drawerOpen){ openJourneyDrawer('left'); return; }
+    if(drawerOpen){ openJourneyDrawer(); return; }
     const play = ev.target.closest('[data-play]');
     if(play){ const e = series.episodes.find(x=>x.id===play.dataset.play); if(isPlayable(e)) playEpisode(e); return; }
     const external = ev.target.closest('[data-external-play]');
@@ -344,6 +344,7 @@
   function setupJourneyDrawer(s){
     document.getElementById('journey-drawer')?.remove();
     document.querySelector('.journey-backdrop')?.remove();
+    document.querySelector('.journey-edge-hint')?.remove();
     journeyBackdrop=document.createElement('div');
     journeyBackdrop.className='journey-backdrop';
     journeyBackdrop.hidden=true;
@@ -357,22 +358,28 @@
     journeyDrawer.innerHTML=`<div class="journey-drawer-head"><div><small>Parcours</small><strong>${esc(s.title)}</strong></div><button type="button" class="journey-close" aria-label="Fermer le parcours">×</button></div><nav>${links}</nav>`;
     journeyDrawer.querySelector('.journey-close').addEventListener('click',closeJourneyDrawer);
     journeyDrawer.querySelectorAll('.journey-item').forEach(link=>link.addEventListener('click',()=>closeJourneyDrawer()));
-    document.body.append(journeyBackdrop,journeyDrawer);
+    journeyEdgeHint=document.createElement('button');
+    journeyEdgeHint.type='button';
+    journeyEdgeHint.className='journey-edge-hint';
+    journeyEdgeHint.setAttribute('aria-label','Ouvrir le parcours depuis le bord gauche');
+    journeyEdgeHint.setAttribute('title','Parcours');
+    journeyEdgeHint.innerHTML='<span aria-hidden="true">›</span>';
+    journeyEdgeHint.addEventListener('click',openJourneyDrawer);
+    document.body.append(journeyBackdrop,journeyDrawer,journeyEdgeHint);
     installJourneyGestures();
   }
 
-  function openJourneyDrawer(side='left'){
+  function openJourneyDrawer(){
     if(!journeyDrawer||!journeyBackdrop)return;
-    journeyDrawerSide=side==='right'?'right':'left';
     const build=document.getElementById('recit-field-build');
     document.documentElement.style.setProperty('--recit-field-top',`${build?.offsetHeight||0}px`);
-    journeyDrawer.classList.toggle('from-right',journeyDrawerSide==='right');
     journeyDrawer.classList.add('open');
     journeyBackdrop.hidden=false;
     journeyBackdrop.classList.add('open');
     journeyDrawer.setAttribute('aria-hidden','false');
     document.body.classList.add('journey-drawer-open');
     root.querySelector('[data-journey-open]')?.setAttribute('aria-expanded','true');
+    if(journeyEdgeHint)journeyEdgeHint.hidden=true;
     refreshJourneyUi();
   }
 
@@ -383,6 +390,7 @@
     journeyDrawer.setAttribute('aria-hidden','true');
     document.body.classList.remove('journey-drawer-open');
     root.querySelector('[data-journey-open]')?.setAttribute('aria-expanded','false');
+    if(journeyEdgeHint)journeyEdgeHint.hidden=false;
     setTimeout(()=>{if(!journeyBackdrop.classList.contains('open'))journeyBackdrop.hidden=true;},180);
   }
 
@@ -408,16 +416,13 @@
       if(ev.touches.length!==1)return;
       const t=ev.touches[0];
       if(journeyDrawer?.classList.contains('open'))return;
-      if(t.clientX<=edge)start={x:t.clientX,y:t.clientY,side:'left'};
-      else if(t.clientX>=window.innerWidth-edge)start={x:t.clientX,y:t.clientY,side:'right'};
-      else start=null;
+      start=t.clientX<=edge?{x:t.clientX,y:t.clientY}:null;
     },{passive:true});
     document.addEventListener('touchmove',ev=>{
       if(!start||ev.touches.length!==1)return;
       const t=ev.touches[0],dx=t.clientX-start.x,dy=t.clientY-start.y;
-      const outward=start.side==='left'?dx:-dx;
-      if(outward>58&&Math.abs(dx)>Math.abs(dy)*1.25){openJourneyDrawer(start.side);start=null;}
-      else if(Math.abs(dy)>48)start=null;
+      if(dx>58&&Math.abs(dx)>Math.abs(dy)*1.25){openJourneyDrawer();start=null;}
+      else if(Math.abs(dy)>48||dx<0)start=null;
     },{passive:true});
     document.addEventListener('touchend',()=>{start=null;},{passive:true});
     let drawerStart=null;
@@ -425,8 +430,7 @@
     journeyDrawer?.addEventListener('touchmove',ev=>{
       if(!drawerStart||ev.touches.length!==1)return;
       const t=ev.touches[0],dx=t.clientX-drawerStart.x,dy=t.clientY-drawerStart.y;
-      const closing=journeyDrawerSide==='right'?dx>58:dx<-58;
-      if(closing&&Math.abs(dx)>Math.abs(dy)*1.25){closeJourneyDrawer();drawerStart=null;}
+      if(dx<-58&&Math.abs(dx)>Math.abs(dy)*1.25){closeJourneyDrawer();drawerStart=null;}
     },{passive:true});
     journeyDrawer?.addEventListener('touchend',()=>{drawerStart=null;},{passive:true});
     document.addEventListener('keydown',ev=>{if(ev.key==='Escape')closeJourneyDrawer();});
