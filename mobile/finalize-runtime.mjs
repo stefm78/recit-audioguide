@@ -117,7 +117,7 @@ function modeLabel(type){
 }
 
 function modePlural(type){
-  return ({story:'Histoires',visit:'Visite',route:'Routes'})[type] || 'Autres expériences';
+  return ({story:'Histoires',visit:'Visites',route:'Routes'})[type] || 'Autres expériences';
 }
 
 function availabilityLabel(item){
