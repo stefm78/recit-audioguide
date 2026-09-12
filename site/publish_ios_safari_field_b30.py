@@ -13,8 +13,8 @@ BASELINE_SHA = "243d3556292258e137b3b709a0b9d3efbd7283e5"
 BASELINE_SHORT_SHA = BASELINE_SHA[:8]
 BASELINE_VERSION = "0.4.30"
 APK_SHA256 = "857278af9c71b57933bf182900cf254d2ada150fed1c6c5d523c62dc8c9e0f48"
-RELEASE_TAG = "android-field-latest"
-RELEASE_API = "https://api.github.com/repos/stefm78/recit-audioguide/releases/tags/android-field-latest"
+RELEASE_TAG = "android-field-b30-frozen"
+RELEASE_API = "https://api.github.com/repos/stefm78/recit-audioguide/releases/tags/android-field-b30-frozen"
 QUALIFICATION_REL = Path("qualification/ios-safari-field-b30")
 RUNTIME_PREFIX = "assets/public/"
 
