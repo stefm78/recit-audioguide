@@ -8,7 +8,6 @@ const www = resolve(here, 'www');
 const slug = process.argv[2] || 'seville-discovery';
 const base = new URL(process.env.RECIT_PUBLIC_BASE || 'https://stefm78.github.io/recit-audioguide/');
 const seriesUrl = new URL(`data/${encodeURIComponent(slug)}/series.json`, base);
-const catalogUrl = new URL('catalog.json', base);
 const downloaded = new Map();
 
 async function fetchBytes(url){
@@ -58,7 +57,6 @@ function collectInternalUrls(value, originUrl, out = new Set()){
   return out;
 }
 
-await saveUrl(catalogUrl);
 const seriesBytes = await fetchBytes(seriesUrl);
 const series = JSON.parse(seriesBytes.toString('utf8'));
 await mkdir(dirname(localPathFor(seriesUrl)), { recursive: true });
@@ -89,4 +87,4 @@ const manifest = {
 const manifestPath = join(www, 'offline', slug, 'package-manifest.json');
 await mkdir(dirname(manifestPath), { recursive: true });
 await writeFile(manifestPath, JSON.stringify(manifest, null, 2));
-console.log(`Frozen ${slug}: ${manifest.file_count} files, ${manifest.total_bytes} bytes`);
+console.log(`Frozen ${slug}: ${manifest.file_count} files, ${manifest.total_bytes} bytes; current build catalog preserved`);
