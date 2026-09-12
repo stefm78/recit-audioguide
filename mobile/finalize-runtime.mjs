@@ -7,26 +7,14 @@ const www = resolve(here, 'www');
 const slug = process.argv[2] || 'seville-discovery';
 
 const rawCatalog = JSON.parse(await readFile(join(www, 'catalog.json'), 'utf8'));
-const presentation = JSON.parse(await readFile(join(here, 'catalog-presentation.json'), 'utf8'));
-if(presentation.schema !== 'recit.field.catalog-presentation.v1') throw new Error(`Unexpected catalog presentation schema: ${presentation.schema}`);
-const configuredSlugs = new Set(Object.keys(presentation.items || {}));
-for(const configuredSlug of configuredSlugs){
-  if(!rawCatalog.some(item => item.slug === configuredSlug)) throw new Error(`Catalog presentation references unknown packaged guide: ${configuredSlug}`);
-}
-const defaultVisible = presentation.default_visible !== false;
-const catalog = rawCatalog.map(item => {
-  const cfg = presentation.items?.[item.slug] || {};
-  if(cfg.visible != null && typeof cfg.visible !== 'boolean') throw new Error(`Catalog visibility must be boolean for ${item.slug}`);
-  return {...item, visible: cfg.visible ?? defaultVisible, field_qualified: item.slug === slug};
-});
-const visibleCatalog = catalog.filter(item => item.visible !== false);
-const hiddenCatalog = catalog.filter(item => item.visible === false);
+const catalog = rawCatalog.map(item => ({...item, field_qualified: item.slug === slug}));
+const visibleCatalog = catalog.filter(item => item.editorially_visible !== false);
+const hiddenCatalog = catalog.filter(item => item.editorially_visible === false);
 const series = JSON.parse(await readFile(join(www, 'data', slug, 'series.json'), 'utf8'));
 const fieldMonitor = await readFile(join(here, 'field-monitor.js'), 'utf8');
-const homeLibrary = await readFile(join(here, 'home-library.js'), 'utf8');
 const qualifiedItem = catalog.find(item => item.slug === slug);
 if(!qualifiedItem) throw new Error(`Qualified field guide missing from catalog: ${slug}`);
-if(!qualifiedItem.visible) throw new Error(`Qualified field guide cannot be hidden from FIELD catalog: ${slug}`);
+if(qualifiedItem.editorially_visible === false) throw new Error(`Qualified field guide cannot be editorially hidden from FIELD catalog: ${slug}`);
 for(const item of catalog){
   await access(join(www, 's', item.slug, 'index.html'));
   await access(join(www, 'data', item.slug, 'series.json'));
@@ -48,7 +36,7 @@ const build = {
   catalog_count: catalog.length,
   catalog_visible_count: visibleCatalog.length,
   catalog_hidden_count: hiddenCatalog.length,
-  content_mode: 'packaged-catalog-seville-field-qualified'
+  content_mode: 'packaged-catalog-shared-discovery-seville-field-qualified'
 };
 
 function safeJson(value){
@@ -75,10 +63,6 @@ function fieldShellStyle(){
 
 function buildIdentityScript(){
   return `<script id="recit-field-build-data">window.RECIT_FIELD_BUILD=${safeJson(build)};</script>`;
-}
-
-function homeLibraryScript(){
-  return `<script id="recit-home-library">\n${homeLibrary.replaceAll('</script>', '<\\/script>')}\n</script>`;
 }
 
 function bootstrapScript({seriesPage=false, embedQualifiedSeries=false}={}){
@@ -159,11 +143,12 @@ async function hardenHome(){
   const path = join(www, 'index.html');
   let html = await readFile(path, 'utf8');
   const loading = '<div id="catalog" class="catalog" aria-live="polite"><p>Chargement…</p></div>';
+  const sharedHomeScript = '  <script src="./assets/home.js" defer></script>\n';
   if(!html.includes(loading)) throw new Error('Field home loading marker not found');
-  if(!visibleCatalog.length) throw new Error('FIELD catalog has no visible guide');
+  if(!html.includes(sharedHomeScript)) throw new Error('Shared Web home script marker not found');
+  if(!visibleCatalog.length) throw new Error('FIELD catalog has no editorially visible guide');
   const staticCatalog = `<div id="catalog" class="catalog-groups" aria-live="polite">${catalogHtml(visibleCatalog)}</div>`;
   html = html.replace(loading, staticCatalog);
-  html = html.replace('  <script src="./assets/home.js" defer></script>\n', `  ${homeLibraryScript()}\n`);
   html = html.replace('<body>', `<body>\n  ${identityHtml()}\n  ${fieldShellStyle()}\n  ${bootstrapScript()}`);
   await writeFile(path, html);
 }
@@ -191,4 +176,4 @@ function escapeHtml(value){
 await instrumentMobileApp();
 await hardenHome();
 await hardenSeriesPages();
-console.log(`Hardened FIELD ${buildVersion} ${shortSha}: ${catalog.length} packaged guides · ${visibleCatalog.length} visible · ${hiddenCatalog.length} hidden + Seville qualified runtime`);
+console.log(`Hardened FIELD ${buildVersion} ${shortSha}: ${catalog.length} packaged guides · ${visibleCatalog.length} editorially visible · ${hiddenCatalog.length} editorially hidden + Seville qualified runtime`);

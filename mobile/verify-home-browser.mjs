@@ -5,8 +5,17 @@ import { JSDOM } from 'jsdom';
 
 const here = resolve(fileURLToPath(new URL('.', import.meta.url)));
 const www = resolve(here, 'www');
+const dist = resolve(here, '..', 'dist');
 const html = await readFile(join(www, 'index.html'), 'utf8');
-const source = await readFile(join(here, 'home-library.js'), 'utf8');
+const source = await readFile(join(www, 'assets', 'home.js'), 'utf8');
+const webSource = await readFile(join(dist, 'assets', 'home.js'), 'utf8');
+const webCatalog = JSON.parse(await readFile(join(dist, 'catalog.json'), 'utf8'));
+
+if(source !== webSource) throw new Error('packaged home.js diverged from the shared Web asset');
+if(!Array.isArray(webCatalog) || !webCatalog.length) throw new Error('shared Web catalog missing');
+if(webCatalog.some(item => typeof item.editorially_visible !== 'boolean')) throw new Error('shared Web catalog must expose explicit editorially_visible booleans');
+const technical = webCatalog.find(item => item.slug === 'kernel-handover');
+if(technical && technical.editorially_visible !== false) throw new Error('shared editorial visibility did not hide kernel-handover');
 
 const dom = new JSDOM(html, {
   url: 'https://localhost/',
@@ -20,6 +29,8 @@ const dom = new JSDOM(html, {
 
 const {window} = dom;
 const {document} = window;
+window.eval(source);
+
 const waitUntil = async (predicate, timeoutMs=3000) => {
   const started = Date.now();
   while(Date.now() - started < timeoutMs){
@@ -32,9 +43,16 @@ const waitUntil = async (predicate, timeoutMs=3000) => {
 await waitUntil(() => document.documentElement.dataset.recitHomeReady === '1');
 const catalog = window.RECIT_CATALOG_DATA;
 if(!Array.isArray(catalog) || !catalog.length) throw new Error('embedded FIELD catalog missing on home');
-const editorial = catalog.filter(item => item.visible !== false);
-const hiddenEditorial = catalog.filter(item => item.visible === false);
+const editorial = catalog.filter(item => item.editorially_visible !== false);
+const hiddenEditorial = catalog.filter(item => item.editorially_visible === false);
 if(!editorial.length) throw new Error('traveler catalog unexpectedly empty');
+if(catalog.length !== webCatalog.length) throw new Error(`packaged/Web catalog count mismatch: ${catalog.length}/${webCatalog.length}`);
+for(const webItem of webCatalog){
+  const packaged = catalog.find(item => item.slug === webItem.slug);
+  if(!packaged) throw new Error(`packaged catalog lost Web item: ${webItem.slug}`);
+  if(packaged.editorially_visible !== webItem.editorially_visible) throw new Error(`editorial visibility drifted during packaging: ${webItem.slug}`);
+  if(packaged.state !== webItem.state) throw new Error(`readiness drifted during packaging: ${webItem.slug}`);
+}
 
 const drawer = document.getElementById('home-library-drawer');
 const openButton = document.querySelector('.home-library-button');
@@ -97,8 +115,9 @@ if(!document.querySelector(`[data-library-card="${target.slug}"]`)) throw new Er
 
 if(!source.includes("t.clientX <= edge")) throw new Error('home drawer must start only from the left edge');
 if(source.includes("innerWidth - edge") || source.includes("side:'right'") || source.includes('from-right')) throw new Error('home library must not expose right-edge opening');
-if(!source.includes("item.visible !== false")) throw new Error('user library must remain subordinate to editorial visibility');
+if(!source.includes("item.editorially_visible !== false")) throw new Error('user library must remain subordinate to editorial visibility');
 if(!source.includes("recit:library:hidden:v1")) throw new Error('persistent user library preference key missing');
+if(source.includes('kernel-handover')) throw new Error('shared UI source must not infer or hard-code editorial slugs');
 
-console.log(`Home library PASS: ${catalog.length} packaged / ${editorial.length} editorially visible; drawer + filters + À reprendre + local hide/show + left-only gesture`);
+console.log(`Shared home PASS: byte-identical Web/FIELD source · ${catalog.length} packaged / ${editorial.length} editorially visible; drawer + filters + À reprendre + local hide/show + left-only gesture`);
 dom.window.close();
