@@ -1,0 +1,67 @@
+name: Freeze B30 qualification source
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/freeze-b30-qualification-source.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  freeze-b30:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SOURCE_TAG: android-field-latest
+      FROZEN_TAG: android-field-b30-frozen
+      B30_SHA: 243d3556292258e137b3b709a0b9d3efbd7283e5
+      B30_APK_SHA256: 857278af9c71b57933bf182900cf254d2ada150fed1c6c5d523c62dc8c9e0f48
+    steps:
+      - uses: actions/checkout@v4
+      - name: Freeze exact published B30 release
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_target="$(gh release view "$SOURCE_TAG" --json targetCommitish --jq '.targetCommitish')"
+          test "$source_target" = "$B30_SHA" || {
+            echo "Mutable source tag no longer targets B30: $source_target" >&2
+            exit 1
+          }
+
+          mkdir -p frozen-b30
+          gh release download "$SOURCE_TAG" \
+            --pattern 'recit-seville-field.apk' \
+            --pattern 'install-metadata.txt' \
+            --pattern 'package-manifest.json' \
+            --dir frozen-b30
+          echo "$B30_APK_SHA256  frozen-b30/recit-seville-field.apk" | sha256sum -c -
+
+          if gh release view "$FROZEN_TAG" >/dev/null 2>&1; then
+            frozen_target="$(gh release view "$FROZEN_TAG" --json targetCommitish --jq '.targetCommitish')"
+            test "$frozen_target" = "$B30_SHA" || {
+              echo "Frozen B30 tag exists with wrong target: $frozen_target" >&2
+              exit 1
+            }
+            rm -rf verify-b30
+            mkdir -p verify-b30
+            gh release download "$FROZEN_TAG" --pattern 'recit-seville-field.apk' --dir verify-b30
+            echo "$B30_APK_SHA256  verify-b30/recit-seville-field.apk" | sha256sum -c -
+            echo "Frozen B30 qualification source already exists and is exact."
+            exit 0
+          fi
+
+          gh release create "$FROZEN_TAG" frozen-b30/* \
+            --target "$B30_SHA" \
+            --title 'Récit FIELD B30 — frozen qualification source' \
+            --notes 'Immutable qualification source for physically validated Android FIELD B30. Commit 243d3556292258e137b3b709a0b9d3efbd7283e5; APK SHA-256 857278af9c71b57933bf182900cf254d2ada150fed1c6c5d523c62dc8c9e0f48. Do not retarget or replace.' \
+            --prerelease
+
+          frozen_target="$(gh release view "$FROZEN_TAG" --json targetCommitish --jq '.targetCommitish')"
+          test "$frozen_target" = "$B30_SHA"
+          rm -rf verify-b30
+          mkdir -p verify-b30
+          gh release download "$FROZEN_TAG" --pattern 'recit-seville-field.apk' --dir verify-b30
+          echo "$B30_APK_SHA256  verify-b30/recit-seville-field.apk" | sha256sum -c -
