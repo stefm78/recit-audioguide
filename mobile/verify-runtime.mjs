@@ -10,6 +10,7 @@ const pagePath = join(www, 's', slug, 'index.html');
 const page = await readFile(pagePath, 'utf8');
 const app = await readFile(join(www, 'assets', 'app.js'), 'utf8');
 const series = JSON.parse(await readFile(join(www, 'data', slug, 'series.json'), 'utf8'));
+const pkg = JSON.parse(await readFile(join(here, 'package.json'), 'utf8'));
 
 function assert(cond, msg){ if(!cond) throw new Error(msg); }
 
@@ -38,8 +39,18 @@ assert(app.includes('const embedded = window.RECIT_SERIES_DATA'), 'app.js does n
 assert(app.includes('embedded.slug === slug'), 'embedded series data is not slug-qualified');
 assert(app.includes("document.documentElement.dataset.recitSeriesReady = '1'"), 'series-ready runtime marker missing');
 assert(app.includes('Récit series bootstrap timeout'), 'visible bootstrap watchdog missing');
-assert(series.episodes?.length >= 10, `Seville field series incomplete: ${series.episodes?.length || 0} top-level episodes`);
 
+assert(pkg.dependencies?.['@capgo/capacitor-media-session'] === '8.0.30', 'Capacitor 8 native media-session bridge is not pinned');
+assert(app.includes('function nativeMediaSession()'), 'Android native media-session adapter missing');
+assert(app.includes("bind('seekbackward',()=>seekBy(-15))"), 'native/media seek backward must remain 15 seconds');
+assert(app.includes("bind('seekforward',()=>seekBy(15))"), 'native/media seek forward must remain 15 seconds');
+assert(app.includes('userResumeRequired'), 'interruption manual-resume latch missing');
+assert(app.includes('Reprise automatique bloquée après interruption'), 'interruption auto-resume guard missing');
+assert(app.includes('id=\'journey-drawer\'') || app.includes("id='journey-drawer'") || app.includes("journeyDrawer.id='journey-drawer'"), 'journey drawer missing');
+assert(app.includes('touchstart') && app.includes("side:'left'") && app.includes("side:'right'"), 'edge-swipe journey navigation missing');
+assert(app.includes('Continuer · étape'), 'visible restart/resume state missing');
+
+assert(series.episodes?.length >= 10, `Seville field series incomplete: ${series.episodes?.length || 0} top-level episodes`);
 const playable = series.episodes.filter(e => e.audio_url && e.state !== 'failed');
 assert(playable.length >= 10, `Seville field audio incomplete: ${playable.length}/10 top-level episodes playable`);
 for(const e of playable){
@@ -51,4 +62,4 @@ for(const e of playable){
 }
 
 await access(pagePath);
-console.log(`Runtime PASS: explicit static FIELD launcher -> ${slug}/index.html -> ${playable.length} playable local episodes; no home JS/fetch dependency; build identity visible`);
+console.log(`Runtime PASS: explicit FIELD launch -> ${playable.length} local episodes + progress drawer + interruption guard + Android media-session contract`);
