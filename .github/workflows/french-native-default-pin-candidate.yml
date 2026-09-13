@@ -1,0 +1,87 @@
+name: French native default pin candidate
+
+on:
+  push:
+    branches:
+      - audit/french-native-default-pin-20260913
+    paths:
+      - '.github/workflows/french-native-default-pin-candidate.yml'
+      - 'tools/french_native_default_pin_probe.py'
+      - 'tests/test_french_native_default_pin_probe.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: french-native-default-pin-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  cross-project-listening-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout candidate branch
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Checkout current pinned engine
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: 3392d4f22f0a9b054a05b5c05a7856985c0ab030
+          path: .audio-engine-old
+
+      - name: Checkout candidate native-French engine
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: 2fc024ee41984e2d9eaa454cf4edeeb3e63c741c
+          path: .audio-engine-new
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Verify bounded probe contract
+        run: python -m unittest tests.test_french_native_default_pin_probe -v
+
+      - name: Install exact old and new engines in isolated environments
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m venv .venv-old
+          python -m venv .venv-new
+          .venv-old/bin/python -m pip install --disable-pip-version-check ./.audio-engine-old
+          .venv-new/bin/python -m pip install --disable-pip-version-check ./.audio-engine-new
+
+      - name: Render only representative cross-project A/B cases
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/french_native_default_pin_probe.py \
+            --old-engine-bin .venv-old/bin/audio-engine \
+            --new-engine-bin .venv-new/bin/audio-engine
+
+      - name: Upload human listening candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: french-native-default-pin-candidate
+          path: review/french-native-default-pin-candidate
+          retention-days: 7
+          if-no-files-found: error
+
+      - name: Persist candidate evidence on isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add review/french-native-default-pin-candidate
+          if git diff --cached --quiet; then
+            echo 'No candidate evidence change.'
+            exit 0
+          fi
+          git commit -m 'candidate: add French native default cross-project evidence [skip ci]'
+          git push origin HEAD:audit/french-native-default-pin-20260913
