@@ -14,8 +14,18 @@ const webCatalog = JSON.parse(await readFile(join(dist, 'catalog.json'), 'utf8')
 if(source !== webSource) throw new Error('packaged home.js diverged from the shared Web asset');
 if(!Array.isArray(webCatalog) || !webCatalog.length) throw new Error('shared Web catalog missing');
 if(webCatalog.some(item => typeof item.editorially_visible !== 'boolean')) throw new Error('shared Web catalog must expose explicit editorially_visible booleans');
+if(webCatalog.some(item => !Array.isArray(item.episode_index) || item.episode_index.length !== item.episode_count)) throw new Error('shared Web catalog must expose a complete episode_index for resume semantics');
 const technical = webCatalog.find(item => item.slug === 'kernel-handover');
 if(technical && technical.editorially_visible !== false) throw new Error('shared editorial visibility did not hide kernel-handover');
+
+const sevilleCatalog = webCatalog.find(item => item.slug === 'seville-discovery');
+if(!sevilleCatalog) throw new Error('Seville catalog entry missing for resume test');
+const playableEpisodes = sevilleCatalog.episode_index.filter(episode => episode?.id && episode.state !== 'failed');
+if(playableEpisodes.length < 2) throw new Error('resume test requires at least two playable Seville episodes');
+const seedEpisode = playableEpisodes[0];
+const seedIndex = sevilleCatalog.episode_index.findIndex(episode => episode.id === seedEpisode.id);
+const nextEpisode = sevilleCatalog.episode_index.slice(seedIndex + 1).find(episode => episode?.id && episode.state !== 'failed');
+if(!nextEpisode) throw new Error('resume test requires a playable episode after the seed');
 
 const dom = new JSDOM(html, {
   url: 'https://localhost/',
@@ -23,7 +33,7 @@ const dom = new JSDOM(html, {
   pretendToBeVisual: true,
   beforeParse(window){
     window.scrollTo = () => {};
-    window.localStorage.setItem('recit:seville-discovery', JSON.stringify({episode:'seville-discovery-ep00', time:42, updated:Date.now()}));
+    window.localStorage.setItem('recit:seville-discovery', JSON.stringify({episode:seedEpisode.id, time:42, updated:Date.now()}));
   }
 });
 
@@ -52,6 +62,7 @@ for(const webItem of webCatalog){
   if(!packaged) throw new Error(`packaged catalog lost Web item: ${webItem.slug}`);
   if(packaged.editorially_visible !== webItem.editorially_visible) throw new Error(`editorial visibility drifted during packaging: ${webItem.slug}`);
   if(packaged.state !== webItem.state) throw new Error(`readiness drifted during packaging: ${webItem.slug}`);
+  if(JSON.stringify(packaged.episode_index) !== JSON.stringify(webItem.episode_index)) throw new Error(`episode_index drifted during packaging: ${webItem.slug}`);
 }
 
 const drawer = document.getElementById('home-library-drawer');
@@ -74,13 +85,26 @@ drawer.querySelector('[data-library-close]')?.click();
 if(drawer.getAttribute('aria-hidden') !== 'true') throw new Error('home library drawer did not close');
 
 openButton.click();
-const resumeButton = drawer.querySelector('[data-library-filter="resume"]');
+let resumeButton = drawer.querySelector('[data-library-filter="resume"]');
 if(!resumeButton || resumeButton.disabled) throw new Error('À reprendre filter should be available after seeded progress');
 resumeButton.click();
 if(cards().length !== 1 || cards()[0].dataset.libraryCard !== 'seville-discovery') throw new Error('À reprendre filter did not isolate the persisted Seville journey');
-if(!cards()[0].textContent.includes('À reprendre · 0:42')) throw new Error('resume position is not visible on the home card');
+if(!cards()[0].textContent.includes(seedEpisode.title) || !cards()[0].textContent.includes('À reprendre') || !cards()[0].textContent.includes('0:42')) throw new Error('resume card does not expose the current episode and position');
 
+window.localStorage.setItem(`recit:done:seville-discovery:${seedEpisode.id}`, '1');
+window.RECIT_HOME_LIBRARY.refresh();
+if(cards().length !== 1 || cards()[0].dataset.libraryCard !== 'seville-discovery') throw new Error('completed current episode should advance the journey, not remove an unfinished guide');
+if(!cards()[0].textContent.includes(nextEpisode.title) || !cards()[0].textContent.includes('À continuer') || !cards()[0].textContent.includes('0:00')) throw new Error('completed episode did not advance resume state to the next playable episode');
+
+for(const episode of sevilleCatalog.episode_index.filter(episode => episode?.id && episode.state !== 'failed')){
+  window.localStorage.setItem(`recit:done:seville-discovery:${episode.id}`, '1');
+}
+window.RECIT_HOME_LIBRARY.refresh();
+if(cards().some(card => card.dataset.libraryCard === 'seville-discovery')) throw new Error('fully completed Seville guide must leave À reprendre');
 window.RECIT_HOME_LIBRARY.open();
+resumeButton = drawer.querySelector('[data-library-filter="resume"]');
+if(!resumeButton?.disabled) throw new Error('À reprendre should disable when no unfinished persisted guide remains');
+
 drawer.querySelector('[data-library-filter="all"]')?.click();
 if(cards().length !== editorial.length) throw new Error('Tous les parcours did not restore all user-visible guides');
 
@@ -115,9 +139,10 @@ if(!document.querySelector(`[data-library-card="${target.slug}"]`)) throw new Er
 
 if(!source.includes("t.clientX <= edge")) throw new Error('home drawer must start only from the left edge');
 if(source.includes("innerWidth - edge") || source.includes("side:'right'") || source.includes('from-right')) throw new Error('home library must not expose right-edge opening');
-if(!source.includes("item.editorially_visible !== false")) throw new Error('user library must remain subordinate to editorial visibility');
+if(!source.includes("item && item.editorially_visible !== false")) throw new Error('user library must remain subordinate to editorial visibility');
 if(!source.includes("recit:library:hidden:v1")) throw new Error('persistent user library preference key missing');
+if(!source.includes('episode_index')) throw new Error('shared home must use the catalog episode index for resume semantics');
 if(source.includes('kernel-handover')) throw new Error('shared UI source must not infer or hard-code editorial slugs');
 
-console.log(`Shared home PASS: byte-identical Web/FIELD source · ${catalog.length} packaged / ${editorial.length} editorially visible; drawer + filters + À reprendre + local hide/show + left-only gesture`);
+console.log(`Shared home PASS: byte-identical Web/FIELD source · ${catalog.length} packaged / ${editorial.length} editorially visible; completion-aware À reprendre + drawer + filters + local hide/show + left-only gesture`);
 dom.window.close();
