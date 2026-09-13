@@ -20,12 +20,12 @@ if(technical && technical.editorially_visible !== false) throw new Error('shared
 
 const sevilleCatalog = webCatalog.find(item => item.slug === 'seville-discovery');
 if(!sevilleCatalog) throw new Error('Seville catalog entry missing for resume test');
-const playableEpisodes = sevilleCatalog.episode_index.filter(episode => episode?.id && episode.state !== 'failed');
-if(playableEpisodes.length < 2) throw new Error('resume test requires at least two playable Seville episodes');
-const seedEpisode = playableEpisodes[0];
+const indexedEpisodes = sevilleCatalog.episode_index.filter(episode => episode?.id);
+if(indexedEpisodes.length < 2) throw new Error('resume test requires at least two indexed Seville episodes');
+const seedEpisode = indexedEpisodes[0];
 const seedIndex = sevilleCatalog.episode_index.findIndex(episode => episode.id === seedEpisode.id);
-const nextEpisode = sevilleCatalog.episode_index.slice(seedIndex + 1).find(episode => episode?.id && episode.state !== 'failed');
-if(!nextEpisode) throw new Error('resume test requires a playable episode after the seed');
+const nextEpisode = sevilleCatalog.episode_index.slice(seedIndex + 1).find(episode => episode?.id);
+if(!nextEpisode) throw new Error('resume test requires an indexed episode after the seed');
 
 const dom = new JSDOM(html, {
   url: 'https://localhost/',
@@ -94,9 +94,9 @@ if(!cards()[0].textContent.includes(seedEpisode.title) || !cards()[0].textConten
 window.localStorage.setItem(`recit:done:seville-discovery:${seedEpisode.id}`, '1');
 window.RECIT_HOME_LIBRARY.refresh();
 if(cards().length !== 1 || cards()[0].dataset.libraryCard !== 'seville-discovery') throw new Error('completed current episode should advance the journey, not remove an unfinished guide');
-if(!cards()[0].textContent.includes(nextEpisode.title) || !cards()[0].textContent.includes('À continuer') || !cards()[0].textContent.includes('0:00')) throw new Error('completed episode did not advance resume state to the next playable episode');
+if(!cards()[0].textContent.includes(nextEpisode.title) || !cards()[0].textContent.includes('À continuer') || !cards()[0].textContent.includes('0:00')) throw new Error('completed episode did not advance resume state to the next indexed episode');
 
-for(const episode of sevilleCatalog.episode_index.filter(episode => episode?.id && episode.state !== 'failed')){
+for(const episode of sevilleCatalog.episode_index.filter(episode => episode?.id)){
   window.localStorage.setItem(`recit:done:seville-discovery:${episode.id}`, '1');
 }
 window.RECIT_HOME_LIBRARY.refresh();
