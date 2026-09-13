@@ -47,11 +47,32 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(safe));
   }
 
-  function progressFor(item){
+  function storedProgress(item){
     try{
       const value = JSON.parse(localStorage.getItem(`recit:${item.slug}`) || 'null');
       return value && value.episode ? value : null;
     }catch(_){ return null; }
+  }
+
+  function isEpisodeDone(item, episodeId){
+    return localStorage.getItem(`recit:done:${item.slug}:${episodeId}`) === '1';
+  }
+
+  function progressFor(item){
+    const progress = storedProgress(item);
+    if(!progress) return null;
+    const index = Array.isArray(item.episode_index) ? item.episode_index : [];
+    if(!index.length) return progress;
+    const savedIndex = index.findIndex(episode => episode?.id === progress.episode);
+    if(savedIndex < 0) return null;
+    const saved = index[savedIndex];
+    if(!isEpisodeDone(item, saved.id)){
+      if(saved.state === 'failed') return null;
+      return {...progress, title:saved.title || ''};
+    }
+    const next = index.slice(savedIndex + 1).find(episode => episode?.id && episode.state !== 'failed' && !isEpisodeDone(item, episode.id));
+    if(!next) return null;
+    return {episode:next.id, time:0, updated:progress.updated || 0, title:next.title || '', advanced:true};
   }
 
   function resumeLabel(item){
@@ -60,7 +81,9 @@
     const total = Math.max(0, Math.floor(Number(p.time) || 0));
     const min = Math.floor(total / 60);
     const sec = total % 60;
-    return `À reprendre · ${min}:${String(sec).padStart(2,'0')}`;
+    const action = p.advanced ? 'À continuer' : 'À reprendre';
+    const episode = p.title ? ` · ${p.title}` : '';
+    return `${action}${episode} · ${min}:${String(sec).padStart(2,'0')}`;
   }
 
   function visibleToUser(){ return editorialCatalog.filter(item => !hidden.has(item.slug)); }
