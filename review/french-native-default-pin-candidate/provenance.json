@@ -1,0 +1,310 @@
+{
+  "schema": "recit.french-native-default.pin-candidate.v1",
+  "status": "HUMAN_CROSS_PROJECT_LISTENING_GATE",
+  "published_replacement": false,
+  "consumer_pin_modified": false,
+  "field_build_published": false,
+  "pages_published": false,
+  "android_field_latest_modified": false,
+  "baseline_commit": "de0f9cbe603c0dca4e1fc35fcf0e320b4639b00f",
+  "old_engine_ref": "3392d4f22f0a9b054a05b5c05a7856985c0ab030",
+  "new_engine_ref": "2fc024ee41984e2d9eaa454cf4edeeb3e63c741c",
+  "old_default_voice": "fr-FR-RemyMultilingualNeural",
+  "new_default_voice": "fr-FR-HenriNeural",
+  "cases": {
+    "seville": {
+      "source_path": "series/seville-discovery/audio/seville-discovery-ep02.json",
+      "source_sha256": "752c0b900bc64c98e37517d8773cceb933e3536447bf6fdb734ce19ba6700cfc",
+      "source_sequences": [
+        1,
+        5
+      ],
+      "program_sha256": "872cd7733f3795c495a280f236e1c03f2234acf1bcab6bdb93d475489bb190e6",
+      "text_sha256": [
+        "ef14377105acf8b985e6b6e8c197b21cfe8e2686a29084e2e4ec565fe3522fb5",
+        "47f5ab71019767046e648647454afbc4f78146c47d133d08820e9d297afd7249"
+      ],
+      "text_identical_between_variants": true,
+      "listen_for": "French continuity around Puerta del León / Patio de las Doncellas; natural Spanish proper-name pronunciation is allowed.",
+      "old": {
+        "engine_ref": "3392d4f22f0a9b054a05b5c05a7856985c0ab030",
+        "engine_version": "0.9.2",
+        "engine_code_sha256": "9aa43a15153395e44a8c9c62b70824ae61a1a79878a831cceef7dd80b6ade207",
+        "provider": {
+          "name": "edge",
+          "processing": "remote"
+        },
+        "audio_file": "seville-old.mp3",
+        "audio_sha256": "bb7fa710fe74841117657a324df38a30f6e7aea52a37fd8400ac5b79567a78de",
+        "audio_bytes": 712124,
+        "duration_seconds": 71.18,
+        "resolved_synthesis": [
+          {
+            "sequence": 1,
+            "voice": "fr-FR-RemyMultilingualNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "ef14377105acf8b985e6b6e8c197b21cfe8e2686a29084e2e4ec565fe3522fb5"
+          },
+          {
+            "sequence": 2,
+            "voice": "fr-FR-RemyMultilingualNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "47f5ab71019767046e648647454afbc4f78146c47d133d08820e9d297afd7249"
+          }
+        ]
+      },
+      "native_fr": {
+        "engine_ref": "2fc024ee41984e2d9eaa454cf4edeeb3e63c741c",
+        "engine_version": "0.9.4",
+        "engine_code_sha256": "74a29578cdfc9055c43dc10dd06826d49b84b334fd1154edce88935f26f749d9",
+        "provider": {
+          "name": "edge",
+          "processing": "remote"
+        },
+        "audio_file": "seville-native-fr.mp3",
+        "audio_sha256": "28f9edbe5ea2d0be4d391c7e9f712a63a71cfc76de33adc053a611a1c21ebe56",
+        "audio_bytes": 723644,
+        "duration_seconds": 72.34,
+        "resolved_synthesis": [
+          {
+            "sequence": 1,
+            "voice": "fr-FR-HenriNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "ef14377105acf8b985e6b6e8c197b21cfe8e2686a29084e2e4ec565fe3522fb5"
+          },
+          {
+            "sequence": 2,
+            "voice": "fr-FR-HenriNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "47f5ab71019767046e648647454afbc4f78146c47d133d08820e9d297afd7249"
+          }
+        ]
+      }
+    },
+    "orleans": {
+      "source_path": "series/orleans/audio/orleans-ep01.json",
+      "source_sha256": "56763013123eefc1da06578b20f12abe17ffbbb44ee1aeae395943081c76b7fc",
+      "source_sequences": [
+        1,
+        9
+      ],
+      "program_sha256": "0188a7b4897123333982f3996c2ed5dec1652f4d6af36f0ce71ddb5dd1b3414b",
+      "text_sha256": [
+        "f613c9867c491ea7ce6ab0eec21cbf0e1bfbb062d2ee052267712d4e08a297c7",
+        "d27fa550ee9145ebc30a4b9b29cd720c3b22cc6d558ffc57dfce08e8dedd147c"
+      ],
+      "text_identical_between_variants": true,
+      "listen_for": "Narrator timbre, rhythm and French naturalness; pay attention to Orléans, Charles VII, Reims and Jeanne.",
+      "old": {
+        "engine_ref": "3392d4f22f0a9b054a05b5c05a7856985c0ab030",
+        "engine_version": "0.9.2",
+        "engine_code_sha256": "9aa43a15153395e44a8c9c62b70824ae61a1a79878a831cceef7dd80b6ade207",
+        "provider": {
+          "name": "edge",
+          "processing": "remote"
+        },
+        "audio_file": "orleans-old.mp3",
+        "audio_sha256": "0466b337e571da6606fc72ed96a4b3ba65030e684c6319f02a93db505f4a6f9c",
+        "audio_bytes": 457964,
+        "duration_seconds": 45.77,
+        "resolved_synthesis": [
+          {
+            "sequence": 1,
+            "voice": "fr-FR-RemyMultilingualNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "f613c9867c491ea7ce6ab0eec21cbf0e1bfbb062d2ee052267712d4e08a297c7"
+          },
+          {
+            "sequence": 2,
+            "voice": "fr-FR-RemyMultilingualNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "d27fa550ee9145ebc30a4b9b29cd720c3b22cc6d558ffc57dfce08e8dedd147c"
+          }
+        ]
+      },
+      "native_fr": {
+        "engine_ref": "2fc024ee41984e2d9eaa454cf4edeeb3e63c741c",
+        "engine_version": "0.9.4",
+        "engine_code_sha256": "74a29578cdfc9055c43dc10dd06826d49b84b334fd1154edce88935f26f749d9",
+        "provider": {
+          "name": "edge",
+          "processing": "remote"
+        },
+        "audio_file": "orleans-native-fr.mp3",
+        "audio_sha256": "e5aa88d0437dafa07da61f49d356a73f4e9bd76d472235fed6cbc27a0e2fabd6",
+        "audio_bytes": 467564,
+        "duration_seconds": 46.73,
+        "resolved_synthesis": [
+          {
+            "sequence": 1,
+            "voice": "fr-FR-HenriNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "f613c9867c491ea7ce6ab0eec21cbf0e1bfbb062d2ee052267712d4e08a297c7"
+          },
+          {
+            "sequence": 2,
+            "voice": "fr-FR-HenriNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "d27fa550ee9145ebc30a4b9b29cd720c3b22cc6d558ffc57dfce08e8dedd147c"
+          }
+        ]
+      }
+    },
+    "kernel-handover": {
+      "source_path": "series/kernel-handover/audio/kernel-handover-explainer.json",
+      "source_sha256": "218ce6a828b2102d6a749b95fd3fed455b6ae952cf4f238dc1741dbddfc8154b",
+      "source_sequences": [
+        1,
+        6
+      ],
+      "program_sha256": "c4e095ace21abf6a0a7293eed657c7ea2adae087d1fe91272bc9c1f3bcd16dc0",
+      "text_sha256": [
+        "f24f4fd164d15af34d2f5d64d3f37c7944dc9f874cf055119433d770404133ce",
+        "6b42236d836cd84bbc1ce79024d1cfcd97364723c74735acc9433656b821f684"
+      ],
+      "text_identical_between_variants": true,
+      "listen_for": "Modern/technical French, English loan words such as kernel/handover/City Guide, and overall intelligibility.",
+      "old": {
+        "engine_ref": "3392d4f22f0a9b054a05b5c05a7856985c0ab030",
+        "engine_version": "0.9.2",
+        "engine_code_sha256": "9aa43a15153395e44a8c9c62b70824ae61a1a79878a831cceef7dd80b6ade207",
+        "provider": {
+          "name": "edge",
+          "processing": "remote"
+        },
+        "audio_file": "kernel-handover-old.mp3",
+        "audio_sha256": "9cbe6907f16269cfed02e5f02942406c68b29da780240c2e8c392196654bf32c",
+        "audio_bytes": 339884,
+        "duration_seconds": 33.96,
+        "resolved_synthesis": [
+          {
+            "sequence": 1,
+            "voice": "fr-FR-RemyMultilingualNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "f24f4fd164d15af34d2f5d64d3f37c7944dc9f874cf055119433d770404133ce"
+          },
+          {
+            "sequence": 2,
+            "voice": "fr-FR-RemyMultilingualNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "6b42236d836cd84bbc1ce79024d1cfcd97364723c74735acc9433656b821f684"
+          }
+        ]
+      },
+      "native_fr": {
+        "engine_ref": "2fc024ee41984e2d9eaa454cf4edeeb3e63c741c",
+        "engine_version": "0.9.4",
+        "engine_code_sha256": "74a29578cdfc9055c43dc10dd06826d49b84b334fd1154edce88935f26f749d9",
+        "provider": {
+          "name": "edge",
+          "processing": "remote"
+        },
+        "audio_file": "kernel-handover-native-fr.mp3",
+        "audio_sha256": "66608e64817eb719beaf7aa9418c331397bb842d4020b00699aea5b290d7a7ec",
+        "audio_bytes": 341084,
+        "duration_seconds": 34.08,
+        "resolved_synthesis": [
+          {
+            "sequence": 1,
+            "voice": "fr-FR-HenriNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "f24f4fd164d15af34d2f5d64d3f37c7944dc9f874cf055119433d770404133ce"
+          },
+          {
+            "sequence": 2,
+            "voice": "fr-FR-HenriNeural",
+            "resolved_preset": "narrateur-vif",
+            "rate": "+8%",
+            "pitch": "+14Hz",
+            "volume": "+5%",
+            "text_sha256": "6b42236d836cd84bbc1ce79024d1cfcd97364723c74735acc9433656b821f684"
+          }
+        ]
+      }
+    }
+  },
+  "explicit_cast_control": {
+    "source_path": "series/odyssee/audio/odyssee-probe-p1.json",
+    "source_sha256": "b55b97817d8e2c062d6e95eec77799f2f05d776cf7856a58f5b13bc5dc162c15",
+    "explicit_cast": [
+      {
+        "sequence": 1,
+        "character_id": "narratrice",
+        "speaker": "Narratrice",
+        "voice": "fr-FR-DeniseNeural",
+        "text_sha256": "330edcb225c76964799f12853e7a53b8eeb88b645b8fd0be1a6da5fb3d9a9657"
+      },
+      {
+        "sequence": 2,
+        "character_id": "penelope",
+        "speaker": "Pénélope",
+        "voice": "fr-FR-VivienneMultilingualNeural",
+        "text_sha256": "b6577ee8e5f9c58082726ae2a2223dfac0ae2dcf3894d3ac74a4f32931096afc"
+      },
+      {
+        "sequence": 3,
+        "character_id": "telemaque",
+        "speaker": "Télémaque",
+        "voice": "fr-FR-RemyMultilingualNeural",
+        "text_sha256": "6ab732af58bc12305c038802e7ca1b3a4d29f00c402cbabcaa9bf2a89b31c5c3"
+      },
+      {
+        "sequence": 4,
+        "character_id": "ulysse",
+        "speaker": "Ulysse",
+        "voice": "fr-FR-HenriNeural",
+        "text_sha256": "c23da2e49881c08ecf8d6ad053cc0012dce3a7695748d1d324e7a96fe581cda5"
+      },
+      {
+        "sequence": 5,
+        "character_id": "athena",
+        "speaker": "Athéna",
+        "voice": "fr-FR-DeniseNeural",
+        "text_sha256": "3f08238ed85df0fcbf178a96225735e6c68d7e9b3c73c5859e9a6fc8b6eaf938"
+      },
+      {
+        "sequence": 6,
+        "character_id": "narratrice",
+        "speaker": "Narratrice",
+        "voice": "fr-FR-DeniseNeural",
+        "text_sha256": "1b4e4ea6934123ca326c0d2b64e38523ed751b3e1eae0ef891eed7d2097ef9ad"
+      }
+    ],
+    "expected_default_effect": "NONE",
+    "reason": "Every sampled Odyssée character carries an explicit provider voice; the French default must not silently recast it."
+  },
+  "automatic_oracle_scope": "CI proves source/text identity, exact engine refs, resolved voice identity, render success and explicit-cast inventory. It does not replace human listening for timbre, rhythm, pronunciation or intelligibility."
+}
