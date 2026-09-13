@@ -286,8 +286,14 @@
     if(i<0)return;
     markDone(currentEpisode.id);
     mediaSetPlaybackState('paused');
-    const next=series.episodes.slice(i+1).find(isPlayable);
-    if(next) playerSubtitle.textContent=`Terminé · suite : ${next.title}`;
+    const next=series.episodes.slice(i+1).find(e=>isPlayable(e)&&!isDone(e.id));
+    if(next){
+      localStorage.setItem(`recit:${series.slug}`,JSON.stringify({episode:next.id,time:0,updated:Date.now()}));
+      playerSubtitle.textContent=`Terminé · suite : ${next.title}`;
+    }else{
+      localStorage.removeItem(`recit:${series.slug}`);
+      playerSubtitle.textContent='Parcours terminé';
+    }
     refreshJourneyUi();
   });
 
@@ -316,18 +322,34 @@
   function markDone(id){localStorage.setItem(`recit:done:${series.slug}:${id}`,'1');}
   function isDone(id){return localStorage.getItem(`recit:done:${series.slug}:${id}`)==='1';}
 
+  function resumeTarget(s, progress){
+    if(!progress?.episode)return null;
+    const savedIndex=s.episodes.findIndex(e=>e.id===progress.episode);
+    if(savedIndex<0)return null;
+    const saved=s.episodes[savedIndex];
+    if(!isDone(saved.id))return isPlayable(saved)?{episode:saved,index:savedIndex,time:Number(progress.time)||0,advanced:false}:null;
+    for(let i=savedIndex+1;i<s.episodes.length;i++){
+      const candidate=s.episodes[i];
+      if(isPlayable(candidate)&&!isDone(candidate.id))return {episode:candidate,index:i,time:0,advanced:true};
+    }
+    return null;
+  }
+
   function restore(s){
     try{
       const p=progressSnapshot(s);if(!p)return;
-      const e=s.episodes.find(x=>x.id===p.episode);if(!isPlayable(e))return;
-      const index=s.episodes.findIndex(x=>x.id===e.id)+1;
+      const target=resumeTarget(s,p);
+      if(!target){localStorage.removeItem(`recit:${s.slug}`);return;}
+      const {episode:e,index,time,advanced}=target;
+      if(advanced)localStorage.setItem(`recit:${s.slug}`,JSON.stringify({episode:e.id,time:0,updated:Date.now()}));
+      const step=index+1;
       const b=document.createElement('button');
       b.className='resume';
-      b.textContent=`Continuer · étape ${index} · ${formatTime(p.time||0)}`;
-      b.setAttribute('aria-label',`Reprendre ${e.title} à ${formatTime(p.time||0)}`);
+      b.textContent=`Continuer · étape ${step} · ${formatTime(time)}`;
+      b.setAttribute('aria-label',`Reprendre ${e.title} à ${formatTime(time)}`);
       b.addEventListener('click',()=>{
         playEpisode(e);
-        audio.addEventListener('loadedmetadata',()=>{audio.currentTime=Math.min(p.time||0,audio.duration||p.time||0);syncPlayerTime(true);},{once:true});
+        audio.addEventListener('loadedmetadata',()=>{audio.currentTime=Math.min(time,audio.duration||time);syncPlayerTime(true);},{once:true});
       });
       root.querySelector('.series-hero').appendChild(b);
     }catch(_){}
