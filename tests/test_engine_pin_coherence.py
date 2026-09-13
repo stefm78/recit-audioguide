@@ -5,7 +5,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKFLOW = ROOT / ".github" / "workflows" / "pages.yml"
-EXPECTED_PIN = "3392d4f22f0a9b054a05b5c05a7856985c0ab030"
+EXPECTED_PIN = "2fc024ee41984e2d9eaa454cf4edeeb3e63c741c"
+PREVIOUS_PIN = "3392d4f22f0a9b054a05b5c05a7856985c0ab030"
 
 
 def extract_audio_engine_pins(text):
@@ -38,14 +39,10 @@ class AudioEnginePinCoherenceTests(unittest.TestCase):
         self.assertEqual(len(pins), 4, pins)
         self.assertEqual({sha for _, sha in pins}, {EXPECTED_PIN}, pins)
 
-    def test_expected_pin_is_immutable_in_this_work_package(self):
+    def test_previous_pin_is_fully_retired_from_runtime_workflow(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn(EXPECTED_PIN, text)
-        self.assertNotIn(
-            "294a1d84687199007dd7d542466ff39b2b4ac353",
-            text,
-            "current audio-engine main must not be promoted implicitly",
-        )
+        self.assertNotIn(PREVIOUS_PIN, text)
 
 
 if __name__ == "__main__":
