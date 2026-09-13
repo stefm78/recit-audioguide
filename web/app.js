@@ -332,14 +332,15 @@
       const candidate=s.episodes[i];
       if(isPlayable(candidate)&&!isDone(candidate.id))return {episode:candidate,index:i,time:0,advanced:true};
     }
-    return null;
+    return {complete:true};
   }
 
   function restore(s){
     try{
       const p=progressSnapshot(s);if(!p)return;
       const target=resumeTarget(s,p);
-      if(!target){localStorage.removeItem(`recit:${s.slug}`);return;}
+      if(!target)return;
+      if(target.complete){localStorage.removeItem(`recit:${s.slug}`);return;}
       const {episode:e,index,time,advanced}=target;
       if(advanced)localStorage.setItem(`recit:${s.slug}`,JSON.stringify({episode:e.id,time:0,updated:Date.now()}));
       const step=index+1;
