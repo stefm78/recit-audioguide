@@ -8,6 +8,7 @@ const www = resolve(here, 'www');
 const slug = process.argv[2] || 'seville-discovery';
 const pagePath = join(www, 's', slug, 'index.html');
 const html = await readFile(pagePath, 'utf8');
+const series = JSON.parse(await readFile(join(www, 'data', slug, 'series.json'), 'utf8'));
 const errors = [];
 
 class LocalResourceLoader extends ResourceLoader {
@@ -132,6 +133,17 @@ if(!native.playback.some(x => x?.playbackState === 'playing')) throw new Error('
 
 const saved = JSON.parse(window.localStorage.getItem(`recit:${slug}`) || 'null');
 if(!saved?.episode) throw new Error('journey progress was not persisted after first play');
+const savedIndex = series.episodes.findIndex(episode => episode.id === saved.episode);
+if(savedIndex < 0) throw new Error(`persisted episode not found in series: ${saved.episode}`);
+const nextPlayable = series.episodes.slice(savedIndex + 1).find(episode => episode.audio_url && episode.state !== 'failed');
+if(!nextPlayable) throw new Error('runtime completion test requires a later playable episode');
+
+audio.dispatchEvent(new window.Event('ended'));
+await new Promise(r => setTimeout(r, 10));
+if(window.localStorage.getItem(`recit:done:${slug}:${saved.episode}`) !== '1') throw new Error('ended episode was not marked done');
+const advanced = JSON.parse(window.localStorage.getItem(`recit:${slug}`) || 'null');
+if(advanced?.episode !== nextPlayable.id || Number(advanced?.time) !== 0) throw new Error(`ended episode did not advance persisted progress to ${nextPlayable.id}`);
+if(!window.document.getElementById('player-subtitle')?.textContent.includes(nextPlayable.title)) throw new Error('player did not expose the next episode after completion');
 
 audio.currentTime=30;
 native.handlers.seekforward({action:'seekforward'});
@@ -152,8 +164,17 @@ audio.dispatchEvent(new window.Event('play'));
 await new Promise(r => setTimeout(r, 10));
 if(!audio.paused) throw new Error('unsolicited post-interruption auto-resume was not blocked');
 
+for(const episode of series.episodes.slice(savedIndex + 1).filter(episode => episode.audio_url && episode.state !== 'failed')){
+  window.localStorage.setItem(`recit:done:${slug}:${episode.id}`, '1');
+}
+window.localStorage.setItem(`recit:${slug}`, JSON.stringify({episode:saved.episode,time:30,updated:Date.now()}));
+audio.dispatchEvent(new window.Event('ended'));
+await new Promise(r => setTimeout(r, 10));
+if(window.localStorage.getItem(`recit:${slug}`) !== null) throw new Error('fully completed journey must clear persisted resume progress');
+if(window.document.getElementById('player-subtitle')?.textContent !== 'Parcours terminé') throw new Error('fully completed journey must expose a terminal player state');
+
 const snap = window.RECIT_DIAG?.snapshot?.();
 if(!snap?.ready) throw new Error('field diagnostics did not observe ready state');
 if(errors.some(e => /resource:|console\.error:|jsdom:Could not load script/i.test(e))) throw new Error(`runtime errors: ${errors.join(' | ')}`);
-console.log(`Browser runtime PASS: visible home/Parcours topbar + ${cards.length} episodes + ${journeyItems.length} left-only drawer items + thin edge hint; Android media play/pause/±15 PASS; interruption latch PASS; audio local ${audioUrl.pathname}`);
+console.log(`Browser runtime PASS: visible home/Parcours topbar + ${cards.length} episodes + ${journeyItems.length} left-only drawer items + completion-aware progress advance/clear; Android media play/pause/±15 PASS; interruption latch PASS; audio local ${audioUrl.pathname}`);
 dom.window.close();
