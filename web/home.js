@@ -66,11 +66,8 @@
     const savedIndex = index.findIndex(episode => episode?.id === progress.episode);
     if(savedIndex < 0) return null;
     const saved = index[savedIndex];
-    if(!isEpisodeDone(item, saved.id)){
-      if(saved.state === 'failed') return null;
-      return {...progress, title:saved.title || ''};
-    }
-    const next = index.slice(savedIndex + 1).find(episode => episode?.id && episode.state !== 'failed' && !isEpisodeDone(item, episode.id));
+    if(!isEpisodeDone(item, saved.id)) return {...progress, title:saved.title || ''};
+    const next = index.slice(savedIndex + 1).find(episode => episode?.id && !isEpisodeDone(item, episode.id));
     if(!next) return null;
     return {episode:next.id, time:0, updated:progress.updated || 0, title:next.title || '', advanced:true};
   }
