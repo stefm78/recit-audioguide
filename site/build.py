@@ -206,6 +206,10 @@ def main():
             'title':m['title'],
             'subtitle':m.get('subtitle',''),
             'episode_count':len(m['episodes']),
+            'episode_index':[
+                {'id':e.get('id'),'title':e.get('title',''),'state':e.get('state')}
+                for e in published.get('episodes',[])
+            ],
             'state':published['state'],
             'editorially_visible':visibility[slug],
         })
