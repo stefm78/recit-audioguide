@@ -11,6 +11,12 @@ Immediate parallel workers:
 - J1 FIELD STORY RESEARCH -> branch `seville-v2-j1-field-research`
 - J3 AUDIO-FIRST UX -> branch `seville-v2-j3-audio-first-ux`
 
+Prepared but not launched yet:
+
+- J2 FIELD SHOWRUNNER -> start progressively from accepted J1 batches;
+- J4 AUDIO PRODUCTION -> start from J2 scene batches;
+- J5 AUTOMATED QUALIFICATION -> create from the then-current integration HEAD so it qualifies the real candidate rather than a stale bootstrap branch.
+
 Coordination rules:
 
 - worker branches do not merge each other;
