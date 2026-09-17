@@ -30,6 +30,13 @@ class AudioFirstUxContractTests(unittest.TestCase):
         self.assertIn("classic_fallback_url", self.script)
         self.assertIn("audioFirst ? setupAudioFirst() : enhanceLegacy()", self.script)
 
+    def test_legacy_pending_selection_semantics_are_preserved(self):
+        self.assertNotIn("function readProgress()", self.script)
+        self.assertIn(
+            "episodes.findIndex(e => localStorage.getItem(`recit:done:${series.slug || slug}:${e.id}`) !== '1')",
+            self.script,
+        )
+
     def test_primary_field_surface_is_minimal_and_complete(self):
         required = (
             "Étape ${index + 1}/${episodes.length}",

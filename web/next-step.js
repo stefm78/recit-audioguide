@@ -31,22 +31,8 @@
     }
 
     function firstPendingIndex() {
-      const progress = readProgress();
-      if (progress?.episode) {
-        const current = episodes.findIndex(e => e.id === progress.episode);
-        if (current >= 0 && localStorage.getItem(`recit:done:${series.slug || slug}:${episodes[current].id}`) !== '1') return current;
-      }
       const pending = episodes.findIndex(e => localStorage.getItem(`recit:done:${series.slug || slug}:${e.id}`) !== '1');
       return pending < 0 ? Math.max(episodes.length - 1, 0) : pending;
-    }
-
-    function readProgress() {
-      try {
-        const raw = localStorage.getItem(`recit:${series.slug || slug}`);
-        return raw ? JSON.parse(raw) : null;
-      } catch (_) {
-        return null;
-      }
     }
 
     function concise(value, limit) {
