@@ -60,6 +60,8 @@ jobs:
           from pathlib import Path
 
           source = json.loads(Path("series/seville-discovery-v2/audio/FRIDAY_MORNING_AUDIO_MANIFEST.json").read_text(encoding="utf-8"))
+          scene_program = json.loads(Path("series/seville-discovery-v2/scenes/FRIDAY_MORNING_SCENE_PROGRAM.json").read_text(encoding="utf-8"))
+          scenes = {scene["scene_id"]: scene for scene in scene_program["scenes"]}
           evidence = {
               "schema": "recit.seville-v2.j4-render-evidence.v1",
               "status": "PASS",
@@ -80,14 +82,18 @@ jobs:
               ], text=True).strip())
               if duration <= 0:
                   raise SystemExit(f"non-positive duration: {entry['scene_id']}")
+              program = Path(entry["program_path"])
+              spoken = scenes[entry["scene_id"]]["spoken_text"].encode("utf-8")
               item = {
                   "scene_id": entry["scene_id"],
+                  "spoken_text_sha256": hashlib.sha256(spoken).hexdigest(),
+                  "program_sha256": hashlib.sha256(program.read_bytes()).hexdigest(),
                   "audio_sha256": hashlib.sha256(audio.read_bytes()).hexdigest(),
                   "manifest_sha256": hashlib.sha256(manifest.read_bytes()).hexdigest(),
                   "duration_seconds": round(duration, 3),
                   "audio_bytes": audio.stat().st_size,
                   "transcript_present": transcript.is_file(),
-                  "decode": "PASS",
+                  "decode": "PASS"
               }
               evidence["entries"].append(item)
               evidence["produced"] += 1
@@ -97,7 +103,7 @@ jobs:
               raise SystemExit("render cardinality mismatch")
           Path("generated/j4-friday/qualification.json").write_text(
               json.dumps(evidence, ensure_ascii=False, indent=2) + "\n",
-              encoding="utf-8",
+              encoding="utf-8"
           )
           print(json.dumps(evidence, ensure_ascii=False, indent=2))
           PY

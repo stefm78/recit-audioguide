@@ -36,8 +36,6 @@
       "rendered_audio_path": "generated/audio/SEV2-FRI-AM-01/audio.mp3",
       "rendered_manifest_path": "generated/audio/SEV2-FRI-AM-01/manifest.json",
       "rendered_transcript_path": "generated/audio/SEV2-FRI-AM-01/transcript.json",
-      "spoken_text_sha256": "977f325b55aa911c9d5010af6e3508d00b20234019c0048d329422029eac85ce",
-      "program_sha256": "d2bdb9dfeea1c2bfd40cd116b650c0aa0d0de76b01fc7dc3b117026f9c524d37",
       "language": "fr-FR",
       "voice_preset": "narrateur-vif",
       "soundscape": "NONE"
@@ -50,8 +48,6 @@
       "rendered_audio_path": "generated/audio/SEV2-FRI-AM-02/audio.mp3",
       "rendered_manifest_path": "generated/audio/SEV2-FRI-AM-02/manifest.json",
       "rendered_transcript_path": "generated/audio/SEV2-FRI-AM-02/transcript.json",
-      "spoken_text_sha256": "98ee2a0171c93096c3eea7cf35788b9cac5f7e36e0ec62caeb018e872285b0f1",
-      "program_sha256": "d0e09f3a10191b2ee920fbfa484cd20e9ba852518b73408100b1813502768d06",
       "language": "fr-FR",
       "voice_preset": "narrateur-vif",
       "soundscape": "NONE"
@@ -64,8 +60,6 @@
       "rendered_audio_path": "generated/audio/SEV2-FRI-AM-03/audio.mp3",
       "rendered_manifest_path": "generated/audio/SEV2-FRI-AM-03/manifest.json",
       "rendered_transcript_path": "generated/audio/SEV2-FRI-AM-03/transcript.json",
-      "spoken_text_sha256": "4ed42e8004f62979e08bf5ed9bf7afc9b7f5aca39297802192f9f7f7b2c2bf97",
-      "program_sha256": "83480b0a13628ec663249983e5862e8302ddcd76686658e7ff33c57ca8c487e2",
       "language": "fr-FR",
       "voice_preset": "narrateur-vif",
       "soundscape": "NONE"
@@ -78,8 +72,6 @@
       "rendered_audio_path": "generated/audio/SEV2-FRI-AM-04/audio.mp3",
       "rendered_manifest_path": "generated/audio/SEV2-FRI-AM-04/manifest.json",
       "rendered_transcript_path": "generated/audio/SEV2-FRI-AM-04/transcript.json",
-      "spoken_text_sha256": "756eadbe02df5601d2b250a31c2a0a1f64ef29da1c61f6744c76c945c4e92d13",
-      "program_sha256": "e57bc6e84148630ca7cf0ca48082f4b231207bb74a26ed167b0f2d6c4ddd8948",
       "language": "fr-FR",
       "voice_preset": "narrateur-vif",
       "soundscape": "NONE"
@@ -92,8 +84,6 @@
       "rendered_audio_path": "generated/audio/SEV2-FRI-AM-05/audio.mp3",
       "rendered_manifest_path": "generated/audio/SEV2-FRI-AM-05/manifest.json",
       "rendered_transcript_path": "generated/audio/SEV2-FRI-AM-05/transcript.json",
-      "spoken_text_sha256": "97563a7f7edaab7d03c3109c4b2c5c54d78e3cefe9a077cab686e8780a7711f2",
-      "program_sha256": "ccb18e054b3a143d2a64a8765c569d8469969be28167d383104cbe15a9cc3fcb",
       "language": "fr-FR",
       "voice_preset": "narrateur-vif",
       "soundscape": "NONE"
@@ -106,8 +96,6 @@
       "rendered_audio_path": "generated/audio/SEV2-FRI-AM-06/audio.mp3",
       "rendered_manifest_path": "generated/audio/SEV2-FRI-AM-06/manifest.json",
       "rendered_transcript_path": "generated/audio/SEV2-FRI-AM-06/transcript.json",
-      "spoken_text_sha256": "9d5525a9b97136808ca77ab1b252a1b4f520772c87dde57f0d524d8b5dc2e0e2",
-      "program_sha256": "7029fed2efc236c9e6290ef5496f7955a98b31ba502df46ea94fe9bc8282c710",
       "language": "fr-FR",
       "voice_preset": "narrateur-vif",
       "soundscape": "NONE"
@@ -120,8 +108,6 @@
       "rendered_audio_path": "generated/audio/SEV2-FRI-AM-07/audio.mp3",
       "rendered_manifest_path": "generated/audio/SEV2-FRI-AM-07/manifest.json",
       "rendered_transcript_path": "generated/audio/SEV2-FRI-AM-07/transcript.json",
-      "spoken_text_sha256": "43793fa0ce751f2902864c858f60b75b37af2a86004d2f36ce6a18717111bd5e",
-      "program_sha256": "50d049a688570a70bc9381fc860815287512c237f269c537513385e21356a811",
       "language": "fr-FR",
       "voice_preset": "narrateur-vif",
       "soundscape": "NONE"
@@ -134,11 +120,15 @@
       "rendered_audio_path": "generated/audio/SEV2-FRI-AM-08/audio.mp3",
       "rendered_manifest_path": "generated/audio/SEV2-FRI-AM-08/manifest.json",
       "rendered_transcript_path": "generated/audio/SEV2-FRI-AM-08/transcript.json",
-      "spoken_text_sha256": "c556f58f53583e2bdfe7737bc8f27cdfd4a2b98976278431d622d47be1ef92a8",
-      "program_sha256": "181d5863c707a347323822708794f812619542700151f5e5a79ac19bff9c0a0c",
       "language": "fr-FR",
       "voice_preset": "narrateur-vif",
       "soundscape": "NONE"
     }
-  ]
+  ],
+  "determinism": {
+    "source_hash_rule": "SHA256(UTF-8 exact accepted J2 spoken_text) computed from authoritative checkout",
+    "program_hash_rule": "SHA256(exact committed audio program bytes) computed from authoritative checkout",
+    "render_hash_rule": "SHA256(rendered audio.mp3 bytes) captured as qualification evidence",
+    "reason": "Do not precompute hashes from reconstructed text outside the repository checkout."
+  }
 }
