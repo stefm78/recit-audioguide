@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SUN-03",
+  "title": "Puerta del Príncipe — un morceau d’un autre Séville",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 3,
+  "stop": "Maestranza — Puerta del Príncipe, si naturellement rencontrée",
+  "location": "Puerta del Príncipe — un morceau d’un autre Séville",
+  "launch": "Lancer uniquement si la Puerta del Príncipe ou sa grille est naturellement rencontrée sur le parcours de visite.",
+  "look": "Si la grille est visible, regardez-la comme un objet déplacé : elle vient d’une chapelle d’un couvent aujourd’hui disparu.",
+  "summary": "LOOK_REUSE_CONDITIONAL",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S42"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Si la Puerta del Príncipe est dans votre parcours, regardez sa grille. Elle n’a pas été fabriquée pour cette arène. La Real Maestranza l’identifie comme une œuvre de Pedro Roldán provenant de l’ancienne chapelle du couvent de Regina Angelorum. La chapelle est démolie en 1905 et des éléments récupérables sont conservés; cette grille trouve ici une nouvelle vie. Après trois jours de transformations, voilà un cas très matériel : la ville ne conserve pas toujours un bâtiment entier. Parfois elle déplace un fragment."
+    }
+  ]
+}

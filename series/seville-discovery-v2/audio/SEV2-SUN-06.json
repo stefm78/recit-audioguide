@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SUN-06",
+  "title": "Avant les tableaux — lire l’ancien couvent",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 3,
+  "stop": "Museo de Bellas Artes — patios / escalier / ancienne église",
+  "location": "Avant les tableaux — lire l’ancien couvent",
+  "launch": "Lancer lorsque les patios, le grand escalier ou l’ancienne église rendent l’organisation de l’ancien couvent perceptible.",
+  "look": "Regardez d’abord les patios, les circulations et l’escalier : le musée conserve aussi la logique de l’ancien couvent de la Merced.",
+  "summary": "LOOK_FIRST_BUILDING_AS_COLLECTION",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S44"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Le bâtiment est déjà une pièce du musée. Vous êtes dans l’ancien couvent de la Merced Calzada, organisé autour de trois patios. Le grand escalier articule ces espaces et l’ancienne église est devenue l’une des salles fortes du parcours. Avant les cartels, laissez cette architecture vous guider. Les peintures religieuses ne sont pas posées dans une boîte neutre : elles vivent désormais dans un lieu qui porte encore une histoire de cloître, de culte puis de musée."
+    }
+  ]
+}
