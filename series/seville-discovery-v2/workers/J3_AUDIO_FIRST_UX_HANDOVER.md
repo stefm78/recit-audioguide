@@ -4,6 +4,26 @@
 
 Turn the Seville V2 field experience into an audio-guide controller rather than a page to read, while preserving all non-V2 behavior and the frozen V1 fallback.
 
+## Kernel execution contract
+
+This is a governed worker job. Use the ACTIVE kernel primitives causally.
+
+Default execution path:
+
+`/refresh -> /research -> /solve -> /build -> /audit`
+
+Primitive responsibilities:
+
+- `/refresh` — revalidate kernel authority, worker branch HEAD, V2 contract, V1 frozen baseline and the current shared Web/player architecture before mutation.
+- `/research` — inspect the smallest causal UX/runtime working set: `web/next-step.js`, relevant render/player/resume code, existing tests and current mobile behavior. Do not perform repository-wide discovery without a causal need.
+- `/solve` — choose the smallest architecture that produces a true audio-first V2 visit mode, preserves non-V2 behavior and keeps V1 fallback immediately reachable. Challenge solutions that merely hide the current article-like page inside accordions.
+- `/build` — implement only the selected V2 capability/schema and the minimum guarded shared-code changes required by that decision.
+- `/audit` — prove text-budget compliance, fallback reachability, resume/current-step semantics, accessibility/mobile usability, non-V2 regression safety and `V1_CHANGED_FILES = 0`.
+
+Re-enter only the smallest failed causal stage: architectural premise/UX decision defect -> `/solve`; missing current-state evidence -> `/research`; implementation defect -> `/build`; then `/audit` again.
+
+`/learn` is optional and only for a reusable product pattern beyond Seville. It must not become authority for this implementation.
+
 ## Read first
 
 - `series/seville-discovery-v2/FIELD_GUIDE_V2_CONTRACT.md`
@@ -74,4 +94,14 @@ No human audio gate.
 
 ## Deliverable
 
-Work on a dedicated worker branch. Return branch/ref, commit SHA, changed paths, screenshots or deterministic DOM/test evidence where available, test results, explicit non-V2 regression evidence and any integration assumptions needed by J2/J4.
+Work on a dedicated worker branch.
+
+Return:
+
+- branch/ref and final commit SHA;
+- exact changed paths;
+- kernel path actually used and any local re-entry;
+- screenshots or deterministic DOM/test evidence where available;
+- test results and `/audit` verdict;
+- explicit non-V2 and V1 non-regression evidence;
+- integration assumptions needed by J2/J4.
