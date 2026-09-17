@@ -23,71 +23,112 @@ Default coordination cycle when mutation is required:
 
 `/refresh -> /solve (if a material decision exists) -> /build -> /audit`
 
-For read-only status checks, `/refresh` may be sufficient. Do not run primitives merely for ceremony; re-enter only the smallest causally affected stage.
-
 ## Integrated evidence
 
-- J1 FIELD STORY RESEARCH — Friday batch ACCEPTED and integrated from worker SHA `0d131065708cedc6853dc1c844cd0cfd50473441`; artifacts: `research/FRIDAY_MORNING_FIELD_STORY_RESEARCH.md` and initial `research/SOURCE_MANIFEST.md`.
-- J1 FIELD STORY RESEARCH — Saturday batch ACCEPTED from worker SHA `ab368ca8225e4e87fd29976637608a10adcf5812` and integrated through merge commit `670994dc6d4735255aa7d5db34ba518db35d94ca`; artifacts: `research/SATURDAY_FIELD_STORY_RESEARCH.md` and enriched `research/SOURCE_MANIFEST.md`.
-- J1 FIELD STORY RESEARCH — Sunday batch PASS and ACCEPTED from worker SHA `4ca3af65748cd240025ae9e556850d48a4ace05a`, integrated by fast-forward from coordination HEAD `dff97fabb6912e67f5b404bf1d617858c42ba6c9`; artifacts: `research/SUNDAY_FIELD_STORY_RESEARCH.md`, `research/SUNDAY_SOURCE_MANIFEST.md`, and `research/SUNDAY_BUILD_PROVENANCE.md`. Primary Sunday remains Maestranza -> checkout / Lockers Agua -> Museo de Bellas Artes -> protected airport departure; Casa de Pilatos remains fallback-only.
-- J2 FIELD SHOWRUNNER — Friday batch PASS and ACCEPTED from worker SHA `4f7d7f3dace0890274acc5470bf76e5ac6f9d3d3`; integrated through merge commit `7bd26fee6aeaf2f3c7cc7f6cbd104d46fdda081d`; artifact: `scenes/FRIDAY_MORNING_SCENE_PROGRAM.json`, 8 primary scenes + 3 optional-depth units + 2 intentional silence dispositions.
-- J2 FIELD SHOWRUNNER — Saturday batch PASS and ACCEPTED from worker SHA `9fa00643e7ac74f324dd2947ba9b09d785e5e842`; integrated by fast-forward from coordination baseline `d3a78890aae5213d42676cd95ec9829015b7d82d`; artifact: `scenes/SATURDAY_SCENE_PROGRAM.json`, 8 primary scenes + 5 optional-depth units + 3 intentional silence windows.
-- J2 FIELD SHOWRUNNER — Sunday batch PASS and ACCEPTED from worker SHA `19c70040429d1dffc106f94ffd7dde3654477232`, integrated by fast-forward from coordination HEAD `c7d86659c39eb525b6219aea545f74379606619c`; artifact: `scenes/SUNDAY_SCENE_PROGRAM.json`, 9 primary scenes + 4 optional-depth units + 4 intentional silence dispositions. Protected Sunday constraints remain intact: Maestranza primary, checkout/Lockers silence-logistics, Bellas Artes primary, Pilatos fallback-only, protected airport exit.
-- J3 AUDIO-FIRST UX — PASS on worker scope and integrated from worker SHA `ae64ce952100d5dacf676de968451723b830b4bb` through merge/integration commit `6e3c9e034a4c922b0dc97accb733e1355e5a72f4`.
-- J3 integrated blobs are exact worker-final identities: `AUDIO_FIRST_UX_CAPABILITY.json` = `85f2dd0a4ba49a9c7e4d0512c331bed151a46c21`; `tests/test_seville_v2_audio_first_ux.py` = `1762a12e227c3db52b1cc4cb0ffbb76237379def`; `web/next-step.js` = `82b330a9a88c56d71c4d7f3f26ad506f7dd1c565`.
-- J4 AUDIO PRODUCTION — Friday Morning PASS and ACCEPTED from worker final SHA `06ce0580fade766f8a4bfe0dd0e8721899b0d3b6`; qualified assets were produced from SHA `c91484167544a10e76e46a4588d556bb16a3c360` and integrated with Saturday J2 state through merge commit `8259e477955c4a542235f190dc6d71acbc3798e0`.
-- J4 Friday durable evidence: `audio/FRIDAY_MORNING_AUDIO_MANIFEST.json`, eight `audio/SEV2-FRI-AM-*.json` programs, `qualification/J4_FRIDAY_MORNING_AUDIO_QUALIFICATION.json`, and `tests/test_seville_v2_friday_audio_production.py`. Qualified workflow run `35260567914` = SUCCESS; artifact `10514517681` = `seville-v2-j4-friday-audio`, 2,578,475 bytes, digest `sha256:d7019aae1edad6a41ae25aa96fd7ad5a38cb2b4ea53058b758d86db1f721b61f`.
-- J4 Friday primary contract = 8 expected / 8 rendered / 8 decoded / 0 missing / 0 failed, French lock PASS, pinned Audio Engine `3392d4f22f0a9b054a05b5c05a7856985c0ab030` (`0.9.2`, `narrateur-vif`, `fr-FR`). Optional-depth D01-D03 remain intentionally deferred.
-- J4 AUDIO PRODUCTION — Saturday PASS and ACCEPTED from worker final SHA `8fd82f816430a6fd77d0209a808d90e1af9ee0ad`; qualified assets were produced from SHA `fa4a25022763bbd22077135a706b3e2c48b2bfbb` and integrated by fast-forward from coordination candidate `3c5b0418f112616a40c62ec1ffe964d4a5b85ec2`.
-- J4 Saturday durable evidence: `audio/SATURDAY_AUDIO_MANIFEST.json`, eight `audio/SEV2-SAT-*.json` programs, `qualification/J4_SATURDAY_AUDIO_QUALIFICATION.json`, and `tests/test_seville_v2_saturday_audio_production.py`. Qualified workflow run `35265040415` = SUCCESS; artifact `10516435782` = `seville-v2-j4-saturday-audio`, 2,719,972 bytes, digest `sha256:ee186e2d4ea0eff7b36e16fa1c66a27b24fdfb9c666c4fe10f502d64fd28c981`.
-- J4 Saturday primary contract = 8 expected / 8 rendered / 8 decoded / 0 missing / 0 failed, French lock PASS, same pinned engine/preset/language as Friday. Optional-depth 0/5 remains `DEFERRED_UNTIL_COORDINATION_ACCEPTS`.
-- J4 AUDIO PRODUCTION — Sunday PASS and ACCEPTED from worker final SHA `797c7ffde0fc44d7af869e70b9d2e74d6fcd87fb`; qualified assets were produced from SHA `af8f7522f721e54ca7927bcb1c4fb33c9593c84f` and integrated by fast-forward from coordination candidate `418513927721754cec53dc191c483ebe8c5f015a`.
-- J4 Sunday durable evidence: `audio/SUNDAY_AUDIO_MANIFEST.json`, nine `audio/SEV2-SUN-*.json` programs, `qualification/J4_SUNDAY_AUDIO_QUALIFICATION.json`, and `tests/test_seville_v2_sunday_audio_production.py`. Qualified workflow run `35271641904` = SUCCESS; artifact `10519381359` = `seville-v2-j4-sunday-audio`, 2,251,596 bytes, 46 files, digest `sha256:d6fb65edd20b0d78f4f713863b2312c621712154fbfa5088b230a4f6bd8d0f1a`.
-- J4 Sunday primary contract = 9 expected / 9 rendered / 9 decoded / 0 missing / 0 failed, French lock PASS, same pinned engine/preset/language as Friday/Saturday. Optional-depth 0/4 remains `DEFERRED_UNTIL_COORDINATION_ACCEPTS`.
-- J5 AUTOMATED QUALIFICATION — first independent pass on candidate `3c5b0418f112616a40c62ec1ffe964d4a5b85ec2` returned `HOLD`, not `FAIL`: all applicable Friday and static UX/V1 invariants passed; HOLD reasons were missing Saturday audio, missing Sunday content/audio, and missing executable V2 runtime materialization for causal player/resume/offline/screen-lock/MediaSession/fallback/route E2E proof. J5 performed no repair mutation. Saturday and Sunday content/audio gaps are now resolved; executable V2 runtime evidence remains the principal unresolved qualification boundary.
+### J1 — Field Story Research
 
-## Active / next workers
+COMPLETE / INTEGRATED for Friday, Saturday and Sunday.
 
-- J1 FIELD STORY RESEARCH -> COMPLETE / INTEGRATED for Friday, Saturday and Sunday. No further research action unless a downstream worker identifies a material factual/source gap that accepted evidence cannot resolve.
-- J2 FIELD SHOWRUNNER -> COMPLETE / INTEGRATED for Friday, Saturday and Sunday. No further showrunner action unless J4 or J5 returns an owner-specific defect.
-- J3 AUDIO-FIRST UX -> COMPLETE / INTEGRATED; no further worker action unless integration or J5 finds a regression owned by J3.
-- J4 AUDIO PRODUCTION -> COMPLETE / INTEGRATED for Friday, Saturday and Sunday primary scenes. Optional-depth audio remains deferred unless coordination explicitly changes that decision.
-- J5 AUTOMATED QUALIFICATION -> prior audit = HOLD on older candidate `3c5b0418f112616a40c62ec1ffe964d4a5b85ec2`. Rebind to the current integration HEAD and rerun strict `/refresh -> /audit` now that all three days of accepted scene content and primary audio are integrated. Do not repair. Expected remaining HOLD surface is executable V2 runtime materialization/publication and causal player/resume/offline/screen-lock/MediaSession/fallback/route-link proof unless fresh evidence proves those invariants.
+- Friday accepted worker SHA: `0d131065708cedc6853dc1c844cd0cfd50473441`.
+- Saturday accepted worker SHA: `ab368ca8225e4e87fd29976637608a10adcf5812`.
+- Sunday accepted worker SHA: `4ca3af65748cd240025ae9e556850d48a4ace05a`.
+- Sunday remains Maestranza -> checkout / Lockers Agua -> Museo de Bellas Artes -> protected airport departure; Casa de Pilatos is fallback-only.
 
-## Reported V1 defects — do not repair in frozen fallback
+### J2 — Field Narrative Showrunner
 
-Saturday J1 reported two stale narrative references in frozen V1. They are coordination-known defects and must be corrected in V2 content, not by mutating V1:
+COMPLETE / INTEGRATED for Friday, Saturday and Sunday.
 
-- Plaza de España audio says `demain à Triana`, but Triana occurs on Friday before Saturday. Saturday V2 scene content now correctly says `Hier, à Triana`.
-- Archivo audio announces for Sunday `un palais privé puis la peinture`, but Sunday primary is now Maestranza then Bellas Artes; Casa de Pilatos is fallback only. Saturday V2 close now announces Maestranza then Sevillian painting.
+- Friday accepted worker SHA: `4f7d7f3dace0890274acc5470bf76e5ac6f9d3d3`; 8 primary scenes + 3 optional depth.
+- Saturday accepted worker SHA: `9fa00643e7ac74f324dd2947ba9b09d785e5e842`; 8 primary scenes + 5 optional depth.
+- Sunday accepted worker SHA: `19c70040429d1dffc106f94ffd7dde3654477232`; 9 primary scenes + 4 optional depth.
+- All optional-depth audio remains deferred; primary scene total = 25.
 
-## Integration constraints now carried forward
+### J3 — Audio-first UX
 
-- Future V2 `visit-experience.json` must include the `capabilities.audio_first_field_ui` fragment declared by `AUDIO_FIRST_UX_CAPABILITY.json`.
-- Each V2 episode intended for the field controller must have a matching `experience.episodes` entry; `look_first` is preferred for the concise field cue.
-- Shared `web/next-step.js` capability guard and legacy `firstPendingIndex` semantics must be preserved by any later integration touching that file.
-- J3 deliberately does not own `web/app.js`, audio source assignment, direct playback, resume, MediaSession, offline or lock-screen mechanics; those remain shared runtime responsibilities and require integration-level qualification once V2 content/audio exist.
-- J4 must preserve the accepted J2 text and deterministic `scene_id -> asset -> manifest` mapping; editorial defects return to J2 instead of being silently rewritten during production.
-- Friday, Saturday and Sunday J2 programs share the same runtime/audio mapping contract and require no geofencing.
-- Sunday research uses a dedicated `SUNDAY_SOURCE_MANIFEST.md`; source traceability to that accepted evidence must be preserved and Pilatos must remain fallback-only.
-- Sunday J2 accepted contract includes 9 primary scenes, 4 optional-depth units, 4 intentional silence dispositions and a protected exit where airport timing overrides further cultural content.
-- Successful render/decode artifacts are production evidence, not by themselves proof of app-level offline, resume, MediaSession or lock-screen behavior; those remain J5 integration invariants when the necessary runtime materialization exists.
-- Qualified Friday/Saturday/Sunday MP3s currently live in time-limited GitHub Actions artifacts; release readiness requires durable runtime-consumable publication or an equivalent reproducible materialization before those artifacts expire.
+COMPLETE / INTEGRATED from worker SHA `ae64ce952100d5dacf676de968451723b830b4bb`.
 
-## Coordination rules
+- `AUDIO_FIRST_UX_CAPABILITY.json` accepted.
+- shared `web/next-step.js` remains capability-gated and preserves legacy `firstPendingIndex` behavior.
+- V1 fallback contract is `../seville-discovery/`.
 
-- worker branches do not merge each other;
-- workers return durable Git evidence to the coordinating discussion;
-- coordination revalidates current integration HEAD before every cherry-pick/merge/integration mutation;
-- worker completion requires its handover-defined `/audit` result, not merely a commit;
-- J1 must not mutate UX or V1;
-- J3 must not mutate V1 or production audio/narrative content;
-- J2 starts progressively from bounded J1 outputs after accepted research batches;
-- J4 starts progressively from accepted J2 scene batches;
-- J5 runs `/refresh -> /audit`, remains independent and may not repair defects it detects in the same qualification job;
-- no human audio gate;
-- `V1_CHANGED_FILES = 0` is mandatory;
-- `COMMIT_EXISTS != INTEGRATED` and `WORKER_PASS != RELEASE_PASS`;
-- integration evidence must always name exact worker SHA and integration SHA.
+### J4 — Audio Production
 
-The coordinating discussion owns integration order, conflict arbitration and current project HEAD knowledge. This file is a coordination pointer, not a substitute for Git ref freshness checks or kernel authority.
+COMPLETE / INTEGRATED for all 25 primary scenes.
+
+- Friday final worker SHA `06ce0580fade766f8a4bfe0dd0e8721899b0d3b6`; run `35260567914`; artifact `10514517681`; 8/8 rendered and decoded; French lock PASS.
+- Saturday final worker SHA `8fd82f816430a6fd77d0209a808d90e1af9ee0ad`; run `35265040415`; artifact `10516435782`; 8/8 rendered and decoded; French lock PASS.
+- Sunday final worker SHA `797c7ffde0fc44d7af869e70b9d2e74d6fcd87fb`; run `35271641904`; artifact `10519381359`; 9/9 rendered and decoded; French lock PASS.
+- Audio Engine pin remains `3392d4f22f0a9b054a05b5c05a7856985c0ab030`, version `0.9.2`, voice `narrateur-vif`, language `fr-FR`.
+- Optional-depth audio = 0/12, disposition `DEFERRED_UNTIL_COORDINATION_ACCEPTS`.
+
+### J5 — Independent qualification
+
+Latest independent audit on candidate `ba6e262fd27c570214d167d5df3e60a1e054d95c` returned `HOLD`, `FAIL count = 0`.
+
+All content/audio invariants passed. J5 reduced the remaining release gap to three runtime roots:
+
+1. V2 `series.json` absent;
+2. V2 `assets/visit-experience.json` absent;
+3. no durable executable materialization of the 25 already-qualified primary MP3 bytes.
+
+J5 did not repair anything.
+
+### J6 — V2 Runtime Materialization
+
+PASS / ACCEPTED / INTEGRATED from worker SHA `d5fdc2fc73a105e67d3db2048a458187d4704ea3`, based exactly on coordination baseline `2affe9b8dbdb78d33578d70f9b96cdbd92b76ece` (`ahead_by=4`, `behind_by=0`).
+
+J6 closes all three J5 runtime-root HOLDs materially:
+
+- added `series/seville-discovery-v2/series.json` with exactly 25 accepted primary runtime episodes;
+- added `series/seville-discovery-v2/assets/visit-experience.json` with `audio_first_field_ui` v2 and V1 fallback;
+- promoted the exact J4-qualified bytes into durable Git-backed `series/seville-discovery-v2/assets/audio/<SCENE_ID>/` packages;
+- added `runtime-audio-manifest.json` with `status=QUALIFIED_BYTES_PROMOTED`, `scene_count=25`, `hash_match_count=25`;
+- changed `site/build.py` only to support hash-locked packaged audio publication before any generated-audio fallback;
+- build output proved executable V2 paths under `dist/s/seville-discovery-v2/` and `dist/data/seville-discovery-v2/`;
+- exact MP3 identity = 25/25 against accepted J4 hashes; no Edge TTS rerender occurred;
+- City Guide Factory gate run `35277970065` on final worker SHA = SUCCESS;
+- V1_CHANGED_FILES = 0.
+
+J6 draft PR #222 remains a worker-only draft and MUST NOT be merged to `main`.
+
+## Remaining release blocker after J6
+
+The runtime itself is now materialized. The remaining transverse blocker is the existing global Sound Direction validator, which now sees `seville-discovery-v2` as a real series and its 25 accepted programs as real audio programs.
+
+Pages run `35277970644` failed for two non-J6-product reasons:
+
+1. `tools/sound_direction.py validate` reports:
+   - catalog missing real series `seville-discovery-v2`;
+   - review missing the 25 real program IDs `SEV2-FRI-AM-01..08`, `SEV2-SAT-01..08`, `SEV2-SUN-01..09`.
+2. Because draft PR #222 targets `main` rather than the integration baseline, change-aware Pages classification also treats already-integrated historical audio work as fresh and attempts the wrong generated-audio restore/download path.
+
+The first item is a genuine registry-consistency requirement. The second is validation-context noise and must not trigger a rerender or reclassification of accepted J4 audio.
+
+## Next bounded worker
+
+J7 SOUND DIRECTION REGISTRY RECONCILIATION is the next and only build step before final J5 qualification.
+
+J7 must:
+
+- add `seville-discovery-v2` to `series/sound-direction-catalog.json` without changing the accepted no-ambience / real-city-first direction;
+- register all 25 primary V2 program IDs in `series/sound-direction-review-v1.json` consistently with the already accepted J4 contract (`density=none`, `decision=keep` unless existing durable evidence proves a different registry-only value is required);
+- not touch any MP3, spoken text, J2 scene graph, voice, J3 UX, runtime descriptor, V1, or optional-depth disposition;
+- run the Sound Direction validator and relevant Pages/build gates in a diff context based on `seville-field-guide-v2`, not `main`, so historical integrated audio is not misclassified as new work;
+- return PASS or the smallest remaining blocker; no merge to main.
+
+After J7 is accepted/integrated, rebind J5 to the final coordination candidate and run strict `/refresh -> /audit` only. J5 owns `V2_READY`.
+
+## Immutable / carried-forward constraints
+
+- `V1_CHANGED_FILES = 0` mandatory.
+- V1 defects remain frozen and must not be repaired in `series/seville-discovery/**`.
+- Friday/Saturday/Sunday scene programs remain editorial authority.
+- J4 exact primary MP3 bytes are now durable and must not be rerendered or replaced.
+- Optional-depth audio stays deferred 0/12.
+- Casa de Pilatos stays fallback-only.
+- Sunday airport exit remains protected.
+- No geofencing requirement.
+- `COMMIT_EXISTS != INTEGRATED` and `WORKER_PASS != RELEASE_PASS`.
+- no human audio gate.
+
+The coordinating discussion owns integration order, conflict arbitration and current project HEAD knowledge. This file is a coordination pointer, not a substitute for fresh Git ref or kernel-authority checks.
