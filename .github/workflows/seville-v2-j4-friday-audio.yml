@@ -36,13 +36,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p generated/j4-friday
-          while IFS= read -r program; do
-            program_id="$(python -c 'import json,sys; print(json.load(open(sys.argv[1], encoding="utf-8"))["id"])' "$program")"
-            audio-engine render "$program" --out generated/audio > "generated/j4-friday/${program_id}-render.json"
-            audio-engine timing "$program" --out generated/audio > "generated/j4-friday/${program_id}-timing.json"
-            test -s "generated/audio/${program_id}/audio.mp3"
-            test -s "generated/audio/${program_id}/manifest.json"
-          done < <(python - <<'PY'
+          mapfile -t programs < <(python - <<'PY'
           import json
           from pathlib import Path
           manifest = json.loads(Path("series/seville-discovery-v2/audio/FRIDAY_MORNING_AUDIO_MANIFEST.json").read_text(encoding="utf-8"))
@@ -50,6 +44,14 @@ jobs:
               print(entry["program_path"])
           PY
           )
+          test "${#programs[@]}" -eq 8
+          for program in "${programs[@]}"; do
+            program_id="$(python -c 'import json,sys; print(json.load(open(sys.argv[1], encoding="utf-8"))["id"])' "$program")"
+            audio-engine render "$program" --out generated/audio > "generated/j4-friday/${program_id}-render.json" </dev/null
+            audio-engine timing "$program" --out generated/audio > "generated/j4-friday/${program_id}-timing.json" </dev/null
+            test -s "generated/audio/${program_id}/audio.mp3"
+            test -s "generated/audio/${program_id}/manifest.json"
+          done
       - name: Materialize deterministic hashes and playback evidence
         run: |
           python - <<'PY'
