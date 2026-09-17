@@ -112,7 +112,7 @@
       "scene_type": "TRIP_CONNECT_MATERIAL_REVEAL",
       "short_label": "Plaza de España — Triana change d’échelle",
       "primary_cue": "Après avoir regardé l’ensemble, revenez aux matériaux : brique, céramique et fer transforment ici le fil de Triana en décor monumental.",
-      "spoken_text": "Maintenant que vous avez vu l’ensemble, rapprochez-vous des matériaux. Hier, à Triana, la céramique appartenait à un quartier de production, de façades et de métiers. Ici, elle change d’échelle. Aníbal González associe brique apparente, céramiques polychromes et ferronnerie pour construire l’image monumentale de l’Exposition de 1929. Ce n’est donc pas seulement un décor « traditionnel » : des savoir-faire sévillans, notamment ceux de Triana, sont mobilisés pour fabriquer une représentation moderne et officielle de la ville. Gardez ce lien entre les deux jours. Vendredi, la matière était vécue au ras des rues; samedi, elle devient mise en scène monumentale.",
+      "spoken_text": "Maintenant que vous avez vu l’ensemble, rapprochez-vous des matériaux. Hier, à Triana, la céramique appartenait à un quartier de production, de façades et de métiers. Ici, elle change d’échelle. Aníbal González associe brique apparente, céramiques polychromes et ferronnerie pour construire l’image monumentale de l’Exposition de 1929. Ce n’est donc pas seulement un décor « traditionnel » : des savoir-faire sévillans, notamment ceux de Triana, sont mobilisés pour fabriquer une représentation moderne de la ville à grande échelle. Gardez ce lien entre les deux jours. Vendredi, la matière était vécue au ras des rues; samedi, elle devient mise en scène monumentale.",
       "expected_duration_class": "MEDIUM_45_90",
       "observable_cue": "Brique apparente, céramiques, ferronnerie, bancs et balustrades; aucun motif précis requis.",
       "fallback_behavior": {
@@ -141,7 +141,7 @@
       "scene_type": "LOOK_SEARCH_REVEAL",
       "short_label": "Les bancs — cherchez Séville",
       "primary_cue": "Lisez quelques noms de provinces puis cherchez « Sevilla ». L’échec fait partie de la scène.",
-      "spoken_text": "Regardez la suite des bancs de céramique et lisez deux ou trois noms. Maintenant, cherchez « Sevilla ». Prenez quelques instants. Vous pouvez arrêter : dans cette série, vous ne trouverez pas de banc provincial dédié à Séville. Les sources touristiques locales décrivent quarante-huit bancs provinciaux et expliquent cette absence par le fait que Séville est représentée ailleurs dans la place. Ce petit manque est plus intéressant qu’une liste complète : le dispositif prétend rassembler le territoire, mais il le fait selon les catégories et les choix de son époque. Gardez encore un moment pour regarder les images des bancs qui sont devant vous, pas pour les collectionner tous.",
+      "spoken_text": "Regardez la suite des bancs de céramique et lisez deux ou trois noms. Maintenant, cherchez « Sevilla ». Prenez quelques instants. Vous pouvez arrêter : dans cette série, vous ne trouverez pas de banc provincial dédié à Séville. Les sources touristiques locales décrivent quarante-huit bancs provinciaux et expliquent cette absence par le fait que Séville est représentée ailleurs dans la place. Ce petit manque est plus intéressant qu’une liste complète : le dispositif organise une représentation du territoire selon les catégories et les choix de son époque. Gardez encore un moment pour regarder les images des bancs qui sont devant vous, pas pour les collectionner tous.",
       "expected_duration_class": "MEDIUM_45_90",
       "observable_cue": "Suite de bancs/alcôves en céramique avec noms provinciaux.",
       "silence": {
@@ -291,8 +291,8 @@
         "S26"
       ],
       "short_label": "Aníbal González — si près de 1929, et pourtant absent de sa saison",
-      "spoken_text": "Une histoire humaine derrière la place. Aníbal González a conçu la Plaza de España, mais il avait quitté la direction de l’Exposition en 1926. L’Exposition ibéro-américaine ouvre le 9 mai 1929; il meurt le 31 mai, quelques semaines plus tard. N’en tirez aucune causalité médicale : la chronologie suffit. L’homme a vu s’ouvrir l’événement auquel son œuvre donne une grande partie de son visage, sans vivre sa saison entière.",
-      "expected_duration_class": "MEDIUM_45_90"
+      "spoken_text": "Une histoire humaine derrière la place. Aníbal González a conçu la Plaza de España, mais il avait quitté la direction de l’Exposition en 1926. L’Exposition ibéro-américaine ouvre le 9 mai 1929; il meurt le 31 mai, quelques semaines plus tard. La proximité des dates est frappante. Il a vu s’ouvrir l’événement auquel son œuvre donne une grande partie de son visage, sans vivre sa saison entière.",
+      "expected_duration_class": "SHORT_20_45"
     },
     {
       "scene_id": "SEV2-SAT-D02",
