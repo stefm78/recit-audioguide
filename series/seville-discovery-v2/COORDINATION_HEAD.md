@@ -28,7 +28,7 @@ For read-only status checks, `/refresh` may be sufficient. Do not run primitives
 ## Integrated evidence
 
 - J1 FIELD STORY RESEARCH — Friday batch ACCEPTED and integrated from worker SHA `0d131065708cedc6853dc1c844cd0cfd50473441`; artifacts: `research/FRIDAY_MORNING_FIELD_STORY_RESEARCH.md` and initial `research/SOURCE_MANIFEST.md`.
-- J1 FIELD STORY RESEARCH — Saturday batch ACCEPTED from worker SHA `ab368ca8225e4e87fd29976637608a10adcf5812`; integration merge is recorded in the current branch history and the accepted artifacts are `research/SATURDAY_FIELD_STORY_RESEARCH.md` plus enriched `research/SOURCE_MANIFEST.md`.
+- J1 FIELD STORY RESEARCH — Saturday batch ACCEPTED from worker SHA `ab368ca8225e4e87fd29976637608a10adcf5812` and integrated through merge commit `670994dc6d4735255aa7d5db34ba518db35d94ca`; artifacts: `research/SATURDAY_FIELD_STORY_RESEARCH.md` and enriched `research/SOURCE_MANIFEST.md`.
 - J3 AUDIO-FIRST UX — PASS on worker scope and integrated from worker SHA `ae64ce952100d5dacf676de968451723b830b4bb` through merge/integration commit `6e3c9e034a4c922b0dc97accb733e1355e5a72f4`.
 - J3 integrated blobs are exact worker-final identities: `AUDIO_FIRST_UX_CAPABILITY.json` = `85f2dd0a4ba49a9c7e4d0512c331bed151a46c21`; `tests/test_seville_v2_audio_first_ux.py` = `1762a12e227c3db52b1cc4cb0ffbb76237379def`; `web/next-step.js` = `82b330a9a88c56d71c4d7f3f26ad506f7dd1c565`.
 
