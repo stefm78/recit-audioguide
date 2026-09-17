@@ -1,0 +1,56 @@
+{
+  "schema": "recit.audio-first-ux-capability.v1",
+  "status": "CANDIDATE",
+  "scope": "series/seville-discovery-v2",
+  "runtime": {
+    "consumer": "web/next-step.js",
+    "visit_experience_capability": "audio_first_field_ui",
+    "activation": {
+      "enabled": true,
+      "version": 2,
+      "classic_fallback_url": "../seville-discovery/"
+    },
+    "fail_safe": "If enabled/version/fallback is missing or invalid, shared runtime keeps the legacy visit UI."
+  },
+  "field_surface": {
+    "primary": [
+      "step_index",
+      "short_place_or_action_label",
+      "single_concise_cue",
+      "play_pause",
+      "route",
+      "arrival",
+      "continue"
+    ],
+    "secondary": [
+      "cannot_find",
+      "depth",
+      "transcript",
+      "sources",
+      "all_steps",
+      "classic_v1"
+    ],
+    "cue_max_chars": 180,
+    "label_max_chars": 100
+  },
+  "integration": {
+    "required_visit_experience_fragment": {
+      "capabilities": {
+        "audio_first_field_ui": {
+          "enabled": true,
+          "version": 2,
+          "classic_fallback_url": "../seville-discovery/"
+        }
+      }
+    },
+    "content_dependency": "Each runtime episode should have a matching visit-experience episode entry; look_first is preferred for the single field cue.",
+    "fallback_target": "Published V1 sibling /s/seville-discovery/."
+  },
+  "invariants": [
+    "V1_CHANGED_FILES=0",
+    "shared app.js player/resume/media-session semantics remain authoritative",
+    "non-V2 series do not activate audio-first mode without the explicit capability",
+    "deep prose and source material remain secondary",
+    "classic V1 remains reachable from the V2 overflow"
+  ]
+}
