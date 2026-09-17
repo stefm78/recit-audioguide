@@ -40,17 +40,50 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  actions: read
 
 jobs:
   qualify:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - name: J6 materialize exact qualified audio bytes
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.ref == 'seville-v2-j6-runtime-materialization'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+        run: |
+          set -euo pipefail
+          root='series/seville-discovery-v2/assets/audio'
+          count="$(find "$root" -name audio.mp3 -type f 2>/dev/null | wc -l | tr -d ' ')"
+          if [[ "$count" != "25" ]]; then
+            rm -rf /tmp/j4-audio
+            mkdir -p /tmp/j4-audio/friday /tmp/j4-audio/saturday /tmp/j4-audio/sunday "$root"
+            gh run download 35260567914 -n seville-v2-j4-friday-audio -D /tmp/j4-audio/friday
+            gh run download 35265040415 -n seville-v2-j4-saturday-audio -D /tmp/j4-audio/saturday
+            gh run download 35271641904 -n seville-v2-j4-sunday-audio -D /tmp/j4-audio/sunday
+            cp -a /tmp/j4-audio/friday/audio/. "$root/"
+            cp -a /tmp/j4-audio/saturday/audio/. "$root/"
+            cp -a /tmp/j4-audio/sunday/audio/. "$root/"
+          fi
+          python tools/materialize_seville_v2_runtime.py
+          python -m unittest tests.test_seville_v2_runtime_materialization -v
+          if ! git diff --quiet || [[ -n "$(git ls-files --others --exclude-standard)" ]]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add series/seville-discovery-v2/series.json series/seville-discovery-v2/assets/visit-experience.json series/seville-discovery-v2/runtime-audio-manifest.json series/seville-discovery-v2/assets/audio site/build.py
+            git commit -m 'Materialize Seville V2 runtime with qualified J4 audio'
+            git push origin "HEAD:${HEAD_REF}"
+          fi
       - name: Validate all City Guide proposals
         shell: bash
         run: |
@@ -76,3 +109,7 @@ jobs:
           test -f dist/assets/next-step.js
           test -f dist/s/bordeaux-discovery/index.html
           test -f dist/s/seville-discovery/index.html
+          test -f dist/s/seville-discovery-v2/index.html
+          test -f dist/data/seville-discovery-v2/series.json
+          test -f dist/data/seville-discovery-v2/assets/visit-experience.json
+          test "$(find dist/data/seville-discovery-v2/assets/audio -name audio.mp3 -type f | wc -l | tr -d ' ')" = 25
