@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-SAT-03",
+  "title": "Plaza de España — Triana change d’échelle",
+  "language": "fr-FR",
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S22",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S24"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Maintenant que vous avez vu l’ensemble, rapprochez-vous des matériaux. Hier, à Triana, la céramique appartenait à un quartier de production, de façades et de métiers. Ici, elle change d’échelle. Aníbal González associe brique apparente, céramiques polychromes et ferronnerie pour construire l’image monumentale de l’Exposition de 1929. Ce n’est donc pas seulement un décor « traditionnel » : des savoir-faire sévillans, notamment ceux de Triana, sont mobilisés pour fabriquer une représentation moderne de la ville à grande échelle. Gardez ce lien entre les deux jours. Vendredi, la matière était vécue au ras des rues; samedi, elle devient mise en scène monumentale.",
+      "sequence": 1,
+      "resolved_preset": "narrateur-vif",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+8%",
+      "pitch": "+14Hz",
+      "volume": "+5%",
+      "casting_alternatives": [],
+      "resolved_placement": "center",
+      "resolved_pan": 0.0,
+      "resolved_acoustic_space": "dry",
+      "resolved_pause_after_ms": 350.0
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-SAT-07",
+  "title": "La Lonja — sortir le commerce du sacré",
+  "language": "fr-FR",
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S32"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "À Plaza del Triunfo, essayez de tenir ensemble la Cathédrale et le bâtiment beaucoup plus sobre de l’Archivo. Leur voisinage raconte une histoire très concrète. À l’époque où Séville concentre le commerce américain, les marchands ont besoin d’un lieu pour négocier et régler leurs affaires. L’usage commercial d’espaces liés à la Cathédrale provoque des conflits avec le chapitre. La réponse est une Lonja dédiée, dont la construction commence à la fin du seizième siècle. Le bâtiment que vous avez devant vous n’est donc pas né comme archive : il est d’abord une infrastructure pour séparer et organiser le commerce. Plus tard seulement, il deviendra la grande maison des papiers de l’empire.",
+      "sequence": 1,
+      "resolved_preset": "narrateur-vif",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+8%",
+      "pitch": "+14Hz",
+      "volume": "+5%",
+      "casting_alternatives": [],
+      "resolved_placement": "center",
+      "resolved_pan": 0.0,
+      "resolved_acoustic_space": "dry",
+      "resolved_pause_after_ms": 350.0
+    }
+  ]
+}

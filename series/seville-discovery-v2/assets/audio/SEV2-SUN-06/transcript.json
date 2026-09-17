@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-SUN-06",
+  "title": "Avant les tableaux — lire l’ancien couvent",
+  "language": "fr-FR",
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S44"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Le bâtiment est déjà une pièce du musée. Vous êtes dans l’ancien couvent de la Merced Calzada, organisé autour de trois patios. Le grand escalier articule ces espaces et l’ancienne église est devenue l’une des salles fortes du parcours. Avant les cartels, laissez cette architecture vous guider. Les peintures religieuses ne sont pas posées dans une boîte neutre : elles vivent désormais dans un lieu qui porte encore une histoire de cloître, de culte puis de musée.",
+      "sequence": 1,
+      "resolved_preset": "narrateur-vif",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+8%",
+      "pitch": "+14Hz",
+      "volume": "+5%",
+      "casting_alternatives": [],
+      "resolved_placement": "center",
+      "resolved_pan": 0.0,
+      "resolved_acoustic_space": "dry",
+      "resolved_pause_after_ms": 350.0
+    }
+  ]
+}

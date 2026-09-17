@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-FRI-AM-02",
+  "title": "Le fleuve — et la dársena",
+  "language": "fr-FR",
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S09",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S10"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Quand l’eau s’ouvre devant vous, accordez-lui quelques secondes avant l’explication. Regardez les deux rives, les quais fixes, les ponts. Ce que vous appelez spontanément le Guadalquivir est ici aussi une dársena portuaire : un tronçon urbain profondément réorganisé par les travaux du vingtième siècle, pour le port et la maîtrise des crues. Le fleuve de Séville n’est donc pas seulement un décor naturel; c’est aussi une infrastructure construite. En gagnant le pont, gardez ce double regard : de l’eau, oui, mais une eau mise en forme par la ville.",
+      "sequence": 1,
+      "resolved_preset": "narrateur-vif",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+8%",
+      "pitch": "+14Hz",
+      "volume": "+5%",
+      "casting_alternatives": [],
+      "resolved_placement": "center",
+      "resolved_pan": 0.0,
+      "resolved_acoustic_space": "dry",
+      "resolved_pause_after_ms": 350.0
+    }
+  ]
+}

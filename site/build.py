@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, os, shutil, sys
+import hashlib, json, os, shutil, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -94,6 +94,30 @@ def generated_asset(directory: Path, *names):
     return None
 
 
+
+def publish_packaged_audio(item, slug):
+    if item.get('audio_policy') != 'packaged_sha256':
+        return False
+    item_id = item.get('id')
+    expected = item.get('audio_sha256')
+    if not item_id or not expected:
+        raise RuntimeError(f'{slug}/{item_id}: packaged_sha256 requires id and audio_sha256')
+    source = SERIES / slug / 'assets' / 'audio' / item_id
+    audio = source / 'audio.mp3'
+    if not audio.is_file():
+        raise RuntimeError(f'{slug}/{item_id}: packaged audio missing: {audio}')
+    actual = hashlib.sha256(audio.read_bytes()).hexdigest()
+    if actual != expected:
+        raise RuntimeError(f'{slug}/{item_id}: packaged audio sha256 mismatch: {actual} != {expected}')
+    item['audio_url'] = f'../../data/{slug}/assets/audio/{item_id}/audio.mp3'
+    transcript = source / 'transcript.json'
+    if transcript.is_file():
+        item['transcript_url'] = f'../../data/{slug}/assets/audio/{item_id}/transcript.json'
+    manifest = source / 'manifest.json'
+    if manifest.is_file():
+        item['audio_manifest_url'] = f'../../data/{slug}/assets/audio/{item_id}/manifest.json'
+    return True
+
 def publish_generated_audio(item, failed_ids):
     item_id=item.get('id')
     if not item_id or item_id in failed_ids:
@@ -118,7 +142,8 @@ def classify_episode(episode, series_type, slug, failed_ids):
     issues=[]
     episode_id=episode.get('id')
     render_failed=episode_id in failed_ids
-    generated=publish_generated_audio(episode, failed_ids)
+    packaged=publish_packaged_audio(episode, slug)
+    generated=False if packaged else publish_generated_audio(episode, failed_ids)
     if render_failed:
         if episode.get('audio_url'): issues.append('nouveau rendu audio échoué; repli existant conservé')
         else: issues.append('rendu audio échoué')
@@ -138,7 +163,7 @@ def classify_episode(episode, series_type, slug, failed_ids):
         episode['issues']=issues
         WARN.extend(f'{slug}/{episode_id}: {issue}' for issue in issues)
     else: episode.pop('issues',None)
-    episode['audio_source']='generated' if generated else ('fallback' if episode.get('audio_url') else 'none')
+    episode['audio_source']='packaged' if packaged else ('generated' if generated else ('fallback' if episode.get('audio_url') else 'none'))
     return state
 
 

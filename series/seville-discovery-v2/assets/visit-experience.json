@@ -1,0 +1,453 @@
+{
+  "schema": "recit.visit-experience.v2",
+  "status": "CANDIDATE",
+  "series": "seville-discovery-v2",
+  "principle": "voir → écouter → comprendre → silence/mouvement → reprendre",
+  "navigation_authority": "external_real_conditions",
+  "capabilities": {
+    "audio_first_field_ui": {
+      "enabled": true,
+      "version": 2,
+      "classic_fallback_url": "../seville-discovery/"
+    }
+  },
+  "runtime_materialization": {
+    "primary_scene_count": 25,
+    "qualified_primary_audio_count": 25,
+    "optional_depth_declared": 12,
+    "optional_depth_audio_produced": 0,
+    "optional_depth_disposition": "DEFERRED",
+    "sunday_primary_sequence": [
+      "MAESTRANZA",
+      "CHECKOUT_LOCKERS_SILENCE",
+      "BELLAS_ARTES",
+      "PROTECTED_AIRPORT_DEPARTURE"
+    ],
+    "casa_de_pilatos": "FALLBACK_ONLY"
+  },
+  "episodes": {
+    "SEV2-FRI-AM-01": {
+      "why": "Plaza de Armas — un bord de ville recousu",
+      "look_first": "Si l’ancienne gare est naturellement visible, regardez sa grande masse de brique; sinon continuez simplement vers le fleuve.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Si l’ancienne gare est naturellement visible, regardez sa grande masse de brique; sinon continuez simplement vers le fleuve."
+        }
+      ],
+      "cannot_find": "Ne cherchez pas la gare et ne revenez pas en arrière. Continuez vers le fleuve; l’histoire reste compréhensible comme contexte de marche.",
+      "source_refs": [
+        "S14",
+        "S15"
+      ],
+      "optional_depth_links": [
+        "SEV2-FRI-AM-D01"
+      ]
+    },
+    "SEV2-FRI-AM-02": {
+      "why": "Le fleuve — et la dársena",
+      "look_first": "Regardez d’abord les deux rives, les quais fixes et les ponts avant d’écouter ce que la ville a fait à son fleuve.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez d’abord les deux rives, les quais fixes et les ponts avant d’écouter ce que la ville a fait à son fleuve."
+        }
+      ],
+      "cannot_find": "Si la vue est ponctuellement masquée, continuez jusqu’au pont et écoutez la scène en marchant sans vous arrêter.",
+      "source_refs": [
+        "S09",
+        "S10"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-FRI-AM-03": {
+      "why": "Puente de Isabel II — le piège du fer",
+      "look_first": "Regardez les grands arcs de fer : ils semblent porter le tablier. La restauration des années 1970 a changé ce rôle.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez les grands arcs de fer : ils semblent porter le tablier. La restauration des années 1970 a changé ce rôle."
+        },
+        {
+          "type": "USER_PAUSE",
+          "text": "Mettez l’audio en pause quelques instants. Regardez le fleuve et les deux rives; reprenez quand vous avez envie de continuer."
+        }
+      ],
+      "cannot_find": "En cas de travaux ou de vue gênée, ne cherchez pas un angle parfait. Continuez vers Altozano et gardez seulement l’idée que le fer historique n’assure plus son ancien rôle porteur.",
+      "source_refs": [
+        "S01"
+      ],
+      "optional_depth_links": [
+        "SEV2-FRI-AM-D02"
+      ]
+    },
+    "SEV2-FRI-AM-04": {
+      "why": "Capillita del Carmen — changement d’échelle",
+      "look_first": "Si la petite chapelle de brique et de céramique est évidente à la sortie du pont, regardez-la. Sinon, poursuivez vers le marché.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Si la petite chapelle de brique et de céramique est évidente à la sortie du pont, regardez-la. Sinon, poursuivez vers le marché."
+        }
+      ],
+      "cannot_find": "Si la chapelle est masquée ou ne saute pas aux yeux, ne la cherchez pas. Passez directement vers le marché.",
+      "source_refs": [
+        "S02"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-FRI-AM-05": {
+      "why": "Mercado de Triana — deux couches sous vos pas",
+      "look_first": "Regardez d’abord le marché tel qu’il vit maintenant : portes, arrivées, étals s’ils sont ouverts. Ne cherchez aucun accès souterrain.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez d’abord le marché tel qu’il vit maintenant : portes, arrivées, étals s’ils sont ouverts. Ne cherchez aucun accès souterrain."
+        }
+      ],
+      "cannot_find": "Si les étals ne sont pas encore ouverts ou si l’intérieur est peu actif, restez à l’extérieur. La scène est complète depuis le niveau rue.",
+      "source_refs": [
+        "S03",
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-FRI-AM-06": {
+      "why": "Triana — lire la céramique sans faire la chasse",
+      "look_first": "Si une plaque, des azulejos ou une façade céramique se présentent d’eux-mêmes, prenez-les comme échantillon. Sinon, continuez.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Si une plaque, des azulejos ou une façade céramique se présentent d’eux-mêmes, prenez-les comme échantillon. Sinon, continuez."
+        }
+      ],
+      "cannot_find": "Sautez la scène sans chercher, sans demi-tour et sans détour vers le Centro Cerámica.",
+      "source_refs": [
+        "S07",
+        "S08"
+      ],
+      "optional_depth_links": [
+        "SEV2-FRI-AM-D03"
+      ]
+    },
+    "SEV2-FRI-AM-07": {
+      "why": "Arenal — reconstruire la rive de travail",
+      "look_first": "Regardez l’espace large entre ville et eau avant de regarder les monuments : l’ancien rivage de travail a presque disparu.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez l’espace large entre ville et eau avant de regarder les monuments : l’ancien rivage de travail a presque disparu."
+        }
+      ],
+      "cannot_find": "Si une portion du quai est masquée par des travaux, continuez en marchant; la scène repose sur le contraste d’ensemble, pas sur un point précis.",
+      "source_refs": [
+        "S09",
+        "S11"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-FRI-AM-08": {
+      "why": "Maestranza — le cercle qui n’en est pas un",
+      "look_first": "Regardez seulement la forme extérieure : l’arène paraît ronde dans la mémoire, mais son enceinte s’est construite irrégulièrement.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez seulement la forme extérieure : l’arène paraît ronde dans la mémoire, mais son enceinte s’est construite irrégulièrement."
+        }
+      ],
+      "cannot_find": "Si l’angle est mauvais ou l’extérieur partiellement masqué, ne cherchez pas à compter ou contourner le bâtiment. Gardez seulement l’idée de l’irrégularité et continuez vers le NH.",
+      "source_refs": [
+        "S12",
+        "S13"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-SAT-01": {
+      "why": "Santa María la Blanca — avant l’image de Santa Cruz",
+      "look_first": "Regardez seulement l’église et la rue : l’histoire du quartier commence ici avant les ruelles de carte postale.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez seulement l’église et la rue : l’histoire du quartier commence ici avant les ruelles de carte postale."
+        }
+      ],
+      "cannot_find": "Ne cherchez pas une façade ou une porte précise. Continuez vers les jardins; la scène fonctionne comme histoire de marche sur le secteur.",
+      "source_refs": [
+        "S19"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-SAT-02": {
+      "why": "Jardines de Murillo — un passage ouvert au XXe siècle",
+      "look_first": "Regardez le mur de l’Alcázar, les chemins et l’ouverture vers la ville : ce passage public n’est pas un jardin resté intact depuis toujours.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez le mur de l’Alcázar, les chemins et l’ouverture vers la ville : ce passage public n’est pas un jardin resté intact depuis toujours."
+        }
+      ],
+      "cannot_find": "Si un accès est fermé ou retardé, n’attendez pas. Suivez la navigation réelle et écoutez la scène depuis le premier point de vue naturel sur les jardins ou leur lisière.",
+      "source_refs": [
+        "S20",
+        "S28"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-SAT-03": {
+      "why": "Plaza de España — Triana change d’échelle",
+      "look_first": "Après avoir regardé l’ensemble, revenez aux matériaux : brique, céramique et fer transforment ici le fil de Triana en décor monumental.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Après avoir regardé l’ensemble, revenez aux matériaux : brique, céramique et fer transforment ici le fil de Triana en décor monumental."
+        }
+      ],
+      "cannot_find": "Ne cherchez aucun azulejo particulier. N’importe quelle combinaison clairement visible de brique, céramique et fer suffit.",
+      "source_refs": [
+        "S22",
+        "S24"
+      ],
+      "optional_depth_links": [
+        "SEV2-SAT-D01"
+      ]
+    },
+    "SEV2-SAT-04": {
+      "why": "Les bancs — cherchez Séville",
+      "look_first": "Lisez quelques noms de provinces puis cherchez « Sevilla ». L’échec fait partie de la scène.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Lisez quelques noms de provinces puis cherchez « Sevilla ». L’échec fait partie de la scène."
+        },
+        {
+          "type": "USER_PAUSE",
+          "text": "Mettez l’audio en pause si vous voulez regarder un ou deux bancs de plus. Reprenez quand vous êtes prêt à quitter la place."
+        }
+      ],
+      "cannot_find": "Si la foule ou l’accès rend la lecture des noms difficile, ne faites pas le tour de la place. Le reveal reste valable sans vérifier chaque banc.",
+      "source_refs": [
+        "S22",
+        "S23"
+      ],
+      "optional_depth_links": [
+        "SEV2-SAT-D02"
+      ]
+    },
+    "SEV2-SAT-05": {
+      "why": "Doña Elvira — l’ancien fabriqué",
+      "look_first": "Laissez d’abord la place paraître ancienne : arbres, fontaine, façades et petites entrées. Puis écoutez comment cette impression a été construite.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Laissez d’abord la place paraître ancienne : arbres, fontaine, façades et petites entrées. Puis écoutez comment cette impression a été construite."
+        }
+      ],
+      "cannot_find": "Si la place est très encombrée, restez sur son bord. La scène dépend de l’échelle générale et non d’un détail précis.",
+      "source_refs": [
+        "S28",
+        "S29"
+      ],
+      "optional_depth_links": [
+        "SEV2-SAT-D03",
+        "SEV2-SAT-D04"
+      ]
+    },
+    "SEV2-SAT-06": {
+      "why": "Patio de Banderas — l’espace s’ouvre",
+      "look_first": "Après les petites rues, regardez seulement l’ouverture du Patio et sa proximité immédiate avec l’Alcázar.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Après les petites rues, regardez seulement l’ouverture du Patio et sa proximité immédiate avec l’Alcázar."
+        }
+      ],
+      "cannot_find": "Aucun objet précis n’est à trouver. Si le Patio est encombré, continuez vers Plaza del Triunfo en gardant seulement l’idée de l’ancien espace militaire.",
+      "source_refs": [
+        "S31"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-SAT-07": {
+      "why": "La Lonja — sortir le commerce du sacré",
+      "look_first": "Regardez la proximité entre Cathédrale et Archivo : leur voisinage explique une partie de l’histoire du bâtiment.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez la proximité entre Cathédrale et Archivo : leur voisinage explique une partie de l’histoire du bâtiment."
+        }
+      ],
+      "cannot_find": "Si des stands, une file ou la foule masquent une partie de la perspective, ne cherchez pas un axe parfait. Repérez simplement les deux grands volumes et continuez.",
+      "source_refs": [
+        "S32"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-SAT-08": {
+      "why": "Archivo — vingt-quatre charrettes de papier",
+      "look_first": "Regardez la masse du bâtiment et imaginez les archives comme un poids physique à déplacer, pas comme une base de données abstraite.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez la masse du bâtiment et imaginez les archives comme un poids physique à déplacer, pas comme une base de données abstraite."
+        }
+      ],
+      "cannot_find": "Si l’entrée est temporairement limitée ou la file longue, n’attendez pas pour comprendre la scène : écoutez-la dehors et laissez la navigation/logistique réelle décider de la suite.",
+      "source_refs": [
+        "S33"
+      ],
+      "optional_depth_links": [
+        "SEV2-SAT-D05"
+      ]
+    },
+    "SEV2-SUN-01": {
+      "why": "Maestranza — le centre a réellement bougé",
+      "look_first": "Regardez la forme du ruedo sans chercher un cercle parfait : au XVIIIe siècle, son centre et son rayon ont été modifiés.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez la forme du ruedo sans chercher un cercle parfait : au XVIIIe siècle, son centre et son rayon ont été modifiés."
+        }
+      ],
+      "cannot_find": "Si la visite ne donne qu’un angle partiel, gardez l’idée du centre déplacé et du rayon réduit sans chercher une position idéale.",
+      "source_refs": [
+        "S39"
+      ],
+      "optional_depth_links": [
+        "SEV2-SUN-D01"
+      ]
+    },
+    "SEV2-SUN-02": {
+      "why": "Aníbal González — retour, autre rôle",
+      "look_first": "Si la liaison avec le siège est perceptible, comparez ce geste à Plaza de España : même architecte, mais ici dans un complexe beaucoup plus ancien.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Si la liaison avec le siège est perceptible, comparez ce geste à Plaza de España : même architecte, mais ici dans un complexe beaucoup plus ancien."
+        }
+      ],
+      "cannot_find": "Ne cherchez ni passage ni loge précise. Écoutez la scène en avançant et gardez seulement le contraste avec Plaza de España.",
+      "source_refs": [
+        "S41"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-SUN-03": {
+      "why": "Puerta del Príncipe — un morceau d’un autre Séville",
+      "look_first": "Si la grille est visible, regardez-la comme un objet déplacé : elle vient d’une chapelle d’un couvent aujourd’hui disparu.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Si la grille est visible, regardez-la comme un objet déplacé : elle vient d’une chapelle d’un couvent aujourd’hui disparu."
+        }
+      ],
+      "cannot_find": "Si la porte ou la grille n’est pas visible, sautez ce regard sans détour; la scène est conditionnelle et ne doit pas ralentir la visite.",
+      "source_refs": [
+        "S42"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-SUN-04": {
+      "why": "Checkout et bagages — priorité au réel",
+      "look_first": "Retournez au logement, faites le checkout puis déposez les bagages à C. Agua 5. Ici, le guide se tait volontairement.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Retournez au logement, faites le checkout puis déposez les bagages à C. Agua 5. Ici, le guide se tait volontairement."
+        }
+      ],
+      "cannot_find": "Ne transformez pas ce segment en recherche patrimoniale. Suivez l’itinéraire/logistique déjà accepté; toute anomalie opérationnelle relève du plan de voyage, pas d’une nouvelle scène.",
+      "source_refs": [
+        "I09",
+        "S51"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-SUN-05": {
+      "why": "Le musée — une collection née d’une confiscation",
+      "look_first": "Avant les noms célèbres, regardez le bâtiment et pensez à l’origine de la collection : des œuvres retirées à des institutions religieuses au XIXe siècle.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Avant les noms célèbres, regardez le bâtiment et pensez à l’origine de la collection : des œuvres retirées à des institutions religieuses au XIXe siècle."
+        }
+      ],
+      "cannot_find": "Aucune œuvre précise n’est à trouver. Gardez l’idée institutionnelle et continuez vers les patios et la circulation du bâtiment.",
+      "source_refs": [
+        "S45"
+      ],
+      "optional_depth_links": [
+        "SEV2-SUN-D03",
+        "SEV2-SUN-D04"
+      ]
+    },
+    "SEV2-SUN-06": {
+      "why": "Avant les tableaux — lire l’ancien couvent",
+      "look_first": "Regardez d’abord les patios, les circulations et l’escalier : le musée conserve aussi la logique de l’ancien couvent de la Merced.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez d’abord les patios, les circulations et l’escalier : le musée conserve aussi la logique de l’ancien couvent de la Merced."
+        }
+      ],
+      "cannot_find": "Si le parcours dévie temporairement, ne cherchez pas les trois patios à tout prix. Reprenez cette idée dès que l’architecture conventuelle devient lisible.",
+      "source_refs": [
+        "S44"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-SUN-07": {
+      "why": "Murillo — un ensemble déplacé, recomposé",
+      "look_first": "Regardez l’ensemble plutôt qu’un seul tableau : ces œuvres des Capucins sont aujourd’hui recomposées dans l’église d’un autre ancien couvent.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Regardez l’ensemble plutôt qu’un seul tableau : ces œuvres des Capucins sont aujourd’hui recomposées dans l’église d’un autre ancien couvent."
+        },
+        {
+          "type": "USER_PAUSE",
+          "text": "Mettez l’audio en pause devant une œuvre de votre choix. Reprenez seulement quand vous avez réellement fini de regarder."
+        }
+      ],
+      "cannot_find": "Si l’installation a changé, ne cherchez pas un tableau annoncé. Regardez l’ensemble baroque réellement visible et conservez l’idée du déplacement entre contextes conventuels.",
+      "source_refs": [
+        "S46"
+      ],
+      "optional_depth_links": []
+    },
+    "SEV2-SUN-08": {
+      "why": "Las Cigarreras — finir avec des femmes au travail",
+      "look_first": "Si Las Cigarreras est exposé, regardez d’abord les ouvrières et l’espace de la manufacture avant de penser au prestige du tableau.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Si Las Cigarreras est exposé, regardez d’abord les ouvrières et l’espace de la manufacture avant de penser au prestige du tableau."
+        }
+      ],
+      "cannot_find": "Si l’œuvre n’est pas visible, ne la cherchez pas et ne demandez pas de détour. Passez à la scène de clôture; les profondeurs restent optionnelles.",
+      "source_refs": [
+        "S47"
+      ],
+      "optional_depth_links": [
+        "SEV2-SUN-D02"
+      ]
+    },
+    "SEV2-SUN-09": {
+      "why": "Fin du récit — protéger le départ",
+      "look_first": "Le récit principal s’arrête ici. Gardez la suite légère : récupérez les bagages et protégez le départ aéroport plutôt que d’ajouter une dernière visite.",
+      "cues": [
+        {
+          "type": "LOOK",
+          "text": "Le récit principal s’arrête ici. Gardez la suite légère : récupérez les bagages et protégez le départ aéroport plutôt que d’ajouter une dernière visite."
+        }
+      ],
+      "cannot_find": "Aucun contenu de remplacement n’est requis. Si le temps se resserre, écourtez immédiatement le temps libre et suivez le départ protégé.",
+      "source_refs": [
+        "I10",
+        "S52"
+      ],
+      "optional_depth_links": []
+    }
+  }
+}

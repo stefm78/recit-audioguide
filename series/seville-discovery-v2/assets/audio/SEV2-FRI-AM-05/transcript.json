@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-FRI-AM-05",
+  "title": "Mercado de Triana — deux couches sous vos pas",
+  "language": "fr-FR",
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S03",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S04",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S05",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S06"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Devant le Mercado de Triana, commencez par regarder ce qui est réellement vivant maintenant : les portes, les arrivées, les étals si certains sont déjà ouverts. Ne cherchez pas un accès souterrain. Le contraste est sous vos pieds. Le marché occupe l’emplacement du Castillo de San Jorge, longtemps associé au Tribunal de l’Inquisition. Les réaménagements du marché ont remis au jour des vestiges, mais le site archéologique dédié est actuellement fermé. C’est justement ce qui rend la scène lisible sans visite : au-dessus, un lieu quotidien de nourriture et de voisinage; dessous, une couche d’histoire institutionnelle beaucoup plus dure. N’essayez pas d’en faire un musée mental. Regardez d’abord le marché comme marché. Puis gardez simplement cette seconde couche en tête.",
+      "sequence": 1,
+      "resolved_preset": "narrateur-vif",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+8%",
+      "pitch": "+14Hz",
+      "volume": "+5%",
+      "casting_alternatives": [],
+      "resolved_placement": "center",
+      "resolved_pan": 0.0,
+      "resolved_acoustic_space": "dry",
+      "resolved_pause_after_ms": 350.0
+    }
+  ]
+}

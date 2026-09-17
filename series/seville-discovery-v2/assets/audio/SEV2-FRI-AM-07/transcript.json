@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-FRI-AM-07",
+  "title": "Arenal — reconstruire la rive de travail",
+  "language": "fr-FR",
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S09",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S11"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Quand vous êtes revenu sur la rive est et que l’espace du quai s’élargit, regardez d’abord la relation entre la ville et l’eau. Le mot Arenal renvoie à l’ancienne rive sableuse où se concentraient métiers et activités maritimes. Aujourd’hui, la promenade et les quais stabilisés donnent un dessin très différent. Essayez de remplacer mentalement cette façade par un bord de travail, chargé de circulation, de marchandises et de métiers. Au vingtième siècle, les grandes transformations portuaires ont déplacé une grande partie des fonctions du port plus au sud. Ce qui reste au centre est une façade urbaine où l’ancien port se lit surtout par contraste avec ce que vous voyez.",
+      "sequence": 1,
+      "resolved_preset": "narrateur-vif",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+8%",
+      "pitch": "+14Hz",
+      "volume": "+5%",
+      "casting_alternatives": [],
+      "resolved_placement": "center",
+      "resolved_pan": 0.0,
+      "resolved_acoustic_space": "dry",
+      "resolved_pause_after_ms": 350.0
+    }
+  ]
+}

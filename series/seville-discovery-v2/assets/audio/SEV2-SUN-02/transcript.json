@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-SUN-02",
+  "title": "Aníbal González — retour, autre rôle",
+  "language": "fr-FR",
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S41"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Hier, Aníbal González dominait Plaza de España. Il réapparaît ici dans un rôle très différent. Entre 1927 et 1930, il dessine le siège de la Real Maestranza et sa liaison élevée avec la plaza. Cette intervention oblige à déplacer la loge de la corporation par rapport au balcon principal; le passage sera encore élargi en 1968. À Plaza de España, il fabriquait une grande scène nouvelle. Ici, il s’insère dans un complexe accumulé depuis des siècles. Si la liaison n’est pas visible, gardez seulement ce contraste.",
+      "sequence": 1,
+      "resolved_preset": "narrateur-vif",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+8%",
+      "pitch": "+14Hz",
+      "volume": "+5%",
+      "casting_alternatives": [],
+      "resolved_placement": "center",
+      "resolved_pan": 0.0,
+      "resolved_acoustic_space": "dry",
+      "resolved_pause_after_ms": 350.0
+    }
+  ]
+}

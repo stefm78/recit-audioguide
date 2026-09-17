@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-SAT-03",
+  "status": "success",
+  "source_sha256": "f5fb90d1de229e9f1aab0644fa3379bb692f6e086e02cc9166324adc44d9f8e3",
+  "voice_config_sha256": "8756cd684c6aac6b062fb40587ddbaa7fba6572e3b5e57af866dd0d08627ec3b",
+  "engine_code_sha256": "9aa43a15153395e44a8c9c62b70824ae61a1a79878a831cceef7dd80b6ade207",
+  "render_fingerprint": "bae8254547aa2121908a13a448bb1ab7847d918a5ef123548a7af2dc5219507e",
+  "engine_version": "0.9.2",
+  "provider": {
+    "name": "edge",
+    "processing": "remote"
+  },
+  "profile": "speech",
+  "audio": {
+    "file": "audio.mp3",
+    "codec": "mp3",
+    "bitrate_kbps": 80,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "duration_seconds": 35.81
+  },
+  "mix": {
+    "stereo": false,
+    "voice_clip_count": 1,
+    "voice_cache_hits": 0,
+    "voice_fingerprints": [
+      "3397a4fc1b016aba51aab1938642281c6a6d629704d9b3f34db5c5f201628805"
+    ],
+    "ambience": null,
+    "ambience_cache_hit": null,
+    "soundscape": null,
+    "soundscape_cache_hit": null,
+    "ducking": null,
+    "timeline": null,
+    "resolved_sound_intent": null
+  },
+  "transcript": "transcript.json",
+  "warnings": []
+}

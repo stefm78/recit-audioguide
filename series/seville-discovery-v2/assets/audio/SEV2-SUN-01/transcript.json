@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-SUN-01",
+  "title": "Maestranza — le centre a réellement bougé",
+  "language": "fr-FR",
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S39"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Vendredi, nous avions seulement retenu l’irrégularité de l’arène. Ici, on peut aller un cran plus loin. Au XVIIIe siècle, les bâtisseurs ont réellement déplacé le centre géométrique du projet et réduit son rayon pour l’adapter au terrain disponible. La Maestranza relie aussi cette évolution au moment où la tauromachie à pied prend davantage de place. Ne cherchez pas le centre à l’œil : retenez simplement qu’ici, même la géométrie du spectacle a été négociée avec la ville et avec l’évolution de la pratique.",
+      "sequence": 1,
+      "resolved_preset": "narrateur-vif",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+8%",
+      "pitch": "+14Hz",
+      "volume": "+5%",
+      "casting_alternatives": [],
+      "resolved_placement": "center",
+      "resolved_pan": 0.0,
+      "resolved_acoustic_space": "dry",
+      "resolved_pause_after_ms": 350.0
+    }
+  ]
+}
