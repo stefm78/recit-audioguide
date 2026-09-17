@@ -4,6 +4,26 @@
 
 Raise the Seville 3-day field-guide material to the qualitative benchmark established by the live 2026-09-17 walk, without changing route, bookings, logistics, UX, V1 or final audio production.
 
+## Kernel execution contract
+
+This is a governed worker job. Use the ACTIVE kernel primitives causally, not ceremonially.
+
+Default execution path:
+
+`/refresh -> /research -> /solve -> /build -> /audit`
+
+Primitive responsibilities:
+
+- `/refresh` — revalidate current kernel authority, worker branch HEAD, `FIELD_GUIDE_V2_CONTRACT.md`, V1 frozen baseline and assigned route batch before doing substantive work. If project/kernel state is stale, stop and reload rather than carrying forward assumptions.
+- `/research` — gather and verify field-story evidence, observable details, human stories, legends/traditions and source quality for the assigned route section.
+- `/solve` — select the strongest field candidates from the evidence, challenge weak/fragile candidates, balance density versus silence and decide what deserves primary flow versus optional depth.
+- `/build` — materialize only the selected V2 research artifacts under the allowed research namespace.
+- `/audit` — prove source traceability, route coverage, field robustness, scope compliance and `V1_CHANGED_FILES = 0`.
+
+Re-enter only the smallest failed causal stage: evidence defect -> `/research`; candidate-selection defect -> `/solve`; artifact defect -> `/build`; then `/audit` again.
+
+`/learn` is not required for completion. Use it only if a genuinely reusable learning beyond this Seville batch is discovered; never use learning state as authority for the current job.
+
 ## Read first
 
 - `series/seville-discovery-v2/FIELD_GUIDE_V2_CONTRACT.md`
@@ -59,7 +79,17 @@ Record at minimum:
 
 ## Deliverable
 
-Create V2-only research artifacts under `series/seville-discovery-v2/research/`, preferably one bounded file per day or route section plus a source manifest. Return branch/ref, commit SHA, changed paths, coverage achieved and unresolved research uncertainties.
+Create V2-only research artifacts under `series/seville-discovery-v2/research/`, preferably one bounded file per day or route section plus a source manifest.
+
+Return:
+
+- branch/ref and final commit SHA;
+- exact changed paths;
+- kernel path actually used and any re-entry;
+- coverage achieved;
+- selected/rejected candidate rationale from `/solve`;
+- `/audit` result and evidence;
+- unresolved research uncertainties.
 
 ## Stop condition
 
