@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SAT-07",
+  "title": "La Lonja — sortir le commerce du sacré",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 2,
+  "stop": "Plaza del Triunfo / extérieur Archivo General de Indias",
+  "location": "La Lonja — sortir le commerce du sacré",
+  "launch": "Lancer lorsque Cathédrale et ancienne Lonja / Archivo sont repérables dans le même secteur, même si foule ou installations coupent la perspective.",
+  "look": "Regardez la proximité entre Cathédrale et Archivo : leur voisinage explique une partie de l’histoire du bâtiment.",
+  "summary": "ADJACENCY_CAUSAL_REVEAL",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S32"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "À Plaza del Triunfo, essayez de tenir ensemble la Cathédrale et le bâtiment beaucoup plus sobre de l’Archivo. Leur voisinage raconte une histoire très concrète. À l’époque où Séville concentre le commerce américain, les marchands ont besoin d’un lieu pour négocier et régler leurs affaires. L’usage commercial d’espaces liés à la Cathédrale provoque des conflits avec le chapitre. La réponse est une Lonja dédiée, dont la construction commence à la fin du seizième siècle. Le bâtiment que vous avez devant vous n’est donc pas né comme archive : il est d’abord une infrastructure pour séparer et organiser le commerce. Plus tard seulement, il deviendra la grande maison des papiers de l’empire."
+    }
+  ]
+}

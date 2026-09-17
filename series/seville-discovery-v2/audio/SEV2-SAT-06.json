@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SAT-06",
+  "title": "Patio de Banderas — l’espace s’ouvre",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 2,
+  "stop": "Patio de Banderas",
+  "location": "Patio de Banderas — l’espace s’ouvre",
+  "launch": "Lancer lorsque les passages étroits de Santa Cruz débouchent sur l’espace ouvert du Patio de Banderas.",
+  "look": "Après les petites rues, regardez seulement l’ouverture du Patio et sa proximité immédiate avec l’Alcázar.",
+  "summary": "SPATIAL_TRANSITION_TAG",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S31"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Après les passages resserrés de Santa Cruz, le Patio de Banderas ouvre soudain l’espace. Ce n’est pas seulement une respiration urbaine. La documentation municipale le décrit comme l’ancien patio d’armes du noyau militaire primitif de l’Alcázar. Autrement dit, la place que vous traversez appartenait d’abord à une logique de forteresse et de pouvoir. Ne restez pas longtemps sur les noms : utilisez surtout le changement d’échelle. En sortant vers Plaza del Triunfo, palais, cathédrale et ancienne Lonja vont se rapprocher dans le même champ urbain."
+    }
+  ]
+}

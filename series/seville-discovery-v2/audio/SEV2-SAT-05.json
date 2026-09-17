@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SAT-05",
+  "title": "Doña Elvira — l’ancien fabriqué",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 2,
+  "stop": "Plaza de Doña Elvira",
+  "location": "Doña Elvira — l’ancien fabriqué",
+  "launch": "Lancer une fois arrivé dans la petite place; laisser d’abord quelques secondes au lieu avant le reveal.",
+  "look": "Laissez d’abord la place paraître ancienne : arbres, fontaine, façades et petites entrées. Puis écoutez comment cette impression a été construite.",
+  "summary": "LOOK_THEN_REFRAME_WITH_LABELLED_LEGEND",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S28",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S29"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "À Plaza de Doña Elvira, regardez d’abord la petite échelle : les arbres, la fontaine, les bancs, les façades et les entrées de biais. Tout invite à imaginer un coin ancien resté intact. C’est précisément le piège intéressant. La forme actuelle de la place naît surtout du réaménagement de Santa Cruz entre 1911 et 1918, dans lequel Juan Talavera y Heredia joue un rôle majeur. Le pittoresque est donc aussi une construction moderne. Et le nom ajoute une seconde couche : une légende populaire sévillane relie le lieu à Doña Elvira et Don Gonzalo de Ulloa, personnages du monde littéraire de Don Juan Tenorio. Retenez bien le statut : c’est une légende littéraire locale, pas une biographie cachée dans les murs."
+    }
+  ]
+}
