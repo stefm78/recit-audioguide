@@ -216,7 +216,7 @@
       "trigger_or_launch_condition": "Lancer à l’arrivée côté Triana si la Capillita del Carmen est visible sans quitter l’itinéraire.",
       "scene_type": "LANDMARK_TAG",
       "short_label": "Capillita del Carmen — changement d’échelle",
-      "primary_cue": "Après le grand pont métallique, cherchez seulement si elle est évidente la petite chapelle de brique et de céramique.",
+      "primary_cue": "Si la petite chapelle de brique et de céramique est évidente à la sortie du pont, regardez-la. Sinon, poursuivez vers le marché.",
       "spoken_text": "En arrivant à Altozano, regardez si un tout petit bâtiment de brique s’impose naturellement près du pont : la Capillita del Carmen. Après la masse métallique du pont, changement d’échelle complet. Aníbal González la dessine en 1928 avec brique apparente, céramiques de Triana et un petit clocher octogonal. Ici, les matériaux racontent presque autant que l’architecture. Son surnom populaire, « el Mechero », le briquet, vient de sa silhouette. Ne restez pas longtemps : ce petit objet sert surtout de seuil. Juste après, Triana cesse d’être une vue depuis le pont et devient un quartier à traverser.",
       "expected_duration_class": "SHORT_20_45",
       "observable_cue": "Petite chapelle extérieure en brique et céramique; clocher octogonal.",
@@ -329,7 +329,7 @@
       "scene_type": "ANTICIPATION_TAG",
       "short_label": "Maestranza — le cercle qui n’en est pas un",
       "primary_cue": "Regardez seulement la forme extérieure : l’arène paraît ronde dans la mémoire, mais son enceinte s’est construite irrégulièrement.",
-      "spoken_text": "En passant devant la Maestranza, ne cherchez pas à tout comprendre aujourd’hui : l’intérieur est pour dimanche. Regardez seulement sa forme extérieure. On imagine volontiers une arène parfaitement ronde. Celle-ci s’est construite par étapes sur environ cent vingt ans et son enceinte est en réalité un polygone irrégulier de trente côtés inégaux. Ne les comptez pas. Le détail important est ailleurs : le monument que la mémoire simplifie en cercle est le résultat d’une construction lente, contrainte par son site. Gardez cette irrégularité comme promesse pour dimanche. Puis continuez vers Plaza de Armas et le NH : la boucle est fermée.",
+      "spoken_text": "En passant devant la Maestranza, ne cherchez pas à tout comprendre aujourd’hui : l’intérieur est pour dimanche. Regardez seulement sa forme extérieure. On l’imagine volontiers parfaitement ronde. Pourtant, sa construction s’étale sur environ cent vingt ans et son enceinte forme un polygone irrégulier de trente côtés inégaux. Ne les comptez pas : retenez seulement qu’un monument que la mémoire simplifie en cercle est le résultat d’une construction lente, contrainte par son site. Gardez cette irrégularité pour dimanche, puis continuez vers le NH.",
       "expected_duration_class": "SHORT_20_45",
       "observable_cue": "Masse extérieure et forme irrégulière du bâtiment; aucun détail intérieur.",
       "fallback_behavior": {
@@ -361,7 +361,7 @@
         "S16"
       ],
       "short_label": "1927 — les poètes arrivent par cette gare",
-      "spoken_text": "Une histoire à garder pour la marche. Le 15 décembre 1927, plusieurs jeunes poètes qui seront bientôt associés à la Génération de 27 arrivent à Séville par la gare de Córdoba, l’actuelle Plaza de Armas. Leur séjour deviendra un épisode fondateur dans la mémoire du groupe. Dámaso Alonso racontera aussi une nuit de Triana qui se termine de façon beaucoup moins académique : avec le Guadalquivir en crue, certains traversent l’eau dans une embarcation improvisée. Cette histoire n’a pas besoin d’un monument. Elle relie simplement la gare que vous quittez, le fleuve que vous rejoignez et une Séville littéraire qui, pendant quelques jours, s’est aussi vécue la nuit.",
+      "spoken_text": "Une histoire à garder pour la marche. Le 15 décembre 1927, plusieurs jeunes poètes qui seront bientôt associés à la Génération de 27 arrivent à Séville par la gare de Córdoba, l’actuelle Plaza de Armas. Dámaso Alonso racontera aussi une nuit de Triana qui se termine de façon beaucoup moins académique : avec le Guadalquivir en crue, certains traversent l’eau dans une embarcation improvisée. Cette histoire n’a pas besoin d’un monument. Elle relie simplement la gare que vous quittez, le fleuve que vous rejoignez et une Séville littéraire vécue aussi la nuit.",
       "expected_duration_class": "MEDIUM_45_90"
     },
     {
@@ -406,7 +406,7 @@
     }
   ],
   "field_assumptions": [
-    "Le sightline exact de l’ancienne gare depuis le départ NH reste non garanti; la scène 01 est explicitement conditionnelle.",
+    "La ligne de vue exacte vers l’ancienne gare depuis le départ NH reste non garantie; la scène 01 est explicitement conditionnelle.",
     "Les surfaces céramiques précises de San Jorge / Castilla ne sont pas figées; la scène 06 s’auto-saute si aucune n’est naturellement visible.",
     "L’état individuel des étals vers 09:00 n’est pas garanti; la scène 05 fonctionne entièrement depuis le niveau rue.",
     "Les faits dynamiques S03/S05 sont frais au 2026-09-17; ils devront être revalidés seulement si la production ou l’usage est matériellement plus tardif."
