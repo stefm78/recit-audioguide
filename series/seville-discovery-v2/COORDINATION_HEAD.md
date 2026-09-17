@@ -27,17 +27,25 @@ For read-only status checks, `/refresh` may be sufficient. Do not run primitives
 
 ## Integrated evidence
 
-- J1 FIELD STORY RESEARCH — Friday batch ACCEPTED and integrated from worker SHA `0d131065708cedc6853dc1c844cd0cfd50473441`; artifacts: `research/FRIDAY_MORNING_FIELD_STORY_RESEARCH.md` and `research/SOURCE_MANIFEST.md`.
+- J1 FIELD STORY RESEARCH — Friday batch ACCEPTED and integrated from worker SHA `0d131065708cedc6853dc1c844cd0cfd50473441`; artifacts: `research/FRIDAY_MORNING_FIELD_STORY_RESEARCH.md` and initial `research/SOURCE_MANIFEST.md`.
+- J1 FIELD STORY RESEARCH — Saturday batch ACCEPTED and integrated from worker SHA `ab368ca8225e4e87fd29976637608a10adcf5812` through integration merge `90b96315a86b692a292fc7a4e8399f45cb38d216`; artifacts: `research/SATURDAY_FIELD_STORY_RESEARCH.md` and enriched `research/SOURCE_MANIFEST.md`.
 - J3 AUDIO-FIRST UX — PASS on worker scope and integrated from worker SHA `ae64ce952100d5dacf676de968451723b830b4bb` through merge/integration commit `6e3c9e034a4c922b0dc97accb733e1355e5a72f4`.
 - J3 integrated blobs are exact worker-final identities: `AUDIO_FIRST_UX_CAPABILITY.json` = `85f2dd0a4ba49a9c7e4d0512c331bed151a46c21`; `tests/test_seville_v2_audio_first_ux.py` = `1762a12e227c3db52b1cc4cb0ffbb76237379def`; `web/next-step.js` = `82b330a9a88c56d71c4d7f3f26ad506f7dd1c565`.
 
 ## Active / next workers
 
-- J1 FIELD STORY RESEARCH -> branch `seville-v2-j1-field-research`; next assigned bounded batch is Saturday: Pje. de Vila -> Plaza de España -> Santa Cruz -> Archivo.
-- J2 FIELD SHOWRUNNER -> branch `seville-v2-j2-field-showrunner`; launched from accepted Friday research baseline `0d131065708cedc6853dc1c844cd0cfd50473441` and may work independently of J3 UX.
+- J1 FIELD STORY RESEARCH -> branch `seville-v2-j1-field-research`; next bounded batch is Sunday: Maestranza -> checkout / Lockers Agua -> Museo de Bellas Artes -> protected airport departure. Casa de Pilatos remains fallback only.
+- J2 FIELD SHOWRUNNER -> branch `seville-v2-j2-field-showrunner`; Friday candidate commit exists at `0b82ed54f13f1a3469f2ec4f99ba158a250a0866`, but coordination is waiting for the worker's final handover `/audit` before integration.
 - J3 AUDIO-FIRST UX -> COMPLETE / INTEGRATED; no further worker action unless integration or J5 finds a regression owned by J3.
 - J4 AUDIO PRODUCTION -> WAITING for first accepted J2 scene batch.
 - J5 AUTOMATED QUALIFICATION -> WAITING for a materially richer integration candidate; it will start from then-current integration HEAD and run `/refresh -> /audit` only.
+
+## Reported V1 defects — do not repair in frozen fallback
+
+Saturday J1 reported two stale narrative references in frozen V1. They are coordination-known defects and must be corrected in V2 content, not by mutating V1:
+
+- Plaza de España audio says `demain à Triana`, but Triana occurs on Friday before Saturday.
+- Archivo audio announces for Sunday `un palais privé puis la peinture`, but Sunday primary is now Maestranza then Bellas Artes; Casa de Pilatos is fallback only.
 
 ## Integration constraints now carried forward
 
