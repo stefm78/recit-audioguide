@@ -33,14 +33,17 @@ For read-only status checks, `/refresh` may be sufficient. Do not run primitives
 - J2 FIELD SHOWRUNNER — Saturday batch PASS and ACCEPTED from worker SHA `9fa00643e7ac74f324dd2947ba9b09d785e5e842`; integrated by fast-forward from coordination baseline `d3a78890aae5213d42676cd95ec9829015b7d82d`; artifact: `scenes/SATURDAY_SCENE_PROGRAM.json`, 8 primary scenes + 5 optional-depth units + 3 intentional silence windows.
 - J3 AUDIO-FIRST UX — PASS on worker scope and integrated from worker SHA `ae64ce952100d5dacf676de968451723b830b4bb` through merge/integration commit `6e3c9e034a4c922b0dc97accb733e1355e5a72f4`.
 - J3 integrated blobs are exact worker-final identities: `AUDIO_FIRST_UX_CAPABILITY.json` = `85f2dd0a4ba49a9c7e4d0512c331bed151a46c21`; `tests/test_seville_v2_audio_first_ux.py` = `1762a12e227c3db52b1cc4cb0ffbb76237379def`; `web/next-step.js` = `82b330a9a88c56d71c4d7f3f26ad506f7dd1c565`.
+- J4 AUDIO PRODUCTION — Friday Morning PASS and ACCEPTED from worker final SHA `06ce0580fade766f8a4bfe0dd0e8721899b0d3b6`; qualified assets were produced from SHA `c91484167544a10e76e46a4588d556bb16a3c360` and integrated with Saturday J2 state through merge commit `8259e477955c4a542235f190dc6d71acbc3798e0`.
+- J4 Friday durable evidence: `audio/FRIDAY_MORNING_AUDIO_MANIFEST.json`, eight `audio/SEV2-FRI-AM-*.json` programs, `qualification/J4_FRIDAY_MORNING_AUDIO_QUALIFICATION.json`, and `tests/test_seville_v2_friday_audio_production.py`. Qualified workflow run `35260567914` = SUCCESS; artifact `10514517681` = `seville-v2-j4-friday-audio`, 2,578,475 bytes, digest `sha256:d7019aae1edad6a41ae25aa96fd7ad5a38cb2b4ea53058b758d86db1f721b61f`.
+- J4 Friday primary contract = 8 expected / 8 rendered / 8 decoded / 0 missing / 0 failed, French lock PASS, pinned Audio Engine `3392d4f22f0a9b054a05b5c05a7856985c0ab030` (`0.9.2`, `narrateur-vif`, `fr-FR`). Optional-depth D01-D03 remain intentionally deferred and are not release blockers at this bounded stage.
 
 ## Active / next workers
 
 - J1 FIELD STORY RESEARCH -> branch `seville-v2-j1-field-research`; active bounded batch is Sunday: Maestranza -> checkout / Lockers Agua -> Museo de Bellas Artes -> protected airport departure. Casa de Pilatos remains fallback only.
 - J2 FIELD SHOWRUNNER -> branch `seville-v2-j2-field-showrunner`; Friday and Saturday are COMPLETE / INTEGRATED. Do not start Sunday until J1 Sunday research is ACCEPTED by coordination; before Sunday work, rebind to the then-current integration HEAD and restart from `/refresh`.
 - J3 AUDIO-FIRST UX -> COMPLETE / INTEGRATED; no further worker action unless integration or J5 finds a regression owned by J3.
-- J4 AUDIO PRODUCTION -> branch `seville-v2-j4-audio-production`; first bounded batch remains Friday only, consuming `scenes/FRIDAY_MORNING_SCENE_PROGRAM.json`. Do not widen its active scope to Saturday until Friday production returns PASS and is integrated. Saturday scene production is queued next.
-- J5 AUTOMATED QUALIFICATION -> branch `seville-v2-j5-automated-qualification` remains PREPARED_ONLY; do not launch qualification until J4 Friday production is integrated. Before launch, rebind J5 to the then-current integration HEAD and run `/refresh -> /audit` only.
+- J4 AUDIO PRODUCTION -> branch `seville-v2-j4-audio-production`; Friday is COMPLETE / INTEGRATED. Next bounded batch is Saturday using `scenes/SATURDAY_SCENE_PROGRAM.json`. Preserve the Friday production contract: primary scenes only for now; optional-depth assets remain deferred unless coordination explicitly accepts them.
+- J5 AUTOMATED QUALIFICATION -> branch `seville-v2-j5-automated-qualification`; READY_TO_START from the current integration snapshot after J4 Friday integration. Run `/refresh -> /audit` only, independently. `HOLD` is valid for invariants that are structurally unavailable because Saturday/Sunday production/runtime materialization is not yet present; do not repair in J5.
 
 ## Reported V1 defects — do not repair in frozen fallback
 
@@ -57,6 +60,7 @@ Saturday J1 reported two stale narrative references in frozen V1. They are coord
 - J3 deliberately does not own `web/app.js`, audio source assignment, direct playback, resume, MediaSession, offline or lock-screen mechanics; those remain shared runtime responsibilities and require integration-level qualification once V2 content/audio exist.
 - J4 must preserve the accepted J2 text and deterministic `scene_id -> asset -> manifest` mapping; editorial defects return to J2 instead of being silently rewritten during production.
 - Friday and Saturday J2 programs share the same runtime/audio mapping contract and require no geofencing.
+- A successful render/decode artifact is production evidence, not by itself proof of app-level offline, resume, MediaSession or lock-screen behavior; those remain J5 integration invariants when the necessary runtime materialization exists.
 
 ## Coordination rules
 
