@@ -1,6 +1,6 @@
 # Séville Field Guide V2 — Coordination Head
 
-Status: ACTIVE_BOOTSTRAP
+Status: ACTIVE_EXECUTION
 
 Integration branch: `seville-field-guide-v2`
 Frozen V1 path: `series/seville-discovery/**`
@@ -25,18 +25,26 @@ Default coordination cycle when mutation is required:
 
 For read-only status checks, `/refresh` may be sufficient. Do not run primitives merely for ceremony; re-enter only the smallest causally affected stage.
 
-## Immediate parallel workers
+## Integrated evidence
 
-- J1 FIELD STORY RESEARCH -> branch `seville-v2-j1-field-research`
-- J3 AUDIO-FIRST UX -> branch `seville-v2-j3-audio-first-ux`
+- J1 FIELD STORY RESEARCH — Friday batch ACCEPTED and integrated from worker SHA `0d131065708cedc6853dc1c844cd0cfd50473441`; artifacts: `research/FRIDAY_MORNING_FIELD_STORY_RESEARCH.md` and `research/SOURCE_MANIFEST.md`.
+- J3 AUDIO-FIRST UX — PASS on worker scope and integrated from worker SHA `ae64ce952100d5dacf676de968451723b830b4bb` through merge/integration commit `6e3c9e034a4c922b0dc97accb733e1355e5a72f4`.
+- J3 integrated blobs are exact worker-final identities: `AUDIO_FIRST_UX_CAPABILITY.json` = `85f2dd0a4ba49a9c7e4d0512c331bed151a46c21`; `tests/test_seville_v2_audio_first_ux.py` = `1762a12e227c3db52b1cc4cb0ffbb76237379def`; `web/next-step.js` = `82b330a9a88c56d71c4d7f3f26ad506f7dd1c565`.
 
-Both worker handovers are kernel-native and define their own primitive pipelines. Worker conversations must execute the handover rather than replace it with an ad-hoc prompt.
+## Active / next workers
 
-## Prepared but not launched yet
+- J1 FIELD STORY RESEARCH -> branch `seville-v2-j1-field-research`; next assigned bounded batch is Saturday: Pje. de Vila -> Plaza de España -> Santa Cruz -> Archivo.
+- J2 FIELD SHOWRUNNER -> branch `seville-v2-j2-field-showrunner`; launched from accepted Friday research baseline `0d131065708cedc6853dc1c844cd0cfd50473441` and may work independently of J3 UX.
+- J3 AUDIO-FIRST UX -> COMPLETE / INTEGRATED; no further worker action unless integration or J5 finds a regression owned by J3.
+- J4 AUDIO PRODUCTION -> WAITING for first accepted J2 scene batch.
+- J5 AUTOMATED QUALIFICATION -> WAITING for a materially richer integration candidate; it will start from then-current integration HEAD and run `/refresh -> /audit` only.
 
-- J2 FIELD SHOWRUNNER -> start progressively from accepted J1 batches;
-- J4 AUDIO PRODUCTION -> start from J2 scene batches;
-- J5 AUTOMATED QUALIFICATION -> create from the then-current integration HEAD so it qualifies the real candidate rather than a stale bootstrap branch.
+## Integration constraints now carried forward
+
+- Future V2 `visit-experience.json` must include the `capabilities.audio_first_field_ui` fragment declared by `AUDIO_FIRST_UX_CAPABILITY.json`.
+- Each V2 episode intended for the field controller must have a matching `experience.episodes` entry; `look_first` is preferred for the concise field cue.
+- Shared `web/next-step.js` capability guard and legacy `firstPendingIndex` semantics must be preserved by any later integration touching that file.
+- J3 deliberately does not own `web/app.js`, audio source assignment, direct playback, resume, MediaSession, offline or lock-screen mechanics; those remain shared runtime responsibilities and require integration-level qualification once V2 content/audio exist.
 
 ## Coordination rules
 
