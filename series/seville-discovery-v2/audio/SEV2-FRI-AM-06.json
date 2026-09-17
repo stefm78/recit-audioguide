@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-FRI-AM-06",
+  "title": "Triana — lire la céramique sans faire la chasse",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 6,
+  "stop": "San Jorge / Castilla — marche de retour dans Triana",
+  "location": "Triana — lire la céramique sans faire la chasse",
+  "launch": "Lancer seulement si une surface de céramique est rencontrée naturellement sur la ligne de marche; sinon sauter sans chercher.",
+  "look": "Si une plaque, des azulejos ou une façade céramique se présentent d’eux-mêmes, prenez-les comme échantillon. Sinon, continuez.",
+  "summary": "WALKING_FLEXIBLE_OPTIONAL_VISUAL",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S07",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S08"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "En quittant le marché par San Jorge ou Castilla, ne cherchez aucun magasin précis. Regardez seulement si une surface de céramique se présente d’elle-même : une plaque, des azulejos, une façade, une enseigne. Si vous n’en voyez pas, passez cette scène. Si vous en voyez une, prenez-la comme un échantillon d’une histoire beaucoup plus longue. Triana possède une longue tradition de production céramique, avec des racines dans les périodes islamiques puis des continuités mudéjares et des ateliers plus récents. Ce qui compte ici n’est pas de mémoriser une chronologie : c’est de reconnaître un matériau que vous retrouverez ailleurs dans Séville. Continuez sans détour."
+    }
+  ]
+}
