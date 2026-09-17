@@ -1,0 +1,169 @@
+{
+  "schema": "recit.seville-v2.j4-audio-qualification.v1",
+  "status": "PASS",
+  "batch_id": "seville-v2-saturday-j1-accepted-2026-09-17",
+  "source_scene_program": {
+    "path": "series/seville-discovery-v2/scenes/SATURDAY_SCENE_PROGRAM.json",
+    "git_blob_sha": "a0911b98aeddbe03b72644c9c736aa909969fbc6"
+  },
+  "qualification_run": {
+    "workflow_run_id": 35265040415,
+    "workflow_head_sha": "fa4a25022763bbd22077135a706b3e2c48b2bfbb",
+    "artifact_id": 10516435782,
+    "artifact_name": "seville-v2-j4-saturday-audio",
+    "artifact_sha256": "ee186e2d4ea0eff7b36e16fa1c66a27b24fdfb9c666c4fe10f502d64fd28c981",
+    "artifact_size_bytes": 2719972,
+    "artifact_expires_at": "2026-09-24T19:29:40Z"
+  },
+  "engine": {
+    "repository": "stefm78/audio-engine",
+    "git_pin": "3392d4f22f0a9b054a05b5c05a7856985c0ab030",
+    "version": "0.9.2",
+    "engine_code_sha256": "9aa43a15153395e44a8c9c62b70824ae61a1a79878a831cceef7dd80b6ade207",
+    "voice_config_sha256": "8756cd684c6aac6b062fb40587ddbaa7fba6572e3b5e57af866dd0d08627ec3b",
+    "provider": "edge",
+    "provider_processing": "remote",
+    "voice_preset": "narrateur-vif",
+    "language": "fr-FR"
+  },
+  "scope": {
+    "primary_expected": 8,
+    "primary_programs": 8,
+    "primary_assets_produced": 8,
+    "rendered_manifests_produced": 8,
+    "transcripts_produced": 8,
+    "decode_passed": 8,
+    "missing": [],
+    "failed": [],
+    "optional_depth_declared": 5,
+    "optional_depth_audio_produced": 0,
+    "optional_depth_disposition": "DEFERRED_UNTIL_COORDINATION_ACCEPTS",
+    "decorative_ambience": "NONE",
+    "return_bridge_audio": "NONE"
+  },
+  "french_lock": {
+    "status": "PASS",
+    "exact_j2_spoken_text_matches": 8,
+    "language_declarations_fr_FR": 8,
+    "editorial_rewrite_count": 0,
+    "foreign_voice_segments": 0
+  },
+  "audio_format": {
+    "codec": "mp3",
+    "bitrate_kbps": 80,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "profile": "speech"
+  },
+  "determinism": {
+    "identity_rule": "scene_id == program id; one accepted primary scene maps to one program and one rendered MP3",
+    "source_hash_rule": "SHA256(UTF-8 exact accepted J2 spoken_text from authoritative checkout)",
+    "program_hash_rule": "SHA256(exact committed audio program bytes)",
+    "render_fingerprint_rule": "audio-engine deterministic render identity over source, voice configuration and engine code",
+    "audio_hash_semantics": "Integrity SHA256 of the qualified rendered MP3 artifact; no claim of remote-provider bit-for-bit repeatability beyond this qualified artifact."
+  },
+  "playback_evidence": {
+    "method": "Decode each complete MP3 to null with imageio-ffmpeg bundled FFmpeg after rendering",
+    "decode_passed": 8,
+    "positive_duration_count": 8,
+    "total_decoded_duration_seconds": 283.61,
+    "manifest_status_success_count": 8,
+    "transcript_present_count": 8,
+    "runtime_integration_boundary": "Static scene-level MP3 assets are suitable for the existing offline/background player path; integrated MediaSession/offline/resume proof remains J5 after J4 integration."
+  },
+  "entries": [
+    {
+      "scene_id": "SEV2-SAT-01",
+      "spoken_text_sha256": "aadeeafb40163ab9d55cb67e61cf44c0bbd068dadbf03745238b221f3cb8c261",
+      "program_sha256": "965beaa9ed3187f70db75700819418404dc7164a9f69dde561b5c3c3bdd0d852",
+      "render_fingerprint": "52eab37761be20c02089c078c60d255ac32a085a62524d1f61a4e0e83d075819",
+      "audio_sha256": "11f7133a2e14b0cf029471dc94adac3c87091f4d0f6825cd305ba26ba8b5ca59",
+      "renderer_manifest_sha256": "a5d3945526e00ed0b2484edf630782af636d4e3ae1d7527cb6e9600f7c32c3e5",
+      "decoded_duration_seconds": 34.9,
+      "audio_bytes": 349244,
+      "decode_to_null": "PASS"
+    },
+    {
+      "scene_id": "SEV2-SAT-02",
+      "spoken_text_sha256": "9e80d055fd6c3f6e6ea888be4dd65540706799f4cb10d9c36292b90c6703ffbb",
+      "program_sha256": "87340b4227bd9ee9282b98d16206466fdcf2eaec9cd571288c4c2f918173e8df",
+      "render_fingerprint": "89db15b01f296e1a1d5d5aa65f912cbeae119ee6b870d3f486345c06d52dbe73",
+      "audio_sha256": "fd9814f5529deadb997039b882acb7064d8b28a4ad601ae4f97616d6dcae1503",
+      "renderer_manifest_sha256": "e83efed97ea407a07c08d426fdc5ea1f3bb1b5f446ea339c78f246c6ca5bda54",
+      "decoded_duration_seconds": 34.7,
+      "audio_bytes": 347324,
+      "decode_to_null": "PASS"
+    },
+    {
+      "scene_id": "SEV2-SAT-03",
+      "spoken_text_sha256": "9d6d1e224dd7d2dd1a330e23306896d686ef1c094d18f786da31b25e66bc4959",
+      "program_sha256": "f5fb90d1de229e9f1aab0644fa3379bb692f6e086e02cc9166324adc44d9f8e3",
+      "render_fingerprint": "bae8254547aa2121908a13a448bb1ab7847d918a5ef123548a7af2dc5219507e",
+      "audio_sha256": "4be672ce74fd21d4da127664fa636ffbc5317bdcef0a749d4e67bb551fd9f81a",
+      "renderer_manifest_sha256": "06654d861c196f48c707035c2ba069f049e042b7d34c1af6d65f95a406ed8c9a",
+      "decoded_duration_seconds": 35.81,
+      "audio_bytes": 358364,
+      "decode_to_null": "PASS"
+    },
+    {
+      "scene_id": "SEV2-SAT-04",
+      "spoken_text_sha256": "1562f35f3ac218a0624c299706b0dc2fd8239e8ef12bfd5b7685fa276fb00868",
+      "program_sha256": "68b6312af7dc110c5e66fc374ec4283085b12e622db32865640471da8e055194",
+      "render_fingerprint": "c0ff873e809474d4ba8235475d124c8e59e871183d72fc6eb49afaa18a460407",
+      "audio_sha256": "39aa8799121f0e9c0d7069d0399b6822c4d0fa588982f5b3523b451ae39bae97",
+      "renderer_manifest_sha256": "25db79a66c42e8ea44815a56db926a2dd16b10b32d127d8badf2ed6e8b767442",
+      "decoded_duration_seconds": 32.95,
+      "audio_bytes": 329804,
+      "decode_to_null": "PASS"
+    },
+    {
+      "scene_id": "SEV2-SAT-05",
+      "spoken_text_sha256": "daaf6d5e5fa28ec25ac2e50f201a02588a6ac7b3b391eb35c932e68812bd93f5",
+      "program_sha256": "1c325f2f3bd8f7f1546e3dafb84cfc81fcbfb5a6e1810ba55859f91faa2cbbb9",
+      "render_fingerprint": "e2b317c4044881d838a855ff59ddd30089f7d4c14f7eb085d117a75b76d6db3d",
+      "audio_sha256": "01e3f225ae666a8afc440e8e629245b08b9471d49a08d362918c9d35836c5d59",
+      "renderer_manifest_sha256": "792db657a7ecbdb711676261ad4cd229d56f7aea17d0523f53fb16e3a000aa66",
+      "decoded_duration_seconds": 38.16,
+      "audio_bytes": 381884,
+      "decode_to_null": "PASS"
+    },
+    {
+      "scene_id": "SEV2-SAT-06",
+      "spoken_text_sha256": "aeac17f8909439752d509b0c4e3b7eb2d5b026ee192b7c0319c18dbd453748f6",
+      "program_sha256": "ebb3b01f81c1947273f9a0fe37a75480a0fcde49ef5c6e346d23a70ef150596d",
+      "render_fingerprint": "febe4670dee31a704b5437f54624c900cc48d551958238b29480bd53ca31fd7e",
+      "audio_sha256": "1af233c189278f26a9ef0d9aacf61cc35c1d17332456013de78a2357d655dad6",
+      "renderer_manifest_sha256": "16bdb36a0a52ba7bb98cc011c9f4eac96ce8da0375d215166e6daf2a9f7506db",
+      "decoded_duration_seconds": 28.61,
+      "audio_bytes": 286364,
+      "decode_to_null": "PASS"
+    },
+    {
+      "scene_id": "SEV2-SAT-07",
+      "spoken_text_sha256": "4dfa0466ad99aeca0122a2edc7e223e27bb9363c830581c1469aaea2f305a1d0",
+      "program_sha256": "c3fb206dc9e57d24b7a5824d6d4e257579eb0ff56980a3a2fa7a2625c3ee557e",
+      "render_fingerprint": "0ca110beb8993ece2151924f20d204abe95070ad407661eda9d906685766dba3",
+      "audio_sha256": "f88f16548d998407cbaf32a87fdfd32ff37ac11f8746cae4d9548624ae9d655d",
+      "renderer_manifest_sha256": "5c572027af213ec26204bea8bc16a97bc79aecd7df5ae8a6d312169eccc8ee9f",
+      "decoded_duration_seconds": 34.68,
+      "audio_bytes": 347084,
+      "decode_to_null": "PASS"
+    },
+    {
+      "scene_id": "SEV2-SAT-08",
+      "spoken_text_sha256": "320f22e81c8d2c936c372e972e6477ee92d275f4c367951f3ace876b798244a2",
+      "program_sha256": "99d6222fbca64de0f92123b3b3985dd02cd2d42573f6ba2e094b24eea00b55d8",
+      "render_fingerprint": "ba6a2916830ca444f0b4bc0bb0a4b819569341c245d6be6a956f1951f7ea7014",
+      "audio_sha256": "0c39c1a79cd2d4450c58fcd1ee5b36bfa558bdc33ae01dd6267a63f3267e7e5b",
+      "renderer_manifest_sha256": "f01d7f5e682b81cfa253b819b9c9721a343433384d81f5b62c73bbc977009a6b",
+      "decoded_duration_seconds": 43.8,
+      "audio_bytes": 438284,
+      "decode_to_null": "PASS"
+    }
+  ],
+  "audit_boundary": {
+    "v1_changed_files_expected": 0,
+    "shared_ux_changed_files_expected": 0,
+    "merge_performed": false
+  }
+}
