@@ -29,16 +29,17 @@ For read-only status checks, `/refresh` may be sufficient. Do not run primitives
 
 - J1 FIELD STORY RESEARCH — Friday batch ACCEPTED and integrated from worker SHA `0d131065708cedc6853dc1c844cd0cfd50473441`; artifacts: `research/FRIDAY_MORNING_FIELD_STORY_RESEARCH.md` and initial `research/SOURCE_MANIFEST.md`.
 - J1 FIELD STORY RESEARCH — Saturday batch ACCEPTED from worker SHA `ab368ca8225e4e87fd29976637608a10adcf5812` and integrated through merge commit `670994dc6d4735255aa7d5db34ba518db35d94ca`; artifacts: `research/SATURDAY_FIELD_STORY_RESEARCH.md` and enriched `research/SOURCE_MANIFEST.md`.
+- J2 FIELD SHOWRUNNER — Friday batch PASS and ACCEPTED from worker SHA `4f7d7f3dace0890274acc5470bf76e5ac6f9d3d3`; integrated through merge commit `7bd26fee6aeaf2f3c7cc7f6cbd104d46fdda081d`; artifact: `scenes/FRIDAY_MORNING_SCENE_PROGRAM.json`, 8 primary scenes + 3 optional-depth units + 2 intentional silence dispositions.
 - J3 AUDIO-FIRST UX — PASS on worker scope and integrated from worker SHA `ae64ce952100d5dacf676de968451723b830b4bb` through merge/integration commit `6e3c9e034a4c922b0dc97accb733e1355e5a72f4`.
 - J3 integrated blobs are exact worker-final identities: `AUDIO_FIRST_UX_CAPABILITY.json` = `85f2dd0a4ba49a9c7e4d0512c331bed151a46c21`; `tests/test_seville_v2_audio_first_ux.py` = `1762a12e227c3db52b1cc4cb0ffbb76237379def`; `web/next-step.js` = `82b330a9a88c56d71c4d7f3f26ad506f7dd1c565`.
 
 ## Active / next workers
 
 - J1 FIELD STORY RESEARCH -> branch `seville-v2-j1-field-research`; next bounded batch is Sunday: Maestranza -> checkout / Lockers Agua -> Museo de Bellas Artes -> protected airport departure. Casa de Pilatos remains fallback only.
-- J2 FIELD SHOWRUNNER -> branch `seville-v2-j2-field-showrunner`; Friday candidate commit exists at `0b82ed54f13f1a3469f2ec4f99ba158a250a0866`, but coordination is waiting for the worker's final handover `/audit` before integration.
+- J2 FIELD SHOWRUNNER -> branch `seville-v2-j2-field-showrunner`; Friday is COMPLETE / INTEGRATED. Branch has been fast-forwarded to the accepted integration commit `7bd26fee6aeaf2f3c7cc7f6cbd104d46fdda081d`; next bounded batch is Saturday using accepted J1 Saturday research.
 - J3 AUDIO-FIRST UX -> COMPLETE / INTEGRATED; no further worker action unless integration or J5 finds a regression owned by J3.
-- J4 AUDIO PRODUCTION -> WAITING for first accepted J2 scene batch.
-- J5 AUTOMATED QUALIFICATION -> WAITING for a materially richer integration candidate; it will start from then-current integration HEAD and run `/refresh -> /audit` only.
+- J4 AUDIO PRODUCTION -> branch `seville-v2-j4-audio-production`; READY_TO_START from accepted integration commit `7bd26fee6aeaf2f3c7cc7f6cbd104d46fdda081d`, consuming only the accepted Friday J2 scene program for its first bounded production batch.
+- J5 AUTOMATED QUALIFICATION -> branch `seville-v2-j5-automated-qualification` is PREPARED_ONLY at integration commit `7bd26fee6aeaf2f3c7cc7f6cbd104d46fdda081d`; do not launch qualification until J4 Friday production is integrated. Before launch, rebind J5 to the then-current integration HEAD and run `/refresh -> /audit` only.
 
 ## Reported V1 defects — do not repair in frozen fallback
 
@@ -53,6 +54,7 @@ Saturday J1 reported two stale narrative references in frozen V1. They are coord
 - Each V2 episode intended for the field controller must have a matching `experience.episodes` entry; `look_first` is preferred for the concise field cue.
 - Shared `web/next-step.js` capability guard and legacy `firstPendingIndex` semantics must be preserved by any later integration touching that file.
 - J3 deliberately does not own `web/app.js`, audio source assignment, direct playback, resume, MediaSession, offline or lock-screen mechanics; those remain shared runtime responsibilities and require integration-level qualification once V2 content/audio exist.
+- J4 must preserve the accepted J2 text and deterministic `scene_id -> asset -> manifest` mapping; editorial defects return to J2 instead of being silently rewritten during production.
 
 ## Coordination rules
 
@@ -62,8 +64,8 @@ Saturday J1 reported two stale narrative references in frozen V1. They are coord
 - worker completion requires its handover-defined `/audit` result, not merely a commit;
 - J1 must not mutate UX or V1;
 - J3 must not mutate V1 or production audio/narrative content;
-- J2 starts progressively from bounded J1 outputs after first research batch;
-- J4 starts from J2 scene batches;
+- J2 starts progressively from bounded J1 outputs after accepted research batches;
+- J4 starts progressively from accepted J2 scene batches;
 - J5 runs `/refresh -> /audit`, remains independent and may not repair defects it detects in the same qualification job;
 - no human audio gate;
 - `V1_CHANGED_FILES = 0` is mandatory;
