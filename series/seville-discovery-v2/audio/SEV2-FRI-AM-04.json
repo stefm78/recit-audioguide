@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-FRI-AM-04",
+  "title": "Capillita del Carmen — changement d’échelle",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 4,
+  "stop": "Altozano — tête de pont côté Triana",
+  "location": "Capillita del Carmen — changement d’échelle",
+  "launch": "Lancer à l’arrivée côté Triana si la Capillita del Carmen est visible sans quitter l’itinéraire.",
+  "look": "Si la petite chapelle de brique et de céramique est évidente à la sortie du pont, regardez-la. Sinon, poursuivez vers le marché.",
+  "summary": "LANDMARK_TAG",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S02"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "En arrivant à Altozano, regardez si un tout petit bâtiment de brique s’impose naturellement près du pont : la Capillita del Carmen. Après la masse métallique du pont, changement d’échelle complet. Aníbal González la dessine en 1928 avec brique apparente, céramiques de Triana et un petit clocher octogonal. Ici, les matériaux racontent presque autant que l’architecture. Son surnom populaire, « el Mechero », le briquet, vient de sa silhouette. Ne restez pas longtemps : ce petit objet sert surtout de seuil. Juste après, Triana cesse d’être une vue depuis le pont et devient un quartier à traverser."
+    }
+  ]
+}

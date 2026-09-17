@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-FRI-AM-03",
+  "title": "Puente de Isabel II — le piège du fer",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 3,
+  "stop": "Puente de Isabel II — traversée vers Triana",
+  "location": "Puente de Isabel II — le piège du fer",
+  "launch": "Lancer une fois engagé sur le pont, quand les grands arcs de fer sont visibles sans imposer un emplacement précis.",
+  "look": "Regardez les grands arcs de fer : ils semblent porter le tablier. La restauration des années 1970 a changé ce rôle.",
+  "summary": "OBSERVATION_REVEAL_THEN_SILENCE",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S01"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Sur le Puente de Isabel II, regardez les grands arcs de fer et les cercles qui donnent au pont sa silhouette si reconnaissable. Ils semblent porter tout le tablier. C’est le piège visuel. Le pont permanent ouvre en 1852, à l’emplacement de l’ancien pont de bateaux. Lors de la grande restauration de 1976 à 1977, le tablier est remplacé et les arcs historiques cessent d’assurer leur ancienne fonction porteuse. Le fer que vous admirez reste là comme forme patrimoniale, mais il ne travaille plus comme vous l’imaginez. Maintenant, laissez le pont tranquille. Regardez Triana devant vous et le centre derrière vous."
+    }
+  ]
+}

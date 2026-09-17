@@ -1,0 +1,31 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-FRI-AM-05",
+  "title": "Mercado de Triana — deux couches sous vos pas",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 5,
+  "stop": "Mercado de Triana / Castillo de San Jorge — niveau rue",
+  "location": "Mercado de Triana — deux couches sous vos pas",
+  "launch": "Lancer devant le marché; la scène doit fonctionner même si les étals commerciaux ne sont pas encore tous actifs.",
+  "look": "Regardez d’abord le marché tel qu’il vit maintenant : portes, arrivées, étals s’ils sont ouverts. Ne cherchez aucun accès souterrain.",
+  "summary": "PLACE_LAYER_LOOK_FIRST",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S03",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S04",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S05",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S06"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Devant le Mercado de Triana, commencez par regarder ce qui est réellement vivant maintenant : les portes, les arrivées, les étals si certains sont déjà ouverts. Ne cherchez pas un accès souterrain. Le contraste est sous vos pieds. Le marché occupe l’emplacement du Castillo de San Jorge, longtemps associé au Tribunal de l’Inquisition. Les réaménagements du marché ont remis au jour des vestiges, mais le site archéologique dédié est actuellement fermé. C’est justement ce qui rend la scène lisible sans visite : au-dessus, un lieu quotidien de nourriture et de voisinage; dessous, une couche d’histoire institutionnelle beaucoup plus dure. N’essayez pas d’en faire un musée mental. Regardez d’abord le marché comme marché. Puis gardez simplement cette seconde couche en tête."
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+name: J4 Seville V2 Friday audio qualification
+
+on:
+  push:
+    branches: [seville-v2-j4-audio-production]
+    paths:
+      - "series/seville-discovery-v2/audio/**"
+      - "tests/test_seville_v2_friday_audio_production.py"
+      - ".github/workflows/seville-v2-j4-friday-audio.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render-and-qualify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Validate deterministic J4 source contract
+        run: python -m unittest tests.test_seville_v2_friday_audio_production -v
+      - name: Checkout pinned Audio Engine
+        uses: actions/checkout@v6
+        with:
+          repository: stefm78/audio-engine
+          ref: 3392d4f22f0a9b054a05b5c05a7856985c0ab030
+          path: .audio-engine
+      - name: Install pinned Audio Engine
+        run: python -m pip install --disable-pip-version-check ./.audio-engine
+      - name: Render and decode all Friday primary scenes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p generated/j4-friday
+          while IFS= read -r program; do
+            program_id="$(python -c 'import json,sys; print(json.load(open(sys.argv[1], encoding="utf-8"))["id"])' "$program")"
+            audio-engine render "$program" --out generated/audio > "generated/j4-friday/${program_id}-render.json"
+            audio-engine timing "$program" --out generated/audio > "generated/j4-friday/${program_id}-timing.json"
+            test -s "generated/audio/${program_id}/audio.mp3"
+            test -s "generated/audio/${program_id}/manifest.json"
+            ffmpeg -v error -i "generated/audio/${program_id}/audio.mp3" -f null -
+          done < <(python - <<'PY'
+          import json
+          from pathlib import Path
+          manifest = json.loads(Path("series/seville-discovery-v2/audio/FRIDAY_MORNING_AUDIO_MANIFEST.json").read_text(encoding="utf-8"))
+          for entry in manifest["entries"]:
+              print(entry["program_path"])
+          PY
+          )
+      - name: Materialize qualification evidence
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import subprocess
+          from pathlib import Path
+
+          source = json.loads(Path("series/seville-discovery-v2/audio/FRIDAY_MORNING_AUDIO_MANIFEST.json").read_text(encoding="utf-8"))
+          evidence = {
+              "schema": "recit.seville-v2.j4-render-evidence.v1",
+              "status": "PASS",
+              "audio_engine_pin": source["production_contract"]["audio_engine_pin"],
+              "expected": len(source["entries"]),
+              "produced": 0,
+              "decode_passed": 0,
+              "entries": [],
+          }
+          for entry in source["entries"]:
+              root = Path("generated/audio") / entry["scene_id"]
+              audio = root / "audio.mp3"
+              manifest = root / "manifest.json"
+              transcript = root / "transcript.json"
+              duration = float(subprocess.check_output([
+                  "ffprobe", "-v", "error", "-show_entries", "format=duration",
+                  "-of", "default=noprint_wrappers=1:nokey=1", str(audio)
+              ], text=True).strip())
+              if duration <= 0:
+                  raise SystemExit(f"non-positive duration: {entry['scene_id']}")
+              item = {
+                  "scene_id": entry["scene_id"],
+                  "audio_sha256": hashlib.sha256(audio.read_bytes()).hexdigest(),
+                  "manifest_sha256": hashlib.sha256(manifest.read_bytes()).hexdigest(),
+                  "duration_seconds": round(duration, 3),
+                  "audio_bytes": audio.stat().st_size,
+                  "transcript_present": transcript.is_file(),
+                  "decode": "PASS",
+              }
+              evidence["entries"].append(item)
+              evidence["produced"] += 1
+              evidence["decode_passed"] += 1
+          if evidence["produced"] != evidence["expected"]:
+              evidence["status"] = "FAIL"
+              raise SystemExit("render cardinality mismatch")
+          Path("generated/j4-friday/qualification.json").write_text(
+              json.dumps(evidence, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          print(json.dumps(evidence, ensure_ascii=False, indent=2))
+          PY
+      - name: Upload J4 Friday qualification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: seville-v2-j4-friday-audio
+          path: |
+            generated/j4-friday
+            generated/audio/SEV2-FRI-AM-*/audio.mp3
+            generated/audio/SEV2-FRI-AM-*/manifest.json
+            generated/audio/SEV2-FRI-AM-*/transcript.json
+          if-no-files-found: error
+          retention-days: 7

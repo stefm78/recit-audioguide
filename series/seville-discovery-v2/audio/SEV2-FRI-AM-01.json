@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-FRI-AM-01",
+  "title": "Plaza de Armas — un bord de ville recousu",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 1,
+  "stop": "NH Sevilla Plaza de Armas → Reyes Católicos",
+  "location": "Plaza de Armas — un bord de ville recousu",
+  "launch": "Lancer en quittant le NH et en prenant la direction du fleuve; ne demander aucune recherche de façade.",
+  "look": "Si l’ancienne gare est naturellement visible, regardez sa grande masse de brique; sinon continuez simplement vers le fleuve.",
+  "summary": "WALKING_CONTEXT_CONDITIONAL",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S14",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S15"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "En sortant du NH, ne cherchez pas encore la Séville des cartes postales. Prenez la direction du fleuve. Si l’ancienne gare de Plaza de Armas est naturellement dans votre champ de vision, regardez sa grande masse de brique. Cette gare de Córdoba a été construite entre 1899 et 1901. Pendant des décennies, les voies ont fait de ce bord de ville une vraie coupure autant qu’un point de départ. Avant l’Expo 92, la gare a cessé son activité ferroviaire et les voies de Torneo ont disparu. Le bord ouest s’est rouvert vers le fleuve. Gardez cette idée : à Séville, un paysage qui paraît ancien peut avoir été profondément recousu il y a seulement quelques décennies. Continuez vers Reyes Católicos. Le fleuve arrive avant les monuments."
+    }
+  ]
+}
