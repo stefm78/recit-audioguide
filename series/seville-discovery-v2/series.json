@@ -447,5 +447,85 @@
       "audio_manifest_url": "../../data/seville-discovery-v2/assets/audio/SEV2-SUN-09/manifest.json",
       "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json"
     }
-  ]
+  ],
+  "live_field_override": {
+    "schema": "recit.seville-v2.live-field-override.v1",
+    "status": "ACTIVE",
+    "date": "2026-09-18",
+    "activated_local": "2026-09-18T10:25:14+02:00",
+    "reason": "Late start from NH plus Pje. de Vila unavailable before 11:00; original Triana/Arenal morning loop is incompatible with the protected 12:10 Cathedral booking.",
+    "authority": "series/seville-discovery-v2/live/FIELD_PLAN_2026-09-18.json",
+    "current_sequence": [
+      {
+        "kind": "SCENE",
+        "id": "SEV2-FRI-AM-01",
+        "disposition": "ACTIVE_NOW",
+        "note": "Use around Plaza de Armas / old station only; no Triana continuation."
+      },
+      {
+        "kind": "OPTIONAL_SCENE",
+        "id": "SEV2-FRI-AM-02",
+        "disposition": "ONLY_IF_CLOCK_ALLOWS",
+        "note": "Very short river glance only; skip automatically if it threatens NH return."
+      },
+      {
+        "kind": "LOGISTICS",
+        "id": "LIVE-NH-RETURN",
+        "target_local": "10:34-10:36",
+        "label": "Retour NH et récupération des bagages"
+      },
+      {
+        "kind": "LOGISTICS",
+        "id": "LIVE-TAXI-PJE-VILA",
+        "target_local": "10:40-11:00",
+        "label": "Taxi/VTC NH → Pje. de Vila"
+      },
+      {
+        "kind": "LOGISTICS",
+        "id": "LIVE-BAG-DROP",
+        "target_local": "11:00-11:10",
+        "label": "Dépôt bagages Pje. de Vila"
+      },
+      {
+        "kind": "TRANSFER",
+        "id": "LIVE-PJE-CATHEDRAL",
+        "target_local": "11:10-11:45",
+        "label": "Pje. de Vila → secteur Cathédrale, direct"
+      },
+      {
+        "kind": "BOOKING",
+        "id": "seville-discovery-ep04",
+        "target_local": "12:10",
+        "label": "Cathédrale + Giralda",
+        "source_series": "seville-discovery"
+      },
+      {
+        "kind": "BREAK",
+        "id": "LIVE-POST-CATHEDRAL",
+        "label": "Déjeuner / récupération, durée adaptative"
+      },
+      {
+        "kind": "BOOKING",
+        "id": "seville-discovery-ep02",
+        "target_local": "17:00",
+        "label": "Real Alcázar",
+        "source_series": "seville-discovery"
+      }
+    ],
+    "deferred_original_friday_scene_ids": [
+      "SEV2-FRI-AM-03",
+      "SEV2-FRI-AM-04",
+      "SEV2-FRI-AM-05",
+      "SEV2-FRI-AM-06",
+      "SEV2-FRI-AM-07",
+      "SEV2-FRI-AM-08"
+    ],
+    "policy": {
+      "protect_bookings": true,
+      "no_detour_to_recover_skipped_scene": true,
+      "real_conditions_override_original_route": true,
+      "preserve_audio_bytes": true,
+      "preserve_v1": true
+    }
+  }
 }
