@@ -111,3 +111,24 @@ def test_generic_map_is_collapsible_and_supports_mixed_modes_without_seville_log
     assert ".visit-map-shell.collapsed" in css
     assert "seville" not in visit_map
     assert "sevilla" not in visit_map
+
+
+def test_v2_live_override_controls_audio_first_start_without_series_specific_code():
+    v2_base = ROOT / "series" / "seville-discovery-v2"
+    experience = json.loads((v2_base / "assets" / "visit-experience.json").read_text(encoding="utf-8"))
+    next_step = (ROOT / "web" / "next-step.js").read_text(encoding="utf-8")
+
+    live = experience["live_field_override"]
+    assert live["enabled"] is True
+    assert live["current_primary_scene_id"] == "SEV2-SAT-05"
+
+    assert "liveOverrideStartIndex" in next_step
+    assert "live_field_override" in next_step
+    assert "current_primary_scene_id" in next_step
+    assert "index >= overrideIndex" in next_step
+    assert "experience?.episodes?.[episode.id]" in next_step
+    assert ".series-hero .resume" in next_step
+
+    # Keep the frontend generic: the data chooses the scene, not hard-coded Seville logic.
+    assert "SEV2-SAT-05" not in next_step
+    assert "Pje. de Vila" not in next_step
