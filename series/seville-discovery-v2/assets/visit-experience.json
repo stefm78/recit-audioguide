@@ -449,5 +449,26 @@
       ],
       "optional_depth_links": []
     }
+  },
+  "live_field_override": {
+    "enabled": true,
+    "date": "2026-09-18",
+    "authority": "../live/FIELD_PLAN_2026-09-18.json",
+    "current_primary_scene_id": "SEV2-FRI-AM-01",
+    "optional_next_scene_id": "SEV2-FRI-AM-02",
+    "hard_return_to_nh_local": "10:34-10:36",
+    "next_protected_booking": {
+      "id": "seville-discovery-ep04",
+      "label": "Cathédrale + Giralda",
+      "time_local": "12:10"
+    },
+    "deferred_primary_scene_ids": [
+      "SEV2-FRI-AM-03",
+      "SEV2-FRI-AM-04",
+      "SEV2-FRI-AM-05",
+      "SEV2-FRI-AM-06",
+      "SEV2-FRI-AM-07",
+      "SEV2-FRI-AM-08"
+    ]
   }
 }
