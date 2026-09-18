@@ -1,0 +1,120 @@
+{
+  "schema": "recit.seville-v2.live-field-plan.v1",
+  "status": "ACTIVE_FIELD_OVERRIDE",
+  "date": "2026-09-18",
+  "branch": "seville-v2-live-field-2026-09-18",
+  "baseline_main_sha": "0d251fdc870bb8958e64cdb16d5d0d1860824434",
+  "purpose": "Adapt the released V2 route to real field timing without mutating the qualified V2 release while the visit is in progress.",
+  "clock_anchor_local": "2026-09-18T10:22:19+02:00",
+  "immutable_today": {
+    "cathedral_slot_local": "12:10",
+    "alcazar_slot_local": "17:00",
+    "pje_de_vila_access_not_before_local": "11:00",
+    "v1_fallback_unchanged": true,
+    "qualified_audio_bytes_unchanged": true
+  },
+  "operating_rules": [
+    "Prefer real field conditions over the original route.",
+    "Never chase a skipped scene by creating a detour.",
+    "Protect booked monuments first.",
+    "Reuse already-qualified V1/V2 scenes when they naturally lie on the revised path.",
+    "Logistics legs may be intentional silence.",
+    "Update this field plan at each material checkpoint while the visit is in progress."
+  ],
+  "checkpoints": [
+    {
+      "id": "F18-C01",
+      "label": "NH micro-loop",
+      "target_window_local": "10:22-10:36",
+      "mode": "WALK",
+      "status": "ACTIVE",
+      "route_intent": "Short loop around NH / old Plaza de Armas station, then immediate return to NH.",
+      "reuse": [
+        "SEV2-FRI-AM-01"
+      ],
+      "optional_reuse_if_time": [
+        "SEV2-FRI-AM-02"
+      ],
+      "abort_rule": "At 10:34 local, turn back to NH regardless of remaining curiosity."
+    },
+    {
+      "id": "F18-C02",
+      "label": "Recover bags and taxi",
+      "target_window_local": "10:36-11:00",
+      "mode": "LOGISTICS_SILENCE",
+      "status": "PLANNED",
+      "route_intent": "NH -> Pje. de Vila by taxi/VTC.",
+      "reuse": [],
+      "abort_rule": "No sightseeing stop."
+    },
+    {
+      "id": "F18-C03",
+      "label": "Pje de Vila bag drop",
+      "target_window_local": "11:00-11:10",
+      "mode": "LOGISTICS_SILENCE",
+      "status": "PLANNED",
+      "route_intent": "Deposit bags immediately when access opens.",
+      "reuse": []
+    },
+    {
+      "id": "F18-C04",
+      "label": "Pje de Vila -> Cathedral sector",
+      "target_window_local": "11:10-11:45",
+      "mode": "WALK",
+      "status": "PLANNED",
+      "route_intent": "Direct walking line toward Catedral de Sevilla. One micro-scene is allowed only if it lies naturally on the route.",
+      "reuse_if_on_path": [
+        "SEV2-SAT-01"
+      ],
+      "skip_rule": "If bags are not deposited by 11:10, skip all interpretation and walk directly to the Cathedral sector."
+    },
+    {
+      "id": "F18-C05",
+      "label": "Cathedral / Giralda",
+      "target_window_local": "11:45-14:00",
+      "mode": "BOOKED_VISIT",
+      "status": "PROTECTED",
+      "route_intent": "Be in the Cathedral sector by about 11:45 for the 12:10 booking.",
+      "reuse_v1": [
+        "seville-discovery-ep04"
+      ]
+    },
+    {
+      "id": "F18-C06",
+      "label": "Post-Cathedral recovery",
+      "target_window_local": "AFTER_CATHEDRAL",
+      "mode": "BREAK",
+      "status": "ADAPTIVE",
+      "route_intent": "Lunch/rest first; exact shape decided from actual Cathedral exit time."
+    },
+    {
+      "id": "F18-C07",
+      "label": "Real Alcázar",
+      "target_window_local": "16:30-17:00",
+      "mode": "BOOKED_VISIT",
+      "status": "PROTECTED",
+      "route_intent": "Protect the 17:00 Alcázar booking.",
+      "reuse_v1": [
+        "seville-discovery-ep02"
+      ]
+    }
+  ],
+  "deferred_from_original_friday": {
+    "reason": "Late field start and 11:00 accommodation access make the original Triana/Arenal morning loop incompatible with the 12:10 Cathedral booking.",
+    "scenes": [
+      "SEV2-FRI-AM-02",
+      "SEV2-FRI-AM-03",
+      "SEV2-FRI-AM-04",
+      "SEV2-FRI-AM-05",
+      "SEV2-FRI-AM-06",
+      "SEV2-FRI-AM-07",
+      "SEV2-FRI-AM-08"
+    ],
+    "disposition": "DEFER_NOT_CHASE_TODAY",
+    "note": "SEV2-FRI-AM-02 may still be used opportunistically during the NH micro-loop only if the real clock permits."
+  },
+  "next_live_decision": {
+    "trigger": "User reaches the old Plaza de Armas station / completes first micro-step.",
+    "decision": "Either add a very short river glance or turn directly back to NH based on actual time."
+  }
+}
