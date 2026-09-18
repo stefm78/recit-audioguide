@@ -166,9 +166,36 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          mapfile -t changed < <(git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- 'series/**/audio/*.json')
+          mapfile -t candidates < <(git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- 'series/**/audio/*.json')
+          changed=()
+          for candidate in "${candidates[@]}"; do
+            if python - "$candidate" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+try:
+    data = json.loads(path.read_text(encoding="utf-8"))
+except (OSError, json.JSONDecodeError):
+    raise SystemExit(1)
+
+segments = data.get("segments")
+is_program = (
+    isinstance(data.get("id"), str) and bool(data["id"].strip())
+    and isinstance(data.get("title"), str) and bool(data["title"].strip())
+    and isinstance(segments, list) and bool(segments)
+)
+raise SystemExit(0 if is_program else 1)
+PY
+            then
+              changed+=("$candidate")
+            else
+              echo "Skipping non-renderable audio JSON: $candidate"
+            fi
+          done
           if [[ ${#changed[@]} -eq 0 ]]; then
-            echo "No changed audio programs."
+            echo "No changed renderable audio programs."
             mkdir -p generated/audio-previews
             echo '{"changed_programs":0}' > generated/audio-previews/report.json
             exit 0
