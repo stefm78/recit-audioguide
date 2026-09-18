@@ -8,6 +8,7 @@ AUDIO_PREFIXES = (
 )
 
 AUDIO_EXACT = {
+    ".github/workflows/pages.yml",
     "series/sound-direction-catalog.json",
     "tools/production.py",
     "tools/sound_direction.py",

@@ -13,14 +13,15 @@ class ChangeRoutingTests(unittest.TestCase):
         self.assertFalse(result["audio_needed"])
         self.assertFalse(result["build_needed"])
 
-    def test_pages_workflow_change_rebuilds_without_audio(self):
+    def test_pages_workflow_change_requires_full_audio_qualification(self):
         result = classify([
             ".github/workflows/pages.yml",
             "tools/ci_changes.py",
             "tests/test_ci_changes.py",
         ])
-        self.assertFalse(result["audio_needed"])
+        self.assertTrue(result["audio_needed"])
         self.assertTrue(result["build_needed"])
+        self.assertIn(".github/workflows/pages.yml", result["audio_reasons"])
 
     def test_program_change_requires_audio_and_build(self):
         result = classify(["series/orleans-cathedral/audio/orleans-cathedral-ep01.json"])
