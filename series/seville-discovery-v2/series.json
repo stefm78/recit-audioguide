@@ -452,45 +452,51 @@
     "schema": "recit.seville-v2.live-field-override.v1",
     "status": "ACTIVE",
     "date": "2026-09-18",
-    "activated_local": "2026-09-18T10:25:14+02:00",
-    "reason": "Late start from NH plus Pje. de Vila unavailable before 11:00; original Triana/Arenal morning loop is incompatible with the protected 12:10 Cathedral booking.",
+    "activated_local": "2026-09-18T11:00:00+02:00",
+    "reason": "User rebased today's live V2 to start at Pje. de Vila. All NH/Plaza de Armas activity is pre-T0 and excluded; the 12:10 Cathedral and 17:00 Alcázar bookings remain protected.",
     "authority": "series/seville-discovery-v2/live/FIELD_PLAN_2026-09-18.json",
+    "start_anchor": {
+      "label": "Pje. de Vila, 11",
+      "not_before_local": "11:00",
+      "pre_t0_activity": "OUT_OF_SCOPE"
+    },
     "current_sequence": [
-      {
-        "kind": "SCENE",
-        "id": "SEV2-FRI-AM-01",
-        "disposition": "ACTIVE_NOW",
-        "note": "Use around Plaza de Armas / old station only; no Triana continuation."
-      },
-      {
-        "kind": "OPTIONAL_SCENE",
-        "id": "SEV2-FRI-AM-02",
-        "disposition": "ONLY_IF_CLOCK_ALLOWS",
-        "note": "Very short river glance only; skip automatically if it threatens NH return."
-      },
-      {
-        "kind": "LOGISTICS",
-        "id": "LIVE-NH-RETURN",
-        "target_local": "10:34-10:36",
-        "label": "Retour NH et récupération des bagages"
-      },
-      {
-        "kind": "LOGISTICS",
-        "id": "LIVE-TAXI-PJE-VILA",
-        "target_local": "10:40-11:00",
-        "label": "Taxi/VTC NH → Pje. de Vila"
-      },
       {
         "kind": "LOGISTICS",
         "id": "LIVE-BAG-DROP",
         "target_local": "11:00-11:10",
-        "label": "Dépôt bagages Pje. de Vila"
+        "label": "Dépôt bagages Pje. de Vila — début effectif V2"
+      },
+      {
+        "kind": "SCENE",
+        "id": "SEV2-SAT-05",
+        "disposition": "PLAY_IF_NATURALLY_ON_CORRIDOR",
+        "label": "Plaza de Doña Elvira"
+      },
+      {
+        "kind": "SCENE",
+        "id": "SEV2-SAT-06",
+        "disposition": "PLAY_WHILE_MOVING",
+        "label": "Patio de Banderas"
+      },
+      {
+        "kind": "SCENE",
+        "id": "SEV2-SAT-07",
+        "disposition": "PLAY_IF_CLOCK_COMFORTABLE",
+        "label": "Plaza del Triunfo / Archivo"
+      },
+      {
+        "kind": "OPTIONAL_SCENE",
+        "id": "SEV2-SAT-08",
+        "disposition": "FIRST_TO_DROP",
+        "latest_start_local": "11:50",
+        "label": "Archivo — seulement si marge confortable"
       },
       {
         "kind": "TRANSFER",
-        "id": "LIVE-PJE-CATHEDRAL",
-        "target_local": "11:10-11:45",
-        "label": "Pje. de Vila → secteur Cathédrale, direct"
+        "id": "LIVE-CATHEDRAL-CHECKIN",
+        "target_local": "11:50-12:00",
+        "label": "Accès Cathédrale — fin de l'interprétation"
       },
       {
         "kind": "BOOKING",
@@ -513,6 +519,8 @@
       }
     ],
     "deferred_original_friday_scene_ids": [
+      "SEV2-FRI-AM-01",
+      "SEV2-FRI-AM-02",
       "SEV2-FRI-AM-03",
       "SEV2-FRI-AM-04",
       "SEV2-FRI-AM-05",
@@ -524,6 +532,9 @@
       "protect_bookings": true,
       "no_detour_to_recover_skipped_scene": true,
       "real_conditions_override_original_route": true,
+      "field_scope_starts_at_pje_de_vila": true,
+      "cathedral_arrival_target_local": "12:00",
+      "hard_interpretation_cutoff_local": "11:55",
       "preserve_audio_bytes": true,
       "preserve_v1": true
     }
