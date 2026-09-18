@@ -1,0 +1,179 @@
+{
+  "schema": "recit.seville-v2.live-field-plan.v1",
+  "status": "ACTIVE_FIELD_OVERRIDE",
+  "date": "2026-09-18",
+  "branch": "seville-v2-live-field-2026-09-18",
+  "baseline_main_sha": "0d251fdc870bb8958e64cdb16d5d0d1860824434",
+  "purpose": "Run today's adjusted V2 from Pje. de Vila as field T0, excluding every pre-T0 NH/Plaza de Armas segment while protecting the released V2 assets and timed monument bookings.",
+  "clock_anchor_local": "2026-09-18T11:00:00+02:00",
+  "immutable_today": {
+    "cathedral_slot_local": "12:10",
+    "alcazar_slot_local": "17:00",
+    "pje_de_vila_access_not_before_local": "11:00",
+    "v1_fallback_unchanged": true,
+    "qualified_audio_bytes_unchanged": true,
+    "cathedral_arrival_target_local": "12:00",
+    "field_t0": "Pje. de Vila, 11"
+  },
+  "operating_rules": [
+    "Field scope starts at Pje. de Vila after the 11:00 access/bag-drop step; NH, Plaza de Armas and every earlier segment are out of scope for this execution.",
+    "Prefer real field conditions over the original route.",
+    "Never chase a skipped scene by creating a detour or backtrack.",
+    "Protect booked monuments first; target the Cathedral access point by 12:00 for the 12:10 booking.",
+    "Reuse only already-qualified V2 scenes when they lie naturally on the Pje. de Vila -> Cathedral corridor.",
+    "Logistics legs may be intentional silence.",
+    "If timing, crowding or navigation becomes uncertain, drop narration before dropping the protected booking.",
+    "Update this field plan at each material checkpoint while the visit is in progress."
+  ],
+  "checkpoints": [
+    {
+      "id": "F18-C03",
+      "label": "Pje. de Vila — T0 / bag drop",
+      "target_window_local": "11:00-11:10",
+      "mode": "LOGISTICS_SILENCE",
+      "status": "ACTIVE_START",
+      "route_intent": "Field V2 begins here. Deposit bags, then start the live guide from Pje. de Vila; no pre-11:00 content is part of this execution.",
+      "reuse": []
+    },
+    {
+      "id": "F18-C04",
+      "label": "Pje. de Vila -> Plaza de Doña Elvira",
+      "target_window_local": "11:10-11:25",
+      "mode": "WALK_SCENE",
+      "status": "PLANNED",
+      "route_intent": "Walk naturally through Santa Cruz toward Plaza de Doña Elvira without any recovery detour.",
+      "reuse": [
+        "SEV2-SAT-05"
+      ],
+      "abort_rule": "If the route or clock becomes uncertain, keep walking toward the Cathedral sector and skip the scene."
+    },
+    {
+      "id": "F18-C05",
+      "label": "Doña Elvira -> Patio de Banderas",
+      "target_window_local": "11:25-11:35",
+      "mode": "WALK_SCENE",
+      "status": "PLANNED",
+      "route_intent": "Continue toward Patio de Banderas on the natural Cathedral approach.",
+      "reuse": [
+        "SEV2-SAT-06"
+      ],
+      "abort_rule": "No stop is required; the scene may be heard while moving."
+    },
+    {
+      "id": "F18-C06",
+      "label": "Patio de Banderas -> Plaza del Triunfo / Archivo",
+      "target_window_local": "11:35-11:50",
+      "mode": "WALK_SCENE",
+      "status": "PLANNED",
+      "route_intent": "Use the opening onto Plaza del Triunfo to reframe Cathedral and Archivo together, staying on the booked-visit approach.",
+      "reuse": [
+        "SEV2-SAT-07"
+      ],
+      "optional_reuse_if_time": [
+        "SEV2-SAT-08"
+      ],
+      "abort_rule": "SEV2-SAT-08 is first to drop. Do not enter the Archivo and do not wait for it."
+    },
+    {
+      "id": "F18-C07",
+      "label": "Cathedral access buffer",
+      "target_window_local": "11:50-12:00",
+      "mode": "BOOKING_APPROACH_SILENCE",
+      "status": "PROTECTED",
+      "route_intent": "End interpretation, follow the ticket's actual access instructions and be at the Cathedral access point by about 12:00.",
+      "reuse": [],
+      "abort_rule": "At 11:55, or earlier if access is unclear, all remaining interpretation stops immediately."
+    },
+    {
+      "id": "F18-C08",
+      "label": "Cathedral / Giralda",
+      "target_window_local": "12:10",
+      "mode": "BOOKED_VISIT",
+      "status": "PROTECTED",
+      "route_intent": "Protect the 12:10 booked entry.",
+      "reuse_v1": [
+        "seville-discovery-ep04"
+      ]
+    },
+    {
+      "id": "F18-C09",
+      "label": "Post-Cathedral recovery",
+      "target_window_local": "AFTER_CATHEDRAL",
+      "mode": "BREAK",
+      "status": "ADAPTIVE",
+      "route_intent": "Lunch/rest first; exact shape decided from actual Cathedral exit time."
+    },
+    {
+      "id": "F18-C10",
+      "label": "Real Alcázar",
+      "target_window_local": "16:30-17:00",
+      "mode": "BOOKED_VISIT",
+      "status": "PROTECTED",
+      "route_intent": "Protect the 17:00 Alcázar booking.",
+      "reuse_v1": [
+        "seville-discovery-ep02"
+      ]
+    }
+  ],
+  "deferred_from_original_friday": {
+    "reason": "The live V2 now starts at Pje. de Vila; the original Friday Triana/Arenal sequence is not chased today.",
+    "scenes": [
+      "SEV2-FRI-AM-03",
+      "SEV2-FRI-AM-04",
+      "SEV2-FRI-AM-05",
+      "SEV2-FRI-AM-06",
+      "SEV2-FRI-AM-07",
+      "SEV2-FRI-AM-08"
+    ],
+    "disposition": "DEFER_NOT_CHASE_TODAY",
+    "note": "Do not create a detour or backtrack to recover any Friday morning scene."
+  },
+  "next_live_decision": {
+    "trigger": "User confirms bag drop / readiness to leave Pje. de Vila.",
+    "decision": "Start toward Plaza de Doña Elvira; use SEV2-SAT-05 -> 06 -> 07 on the natural corridor, add 08 only with comfortable time, and cut all interpretation by 11:55 at the latest."
+  },
+  "current_checkpoint_id": "F18-C03",
+  "current_decision": {
+    "at_local": "11:00",
+    "decision": "V2 field execution begins at Pje. de Vila. Pre-11:00 NH/Plaza de Armas content is excluded. Use the qualified Santa Cruz -> Patio de Banderas -> Plaza del Triunfo/Archivo corridor, then protect Cathedral arrival by 12:00.",
+    "protected": [
+      "Cathédrale 12:10",
+      "Alcázar 17:00"
+    ]
+  },
+  "field_scope": {
+    "t0_label": "Pje. de Vila, 11",
+    "t0_not_before_local": "11:00",
+    "pre_t0_activity": "OUT_OF_SCOPE",
+    "cathedral_arrival_target_local": "12:00",
+    "cathedral_booking_local": "12:10",
+    "alcazar_booking_local": "17:00"
+  },
+  "pre_t0_excluded": {
+    "disposition": "OUT_OF_SCOPE_NOT_DEFERRED",
+    "events": [
+      "SEV2-FRI-AM-01",
+      "SEV2-FRI-AM-02",
+      "LIVE-NH-RETURN",
+      "LIVE-TAXI-PJE-VILA"
+    ],
+    "reason": "User explicitly rebased the V2 execution to start from Pje. de Vila."
+  },
+  "playtest_oracle": {
+    "pass_conditions": [
+      "First live field unit is Pje. de Vila, not NH or Plaza de Armas.",
+      "No pre-T0 scene is presented as current or next.",
+      "Doña Elvira, Patio de Banderas and Plaza del Triunfo/Archivo are used only when naturally on the Cathedral corridor.",
+      "No new audio is generated and all reused scene IDs already exist in the qualified V2 release.",
+      "The route has a hard interpretation cutoff and protects Cathedral arrival around 12:00.",
+      "The 17:00 Alcázar booking remains protected and unchanged."
+    ],
+    "compression_order": [
+      "SEV2-SAT-08",
+      "SEV2-SAT-07",
+      "SEV2-SAT-06",
+      "SEV2-SAT-05"
+    ],
+    "final_fallback": "DIRECT_WALK_TO_CATHEDRAL_ACCESS"
+  }
+}

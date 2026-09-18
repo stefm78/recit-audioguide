@@ -447,5 +447,96 @@
       "audio_manifest_url": "../../data/seville-discovery-v2/assets/audio/SEV2-SUN-09/manifest.json",
       "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json"
     }
-  ]
+  ],
+  "live_field_override": {
+    "schema": "recit.seville-v2.live-field-override.v1",
+    "status": "ACTIVE",
+    "date": "2026-09-18",
+    "activated_local": "2026-09-18T11:00:00+02:00",
+    "reason": "User rebased today's live V2 to start at Pje. de Vila. All NH/Plaza de Armas activity is pre-T0 and excluded; the 12:10 Cathedral and 17:00 Alcázar bookings remain protected.",
+    "authority": "series/seville-discovery-v2/live/FIELD_PLAN_2026-09-18.json",
+    "start_anchor": {
+      "label": "Pje. de Vila, 11",
+      "not_before_local": "11:00",
+      "pre_t0_activity": "OUT_OF_SCOPE"
+    },
+    "current_sequence": [
+      {
+        "kind": "LOGISTICS",
+        "id": "LIVE-BAG-DROP",
+        "target_local": "11:00-11:10",
+        "label": "Dépôt bagages Pje. de Vila — début effectif V2"
+      },
+      {
+        "kind": "SCENE",
+        "id": "SEV2-SAT-05",
+        "disposition": "PLAY_IF_NATURALLY_ON_CORRIDOR",
+        "label": "Plaza de Doña Elvira"
+      },
+      {
+        "kind": "SCENE",
+        "id": "SEV2-SAT-06",
+        "disposition": "PLAY_WHILE_MOVING",
+        "label": "Patio de Banderas"
+      },
+      {
+        "kind": "SCENE",
+        "id": "SEV2-SAT-07",
+        "disposition": "PLAY_IF_CLOCK_COMFORTABLE",
+        "label": "Plaza del Triunfo / Archivo"
+      },
+      {
+        "kind": "OPTIONAL_SCENE",
+        "id": "SEV2-SAT-08",
+        "disposition": "FIRST_TO_DROP",
+        "latest_start_local": "11:50",
+        "label": "Archivo — seulement si marge confortable"
+      },
+      {
+        "kind": "TRANSFER",
+        "id": "LIVE-CATHEDRAL-CHECKIN",
+        "target_local": "11:50-12:00",
+        "label": "Accès Cathédrale — fin de l'interprétation"
+      },
+      {
+        "kind": "BOOKING",
+        "id": "seville-discovery-ep04",
+        "target_local": "12:10",
+        "label": "Cathédrale + Giralda",
+        "source_series": "seville-discovery"
+      },
+      {
+        "kind": "BREAK",
+        "id": "LIVE-POST-CATHEDRAL",
+        "label": "Déjeuner / récupération, durée adaptative"
+      },
+      {
+        "kind": "BOOKING",
+        "id": "seville-discovery-ep02",
+        "target_local": "17:00",
+        "label": "Real Alcázar",
+        "source_series": "seville-discovery"
+      }
+    ],
+    "deferred_original_friday_scene_ids": [
+      "SEV2-FRI-AM-01",
+      "SEV2-FRI-AM-02",
+      "SEV2-FRI-AM-03",
+      "SEV2-FRI-AM-04",
+      "SEV2-FRI-AM-05",
+      "SEV2-FRI-AM-06",
+      "SEV2-FRI-AM-07",
+      "SEV2-FRI-AM-08"
+    ],
+    "policy": {
+      "protect_bookings": true,
+      "no_detour_to_recover_skipped_scene": true,
+      "real_conditions_override_original_route": true,
+      "field_scope_starts_at_pje_de_vila": true,
+      "cathedral_arrival_target_local": "12:00",
+      "hard_interpretation_cutoff_local": "11:55",
+      "preserve_audio_bytes": true,
+      "preserve_v1": true
+    }
+  }
 }

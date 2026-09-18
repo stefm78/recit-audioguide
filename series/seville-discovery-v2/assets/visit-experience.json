@@ -449,5 +449,42 @@
       ],
       "optional_depth_links": []
     }
+  },
+  "live_field_override": {
+    "enabled": true,
+    "date": "2026-09-18",
+    "authority": "../live/FIELD_PLAN_2026-09-18.json",
+    "start_anchor": {
+      "label": "Pje. de Vila, 11",
+      "not_before_local": "11:00",
+      "pre_t0_activity": "OUT_OF_SCOPE"
+    },
+    "current_primary_scene_id": "SEV2-SAT-05",
+    "next_primary_scene_id": "SEV2-SAT-06",
+    "primary_corridor_scene_ids": [
+      "SEV2-SAT-05",
+      "SEV2-SAT-06",
+      "SEV2-SAT-07"
+    ],
+    "optional_corridor_scene_ids": [
+      "SEV2-SAT-08"
+    ],
+    "hard_cathedral_arrival_local": "12:00",
+    "hard_interpretation_cutoff_local": "11:55",
+    "next_protected_booking": {
+      "id": "seville-discovery-ep04",
+      "label": "Cathédrale + Giralda",
+      "time_local": "12:10"
+    },
+    "deferred_primary_scene_ids": [
+      "SEV2-FRI-AM-01",
+      "SEV2-FRI-AM-02",
+      "SEV2-FRI-AM-03",
+      "SEV2-FRI-AM-04",
+      "SEV2-FRI-AM-05",
+      "SEV2-FRI-AM-06",
+      "SEV2-FRI-AM-07",
+      "SEV2-FRI-AM-08"
+    ]
   }
 }
