@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SUN-09",
+  "title": "Fin du récit — protéger le départ",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 3,
+  "stop": "Sortie Bellas Artes → temps libre léger → récupération C. Agua 5 → taxi/VTC aéroport",
+  "location": "Fin du récit — protéger le départ",
+  "launch": "Lancer au moment de terminer le musée ou plus tôt si le timing impose de partir; cette scène ferme le récit et n’ajoute aucune destination.",
+  "look": "Le récit principal s’arrête ici. Gardez la suite légère : récupérez les bagages et protégez le départ aéroport plutôt que d’ajouter une dernière visite.",
+  "summary": "PROTECTED_EXIT",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#I10",
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S52"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Le récit principal s’arrête ici. Il reste du temps de ville, mais plus aucune obligation culturelle. Déjeunez ou marchez légèrement si le planning le permet, puis récupérez les bagages selon le plan accepté. Le départ taxi ou VTC vers l’aéroport reste protégé. Après trois jours à lire Séville dans l’eau, les rues, les pouvoirs, les archives, le spectacle et les images, la meilleure dernière scène est maintenant celle que le guide ne commente plus."
+    }
+  ]
+}

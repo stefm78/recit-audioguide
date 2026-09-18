@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SUN-04",
+  "title": "Checkout et bagages — priorité au réel",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 3,
+  "stop": "Maestranza → Pje. de Vila checkout → Storage luggage - Lockers Agua, C. Agua 5",
+  "location": "Checkout et bagages — priorité au réel",
+  "launch": "Lancer en sortant de la Maestranza, puis laisser le trajet de checkout et de dépôt des bagages se dérouler sans narration culturelle.",
+  "look": "Retournez au logement, faites le checkout puis déposez les bagages à C. Agua 5. Ici, le guide se tait volontairement.",
+  "summary": "SILENCE_LOGISTICS",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#I09",
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S51"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "La prochaine séquence n’a pas besoin d’histoire. Retournez directement à Pje. de Vila, faites le checkout, puis suivez le plan prévu vers Storage luggage - Lockers Agua, C. Agua 5. L’objectif est de protéger la journée et d’enlever les bagages de l’équation avant le musée. À partir d’ici, je me tais. Reprenez le guide lorsque les bagages sont déposés."
+    }
+  ]
+}

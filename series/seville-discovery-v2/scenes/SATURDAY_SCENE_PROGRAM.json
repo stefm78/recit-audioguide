@@ -1,0 +1,384 @@
+{
+  "schema": "recit.seville-v2.field-scene-program.v1",
+  "status": "J2_CANDIDATE",
+  "batch_id": "seville-v2-saturday-j1-accepted-2026-09-17",
+  "day": "day2",
+  "day_label": "Samedi 19 septembre",
+  "route_section": "Pje. de Vila 11 → Santa María la Blanca → Jardines de Murillo → Prado de San Sebastián → Plaza de España → Avenida de Isabel la Católica → Jardines de Murillo → Callejón del Agua → Plaza de Doña Elvira → Patio de Banderas → Plaza del Triunfo → Archivo General de Indias",
+  "research_authority": {
+    "artifact": "series/seville-discovery-v2/research/SATURDAY_FIELD_STORY_RESEARCH.md",
+    "source_manifest": "series/seville-discovery-v2/research/SOURCE_MANIFEST.md",
+    "research_artifact_blob_sha": "3388c176f6bf9a2f9e96fc7d5cbc7eae09111e97",
+    "source_manifest_blob_sha": "3fd297bb1238960ca50fee17659ef25e0aab593c"
+  },
+  "route_authority": {
+    "v1_series": "series/seville-discovery/series.json",
+    "v1_episode_ids": [
+      "seville-discovery-ep00",
+      "seville-discovery-ep05",
+      "seville-discovery-ep01",
+      "seville-discovery-ep03"
+    ],
+    "navigation_authority": "external_google_maps",
+    "rule": "J2 does not change route, bookings, logistics or navigation links."
+  },
+  "scene_count": 8,
+  "optional_depth_count": 5,
+  "integration_basis": "Same J3/J4 field-scene mapping as accepted Friday program; no UX/shared-code/audio/V1 mutation.",
+  "candidate_disposition": {
+    "primary": [
+      "J1-SAT-001",
+      "J1-SAT-002",
+      "J1-SAT-003",
+      "J1-SAT-004",
+      "J1-SAT-009",
+      "J1-SAT-012",
+      "J1-SAT-013",
+      "J1-SAT-014"
+    ],
+    "optional_depth": [
+      "J1-SAT-005",
+      "J1-SAT-006",
+      "J1-SAT-008",
+      "J1-SAT-010",
+      "J1-SAT-015"
+    ],
+    "excluded": {
+      "J1-SAT-007": "symbolic four-kingdom reading is weaker than direct evidence and not needed in the primary flow",
+      "J1-SAT-011": "Susona requires route drift and would add legend density without enough field value",
+      "J1-SAT-016": "temporary 2026 craft fair is a field condition, not durable narrative structure",
+      "J1-SAT-017": "exact temperature-difference figure lacks measurement context robust enough for field narration"
+    }
+  },
+  "scenes": [
+    {
+      "scene_id": "SEV2-SAT-01",
+      "order": 1,
+      "route_section": "Pje. de Vila 11 → Santa María la Blanca",
+      "trigger_or_launch_condition": "Lancer en passant naturellement devant Santa María la Blanca; ne demander aucune entrée dans l’église.",
+      "scene_type": "WALKING_HISTORY_BRIEF",
+      "short_label": "Santa María la Blanca — avant l’image de Santa Cruz",
+      "primary_cue": "Regardez seulement l’église et la rue : l’histoire du quartier commence ici avant les ruelles de carte postale.",
+      "spoken_text": "En quittant Pje. de Vila, la route passe par Santa María la Blanca avant d’entrer plus tard dans l’image touristique de Santa Cruz. Regardez seulement l’église et la rue; inutile d’entrer. Le lieu a été une synagogue au Moyen Âge. En 1391, les violences antijuives et les conversions forcées bouleversent la judería sévillane; l’édifice devient ensuite une église chrétienne, puis son intérieur est profondément transformé à l’époque baroque. Ce que vous voyez aujourd’hui ne raconte donc pas une continuité paisible. Gardez plutôt l’idée d’une ville faite de ruptures, de réemplois et de mémoires superposées. Continuez vers les Jardines de Murillo.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Église et axe de rue; aucune entrée ni détail intérieur requis.",
+      "fallback_behavior": {
+        "cannot_find": "Ne cherchez pas une façade ou une porte précise. Continuez vers les jardins; la scène fonctionne comme histoire de marche sur le secteur."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-SAT-02",
+        "relation": "APPROACH_MURILLO_GARDENS"
+      },
+      "candidate_refs": [
+        "J1-SAT-001"
+      ],
+      "source_refs": [
+        "S19"
+      ],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-SAT-02",
+      "order": 2,
+      "route_section": "Jardines de Murillo → Prado de San Sebastián",
+      "trigger_or_launch_condition": "Lancer lorsque les Jardines de Murillo sont accessibles ou clairement visibles depuis le parcours; ne jamais attendre devant une grille fermée.",
+      "scene_type": "SPATIAL_REFRAME_THEN_MOVE",
+      "short_label": "Jardines de Murillo — un passage ouvert au XXe siècle",
+      "primary_cue": "Regardez le mur de l’Alcázar, les chemins et l’ouverture vers la ville : ce passage public n’est pas un jardin resté intact depuis toujours.",
+      "spoken_text": "Dans les Jardines de Murillo, le vert donne facilement une impression d’ancienneté tranquille. Pourtant, ce seuil est aussi un projet urbain du début du vingtième siècle. Une partie de l’ancienne Huerta del Retiro de l’Alcázar est cédée à la ville en 1911 afin d’ouvrir davantage Santa Cruz vers San Bernardo. Un nouveau mur d’enceinte est construit et Juan Talavera y Heredia dessine les jardins publics dont la forme se met en place dans les années suivantes. Regardez donc moins un jardin « de toujours » qu’une couture entre le palais, le vieux quartier et la ville moderne. En sortant vers le Prado, laissez ensuite l’audio tranquille : Plaza de España mérite d’apparaître avant son commentaire.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Chemins, végétation, mur du secteur de l’Alcázar et transition vers des espaces plus ouverts.",
+      "fallback_behavior": {
+        "cannot_find": "Si un accès est fermé ou retardé, n’attendez pas. Suivez la navigation réelle et écoutez la scène depuis le premier point de vue naturel sur les jardins ou leur lisière."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-SAT-03",
+        "relation": "WHEN_PLAZA_DE_ESPANA_HAS_APPEARED"
+      },
+      "candidate_refs": [
+        "J1-SAT-002"
+      ],
+      "source_refs": [
+        "S20",
+        "S28"
+      ],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-SAT-03",
+      "order": 3,
+      "route_section": "Plaza de España — première lecture après la vue d’ensemble",
+      "trigger_or_launch_condition": "Lancer seulement après avoir laissé apparaître l’ensemble du demi-cercle et du canal sans commentaire.",
+      "scene_type": "TRIP_CONNECT_MATERIAL_REVEAL",
+      "short_label": "Plaza de España — Triana change d’échelle",
+      "primary_cue": "Après avoir regardé l’ensemble, revenez aux matériaux : brique, céramique et fer transforment ici le fil de Triana en décor monumental.",
+      "spoken_text": "Maintenant que vous avez vu l’ensemble, rapprochez-vous des matériaux. Hier, à Triana, la céramique appartenait à un quartier de production, de façades et de métiers. Ici, elle change d’échelle. Aníbal González associe brique apparente, céramiques polychromes et ferronnerie pour construire l’image monumentale de l’Exposition de 1929. Ce n’est donc pas seulement un décor « traditionnel » : des savoir-faire sévillans, notamment ceux de Triana, sont mobilisés pour fabriquer une représentation moderne de la ville à grande échelle. Gardez ce lien entre les deux jours. Vendredi, la matière était vécue au ras des rues; samedi, elle devient mise en scène monumentale.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Brique apparente, céramiques, ferronnerie, bancs et balustrades; aucun motif précis requis.",
+      "fallback_behavior": {
+        "cannot_find": "Ne cherchez aucun azulejo particulier. N’importe quelle combinaison clairement visible de brique, céramique et fer suffit."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-SAT-04",
+        "relation": "MOVE_TO_PROVINCIAL_BENCH_SEQUENCE"
+      },
+      "candidate_refs": [
+        "J1-SAT-003"
+      ],
+      "source_refs": [
+        "S22",
+        "S24"
+      ],
+      "optional_depth_links": [
+        "SEV2-SAT-D01"
+      ]
+    },
+    {
+      "scene_id": "SEV2-SAT-04",
+      "order": 4,
+      "route_section": "Plaza de España — bancs provinciaux",
+      "trigger_or_launch_condition": "Lancer lorsque plusieurs bancs provinciaux et leurs noms sont visibles; aucune position précise n’est requise.",
+      "scene_type": "LOOK_SEARCH_REVEAL",
+      "short_label": "Les bancs — cherchez Séville",
+      "primary_cue": "Lisez quelques noms de provinces puis cherchez « Sevilla ». L’échec fait partie de la scène.",
+      "spoken_text": "Regardez la suite des bancs de céramique et lisez deux ou trois noms. Maintenant, cherchez « Sevilla ». Prenez quelques instants. Vous pouvez arrêter : dans cette série, vous ne trouverez pas de banc provincial dédié à Séville. Les sources touristiques locales décrivent quarante-huit bancs provinciaux et expliquent cette absence par le fait que Séville est représentée ailleurs dans la place. Ce petit manque est plus intéressant qu’une liste complète : le dispositif organise une représentation du territoire selon les catégories et les choix de son époque. Gardez encore un moment pour regarder les images des bancs qui sont devant vous, pas pour les collectionner tous.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Suite de bancs/alcôves en céramique avec noms provinciaux.",
+      "silence": {
+        "mode": "USER_PAUSE",
+        "prompt": "Mettez l’audio en pause si vous voulez regarder un ou deux bancs de plus. Reprenez quand vous êtes prêt à quitter la place."
+      },
+      "fallback_behavior": {
+        "cannot_find": "Si la foule ou l’accès rend la lecture des noms difficile, ne faites pas le tour de la place. Le reveal reste valable sans vérifier chaque banc."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-SAT-05",
+        "relation": "AFTER_RETURN_THROUGH_MURILLO_AND_CALLEJON_DEL_AGUA"
+      },
+      "candidate_refs": [
+        "J1-SAT-004"
+      ],
+      "source_refs": [
+        "S22",
+        "S23"
+      ],
+      "optional_depth_links": [
+        "SEV2-SAT-D02"
+      ]
+    },
+    {
+      "scene_id": "SEV2-SAT-05",
+      "order": 5,
+      "route_section": "Plaza de Doña Elvira",
+      "trigger_or_launch_condition": "Lancer une fois arrivé dans la petite place; laisser d’abord quelques secondes au lieu avant le reveal.",
+      "scene_type": "LOOK_THEN_REFRAME_WITH_LABELLED_LEGEND",
+      "short_label": "Doña Elvira — l’ancien fabriqué",
+      "primary_cue": "Laissez d’abord la place paraître ancienne : arbres, fontaine, façades et petites entrées. Puis écoutez comment cette impression a été construite.",
+      "spoken_text": "À Plaza de Doña Elvira, regardez d’abord la petite échelle : les arbres, la fontaine, les bancs, les façades et les entrées de biais. Tout invite à imaginer un coin ancien resté intact. C’est précisément le piège intéressant. La forme actuelle de la place naît surtout du réaménagement de Santa Cruz entre 1911 et 1918, dans lequel Juan Talavera y Heredia joue un rôle majeur. Le pittoresque est donc aussi une construction moderne. Et le nom ajoute une seconde couche : une légende populaire sévillane relie le lieu à Doña Elvira et Don Gonzalo de Ulloa, personnages du monde littéraire de Don Juan Tenorio. Retenez bien le statut : c’est une légende littéraire locale, pas une biographie cachée dans les murs.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Petite place, végétation, fontaine, bancs, façades et entrées; aucun bâtiment unique requis.",
+      "fallback_behavior": {
+        "cannot_find": "Si la place est très encombrée, restez sur son bord. La scène dépend de l’échelle générale et non d’un détail précis."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-SAT-06",
+        "relation": "MOVE_TO_PATIO_DE_BANDERAS"
+      },
+      "candidate_refs": [
+        "J1-SAT-009"
+      ],
+      "source_refs": [
+        "S28",
+        "S29"
+      ],
+      "optional_depth_links": [
+        "SEV2-SAT-D03",
+        "SEV2-SAT-D04"
+      ]
+    },
+    {
+      "scene_id": "SEV2-SAT-06",
+      "order": 6,
+      "route_section": "Patio de Banderas",
+      "trigger_or_launch_condition": "Lancer lorsque les passages étroits de Santa Cruz débouchent sur l’espace ouvert du Patio de Banderas.",
+      "scene_type": "SPATIAL_TRANSITION_TAG",
+      "short_label": "Patio de Banderas — l’espace s’ouvre",
+      "primary_cue": "Après les petites rues, regardez seulement l’ouverture du Patio et sa proximité immédiate avec l’Alcázar.",
+      "spoken_text": "Après les passages resserrés de Santa Cruz, le Patio de Banderas ouvre soudain l’espace. Ce n’est pas seulement une respiration urbaine. La documentation municipale le décrit comme l’ancien patio d’armes du noyau militaire primitif de l’Alcázar. Autrement dit, la place que vous traversez appartenait d’abord à une logique de forteresse et de pouvoir. Ne restez pas longtemps sur les noms : utilisez surtout le changement d’échelle. En sortant vers Plaza del Triunfo, palais, cathédrale et ancienne Lonja vont se rapprocher dans le même champ urbain.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Ouverture de l’espace, enceinte et proximité de l’Alcázar.",
+      "fallback_behavior": {
+        "cannot_find": "Aucun objet précis n’est à trouver. Si le Patio est encombré, continuez vers Plaza del Triunfo en gardant seulement l’idée de l’ancien espace militaire."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-SAT-07",
+        "relation": "ARRIVE_PLAZA_DEL_TRIUNFO_ARCHIVO_EDGE"
+      },
+      "candidate_refs": [
+        "J1-SAT-012"
+      ],
+      "source_refs": [
+        "S31"
+      ],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-SAT-07",
+      "order": 7,
+      "route_section": "Plaza del Triunfo / extérieur Archivo General de Indias",
+      "trigger_or_launch_condition": "Lancer lorsque Cathédrale et ancienne Lonja / Archivo sont repérables dans le même secteur, même si foule ou installations coupent la perspective.",
+      "scene_type": "ADJACENCY_CAUSAL_REVEAL",
+      "short_label": "La Lonja — sortir le commerce du sacré",
+      "primary_cue": "Regardez la proximité entre Cathédrale et Archivo : leur voisinage explique une partie de l’histoire du bâtiment.",
+      "spoken_text": "À Plaza del Triunfo, essayez de tenir ensemble la Cathédrale et le bâtiment beaucoup plus sobre de l’Archivo. Leur voisinage raconte une histoire très concrète. À l’époque où Séville concentre le commerce américain, les marchands ont besoin d’un lieu pour négocier et régler leurs affaires. L’usage commercial d’espaces liés à la Cathédrale provoque des conflits avec le chapitre. La réponse est une Lonja dédiée, dont la construction commence à la fin du seizième siècle. Le bâtiment que vous avez devant vous n’est donc pas né comme archive : il est d’abord une infrastructure pour séparer et organiser le commerce. Plus tard seulement, il deviendra la grande maison des papiers de l’empire.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Proximité physique Cathédrale–ancienne Lonja/Archivo; vue parfaite non requise.",
+      "fallback_behavior": {
+        "cannot_find": "Si des stands, une file ou la foule masquent une partie de la perspective, ne cherchez pas un axe parfait. Repérez simplement les deux grands volumes et continuez."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-SAT-08",
+        "relation": "AT_ARCHIVO_OR_WHILE_WAITING_TO_ENTER"
+      },
+      "candidate_refs": [
+        "J1-SAT-013"
+      ],
+      "source_refs": [
+        "S32"
+      ],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-SAT-08",
+      "order": 8,
+      "route_section": "Archivo General de Indias — extérieur, file ou visite publique",
+      "trigger_or_launch_condition": "Lancer devant l’Archivo, dans une éventuelle file ou à l’intérieur; la scène ne dépend pas de l’accès immédiat.",
+      "scene_type": "HUMAN_SCALE_ARCHIVE_STORY",
+      "short_label": "Archivo — vingt-quatre charrettes de papier",
+      "primary_cue": "Regardez la masse du bâtiment et imaginez les archives comme un poids physique à déplacer, pas comme une base de données abstraite.",
+      "spoken_text": "Devant l’Archivo, oubliez un instant les grands mots comme « empire » ou « administration ». Pensez au poids du papier. En 1785, lorsqu’on rassemble à Séville une partie des fonds du Conseil des Indes conservés à Simancas, un transfert documenté fait arriver vingt-quatre charrettes tirées par des mules. Ce chiffre suffit à rendre l’archive physique : des liasses qu’il faut charger, transporter, monter, classer et retrouver. La bureaucratie dont parlait la version classique n’est pas une abstraction; elle occupe des pièces, des rayonnages et des corps au travail. Si vous entrez, gardez cette matérialité en tête. Si l’accès est ralenti, la scène fonctionne tout aussi bien dehors. Le grand récit du samedi s’arrête ici. Demain, le voyage changera de registre avec la Maestranza puis la peinture sévillane.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Masse de la Casa Lonja/Archivo, escaliers, galeries ou simple attente extérieure; aucun document précis requis.",
+      "fallback_behavior": {
+        "cannot_find": "Si l’entrée est temporairement limitée ou la file longue, n’attendez pas pour comprendre la scène : écoutez-la dehors et laissez la navigation/logistique réelle décider de la suite."
+      },
+      "next_scene": {
+        "scene_id": null,
+        "relation": "END_SATURDAY_PRIMARY_FIELD_PROGRAM"
+      },
+      "candidate_refs": [
+        "J1-SAT-014"
+      ],
+      "source_refs": [
+        "S33"
+      ],
+      "optional_depth_links": [
+        "SEV2-SAT-D05"
+      ]
+    }
+  ],
+  "optional_depth": [
+    {
+      "scene_id": "SEV2-SAT-D01",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-SAT-03",
+      "candidate_refs": [
+        "J1-SAT-005"
+      ],
+      "source_refs": [
+        "S24",
+        "S25",
+        "S26"
+      ],
+      "short_label": "Aníbal González — si près de 1929, et pourtant absent de sa saison",
+      "spoken_text": "Une histoire humaine derrière la place. Aníbal González a conçu la Plaza de España, mais il avait quitté la direction de l’Exposition en 1926. L’Exposition ibéro-américaine ouvre le 9 mai 1929; il meurt le 31 mai, quelques semaines plus tard. La proximité des dates est frappante. Il a vu s’ouvrir l’événement auquel son œuvre donne une grande partie de son visage, sans vivre sa saison entière.",
+      "expected_duration_class": "SHORT_20_45"
+    },
+    {
+      "scene_id": "SEV2-SAT-D02",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-SAT-04",
+      "candidate_refs": [
+        "J1-SAT-006"
+      ],
+      "source_refs": [
+        "S22"
+      ],
+      "short_label": "Quand le décor devient vraiment décor de cinéma",
+      "spoken_text": "La Plaza de España était déjà une architecture de spectacle. Le cinéma l’a donc facilement adoptée comme décor : elle apparaît notamment dans Lawrence d’Arabie et dans Star Wars : L’Attaque des clones. Inutile de chercher un angle exact de tournage. L’intérêt est ailleurs : un lieu conçu pour produire une grande image de l’Espagne est devenu, plus tard, une grande image capable de jouer d’autres mondes.",
+      "expected_duration_class": "SHORT_20_45"
+    },
+    {
+      "scene_id": "SEV2-SAT-D03",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-SAT-05",
+      "candidate_refs": [
+        "J1-SAT-008"
+      ],
+      "source_refs": [
+        "S27"
+      ],
+      "short_label": "Callejón del Agua — deux conduites dans le mur",
+      "spoken_text": "Vous venez de passer par le Callejón del Agua. La version classique le lisait déjà comme infrastructure; voici seulement la précision utile. La documentation touristique de Séville indique que deux conduites passaient dans ce mur pour amener l’eau depuis les Caños de Carmona vers les jardins de l’Alcázar. Ne cherchez pas les tuyaux eux-mêmes : ils ne sont pas le spectacle. Ce détail suffit à transformer le nom pittoresque de la ruelle en fonction urbaine très concrète.",
+      "expected_duration_class": "SHORT_20_45"
+    },
+    {
+      "scene_id": "SEV2-SAT-D04",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-SAT-05",
+      "candidate_refs": [
+        "J1-SAT-010"
+      ],
+      "source_refs": [
+        "S30"
+      ],
+      "short_label": "Calle Vida — une rue qui porte une légende",
+      "spoken_text": "À la sortie du Callejón del Agua, le nom de Calle Vida porte une tradition locale. Le récit touristique raconte qu’au quatorzième siècle cette rue aurait servi de voie de fuite à des familles juives menacées. Le mot important est « légende ». Nous n’en faisons pas un événement vérifié. Ce qui est certain ici, c’est qu’un nom de rue peut conserver une mémoire racontée, même lorsque l’histoire et la tradition ne se confondent pas.",
+      "expected_duration_class": "SHORT_20_45"
+    },
+    {
+      "scene_id": "SEV2-SAT-D05",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-SAT-08",
+      "candidate_refs": [
+        "J1-SAT-015"
+      ],
+      "source_refs": [
+        "S38"
+      ],
+      "short_label": "Huit kilomètres de rayonnages",
+      "spoken_text": "Si vous avez besoin d’une seule mesure pour sentir ce que le bâtiment visible ne montre pas : le Ministerio de Cultura décrit environ huit kilomètres linéaires de rayonnages dans l’Archivo General de Indias. Pas besoin d’empiler d’autres chiffres. Imaginez simplement une ligne d’étagères qui traverserait la ville sur des kilomètres : la partie ouverte au visiteur n’est qu’une petite fenêtre sur cette masse documentaire.",
+      "expected_duration_class": "SHORT_20_45"
+    }
+  ],
+  "intentional_silence": [
+    {
+      "segment": "fin de SEV2-SAT-02 → première apparition de Plaza de España",
+      "mode": "SILENCE_BY_DEFAULT",
+      "purpose": "laisser l’échelle de la place apparaître avant toute explication"
+    },
+    {
+      "segment": "fin de SEV2-SAT-04 à Plaza de España",
+      "mode": "USER_PAUSE",
+      "purpose": "laisser le visiteur choisir un ou deux bancs et regarder l’ensemble sans empiler Aníbal/cinéma en primaire"
+    },
+    {
+      "segment": "Avenida de Isabel la Católica → Jardines de Murillo → Callejón del Agua → approche de Doña Elvira",
+      "mode": "SILENCE_BY_DEFAULT",
+      "purpose": "ne pas répéter le primaire V1 climat/eau; D03 reste optionnel"
+    }
+  ],
+  "continuity_notes": [
+    "La scène 03 dit explicitement « Hier, à Triana » : le défaut chronologique V1 « demain à Triana » n’est pas reproduit.",
+    "La scène 08 annonce Maestranza puis peinture sévillane pour dimanche : la référence V1 devenue obsolète au palais privé n’est pas reproduite.",
+    "Les deux défauts restent inchangés dans le fallback V1 gelé; J2 ne répare aucun fichier series/seville-discovery/**."
+  ],
+  "field_assumptions": [
+    "Les Jardines de Murillo sont listés comme ouvrant à 08:00; aucune scène n’exige d’attendre une ouverture ni d’entrer avant qu’un accès soit effectivement disponible.",
+    "Plaza de España peut connaître des restrictions ou événements ponctuels; les scènes 03–04 ne dépendent d’aucun intérieur ni d’un angle unique.",
+    "La visite publique de l’Archivo est compatible avec le timing recherché au 2026-09-17, mais la capacité peut ralentir l’entrée; les scènes 07–08 fonctionnent dehors ou en file.",
+    "La foire artisanale temporaire de septembre 2026 peut encombrer l’approche Cathédrale–Archivo; aucune scène ne requiert une perspective vide.",
+    "L’association de Doña Elvira à Don Juan est conservée uniquement comme légende littéraire locale explicitement étiquetée.",
+    "Les faits dynamiques S21, S34, S35 et S37 devront être revalidés seulement si production ou usage est matériellement plus tardif."
+  ]
+}

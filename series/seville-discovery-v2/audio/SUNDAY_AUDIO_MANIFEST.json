@@ -1,0 +1,146 @@
+{
+  "schema": "recit.seville-v2.audio-production-manifest.v1",
+  "status": "J4_CANDIDATE",
+  "batch_id": "seville-v2-sunday-j1-accepted-2026-09-17",
+  "source_scene_program": {
+    "path": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json",
+    "git_blob_sha": "b8f1e76fbb637e60e50a140c132c2571582e29cf"
+  },
+  "production_contract": {
+    "mapping": "ONE_PRIMARY_SCENE_TO_ONE_AUDIO_PROGRAM_AND_RENDERED_ASSET",
+    "primary_scene_count_expected": 9,
+    "primary_audio_program_count": 9,
+    "optional_depth_declared": 4,
+    "optional_depth_audio_count": 0,
+    "optional_depth_disposition": "DEFERRED_UNTIL_COORDINATION_ACCEPTS",
+    "intentional_silence": "PRESERVED; no decorative ambience or return-bridge audio added",
+    "language": "fr-FR",
+    "voice_preset": "narrateur-vif",
+    "audio_engine_pin": "3392d4f22f0a9b054a05b5c05a7856985c0ab030",
+    "render_command": "audio-engine render <program> --out generated/audio",
+    "playback_unit": "scene-level MP3",
+    "offline_contract": "rendered MP3 is a static asset suitable for existing offline catalogue packaging",
+    "background_contract": "scene-level MP3 remains compatible with existing player/MediaSession path; J5 owns integrated runtime proof"
+  },
+  "french_lock": {
+    "status": "PASS_BY_SOURCE_IDENTITY",
+    "rule": "Every rendered speech segment is byte-for-byte equal to its accepted J2 spoken_text and each program declares language=fr-FR.",
+    "editorial_rewrite_count": 0
+  },
+  "entries": [
+    {
+      "scene_id": "SEV2-SUN-01",
+      "order": 1,
+      "program_path": "series/seville-discovery-v2/audio/SEV2-SUN-01.json",
+      "program_id": "SEV2-SUN-01",
+      "rendered_audio_path": "generated/audio/SEV2-SUN-01/audio.mp3",
+      "rendered_manifest_path": "generated/audio/SEV2-SUN-01/manifest.json",
+      "rendered_transcript_path": "generated/audio/SEV2-SUN-01/transcript.json",
+      "language": "fr-FR",
+      "voice_preset": "narrateur-vif",
+      "soundscape": "NONE"
+    },
+    {
+      "scene_id": "SEV2-SUN-02",
+      "order": 2,
+      "program_path": "series/seville-discovery-v2/audio/SEV2-SUN-02.json",
+      "program_id": "SEV2-SUN-02",
+      "rendered_audio_path": "generated/audio/SEV2-SUN-02/audio.mp3",
+      "rendered_manifest_path": "generated/audio/SEV2-SUN-02/manifest.json",
+      "rendered_transcript_path": "generated/audio/SEV2-SUN-02/transcript.json",
+      "language": "fr-FR",
+      "voice_preset": "narrateur-vif",
+      "soundscape": "NONE"
+    },
+    {
+      "scene_id": "SEV2-SUN-03",
+      "order": 3,
+      "program_path": "series/seville-discovery-v2/audio/SEV2-SUN-03.json",
+      "program_id": "SEV2-SUN-03",
+      "rendered_audio_path": "generated/audio/SEV2-SUN-03/audio.mp3",
+      "rendered_manifest_path": "generated/audio/SEV2-SUN-03/manifest.json",
+      "rendered_transcript_path": "generated/audio/SEV2-SUN-03/transcript.json",
+      "language": "fr-FR",
+      "voice_preset": "narrateur-vif",
+      "soundscape": "NONE"
+    },
+    {
+      "scene_id": "SEV2-SUN-04",
+      "order": 4,
+      "program_path": "series/seville-discovery-v2/audio/SEV2-SUN-04.json",
+      "program_id": "SEV2-SUN-04",
+      "rendered_audio_path": "generated/audio/SEV2-SUN-04/audio.mp3",
+      "rendered_manifest_path": "generated/audio/SEV2-SUN-04/manifest.json",
+      "rendered_transcript_path": "generated/audio/SEV2-SUN-04/transcript.json",
+      "language": "fr-FR",
+      "voice_preset": "narrateur-vif",
+      "soundscape": "NONE"
+    },
+    {
+      "scene_id": "SEV2-SUN-05",
+      "order": 5,
+      "program_path": "series/seville-discovery-v2/audio/SEV2-SUN-05.json",
+      "program_id": "SEV2-SUN-05",
+      "rendered_audio_path": "generated/audio/SEV2-SUN-05/audio.mp3",
+      "rendered_manifest_path": "generated/audio/SEV2-SUN-05/manifest.json",
+      "rendered_transcript_path": "generated/audio/SEV2-SUN-05/transcript.json",
+      "language": "fr-FR",
+      "voice_preset": "narrateur-vif",
+      "soundscape": "NONE"
+    },
+    {
+      "scene_id": "SEV2-SUN-06",
+      "order": 6,
+      "program_path": "series/seville-discovery-v2/audio/SEV2-SUN-06.json",
+      "program_id": "SEV2-SUN-06",
+      "rendered_audio_path": "generated/audio/SEV2-SUN-06/audio.mp3",
+      "rendered_manifest_path": "generated/audio/SEV2-SUN-06/manifest.json",
+      "rendered_transcript_path": "generated/audio/SEV2-SUN-06/transcript.json",
+      "language": "fr-FR",
+      "voice_preset": "narrateur-vif",
+      "soundscape": "NONE"
+    },
+    {
+      "scene_id": "SEV2-SUN-07",
+      "order": 7,
+      "program_path": "series/seville-discovery-v2/audio/SEV2-SUN-07.json",
+      "program_id": "SEV2-SUN-07",
+      "rendered_audio_path": "generated/audio/SEV2-SUN-07/audio.mp3",
+      "rendered_manifest_path": "generated/audio/SEV2-SUN-07/manifest.json",
+      "rendered_transcript_path": "generated/audio/SEV2-SUN-07/transcript.json",
+      "language": "fr-FR",
+      "voice_preset": "narrateur-vif",
+      "soundscape": "NONE"
+    },
+    {
+      "scene_id": "SEV2-SUN-08",
+      "order": 8,
+      "program_path": "series/seville-discovery-v2/audio/SEV2-SUN-08.json",
+      "program_id": "SEV2-SUN-08",
+      "rendered_audio_path": "generated/audio/SEV2-SUN-08/audio.mp3",
+      "rendered_manifest_path": "generated/audio/SEV2-SUN-08/manifest.json",
+      "rendered_transcript_path": "generated/audio/SEV2-SUN-08/transcript.json",
+      "language": "fr-FR",
+      "voice_preset": "narrateur-vif",
+      "soundscape": "NONE"
+    },
+    {
+      "scene_id": "SEV2-SUN-09",
+      "order": 9,
+      "program_path": "series/seville-discovery-v2/audio/SEV2-SUN-09.json",
+      "program_id": "SEV2-SUN-09",
+      "rendered_audio_path": "generated/audio/SEV2-SUN-09/audio.mp3",
+      "rendered_manifest_path": "generated/audio/SEV2-SUN-09/manifest.json",
+      "rendered_transcript_path": "generated/audio/SEV2-SUN-09/transcript.json",
+      "language": "fr-FR",
+      "voice_preset": "narrateur-vif",
+      "soundscape": "NONE"
+    }
+  ],
+  "determinism": {
+    "source_hash_rule": "SHA256(UTF-8 exact accepted J2 spoken_text) computed from authoritative checkout",
+    "program_hash_rule": "SHA256(exact committed audio program bytes) computed from authoritative checkout",
+    "render_hash_rule": "SHA256(rendered audio.mp3 bytes) captured as qualification evidence",
+    "reason": "Do not precompute hashes from reconstructed text outside the repository checkout."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-FRI-AM-07",
+  "title": "Arenal — reconstruire la rive de travail",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 7,
+  "stop": "Rive est — Paseo de Cristóbal Colón / Arenal",
+  "location": "Arenal — reconstruire la rive de travail",
+  "launch": "Lancer après la traversée de retour, lorsque le large espace du front d’eau et de l’Arenal devient perceptible.",
+  "look": "Regardez l’espace large entre ville et eau avant de regarder les monuments : l’ancien rivage de travail a presque disparu.",
+  "summary": "SPATIAL_RECONSTRUCTION",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S09",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S11"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Quand vous êtes revenu sur la rive est et que l’espace du quai s’élargit, regardez d’abord la relation entre la ville et l’eau. Le mot Arenal renvoie à l’ancienne rive sableuse où se concentraient métiers et activités maritimes. Aujourd’hui, la promenade et les quais stabilisés donnent un dessin très différent. Essayez de remplacer mentalement cette façade par un bord de travail, chargé de circulation, de marchandises et de métiers. Au vingtième siècle, les grandes transformations portuaires ont déplacé une grande partie des fonctions du port plus au sud. Ce qui reste au centre est une façade urbaine où l’ancien port se lit surtout par contraste avec ce que vous voyez."
+    }
+  ]
+}

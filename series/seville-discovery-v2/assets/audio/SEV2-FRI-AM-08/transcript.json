@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-FRI-AM-08",
+  "title": "Maestranza — le cercle qui n’en est pas un",
+  "language": "fr-FR",
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S12",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S13"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "En passant devant la Maestranza, ne cherchez pas à tout comprendre aujourd’hui : l’intérieur est pour dimanche. Regardez seulement sa forme extérieure. On l’imagine volontiers parfaitement ronde. Pourtant, sa construction s’étale sur environ cent vingt ans et son enceinte forme un polygone irrégulier de trente côtés inégaux. Ne les comptez pas : retenez seulement qu’un monument que la mémoire simplifie en cercle est le résultat d’une construction lente, contrainte par son site. Gardez cette irrégularité pour dimanche, puis continuez vers le NH.",
+      "sequence": 1,
+      "resolved_preset": "narrateur-vif",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+8%",
+      "pitch": "+14Hz",
+      "volume": "+5%",
+      "casting_alternatives": [],
+      "resolved_placement": "center",
+      "resolved_pan": 0.0,
+      "resolved_acoustic_space": "dry",
+      "resolved_pause_after_ms": 350.0
+    }
+  ]
+}

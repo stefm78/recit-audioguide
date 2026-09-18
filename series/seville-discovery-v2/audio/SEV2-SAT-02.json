@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SAT-02",
+  "title": "Jardines de Murillo — un passage ouvert au XXe siècle",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 2,
+  "stop": "Jardines de Murillo → Prado de San Sebastián",
+  "location": "Jardines de Murillo — un passage ouvert au XXe siècle",
+  "launch": "Lancer lorsque les Jardines de Murillo sont accessibles ou clairement visibles depuis le parcours; ne jamais attendre devant une grille fermée.",
+  "look": "Regardez le mur de l’Alcázar, les chemins et l’ouverture vers la ville : ce passage public n’est pas un jardin resté intact depuis toujours.",
+  "summary": "SPATIAL_REFRAME_THEN_MOVE",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S20",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S28"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Dans les Jardines de Murillo, le vert donne facilement une impression d’ancienneté tranquille. Pourtant, ce seuil est aussi un projet urbain du début du vingtième siècle. Une partie de l’ancienne Huerta del Retiro de l’Alcázar est cédée à la ville en 1911 afin d’ouvrir davantage Santa Cruz vers San Bernardo. Un nouveau mur d’enceinte est construit et Juan Talavera y Heredia dessine les jardins publics dont la forme se met en place dans les années suivantes. Regardez donc moins un jardin « de toujours » qu’une couture entre le palais, le vieux quartier et la ville moderne. En sortant vers le Prado, laissez ensuite l’audio tranquille : Plaza de España mérite d’apparaître avant son commentaire."
+    }
+  ]
+}

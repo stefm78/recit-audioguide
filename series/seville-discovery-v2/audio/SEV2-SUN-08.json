@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SUN-08",
+  "title": "Las Cigarreras — finir avec des femmes au travail",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 3,
+  "stop": "Museo de Bellas Artes — salles tardives, si Las Cigarreras est visible",
+  "location": "Las Cigarreras — finir avec des femmes au travail",
+  "launch": "Lancer uniquement si Las Cigarreras de Gonzalo Bilbao est effectivement visible; sinon passer directement à la clôture.",
+  "look": "Si Las Cigarreras est exposé, regardez d’abord les ouvrières et l’espace de la manufacture avant de penser au prestige du tableau.",
+  "summary": "HUMAN_STORY_IF_ON_VIEW",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S47"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Si Las Cigarreras est devant vous, arrêtez-vous sur les femmes au travail. Gonzalo Bilbao peint en 1915 l’intérieur de la manufacture de tabac et en fait un hommage aux cigarreras de Séville. Le musée rappelle aussi que cette figure ouvrière avait déjà été idéalisée par la littérature et l’opéra : le tableau parle donc à la fois de travail réel et d’une image fabriquée. Après son échec à obtenir la médaille d’honneur de l’Exposition nationale, Séville organise un grand hommage à Bilbao auquel participent de nombreuses femmes qui avaient posé. Après les palais et les institutions, le voyage peut finir sur des travailleuses."
+    }
+  ]
+}

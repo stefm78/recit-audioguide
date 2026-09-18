@@ -1,0 +1,317 @@
+{
+  "schema": "recit.seville-v2.field-scene-program.v1",
+  "status": "J2_CANDIDATE",
+  "batch_id": "seville-v2-sunday-j1-accepted-2026-09-17",
+  "day": "day3",
+  "day_label": "Dimanche 20 septembre",
+  "route_section": "Maestranza → retour Pje. de Vila / checkout → Storage luggage - Lockers Agua, C. Agua 5 → Museo de Bellas Artes de Sevilla → temps libre léger → récupération bagages → départ taxi/VTC protégé vers l’aéroport",
+  "research_authority": {
+    "artifact": "series/seville-discovery-v2/research/SUNDAY_FIELD_STORY_RESEARCH.md",
+    "source_manifest": "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md",
+    "provenance": "series/seville-discovery-v2/research/SUNDAY_BUILD_PROVENANCE.md",
+    "research_artifact_blob_sha": "a5f65ffa40b992912f36c402b03b73773820341b",
+    "source_manifest_blob_sha": "debb78e0e1d8a3293c1fa1dee3e22f36de8f4228",
+    "provenance_blob_sha": "24322834fdaeecedb235afc485404ae43ba80965",
+    "accepted_j1_worker_sha": "4ca3af65748cd240025ae9e556850d48a4ace05a",
+    "final_reconciled_j1_parent": "dff97fabb6912e67f5b404bf1d617858c42ba6c9"
+  },
+  "route_authority": {
+    "v1_series": "series/seville-discovery/series.json",
+    "v1_episode_ids": [
+      "seville-discovery-g02",
+      "seville-discovery-g13"
+    ],
+    "navigation_authority": "external_google_maps",
+    "primary_sequence": [
+      "MAESTRANZA",
+      "CHECKOUT_LOCKERS_SILENCE",
+      "BELLAS_ARTES",
+      "PROTECTED_AIRPORT_DEPARTURE"
+    ],
+    "casa_de_pilatos": "FALLBACK_ONLY",
+    "rule": "J2 does not change route, booking, checkout, luggage or airport-protection logistics."
+  },
+  "scene_count": 9,
+  "optional_depth_count": 4,
+  "integration_basis": "Reuse the accepted Friday/Saturday J3/J4 field-scene mapping; no UX/shared-code/audio/V1 mutation.",
+  "candidate_disposition": {
+    "primary": [
+      "J1-SUN-001",
+      "J1-SUN-002",
+      "J1-SUN-003",
+      "J1-SUN-007",
+      "J1-SUN-008",
+      "J1-SUN-009",
+      "J1-SUN-010",
+      "J1-SUN-011",
+      "J1-SUN-015"
+    ],
+    "optional_depth": [
+      "J1-SUN-004",
+      "J1-SUN-012",
+      "J1-SUN-013",
+      "J1-SUN-014"
+    ],
+    "excluded": {
+      "J1-SUN-005": "equestrian-institution history is already covered sufficiently by V1",
+      "J1-SUN-006": "tauromachy controversy is already handled by V1 and would crowd the final day",
+      "J1-SUN-016": "Casa de Pilatos is fallback-only and therefore outside the primary Sunday graph"
+    }
+  },
+  "coverage": [
+    {
+      "segment": "Maestranza booked visit",
+      "primary_scenes": ["SEV2-SUN-01", "SEV2-SUN-02", "SEV2-SUN-03"],
+      "policy": "three additive hooks maximum; one architecture link and one reused-object cue remain conditional"
+    },
+    {
+      "segment": "Maestranza → Pje. de Vila checkout → Lockers Agua",
+      "primary_scenes": ["SEV2-SUN-04"],
+      "policy": "operational cue then silence; no heritage hunt or new stop"
+    },
+    {
+      "segment": "Museo de Bellas Artes",
+      "primary_scenes": ["SEV2-SUN-05", "SEV2-SUN-06", "SEV2-SUN-07", "SEV2-SUN-08"],
+      "policy": "institution/building first, then selective works; silence around looking"
+    },
+    {
+      "segment": "museum exit → light remainder → luggage retrieval → airport",
+      "primary_scenes": ["SEV2-SUN-09"],
+      "policy": "one closing cue; no new cultural obligation; protected departure prevails"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "SEV2-SUN-01",
+      "order": 1,
+      "route_section": "Maestranza — ruedo visible",
+      "trigger_or_launch_condition": "Lancer quand le ruedo est naturellement visible pendant la visite réservée; ne demander aucun repérage géométrique précis.",
+      "scene_type": "REFRAME_GEOMETRY",
+      "short_label": "Maestranza — le centre a réellement bougé",
+      "primary_cue": "Regardez la forme du ruedo sans chercher un cercle parfait : au XVIIIe siècle, son centre et son rayon ont été modifiés.",
+      "spoken_text": "Vendredi, nous avions seulement retenu l’irrégularité de l’arène. Ici, on peut aller un cran plus loin. Au XVIIIe siècle, les bâtisseurs ont réellement déplacé le centre géométrique du projet et réduit son rayon pour l’adapter au terrain disponible. La Maestranza relie aussi cette évolution au moment où la tauromachie à pied prend davantage de place. Ne cherchez pas le centre à l’œil : retenez simplement qu’ici, même la géométrie du spectacle a été négociée avec la ville et avec l’évolution de la pratique.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Forme générale du ruedo et de l’enceinte; aucun point mathématique précis à trouver.",
+      "fallback_behavior": {
+        "cannot_find": "Si la visite ne donne qu’un angle partiel, gardez l’idée du centre déplacé et du rayon réduit sans chercher une position idéale."
+      },
+      "next_scene": {"scene_id": "SEV2-SUN-02", "relation": "CONTINUE_INSIDE_MAESTRANZA"},
+      "candidate_refs": ["J1-SUN-001"],
+      "source_refs": ["S39"],
+      "optional_depth_links": ["SEV2-SUN-D01"]
+    },
+    {
+      "scene_id": "SEV2-SUN-02",
+      "order": 2,
+      "route_section": "Maestranza — liaison siège / loges, selon parcours",
+      "trigger_or_launch_condition": "Lancer seulement si la relation entre le siège de la Real Maestranza et la plaza peut être expliquée sans détour; sinon écouter comme contexte de circulation.",
+      "scene_type": "CROSS_DAY_ARCHITECT_CONNECT_CONDITIONAL",
+      "short_label": "Aníbal González — retour, autre rôle",
+      "primary_cue": "Si la liaison avec le siège est perceptible, comparez ce geste à Plaza de España : même architecte, mais ici dans un complexe beaucoup plus ancien.",
+      "spoken_text": "Hier, Aníbal González dominait Plaza de España. Il réapparaît ici dans un rôle très différent. Entre 1927 et 1930, il dessine le siège de la Real Maestranza et sa liaison élevée avec la plaza. Cette intervention oblige à déplacer la loge de la corporation par rapport au balcon principal; le passage sera encore élargi en 1968. À Plaza de España, il fabriquait une grande scène nouvelle. Ici, il s’insère dans un complexe accumulé depuis des siècles. Si la liaison n’est pas visible, gardez seulement ce contraste.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Relation entre le siège, la liaison élevée et la hiérarchie des loges si le parcours la rend perceptible.",
+      "fallback_behavior": {"cannot_find": "Ne cherchez ni passage ni loge précise. Écoutez la scène en avançant et gardez seulement le contraste avec Plaza de España."},
+      "next_scene": {"scene_id": "SEV2-SUN-03", "relation": "WHEN_PRINCES_GATE_OR_REUSED_GRILLE_IS_NATURALLY_ENCOUNTERED"},
+      "candidate_refs": ["J1-SUN-002"],
+      "source_refs": ["S41"],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-SUN-03",
+      "order": 3,
+      "route_section": "Maestranza — Puerta del Príncipe, si naturellement rencontrée",
+      "trigger_or_launch_condition": "Lancer uniquement si la Puerta del Príncipe ou sa grille est naturellement rencontrée sur le parcours de visite.",
+      "scene_type": "LOOK_REUSE_CONDITIONAL",
+      "short_label": "Puerta del Príncipe — un morceau d’un autre Séville",
+      "primary_cue": "Si la grille est visible, regardez-la comme un objet déplacé : elle vient d’une chapelle d’un couvent aujourd’hui disparu.",
+      "spoken_text": "Si la Puerta del Príncipe est dans votre parcours, regardez sa grille. Elle n’a pas été fabriquée pour cette arène. La Real Maestranza l’identifie comme une œuvre de Pedro Roldán provenant de l’ancienne chapelle du couvent de Regina Angelorum. La chapelle est démolie en 1905 et des éléments récupérables sont conservés; cette grille trouve ici une nouvelle vie. Après trois jours de transformations, voilà un cas très matériel : la ville ne conserve pas toujours un bâtiment entier. Parfois elle déplace un fragment.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Grille de la Puerta del Príncipe uniquement si elle est accessible/visible depuis le parcours réservé.",
+      "fallback_behavior": {"cannot_find": "Si la porte ou la grille n’est pas visible, sautez ce regard sans détour; la scène est conditionnelle et ne doit pas ralentir la visite."},
+      "next_scene": {"scene_id": "SEV2-SUN-04", "relation": "AFTER_MAESTRANZA_EXIT_AND_RETURN_TO_LOGISTICS"},
+      "candidate_refs": ["J1-SUN-003"],
+      "source_refs": ["S42"],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-SUN-04",
+      "order": 4,
+      "route_section": "Maestranza → Pje. de Vila checkout → Storage luggage - Lockers Agua, C. Agua 5",
+      "trigger_or_launch_condition": "Lancer en sortant de la Maestranza, puis laisser le trajet de checkout et de dépôt des bagages se dérouler sans narration culturelle.",
+      "scene_type": "SILENCE_LOGISTICS",
+      "short_label": "Checkout et bagages — priorité au réel",
+      "primary_cue": "Retournez au logement, faites le checkout puis déposez les bagages à C. Agua 5. Ici, le guide se tait volontairement.",
+      "spoken_text": "La prochaine séquence n’a pas besoin d’histoire. Retournez directement à Pje. de Vila, faites le checkout, puis suivez le plan prévu vers Storage luggage - Lockers Agua, C. Agua 5. L’objectif est de protéger la journée et d’enlever les bagages de l’équation avant le musée. À partir d’ici, je me tais. Reprenez le guide lorsque les bagages sont déposés.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Aucun objet culturel requis; la réussite est opérationnelle : checkout puis bagages déposés selon le plan accepté.",
+      "fallback_behavior": {"cannot_find": "Ne transformez pas ce segment en recherche patrimoniale. Suivez l’itinéraire/logistique déjà accepté; toute anomalie opérationnelle relève du plan de voyage, pas d’une nouvelle scène."},
+      "next_scene": {"scene_id": "SEV2-SUN-05", "relation": "AFTER_LUGGAGE_DEPOSIT_AND_MUSEUM_ARRIVAL"},
+      "candidate_refs": ["J1-SUN-007"],
+      "source_refs": ["I09", "S51"],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-SUN-05",
+      "order": 5,
+      "route_section": "Museo de Bellas Artes — entrée / premières salles",
+      "trigger_or_launch_condition": "Lancer après l’entrée au musée, avant de commencer une chasse aux artistes ou aux œuvres.",
+      "scene_type": "INSTITUTION_REFRAME",
+      "short_label": "Le musée — une collection née d’une confiscation",
+      "primary_cue": "Avant les noms célèbres, regardez le bâtiment et pensez à l’origine de la collection : des œuvres retirées à des institutions religieuses au XIXe siècle.",
+      "spoken_text": "Avant de chercher Murillo ou Zurbarán, une question : pourquoi ces œuvres sont-elles réunies ici ? Le musée naît au XIXe siècle dans le contexte de la desamortización. Les mesures de 1836 retirent des biens à des couvents et à d’autres institutions ecclésiastiques; une partie des œuvres est rassemblée pour former une collection publique. Le musée raconte donc aussi un transfert : des images faites pour des lieux religieux deviennent patrimoine public.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Architecture conventuelle et présence d’œuvres religieuses provenant de contextes multiples; aucune œuvre précise n’est requise.",
+      "fallback_behavior": {"cannot_find": "Aucune œuvre précise n’est à trouver. Gardez l’idée institutionnelle et continuez vers les patios et la circulation du bâtiment."},
+      "next_scene": {"scene_id": "SEV2-SUN-06", "relation": "EARLY_MUSEUM_CIRCULATION"},
+      "candidate_refs": ["J1-SUN-008"],
+      "source_refs": ["S45"],
+      "optional_depth_links": ["SEV2-SUN-D03", "SEV2-SUN-D04"]
+    },
+    {
+      "scene_id": "SEV2-SUN-06",
+      "order": 6,
+      "route_section": "Museo de Bellas Artes — patios / escalier / ancienne église",
+      "trigger_or_launch_condition": "Lancer lorsque les patios, le grand escalier ou l’ancienne église rendent l’organisation de l’ancien couvent perceptible.",
+      "scene_type": "LOOK_FIRST_BUILDING_AS_COLLECTION",
+      "short_label": "Avant les tableaux — lire l’ancien couvent",
+      "primary_cue": "Regardez d’abord les patios, les circulations et l’escalier : le musée conserve aussi la logique de l’ancien couvent de la Merced.",
+      "spoken_text": "Le bâtiment est déjà une pièce du musée. Vous êtes dans l’ancien couvent de la Merced Calzada, organisé autour de trois patios. Le grand escalier articule ces espaces et l’ancienne église est devenue l’une des salles fortes du parcours. Avant les cartels, laissez cette architecture vous guider. Les peintures religieuses ne sont pas posées dans une boîte neutre : elles vivent désormais dans un lieu qui porte encore une histoire de cloître, de culte puis de musée.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Patios, grand escalier et ancienne église; grandes caractéristiques spatiales plutôt qu’un détail fragile.",
+      "fallback_behavior": {"cannot_find": "Si le parcours dévie temporairement, ne cherchez pas les trois patios à tout prix. Reprenez cette idée dès que l’architecture conventuelle devient lisible."},
+      "next_scene": {"scene_id": "SEV2-SUN-07", "relation": "FORMER_CHURCH_OR_CAPUCHIN_ENSEMBLE"},
+      "candidate_refs": ["J1-SUN-009"],
+      "source_refs": ["S44"],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-SUN-07",
+      "order": 7,
+      "route_section": "Museo de Bellas Artes — ancienne église / ensemble Murillo des Capucins",
+      "trigger_or_launch_condition": "Lancer lorsque l’ensemble des grands Murillo des Capucins est présenté dans l’ancienne église; ne promettre aucun tableau individuel précis.",
+      "scene_type": "ART_RECONTEXTUALIZATION_THEN_PAUSE",
+      "short_label": "Murillo — un ensemble déplacé, recomposé",
+      "primary_cue": "Regardez l’ensemble plutôt qu’un seul tableau : ces œuvres des Capucins sont aujourd’hui recomposées dans l’église d’un autre ancien couvent.",
+      "spoken_text": "Regardez l’ensemble avant de choisir un tableau. Ces grandes œuvres de Murillo ont été peintes entre 1665 et 1668 pour le couvent des Capucins. Elles sont aujourd’hui présentées dans l’ancienne église de la Merced, selon une disposition qui rappelle la logique de leur retable et de leurs chapelles d’origine. Une série conçue pour un couvent est donc réunie dans l’église d’un autre couvent devenu musée. L’image survit, mais son cadre a changé. Maintenant, choisissez une œuvre et laissez-la agir sans ma voix.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Ensemble des grands Murillo dans l’ancienne église; ne pas dépendre d’un titre ou d’un accrochage individuel.",
+      "silence": {"mode": "USER_PAUSE", "prompt": "Mettez l’audio en pause devant une œuvre de votre choix. Reprenez seulement quand vous avez réellement fini de regarder."},
+      "fallback_behavior": {"cannot_find": "Si l’installation a changé, ne cherchez pas un tableau annoncé. Regardez l’ensemble baroque réellement visible et conservez l’idée du déplacement entre contextes conventuels."},
+      "next_scene": {"scene_id": "SEV2-SUN-08", "relation": "LATER_MUSEUM_ROOMS_IF_LAS_CIGARRERAS_IS_ON_VIEW"},
+      "candidate_refs": ["J1-SUN-010"],
+      "source_refs": ["S46"],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-SUN-08",
+      "order": 8,
+      "route_section": "Museo de Bellas Artes — salles tardives, si Las Cigarreras est visible",
+      "trigger_or_launch_condition": "Lancer uniquement si Las Cigarreras de Gonzalo Bilbao est effectivement visible; sinon passer directement à la clôture.",
+      "scene_type": "HUMAN_STORY_IF_ON_VIEW",
+      "short_label": "Las Cigarreras — finir avec des femmes au travail",
+      "primary_cue": "Si Las Cigarreras est exposé, regardez d’abord les ouvrières et l’espace de la manufacture avant de penser au prestige du tableau.",
+      "spoken_text": "Si Las Cigarreras est devant vous, arrêtez-vous sur les femmes au travail. Gonzalo Bilbao peint en 1915 l’intérieur de la manufacture de tabac et en fait un hommage aux cigarreras de Séville. Le musée rappelle aussi que cette figure ouvrière avait déjà été idéalisée par la littérature et l’opéra : le tableau parle donc à la fois de travail réel et d’une image fabriquée. Après son échec à obtenir la médaille d’honneur de l’Exposition nationale, Séville organise un grand hommage à Bilbao auquel participent de nombreuses femmes qui avaient posé. Après les palais et les institutions, le voyage peut finir sur des travailleuses.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Las Cigarreras uniquement si l’œuvre est réellement exposée; observer ouvrières et intérieur de la manufacture.",
+      "fallback_behavior": {"cannot_find": "Si l’œuvre n’est pas visible, ne la cherchez pas et ne demandez pas de détour. Passez à la scène de clôture; les profondeurs restent optionnelles."},
+      "next_scene": {"scene_id": "SEV2-SUN-09", "relation": "WHEN_READY_TO_END_MUSEUM_AND_PROTECT_DEPARTURE"},
+      "candidate_refs": ["J1-SUN-011"],
+      "source_refs": ["S47"],
+      "optional_depth_links": ["SEV2-SUN-D02"]
+    },
+    {
+      "scene_id": "SEV2-SUN-09",
+      "order": 9,
+      "route_section": "Sortie Bellas Artes → temps libre léger → récupération C. Agua 5 → taxi/VTC aéroport",
+      "trigger_or_launch_condition": "Lancer au moment de terminer le musée ou plus tôt si le timing impose de partir; cette scène ferme le récit et n’ajoute aucune destination.",
+      "scene_type": "PROTECTED_EXIT",
+      "short_label": "Fin du récit — protéger le départ",
+      "primary_cue": "Le récit principal s’arrête ici. Gardez la suite légère : récupérez les bagages et protégez le départ aéroport plutôt que d’ajouter une dernière visite.",
+      "spoken_text": "Le récit principal s’arrête ici. Il reste du temps de ville, mais plus aucune obligation culturelle. Déjeunez ou marchez légèrement si le planning le permet, puis récupérez les bagages selon le plan accepté. Le départ taxi ou VTC vers l’aéroport reste protégé. Après trois jours à lire Séville dans l’eau, les rues, les pouvoirs, les archives, le spectacle et les images, la meilleure dernière scène est maintenant celle que le guide ne commente plus.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Aucun objet à trouver; la scène se termine par une décision de rythme et de protection logistique.",
+      "fallback_behavior": {"cannot_find": "Aucun contenu de remplacement n’est requis. Si le temps se resserre, écourtez immédiatement le temps libre et suivez le départ protégé."},
+      "next_scene": {"scene_id": null, "relation": "END_SUNDAY_AND_PROTECT_AIRPORT_DEPARTURE"},
+      "candidate_refs": ["J1-SUN-015"],
+      "source_refs": ["I10", "S52"],
+      "optional_depth_links": []
+    }
+  ],
+  "optional_depth": [
+    {
+      "scene_id": "SEV2-SUN-D01",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-SUN-01",
+      "candidate_refs": ["J1-SUN-004"],
+      "source_refs": ["S40"],
+      "short_label": "Derrière le ruedo — trois anneaux de fonctions",
+      "spoken_text": "Si vous voulez lire l’arène comme une machine, imaginez trois anneaux autour du sable. Le premier organise la bordure immédiate du ruedo. Le deuxième accueille notamment des places couvertes et une galerie de circulation. Le troisième distribue escaliers et espaces de service : corrales, locaux des cuadrillas, infirmerie et autres fonctions opérationnelles. Tout n’est pas visible depuis votre parcours, et ce n’est pas le but. L’idée suffit : ce que le public perçoit comme un seul cercle de spectacle repose sur plusieurs couches de circulation et de service.",
+      "expected_duration_class": "SHORT_20_45"
+    },
+    {
+      "scene_id": "SEV2-SUN-D02",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-SUN-08",
+      "candidate_refs": ["J1-SUN-012"],
+      "source_refs": ["S48"],
+      "short_label": "Le fleuve revient en peinture",
+      "spoken_text": "Si vous croisez dans les salles du XIXe siècle une vue de Séville, du Guadalquivir ou de Triana, utilisez-la comme un miroir du vendredi. Vous avez parcouru physiquement cette rive, ce pont et ce quartier; ici, un peintre choisit un cadre, une lumière et ce qu’il laisse hors champ. Le musée documente plusieurs vues de la cathédrale depuis le Guadalquivir, de Triana et de Séville, au moment où le paysage prend davantage d’autonomie comme genre. Ne cherchez pas un titre précis : saisissez seulement l’occasion si une de ces vues est là.",
+      "expected_duration_class": "SHORT_20_45"
+    },
+    {
+      "scene_id": "SEV2-SUN-D03",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-SUN-05",
+      "candidate_refs": ["J1-SUN-013"],
+      "source_refs": ["S49"],
+      "short_label": "2026 — deux Goya arrivent de l’Archivo",
+      "spoken_text": "Connexion très récente avec samedi : en 2026, l’État a affecté au Museo de Bellas Artes deux portraits royaux peints par Goya en 1789, Carlos IV et María Luisa de Parma. Ils avaient été déposés à l’Archivo de Indias depuis 1999 et avaient été commandés à l’origine par la Real Fábrica de Tabacos pour des célébrations royales. Ce transfert est documenté; leur emplacement public exact, lui, ne doit pas être supposé. N’essayez donc pas de les trouver sauf s’ils sont clairement signalés.",
+      "expected_duration_class": "SHORT_20_45",
+      "condition": "ONLY_IF_PUBLIC_DISPLAY_IS_CONFIRMED_OR_OBVIOUS"
+    },
+    {
+      "scene_id": "SEV2-SUN-D04",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-SUN-05",
+      "candidate_refs": ["J1-SUN-014"],
+      "source_refs": ["S50"],
+      "short_label": "2026 — une exposition volontairement temporaire",
+      "spoken_text": "Pour ce voyage précis, le musée présente aussi La belleza del conocimiento, une exposition liée à un don de douze œuvres allant du XVIe au XIXe siècle. Elle court du 7 juillet au 11 octobre 2026. C’est justement pourquoi elle n’entre pas dans le récit principal : le guide durable doit survivre à sa fermeture. Considérez-la comme une possibilité du jour, jamais comme une étape obligatoire.",
+      "expected_duration_class": "SHORT_20_45",
+      "condition": "TRIP_SPECIFIC_UNTIL_2026-10-11"
+    }
+  ],
+  "intentional_silence": [
+    {
+      "segment": "après SEV2-SUN-03 jusqu’à la sortie de la Maestranza selon le parcours réel",
+      "mode": "SILENCE_BY_DEFAULT",
+      "purpose": "ne pas empiler de nouveaux commentaires sur le traitement V1 déjà suffisant de l’institution et de la controverse"
+    },
+    {
+      "segment": "SEV2-SUN-04 — Maestranza → checkout → Lockers Agua",
+      "mode": "SILENCE_LOGISTICS",
+      "purpose": "protéger checkout, manipulation des bagages et ponctualité; aucune recherche patrimoniale"
+    },
+    {
+      "segment": "fin de SEV2-SUN-07 au Museo de Bellas Artes",
+      "mode": "USER_PAUSE",
+      "purpose": "laisser une œuvre réellement regardée devenir le centre de l’expérience"
+    },
+    {
+      "segment": "après SEV2-SUN-09 jusqu’à l’aéroport",
+      "mode": "SILENCE_PROTECTED_DEPARTURE",
+      "purpose": "aucune nouvelle obligation narrative ou culturelle après la clôture"
+    }
+  ],
+  "field_assumptions": [
+    "Le parcours exact de la visite Maestranza peut masquer la liaison Aníbal González ou la grille de la Puerta del Príncipe; les scènes 02 et 03 sont conditionnelles et n’autorisent aucun détour.",
+    "Les horaires/conditions de Lockers Agua S51 restent dynamiques; la scène 04 protège le plan accepté mais ne transforme pas cette donnée opérationnelle en contenu culturel.",
+    "Le musée est compatible avec le dimanche au snapshot J1, mais S43 doit être revalidé si l’usage devient matériellement plus tardif.",
+    "L’ensemble Murillo S46 est robuste au snapshot; la scène évite de promettre un tableau individuel.",
+    "Las Cigarreras S47 est PRIMARY_IF_ON_VIEW et s’auto-saute si l’œuvre n’est pas exposée.",
+    "Les profondeurs S48/S49/S50 restent conditionnelles ou temporaires; aucune n’est requise pour compléter le graphe.",
+    "Casa de Pilatos n’a aucune scène primaire; il reste strictement fallback-only.",
+    "Après la scène 09, le départ aéroport protégé prévaut sur toute envie d’ajouter une visite ou un détour."
+  ]
+}

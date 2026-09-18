@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SUN-01",
+  "title": "Maestranza — le centre a réellement bougé",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 3,
+  "stop": "Maestranza — ruedo visible",
+  "location": "Maestranza — le centre a réellement bougé",
+  "launch": "Lancer quand le ruedo est naturellement visible pendant la visite réservée; ne demander aucun repérage géométrique précis.",
+  "look": "Regardez la forme du ruedo sans chercher un cercle parfait : au XVIIIe siècle, son centre et son rayon ont été modifiés.",
+  "summary": "REFRAME_GEOMETRY",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S39"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Vendredi, nous avions seulement retenu l’irrégularité de l’arène. Ici, on peut aller un cran plus loin. Au XVIIIe siècle, les bâtisseurs ont réellement déplacé le centre géométrique du projet et réduit son rayon pour l’adapter au terrain disponible. La Maestranza relie aussi cette évolution au moment où la tauromachie à pied prend davantage de place. Ne cherchez pas le centre à l’œil : retenez simplement qu’ici, même la géométrie du spectacle a été négociée avec la ville et avec l’évolution de la pratique."
+    }
+  ]
+}

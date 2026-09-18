@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SUN-02",
+  "title": "Aníbal González — retour, autre rôle",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 3,
+  "stop": "Maestranza — liaison siège / loges, selon parcours",
+  "location": "Aníbal González — retour, autre rôle",
+  "launch": "Lancer seulement si la relation entre le siège de la Real Maestranza et la plaza peut être expliquée sans détour; sinon écouter comme contexte de circulation.",
+  "look": "Si la liaison avec le siège est perceptible, comparez ce geste à Plaza de España : même architecte, mais ici dans un complexe beaucoup plus ancien.",
+  "summary": "CROSS_DAY_ARCHITECT_CONNECT_CONDITIONAL",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S41"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Hier, Aníbal González dominait Plaza de España. Il réapparaît ici dans un rôle très différent. Entre 1927 et 1930, il dessine le siège de la Real Maestranza et sa liaison élevée avec la plaza. Cette intervention oblige à déplacer la loge de la corporation par rapport au balcon principal; le passage sera encore élargi en 1968. À Plaza de España, il fabriquait une grande scène nouvelle. Ici, il s’insère dans un complexe accumulé depuis des siècles. Si la liaison n’est pas visible, gardez seulement ce contraste."
+    }
+  ]
+}

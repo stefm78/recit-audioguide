@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "program_schema_version": 3,
+  "id": "SEV2-SAT-04",
+  "title": "Les bancs — cherchez Séville",
+  "language": "fr-FR",
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S22",
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S23"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Regardez la suite des bancs de céramique et lisez deux ou trois noms. Maintenant, cherchez « Sevilla ». Prenez quelques instants. Vous pouvez arrêter : dans cette série, vous ne trouverez pas de banc provincial dédié à Séville. Les sources touristiques locales décrivent quarante-huit bancs provinciaux et expliquent cette absence par le fait que Séville est représentée ailleurs dans la place. Ce petit manque est plus intéressant qu’une liste complète : le dispositif organise une représentation du territoire selon les catégories et les choix de son époque. Gardez encore un moment pour regarder les images des bancs qui sont devant vous, pas pour les collectionner tous.",
+      "sequence": 1,
+      "resolved_preset": "narrateur-vif",
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "rate": "+8%",
+      "pitch": "+14Hz",
+      "volume": "+5%",
+      "casting_alternatives": [],
+      "resolved_placement": "center",
+      "resolved_pan": 0.0,
+      "resolved_acoustic_space": "dry",
+      "resolved_pause_after_ms": 350.0
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SAT-01",
+  "title": "Santa María la Blanca — avant l’image de Santa Cruz",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 2,
+  "stop": "Pje. de Vila 11 → Santa María la Blanca",
+  "location": "Santa María la Blanca — avant l’image de Santa Cruz",
+  "launch": "Lancer en passant naturellement devant Santa María la Blanca; ne demander aucune entrée dans l’église.",
+  "look": "Regardez seulement l’église et la rue : l’histoire du quartier commence ici avant les ruelles de carte postale.",
+  "summary": "WALKING_HISTORY_BRIEF",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S19"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "En quittant Pje. de Vila, la route passe par Santa María la Blanca avant d’entrer plus tard dans l’image touristique de Santa Cruz. Regardez seulement l’église et la rue; inutile d’entrer. Le lieu a été une synagogue au Moyen Âge. En 1391, les violences antijuives et les conversions forcées bouleversent la judería sévillane; l’édifice devient ensuite une église chrétienne, puis son intérieur est profondément transformé à l’époque baroque. Ce que vous voyez aujourd’hui ne raconte donc pas une continuité paisible. Gardez plutôt l’idée d’une ville faite de ruptures, de réemplois et de mémoires superposées. Continuez vers les Jardines de Murillo."
+    }
+  ]
+}

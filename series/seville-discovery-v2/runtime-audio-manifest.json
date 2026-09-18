@@ -1,0 +1,283 @@
+{
+  "schema": "recit.seville-v2.runtime-audio-manifest.v1",
+  "status": "QUALIFIED_BYTES_PROMOTED",
+  "policy": "J4 artifact bytes are authoritative; no Edge TTS rerender is accepted as bit-for-bit equivalent.",
+  "scene_count": 25,
+  "hash_match_count": 25,
+  "optional_depth_audio_count": 0,
+  "j4_batches": [
+    {
+      "qualification_path": "series/seville-discovery-v2/qualification/J4_FRIDAY_MORNING_AUDIO_QUALIFICATION.json",
+      "workflow_run_id": 35260567914,
+      "workflow_head_sha": "c91484167544a10e76e46a4588d556bb16a3c360",
+      "artifact_id": 10514517681,
+      "artifact_name": "seville-v2-j4-friday-audio"
+    },
+    {
+      "qualification_path": "series/seville-discovery-v2/qualification/J4_SATURDAY_AUDIO_QUALIFICATION.json",
+      "workflow_run_id": 35265040415,
+      "workflow_head_sha": "fa4a25022763bbd22077135a706b3e2c48b2bfbb",
+      "artifact_id": 10516435782,
+      "artifact_name": "seville-v2-j4-saturday-audio"
+    },
+    {
+      "qualification_path": "series/seville-discovery-v2/qualification/J4_SUNDAY_AUDIO_QUALIFICATION.json",
+      "workflow_run_id": 35271641904,
+      "workflow_head_sha": "af8f7522f721e54ca7927bcb1c4fb33c9593c84f",
+      "artifact_id": 10519381359,
+      "artifact_name": "seville-v2-j4-sunday-audio"
+    }
+  ],
+  "entries": [
+    {
+      "scene_id": "SEV2-FRI-AM-01",
+      "source_scene_program": "series/seville-discovery-v2/scenes/FRIDAY_MORNING_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-FRI-AM-01/audio.mp3",
+      "audio_sha256_expected_j4": "733d01c4764daae11b30f4332c81c5fd767e9f3c17339005e6937131f9b1b708",
+      "audio_sha256_published_source": "733d01c4764daae11b30f4332c81c5fd767e9f3c17339005e6937131f9b1b708",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "baa6b4f4e6d40c979aef2438b65d1e311e0b2aae771ab78cd73208d3309d9660",
+      "transcript_sha256": "ec3b704798ecdc0f2a14e3d732902099f7857ca07f81138f136df27648067bca"
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-02",
+      "source_scene_program": "series/seville-discovery-v2/scenes/FRIDAY_MORNING_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-FRI-AM-02/audio.mp3",
+      "audio_sha256_expected_j4": "685fa4f8dcefc8119436fa892f5fcb064fe50d4caed028da36cdb6a029151515",
+      "audio_sha256_published_source": "685fa4f8dcefc8119436fa892f5fcb064fe50d4caed028da36cdb6a029151515",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "7e78f9f11065f0c66b1c9c4126cdf30515207b886a207b3eb22edf83df2d3a91",
+      "transcript_sha256": "f2cd216f136f3846dbeccbda225fe741a295c51ccf6564737028b708202c9032"
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-03",
+      "source_scene_program": "series/seville-discovery-v2/scenes/FRIDAY_MORNING_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-FRI-AM-03/audio.mp3",
+      "audio_sha256_expected_j4": "e959121cf81a195625acbba9c7742e6c600a9b3e55194ea17339f7148878a625",
+      "audio_sha256_published_source": "e959121cf81a195625acbba9c7742e6c600a9b3e55194ea17339f7148878a625",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "064df3a963e6bb8688f6ef8a4761cef7aebb5ad83d750042e834c15253f45f42",
+      "transcript_sha256": "32280c4eb3427a28a2e7667bbc0e5c6922c79ae510a3169f1f9a5bbb3d84469a"
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-04",
+      "source_scene_program": "series/seville-discovery-v2/scenes/FRIDAY_MORNING_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-FRI-AM-04/audio.mp3",
+      "audio_sha256_expected_j4": "1e13c597c736eb1869b1dea4773992960a318f30eecfd6b50653c6fb211132b6",
+      "audio_sha256_published_source": "1e13c597c736eb1869b1dea4773992960a318f30eecfd6b50653c6fb211132b6",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "12c6624b608f60cf12b842cdd68a5439bf3f4faf670ce54baf1d79a329b7b1c4",
+      "transcript_sha256": "9650625ca40729e1e9937cab2396f431c452977462ac55a9d9280b08cd783f5f"
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-05",
+      "source_scene_program": "series/seville-discovery-v2/scenes/FRIDAY_MORNING_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-FRI-AM-05/audio.mp3",
+      "audio_sha256_expected_j4": "dd4aa83fab8619e7dc63aa182a272b8e16a5f0483c89f830c113aa71900e62c8",
+      "audio_sha256_published_source": "dd4aa83fab8619e7dc63aa182a272b8e16a5f0483c89f830c113aa71900e62c8",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "132545dfc7a0224fd05e967b85322bb58ba44d6783bc52ddbb8dcbb0f8e9921f",
+      "transcript_sha256": "68128bd99ab084861fae8b739d6a61c8a0c330fc1801e8c77169a1c8f8d3ef51"
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-06",
+      "source_scene_program": "series/seville-discovery-v2/scenes/FRIDAY_MORNING_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-FRI-AM-06/audio.mp3",
+      "audio_sha256_expected_j4": "8b8dd372bf6a2dfd0e6a222dd1f74ef684664f1c352267264e59b8d52290b5d5",
+      "audio_sha256_published_source": "8b8dd372bf6a2dfd0e6a222dd1f74ef684664f1c352267264e59b8d52290b5d5",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "5e3f979595351e3dc3558a340170fc7bc9798a23f587601362319ef82197f172",
+      "transcript_sha256": "671cbefa0a43d075c7b85f583dc9311250fe79f921eac67ab404048cc8469a3d"
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-07",
+      "source_scene_program": "series/seville-discovery-v2/scenes/FRIDAY_MORNING_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-FRI-AM-07/audio.mp3",
+      "audio_sha256_expected_j4": "34d7fc9a2ad13054ed0a86321c5a8f3be18be0e99aaec751c9142747ca46d274",
+      "audio_sha256_published_source": "34d7fc9a2ad13054ed0a86321c5a8f3be18be0e99aaec751c9142747ca46d274",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "1e18cb174fde3b90600fa11948a54336a1aff3cccdda1003a1bc0a8e04626aba",
+      "transcript_sha256": "df2d1049949f2a338df4019bf453485d4e23183beb2b179c99a97669ff05bde9"
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-08",
+      "source_scene_program": "series/seville-discovery-v2/scenes/FRIDAY_MORNING_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-FRI-AM-08/audio.mp3",
+      "audio_sha256_expected_j4": "cf4d73bb8a83631e33f4b845f1b996e11823b581ec5972198962461d2192969e",
+      "audio_sha256_published_source": "cf4d73bb8a83631e33f4b845f1b996e11823b581ec5972198962461d2192969e",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "d92a12c8cc013535cb8fb86133e4d41b0f36f07cb7a6e8e5c104ed235698afd0",
+      "transcript_sha256": "ef42efa653e8f91f57c848fadbcfd437daa021134cc8e71b6810bcd4f68d3dad"
+    },
+    {
+      "scene_id": "SEV2-SAT-01",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SATURDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SAT-01/audio.mp3",
+      "audio_sha256_expected_j4": "11f7133a2e14b0cf029471dc94adac3c87091f4d0f6825cd305ba26ba8b5ca59",
+      "audio_sha256_published_source": "11f7133a2e14b0cf029471dc94adac3c87091f4d0f6825cd305ba26ba8b5ca59",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "a5d3945526e00ed0b2484edf630782af636d4e3ae1d7527cb6e9600f7c32c3e5",
+      "transcript_sha256": "274db38b5c35153022c2ac4041eb7bfa9606737654d614c2eac5a3b116b0a395"
+    },
+    {
+      "scene_id": "SEV2-SAT-02",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SATURDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SAT-02/audio.mp3",
+      "audio_sha256_expected_j4": "fd9814f5529deadb997039b882acb7064d8b28a4ad601ae4f97616d6dcae1503",
+      "audio_sha256_published_source": "fd9814f5529deadb997039b882acb7064d8b28a4ad601ae4f97616d6dcae1503",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "e83efed97ea407a07c08d426fdc5ea1f3bb1b5f446ea339c78f246c6ca5bda54",
+      "transcript_sha256": "b5c5d7c72b3b8c1568f6b577a6b98c5790c7bea04cf23a9e9bc0447145f6fbf3"
+    },
+    {
+      "scene_id": "SEV2-SAT-03",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SATURDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SAT-03/audio.mp3",
+      "audio_sha256_expected_j4": "4be672ce74fd21d4da127664fa636ffbc5317bdcef0a749d4e67bb551fd9f81a",
+      "audio_sha256_published_source": "4be672ce74fd21d4da127664fa636ffbc5317bdcef0a749d4e67bb551fd9f81a",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "06654d861c196f48c707035c2ba069f049e042b7d34c1af6d65f95a406ed8c9a",
+      "transcript_sha256": "2f94ac7d9cdd2faf13db0663938c7a8e6a7ea85750a8f62eddf15cb36786df30"
+    },
+    {
+      "scene_id": "SEV2-SAT-04",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SATURDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SAT-04/audio.mp3",
+      "audio_sha256_expected_j4": "39aa8799121f0e9c0d7069d0399b6822c4d0fa588982f5b3523b451ae39bae97",
+      "audio_sha256_published_source": "39aa8799121f0e9c0d7069d0399b6822c4d0fa588982f5b3523b451ae39bae97",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "25db79a66c42e8ea44815a56db926a2dd16b10b32d127d8badf2ed6e8b767442",
+      "transcript_sha256": "8a4e41609b4ca3efd16fdb0e76d49771371c5d158ecd476744336a18e42d5b7f"
+    },
+    {
+      "scene_id": "SEV2-SAT-05",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SATURDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SAT-05/audio.mp3",
+      "audio_sha256_expected_j4": "01e3f225ae666a8afc440e8e629245b08b9471d49a08d362918c9d35836c5d59",
+      "audio_sha256_published_source": "01e3f225ae666a8afc440e8e629245b08b9471d49a08d362918c9d35836c5d59",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "792db657a7ecbdb711676261ad4cd229d56f7aea17d0523f53fb16e3a000aa66",
+      "transcript_sha256": "895dbfa812e192fc903920f5eb1dafe36f7b85633351e2e86b3479d108342e2b"
+    },
+    {
+      "scene_id": "SEV2-SAT-06",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SATURDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SAT-06/audio.mp3",
+      "audio_sha256_expected_j4": "1af233c189278f26a9ef0d9aacf61cc35c1d17332456013de78a2357d655dad6",
+      "audio_sha256_published_source": "1af233c189278f26a9ef0d9aacf61cc35c1d17332456013de78a2357d655dad6",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "16bdb36a0a52ba7bb98cc011c9f4eac96ce8da0375d215166e6daf2a9f7506db",
+      "transcript_sha256": "d7ca74862006956760aa389fdcbf80bc7dca61ed899667ee4748514d70c9cd2b"
+    },
+    {
+      "scene_id": "SEV2-SAT-07",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SATURDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SAT-07/audio.mp3",
+      "audio_sha256_expected_j4": "f88f16548d998407cbaf32a87fdfd32ff37ac11f8746cae4d9548624ae9d655d",
+      "audio_sha256_published_source": "f88f16548d998407cbaf32a87fdfd32ff37ac11f8746cae4d9548624ae9d655d",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "5c572027af213ec26204bea8bc16a97bc79aecd7df5ae8a6d312169eccc8ee9f",
+      "transcript_sha256": "63a12d8fbaff499a2d78c08a17b5dd5b35b0646620e0fc03db238fed327758d3"
+    },
+    {
+      "scene_id": "SEV2-SAT-08",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SATURDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SAT-08/audio.mp3",
+      "audio_sha256_expected_j4": "0c39c1a79cd2d4450c58fcd1ee5b36bfa558bdc33ae01dd6267a63f3267e7e5b",
+      "audio_sha256_published_source": "0c39c1a79cd2d4450c58fcd1ee5b36bfa558bdc33ae01dd6267a63f3267e7e5b",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "f01d7f5e682b81cfa253b819b9c9721a343433384d81f5b62c73bbc977009a6b",
+      "transcript_sha256": "6eefea6bc7665fcad447a5195d23601e4038cbf29575763c48396ad8a4c1446a"
+    },
+    {
+      "scene_id": "SEV2-SUN-01",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SUN-01/audio.mp3",
+      "audio_sha256_expected_j4": "79ccc64fc3cdc1d447fe5d503c68126ef51b9099c3d4f97d12b3d75473af9571",
+      "audio_sha256_published_source": "79ccc64fc3cdc1d447fe5d503c68126ef51b9099c3d4f97d12b3d75473af9571",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "07c8b2450b205b84556f721807e33f34fdd4a550a7294a636a4e708535f36516",
+      "transcript_sha256": "2d836b7ee510d1bd16a6f841b531120362ee531aa635b8e746087ed72dbb1f90"
+    },
+    {
+      "scene_id": "SEV2-SUN-02",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SUN-02/audio.mp3",
+      "audio_sha256_expected_j4": "3590f5263e8cc80542e38660864e415798c744a4a3b4dac7f221f82f2b0221db",
+      "audio_sha256_published_source": "3590f5263e8cc80542e38660864e415798c744a4a3b4dac7f221f82f2b0221db",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "ff04277460e487507a8d0f6a96734300b03ea40aac4813ebb95fd847e8397361",
+      "transcript_sha256": "579eaff775f15d60570e58ef367eff6a467f2d78d669358a20406a02f385a287"
+    },
+    {
+      "scene_id": "SEV2-SUN-03",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SUN-03/audio.mp3",
+      "audio_sha256_expected_j4": "e216a8f0af3e08114276210101224271ecabb05279d95bbbf1865bb204c1bf3d",
+      "audio_sha256_published_source": "e216a8f0af3e08114276210101224271ecabb05279d95bbbf1865bb204c1bf3d",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "180b2bb2953f5ed9a16c462805f97bc81d4f844cd135d3a76e6d9337419c6dd7",
+      "transcript_sha256": "c018884b80aa70b9472be280d64a4a2c03a19b6835191d933c60aa85e4b44baa"
+    },
+    {
+      "scene_id": "SEV2-SUN-04",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SUN-04/audio.mp3",
+      "audio_sha256_expected_j4": "a4d0c3ae9c1ddba0ebaab0d37dda158bb9491dd992b04b3620af55c32d7a77ff",
+      "audio_sha256_published_source": "a4d0c3ae9c1ddba0ebaab0d37dda158bb9491dd992b04b3620af55c32d7a77ff",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "279d061c84a207162a15bcab0e5df513107400b5602a3b9a13afcb59e416084f",
+      "transcript_sha256": "24c16fe211c654b2e765c946ea2682e6c2078f13d6db277a1c52cef7af9dbb72"
+    },
+    {
+      "scene_id": "SEV2-SUN-05",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SUN-05/audio.mp3",
+      "audio_sha256_expected_j4": "602d0823fecd77ad373b10915fd38cce54ea6b75a903877e73f8e1588d51164e",
+      "audio_sha256_published_source": "602d0823fecd77ad373b10915fd38cce54ea6b75a903877e73f8e1588d51164e",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "9c4ebb24d8242d98e5c0e6c95817c516bd0c64e19e23c339ea3d4a9854922d4b",
+      "transcript_sha256": "4f6d121ff8ce8eec3e95f7d3827b2dfb3378e24dfe7bc912b47cebd4cb33b8e9"
+    },
+    {
+      "scene_id": "SEV2-SUN-06",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SUN-06/audio.mp3",
+      "audio_sha256_expected_j4": "1580207bd8007ec4d8f78d84f900de817eb6331b90015fcda3628d32b8e7a353",
+      "audio_sha256_published_source": "1580207bd8007ec4d8f78d84f900de817eb6331b90015fcda3628d32b8e7a353",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "4c5cf652048bec3b57ee3ddf26e5fcbff400f9190faa95d0035407df2d294ead",
+      "transcript_sha256": "517486d24ad49661ecdad3c95ae6c02d659f1bfe6f30ee19e32c59487eb10651"
+    },
+    {
+      "scene_id": "SEV2-SUN-07",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SUN-07/audio.mp3",
+      "audio_sha256_expected_j4": "97810394c77b6c528cc1d821cbd80f70652fe01f2d2a08843990703e166df432",
+      "audio_sha256_published_source": "97810394c77b6c528cc1d821cbd80f70652fe01f2d2a08843990703e166df432",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "1582996c859349b1947265932da05ce8c2d72bb506ad7b28ef26d2174050fb12",
+      "transcript_sha256": "cbc82bfdffd8f8c0e1a4ff6610ea12cc9e6e64785438c18f7ee7af478a48a10b"
+    },
+    {
+      "scene_id": "SEV2-SUN-08",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SUN-08/audio.mp3",
+      "audio_sha256_expected_j4": "4c04ee2d30ee011392bf5b293be98216fad182392485d3891e3f61fe90fde863",
+      "audio_sha256_published_source": "4c04ee2d30ee011392bf5b293be98216fad182392485d3891e3f61fe90fde863",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "51f1f0f6546eb805c2c5073ddb2925570fb23d599b5ac6245632440adc2970d6",
+      "transcript_sha256": "09d1d8dda43c6e8e28cbce396af2fc846ea84fa5e9e1315cb00a8ea7855e98b2"
+    },
+    {
+      "scene_id": "SEV2-SUN-09",
+      "source_scene_program": "series/seville-discovery-v2/scenes/SUNDAY_SCENE_PROGRAM.json",
+      "audio_path": "series/seville-discovery-v2/assets/audio/SEV2-SUN-09/audio.mp3",
+      "audio_sha256_expected_j4": "0d825fc38cd60526fbc9723fe8696418f915863ea13f10792d3409560b954a82",
+      "audio_sha256_published_source": "0d825fc38cd60526fbc9723fe8696418f915863ea13f10792d3409560b954a82",
+      "audio_sha256_match": true,
+      "renderer_manifest_sha256": "cd8aba4843a790ad3a6b1dd0b7f10f1cd99b34b86192eb3ccf8b93fe4b2bd5e2",
+      "transcript_sha256": "bd0b8ea76b3697f702f75c98c913e499aa26249960eed22b280fd1ef18c76fc4"
+    }
+  ]
+}

@@ -1,0 +1,414 @@
+{
+  "schema": "recit.seville-v2.field-scene-program.v1",
+  "status": "J2_CANDIDATE",
+  "batch_id": "seville-v2-friday-morning-j1-accepted-2026-09-17",
+  "day": "day1",
+  "day_label": "Vendredi 18 septembre",
+  "route_section": "NH Sevilla Plaza de Armas → Reyes Católicos → Puente de Isabel II → Altozano / Mercado de Triana → San Jorge / Castilla → Puente de Isabel II → Paseo de Cristóbal Colón / extérieur Maestranza → NH Plaza de Armas",
+  "research_authority": {
+    "artifact": "series/seville-discovery-v2/research/FRIDAY_MORNING_FIELD_STORY_RESEARCH.md",
+    "source_manifest": "series/seville-discovery-v2/research/SOURCE_MANIFEST.md",
+    "research_artifact_blob_sha": "458c3863b8ef30542a301c98b3172ee21853889e",
+    "source_manifest_blob_sha": "d43f2d5a089fb5af4afcd0df52384ff138013184"
+  },
+  "route_authority": {
+    "v1_series": "series/seville-discovery/series.json",
+    "v1_episode_ids": [
+      "seville-discovery-ep06",
+      "seville-discovery-ep07"
+    ],
+    "navigation_authority": "external_google_maps",
+    "rule": "J2 does not change route, bookings, logistics or navigation links."
+  },
+  "editorial_decision": {
+    "primary_scene_count": 8,
+    "optional_depth_count": 3,
+    "strategy": "Keep the eight route-native J1 primary hooks as short field scenes because each has a distinct observation moment; do not turn the six rejected candidates into audio. The return bridge is intentionally silent by default.",
+    "challenge_result": [
+      "Do not combine Capillita and Mercado: they need different visual attention and density.",
+      "Do not combine Arenal and Maestranza: broad spatial reconstruction must precede the brief Sunday anticipation tag.",
+      "Do not create a second mandatory bridge lecture on the return crossing.",
+      "Station and ceramics cues remain conditional; they must never cause a search or detour."
+    ],
+    "materialized_primary_candidates": [
+      "J1-FRI-001",
+      "J1-FRI-003",
+      "J1-FRI-004",
+      "J1-FRI-006",
+      "J1-FRI-007",
+      "J1-FRI-008",
+      "J1-FRI-010",
+      "J1-FRI-011"
+    ],
+    "optional_depth_candidates": [
+      "J1-FRI-002",
+      "J1-FRI-005",
+      "J1-FRI-009"
+    ],
+    "excluded_candidates": {
+      "J1-FRI-012": "route drift and statue currently removed",
+      "J1-FRI-013": "archaeological descent currently unavailable",
+      "J1-FRI-014": "promotional metaphor excluded as core fact",
+      "J1-FRI-015": "Centro Cerámica would add a physical stop/detour",
+      "J1-FRI-016": "detailed Maestranza material reserved for Sunday",
+      "J1-FRI-017": "route expansion without incremental Friday value"
+    }
+  },
+  "integration_contract": {
+    "j3_audio_first_mapping": {
+      "scene_id": "runtime episode id",
+      "short_label": "episode.title or episode.stop",
+      "primary_cue": "visit-experience.episodes[scene_id].look_first",
+      "spoken_text": "transcript / J4 audio source",
+      "fallback_behavior.cannot_find": "secondary Je ne trouve pas surface",
+      "optional_depth_links": "secondary Approfondir surface",
+      "source_refs": "secondary Sources surface"
+    },
+    "j4_audio_mapping": "Deterministic one-primary-scene-to-one-primary-audio-asset mapping; optional depth nodes are separate assets only if coordination accepts them.",
+    "v1_mutation_allowed": false,
+    "shared_ux_mutation_allowed": false,
+    "production_audio_in_this_batch": false
+  },
+  "coverage": [
+    {
+      "segment": "NH Plaza de Armas → Reyes Católicos",
+      "primary_scenes": [
+        "SEV2-FRI-AM-01"
+      ],
+      "policy": "walking context; former station cue conditional"
+    },
+    {
+      "segment": "river approach → first half of Puente de Isabel II",
+      "primary_scenes": [
+        "SEV2-FRI-AM-02",
+        "SEV2-FRI-AM-03"
+      ],
+      "policy": "look before explanation, then free observation pause"
+    },
+    {
+      "segment": "Altozano → Mercado de Triana",
+      "primary_scenes": [
+        "SEV2-FRI-AM-04",
+        "SEV2-FRI-AM-05"
+      ],
+      "policy": "small landmark then market layer; no underground dependency"
+    },
+    {
+      "segment": "San Jorge / Castilla",
+      "primary_scenes": [
+        "SEV2-FRI-AM-06"
+      ],
+      "policy": "opportunistic ceramic cue; skip without search if absent"
+    },
+    {
+      "segment": "return Puente de Isabel II",
+      "primary_scenes": [],
+      "policy": "intentional silence by default; optional depth only"
+    },
+    {
+      "segment": "Paseo de Cristóbal Colón / Arenal",
+      "primary_scenes": [
+        "SEV2-FRI-AM-07"
+      ],
+      "policy": "broad spatial reconstruction"
+    },
+    {
+      "segment": "exterior Maestranza → NH Plaza de Armas",
+      "primary_scenes": [
+        "SEV2-FRI-AM-08"
+      ],
+      "policy": "brief Sunday anticipation tag, then walking close"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "SEV2-FRI-AM-01",
+      "order": 1,
+      "route_section": "NH Sevilla Plaza de Armas → Reyes Católicos",
+      "trigger_or_launch_condition": "Lancer en quittant le NH et en prenant la direction du fleuve; ne demander aucune recherche de façade.",
+      "scene_type": "WALKING_CONTEXT_CONDITIONAL",
+      "short_label": "Plaza de Armas — un bord de ville recousu",
+      "primary_cue": "Si l’ancienne gare est naturellement visible, regardez sa grande masse de brique; sinon continuez simplement vers le fleuve.",
+      "spoken_text": "En sortant du NH, ne cherchez pas encore la Séville des cartes postales. Prenez la direction du fleuve. Si l’ancienne gare de Plaza de Armas est naturellement dans votre champ de vision, regardez sa grande masse de brique. Cette gare de Córdoba a été construite entre 1899 et 1901. Pendant des décennies, les voies ont fait de ce bord de ville une vraie coupure autant qu’un point de départ. Avant l’Expo 92, la gare a cessé son activité ferroviaire et les voies de Torneo ont disparu. Le bord ouest s’est rouvert vers le fleuve. Gardez cette idée : à Séville, un paysage qui paraît ancien peut avoir été profondément recousu il y a seulement quelques décennies. Continuez vers Reyes Católicos. Le fleuve arrive avant les monuments.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Ancienne gare uniquement si elle tombe naturellement dans le champ de vision; sinon le déplacement lui-même suffit.",
+      "fallback_behavior": {
+        "cannot_find": "Ne cherchez pas la gare et ne revenez pas en arrière. Continuez vers le fleuve; l’histoire reste compréhensible comme contexte de marche."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-FRI-AM-02",
+        "relation": "CONTINUE_WHEN_RIVER_OPENS"
+      },
+      "candidate_refs": [
+        "J1-FRI-001"
+      ],
+      "source_refs": [
+        "S14",
+        "S15"
+      ],
+      "optional_depth_links": [
+        "SEV2-FRI-AM-D01"
+      ]
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-02",
+      "order": 2,
+      "route_section": "Reyes Católicos → approche du Puente de Isabel II",
+      "trigger_or_launch_condition": "Lancer lorsque l’eau devient franchement visible, avant ou au début de la traversée.",
+      "scene_type": "LOOK_THEN_REVEAL",
+      "short_label": "Le fleuve — et la dársena",
+      "primary_cue": "Regardez d’abord les deux rives, les quais fixes et les ponts avant d’écouter ce que la ville a fait à son fleuve.",
+      "spoken_text": "Quand l’eau s’ouvre devant vous, accordez-lui quelques secondes avant l’explication. Regardez les deux rives, les quais fixes, les ponts. Ce que vous appelez spontanément le Guadalquivir est ici aussi une dársena portuaire : un tronçon urbain profondément réorganisé par les travaux du vingtième siècle, pour le port et la maîtrise des crues. Le fleuve de Séville n’est donc pas seulement un décor naturel; c’est aussi une infrastructure construite. En gagnant le pont, gardez ce double regard : de l’eau, oui, mais une eau mise en forme par la ville.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Eau urbaine contenue, rives aménagées, ponts; aucune activité de bateau n’est requise.",
+      "fallback_behavior": {
+        "cannot_find": "Si la vue est ponctuellement masquée, continuez jusqu’au pont et écoutez la scène en marchant sans vous arrêter."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-FRI-AM-03",
+        "relation": "ON_BRIDGE"
+      },
+      "candidate_refs": [
+        "J1-FRI-003"
+      ],
+      "source_refs": [
+        "S09",
+        "S10"
+      ],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-03",
+      "order": 3,
+      "route_section": "Puente de Isabel II — traversée vers Triana",
+      "trigger_or_launch_condition": "Lancer une fois engagé sur le pont, quand les grands arcs de fer sont visibles sans imposer un emplacement précis.",
+      "scene_type": "OBSERVATION_REVEAL_THEN_SILENCE",
+      "short_label": "Puente de Isabel II — le piège du fer",
+      "primary_cue": "Regardez les grands arcs de fer : ils semblent porter le tablier. La restauration des années 1970 a changé ce rôle.",
+      "spoken_text": "Sur le Puente de Isabel II, regardez les grands arcs de fer et les cercles qui donnent au pont sa silhouette si reconnaissable. Ils semblent porter tout le tablier. C’est le piège visuel. Le pont permanent ouvre en 1852, à l’emplacement de l’ancien pont de bateaux. Lors de la grande restauration de 1976 à 1977, le tablier est remplacé et les arcs historiques cessent d’assurer leur ancienne fonction porteuse. Le fer que vous admirez reste là comme forme patrimoniale, mais il ne travaille plus comme vous l’imaginez. Maintenant, laissez le pont tranquille. Regardez Triana devant vous et le centre derrière vous.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Grands arcs de fer / cercles et tablier du pont.",
+      "silence": {
+        "mode": "USER_PAUSE",
+        "prompt": "Mettez l’audio en pause quelques instants. Regardez le fleuve et les deux rives; reprenez quand vous avez envie de continuer."
+      },
+      "fallback_behavior": {
+        "cannot_find": "En cas de travaux ou de vue gênée, ne cherchez pas un angle parfait. Continuez vers Altozano et gardez seulement l’idée que le fer historique n’assure plus son ancien rôle porteur."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-FRI-AM-04",
+        "relation": "ARRIVAL_ALTOZANO"
+      },
+      "candidate_refs": [
+        "J1-FRI-004"
+      ],
+      "source_refs": [
+        "S01"
+      ],
+      "optional_depth_links": [
+        "SEV2-FRI-AM-D02"
+      ]
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-04",
+      "order": 4,
+      "route_section": "Altozano — tête de pont côté Triana",
+      "trigger_or_launch_condition": "Lancer à l’arrivée côté Triana si la Capillita del Carmen est visible sans quitter l’itinéraire.",
+      "scene_type": "LANDMARK_TAG",
+      "short_label": "Capillita del Carmen — changement d’échelle",
+      "primary_cue": "Si la petite chapelle de brique et de céramique est évidente à la sortie du pont, regardez-la. Sinon, poursuivez vers le marché.",
+      "spoken_text": "En arrivant à Altozano, regardez si un tout petit bâtiment de brique s’impose naturellement près du pont : la Capillita del Carmen. Après la masse métallique du pont, changement d’échelle complet. Aníbal González la dessine en 1928 avec brique apparente, céramiques de Triana et un petit clocher octogonal. Ici, les matériaux racontent presque autant que l’architecture. Son surnom populaire, « el Mechero », le briquet, vient de sa silhouette. Ne restez pas longtemps : ce petit objet sert surtout de seuil. Juste après, Triana cesse d’être une vue depuis le pont et devient un quartier à traverser.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Petite chapelle extérieure en brique et céramique; clocher octogonal.",
+      "fallback_behavior": {
+        "cannot_find": "Si la chapelle est masquée ou ne saute pas aux yeux, ne la cherchez pas. Passez directement vers le marché."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-FRI-AM-05",
+        "relation": "MOVE_TO_MARKET"
+      },
+      "candidate_refs": [
+        "J1-FRI-006"
+      ],
+      "source_refs": [
+        "S02"
+      ],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-05",
+      "order": 5,
+      "route_section": "Mercado de Triana / Castillo de San Jorge — niveau rue",
+      "trigger_or_launch_condition": "Lancer devant le marché; la scène doit fonctionner même si les étals commerciaux ne sont pas encore tous actifs.",
+      "scene_type": "PLACE_LAYER_LOOK_FIRST",
+      "short_label": "Mercado de Triana — deux couches sous vos pas",
+      "primary_cue": "Regardez d’abord le marché tel qu’il vit maintenant : portes, arrivées, étals s’ils sont ouverts. Ne cherchez aucun accès souterrain.",
+      "spoken_text": "Devant le Mercado de Triana, commencez par regarder ce qui est réellement vivant maintenant : les portes, les arrivées, les étals si certains sont déjà ouverts. Ne cherchez pas un accès souterrain. Le contraste est sous vos pieds. Le marché occupe l’emplacement du Castillo de San Jorge, longtemps associé au Tribunal de l’Inquisition. Les réaménagements du marché ont remis au jour des vestiges, mais le site archéologique dédié est actuellement fermé. C’est justement ce qui rend la scène lisible sans visite : au-dessus, un lieu quotidien de nourriture et de voisinage; dessous, une couche d’histoire institutionnelle beaucoup plus dure. N’essayez pas d’en faire un musée mental. Regardez d’abord le marché comme marché. Puis gardez simplement cette seconde couche en tête.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Extérieur et entrées du marché; activité intérieure seulement si elle est déjà réelle au moment du passage.",
+      "fallback_behavior": {
+        "cannot_find": "Si les étals ne sont pas encore ouverts ou si l’intérieur est peu actif, restez à l’extérieur. La scène est complète depuis le niveau rue.",
+        "forbidden_action": "Ne pas chercher à descendre dans le site archéologique."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-FRI-AM-06",
+        "relation": "LEAVE_MARKET_VIA_SAN_JORGE_CASTILLA"
+      },
+      "candidate_refs": [
+        "J1-FRI-007"
+      ],
+      "source_refs": [
+        "S03",
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-06",
+      "order": 6,
+      "route_section": "San Jorge / Castilla — marche de retour dans Triana",
+      "trigger_or_launch_condition": "Lancer seulement si une surface de céramique est rencontrée naturellement sur la ligne de marche; sinon sauter sans chercher.",
+      "scene_type": "WALKING_FLEXIBLE_OPTIONAL_VISUAL",
+      "short_label": "Triana — lire la céramique sans faire la chasse",
+      "primary_cue": "Si une plaque, des azulejos ou une façade céramique se présentent d’eux-mêmes, prenez-les comme échantillon. Sinon, continuez.",
+      "spoken_text": "En quittant le marché par San Jorge ou Castilla, ne cherchez aucun magasin précis. Regardez seulement si une surface de céramique se présente d’elle-même : une plaque, des azulejos, une façade, une enseigne. Si vous n’en voyez pas, passez cette scène. Si vous en voyez une, prenez-la comme un échantillon d’une histoire beaucoup plus longue. Triana possède une longue tradition de production céramique, avec des racines dans les périodes islamiques puis des continuités mudéjares et des ateliers plus récents. Ce qui compte ici n’est pas de mémoriser une chronologie : c’est de reconnaître un matériau que vous retrouverez ailleurs dans Séville. Continuez sans détour.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "N’importe quelle céramique clairement visible sur la route; aucun commerce, panneau ou façade précis n’est requis.",
+      "fallback_behavior": {
+        "cannot_find": "Sautez la scène sans chercher, sans demi-tour et sans détour vers le Centro Cerámica."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-FRI-AM-07",
+        "relation": "RETURN_BRIDGE_SILENCE_THEN_EAST_BANK"
+      },
+      "candidate_refs": [
+        "J1-FRI-008"
+      ],
+      "source_refs": [
+        "S07",
+        "S08"
+      ],
+      "optional_depth_links": [
+        "SEV2-FRI-AM-D03"
+      ]
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-07",
+      "order": 7,
+      "route_section": "Rive est — Paseo de Cristóbal Colón / Arenal",
+      "trigger_or_launch_condition": "Lancer après la traversée de retour, lorsque le large espace du front d’eau et de l’Arenal devient perceptible.",
+      "scene_type": "SPATIAL_RECONSTRUCTION",
+      "short_label": "Arenal — reconstruire la rive de travail",
+      "primary_cue": "Regardez l’espace large entre ville et eau avant de regarder les monuments : l’ancien rivage de travail a presque disparu.",
+      "spoken_text": "Quand vous êtes revenu sur la rive est et que l’espace du quai s’élargit, regardez d’abord la relation entre la ville et l’eau. Le mot Arenal renvoie à l’ancienne rive sableuse où se concentraient métiers et activités maritimes. Aujourd’hui, la promenade et les quais stabilisés donnent un dessin très différent. Essayez de remplacer mentalement cette façade par un bord de travail, chargé de circulation, de marchandises et de métiers. Au vingtième siècle, les grandes transformations portuaires ont déplacé une grande partie des fonctions du port plus au sud. Ce qui reste au centre est une façade urbaine où l’ancien port se lit surtout par contraste avec ce que vous voyez.",
+      "expected_duration_class": "MEDIUM_45_90",
+      "observable_cue": "Large front d’eau, promenade, relation spatiale ville-quai-eau; pas d’objet fragile.",
+      "fallback_behavior": {
+        "cannot_find": "Si une portion du quai est masquée par des travaux, continuez en marchant; la scène repose sur le contraste d’ensemble, pas sur un point précis."
+      },
+      "next_scene": {
+        "scene_id": "SEV2-FRI-AM-08",
+        "relation": "APPROACH_MAESTRANZA_EXTERIOR"
+      },
+      "candidate_refs": [
+        "J1-FRI-010"
+      ],
+      "source_refs": [
+        "S09",
+        "S11"
+      ],
+      "optional_depth_links": []
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-08",
+      "order": 8,
+      "route_section": "Extérieur Maestranza → retour NH Plaza de Armas",
+      "trigger_or_launch_condition": "Lancer en passant devant l’extérieur de la Maestranza, sans ajouter d’arrêt ni pré-consommer la visite intérieure du dimanche.",
+      "scene_type": "ANTICIPATION_TAG",
+      "short_label": "Maestranza — le cercle qui n’en est pas un",
+      "primary_cue": "Regardez seulement la forme extérieure : l’arène paraît ronde dans la mémoire, mais son enceinte s’est construite irrégulièrement.",
+      "spoken_text": "En passant devant la Maestranza, ne cherchez pas à tout comprendre aujourd’hui : l’intérieur est pour dimanche. Regardez seulement sa forme extérieure. On l’imagine volontiers parfaitement ronde. Pourtant, sa construction s’étale sur environ cent vingt ans et son enceinte forme un polygone irrégulier de trente côtés inégaux. Ne les comptez pas : retenez seulement qu’un monument que la mémoire simplifie en cercle est le résultat d’une construction lente, contrainte par son site. Gardez cette irrégularité pour dimanche, puis continuez vers le NH.",
+      "expected_duration_class": "SHORT_20_45",
+      "observable_cue": "Masse extérieure et forme irrégulière du bâtiment; aucun détail intérieur.",
+      "fallback_behavior": {
+        "cannot_find": "Si l’angle est mauvais ou l’extérieur partiellement masqué, ne cherchez pas à compter ou contourner le bâtiment. Gardez seulement l’idée de l’irrégularité et continuez vers le NH."
+      },
+      "next_scene": {
+        "scene_id": null,
+        "relation": "END_FRIDAY_MORNING_LOOP_AT_NH"
+      },
+      "candidate_refs": [
+        "J1-FRI-011"
+      ],
+      "source_refs": [
+        "S12",
+        "S13"
+      ],
+      "optional_depth_links": []
+    }
+  ],
+  "optional_depth": [
+    {
+      "scene_id": "SEV2-FRI-AM-D01",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-FRI-AM-01",
+      "candidate_refs": [
+        "J1-FRI-002"
+      ],
+      "source_refs": [
+        "S16"
+      ],
+      "short_label": "1927 — les poètes arrivent par cette gare",
+      "spoken_text": "Une histoire à garder pour la marche. Le 15 décembre 1927, plusieurs jeunes poètes qui seront bientôt associés à la Génération de 27 arrivent à Séville par la gare de Córdoba, l’actuelle Plaza de Armas. Dámaso Alonso racontera aussi une nuit de Triana qui se termine de façon beaucoup moins académique : avec le Guadalquivir en crue, certains traversent l’eau dans une embarcation improvisée. Cette histoire n’a pas besoin d’un monument. Elle relie simplement la gare que vous quittez, le fleuve que vous rejoignez et une Séville littéraire vécue aussi la nuit.",
+      "expected_duration_class": "MEDIUM_45_90"
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-D02",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-FRI-AM-03",
+      "candidate_refs": [
+        "J1-FRI-005"
+      ],
+      "source_refs": [
+        "S01"
+      ],
+      "short_label": "La cucaña — une tradition au-dessus de l’eau",
+      "spoken_text": "Si vous voulez une image plus légère du pont : les fêtes de son inauguration en 1852 sont liées à la première cucaña de la Velá de Santa Ana, un jeu où l’on tente d’avancer sur un mât rendu glissant au-dessus de l’eau. La tradition a survécu dans la Velá. Ne cherchez rien aujourd’hui : hors festival, il n’y a aucun dispositif à voir. Gardez seulement l’image.",
+      "expected_duration_class": "SHORT_20_45"
+    },
+    {
+      "scene_id": "SEV2-FRI-AM-D03",
+      "kind": "OPTIONAL_DEPTH",
+      "parent_scene_id": "SEV2-FRI-AM-06",
+      "candidate_refs": [
+        "J1-FRI-009"
+      ],
+      "source_refs": [
+        "S17"
+      ],
+      "short_label": "1519 — l’expédition commence aussi par la logistique",
+      "spoken_text": "Sur le chemin du retour, une autre manière de lire la traversée. En 1519, l’expédition de Magellan n’est pas seulement une histoire de navires et d’océan. Elle dépend aussi d’une logistique très ordinaire : marchandises, provisions et outils doivent circuler dans la ville et franchir l’ancien pont de bateaux vers les navires. Le tour du monde commence donc aussi par des gestes de manutention et de ravitaillement. Cette couche est volontairement optionnelle : le pont a déjà eu son grand récit à l’aller.",
+      "expected_duration_class": "MEDIUM_45_90"
+    }
+  ],
+  "intentional_silence": [
+    {
+      "segment": "fin de SEV2-FRI-AM-03 sur le pont",
+      "mode": "USER_PAUSE",
+      "purpose": "laisser agir le fleuve et le contraste des deux rives"
+    },
+    {
+      "segment": "traversée retour Puente de Isabel II après SEV2-FRI-AM-06",
+      "mode": "SILENCE_BY_DEFAULT",
+      "purpose": "éviter un second cours obligatoire sur le pont; D03 reste optionnel"
+    }
+  ],
+  "field_assumptions": [
+    "La ligne de vue exacte vers l’ancienne gare depuis le départ NH reste non garantie; la scène 01 est explicitement conditionnelle.",
+    "Les surfaces céramiques précises de San Jorge / Castilla ne sont pas figées; la scène 06 s’auto-saute si aucune n’est naturellement visible.",
+    "L’état individuel des étals vers 09:00 n’est pas garanti; la scène 05 fonctionne entièrement depuis le niveau rue.",
+    "Les faits dynamiques S03/S05 sont frais au 2026-09-17; ils devront être revalidés seulement si la production ou l’usage est matériellement plus tardif."
+  ]
+}

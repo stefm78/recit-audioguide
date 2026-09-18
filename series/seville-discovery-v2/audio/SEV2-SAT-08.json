@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SAT-08",
+  "title": "Archivo — vingt-quatre charrettes de papier",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 2,
+  "stop": "Archivo General de Indias — extérieur, file ou visite publique",
+  "location": "Archivo — vingt-quatre charrettes de papier",
+  "launch": "Lancer devant l’Archivo, dans une éventuelle file ou à l’intérieur; la scène ne dépend pas de l’accès immédiat.",
+  "look": "Regardez la masse du bâtiment et imaginez les archives comme un poids physique à déplacer, pas comme une base de données abstraite.",
+  "summary": "HUMAN_SCALE_ARCHIVE_STORY",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SOURCE_MANIFEST.md#S33"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Devant l’Archivo, oubliez un instant les grands mots comme « empire » ou « administration ». Pensez au poids du papier. En 1785, lorsqu’on rassemble à Séville une partie des fonds du Conseil des Indes conservés à Simancas, un transfert documenté fait arriver vingt-quatre charrettes tirées par des mules. Ce chiffre suffit à rendre l’archive physique : des liasses qu’il faut charger, transporter, monter, classer et retrouver. La bureaucratie dont parlait la version classique n’est pas une abstraction; elle occupe des pièces, des rayonnages et des corps au travail. Si vous entrez, gardez cette matérialité en tête. Si l’accès est ralenti, la scène fonctionne tout aussi bien dehors. Le grand récit du samedi s’arrête ici. Demain, le voyage changera de registre avec la Maestranza puis la peinture sévillane."
+    }
+  ]
+}

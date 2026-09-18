@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "id": "SEV2-SUN-05",
+  "title": "Le musée — une collection née d’une confiscation",
+  "language": "fr-FR",
+  "profile": "speech",
+  "production_version": 6,
+  "series": "Séville Field Guide V2",
+  "episode": 3,
+  "stop": "Museo de Bellas Artes — entrée / premières salles",
+  "location": "Le musée — une collection née d’une confiscation",
+  "launch": "Lancer après l’entrée au musée, avant de commencer une chasse aux artistes ou aux œuvres.",
+  "look": "Avant les noms célèbres, regardez le bâtiment et pensez à l’origine de la collection : des œuvres retirées à des institutions religieuses au XIXe siècle.",
+  "summary": "INSTITUTION_REFRAME",
+  "lead_in_ms": 150,
+  "sources": [
+    "series/seville-discovery-v2/research/SUNDAY_SOURCE_MANIFEST.md#S45"
+  ],
+  "segments": [
+    {
+      "character_id": "narrateur",
+      "speaker": "Narrateur",
+      "preset": "narrateur-vif",
+      "pause_after_ms": 350,
+      "text": "Avant de chercher Murillo ou Zurbarán, une question : pourquoi ces œuvres sont-elles réunies ici ? Le musée naît au XIXe siècle dans le contexte de la desamortización. Les mesures de 1836 retirent des biens à des couvents et à d’autres institutions ecclésiastiques; une partie des œuvres est rassemblée pour former une collection publique. Le musée raconte donc aussi un transfert : des images faites pour des lieux religieux deviennent patrimoine public."
+    }
+  ]
+}
