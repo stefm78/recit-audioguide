@@ -91,32 +91,28 @@ J6 closes all three J5 runtime-root HOLDs materially:
 
 J6 draft PR #222 remains a worker-only draft and MUST NOT be merged to `main`.
 
-## Remaining release blocker after J6
+## J7 — Sound Direction Registry Reconciliation
 
-The runtime itself is now materialized. The remaining transverse blocker is the existing global Sound Direction validator, which now sees `seville-discovery-v2` as a real series and its 25 accepted programs as real audio programs.
+PASS / ACCEPTED / INTEGRATED from worker SHA `4aea6feab235aeef6576844c05f42868b947fdb2`, based exactly on coordination baseline `4ac8b3151baf5ad39a3971ab1d42b35750fec3db` (`ahead_by=1`, `behind_by=0`).
 
-Pages run `35277970644` failed for two non-J6-product reasons:
+- bounded diff = exactly `series/sound-direction-catalog.json` and `series/sound-direction-review-v1.json`;
+- `seville-discovery-v2` registered as `mode=visit`, `default_density=none`, preserving real-city-first / no artificial ambience direction;
+- all 25 real V2 program IDs registered as `density=none`, `decision=keep`;
+- exact J7 validator evidence: GitHub Actions run `35316841309`, job `validate-j7`, exact checkout of `4aea6fea...`, `python tools/sound_direction.py validate` = PASS;
+- validator reported catalogue/review consistency and detailed Sound Direction coverage PASS;
+- worker PR #223 remains unmerged and registry-only;
+- no MP3, J2, J3, J4, J6 runtime or V1 path changed;
+- `V1_CHANGED_FILES = 0`.
 
-1. `tools/sound_direction.py validate` reports:
-   - catalog missing real series `seville-discovery-v2`;
-   - review missing the 25 real program IDs `SEV2-FRI-AM-01..08`, `SEV2-SAT-01..08`, `SEV2-SUN-01..09`.
-2. Because draft PR #222 targets `main` rather than the integration baseline, change-aware Pages classification also treats already-integrated historical audio work as fresh and attempts the wrong generated-audio restore/download path.
+The earlier J7 `HOLD_EVIDENCE_ONLY` is closed. No J7 blocker remains.
 
-The first item is a genuine registry-consistency requirement. The second is validation-context noise and must not trigger a rerender or reclassification of accepted J4 audio.
+## Final qualification step
 
-## Next bounded worker
+There is no further planned build worker before release qualification.
 
-J7 SOUND DIRECTION REGISTRY RECONCILIATION is the next and only build step before final J5 qualification.
+Rebind J5 to the current coordination candidate and run strict `/refresh -> /audit` only. J5 must independently revalidate the fully integrated J1–J7 candidate, including runtime routes/fallback/player/resume/offline/MediaSession, durable 25/25 audio identity, Sound Direction registry consistency, non-V2 regression and `V1_CHANGED_FILES = 0`.
 
-J7 must:
-
-- add `seville-discovery-v2` to `series/sound-direction-catalog.json` without changing the accepted no-ambience / real-city-first direction;
-- register all 25 primary V2 program IDs in `series/sound-direction-review-v1.json` consistently with the already accepted J4 contract (`density=none`, `decision=keep` unless existing durable evidence proves a different registry-only value is required);
-- not touch any MP3, spoken text, J2 scene graph, voice, J3 UX, runtime descriptor, V1, or optional-depth disposition;
-- run the Sound Direction validator and relevant Pages/build gates in a diff context based on `seville-field-guide-v2`, not `main`, so historical integrated audio is not misclassified as new work;
-- return PASS or the smallest remaining blocker; no merge to main.
-
-After J7 is accepted/integrated, rebind J5 to the final coordination candidate and run strict `/refresh -> /audit` only. J5 owns `V2_READY`.
+J5 owns the final `V2_READY` verdict and must not repair any defect it finds.
 
 ## Immutable / carried-forward constraints
 
