@@ -30,8 +30,31 @@
       return config;
     }
 
+    function isStoredDone(episode) {
+      return localStorage.getItem(`recit:done:${series.slug || slug}:${episode.id}`) === '1';
+    }
+
+    function liveOverrideStartIndex() {
+      const live = experience?.live_field_override;
+      if (!live || live.enabled !== true) return null;
+      const currentId = String(live.current_primary_scene_id || '').trim();
+      if (!currentId) return null;
+      const index = episodes.findIndex(episode => episode.id === currentId);
+      if (index < 0 || !experience?.episodes?.[currentId]) return null;
+      return index;
+    }
+
     function firstPendingIndex() {
-      const pending = episodes.findIndex(e => localStorage.getItem(`recit:done:${series.slug || slug}:${e.id}`) !== '1');
+      const overrideIndex = liveOverrideStartIndex();
+      if (overrideIndex != null) {
+        const pending = episodes.findIndex((episode, index) =>
+          index >= overrideIndex
+          && Boolean(experience?.episodes?.[episode.id])
+          && !isStoredDone(episode)
+        );
+        return pending < 0 ? overrideIndex : pending;
+      }
+      const pending = episodes.findIndex(episode => !isStoredDone(episode));
       return pending < 0 ? Math.max(episodes.length - 1, 0) : pending;
     }
 
@@ -378,6 +401,7 @@
     style.textContent = `
       #app.audio-first-v2 .visit-strip,
       #app.audio-first-v2 .series-hero .start,
+      #app.audio-first-v2 .series-hero .resume,
       #app.audio-first-v2 .series-hero > p:not(.eyebrow),
       #app.audio-first-v2 .episodes,
       #app.audio-first-v2 > footer{display:none}
