@@ -1,0 +1,30 @@
+name: J7 evidence-only validator
+
+on:
+  pull_request:
+    branches: [seville-field-guide-v2]
+    paths:
+      - ".github/workflows/j7-evidence-only-validator.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-j7:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact accepted J7 SHA
+        uses: actions/checkout@v6
+        with:
+          ref: 4aea6feab235aeef6576844c05f42868b947fdb2
+          fetch-depth: 1
+
+      - name: Prove exact SHA
+        shell: bash
+        run: |
+          test "$(git rev-parse HEAD)" = "4aea6feab235aeef6576844c05f42868b947fdb2"
+          git rev-parse HEAD
+          git status --porcelain
+
+      - name: Run J7 sound-direction validator
+        run: python tools/sound_direction.py validate
