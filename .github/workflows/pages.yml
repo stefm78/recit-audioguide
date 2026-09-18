@@ -169,26 +169,7 @@ jobs:
           mapfile -t candidates < <(git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- 'series/**/audio/*.json')
           changed=()
           for candidate in "${candidates[@]}"; do
-            if python - "$candidate" <<'PY'
-import json
-import sys
-from pathlib import Path
-
-path = Path(sys.argv[1])
-try:
-    data = json.loads(path.read_text(encoding="utf-8"))
-except (OSError, json.JSONDecodeError):
-    raise SystemExit(1)
-
-segments = data.get("segments")
-is_program = (
-    isinstance(data.get("id"), str) and bool(data["id"].strip())
-    and isinstance(data.get("title"), str) and bool(data["title"].strip())
-    and isinstance(segments, list) and bool(segments)
-)
-raise SystemExit(0 if is_program else 1)
-PY
-            then
+            if python -c 'import json,sys; d=json.load(open(sys.argv[1], encoding="utf-8")); s=d.get("segments"); ok=isinstance(d.get("id"),str) and bool(d["id"].strip()) and isinstance(d.get("title"),str) and bool(d["title"].strip()) and isinstance(s,list) and bool(s); raise SystemExit(0 if ok else 1)' "$candidate"; then
               changed+=("$candidate")
             else
               echo "Skipping non-renderable audio JSON: $candidate"
