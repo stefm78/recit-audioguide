@@ -5,7 +5,7 @@
   "branch": "seville-v2-live-field-2026-09-18",
   "baseline_main_sha": "0d251fdc870bb8958e64cdb16d5d0d1860824434",
   "purpose": "Adapt the released V2 route to real field timing without mutating the qualified V2 release while the visit is in progress.",
-  "clock_anchor_local": "2026-09-18T10:22:19+02:00",
+  "clock_anchor_local": "2026-09-18T10:25:14+02:00",
   "immutable_today": {
     "cathedral_slot_local": "12:10",
     "alcazar_slot_local": "17:00",
@@ -25,7 +25,7 @@
     {
       "id": "F18-C01",
       "label": "NH micro-loop",
-      "target_window_local": "10:22-10:36",
+      "target_window_local": "10:25-10:34",
       "mode": "WALK",
       "status": "ACTIVE",
       "route_intent": "Short loop around NH / old Plaza de Armas station, then immediate return to NH.",
@@ -35,12 +35,12 @@
       "optional_reuse_if_time": [
         "SEV2-FRI-AM-02"
       ],
-      "abort_rule": "At 10:34 local, turn back to NH regardless of remaining curiosity."
+      "abort_rule": "At 10:34 local, turn back to NH immediately."
     },
     {
       "id": "F18-C02",
       "label": "Recover bags and taxi",
-      "target_window_local": "10:36-11:00",
+      "target_window_local": "10:34-11:00",
       "mode": "LOGISTICS_SILENCE",
       "status": "PLANNED",
       "route_intent": "NH -> Pje. de Vila by taxi/VTC.",
@@ -102,7 +102,6 @@
   "deferred_from_original_friday": {
     "reason": "Late field start and 11:00 accommodation access make the original Triana/Arenal morning loop incompatible with the 12:10 Cathedral booking.",
     "scenes": [
-      "SEV2-FRI-AM-02",
       "SEV2-FRI-AM-03",
       "SEV2-FRI-AM-04",
       "SEV2-FRI-AM-05",
@@ -111,10 +110,19 @@
       "SEV2-FRI-AM-08"
     ],
     "disposition": "DEFER_NOT_CHASE_TODAY",
-    "note": "SEV2-FRI-AM-02 may still be used opportunistically during the NH micro-loop only if the real clock permits."
+    "note": "SEV2-FRI-AM-02 remains optional only if real time allows a brief river glance before hard return to NH."
   },
   "next_live_decision": {
     "trigger": "User reaches the old Plaza de Armas station / completes first micro-step.",
     "decision": "Either add a very short river glance or turn directly back to NH based on actual time."
+  },
+  "current_checkpoint_id": "F18-C01",
+  "current_decision": {
+    "at_local": "10:25",
+    "decision": "Original Friday V2 Triana/Arenal loop is cancelled for today. Only SEV2-FRI-AM-01 is active now; SEV2-FRI-AM-02 is opportunistic only. Return NH by 10:34-10:36, then taxi to Pje. de Vila.",
+    "protected": [
+      "Cathédrale 12:10",
+      "Alcázar 17:00"
+    ]
   }
 }
